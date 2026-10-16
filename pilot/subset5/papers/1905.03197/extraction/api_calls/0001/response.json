@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n  {\n    \"Task\": \"Abstractive Summarization\",\n    \"Dataset\": \"CNN/DailyMail\",\n    \"Metric\": \"ROUGE-1\",\n    \"Result\": \"43.33\"\n  },\n  {\n    \"Task\": \"Abstractive Summarization\",\n    \"Dataset\": \"CNN/DailyMail\",\n    \"Metric\": \"ROUGE-2\",\n    \"Result\": \"20.21\"\n  },\n  {\n    \"Task\": \"Abstractive Summarization\",\n    \"Dataset\": \"CNN/DailyMail\",\n    \"Metric\": \"ROUGE-L\",\n    \"Result\": \"40.51\"\n  },\n  {\n    \"Task\": \"Abstractive Summarization\",\n    \"Dataset\": \"Gigaword (Full Training Set)\",\n    \"Metric\": \"ROUGE-L\",\n    \"Result\": \"35.75\"\n  },\n  {\n    \"Task\": \"Question Generation\",\n    \"Dataset\": \"SQuAD 1.1\",\n    \"Metric\": \"BLEU-4\",\n    \"Result\": \"25.61\"\n  },\n  {\n    \"Task\": \"Question Generation\",\n    \"Dataset\": \"SQuAD 1.1\",\n    \"Metric\": \"METEOR\",\n    \"Result\": \"25.06\"\n  },\n  {\n    \"Task\": \"Question Generation\",\n    \"Dataset\": \"SQuAD 1.1\",\n    \"Metric\": \"ROUGE-L\",\n    \"Result\": \"52.04\"\n  },\n  {\n    \"Task\": \"Extractive Question Answering\",\n    \"Dataset\": \"SQuAD\",\n    \"Metric\": \"F1\",\n    \"Result\": \"90.0\"\n  },\n  {\n    \"Task\": \"Extractive Question Answering\",\n    \"Dataset\": \"SQuAD\",\n    \"Metric\": \"EM\",\n    \"Result\": \"87.7\"\n  },\n  {\n    \"Task\": \"Extractive Question Answering\",\n    \"Dataset\": \"CoQA\",\n    \"Metric\": \"F1\",\n    \"Result\": \"84.9\"\n  },\n  {\n    \"Task\": \"Generative Question Answering\",\n    \"Dataset\": \"CoQA\",\n    \"Metric\": \"F1\",\n    \"Result\": \"82.5\"\n  },\n  {\n    \"Task\": \"Response Generation\",\n    \"Dataset\": \"DSTC7 Shared Task\",\n    \"Metric\": \"BLEU-4\",\n    \"Result\": \"4.39\"\n  },\n  {\n    \"Task\": \"Response Generation\",\n    \"Dataset\": \"DSTC7 Shared Task\",\n    \"Metric\": \"METEOR\",\n    \"Result\": \"9.195\"\n  },\n  {\n    \"Task\": \"Response Generation\",\n    \"Dataset\": \"DSTC7 Shared Task\",\n    \"Metric\": \"Div-1\",\n    \"Result\": \"0.120\"\n  },\n  {\n    \"Task\": \"Response Generation\",\n    \"Dataset\": \"DSTC7 Shared Task\",\n    \"Metric\": \"Div-2\",\n    \"Result\": \"0.391\"\n  },\n  {\n    \"Task\": \"General Language Understanding\",\n    \"Dataset\": \"GLUE Benchmark\",\n    \"Metric\": \"Average Score\",\n    \"Result\": \"80.8\"\n  },\n  {\n    \"Task\": \"General Language Understanding\",\n    \"Dataset\": \"GLUE Benchmark - SST-2\",\n    \"Metric\": \"Accuracy\",\n    \"Result\": \"94.9\"\n  },\n  {\n    \"Task\": \"General Language Understanding\",\n    \"Dataset\": \"GLUE Benchmark - MNLI-m\",\n    \"Metric\": \"Accuracy\",\n    \"Result\": \"87.0\"\n  },\n  {\n    \"Task\": \"General Language Understanding\",\n    \"Dataset\": \"GLUE Benchmark - MRPC\",\n    \"Metric\": \"F1\",\n    \"Result\": \"92.7\"\n  },\n  {\n    \"Task\": \"General Language Understanding\",\n    \"Dataset\": \"GLUE Benchmark - STS-B\",\n    \"Metric\": \"Spearman Corr.\",\n    \"Result\": \"89.3\"\n  }\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791888552,
+  "id": "chatcmpl-EYUMCd93qL4kFHVk1kDv8irhyNhKd",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20261001192159-f46bbfb3-default-r0-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 848,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 6,
+      "engine_ttft_ms": 116,
+      "engine_ttlt_ms": 5414,
+      "pre_inference_ms": 265,
+      "service_tbt_ms": 6,
+      "service_ttft_ms": 781,
+      "service_ttlt_ms": 6004,
+      "user_visible_ttft_ms": 516
+    },
+    "prompt_tokens": 3249,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 4097
+  }
+}

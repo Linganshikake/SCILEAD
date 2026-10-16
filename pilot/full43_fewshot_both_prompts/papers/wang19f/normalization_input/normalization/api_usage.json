@@ -1,0 +1,580 @@
+{
+  "attempts": 12,
+  "successful_responses": 12,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 13684,
+  "completion_tokens": 41,
+  "total_tokens": 13725,
+  "request_seconds": 22.484000001102686,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 1,
+        "field": "Task"
+      },
+      "prompt_sha256": "a49bcbb01b51d96e72543cafc369435590d146cef00e4cb939a7a0e306d9395a",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7dWQg8neHXpLpaiMDTbhB62ltcm",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 5,
+          "engine_ttft_ms": 58,
+          "engine_ttlt_ms": 72,
+          "pre_inference_ms": 282,
+          "service_tbt_ms": 9,
+          "service_ttft_ms": 709,
+          "service_ttlt_ms": 726,
+          "user_visible_ttft_ms": 427
+        },
+        "prompt_tokens": 1034,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1036
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Language Modeling",
+      "response_sha256": "d01819bb17189cad2124c3b065ddcb678199774c48823c0b099ea3bb7ae8e8f6",
+      "seconds": 2.360000000335276
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 2,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 1,
+        "field": "Metric"
+      },
+      "prompt_sha256": "0a0faea417d6d612972e880aa3086efa49b0130ee5831053d518297f99eaa922",
+      "candidate_sha256": "950f9f8f9fd1b873e1269d87fdd9243e7ef494e02f00bc2e6dc83e36cd0c6bbd",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7dY8MIlzJspXmUuZA3OGB3Tchtd",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 3,
+          "engine_ttft_ms": 39,
+          "engine_ttlt_ms": 51,
+          "pre_inference_ms": 205,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 616,
+          "service_ttlt_ms": 636,
+          "user_visible_ttft_ms": 411
+        },
+        "prompt_tokens": 1049,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1024
+        },
+        "total_tokens": 1052
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Perplexity",
+      "response_sha256": "1255fdce029d83b5251b1d59651370d6a5628eb5344e8a27a26c725aa0e60885",
+      "seconds": 1.5630000000819564
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 3,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 2,
+        "field": "Task"
+      },
+      "prompt_sha256": "a49bcbb01b51d96e72543cafc369435590d146cef00e4cb939a7a0e306d9395a",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7daC275HCdr5n8LqoeLfVLJIvDb",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_ttft_ms": 315,
+          "engine_ttlt_ms": 315,
+          "pre_inference_ms": 77,
+          "service_tbt_ms": 9,
+          "service_ttft_ms": 674,
+          "service_ttlt_ms": 692,
+          "user_visible_ttft_ms": 597
+        },
+        "prompt_tokens": 1034,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1036
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Language Modeling",
+      "response_sha256": "4d749719a77ac67bddcea1180f2f42e9aa355a0990df511a563cfa9f881bc305",
+      "seconds": 1.5930000003427267
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 4,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 2,
+        "field": "Dataset"
+      },
+      "prompt_sha256": "d7004836b1146f296e467af2aec3bcf93e3dc1e3e1b099c6d6713bd25aacbf48",
+      "candidate_sha256": "b91ced4d2d7642a5aa2765e96aac3d313fa7fa573e5b47bce35cf4f08719d34b",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7db9LgFGi3f8yOaBlcSlyFjgUJO",
+      "usage": {
+        "completion_tokens": 5,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 310,
+          "engine_ttlt_ms": 311,
+          "pre_inference_ms": 106,
+          "service_tbt_ms": 3,
+          "service_ttft_ms": 600,
+          "service_ttlt_ms": 616,
+          "user_visible_ttft_ms": 494
+        },
+        "prompt_tokens": 1342,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1152
+        },
+        "total_tokens": 1347
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Wikitext-2",
+      "response_sha256": "7910a606b2f37cd5b3244a20ade1a5c42553f2d522477b876e86d177a73ee21d",
+      "seconds": 1.4840000001713634
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 5,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 2,
+        "field": "Metric"
+      },
+      "prompt_sha256": "0a0faea417d6d612972e880aa3086efa49b0130ee5831053d518297f99eaa922",
+      "candidate_sha256": "950f9f8f9fd1b873e1269d87fdd9243e7ef494e02f00bc2e6dc83e36cd0c6bbd",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7ddtRTIvttjxkwhI5NHTeo1OFza",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 6,
+          "engine_ttft_ms": 42,
+          "engine_ttlt_ms": 65,
+          "pre_inference_ms": 228,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 725,
+          "service_ttlt_ms": 747,
+          "user_visible_ttft_ms": 497
+        },
+        "prompt_tokens": 1049,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1024
+        },
+        "total_tokens": 1052
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Perplexity",
+      "response_sha256": "3fe3c4907cad31a40e4b91a047c881ad31c5f17f97c7fc8dc235e1375f273df4",
+      "seconds": 2.0
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 6,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 3,
+        "field": "Task"
+      },
+      "prompt_sha256": "a49bcbb01b51d96e72543cafc369435590d146cef00e4cb939a7a0e306d9395a",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7dfH0PdyWMedWRr90MUhr4uWSj3",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 33,
+          "engine_ttlt_ms": 45,
+          "pre_inference_ms": 217,
+          "service_tbt_ms": 1,
+          "service_ttft_ms": 724,
+          "service_ttlt_ms": 725,
+          "user_visible_ttft_ms": 507
+        },
+        "prompt_tokens": 1034,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1024
+        },
+        "total_tokens": 1036
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Language Modeling",
+      "response_sha256": "e9b7483f723a3789230c3c5a32b8a947211e3df64e2dd2f65147da7268b6a8dc",
+      "seconds": 1.7180000003427267
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 7,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 3,
+        "field": "Dataset"
+      },
+      "prompt_sha256": "afa93a8f890d579bd817072295d63f5fad6f6147abedf86f92f5378ac68977b9",
+      "candidate_sha256": "b91ced4d2d7642a5aa2765e96aac3d313fa7fa573e5b47bce35cf4f08719d34b",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7dgW3iNXZHfRHeguxLembrUi799",
+      "usage": {
+        "completion_tokens": 4,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 311,
+          "engine_ttlt_ms": 312,
+          "pre_inference_ms": 98,
+          "service_tbt_ms": 5,
+          "service_ttft_ms": 590,
+          "service_ttlt_ms": 609,
+          "user_visible_ttft_ms": 492
+        },
+        "prompt_tokens": 1342,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1152
+        },
+        "total_tokens": 1346
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "WikiText-103",
+      "response_sha256": "c80b455fbdc837c28b8550bbc3102365a21e1f5cc856c95a52a2687c5fd26ad7",
+      "seconds": 1.546000000089407
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 8,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 3,
+        "field": "Metric"
+      },
+      "prompt_sha256": "0a0faea417d6d612972e880aa3086efa49b0130ee5831053d518297f99eaa922",
+      "candidate_sha256": "950f9f8f9fd1b873e1269d87fdd9243e7ef494e02f00bc2e6dc83e36cd0c6bbd",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7di8eFQ48dJtOT5fDNjPdOxE4Ij",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 60,
+          "engine_ttlt_ms": 75,
+          "pre_inference_ms": 274,
+          "service_tbt_ms": 6,
+          "service_ttft_ms": 745,
+          "service_ttlt_ms": 762,
+          "user_visible_ttft_ms": 470
+        },
+        "prompt_tokens": 1049,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1052
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Perplexity",
+      "response_sha256": "5b471d1465d15a462eb4f113c14a128a7e1ea03e85e0241a76effaddde8243b5",
+      "seconds": 1.75
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 9,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 4,
+        "field": "Task"
+      },
+      "prompt_sha256": "4307282ed445717d995aa608fd47566813b3255ed456d5f5a942afb6f1c4a7bc",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7dkHTtFxwRA8j9avj4NbCXYPABZ",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 8,
+          "engine_ttft_ms": 41,
+          "engine_ttlt_ms": 64,
+          "pre_inference_ms": 134,
+          "service_tbt_ms": 2,
+          "service_ttft_ms": 330,
+          "service_ttlt_ms": 334,
+          "user_visible_ttft_ms": 196
+        },
+        "prompt_tokens": 1034,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1036
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Machine Translation",
+      "response_sha256": "ac239ffc984238cfaf627a8a41b3f5b323872ac4495f197e0652a53e891006e8",
+      "seconds": 1.1880000000819564
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 10,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 4,
+        "field": "Dataset"
+      },
+      "prompt_sha256": "d0a5b66bbbb271e1355ccc00d887abe79ee09571d0457235133c293edbadbbb0",
+      "candidate_sha256": "b91ced4d2d7642a5aa2765e96aac3d313fa7fa573e5b47bce35cf4f08719d34b",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7dlHU1l8NSniwCSr1bhyv5fp2pA",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 319,
+          "engine_ttlt_ms": 320,
+          "pre_inference_ms": 182,
+          "service_tbt_ms": 2,
+          "service_ttft_ms": 830,
+          "service_ttlt_ms": 839,
+          "user_visible_ttft_ms": 647
+        },
+        "prompt_tokens": 1341,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1152
+        },
+        "total_tokens": 1347
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "WMT’14 EN-DE",
+      "response_sha256": "dd0b5446495e7c66c61c873b4e84c12323439c5378a103cae17de6b97487fbbd",
+      "seconds": 1.843999999575317
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 11,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 5,
+        "field": "Task"
+      },
+      "prompt_sha256": "4307282ed445717d995aa608fd47566813b3255ed456d5f5a942afb6f1c4a7bc",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7dpAS33hSPXWSQDNXcYz0rTAGd2",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 5,
+          "engine_ttft_ms": 43,
+          "engine_ttlt_ms": 57,
+          "pre_inference_ms": 233,
+          "service_tbt_ms": 9,
+          "service_ttft_ms": 688,
+          "service_ttlt_ms": 706,
+          "user_visible_ttft_ms": 456
+        },
+        "prompt_tokens": 1034,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1036
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Machine Translation",
+      "response_sha256": "611c09886bb090555690d2243f06e748639588386e03645f2fb77f86aeedba6b",
+      "seconds": 3.7970000002533197
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 12,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "wang19f.pdf",
+        "record": 5,
+        "field": "Dataset"
+      },
+      "prompt_sha256": "520d94cb5605842b81593b86288407340636de1f405c9ad70be0c7e9b27980cb",
+      "candidate_sha256": "b91ced4d2d7642a5aa2765e96aac3d313fa7fa573e5b47bce35cf4f08719d34b",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7drlOgGY3IpEcGjHd9zT9SmHlIo",
+      "usage": {
+        "completion_tokens": 7,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 18,
+          "engine_ttft_ms": 32,
+          "engine_ttlt_ms": 173,
+          "pre_inference_ms": 111,
+          "service_tbt_ms": 19,
+          "service_ttft_ms": 533,
+          "service_ttlt_ms": 666,
+          "user_visible_ttft_ms": 422
+        },
+        "prompt_tokens": 1342,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1280
+        },
+        "total_tokens": 1349
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "IWSLT’14 EN-DE",
+      "response_sha256": "b60cc048885963aaf3e8edf7cfcb2f1c4a415eef88c77390e4d9ae77110a7e6a",
+      "seconds": 1.6409999998286366
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

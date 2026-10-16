@@ -1,0 +1,200 @@
+[
+  {
+    "content": "The Best of Both Worlds: Combining Recent Advances in Neural Machine Translation Mia Xu Chen ∗ Orhan Firat ∗ Ankur Bapna ∗ Melvin Johnson Wolfgang Macherey George Foster Llion Jones Niki Parmar Mike Schuster Zhifeng Chen Yonghui Wu Macduff Hughes miachen,orhanf,ankurbpn,yonghui@google.com Google AI Abstract The past year has witnessed rapid ad- vances in sequence-to-sequence (seq2seq) modeling for Machine Translation (MT). The classic RNN-based approaches to MT were ﬁrst out-performed by the convolu- tional seq2seq model, which was then out- performed by the more recent Transformer model. Each of these new approaches con- sists of a fundamental architecture accom- panied by a set of modeling and training techniques that are in principle applicable to other seq2seq architectures. In this pa- per, we tease apart the new architectures and their accompanying techniques in two ways. First, we identify several key mod- eling and training techniques, and apply them to the RNN architecture, yielding a new RNMT+ model that outperforms all of the three fundamental architectures on the benchmark WMT’14 English→French and English→German tasks. Second, we analyze the properties of each fundamen- tal seq2seq architecture and devise new hybrid architectures intended to combine their strengths. Our hybrid models ob- tain further improvements, outperforming the RNMT+ model on both benchmark datasets. the quality of phrase-based MT, both the en- coder and decoder were implemented as Recur- rent Neural Networks (RNNs), interacting via a soft-attention mechanism (Bahdanau et al., 2015). The RNN-based NMT approach, or RNMT, was quickly established as the de-facto standard for NMT, and gained rapid adoption into large-scale systems in industry, e.g. Baidu (Zhou et al., 2016), Google (Wu et al., 2016), and Systran (Crego et al., 2016). Following RNMT, convolutional neural net- work based approaches (LeCun and Bengio, 1998) to NMT have recently drawn research attention due to their ability",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "2016), and Systran (Crego et al., 2016). Following RNMT, convolutional neural net- work based approaches (LeCun and Bengio, 1998) to NMT have recently drawn research attention due to their ability to fully parallelize training to take advantage of modern fast computing devices. such as GPUs and Tensor Processing Units (TPUs) (Jouppi et al., 2017). Well known examples are ByteNet (Kalchbrenner et al., 2016) and ConvS2S (Gehring et al., 2017). The ConvS2S model was shown to outperform the original RNMT archi- tecture in terms of quality, while also providing greater training speed. Most recently, the Transformer model (Vaswani et al., 2017), which is based solely on a self- attention mechanism (Parikh et al., 2016) and feed-forward connections, has further advanced the ﬁeld of NMT, both in terms of translation qual- ity and speed of convergence. Introduction In recent years, the emergence of seq2seq mod- els (Kalchbrenner and Blunsom, 2013; Sutskever et al., 2014; Cho et al., 2014) has revolutionized the ﬁeld of MT by replacing traditional phrase- based approaches with neural machine transla- tion (NMT) systems based on the encoder-decoder paradigm. In the ﬁrst architectures that surpassed In many instances, new architectures are ac- companied by a novel set of techniques for per- forming training and inference that have been carefully optimized to work in concert. This ‘bag of tricks’ can be crucial to the performance is typically of a proposed architecture, yet under-documented and left for the enterprising re- searcher to discover in publicly released code (if any) or through anecdotal evidence. This is not simply a problem for reproducibility; it obscures the central scientiﬁc question of how much of the observed gains come from the new architecture",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1804
+    }
+  },
+  {
+    "content": "and how much can be attributed to the associated training and inference techniques. In some cases, these new techniques may be broadly applicable to other architectures and thus constitute a major, though implicit, contribution of an architecture pa- per. Clearly, they need to be considered in order to ensure a fair comparison across different model architectures. In this paper, we therefore take a step back and look at which techniques and methods contribute signiﬁcantly to the success of recent architectures, namely ConvS2S and Transformer, and explore applying these methods to other architectures, in- cluding RNMT models. In doing so, we come up with an enhanced version of RNMT, referred to as RNMT+, that signiﬁcantly outperforms all in- dividual architectures in our setup. We further in- troduce new architectures built with different com- ponents borrowed from RNMT+, ConvS2S and Transformer. In order to ensure a fair setting for comparison, all architectures were implemented in the same framework, use the same pre-processed data and apply no further post-processing as this may confound bare model performance. Our contributions are three-fold: We quickly note two prior works that pro- vided empirical solutions to the difﬁculty of train- ing NMT architectures (speciﬁcally RNMT). In (Britz et al., 2017) the authors systematically ex- plore which elements of NMT architectures have a signiﬁcant impact on translation quality. In (Denkowski and Neubig, 2017) the authors recom- mend three speciﬁc techniques for strengthening NMT systems and empirically demonstrated how incorporating those techniques improves the relia- bility of the experimental results. 2 Background In this section, we brieﬂy discuss the commmonly used NMT architectures. 2.1 RNN-based NMT Models - RNMT RNMT models are composed of an encoder RNN and a decoder RNN, coupled with an attention network. The encoder summarizes the input se- quence into a set of vectors while the decoder con- ditions on the",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "models are composed of an encoder RNN and a decoder RNN, coupled with an attention network. The encoder summarizes the input se- quence into a set of vectors while the decoder con- ditions on the encoded input sequence through an attention mechanism, and generates the output se- quence one token at a time. The most successful RNMT models consist of stacked RNN encoders with one or more bidirec- tional RNNs, and stacked decoders with unidirec- tional RNNs. Both encoder and decoder RNNs consist of either LSTM (Hochreiter and Schmid- huber, 1997) or GRU units (Cho et al., 2014), and make extensive use of residual (He et al., 2015) or highway (Srivastava et al., 2015) connections. In Google-NMT (GNMT) (Wu et al., 2016), the best performing RNMT model on the datasets we consider, the encoder network consists of one bi-directional LSTM layer, followed by 7 uni-directional LSTM layers. The decoder is equipped with a single attention network and 8 uni-directional LSTM layers. Both the encoder and the decoder use residual skip connections be- tween consecutive layers. In this paper, we adopt GNMT as the starting point for our proposed RNMT+ architecture, fol- lowing the public NMT codebase1. 2.2 Convolutional NMT Models - ConvS2S In the most successful convolutional sequence-to- sequence model (Gehring et al., 2017), both the encoder and decoder are constructed by stacking multiple convolutional layers, where each layer 1https://github.com/tensorﬂow/nmt",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "contains 1-dimensional convolutions followed by a gated linear units (GLU) (Dauphin et al., 2016). Each decoder layer computes a separate dot- product attention by using the current decoder layer output and the ﬁnal encoder layer outputs. Positional embeddings are used to provide explicit positional information to the model. Following the practice in (Gehring et al., 2017), we scale the gra- dients of the encoder layers to stabilize training. We also use residual connections across each con- volutional layer and apply weight normalization (Salimans and Kingma, 2016) to speed up conver- gence. We follow the public ConvS2S codebase2 in our experiments. 2.3 Conditional Transformation-based NMT Models - Transformer The Transformer model (Vaswani et al., 2017) is motivated by two major design choices that aim to address deﬁciencies in the former two model families: (1) Unlike RNMT, but similar to the ConvS2S, the Transformer model avoids any se- quential dependencies in both the encoder and decoder networks to maximally parallelize train- ing. (2) To address the limited context problem (limited receptive ﬁeld) present in ConvS2S, the Transformer model makes pervasive use of self- attention networks (Parikh et al., 2016) so that each position in the current layer has access to in- formation from all other positions in the previous layer. the encoder-decoder paradigm. Encoder transformer layers are built with two sub-modules: (1) a self- attention network and (2) a feed-forward network. Decoder transformer layers have an additional cross-attention layer sandwiched between the self- attention and feed-forward layers to attend to the encoder outputs. There are two details which we found very im- portant to the model’s performance: (1) Each sub- layer in the transformer (i.e. self-attention, cross- attention, and the feed-forward sub-layer) follows a strict computation sequence: normalize → trans- form → dropout→ residual-add. (2) In addition to per-layer normalization, the",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "cross- attention, and the feed-forward sub-layer) follows a strict computation sequence: normalize → trans- form → dropout→ residual-add. (2) In addition to per-layer normalization, the ﬁnal encoder output is again normalized to prevent a blow up after con- secutive residual additions. In this paper, we follow the latest version of the 2https://github.com/facebookresearch/fairseq-py Transformer model in the public Tensor2Tensor3 codebase. 2.4 A Theory-Based Characterization of NMT Architectures From a theoretical point of view, RNNs belong to the most expressive members of the neural network family (Siegelmann and Sontag, 1995)4. Possessing an inﬁnite Markovian structure (and thus an inﬁnite receptive ﬁelds) equips them to model sequential data (Elman, 1990), especially natural language (Grefenstette et al., 2015) effec- tively. In practice, RNNs are notoriously hard to train (Bengio et al., 1994), conﬁrming the well known dilemma of trainability versus expressivity. Convolutional layers are adept at capturing lo- cal context and local correlations by design. A ﬁxed and narrow receptive ﬁeld for each convo- lutional layer limits their capacity when the ar- In practice, this weakness chitecture is shallow. is mitigated by stacking more convolutional lay- ers (e.g. 15 layers as in the ConvS2S model), which makes the model harder to train and de- mands meticulous initialization schemes and care- fully designed regularization techniques. The transformer network is capable of ap- proximating arbitrary squashing functions (Hornik et al., 1989), and can be considered a strong fea- ture extractor with extended receptive ﬁelds capa- ble of linking salient features from the entire se- quence. On the other hand, lacking a memory component (as present in the RNN models) pre- vents the network from modeling a state space, reducing its theoretical strength as a sequence model, thus it requires additional positional infor- mation (e.g. sinusoidal positional encodings). Above",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1813
+    }
+  },
+  {
+    "content": "the network from modeling a state space, reducing its theoretical strength as a sequence model, thus it requires additional positional infor- mation (e.g. sinusoidal positional encodings). Above theoretical characterizations will drive our explorations in the following sections. 3 Experiment Setup We train our models on the standard WMT’14 En→Fr and En→De datasets that comprise 36.3M and 4.5M sentence pairs, respectively. Each sen- tence was encoded into a sequence of sub-word units obtained by ﬁrst tokenizing the sentence with the Moses tokenizer, then splitting tokens into sub- word units (also known as “wordpieces”) using the approach described in (Schuster and Nakajima, 2012). 3https://github.com/tensorﬂow/tensor2tensor 4Assuming that data complexity is satisﬁed.",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 3613
+    }
+  },
+  {
+    "content": "We use a shared vocabulary of 32K sub-word units for each source-target language pair. No fur- ther manual or rule-based post processing of the output was performed beyond combining the sub- word units to generate the targets. We report all our results on newstest 2014, which serves as the test set. A combination of newstest 2012 and new- stest 2013 is used for validation. To evaluate the models, we compute the BLEU metric on tokenized, true-case output.5 For each training run, we evaluate the model every 30 min- utes on the dev set. Once the model converges, we determine the best window based on the average dev-set BLEU score over 21 consecutive evalua- tions. We report the mean test score and standard deviation over the selected window. This allows us to compare model architectures based on their mean performance after convergence rather than individual checkpoint evaluations, as the latter can be quite noisy for some models. To enable a fair comparison of architectures, we use the same pre-processing and evaluation methodology for all our experiments. We re- frain from using checkpoint averaging (exponen- tial moving averages of parameters) (Junczys- Dowmunt et al., 2016) or checkpoint ensembles (Jean et al., 2015; Chen et al., 2017) to focus on evaluating the performance of individual models. 4 RNMT+ 4.1 Model Architecture of RNMT+ The newly proposed RNMT+ model architecture is shown in Figure 1. Here we highlight the key architectural choices that are different between the RNMT+ model and the GNMT model. There are 6 bidirectional LSTM layers in the encoder instead of 1 bidirectional LSTM layer followed by 7 uni- directional layers as in GNMT. For each bidirec- tional layer, the outputs of the forward layer and the backward layer are concatenated before being fed into the next layer. The decoder network con- sists of 8 unidirectional LSTM layers similar to the GNMT model. Residual connections are added to the third layer and above for both the encoder and",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "fed into the next layer. The decoder network con- sists of 8 unidirectional LSTM layers similar to the GNMT model. Residual connections are added to the third layer and above for both the encoder and decoder. Inspired by the Transformer model, per- gate layer normalization (Ba et al., 2016) is ap- plied within each LSTM cell. Our empirical re- sults show that layer normalization greatly stabi- lizes training. No non-linearity is applied to the LSTM output. A projection layer is added to the encoder ﬁnal output.6 Multi-head additive atten- tion is used instead of the single-head attention in the GNMT model. Similar to GNMT, we use the 5This procedure is used in the literature to which we com- pare (Gehring et al., 2017; Wu et al., 2016). 6Additional projection aims to reduce the dimensionality of the encoder output representations to match the decoder stack dimension.",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1794
+    }
+  },
+  {
+    "content": "bottom decoder layer and the ﬁnal encoder layer output after projection for obtaining the recurrent attention context. In addition to feeding the atten- tion context to all decoder LSTM layers, we also feed it to the softmax. This is important for both the quality of the models with multi-head attention and the stability of the training process. Since the encoder network in RNMT+ consists solely of bi-directional LSTM layers, model par- allelism is not used during training. We com- pensate for the resulting longer per-step time with increased data parallelism (more model replicas), so that the overall time to reach convergence of the RNMT+ model is still comparable to that of GNMT. We apply the following regularization tech- niques during training. We use the Adam optimizer (Kingma and Ba, 2014) with 8, = 0.9, 2 = 0.999,« = 10~® and vary the learning rate according to this schedule: (1) Here, t is the current step, n is the number of con- current model replicas used in training, p is the number of warmup steps, s is the start step of the exponential decay, and e is the end step of the de- cay. Speciﬁcally, we ﬁrst increase the learning rate linearly during the number of warmup steps, keep it a constant until the decay start step s, then ex- ponentially decay until the decay end step e, and keep it at 5 · 10−5 after the decay ends. This learning rate schedule is motivated by a similar schedule that was successfully applied in training the Resnet-50 model with a very large batch size (Goyal et al., 2017). In contrast to the asynchronous training used for GNMT (Dean et al., 2012), we train RNMT+ models with synchronous training (Chen et al., 2016). Our empirical results suggest that when hyper-parameters are tuned properly, synchronous training often leads to improved convergence speed and superior model quality. To further stabilize training, we also use adap- tive gradient clipping. We discard a training step completely if an anomaly in the gradient norm value is",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "speed and superior model quality. To further stabilize training, we also use adap- tive gradient clipping. We discard a training step completely if an anomaly in the gradient norm value is detected, which is usually an indication of an imminent gradient explosion. More specif- ically, we keep track of a moving average and a moving standard deviation of the log of the gradi- ent norm values, and we abort a step if the norm of the gradient exceeds four standard deviations of the moving average. 4.2 Model Analysis and Comparison In this section, we compare the results of RNMT+ with ConvS2S and Transformer. All models were trained with synchronous training. RNMT+ and ConvS2S were trained with 32 NVIDIA P100 GPUs while the Transformer Base and Big models were trained using 16 GPUs. For RNMT+, we use sentence-level cross- entropy loss. Each training batch contained 4096 sentence pairs (4096 source sequences and 4096 target sequences). For ConvS2S and Transformer models, we use token-level cross-entropy loss. Each training batch contained 65536 source to- kens and 65536 target tokens. For the GNMT baselines on both tasks, we cite the largest BLEU score reported in (Wu et al., 2016) without rein- forcement learning. Table 1 shows our results on the WMT’14 En→Fr task. Both the Transformer Big model and RNMT+ outperform GNMT and ConvS2S by about 2 BLEU points. RNMT+ is slightly better than the Transformer Big model in terms of its mean BLEU score. RNMT+ also yields a much lower standard deviation, and hence we observed much less ﬂuctuation in the training curve. It takes approximately 3 days for the Transformer",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1808
+    }
+  },
+  {
+    "content": "Base model to converge, while both RNMT+ and the Transformer Big model require about 5 days to converge. Although the batching schemes are quite different between the Transformer Big and the RNMT+ model, they have processed about the same amount of training samples upon conver- gence. Table 2 shows our results on the WMT’14 En→De task. The Transformer Base model im- proves over GNMT and ConvS2S by more than 2 BLEU points while the Big model improves by over 3 BLEU points. RNMT+ further outperforms the Transformer Big model and establishes a new state of the art with an averaged value of 28.49. In this case, RNMT+ converged slightly faster than the Transformer Big model and maintained much more stable performance after convergence with a very small standard deviation, which is similar to what we observed on the En-Fr task. Table 3 summarizes training performance and model statistics. The Transformer Base model is the fastest model in terms of training speed. RNMT+ is slower to train than the Transformer 7Since the ConvS2S model convergence is very slow we did not explore further tuning on En→Fr, and validated our implementation on En→De. 8The BLEU scores for Transformer model are slightly lower than those reported in (Vaswani et al., 2017) due to four differences: 1) We report the mean test BLEU score using the strategy described in section 3. 2) We did not perform checkpoint averaging since it would be inconsistent with our evaluation for other models. 3) We avoided any manual post-processing, like unicode normalization using Moses replace-unicode-punctuation.perl or output tokenization using Moses tokenizer.perl, to rule out its effect on the evaluation. We observed a signiﬁcant BLEU increase (about 0.6) on applying these post processing tech- niques. 4) In (Vaswani et al., 2017), reported BLEU scores are cal- culated using mteval-v13a.pl from Moses, which re-tokenizes its input. Big model on a per-GPU basis. However, since the RNMT+ model is quite stable, we were",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "al., 2017), reported BLEU scores are cal- culated using mteval-v13a.pl from Moses, which re-tokenizes its input. Big model on a per-GPU basis. However, since the RNMT+ model is quite stable, we were able to offset the lower per-GPU throughput with higher concurrency by increasing the number of model replicas, and hence the overall time to convergence was not slowed down much. We also computed the number of ﬂoating point operations (FLOPs) in the model’s forward path as well as the num- ber of total parameters for all architectures (cf. Ta- ble 3). RNMT+ requires fewer FLOPs than the Transformer Big model, even though both models have a comparable number of parameters. Table 3: Performance comparison. Examples/s are normalized by the number of GPUs used in the training job. FLOPs are computed assuming that source and target sequence length are both 50. 5 Ablation Experiments In this section, we evaluate the importance of four main techniques for both the RNMT+ and the Transformer Big models. We believe that these techniques are universally applicable across dif- ferent model architectures, and should always be employed by NMT practitioners for best perfor- mance. We take our best RNMT+ and Transformer Big models and remove each one of these techniques independently. By doing this we hope to learn two things about each technique: (1) How much does it affect the model performance? (2) How useful is it for stable training of other techniques and hence the ﬁnal model? From Table 4 we draw the following conclu- sions about the four techniques:",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1801
+    }
+  },
+  {
+    "content": "Table 4: Ablation results of RNMT+ and the Transformer Big model on WMT’14 En → Fr. We report average BLEU scores on the test set. An as- terisk ’*’ indicates an unstable training run (train- ing halts due to non-ﬁnite elements). 6 Hybrid NMT Models In this section, we explore hybrid architectures that shed some light on the salient behavior of each model family. These hybrid models outper- form the individual architectures on both bench- mark datasets and provide a better understanding of the capabilities and limitations of each model family. 6.1 Assessing Individual Encoders and Decoders In an encoder-decoder architecture, a natural as- sumption is that the role of an encoder is to build feature representations that can best encode the meaning of the source sequence, while a decoder should be able to process and interpret the repre- sentations from the encoder and, at the same time, track the current target history. Decoding is in- herently auto-regressive, and keeping track of the state information should therefore be intuitively beneﬁcial for conditional generation. We set out to study which family of encoders is more suitable to extract rich representations from a given input sequence, and which family of de- coders can make the best of such rich representa- tions. We start by combining the encoder and de- coder from different model families. Since it takes a signiﬁcant amount of time for a ConvS2S model to converge, and because the ﬁnal translation qual- ity was not on par with the other models, we fo- cus on two types of hybrids only: Transformer en- coder with RNMT+ decoder and RNMT+ encoder with Transformer decoder. From Table 5, it is clear that the Transformer encoder is better at encoding or feature extrac- tion than the RNMT+ encoder, whereas RNMT+ is better at decoding or conditional language mod- eling, conﬁrming our intuition that a stateful de- coder is beneﬁcial for conditional language gener- ation. 6.2 Assessing Encoder Combinations Next, we",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "at decoding or conditional language mod- eling, conﬁrming our intuition that a stateful de- coder is beneﬁcial for conditional language gener- ation. 6.2 Assessing Encoder Combinations Next, we explore how the features extracted by an encoder can be further enhanced by incorpo- rating additional information. Speciﬁcally, we in- vestigate the combination of transformer layers",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "with RNMT+ layers in the same encoder block to build even richer feature representations. We ex- clusively use RNMT+ decoders in the following architectures since stateful decoders show better performance according to Table 5. We study two mixing schemes in the encoder (see Fig. 2): (1) Cascaded Encoder: The cascaded encoder aims at combining the representational power of RNNs and self-attention. The idea is to enrich a set of stateful representations by cascading a fea- ture extractor with a focus on vertical mapping, similar to (Pascanu et al., 2013; Devlin, 2017). Our best performing cascaded encoder involves ﬁne tuning transformer layers stacked on top of a pre-trained frozen RNMT+ encoder. Using a pre-trained encoder avoids optimization difﬁcul- ties while signiﬁcantly enhancing encoder capac- ity. As shown in Table 6, the cascaded encoder improves over the Transformer encoder by more than 0.5 BLEU points on the WMT’14 En→Fr task. This suggests that the Transformer encoder is able to extract richer representations if the input is augmented with sequential context. (2) Multi-Column Encoder: As illustrated in Fig. 2b, a multi-column encoder merges the out- puts of several independent encoders into a sin- gle combined representation. Unlike a cascaded encoder, the multi-column encoder enables us to investigate whether an RNMT+ decoder can dis- tinguish information received from two different channels and beneﬁt from its combination. A crucial operation in a multi-column encoder is therefore how different sources of information are merged into a uniﬁed representation. Our best multi-column encoder performs a simple concate- nation of individual column outputs. The model details and hyperparameters of the above two encoders are described in Appendix A.5 and A.6. As shown in Table 6, the multi-column encoder followed by an RNMT+ decoder achieves better results than the Transformer and the RNMT model on both WMT’14 benchmark tasks. 7 Conclusion In this work we",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "As shown in Table 6, the multi-column encoder followed by an RNMT+ decoder achieves better results than the Transformer and the RNMT model on both WMT’14 benchmark tasks. 7 Conclusion In this work we explored the efﬁcacy of sev- eral architectural and training techniques proposed in recent studies on seq2seq models for NMT. We demonstrated that many of these techniques are broadly applicable to multiple model architec- tures. Applying these new techniques to RNMT models yields RNMT+, an enhanced RNMT Table 6: Results for hybrids with cascaded en- coder and multi-column encoder. (a) Cascaded Encoder (b) Multi-Column Encoder model that signiﬁcantly outperforms the three fun- damental architectures on WMT’14 En→Fr and En→De tasks. We further presented several hy- brid models developed by combining encoders and decoders from the Transformer and RNMT+ mod- els, and empirically demonstrated the superiority of the Transformer encoder and the RNMT+ de- coder in comparison with their counterparts. We then enhanced the encoder architecture by hori- zontally and vertically mixing components bor- rowed from these architectures, leading to hy- brid architectures that obtain further improve- ments over RNMT+. We hope that our work will motivate NMT re- searchers to further investigate generally applica- ble training and optimization techniques, and that our exploration of hybrid architectures will open paths for new architecture search efforts for NMT. Our focus on a standard single-language-pair translation task leaves important open questions to be answered: How do our new architectures compare in multilingual settings, i.e., modeling an interlingua? Which architecture is more efﬁ- cient and powerful in processing ﬁner grained in- puts and outputs, e.g., characters or bytes? How transferable are the representations learned by the",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1793
+    }
+  },
+  {
+    "content": "different architectures to other tasks? And what are the characteristic errors that each architecture makes, e.g., linguistic plausibility? Acknowledgments We would like to thank the entire Google Brain Team and Google Translate Team for their foun- dational contributions to this project. We would also like to thank Noam Shazeer, Ashish Vaswani, Jakob Uszkoreit, Lukasz Kaiser, and the entire Tensor2Tensor development team for their useful inputs and discussions. References",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "A Supplemental Material A.1 ConvS2S For the WMT’14 En→De task, both the encoder and decoder have 15 layers, with 512 hidden units in the ﬁrst ten layers, 768 units in the subsequent three layers and 2048 units in the ﬁnal two lay- ers. The ﬁrst 13 layers use kernel width 3 and the ﬁnal two layers use kernel width 1. For the WMT’14 En→Fr task, both the encoder and de- coder have 14 layers, with 512 hidden units in the ﬁrst ﬁve layers, 768 units in the subsequent four layers, 1024 units in the next three layers, 2048 units and 4096 units in the ﬁnal two layers. The ﬁrst 12 layers use kernel width 3 and the ﬁnal two layers use kernel width 1. We train the ConvS2S models with synchronous training using 32 GPUs. A.2 Transformer Both the encoder and the decoder have 6 Trans- former layers. Transformer base model has model dimension 512, hidden dimension 2048 and 8 at- tention heads. The Transformer Big model uses model dimension 1024, hidden dimension 8192 and 16 attention heads. We group the dropout in Transformer models into four types: input dropout - dropout applied to the sum of token embeddings and position encodings, residual dropout - dropout applied to the output of each sublayer before added to the sublayer input, relu dropout - dropout applied to the inner layer output after ReLU ac- tivation in each feed-forward sub-layer, attention dropout - dropout applied to attention weight in each attention sub-layer. All Transformer models use the following learning rate schedule: where t is the current step, p is the number of warmup steps, dmodel is the model dimension and r0 is a constant to adjust the magnitude of the learning rate. On WMT’14 En→De, the Transformer Base model employs all four types of dropout with dropout probs = 0.1. We use r0 = 2.0 and p = 8000 in the learning rate schedule. For the Trans- former Big model, only residual dropout and input dropout are applied, both with dropout probs = 0.3. r0 = 3.0 and p = 40000 are used in the learn- ing rate",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 11,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "the learning rate schedule. For the Trans- former Big model, only residual dropout and input dropout are applied, both with dropout probs = 0.3. r0 = 3.0 and p = 40000 are used in the learn- ing rate schedule. On WMT’14 En→Fr, the Base model applies only residual dropout and input dropout, each with dropout probs = 0.1. The learning rate sched- ule uses r0 = 1.0 and p = 4000. For the big model, we apply all four types of dropout, each with dropout probs = 0.1. The learning rate schedule uses r0 = 3.0 and p = 40000. We train both Transformer base model and big model with synchronous training using 16 GPUs. A.3 RNMT+ RNMT+ has 1024 LSTM nodes in all encoder and decoder layers. The input embedding dimension is 1024 as well. The encoder ﬁnal projection layer projects the last bidirectional layer output from di- mension 2048 to 1024. We use 4 attention heads in the multi-head additive attention. Label smooth- ing is applied with an uncertainty = 0.1. Fig- ure 3 illustrates our learning rate schedule deﬁned in Eq. 1. On WMT’14 En→De, we use p = 500, s = 600000, e = 1200000 for the learning rate schedule and apply all dropout types with dropout probs = 0.3. We apply L2 regulariza- tion to the weights with λ = 10−5. On WMT’14 En→Fr, we use p = 500, s = 1200000, e = 3600000, dropout probs = 0.2. No weight de- cay is applied. RNMT+ models are trained with synchronous training using 32 GPUs. A.4 Encoder-Decoder Hybrids i.e., Trans- For both encoder-decoder hybrids, former Big encoder with RNMT+ decoder and RNMT+ encoder with Transformer Big decoder, we use the exactly same model hyperparameters as in the Transformer Big and RNMT+ models de- scribed in above sections. We use Transformer learning rate schedule (Eq.",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 11,
+      "type": "Text",
+      "start_index": 1796
+    }
+  },
+  {
+    "content": "2) for both hybrids. For the WMT’14 En→Fr task, we use r0 = 4.0 and p = 50000 for the hybrid with Transformer encoder and RNMT+ decoder, and use r0 = 3.0 and p = 40000 for the hybrid with RNMT+ encoder and Transformer decoder. Both hybrid models are trained with synchronous training using 32 GPUs. A.5 Cascaded Encoder Hybrid In this hybrid we stack a transformer encoder on top of the RNMT+ encoder. In our experiments we used a pre-trained RNMT+ encoder, including the projection layer, exactly as described in section 4. The outputs of the RNMT+ encoder are layer nor- malized and fed into a transformer encoder. This structure is illustrated in Figure 2a. The trans- former encoder is identical to the one described in subsection 2.3 except for the different number of layers. Our best setup uses 4 Transformer lay- ers stacked on top of a pre-trained RNMT+ en- coder with 6 layers. To speed up convergence, we froze gradient updates in the pre-trained RNMT+ encoder. This enables us to increase the encoder capacity signiﬁcantly, while avoiding optimization issues encountered in non-frozen variants of the hybrid. As an additional beneﬁt, this enables us to train the model on P100s without the need for model parallelism. this speciﬁc layout allows us to drop hand-crafted sinusoidal positional embed- dings (since position information is already cap- tured by the underlying RNNs). We use the Transformer learning rate schedule (Eq. 2) for this hybrid with r0 = 2.0 and p = 16000 and train with synchronous training using 32 GPUs. We apply the same dropouts used for the transformer model to the transformer layers in the encoder, and apply L2 weight decay with λ = 10−5 to the decoder layers. A.6 Multi-Column Encoder Hybrid We use a simple concatenation as the merger- operator without ﬁne-tuning any other model hy- perparameters. After concatenation, the combined representation is projected down to the decoder di- mension with a layer-normalized afﬁne transfor- mation. Although in",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 12,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "ﬁne-tuning any other model hy- perparameters. After concatenation, the combined representation is projected down to the decoder di- mension with a layer-normalized afﬁne transfor- mation. Although in this paper we only use two columns, there is no practical restriction on the to- tal number of columns that this hybrid can com- bine. By combining multiple encoder representa- tions, the network may capture different factors of variations in the input sequence. Similar to the Cascaded-RNMT+ hybrid, we use pre-trained encoders that are borrowed from an RNMT+ model (we used a pretrained RNMT+ encoder as the ﬁrst column) and an Encoder- Decoder hybrid model with Transformer encoder and RNMT+ decoder (we used the pretrained Transformer encoder). Multi-column encoder with RNMT+ decoder is trained using 16 GPUs in a synchronous training setup. We stick to the simple concatenation operation as the merger- operator, and after concatenation, the combined representation is projected down the decoder di- mension with a simple layer-normalized afﬁne transformation. One additional note that we ob- served for the sake of stability and trainability, each column output should be ﬁrst mapped to a space where the representation ranges are compat- ible, e.g., RNMT+ encoder output has not limita- tion on its range, but a Transformer Encoder out- put range is constrained by the ﬁnal layer normal- ization applied to the entire Transformer encoder body. Therefore, we also applied layer normaliza- tion to the RNMT+ encoder outputs to match the ranges of individual encoders. On WMT’14 En→De, we use p = 50, s = 300000, e = 900000 for the learning rate schedule and apply all dropout types with dropout probs = 0.3. We apply L2 regularization to the weights with λ = 10−5. On WMT’14 En→Fr, we use Transformer learning rate schedule (Eq. 2) r0 = 1.0 and p = 10000. No weight decay or dropout is applied.",
+    "metadata": {
+      "filename": "1804.09849.pdf",
+      "page_number": 12,
+      "type": "Text",
+      "start_index": 1797
+    }
+  }
+]

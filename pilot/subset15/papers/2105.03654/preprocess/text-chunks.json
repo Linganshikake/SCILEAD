@@ -1,0 +1,182 @@
+[
+  {
+    "content": "Improving Named Entity Recognition by External Context Retrieving and Cooperative Learning Xinyu Wang*!, Yong Jiang’*, Nguyen Bach‘, Tao Wang’, Zhonggqiang Huang’, Fei Huang‘, Kewei Tu** °School of Information Science and Technology, ShanghaiTech University Shanghai Engineering Research Center of Intelligent Vision and Imaging Shanghai Institute of Microsystem and Information Technology, Chinese Academy of Sciences University of Chinese Academy of Sciences iDAMO Academy, Alibaba Group {wangxyl,tukw}@shanghaitech.edu.cn, yongjiang. jy@alibaba-inc.com {nguyen.bach, leeo.wangt,z.huang, f.huang}@alibaba-inc.com Abstract Recent advances in Named Entity Recogni- tion (NER) show that document-level contexts can signiﬁcantly improve model performance. In many application scenarios, however, such contexts are not available. In this paper, we propose to ﬁnd external contexts of a sentence by retrieving and selecting a set of semanti- cally relevant texts through a search engine, with the original sentence as the query. We ﬁnd empirically that the contextual represen- tations computed on the retrieval-based input view, constructed through the concatenation of a sentence and its external contexts, can achieve signiﬁcantly improved performance compared to the original input view based only on the sentence. Furthermore, we can improve the model performance of both input views by Cooperative Learning, a training method that encourages the two input views to pro- duce similar contextual representations or out- put label distributions. Experiments show that our approach can achieve new state-of-the-art performance on 8 NER data sets across 5 do- mains.1 1 Introduction Pretrained contextual embeddings such as ELMo (Peters et al., 2018), Flair (Akbik et al., 2018) and BERT (Devlin et al., 2019) have signiﬁcantly im- proved the accuracy of Named Entity Recognition (NER) models. Recent work (Devlin et al., 2019; Yu et al., 2020; Yamada et al., 2020) found that including document-level",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "2019) have signiﬁcantly im- proved the accuracy of Named Entity Recognition (NER) models. Recent work (Devlin et al., 2019; Yu et al., 2020; Yamada et al., 2020) found that including document-level contexts of the target sen- tence in the input of contextual embeddings meth- ods can further boost the accuracy of NER models. ∗ Yong Jiang and Kewei Tu are the corresponding authors. ‡: This work was conducted when Xinyu Wang was interning at Alibaba DAMO Academy. newest available https://github.com/modelscope/AdaSeq/ tree/master/examples/RaNER. The older version: https://github.com/Alibaba-NLP/CLNER. However, there are a lot of application scenarios in which document-level contexts are unavailable in practice. For example, there are sometimes no available contexts in users’ search queries, tweets and short comments in various domains such as social media and E-commerce domains. When pro- fessional annotators annotate ambiguous named entities in such cases, they usually rely on domain knowledge for disambiguation. This kind of knowl- edge can often be found through a search engine. Moreover, when the annotators are not sure about a certain entity, they are usually encouraged to ﬁnd related knowledge through a search engine (Wang et al., 2019). Therefore, we believe that NER mod- els can beneﬁt from such a process as well. In this paper, we propose to improve NER mod- els by retrieving texts related to the input sentence by an off-the-shelf search engine. We re-rank the re- trieved texts according to their semantic relevance to the input sentence and select several top-ranking texts as the external contexts. Consequently, we concatenate the input sentence and external con- texts together as a new retrieval-based input view and feed it to the pretrained contextual embedding module, so that the resulting semantic representa-",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1801
+    }
+  },
+  {
+    "content": "tions of the input tokens can be improved. The token representations are then fed into a CRF layer for named entity prediction. A motivating example is shown in Figure 1. Moreover, we consider utilizing the new input view to improve model performance with the origi- nal input view that does not have external contexts. This can be useful in application scenarios when ex- ternal contexts are unavailable or undesirable (e.g., in time-critical scenarios). To this end, we propose Cooperative Learning (CL) that encourages the two input views to produce similar predictions. We pro- pose two approaches to CL which minimize either the L2 distances between the token representations of the two input views or the Kullback–Leibler (KL) divergence between the prediction distribu- tions of the two input views during training. Our experiments show that including the re- trieved external contexts can signiﬁcantly improve the accuracy of NER models on 8 NER datasets from 5 domains. With CL, the accuracy of the NER models with both input views can be further improved. Our approaches outperform previous state-of-the-art approaches in each domain. The contributions of this paper are: 2 Framework Given a sentence of n tokens x = {x1, · · · , xn}, the input sentence is fed into a search engine as a query. The search engine returns the top k relevant texts { ˆx1, · · · , ˆxk}. Our framework feeds these texts into a re-ranking model. We concatenate l top-ranking texts output from the re-ranking model as the external contexts. The NER model is fed with either an input view with the input sentence (original input view) or a concatenation of the in- put sentence and external contexts (retrieval-based input view) as input. The model outputs the predic- tions of labels y = {y1, · · · , yn} at each position based on the CRF layer. To further improve the model, we use Cooperative Learning to train a uni- ﬁed model that is strong in both input views. With CL, the model is additionally constrained",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "position based on the CRF layer. To further improve the model, we use Cooperative Learning to train a uni- ﬁed model that is strong in both input views. With CL, the model is additionally constrained to be con- sistent in the internal representations or the output distributions of both input views. The architecture of our framework is shown in Figure 2. 2.1 Re-ranking Given an input sentence as a search query, the search engine returns ranked relevant texts. How- ever, the off-the-shelf search engine is highly opti- mized for a fast speed over a large set of documents, so it may sometimes produce semantically irrele- vant results or rank the results using inaccurate relevance scores. Since the NER task targets at semantically recognizing named entities, it is more helpful if the relevant texts are semantically sim- ilar to the input sentence. Therefore, we need to re-rank the retrieved texts so that the most seman- tically relevant texts are chosen. We propose to apply BERTScore (Zhang et al., 2020) to score the relatedness of each retrieved text to the input sen- tence. BERTScore is a language generation metric that calculates a sum of cosine similarity between token representations of two sentences. Therefore, it is more likely that the search query and the re- trieved texts have strong semantic relations when BERTScore is large. The token representations are generated from pretrained contextual embed- dings such as BERT. Given the corresponding pre- normalized token representations {r1, · · · , rn} of the input sentence x and the pre-normalized token representations {ˆr1, · · · , ˆrm} of a certain retrieved text ˆx with m words, the Precision (P), Recall (R) of BERTScore measure the semantic similarities from one to another: We re-rank the retrieved texts by the F1 scores F1=2 P·R P+R and concatenate l top-ranking texts { ˆx1, · · · , ˆxl} with F1 scores together as the ex-",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1799
+    }
+  },
+  {
+    "content": "Gola Labels ternal contexts: where sep_token is a special token representing a separate of sentences in the transformer-based pretrained contextual embeddings (for example, “[SEP]” in BERT). where ψ is the potential function and θ represents the model parameters. Y(x) denotes the set of all possible label sequences given x. y0 is deﬁned to be a special start symbol. WT ∈ Rt×d and b ∈ Rt×t are parameters computing emission and transition scores respectively. d is the hidden size of v and t is the size of the label set. During train- ing, the negative log-likelihood loss for the input sequence with gold labels y∗ is deﬁned by: 2.2 NER Model We solve the NER task as a sequence labeling prob- lem. We apply a neural model with a CRF layer, which is one of the most popular state-of-the-art approaches to the task (Lample et al., 2016; Ma and Hovy, 2016; Akbik et al., 2019). In the se- quence labeling model, the input sentence x is fed into a transformer-based pretrained contextual em- beddings model to get the token representations {v1, · · · , vn} by vi=embedi(x). The token rep- resentations are fed into a CRF layer to get the conditional probability pθ(y|x): In our approach, we concatenate the external contexts ˜x at the end of the input sentence x to form the retrieval-based input view. The token representations are now given by: The architecture of our NER model is shown in Figure 3. Now the conditional probability pθ(y|x) becomes pθ(y|x, ˜x). The loss function in Eq. 2 becomes: 2.3 Cooperative Learning In practice, there are two application scenarios for the NER model: 1) ofﬂine prediction, which re-",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "quires high accuracy of the prediction but the pre- diction speed is less emphasized; 2) online serv- ing, which requires a faster prediction speed. The retrieval-based input view meets the requirement of the ﬁrst scenario for its strong token representa- tions. However, it does not meet the requirement of the second scenario. The external contexts are usually signiﬁcantly longer than the input sentence and a search engine may not meet the latency re- quirements. These two issues signiﬁcantly slow down the prediction speed of the model. Therefore, it is essential to improve the accuracy of the orig- inal input views in a uniﬁed model to meet these two scenarios. Cooperative Learning targets at using the retrieval-based input view to help improve the ac- curacy of the model when there are no external contexts available. CL adds constraints between the internal representations or the output distribu- tions between two input views to enforce that the predictions of both views should be near. The ob- jective function of CL is calculated by: where D is a distance function between a function h with different inputs. Because the representations or the distributions with retrieval-based input view are usually informative, we do not backpropagate the gradient through h([x; ˜x]). We propose two approaches for CL. Token Representations: Stronger token repre- sentations usually lead to better accuracy on the task. Therefore, CL constrains the token represen- tations of two input views to be similar. This helps the model learn to predict the token representations with external contexts even if the contexts are not available. In this approach, D is the L2 norm to represent the distances of the token representations: Label Distributions: Since CL enforces the la- bel predictions of both input views to be similar, a straight-forward approach is constraining the label distributions predicted by the model to be similar with the two input views. In this approach, we use the KL",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "of both input views to be similar, a straight-forward approach is constraining the label distributions predicted by the model to be similar with the two input views. In this approach, we use the KL divergence as the function D. Then objec- tive function in Eq. 4 becomes the KL divergence between pθ(y|x, ˜x) and pθ(y|x): With the CRF layer, the loss function is difﬁcult to calculate because the output space of pθ(y|•) is exponential in size. To alleviate this issue, we calculate the KL divergence between the marginal distributions qθ(yi|x, ˜x) and qθ(yi|x) at each po- sition of the sentence to approximate Eq. 6. The marginal distributions can be obtained using the forward-backward algorithm: As mentioned earlier, we do not back-propagate the gradient through pθ(y|x, ˜x). Therefore calculating the KL divergence is equivalent to calculating the cross-entropy loss between q(y|x, ˜x) and q(y|x): Together with the negative log-likelihood losses in Eq. 2, 3, the total loss in training is a summation of label losses and a CL loss: where LCL(θ) can be one of the CL loss in Eq. 5, 8 or a summation of both of them.",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1795
+    }
+  },
+  {
+    "content": "3 Experiments 3.1 Settings Datasets To show the effectiveness of our ap- proach, we experiment on 8 NER datasets across 5 domains: Annotations of the E-commerce dataset We manually labeled the user queries through crowd- sourcing from www.aliexpress.com, which is a real-world E-commerce website. For each query, we asked one annotator to label the entities and ask another annotator to check the quality. After that, we randomly select 10% of the dataset and ask the third annotator to check the accuracy. As a result, the overall averaged query-level accuracy2 is 95%. The dataset will not be released due to user privacy. Retrieving and Ranking We use an internal E-commerce search engine for the E-commerce dataset. For the other datasets, we use Google Search as the search engine. Google Search is an off-the-shelf search engine and can simulate the ofﬂine search over various domains. We use sum- marized descriptions from the search results as the retrieved texts3. As Google Search limits the max- imal length of searching queries to 32 words, we chunk a sentence into multiple sub-sentences based on punctuation if the sentence is longer than 30, feed each sub-sentence to the search engine, and retrieve up to 20 results. We ﬁlter the retrieved texts that contain any part of the datasets. Our re- ranking module selects top 6 relevant texts4 as the external contexts of the input sentence and chunk the external contexts if the total sub-token lengths of the input sentence and external contexts exceeds 510. Model Conﬁgurations For the re-ranking mod- ule, we use Roberta-Large (Liu et al., 2019) for token representations which is the default conﬁg- uration in the code5 of BERTScore (Zhang et al., 2020). For token representations in the NER model, 2the accuracy of a query counts 1.0 if all the entities in the query are correctly recognized and 0.0 otherwise. 3If the descriptions are not available, we use the titles of the results instead. 4We determined that 6 is a reasonable",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "if all the entities in the query are correctly recognized and 0.0 otherwise. 3If the descriptions are not available, we use the titles of the results instead. 4We determined that 6 is a reasonable number based on preliminary experiments. We show the statistics of the datasets in Table 1. 5https://github.com/Tiiiger/bert_score",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "we use pretrained Bio-BERT (Lee et al., 2020) for datasets from the biomedical domain and use XLM- RoBERTa (Conneau et al., 2020) for datasets from other domains. Training During training, we ﬁne-tune the pretrained contextual embeddings by AdamW (Loshchilov and Hutter, 2018) optimizer with a batch size of 4. We use a learning rate of 5 × 10−6 to update the parameters in the pretrained contex- tual embeddings. For the CRF layer parameters, we use a learning rate of 0.05. We train the NER mod- els for 10 epochs for the datasets in Social Media and Biomedical domains while we train the NER models for 5 epochs for other datasets for efﬁciency as these datasets have more training sentences. 3.2 Results We experiment on the following approaches: Besides, we also compare our approaches with pre- vious state-of-the-art approaches over entity-level F1 scores6. During the evaluation, our approaches are evaluated using inputs without external con- texts (W/O CONTEXT) and inputs with them (W/ CONTEXT). We report the results averaged over 5 runs in our experiments. The results are listed in 6We do not compare the results from previous work such as Yu et al. (2020); Luoma and Pyysalo (2020); Yamada et al. (2020) that utilizes the document-level contexts in CoNLL-03 NER here. We conduct a comparison with these approaches in Appendix A. Table 27. With the external contexts, our models with CL outperform previous state-of-the-art ap- proaches on most of the datasets. Our approaches signiﬁcantly outperform the baseline that is trained without external contexts. Comparing with LUKE, our approaches and our baseline outperform LUKE in all the cases. The possible reason is that LUKE is pretrained only using long word sequences, which makes the model prone to fail to capture the in- formation of entities based on short sentences8. For our approaches, with CL, the accuracy can be improved on both input views comparing with W/O CONTEXT and W/ CONTEXT, which shows adding constraints between",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "of entities based on short sentences8. For our approaches, with CL, the accuracy can be improved on both input views comparing with W/O CONTEXT and W/ CONTEXT, which shows adding constraints between the two views during training helps the model better utilize the original text information. For the two constraints in CL, we ﬁnd that CL-KL is relatively stronger than CL-L2 in a majority of the cases. 3.3 Cross-Domain Transfer For cross-domain transfer, we train the models on the CoNLL-03 datasets, evaluate the accuracy on the CBS SciTech News dataset, and compare the results with those in Jia et al. (2019). We evalu- ate our approaches with each input view and the results are shown in Table 3. Our approaches can improve the accuracy in cross-domain evaluation. The external contexts during evaluation can help to improve the accuracy of W/ CONTEXT. However, the gap between the two input views for the CL approaches is diminished. The observation shows that CL is able to improve the accuracy in cross- domain transfer for both views and eliminate the gap between the two views. 3.4 Semi-supervised Cooperative Learning Cooperative learning can take advantage of large amounts of unlabeled text for further improvement. We jointly train on the labeled data and unlabeled data in training to form a semi-supervised train- ing manner. During training, we alternate between minimizing the loss (Eq. 9) for labeled data and the CL loss for unlabeled data (Eq. 4). We conduct the experiment on the E-commerce dataset as an exam- ple. Results in Table 4 show that the accuracy of 7For the result of Bio-BERT (Lee et al., 2020) on NCBI- disease dataset, we report the results reported in ofﬁcial code (https://github.com/dmis-lab/biobert). The results (89.71 in NCBI-disease) reported in the paper used token-level F1 score instead of entity-level F1 score. 8We have conﬁrmed with the authors of LUKE (Yamada et al., 2020) that the accuracy on the CoNLL-03 dataset is consistent with their",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "paper used token-level F1 score instead of entity-level F1 score. 8We have conﬁrmed with the authors of LUKE (Yamada et al., 2020) that the accuracy on the CoNLL-03 dataset is consistent with their experimental results.",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 3595
+    }
+  },
+  {
+    "content": "Table 5: A comparison of different re-ranking ap- proaches by the F1 scores on WNUT-17. SE: Search engine. FM: Fuzzy match score. BS: BERTScore. 4.1 Comparison of Re-ranking Approaches Table 4: A comparison between of CL approaches with and without semi-supervised learning. SEMI rep- resents the approaches with semi-supervised learning. † represents the approach is signiﬁcantly (p < 0.05) stronger than the approach without semi-supervised learning with the same input view. both input views can be improved especially for the input without external contexts, which shows the effectiveness of CL in semi-supervised learning. 4 Analysis Various re-ranking approaches may affect the to- ken representations of the model. We compare our approach with three other re-ranking approaches. The ﬁrst is the ranking from the search engine with- out any re-ranking approaches. The second is re- ranking through a fuzzy match score. The approach has been widely applied in a lot of previous work (Gu et al., 2018; Zhang et al., 2018; Hayati et al., 2018; Xu et al., 2020). The third is BERTScore with tf-idf importance weighting which makes rare words more indicative than common words in scor- ing. We train our models (W/ CONTEXT) with external contexts from these re-ranking approaches and report the averaged and best results on WNUT- 17 in Table 5. Our results show that re-ranking with BERTScore performs the best, which shows the se- mantic relevance is helpful for the performance. However, for BERTScore with the tf-idf weighting, the accuracy of the model drops signiﬁcantly (with p < 0.05). The possible reason might be that the tf-idf weighting gives high weights to irrelevant texts with rare words during re-ranking. We use the WNUT-17 dataset in the analysis.",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table 6: A comparison among different contexts types. 4.2 How the Context Quality Affects Accuracy We analyze how the NER model will perform when the quality of external contexts varies. We train and evaluate the NER model in four conditions with various contexts. The ﬁrst one takes each dataset split as a document and encodes each sentence with document-level contexts. In this case, we encode the document-level contexts following the approach of Yamada et al. (2020). The second one uses GPT-2 (Radford et al., 2019) to generate 6 rel- evant sentences as external contexts. The other two conditions randomly select from the retrieved texts or the dataset as external contexts. Results in Table 6 show that all these conditions result in inferior accuracy comparing with the model without any ex- ternal context. However, our external contexts are more semantically relevant to the input sentence and helpful for prediction. 4.3 Ablation Study To show the effectiveness of CL, we conduct three ablation studies for our approach. The ﬁrst one is training the NER model based on one view and pre- dict on the other. The second is jointly training both views without the CL loss term (removing LCL(θ) in Eq. 9). The ﬁnal one is using both CL losses to train the model (LCL(θ) = LCL-L2(θ) + LCL-KL(θ) in Eq. 9). Results in Table 7 show that the exter- nal context can help to improve the accuracy even when the NER model is trained without the con- texts. However, when the model is trained with the external contexts, the accuracy of the model drops when predicting the inputs without external contexts. In joint training without CL, the accuracy of the model over inputs without contexts can be slightly improved but the accuracy over inputs with contexts drops, which shows the beneﬁt of adding CL. For the model trained with both CL losses, we ﬁnd no improvement over the models trained with a single CL loss. 5 Related Work Named Entity Recognition Named Entity Recognition (Sundheim, 1995) has",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "For the model trained with both CL losses, we ﬁnd no improvement over the models trained with a single CL loss. 5 Related Work Named Entity Recognition Named Entity Recognition (Sundheim, 1995) has been studied for decades. Most of the work takes NER as a sequence labeling problem and applies the linear-chain CRF (Lafferty et al., 2001) to achieve state-of-the-art accuracy (Ma and Hovy, 2016; Lample et al., 2016; Akbik et al., 2018, 2019; Wang et al., 2020b). Recently, the improvement of accuracy mainly beneﬁts from stronger token representations such as pretrained contextual embeddings such as BERT (Devlin et al., 2019), Flair (Akbik et al., 2018) and LUKE (Yamada et al., 2020). Very recent work (Yu et al., 2020; Yamada et al., 2020) utilizes the strength of pretrained contextual embeddings over long-range dependency and encodes the document-level contexts for token representations to achieve state-of-the-art accuracy on CoNLL 2002/2003 NER datasets (Tjong Kim Sang, 2002; Tjong Kim Sang and De Meulder, 2003). Improving Models through Retrieval Retriev- ing related texts from a certain database (such as the training set) has been widely applied in tasks such as neural machine translation (Gu et al., 2018; Zhang et al., 2018; Xu et al., 2020), text generation (Weston et al., 2018; Kim et al., 2020), semantic parsing (Hashimoto et al., 2018; Guo et al., 2019). Most of the work uses the retrieved texts to guide the generation or reﬁne the retrieved texts through the neural model, while we take the retrieved texts as the contexts of the input sentence to improve the semantic representations of the input tokens. For the re-ranking models, fuzzy match score (Gu et al., 2018; Zhang et al., 2018; Hayati et al., 2018; Xu et al., 2020), attention mechanisms (Cao et al., 2018; Cai et al., 2019), and dot products between sentence representations (Lewis et al., 2020; Xu et al., 2020) are usual scoring functions to re-rank the retrieved texts. Instead, we use BERTScore to",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "Cai et al., 2019), and dot products between sentence representations (Lewis et al., 2020; Xu et al., 2020) are usual scoring functions to re-rank the retrieved texts. Instead, we use BERTScore to re-rank the retrieved texts instead as BERTScore evaluates semantic correlations between the texts",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 3599
+    }
+  },
+  {
+    "content": "based on pretrained contextual embeddings. Multi-View Learning Multi-View Learning is a technique applied to inputs that can be split into multiple subsets. Co-training (Blum and Mitchell, 1998) and co-regularization (Sindhwani and Niyogi, 2005) train a separate model for each view. These approaches are semi-supervised learn- ing techniques that require two independent views of the data. The model with higher conﬁdence is applied to construct additional labeled data by predicting on unlabeled data. Sun (2013) and Xu et al. (2013) have extensively studied various multi- view learning approaches. Hu et al. (2021) shows the effectiveness of multi-view learning on cross- lingual structured prediction tasks. Recently, Clark et al. (2018) proposed Cross-View Training (CVT), which trains a uniﬁed model instead of multiple models and targets at minimizing the KL diver- gence between the probability distributions of the model and auxiliary prediction modules. Compar- ing with CVT, CL targets at improving the accu- racy of two kinds of inputs rather than only one of them. We also propose to minimize the distance of token representations between different views in addition to KL-divergence. Besides, CL utilizes the external contexts and therefore we do not need to construct auxiliary prediction modules in the model. Moreover, CVT cannot be directly applied to our transformer-based embeddings. Finally, our decoding layer in the model uses the CRF layer instead of the simple Softmax layer as in CVT. The CRF layer is stronger but more difﬁcult for KL- divergence computation. Knowledge Distillation Knowledge distillation (Buciluˇa et al., 2006; Hinton et al., 2015) trans- fers the knowledge of “teacher” models to smaller “student” models through minimizing the KL di- vergence of prediction probability distribution be- tween the models. In speech recognition (Huang et al., 2018) and natural language processing (Wang et al., 2020a, 2021b), the marginal probability dis- tribution of",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "probability distribution be- tween the models. In speech recognition (Huang et al., 2018) and natural language processing (Wang et al., 2020a, 2021b), the marginal probability dis- tribution of the linear-chain CRF layer has been applied to distill the knowledge between teacher models and student models. Comparing with these approaches, our approaches train a single uniﬁed model instead of transferring the knowledge be- tween two models. We also show that the accuracy of both views can be improved with our approaches, unlike in knowledge distillation only the student model is updated and improved. 6 Conclusion In this paper, we propose to improve the NER model’s accuracy by retrieving related contexts from a search engine as external contexts of the inputs. To improve the robustness of the models when no external contexts are available, we propose Cooperative Learning. Cooperative Learning adds constraints between two input views over either the token representations or label distributions of both input views to be consistent. Empirical results show that our approach signiﬁcantly outperforms the baseline models and previous state-of-the-art approaches on the datasets over 5 domains. We also show the effectiveness of Cooperative Learning in a semi-supervised training manner. Acknowledgments This work was supported by the National Natu- ral Science Foundation of China (61976139) and by Alibaba Group through Alibaba Innovative Re- search Program. We thank Kaibo Zhang for his help in crawling related texts from Google Search and thank Jiong Cai and Zhuo Chen for their com- ments and suggestions on writing. References",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 1806
+    }
+  },
+  {
+    "content": "Probabilistic models for segmenting and labeling se- quence data. In Proceedings of the Eighteenth Inter- national Conference on Machine Learning, ICML ’01, page 282–289, San Francisco, CA, USA. Mor- gan Kaufmann Publishers Inc.",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 11,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table 8: A comparison of retrieved contexts and †: These approaches are document-level contexts. trained on training and development sets. A Retrieved Contexts Versus Document-level contexts on CoNLL-03 We conduct a comparison between our retrieved contexts and the document-level contexts on CoNLL-03 datasets. In Table 8, we report the best model on development set following Yamada et al. (2020). Comparing with previous state-of-the-art approaches with encoding document-level contexts, our approaches are competitive and even stronger than some of the previous approaches utilizing max- imal document-level contexts. Comparing with our model trained on document-level contexts (W/ DOC CONTEXT), we ﬁnd that there is still a gap between the document-level contexts and retrieved contexts but our CL approaches can reduce the gap between these two contexts.",
+    "metadata": {
+      "filename": "2105.03654.pdf",
+      "page_number": 13,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

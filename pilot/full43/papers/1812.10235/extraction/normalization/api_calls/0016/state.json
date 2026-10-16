@@ -1,0 +1,59 @@
+{
+  "call": 16,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 16,
+    "record": 8,
+    "field": "Task",
+    "original_value": "Slot Filling",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Slot Filling\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 223
+  },
+  "max_tokens": null,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYWFBhD7eMwF8F4FmgmPW9daoRRKu",
+  "usage": {
+    "completion_tokens": 5,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 34,
+      "engine_ttlt_ms": 65,
+      "pre_inference_ms": 137,
+      "service_tbt_ms": 7,
+      "service_ttft_ms": 297,
+      "service_ttlt_ms": 330,
+      "user_visible_ttft_ms": 160
+    },
+    "prompt_tokens": 223,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 228
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "Intent Detection and Slot Filling",
+  "seconds": 1.328
+}

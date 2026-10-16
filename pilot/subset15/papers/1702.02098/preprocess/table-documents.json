@@ -1,0 +1,66 @@
+[
+  {
+    "content": "Table 1 lists F1 scores of models predicting with sentence-level context on CoNLL-2003. For mod- els that we trained, we report F1 and standard deviation obtained by averaging over 10 random restarts. The Viterbi-decoding Bi-LSTM-CRF and ID-CNN-CRF and greedy ID-CNN obtain the highest average scores, with the ID-CNN- CRF outperforming the Bi-LSTM-CRF by 0.11 points of F1 on average, and the Bi-LSTM-CRF out-performing the greedy ID-CNN by 0.11 as well. Our greedy ID-CNN outperforms the Bi- LSTM and the 4-layer CNN, which uses the same number of parameters as the ID-CNN, and per- forms similarly to the 5-layer CNN which uses more parameters but covers the same effective in- put width. All CNN models out-perform the Bi-\nModel Ratinov and Roth (2009) Collobert et al. (2011) Lample et al. (2016) Bi-LSTM 4-layer CNN 5-layer CNN ID-CNN Collobert et al. (2011) Passos et al. (2014) Lample et al. (2016) Bi-LSTM-CRF (re-impl) ID-CNN-CRF F1 86.82 86.96 90.33 89.34 ± 0.28 89.97 ± 0.20 90.23 ± 0.16 90.32 ± 0.26 88.67 90.05 90.20 90.43 ± 0.12 90.54 ± 0.18",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: Relative test-time speed of sentence mod- els, using the fastest batch size for each model.5\nModel Bi-LSTM-CRF 1× Bi-LSTM ID-CNN-CRF 5-layer CNN ID-CNN",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: Comparison of models trained with and without expectation-linear dropout regularization (DR). DR improves all models.\nw/o DR Model 88.89 ± 0.30 Bi-LSTM 89.74 ± 0.23 4-layer CNN 89.93 ± 0.32 5-layer CNN 90.01 ± 0.23 Bi-LSTM-CRF 4-layer ID-CNN 89.65 ± 0.30 w/ DR 89.34 ± 0.28 89.97 ± 0.20 90.23 ± 0.16 90.43 ± 0.12 90.32 ± 0.26",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: F1 score of models trained to predict document-at-a-time. Our greedy ID-CNN model performs as well as the Bi-LSTM-CRF.\nModel 4-layer ID-CNN (sent) Bi-LSTM-CRF (sent) 4-layer CNN × 3 5-layer CNN × 3 Bi-LSTM Bi-LSTM-CRF ID-CNN F1 90.32 ± 0.26 90.43 ± 0.12 90.32 ± 0.32 90.45 ± 0.21 89.09 ± 0.19 90.60 ± 0.19 90.65 ± 0.15",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Comparing ID-CNNs with 1) back- propagating loss only from the ﬁnal layer (1-loss) and 2) untied parameters across blocks (noshare)\nModel ID-CNN noshare ID-CNN 1-loss ID-CNN F1 89.81 ± 0.19 90.06 ± 0.19 90.65 ± 0.15",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 6: Relative test-time speed of document models (fastest batch size for each model).\nModel Bi-LSTM-CRF 1× Bi-LSTM ID-CNN Speed 4.60× 7.96×",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 7: F1 score of sentence and document mod- els on OntoNotes.\nModel Ratinov and Roth (2009)6 Durrett and Klein (2014) Chiu and Nichols (2016) Bi-LSTM-CRF Bi-LSTM-CRF-Doc Bi-LSTM ID-CNN-CRF (1 block) ID-CNN-Doc (3 blocks) ID-CNN (3 blocks) ID-CNN (1 block) F1 83.45 84.04 86.19 ± 0.25 86.99 ± 0.22 86.81 ± 0.18 83.76 ± 0.10 86.84 ± 0.19 85.76 ± 0.13 85.27 ± 0.24 84.28 ± 0.10 Speed 1× 1.32× 24.44× 1.83× 21.19× 13.21× 26.01×",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 8: Statistics of NER datasets\nData CoNLL-2003 OntoNotes 5.0 Tok Sent Doc Ent Tok Sent Doc Ent Train 204,567 14,041 945 23,499 1,088,503 59,924 2,483 81,828 Dev 51,578 3,250 215 5,942 147,724 8,528 319 11,066 Test 46,666 3,453 230 5,648 152,728 8,262 322 11,257",
+    "metadata": {
+      "filename": "1702.02098.pdf",
+      "page_number": 12,
+      "type": "Table"
+    }
+  }
+]

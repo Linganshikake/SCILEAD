@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[{\"Task\": \"Machine Translation\", \"Dataset\": \"WMT English-German (newstest2014)\", \"Metric\": \"BLEU\", \"Result\": \"29.7\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT English-French (newstest2014)\", \"Metric\": \"BLEU\", \"Result\": \"43.2\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"IWSLT'14 German-English\", \"Metric\": \"BLEU\", \"Result\": \"35.2\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT Chinese-English (newstest2017)\", \"Metric\": \"BLEU\", \"Result\": \"24.4\"}, {\"Task\": \"Language Modeling\", \"Dataset\": \"Google Billion Word\", \"Metric\": \"Perplexity (Test)\", \"Result\": \"26.67\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN-DailyMail\", \"Metric\": \"ROUGE-1\", \"Result\": \"39.84\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN-DailyMail\", \"Metric\": \"ROUGE-2\", \"Result\": \"16.25\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN-DailyMail\", \"Metric\": \"ROUGE-L\", \"Result\": \"36.73\"}]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792000036,
+  "id": "chatcmpl-EYxMKoCtHyUx807qRFTcGwk32NXGJ",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260929094812-b8c9b166-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 280,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 182,
+      "engine_ttlt_ms": 1633,
+      "pre_inference_ms": 404,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 1134,
+      "service_ttlt_ms": 2511,
+      "user_visible_ttft_ms": 730
+    },
+    "prompt_tokens": 5526,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 5806
+  }
+}

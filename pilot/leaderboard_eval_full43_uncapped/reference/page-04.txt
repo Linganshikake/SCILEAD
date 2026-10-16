@@ -1,0 +1,120 @@
+Paper Chunks
+Tables
+ 
+ 
+ 
+ 
+ 
+ 
+Query 
+Based Text 
+Extraction 
+Table 
+Extraction
+System 
+Prompt
+Paper A
+{task: Text Summarization,
+ dataset: NYT,
+ metric: ROUGE-1,
+ result: 57.75},
+{task: POS Tagging,
+ dataset: PTB,
+ metric: F1 Score,
+ result: 93.76}
+Paper A
+Normalization 
+Prompt
+Paper A
+{task: Summarization,
+ dataset: New York Times (NYT),
+ metric: ROUGE-1,
+ result: 57.75},
+{task: Part-of-Speech (POS) Tagging,
+ dataset: Penn Treebank (PTB),
+ metric: F1,
+ result: 93.76}
+Repeating for all 
+papers in corpus
+Paper Result
+C 60.13
+A 57.75
+D 55.67
+Task: Summarization,
+Dataset: New York Times (NYT)
+Metric: ROUGE-1
+Leaderboard:
+TDMR Extraction Normalization Leaderboard 
+Construction
+Figure 2: Our framework in three steps: (1) TDMR Extraction, (2) Normalization, (3) Leaderboard Construction
+leaderboard construction (§4.3).
+4.1 TDMR Extraction
+The goal of TDMR extraction is to obtain a com-
+plete set of TDMR tuples from a given set of sci-
+entific papers. To address this goal, we implement
+retrieval-augmented generation (RAG), combining
+an LLM and a knowledge-based retrieval system.
+The process involves parsing PDFs and building a
+vector database. Initially, each publication is parsed
+using an off-the-shelf PDF processing tool to obtain
+text and tables within the file. The extracted text is
+then split into smaller chunks of 2,000 characters,
+approximately equivalent to 500 tokens. This split-
+ting is crucial to process long documents efficiently.
+Next, the text chunks and tables are transformed
+into contextualized embeddings using a pre-trained
+embedding model. These embeddings are stored
+systematically in a vector database, which serves as
+a knowledge base for quick and efficient retrieval
+in RAG.
+After creating the vector database, we imple-
+ment an embedding similarity retriever that selects
+candidate chunks potentially containing the desired
+TDMR tuples. We use the following query for re-
+trieval: “Main task, datasets and evaluation
+metrics”. Lastly, we instruct LLMs to extract
+TDMR tuples from the retrieved chunks by con-
+catenating all retrieved chunks and tables and feed-
+ing the combined input into the model. We instruct
+LLMs to extract TDMR tuples solely from the top-
+performing results achieved by the proposed meth-
+ods in the paper, excluding baseline results. The
+prompts for TDMR extraction and implementation
+details are provided in Appendix G and in §5.1.
+4.2 Normalization
+Since leaderboards are defined by TDM triplets, pa-
+pers to be ranked together on the same leaderboard
+must operate on the same TDMs. However, as men-
+tioned in Section 3, scientific papers often use dif-
+ferent terminology to refer to the same entity (e.g.,
+Named Entity Recognition and Name Tagging). To
+ensure the comparability of results from different
+papers, it is essential to normalize TDM triples.
+One approach to achieve this is to map entity names
+extracted from TDM triples to pre-defined, stan-
+dardized entity names, thereby enabling the com-
+parison of results across papers. While related work
+assumes the existence of a pre-defined TDM tax-
+onomy, this assumption does not align with actual
+research practices for two reasons: (1) leaderboard
+information may not always be available, and (2)
+it is not possible to map newly introduced task,
+dataset or metric names to pre-defined sets. There-
+fore, we apply the normalization process in two
+more realistic settings simulating scenarios where
+TDM triples of leaderboards are partially defined
+or not defined at all beforehand. We name those
+settings as partially pre-defined TDM triple nor-
+malization and cold start normalization. We test
+our framework from three normalization perspec-
+tives to measure its robustness against real-world
+use cases with varying difficulty levels.
+Fully Pre-defined TDM Triples. In this setting,
+we normalize the extracted TDM triples to pre-
+defined task, dataset, and metric entities. For each
+entity type t ∈ {Task, Dataset, Metric}, given the
+extracted entity mention lt, we use LLMs to asso-
+ciate the extracted name with one of the pre-defined
+entity names in set St which is constructed from
+our dataset. For simplicity, St includes all pre-
+7966

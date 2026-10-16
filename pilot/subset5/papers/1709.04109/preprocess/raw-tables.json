@@ -1,0 +1,409 @@
+[
+  {
+    "type": "Table",
+    "element_id": "2085010f0bac2641dc416ac9e2f44884",
+    "text": "word-level input character-level input space after xi label sequence output of forward character-level LSTM at ci, output of backward character-level LSTM at ci, output of forward-to-LM highway unit output of backward-to-LM highway unit output of forward-to-SL highway unit output of backward-to-SL highway unit input of word-level bi-LSTM at xi output of word-level bi-LSTM at xi",
+    "metadata": {
+      "detection_class_prob": 0.8993544578552246,
+      "coordinates": {
+        "points": [
+          [
+            889.9675903320312,
+            864.3660278320312
+          ],
+          [
+            889.9675903320312,
+            1250.3179166666666
+          ],
+          [
+            1541.092529296875,
+            1250.3179166666666
+          ],
+          [
+            1541.092529296875,
+            864.3660278320312
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><tr><td>x</td><td>| word-level input</td><td>Xi</td><td>i-th word</td></tr><tr><td>ec |</td><td>character-level input</td><td>| ¢;,;</td><td>| j-th char in 7;</td></tr><tr><td>c;,_|</td><td>space after x;</td><td>co,</td><td>| space before x;</td></tr><tr><td>y |</td><td>label sequence</td><td>yi |</td><td>label of x;</td></tr><tr><td>f;</td><td>output of forward</td><td>character-level</td><td>LSTM at c;,_</td></tr><tr><td>r; |</td><td>output of backward</td><td></td><td>character-level LSTM at c;__</td></tr><tr><td>£©;</td><td>| output of forward-to-LM</td><td></td><td>highway unit</td></tr><tr><td>r’;</td><td>| output of backward-to-LM</td><td></td><td>highway unit</td></tr><tr><td>£N;</td><td>| output of forward-to-SL</td><td></td><td>highway unit</td></tr><tr><td>rN;</td><td>| output of backward-to-SL</td><td></td><td>highway unit</td></tr><tr><td>v;</td><td colspan=\"3\">| input of word-level bi-LSTM at x;</td></tr><tr><td>Zi</td><td colspan=\"3\">output of word-level bi-LSTM at x;</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "168dd3d552231b08dd2ff41160b5549b",
+    "text": "Dataset CoNLL03 NER CoNLL00 chunking WSJ # of Sentences Dev 3,466 1,000 5,527 Train 14,987 7,936 38,219 Test 3,684 2,012 5,426",
+    "metadata": {
+      "detection_class_prob": 0.8938415050506592,
+      "coordinates": {
+        "points": [
+          [
+            193.07290649414062,
+            147.91592407226562
+          ],
+          [
+            193.07290649414062,
+            310.4753723144531
+          ],
+          [
+            765.9532470703125,
+            310.4753723144531
+          ],
+          [
+            765.9532470703125,
+            147.91592407226562
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th rowspan=\"2\">Dataset</th><th colspan=\"3\"># of Sentences</th></thead><thead><th></th><th>Train</th><th>Dev</th><th>Test</th></thead><tr><td>CoNLL03 NER</td><td>14,987</td><td>| 3,466</td><td>| 3,684</td></tr><tr><td>CoNLL00 chunking ||</td><td>7,936</td><td>| 1,000</td><td>| 2,012</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "02abc8335fee02f4c9752121ffd1e4b8",
+    "text": "Layer character-level embedding character-level LSTM Highway word-level embedding word-level bi-LSTM Optimization Parameter dimension depth state size depth dimension depth state size η0 POS NER chunking 30 1 300 1 100 1 300 0.015 0.01",
+    "metadata": {
+      "detection_class_prob": 0.924018144607544,
+      "coordinates": {
+        "points": [
+          [
+            903.2991333007812,
+            148.2217254638672
+          ],
+          [
+            903.2991333007812,
+            484.356201171875
+          ],
+          [
+            1538.2254638671875,
+            484.356201171875
+          ],
+          [
+            1538.2254638671875,
+            148.2217254638672
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th>Layer</th><th>Parameter</th><th>| POS</th><th>| NER |</th><th>chunking</th></thead><tr><td>character-level embedding</td><td>: : dimension</td><td></td><td>30</td><td></td></tr><tr><td>character-level</td><td>depth</td><td></td><td>1</td><td></td></tr><tr><td>LSTM</td><td>state size</td><td></td><td>300</td><td></td></tr><tr><td>Highway</td><td>depth</td><td></td><td>1</td><td></td></tr><tr><td>word-level embedding</td><td>. : dimension</td><td></td><td>100</td><td></td></tr><tr><td>word-level</td><td>depth</td><td></td><td>1</td><td></td></tr><tr><td>bi-LSTM</td><td>state size</td><td></td><td>300</td><td></td></tr><tr><td>Optimization</td><td>\"No</td><td>0.015</td><td></td><td>0.01</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "f75b655d732151e9c3ab13055fb0c699",
+    "text": "Extra Resource gazetteers AIDA dataset CoNLL 2000 / PTB-POS dataset 1B Word dataset & 4096-8192-1024 1B Word dataset None Index & Model 0) Collobert et al. 2011† 1) Chiu et al. 2016† 2) Luo et al. 2015 Type reported reported reported 3) Yang et al. 2017† reported 4) Peters et al. 2017†‡ reported 5) Peters et al. 2017†‡ 6) Collobert et al. 2011† 7) Luo et al. 2015 8) Chiu et al. 2016† 9) Yang et al. 2017† 10) Peters et al. 2017† 11) Peters et al. 2017†‡ 12) Rei 2017 †‡ 13) Lample et al. 2016† 14) Ma et al. 2016† reported reported reported reported reported reported reported mean max reported mean max reported mean max reported 15) LM-LSTM-CRF †‡ mean max F1 score Value (±std) 89.59 91.62±0.33 91.20 91.26 91.93±0.19 91.62±0.23 88.67 89.90 90.91±0.20 91.20 90.87±0.13 90.79±0.15 87.38±0.36 87.94 86.26 90.76±0.08 91.14 90.94 91.37±0.17 91.67 91.21 91.71±0.10 91.85",
+    "metadata": {
+      "detection_class_prob": 0.9196983575820923,
+      "coordinates": {
+        "points": [
+          [
+            906.646728515625,
+            148.82403564453125
+          ],
+          [
+            906.646728515625,
+            751.2027587890625
+          ],
+          [
+            1531.7498779296875,
+            751.2027587890625
+          ],
+          [
+            1531.7498779296875,
+            148.82403564453125
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th rowspan=\"2\">Extra Resource</th><th rowspan=\"2\">Index &amp; Model</th><th colspan=\"2\">F, score</th></thead><thead><th></th><th></th><th>Type _[</th><th>Value CEstdy</th></thead><tr><td rowspan=\"2\">gavetteers ;</td><td>0) Collobert et al. 2011\" |</td><td>reported |</td><td>89.59</td></tr><tr><td></td><td>1) Chiu et al, 2016\"</td><td>reported |</td><td>91.6250.33</td></tr><tr><td>AIDA dataset</td><td>2 Lao et al, 2015</td><td>reported</td><td>| 91.20</td></tr><tr><td>Paros wor |)</td><td>3) Yang etal. 2017</td><td>reported</td><td>| 91.26</td></tr><tr><td>BWor dataset</td><td>4) Peters et al. 2017? |</td><td>reported</td><td>| 91.93+0.19</td></tr><tr><td rowspan=\"18\">TB Word dataset _|[</td><td>5) Peters et al. 20177 |</td><td>reported</td><td>| 91.6220.23</td></tr><tr><td></td><td>6) Collobert etal. 20117 |</td><td>reported |</td><td>88.67</td></tr><tr><td></td><td>[7 Lao etal. 2015</td><td>reported |</td><td>89.90</td></tr><tr><td></td><td>8) Chiu et al. 2016\"</td><td>reported |</td><td>90.91L0.20</td></tr><tr><td></td><td>9) Yang et al. 20177</td><td>reported</td><td>| 91.20</td></tr><tr><td></td><td>TO) Peters etal. 20177 |</td><td>reported</td><td>| 90.87£0.13</td></tr><tr><td></td><td>Ti) Peters etal. 20177? |</td><td>reported |</td><td>90.79£0.15</td></tr><tr><td></td><td rowspan=\"3\">12) Rei 2017 t#</td><td></td><td>mean |</td><td>87.380.36</td></tr><tr><td></td><td></td><td>max</td><td>TOT</td></tr><tr><td></td><td>reported |</td><td>86.26</td></tr><tr><td></td><td rowspan=\"3\">13) Lample et al. 2016</td><td>mean |</td><td>90,760.08</td></tr><tr><td></td><td></td><td>[max</td><td>ot</td></tr><tr><td></td><td></td><td>reported |</td><td>90.94</td></tr><tr><td></td><td></td><td>mean |</td><td>91.37E0.17</td></tr><tr><td></td><td>14) Ma etal. 2016\"</td><td>max</td><td>LOT</td></tr><tr><td></td><td></td><td>reported</td><td>| 91.21</td></tr><tr><td></td><td rowspan=\"2\">15) LM-LSTM-CRF !*</td><td></td><td>mean |</td><td>91,710.10</td></tr><tr><td></td><td>max</td><td>OL85</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "8812f23cefe5d6e982aa9c3c2ded92a7",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "eb69fef44824b3b8fa7dc98b575a5b12",
+    "text": "Type reported reported reported reported mean max reported mean±std maximum 97.51 mean±std maximum 97.46 97.55 reported 97.53±0.03 15) LM-LSTM-CRF †‡ mean±std",
+    "metadata": {
+      "detection_class_prob": 0.9247633218765259,
+      "coordinates": {
+        "points": [
+          [
+            191.10296630859375,
+            148.91033935546875
+          ],
+          [
+            191.10296630859375,
+            606.33154296875
+          ],
+          [
+            774.4088745117188,
+            606.33154296875
+          ],
+          [
+            774.4088745117188,
+            148.91033935546875
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th rowspan=\"2\">Ind &amp; Model</th><th colspan=\"2\">Accuracy</th></thead><thead><th></th><th>Type</th><th>Value (+std)</th></thead><tr><td>0) Collobert et al. 2011\"</td><td>|] reporte</td><td>97.29</td></tr><tr><td>6) Manning 2011</td><td>reporte</td><td>97.28</td></tr><tr><td>7) Sogaard 2011</td><td>reporte</td><td>97.50</td></tr><tr><td>8) Sun 2014</td><td>reporte</td><td>97.36</td></tr><tr><td rowspan=\"3\">2) Rei 20171#</td><td></td><td>mean</td><td>96.97+0.22</td></tr><tr><td></td><td>max</td><td>OT 14</td></tr><tr><td>reporte</td><td>97.43</td></tr><tr><td rowspan=\"2\">3) Lample et al. 2016</td><td>mean+tstd</td><td>| 97.35+0.09</td></tr><tr><td></td><td>maximum</td><td>| 97.51</td></tr><tr><td rowspan=\"3\">4) Ma etal. 2016¢</td><td>meantstd</td><td>| 97.42+0.04</td></tr><tr><td></td><td>maximum</td><td>| 97.46</td></tr><tr><td></td><td>reporte</td><td>97.55</td></tr><tr><td rowspan=\"2\">5) LM-LSTM-CRF ##</td><td>meantstd</td><td>| 97.53+0.03</td></tr><tr><td></td><td>maximum</td><td>| 97.59</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "8812f23cefe5d6e982aa9c3c2ded92a7",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "75ca9c89ec0dff4e92bba893f6a27518",
+    "text": "CoNLLO03 NER WSJ POS: CoNLLO00 Chunking Model h | FiScore || h | Accuracy | hb Fi Score LSTM-CRF 46 90.76 37 97.35 26 94.37 LSTM-CNN-CRF 7 91.22 21 97.42 6 95.80, LM-LSTM-CRF 6 9171 16 97.53 5 95.96 LSTM-CRF* 4 91.19 8 OT 44 2 ‘95.82 LSTM-CNN-CRF* 3 90.98 7 96.98 2 95.51",
+    "metadata": {
+      "detection_class_prob": 0.924804151058197,
+      "coordinates": {
+        "points": [
+          [
+            166.14039611816406,
+            750.7669677734375
+          ],
+          [
+            166.14039611816406,
+            901.8950805664062
+          ],
+          [
+            793.3363037109375,
+            901.8950805664062
+          ],
+          [
+            793.3363037109375,
+            750.7669677734375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th>Model</th><th>Rh]</th><th>CoNLLO03 NER FiScore |</th><th>h |</th><th>WSJ POS: Accuracy</th><th>CoNLLO00 |[h</th><th>Chunking = Fi Score</th></thead><tr><td>LSTM-CRF</td><td>4% |</td><td>9076</td><td>[37</td><td>| 9735 ||</td><td>26</td><td>oF.</td></tr><tr><td>LSTM-CNN-CRF_||</td><td>7 |</td><td>9122</td><td>[[21|</td><td>9742_|[</td><td>6</td><td>95.80</td></tr><tr><td>LM-LSTM-CRF_||</td><td>6 |</td><td>9171]</td><td>16</td><td>|_9733_|[5</td><td></td><td>95.96</td></tr><tr><td>LSTM-CRF*</td><td>a</td><td>[91.19</td><td>8)</td><td>97at</td><td>z</td><td>95.82</td></tr><tr><td>LSTM-CNN-CRF*</td><td>|| 3</td><td>90.98</td><td>7</td><td>96.98</td><td>2</td><td>95.51</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "8812f23cefe5d6e982aa9c3c2ded92a7",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "23bf8e0367880aab8b3ab5aee31c9c30",
+    "text": "Extra Resource PTB-POS Ind & Model 19) Hashimoto et al. 2016† 20) Søgaard et al. 2016† Type reported reported F1 score Value (±std) 95.77 95.56 CoNLL 2000 / PTB-POS dataset 1B Word dataset None 3)Yang et al. 2017† 4) Peters et al. 2017†‡ 21) Hashimoto et al. 2016† 22) Søgaard et al. 2016† 9) Yang et al. 2017† 12) Rei 2017†‡ 13) Lample et al. 2016† 14) Ma et al. 2016† 15) LM-LSTM-CRF †‡ reported 95.41 96.37±0.05 95.02 95.28 94.66 94.24±0.11 94.33 93.88 94.37±0.07 reported reported reported reported mean max reported mean maximum 94.49 mean maximum 95.93 mean maximum 96.13 95.80±0.13 95.96±0.08",
+    "metadata": {
+      "detection_class_prob": 0.9265821576118469,
+      "coordinates": {
+        "points": [
+          [
+            902.6398315429688,
+            148.47134399414062
+          ],
+          [
+            902.6398315429688,
+            578.396240234375
+          ],
+          [
+            1535.5341796875,
+            578.396240234375
+          ],
+          [
+            1535.5341796875,
+            148.47134399414062
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th rowspan=\"2\">Extra Resource</th><th rowspan=\"2\">Ind &amp; Model</th><th colspan=\"2\">F, score’</th></thead><thead><th></th><th></th><th>Type</th><th>rake CEStAY</th></thead><tr><td rowspan=\"2\">PTB-POS</td><td>19) Hashimoto et al. 2016\"</td><td>| reported |</td><td>95.77</td></tr><tr><td></td><td>_[[20) Sogaard etal. 2016\" |</td><td>reported]</td><td>95.56</td></tr><tr><td>TONTL 20007 Pe OS OT</td><td>; | dyvang etal. 2017</td><td>reported</td><td>| 95.41</td></tr><tr><td>TB Word dataset ||</td><td>4) Peters et al. 20177</td><td>reported</td><td>| 96.37=0.05</td></tr><tr><td rowspan=\"12\"></td><td>21) Hashimoto et al. 2016\"</td><td>| reported |</td><td>95.02</td></tr><tr><td></td><td>23) Sogaard et al. 2016\" |</td><td>reported |</td><td>95.28</td></tr><tr><td></td><td>9) Yang et al. 2017\"</td><td>reported</td><td>| 94.66</td></tr><tr><td></td><td rowspan=\"3\">12) Rei 2017\"</td><td>mean</td><td>94.24E011</td></tr><tr><td></td><td></td><td>max</td><td>94.33</td></tr><tr><td></td><td></td><td>reported</td><td>| 93.8</td></tr><tr><td></td><td>7</td><td>[Lea</td><td>94.3TEOU</td></tr><tr><td></td><td>13) Lample et al. 2016'</td><td>[ean __|</td><td>AT</td></tr><tr><td></td><td rowspan=\"2\">1) Mactal.2016\"</td><td>mean</td><td>95.8020.13</td></tr><tr><td></td><td></td><td>maximum</td><td>| 959)</td></tr><tr><td></td><td rowspan=\"2\">yp 15) LM-LSTM-CRF</td><td>Lmean</td><td>95.96E0U</td></tr><tr><td></td><td></td><td>maximum</td><td>| 96.13</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "8812f23cefe5d6e982aa9c3c2ded92a7",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "379ed447bb9097873252c96cc82eca21",
+    "text": "Ind & Model 15) LM-LSTM-CRF 5) Peters et al. 2017 4) Peters et al. 2017 F1score Module 91.71 total LSTM-2048-512 LSTM-2048-512 4096-8192-1024 LSTM-2048-512 91.62 91.93 Time · Device 6 320 320 14112 320 h·GTX 1080 h·Telsa K40 h·Telsa K40 h·Telsa K40 h·Telsa K40",
+    "metadata": {
+      "detection_class_prob": 0.9258610010147095,
+      "coordinates": {
+        "points": [
+          [
+            902.4890747070312,
+            721.6326293945312
+          ],
+          [
+            902.4890747070312,
+            857.490478515625
+          ],
+          [
+            1538.6807861328125,
+            857.490478515625
+          ],
+          [
+            1538.6807861328125,
+            721.6326293945312
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><tr><td rowspan=\"2\">Ind &amp; Model 15) LM-LSTM-CRF |</td><td rowspan=\"2\">Fiscore 91.71</td><td>| Module</td><td colspan=\"2\">Time - Device</td></tr><tr><td></td><td></td><td>total</td><td>6</td><td>h-GTX 1080</td></tr><tr><td rowspan=\"2\">5) Peters et al. 2017</td><td rowspan=\"2\">91.62</td><td>LSTM-2048 SL</td><td>320</td><td>h-Telsa K40</td></tr><tr><td></td><td></td><td>LSTM-2048=51.</td><td>320</td><td>heTelsa K40</td></tr><tr><td rowspan=\"2\">4) Peters et al. 2017</td><td rowspan=\"2\">91.93</td><td>4096-8192-1024 |</td><td>14112</td><td>h-Telsa K40</td></tr><tr><td></td><td></td><td>Sr LSTM=2048 2</td><td>320</td><td>heTelsa K40</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "8812f23cefe5d6e982aa9c3c2ded92a7",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "3a092baf0a9f1e21dc2b9439ed303960",
+    "text": "Model LM-LSTM-CRF LSTM-CRF LSTM-CNN-CRF State Size 300 200 100 300 200 100 300 200 100 F1score±std 91.71±0.10 91.63±0.23 91.13±0.32 90.76±0.08 90.41±0.07 90.74±0.22 91.22±0.19 91.37±0.17 91.18±0.10 Recall±std 92.14±0.12 92.07±0.22 91.60±0.37 90.82±0.08 90.63±0.07 91.08±0.50 91.70±0.16 91.08±0.53 91.56±0.16 Precision±std 91.30±0.13 91.19±0.30 90.67±0.32 90.69±0.08 90.20±0.07 90.42±0.17 90.74±0.27 90.58±0.11 90.81±0.15",
+    "metadata": {
+      "detection_class_prob": 0.9251587390899658,
+      "coordinates": {
+        "points": [
+          [
+            178.84690856933594,
+            151.24761962890625
+          ],
+          [
+            178.84690856933594,
+            364.1893005371094
+          ],
+          [
+            778.0048217773438,
+            364.1893005371094
+          ],
+          [
+            778.0048217773438,
+            151.24761962890625
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th>Model</th><th>300</th><th>| OT-7140.10</th><th>| | | 92.1440.12</th><th>| 91.30£0.13</th></thead><tr><td rowspan=\"2\">LM-LSTM-CRF |</td><td>200</td><td></td><td>92-07TE0.22</td><td>| 9T.19£0.30</td></tr><tr><td></td><td>100,</td><td></td><td>91.604£0.37</td><td>| 90.6740.32</td></tr><tr><td rowspan=\"3\">LSTM-CRF</td><td>300</td><td></td><td>90.82£0.08</td><td>| 90.6940.08</td></tr><tr><td></td><td>200</td><td></td><td>90.6340.07</td><td>| 90.2040.07</td></tr><tr><td></td><td>TOO,</td><td></td><td>OT.08L0.50</td><td>| 90.4250.</td></tr><tr><td rowspan=\"3\">LSTM-CNN-CRF |</td><td></td><td>300</td><td></td><td>91.70+0.16</td><td>| 90.7440.27</td></tr><tr><td></td><td>200</td><td></td><td>OT.08£0.53</td><td>90.58E0.1T</td></tr><tr><td>TOO,</td><td></td><td>OT.56£0.16</td><td></td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "parent_id": "8812f23cefe5d6e982aa9c3c2ded92a7",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "c38d183df6ae38d9fff386d015bc688b",
+    "text": "State Size Model F1score±std 91.71±0.10 LM-LSTM-CRF 91.43±0.09 LM-LSTM-CRF NL LM-LSTM-CRF NH 91.16±0.22 91.63±0.23 LM-LSTM-CRF 91.44±0.10 LM-LSTM-CRF NL LM-LSTM-CRF NH 91.34±0.28 91.13±0.32 LM-LSTM-CRF 91.17±0.11 LM-LSTM-CRF NL LM-LSTM-CRF NH 91.01±0.19 300 200 100 Recall±std 92.14±0.12 91.85±0.18 91.67±0.28 92.07±0.22 91.95±0.16 91.79±0.18 91.60±0.37 91.72±0.14 91.50±0.21 Precision±std 91.30±0.13 91.01±0.19 90.66±0.23 91.19±0.30 90.94±0.16 90.89±0.30 90.67±0.32 90.61±0.21 90.53±0.30",
+    "metadata": {
+      "detection_class_prob": 0.9221549034118652,
+      "coordinates": {
+        "points": [
+          [
+            904.1211547851562,
+            148.3321533203125
+          ],
+          [
+            904.1211547851562,
+            364.8780517578125
+          ],
+          [
+            1527.886474609375,
+            364.8780517578125
+          ],
+          [
+            1527.886474609375,
+            148.3321533203125
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T18:38:02",
+      "text_as_html": "<table><thead><th>State Size</th><th>| Model</th><th>F,scoretstd</th><th>| Recalltstd</th><th>| Precisiontstd</th></thead><tr><td rowspan=\"3\">300</td><td>LM-LSTM-CRF</td><td>91-7140.10</td><td>| 92.1440.12</td><td></td></tr><tr><td></td><td>M-LSTM-CRF_NL</td><td>| 91.4350.09</td><td>| 91T.8520.18</td><td></td></tr><tr><td></td><td>LM-LSTM-CRF_NH |</td><td>91.16+0.22</td><td>| 91.67£0.28</td><td></td></tr><tr><td rowspan=\"3\">200</td><td>LM-LSTM-CRF</td><td>91.6340.23</td><td>| 92.0740.22</td><td></td></tr><tr><td></td><td>LM-LSTM-CRF_NL |</td><td>91.4440.10</td><td>| 91.95£0.16</td><td></td></tr><tr><td></td><td>M-LSTM-CRF_NH |</td><td>91.34£0.28</td><td>| 91.79E0.18</td><td></td></tr><tr><td rowspan=\"3\">100,</td><td></td><td>LM-LSTM-CRF</td><td>91.13+0.32</td><td>| 91.60+0.37</td><td></td></tr><tr><td>M-LSTM-CRF_NL |</td><td>9LI7LO1T</td><td>| 91-7220.14</td><td></td></tr><tr><td></td><td>M-LSTM-CRF_NH |</td><td>9101019</td><td>| 91.50L0.21</td><td></td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 7,
+      "parent_id": "8812f23cefe5d6e982aa9c3c2ded92a7",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\subset5\\papers\\1709.04109\\input",
+      "filename": "1709.04109.pdf"
+    }
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "run_id": "fewshot",
+  "call": 1,
+  "status": "COMPLETE",
+  "position": {
+    "paper": "1905.03197.pdf",
+    "record": 0,
+    "field": "Extraction"
+  },
+  "prompt_sha256": "fddcfd6badcc0846ebf5eafd348c8c9ef522c8da3b3923c7ce8a93daa2f97e7d",
+  "candidate_sha256": null,
+  "requested_model": "gpt-4.1-2025-04-14",
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYx9CrhHSLOvpMYrUlSx6zlo3rOJF",
+  "usage": {
+    "completion_tokens": 855,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 132,
+      "engine_ttlt_ms": 4342,
+      "pre_inference_ms": 198,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 575,
+      "service_ttlt_ms": 4776,
+      "user_visible_ttft_ms": 377
+    },
+    "prompt_tokens": 5498,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 6353
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "[{\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-1\", \"Result\": \"43.33\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-2\", \"Result\": \"20.21\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-L\", \"Result\": \"40.51\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"Gigaword\", \"Metric\": \"ROUGE-L\", \"Result\": \"35.75\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"Gigaword (10K training examples)\", \"Metric\": \"ROUGE-L\", \"Result\": \"32.96\"}, {\"Task\": \"Extractive Question Answering\", \"Dataset\": \"SQuAD\", \"Metric\": \"EM\", \"Result\": \"80.5\"}, {\"Task\": \"Extractive Question Answering\", \"Dataset\": \"SQuAD\", \"Metric\": \"F1\", \"Result\": \"83.4\"}, {\"Task\": \"Extractive Question Answering\", \"Dataset\": \"CoQA\", \"Metric\": \"F1\", \"Result\": \"84.9\"}, {\"Task\": \"Generative Question Answering\", \"Dataset\": \"CoQA\", \"Metric\": \"F1\", \"Result\": \"82.5\"}, {\"Task\": \"Question Generation\", \"Dataset\": \"SQuAD\", \"Metric\": \"BLEU-4\", \"Result\": \"25.61\"}, {\"Task\": \"Question Generation\", \"Dataset\": \"SQuAD\", \"Metric\": \"METEOR\", \"Result\": \"25.06\"}, {\"Task\": \"Question Generation\", \"Dataset\": \"SQuAD\", \"Metric\": \"ROUGE-L\", \"Result\": \"52.04\"}, {\"Task\": \"Response Generation\", \"Dataset\": \"DSTC7\", \"Metric\": \"BLEU-4\", \"Result\": \"4.39\"}, {\"Task\": \"Response Generation\", \"Dataset\": \"DSTC7\", \"Metric\": \"METEOR\", \"Result\": \"9.195\"}, {\"Task\": \"Response Generation\", \"Dataset\": \"DSTC7\", \"Metric\": \"Div-1\", \"Result\": \"0.120\"}, {\"Task\": \"Response Generation\", \"Dataset\": \"DSTC7\", \"Metric\": \"Div-2\", \"Result\": \"0.391\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (CoLA)\", \"Metric\": \"Matthews corr\", \"Result\": \"60.5\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (SST-2)\", \"Metric\": \"Accuracy\", \"Result\": \"94.9\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (MRPC)\", \"Metric\": \"F1\", \"Result\": \"94.5\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (STS-B)\", \"Metric\": \"Spearman corr\", \"Result\": \"89.3\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (QQP)\", \"Metric\": \"F1\", \"Result\": \"90.0\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (MNLI-m)\", \"Metric\": \"Accuracy\", \"Result\": \"86.7\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (MNLI-mm)\", \"Metric\": \"Accuracy\", \"Result\": \"85.9\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (QNLI)\", \"Metric\": \"Accuracy\", \"Result\": \"92.7\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (RTE)\", \"Metric\": \"Accuracy\", \"Result\": \"70.1\"}, {\"Task\": \"Language Understanding\", \"Dataset\": \"GLUE (WNLI)\", \"Metric\": \"Accuracy\", \"Result\": \"39.6\"}]",
+  "response_sha256": "bdc9a9d04ea1618277a6d231ba3f3cedfbd3ead321b7bf8ecfb06cc044583486",
+  "seconds": 6.593999999575317
+}

@@ -1,0 +1,105 @@
+Model ETMR P F1
+Fully
+AxCell 13.67 32.59 19.26
+Llama-2 + CS 21.59 10.06 13.73
+Llama-2 15.25 9.63 11.81
+Mixtral + CS 24.61 26.54 25.54
+Mixtral 21.73 24.66 23.10
+Llama-3 + CS 29.54 23.22 26.00
+Llama-3 35.60 27.11 30.78
+GPT-4 + CS 48.71 49.82 49.26
+GPT-4 54.53 56.02 55.27
+Partially
+Llama-2 9.89 4.17 5.87
+Mixtral 12.27 14.65 13.35
+Llama-3 18.75 15.70 17.09
+GPT-4 39.56 40.60 40.07
+Table 3: Exact tuple match ( ETM) evaluation scores
+for different normalization settings (%). R: Recall, P:
+Precision, F1: F1 score. LLM + CS indicates the cosine
+similarity baseline for normalizing individual entities.
+The best results for each normalization setting are un-
+derlined. The overall highest results are bolded.
+triples. Note that we do not provide results for the
+cold start setting, as it does not use pre-defined
+gold TDM labels and we only normalize gener-
+ated TDM triples to the gold leaderboards with at
+least three entries in the second normalization step.
+We observe that all LLMs, except Llama-2, outper-
+form the AxCell baseline regarding the F1 score
+in the fully pre-defined TDM triples setting. The
+low precision score of Llama-2 is due to the gener-
+ation of an excessive number of TDMR tuples. In
+contrast, AxCell has high precision and low recall
+compared with Llama-2 due to the small number
+of extracted tuples. We observe that normaliza-
+tion using LLama-2 and Mixtral falls short of the
++CS baseline, whereas Llama-3 and GPT-4 Turbo
+demonstrate superior performance, outperforming
+the baseline. As expected, the performance of all
+models deteriorates in the more realistic, partially
+pre-defined TDM triplessetting, which mirrors real-
+world application scenarios. Nevertheless, GPT-4
+Turbo outperforms its counterparts in both settings.
+IIM Evaluation. In Table 4, we demonstrate the
+extraction and normalization performance of dif-
+ferent models on individual elements of TDMR
+tuples under settings with both fully and partially
+pre-defined TDM triples . We observe that indi-
+vidual extraction scores are much higher than the
+exact tuple match scores compared to Table 3. It
+can be concluded that the models are, in fact, effec-
+tive in the extraction of individual items, but they
+are struggling to combine those items to create
+accurate TDMR tuples. Furthermore, all models
+consistently fall short of extracting correct Results
+compared to other items. This is another signifi-
+cant factor for low ETM scores reported in Table 3
+(further analysis in Appendix D). Another interest-
+ing observation is that Llama-3 is very competitive
+with GPT-4 Turbo in extractingTask, Dataset, Met-
+ric items, but its performance considerably drops
+for extracting the Result values.
+Leaderboard Evaluation. Table 5 shows the
+leaderboard construction performance under three
+settings described in Section 4.2. Although Llama-
+3 and GPT-4 Turbo are competitive in leaderboard
+recall ratio, Llama-3 has the best results for the
+paper coverage across all settings. However, since
+it struggles with extracting the correct results, as
+shown in Table 4, GPT-4 Turbo takes the lead in
+result coverage and average scores. Furthermore,
+we observe that performance drops for most mod-
+els when the experimental setting becomes more
+complex and realistic. Interestingly, we found that,
+unlike other models, GPT-4 performs better in the
+cold start setting compared to the partially pre-
+defined TDM triples setting on paper and result
+coverage, as well as average overlap. We provide
+further analysis of this behavior in the next section.
+6.2 Partial Pre-defined Leaderboard Analysis
+Table 6 shows the comparison results of different
+models on the partially pre-defined TDM triples
+and cold start settings on the masked leaderboard
+subset in the partially pre-defined TDM triples set-
+ting (based on Mt in Algorithm 1). Overall, Llama-
+2 and Mixtral perform better in the partially pre-
+defined TDM triples setting, while Llama-3 and
+GPT-4 Turbo perform better in a cold start setting.
+When we look at the different results for these
+two settings, we notice that in the partially pre-
+defined TDM triples setting, sometimes the model
+makes errors in the normalization step by mapping
+a newly extracted TDM triple to an existing pre-
+defined TDM triple that has the similar surface
+form but refers to a different leaderboard. For in-
+stance, the model maps CoNLL-2003 - English to
+CoNLL-2003 - German . Such errors occur less
+frequently in the cold start setting.
+6.3 Additional Analysis
+Leaderboard Threshold. The minimum number
+of papers required for a leaderboard directly im-
+pacts the performance of leaderboard construction,
+as it influences the total number of leaderboards. In
+our main experiments, we focused on leaderboards
+7969

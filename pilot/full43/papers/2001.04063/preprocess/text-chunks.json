@@ -1,0 +1,173 @@
+[
+  {
+    "content": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training Abstract This paper presents a new sequence-to- sequence pre-training model called Prophet- Net, which introduces a novel self-supervised objective named future n-gram prediction and the proposed n-stream self-attention mech- anism. Instead of optimizing one-step- ahead prediction in the traditional sequence- the ProphetNet is opti- to-sequence model, mized by n-step ahead prediction that pre- dicts the next n tokens simultaneously based on previous context tokens at each time step. The future n-gram prediction explicitly encour- ages the model to plan for the future tokens and prevent overﬁtting on strong local cor- relations. We pre-train ProphetNet using a base scale dataset (16GB) and a large-scale dataset (160GB), respectively. Then we con- duct experiments on CNN/DailyMail, Giga- word, and SQuAD 1.1 benchmarks for abstrac- tive summarization and question generation tasks. Experimental results show that Prophet- Net achieves new state-of-the-art results on all these datasets compared to the models using the same scale pre-training corpus. Introduction Large-scale pre-trained language models (Devlin et al., 2018; Radford et al., 2019; Yang et al., 2019) and sequence-to-sequence models (Lewis et al., 2019; Song et al., 2019; Raffel et al., 2019) have achieved remarkable success in downstream tasks. Autoregressive (AR) language modeling, which estimates the probability distribution of the text corpus, is widely used for sequence model- ing and sequence-to-sequence (Seq2Seq) learn- ing (Sutskever et al., 2014). Recently, it also be- comes one of the successful self-supervised objec- tives for large-scale pre-training as used in GPT- ∗Work is done during internship at Microsoft Research Asia. 2 (Radford et al., 2019). Specifically, given a text sequence = (x1,...,v7), AR language modeling factorizes the likelihood into a product p(x“) = Tey p(x+\\x<z). In this manner, language models (LMs) and",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "et al., 2019). Specifically, given a text sequence = (x1,...,v7), AR language modeling factorizes the likelihood into a product p(x“) = Tey p(x+\\x<z). In this manner, language models (LMs) and Seq2Seq models are usually trained by teacher forcing. The models are opti- mized to predict the next token given all previous context tokens at each time step. However, as discussed in previous works (Pas- canu et al., 2013; Gulcehre et al., 2017; Serdyuk et al., 2018), AR-based models may prefer to fo- cus on the latest tokens rather than capture long- term dependencies for the next token prediction. The reasons are as follows: (a) Local correlations such as bigram combination are usually stronger than long-term dependencies. (b) Teacher forcing, where the model focus on one-step-ahead predic- tion for each time step, has no explicit bias toward future token planning and modeling. As a result, the model may learn a bias for language modeling; that is, the local token combinations’ modeling is overﬁtting, but the global coherence and long-term dependency are underﬁtting (Krueger et al., 2016; Merity et al., 2017; Serdyuk et al., 2018). During inference, the generations tend to maintain local coherence but lack meaningful global structure (Li et al., 2017; Serdyuk et al., 2018), especially when we use greedy decoding instead of beam search. In this paper, we present a new large-scale pre- trained Seq2Seq model called ProphetNet with a novel self-supervised objective future n-gram prediction. In addition to the traditional language model (LM) or Seq2Seq model that optimizes one- step-ahead prediction, the ProphetNet also learns n- step ahead predictionThis future n-gram prediction is served as extra guidance that explicitly encour- ages the model to plan for future tokens and pre- vents overﬁtting on strong local correlations. The hidden states of ProphetNet are forced to contain useful information for the next token and further † Equal contribution",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1808
+    }
+  },
+  {
+    "content": "help predict multiple future tokens. There are two goals when designing ProphetNet: (a) the model should be able to simultaneously predict the future n-gram at each time step in an efﬁcient way during the training phase, and (b) the model can be easily converted to predict the next token only as original Seq2Seq model for inference or ﬁne-tuning phase. To achieve that, we extend the two-stream self-attention proposed in XLNet (Yang et al., 2019) to n-stream self-attention. Prophet- Net contains a main stream self-attention, which is the same as the self-attention in the original Trans- former. Besides, we introduce n extra self-attention predicting streams for future n-gram prediction, respectively. During training, the i-th predicting stream attends to the main stream’s hidden states to predict the next i-th future token, which guarantees every n continuous tokens in the target sequence are trained to predict at one time step. Since the main stream parameters are shared with every pre- dicting stream, we can disable the n-stream self- attention during inference. Only the next ﬁrst token is predicted for each time step, which is same as the original Transformer Seq2Seq model. For experiments, we use the proposed future n- gram prediction with the mask based auto-encoder denoising task (Song et al., 2019; Lewis et al., 2019) which has been proved to be effective for Seq2Seq pre-training as compared in Raffel et al. (2019) for ProphetNet pre-training. We use two scale pre-trained datasets to pre-train ProphetNet, respectively: the base scale (16GB) dataset as used in BERT (Devlin et al., 2018), and the large scale (160GB) similar to BART (Lewis et al., 2019). The pre-trained ProphetNet is further ﬁne-tuned on several NLG tasks. Experimental results show that ProphetNet has achieved the best performance on CNN/DailyMail, Gigaword, and SQuAD 1.1 question generation tasks compared to the mod- els using the same base scale pre-training dataset. For the large scale dataset",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "achieved the best performance on CNN/DailyMail, Gigaword, and SQuAD 1.1 question generation tasks compared to the mod- els using the same base scale pre-training dataset. For the large scale dataset pre-training experiment, ProphetNet achieves new state-of-the-art results on CNN/DailyMail and Gigaword, using only about 1/3 pre-training epochs of BART and about 1/5 pre-training corpus of T5 (Raffel et al., 2019) and PEGASUS (Zhang et al., 2019). 2 ProphetNet We propose a new Seq2Seq pre-training model called ProphetNet, which is based on Trans- former (Vaswani et al., 2017) encoder-decoder ar- chitecture. Compared to the original Transformer Seq2Seq model, ProphetNet introduces three modi- ﬁcations: (a) The novel self-supervised objective called future n-gram prediction as described in § 2.2. (b) The n-stream self-attention mechanism as described in § 2.3. (c) The mask based auto- encoder denoising task for Seq2Seq pre-training as described in § 2.4. Figure 1 shows the archi- tecture of ProphetNet. Before we describe our model in detail, we ﬁrst introduce the notations and sequence-to-sequence learning. 2.1 Sequence-to-Sequence Learning Given a text sequence pair (x,y), (a1,..., 2,2) is the source sequence with M to- kens, and y = (y1,...,yr) is the target se- quence with T tokens. The Seq2Seq model aims to model the conditional likelihood p(y|zx), which can be further factorized into a product p(ylx) = TT, p(yily<e, 2) according to the chain tule, where y<; denotes the proceeding tokens be- fore the position t. In general, the Seq2Seq model employs an encoder that aims to encode the source sequence representations and a decoder that mod- els the conditional likelihood with the source rep- resentations and previous target tokens as inputs. Teacher forcing is usually used for model training. The model is optimized to predict the next target token y; given the previous golden context tokens yet and x at each time step. 2.2 Future N-gram Prediction ProphetNet mainly",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "for model training. The model is optimized to predict the next target token y; given the previous golden context tokens yet and x at each time step. 2.2 Future N-gram Prediction ProphetNet mainly changes the original Seq2Seq optimization of predicting next single token as p(yt|y<t, x) into p(yt:t+n−1|y<t, x) at each time step t, where yt:t+n−1 denotes the next continuous n future tokens. In other words, the next n future tokens are predicted simultaneously. Based on Transformer Seq2Seq architecture, ProphetNet contains a multi-layer Transformer en- coder with the multi-head self-attention mecha- nism (Vaswani et al., 2017) and a multi-layer Trans- former decoder with the proposed multi-head n- stream self-attention mechanism. Given a source sequence x = (x1, . . . , xM ), ProphetNet encodes the x into a sequence representation, which is the same as the original Transformer encoder: where Henc denotes the source sequence represen- tations. On the decoder side, instead of predicting",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3603
+    }
+  },
+  {
+    "content": "only the next token at each time step, ProphetNet decoder predicts n future tokens simultaneously as we mentioned above: where the decoder outputs n probability at each time step. The future n-gram prediction objective can be further formalized as LM loss which is the same as the original teacher forcing, and (b) the n − 1 future token prediction losses which force the model to predict the future target tokens. The future n-gram prediction loss explicitly encourages the model to plan for future token prediction and prevent overﬁtting on strong local correlations. αj is set to balance the weights between the traditional language modeling and fu- ture n-gram prediction. For now we set the αj with a power attenuation function as: Seay αj · T-j log pθ(yt+j|y<t, x) T log pθ(yt|y<t, x) where the γ is the attenuation coefﬁcient. 2.3 N-Stream Self-Attention language modeling loss j=l future n-gram loss The above future n-gram prediction objective can be seen to consist of two parts: (a) the conditional Ideally, we want the ProphetNet decoder to meet two requirements described in the introduction: trained to predict future n-grams simultaneously and easily disable them in inference. In addition to the masked multi-head self-attention (Vaswani et al., 2017) of the original transformer decoder, which is called main stream self-attention, the n- stream self-attention mechanism incorporates n",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "extra self-attention predicting streams to predict next n continuous future tokens respectively at each time step. To be concrete, the i-th predicting stream is responsible for modeling the probability p(yt+i−1|y<t, x). be position-aware. The g(k+1) predict yt. t−1 is ﬁnally used to Similarly, the hidden state of the 2-nd predicting stream is calculated by: The n-stream self-attention mechanism is shown in Figure 2. In this example, h stream is the main stream, g stream and s stream are the next 1st and 2nd token predicting stream. As shown in Figure 2 (a), the attention mechanism of the main stream is the same as the masked multi-head self-attention in the traditional Transformer decoder, where a lower triangular matrix is set to control that each position can only attend to their previous tokens: where s(k+1) denotes the k + 1-th layer hidden state of the 2-nd predicting stream at time step t − 1, which will be ﬁnally used to predict yt+1. Although the calculations of gt−1 for yt predic- tion and st−1 for yt+1 prediction are very similar, they are distinguished by different initialization tokens, absolute position embedding, and relative positional calculations. here we use H k = (h(k) T ) to denote the sequence of the k-th layer hidden state of the main Implement of MultiHead can be refer- stream. enced to Transformer (Vaswani et al., 2017). The i-th predicting stream predicts the next i-th token based on the previous main stream hidden In other words, the i- states at each time step. th predicting stream predicts the yt based on the previous tokens y<t−i+1. In this bigram (n = 2) example, Figure 2 (b) shows the 1-st predicting stream and its hidden state is calculated as: We share the parameters of each predicting stream and main stream during training. There- fore, we can easily convert the ProphetNet decoder to the traditional Transformer decoder by disabling all the predicting streams during inference or ﬁne- tuning. Besides, since each predicting stream is",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "we can easily convert the ProphetNet decoder to the traditional Transformer decoder by disabling all the predicting streams during inference or ﬁne- tuning. Besides, since each predicting stream is initialized with special tokens rather than the pre- vious token, we combine the absolute positional embedding and T5 (Raffel et al., 2019) proposed bucket relative positional calculation to enhance the positional information in our decoder. where g(k+1) denotes the k + 1-th layer hidden state of the 1-st predicting stream at time step t − 1, and ⊕ denotes concatenation operation. To cal- culate g(k+1) t−1 is taken as the attention query while the attention value and key are previous t hidden states of the main stream. Besides we take t−1 as attention value and key to make the g(k+1) g(k) 2.4 Seq2Seq Pre-training on Denoising Task We pre-train the ProphtNet on the large-scale unla- beled text corpus with the auto-encoder denoising task widely used for Seq2Seq pre-training (Song et al., 2019; Lewis et al., 2019; Raffel et al., 2019). This paper uses token span masking as our de- noising task, which is the same as the MASS (Song et al., 2019). As shown in Figure 1, we mask out some token spans of the original text as the encoder input, and the model learns to recover the masked",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1801
+    }
+  },
+  {
+    "content": "tokens. Besides, unlike MASS learns to recover one next token at each time step, ProphetNet learns to recover the next n future tokens within each masked token span. 3 Experiments and Results In this section, we describe the experimental details and results. We ﬁrst describe the details of Prophet- Net pre-training in § 3.1. Then we ﬁne-tune the ProphetNet on two downstream NLG tasks, includ- ing text summarization as described in § 3.2 and question generation as reported in § 3.3. We re- port the experiment of large-scale pre-training in § 3.4. Results without pre-training are compared in § 3.5. We set predicting future gram length into 2 according to the analysis in § 3.6. 3.1 ProphetNet Pre-training Model Conﬁguration Our model is based on Transformer (Vaswani et al., 2017) encoder- decoder structure. We pre-train the ProphetNet, which contains a 12-layer encoder and 12-layer de- coder with 1024 embedding/hidden size and 4096 feed-forward ﬁlter size. The batch size and training steps are set to 1024 and 500K, respectively. We use Adam optimizer (Kingma and Ba, 2015) with a learning rate of 3 × 10−4 for pre-training. The implement of ProphetNet is also uploaded in the attachment. Considering the training cost, we set the n to be 2 for ProphetNet in the following exper- iments. Further discussions are shown in § 3.6. Pre-Training Dataset Following BERT (Devlin et al., 2018), we use BookCorpus (Zhu et al., 2015) and English Wikipedia (16GB in total) to pre-train ProphetNet. We pre-train ProphetNet on this 16GB dataset with 16×32GB NVIDIA V100 GPUs. Note that we also pre-train ProphetNet on a larger scale dataset described in § 3.4. Pre-Training Setting The input length of ProphetNet is set to 512. We randomly mask a con- tinuous span in every 64 tokens. 80% of the masked tokens are replaced by [M], 10% replaced by ran- dom tokens, and 10% unchanged. The masked length is set to 15% of the total number of to- kens. Considering the computational cost, we fol- low MASS",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "tokens are replaced by [M], 10% replaced by ran- dom tokens, and 10% unchanged. The masked length is set to 15% of the total number of to- kens. Considering the computational cost, we fol- low MASS (Song et al., 2019), where the decoder only predicts the masked fragment. The attenuation coefﬁcient γ is set to 1.0. 3.2 Fine-tuning on Text Summarization As a typical NLG task, abstractive text summariza- tion aims to generate a short and ﬂuent summary of a long text document. We ﬁne-tune and evaluate ProphetNet on the two widely used text summariza- tion datasets: (a) the non-anonymized version of the CNN/DailyMail dataset (See et al., 2017), and (b) Gigaword corpus (Rush et al., 2015). CNN/DailyMail We opti- mizer (Kingma and Ba, 2015) with a peak learning rate 1 × 10−4. The batch size, warmup steps, and the total ﬁne-tune epoch are set to 512, 1000, and 10. We limit the length of the output to between 45 and 110 tokens with a 1.2 length penalty during inference. We set beam size to 5 and remove the duplicated trigrams in beam search (Fan et al., 2017). We compare our ProphetNet against following baselines: LEAD-3 (Nallapati et al., 2016) which takes the ﬁrst three sentences as the summary; PT- GEN (See et al., 2017) which is Seq2Seq model incorporated with the pointer-generator network; PTGEN+Coverage (See et al., 2017) which intro- duce a coverage mechanism to PTGEN; Bottom- Up (Gehrmann et al., 2018) which employs a bottom-up content selector based on Seq2Seq model; S2S-ELMo (Edunov et al., 2019) which uses the pre-trained ELMo (Peters et al., 2018) representations. Besides, we also compare our method with several pre-training based strong base- lines: BERTSUMABS (Liu and Lapata, 2019), MASS (Song et al., 2019), and UniLM (Dong et al., 2019). These pre-training-based strong base- lines are all pre-trained on the same 16GB Book- Corpus + English Wikipedia dataset as ProphetNet. Following See et al. (2017), we report the F1 scores of ROUGE-1, ROUGE-2 and ROUGE- L",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "strong base- lines are all pre-trained on the same 16GB Book- Corpus + English Wikipedia dataset as ProphetNet. Following See et al. (2017), we report the F1 scores of ROUGE-1, ROUGE-2 and ROUGE- L (Lin, 2004). Du et al. (2017) The results are presented in Table 1. From the results, we can see that the ProphetNet achieves the best performances on all metrics. Gigaword We use Adam optimizer with a peak learning rate 1 × 10−4. The batch size is set to 128 and warm up steps to 1000. We ﬁne-tune model 10 epochs with future bigram prediction training. During inference, we set the length penalty to 1.0 and beam size to 4. We set the hyper-parameters according to the performance on the dev set. We compare our ProphetNet against following baselines: OpenNMT (Klein et al., 2017) which",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 3601
+    }
+  },
+  {
+    "content": "Table 1: Results on the CNN/DailyMail test set. this task to further evaluate the ProphetNet model. Following Du et al. (2017), we split the SQuAD 1.1 (Rajpurkar et al., 2016) dataset into training, de- velopment and test sets. We also report the results on the data split as did in Zhao et al. (2018), which reverses the development set and test set. Table 2: Results on Gigaword test set. R is short for ROUGE. implements the standard Seq2Seq model with at- tention mechanism; Re3Sum (Cao et al., 2018) which employs an extended Seq2Seq model to generate summaries based on the retrieved can- didate summaries. And two pre-training based strong baselines: MASS (Song et al., 2019), and UniLM (Dong et al., 2019). The results are pre- sented in Table 2. It can be observed that Prophet- Net outperforms previous models on all metrics. Table 3: Results on SQuAD 1.1 test set (with reference of Du et al. (2017) tokenized). B4 is short for BLEU- 4, MTR is short for METEOR, and R-L is short for ROUGE-L. The same model is used to evaluate on the two different data splits. The question generation task is typically formu- lated as a Seq2Seq problem. The input passage and the answer are packed as “answer [SEP] input passage” as input, and the question is used as the target output sequence. We ﬁne-tune the Prophet- Net model 10 epochs in the training set and report the results of the two kinds of data splits as men- tioned above. The ﬁrst 512 tokens of the passage are fed to the model. The peak learning rate is 1 × 10−5 and the batch size is set to 28. We compare ProphetNet against the following models: CorefNQG (Du and Cardie, 2018) which employs a feature-rich encoder based on Seq2Seq model; MP-GSN (Zhao et al., 2018) which incor- porates a gated self-attention encoder with max- out pointer; SemQG (Zhang and Bansal, 2019) which introduces two semantics-enhanced rewards for Seq2Seq model training. Besides, we also com- pare our model with UniLM (Dong et al., 2019), which is the",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "pointer; SemQG (Zhang and Bansal, 2019) which introduces two semantics-enhanced rewards for Seq2Seq model training. Besides, we also com- pare our model with UniLM (Dong et al., 2019), which is the previous state-of-the-art on this task. The results, according to the references provided by Du et al. (2017) is shown in Table 3. The same model and inference hyper-parameters are used for the two different data split with swapped dev and test set. It can be seen that ProphetNet outperforms all previous methods with signiﬁcant improvement. 3.4 Large-scale Pre-training 3.3 Fine-tuning on Question Generation The answer-aware question generation task (Zhou et al., 2017) aims to generate a question that asks towards the given answer span based on a given text passage or document. We conduct experiments on Recent works show that the pre-trained model’s performance on the downstream task can be im- proved when using larger scaled pre-training cor- pora (Lewis et al., 2019; Raffel et al., 2019). We",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1795
+    }
+  },
+  {
+    "content": "Table 4: Results on the CNN/DailyMail and Gigaword test sets of large-scale pre-training models. R is short for ROUGE, and Corpus denotes the size of the pre-training data. also pre-train ProphetNet on the 160GB English language corpora of news, books, stories, and web text, which is similar1 to the corpus used in BART (Lewis et al., 2019). The model con- ﬁguration is the same as described in § 3.1. We ﬁne-tune the ProphetNet on two downstream tasks CNN/DailyMail and Gigaword after pre-training, where the setting is the same as described in § 3.2. We compare ProphetNet (160GB) against the fol- lowing strong baselines: T5 (Raffel et al., 2019) which is pre-trained on the text corpus of 750GB; PEGASUSLARGE (Zhang et al., 2019) which is pre- trained on the text corpus of 750GB and 3800GB, respectively; And BART (Lewis et al., 2019) which is pre-trained on the similar dataset as the Prophet- Net (160GB). it to downstream tasks without pre-training. There- fore, we evaluate the ProphetNet model without pre-training on CNN/DailyMail. The ProphetNet model without pre-training consists of 12-layer encoder and 12-layer decoder with 768 embed- ding/hidden size and 3072 feed-forward ﬁlter size. We compare the ProphetNet model with the origi- nal Seq2Seq Transformer which has the same archi- tecture hyper-parameters of the ProphetNet. The training and evaluation details are the same as de- scribed in § 3.2. The results are shown in Table 5. Experimental results show that our method can signiﬁcantly improve the model performance even without pre-training. We pre-train our model on 16 × 32GB NVIDIA V100 GPUs with 14 epochs. We can see that the performance increase as ProphetNet pre- trains for more epochs on 160GB large-scale dataset. The results on test set are shown in Ta- ble 4. Our model achieves state-of-the-art per- formance on CNN/DailyMail compared to other baselines. It can be observed that the ROUGE-1 and ROUGE-L of ProphetNet on CNN/DailyMail are the highest. Moreover,",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "model achieves state-of-the-art per- formance on CNN/DailyMail compared to other baselines. It can be observed that the ROUGE-1 and ROUGE-L of ProphetNet on CNN/DailyMail are the highest. Moreover, ProphetNet (160GB) outperforms PEGASUSLARGE (C4 750GB) and PEGASUSLARGE (HugeNews 3800GB) on Giga- word using only about 1/5 and 1/20 of the pre- training corpus, respectively. To the best of our knowledge, ProphetNet also achieves new state-of- the-art results on the Gigaword. 3.5 ProphetNet without Pre-training ProphetNet achieves signiﬁcant results improve- ment after pre-training, we also curious about the performance of ProphetNet when directly applied 1Due to CC-News is not ofﬁcially released, we use similar public news corpus REALNEWS (Zellers et al., 2019) Table 5: Results on CNN/DailyMail dev set without pre-training 3.6 ProphetNet N-gram Comparison ProphetNet predicts next contiguous n-gram to- kens simultaneously for each time step. To ex- plore the effectiveness of predicting n gram, we compare our ProphetNet model with n=1, 2, and 3. We also compare the MASSbase which is very similar to ProphetNetbase-1gram. The architec- ture hyper-parameter of all the models is set to 6-layer encoder, 6-layer decoder, 768 hidden size, and 12 attention heads, which are the same as MASSbase. These models are also pre-trained on the Wikipedia+BookCorpus dataset with 125k steps. Other hyper-parameters are the same as the description in § 3.1. As we mentioned in § 2.2, we set different attenuation coefﬁcient for the power attenuation function. For ProphetNetbase-2gram, γ is set to 1.0. For ProphetNetbase-3gram model, the",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "attenuation coefﬁcient γ is set to 0.5. The pre-trained models are then ﬁne-tuned on CNN/DailyMail. We report the F1 scores of ROUGE-1, ROUGE-2 and ROUGE-L. The re- sults are shown in Table 6. We can see that the performance of ProphetNetbase-3gram and ProphetNetbase-2gram is comparable. Both of them perform better than MASSbase and ProphetNetbase- 1gram. Considering the computational and time cost, we use ProphetNetbase-2gram in other experi- ments due to its training speed is 15% faster than ProphetNetbase-3gram. Table 6: n-gram comparison results on CNN/DailyMail test set 4 Related Work Unsupervised pre-training has been successfully ap- plied to various natural language processing tasks. GPT (Radford et al., 2018) takes plain text as pre- training data to predict the next tokens with left- ward tokens. It is based on the left-to-right lan- guage model and can be used to generate stories and continue to write for a given text. BERT (De- vlin et al., 2018) and SpanBERT (Joshi et al., 2019) use a Bi-directional language model to recover masked tokens/spans for a given sentence. Bi- directional information ﬂow can be used to recover the masked positions, but no left-to-right language model dependency is learned. As a result, BERT and SpanBERT bring signiﬁcant improvement for NLU tasks but are not suitable for generation tasks. XLNet (Yang et al., 2019) predicts the tokens with given positions and some tokens with their posi- tions in the sentence in an AR manner. Although it uses AR to build a permuted-ordered language model, it is also not suitable for NLG tasks because it brought too much noise for a left-to-right lan- guage model. MASS (Song et al., 2019) pre-trains the sequence-to-sequence model by dropping a con- tinuous token span to corrupt the original text and learns to recover it. T5 (Raffel et al., 2019) investi- gates different model structures and different pre- training tasks, and is pre-trained on a large scale corpus named C4 which is 750GB. BART",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "learns to recover it. T5 (Raffel et al., 2019) investi- gates different model structures and different pre- training tasks, and is pre-trained on a large scale corpus named C4 which is 750GB. BART (Lewis et al., 2019) uses the encoder-decoder structure to generate the original sentence with its spoiled input to denoise. In the BART decoder, the undamaged language model is learned thus brings improvement to NLG tasks. Natural language generation methods are typi- cally based on the left-to-right or right-to-left lan- guage models and generate one token in each time step. These methods can not capture the informa- tion of future tokens. Recently, incorporating fu- ture information into language generation tasks has attracted the attention of researchers (Li et al., 2017; Serdyuk et al., 2018; Lawrence et al., 2019; Oord et al., 2018). Li et al. (2017) propose an actor-critic model which designs a value function as a critic to estimate the future success. In their method, they not only consider the MLE-based learning but also incorporate an RL-based value function into the decoder process. (Oord et al., 2018) do not predict future tokens directly but tried to model a density ratio to preserve the mutual information between context and future token. Serdyuk et al. (2018) point out traditional Recurrent Neural Net- works (RNNs) may prefer to generate each token based on the recent tokens, it is hard to learn the long-term dependencies. To capture the future in- formation and learn the long-term dependencies, they run the forward RNN and backward RNN in parallel. Lawrence et al. (2019) concatenates the source and target to train an encoder instead of encoder-decoder architecture. They use special placeholder tokens to replace some tokens of the target for the model training process. At the infer- ence process, they generate the target by replacing each placeholder token. 5 Conclusion In this paper, we introduce ProphetNet, a sequence- to-sequence pre-training model that",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "process. At the infer- ence process, they generate the target by replacing each placeholder token. 5 Conclusion In this paper, we introduce ProphetNet, a sequence- to-sequence pre-training model that learns to pre- dict future n-gram at each time step. ProphetNet achieves the best performance on both abstractive summarization and question generation tasks. Fur- thermore, ProphetNet achieves new state-of-the-art results on CNN/DailyMail and Gigaword using only about 1/3 the pre-training epochs of the previ- ous model.",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 3599
+    }
+  },
+  {
+    "content": "References",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

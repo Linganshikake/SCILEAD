@@ -1,0 +1,59 @@
+{
+  "call": 2,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 2,
+    "record": 1,
+    "field": "Metric",
+    "original_value": "Test Perplexity",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: Test Perplexity\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 239
+  },
+  "max_tokens": null,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYWj9QFij4TeMiRzBvpZS6fFibNYr",
+  "usage": {
+    "completion_tokens": 3,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 0,
+      "engine_ttft_ms": 330,
+      "engine_ttlt_ms": 331,
+      "pre_inference_ms": 122,
+      "service_tbt_ms": 9,
+      "service_ttft_ms": 1259,
+      "service_ttlt_ms": 1285,
+      "user_visible_ttft_ms": 1138
+    },
+    "prompt_tokens": 239,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 242
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_8c4c3e6d7a",
+  "raw_answer": "Perplexity",
+  "seconds": 2.313
+}

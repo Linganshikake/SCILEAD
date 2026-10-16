@@ -1,0 +1,47 @@
+{
+  "run_id": "fewshot",
+  "call": 1,
+  "status": "COMPLETE",
+  "position": {
+    "paper": "1909.02188.pdf",
+    "record": 0,
+    "field": "Extraction"
+  },
+  "prompt_sha256": "0ecddeeced8c6b017e5393f0443bb7fe56d2f74461dbd7b6b729ed3991b311bf",
+  "candidate_sha256": null,
+  "requested_model": "gpt-4.1-2025-04-14",
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYxOEEZ25Lhl5pCEqHl5syo5jbrfB",
+  "usage": {
+    "completion_tokens": 176,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 80,
+      "engine_ttlt_ms": 986,
+      "pre_inference_ms": 240,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 589,
+      "service_ttlt_ms": 1495,
+      "user_visible_ttft_ms": 349
+    },
+    "prompt_tokens": 4689,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 4865
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "[{\"Task\": \"Slot Filling\", \"Dataset\": \"SNIPS\", \"Metric\": \"F1\", \"Result\": \"97.0\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"SNIPS\", \"Metric\": \"Accuracy\", \"Result\": \"98.6\"}, {\"Task\": \"Semantic Frame Parsing\", \"Dataset\": \"SNIPS\", \"Metric\": \"Overall Accuracy\", \"Result\": \"92.9\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"ATIS\", \"Metric\": \"F1\", \"Result\": \"96.1\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"97.5\"}, {\"Task\": \"Semantic Frame Parsing\", \"Dataset\": \"ATIS\", \"Metric\": \"Overall Accuracy\", \"Result\": \"88.6\"}]",
+  "response_sha256": "59313b1c795c833fc9c0ea68da7197d9fa5d05ced7401fc37c9c0f3d84af4e42",
+  "seconds": 3.4220000002533197
+}

@@ -1,0 +1,91 @@
+{
+  "1910.13461.pdf": {
+    "output": "[{\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-1\", \"Result\": \"44.16\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-2\", \"Result\": \"21.28\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-L\", \"Result\": \"40.90\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-1\", \"Result\": \"45.14\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-2\", \"Result\": \"22.27\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-L\", \"Result\": \"37.25\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"F1\", \"Result\": \"90.9\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"EM\", \"Result\": \"84.1\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 2.0\", \"Metric\": \"F1\", \"Result\": \"89.4\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 2.0\", \"Metric\": \"EM\", \"Result\": \"86.5\"}, {\"Task\": \"Natural Language Inference\", \"Dataset\": \"MNLI\", \"Metric\": \"Accuracy\", \"Result\": \"89.2\"}, {\"Task\": \"Dialogue Response Generation\", \"Dataset\": \"ConvAI2\", \"Metric\": \"Perplexity\", \"Result\": \"11.85\"}, {\"Task\": \"Dialogue Response Generation\", \"Dataset\": \"ConvAI2\", \"Metric\": \"Valid F1\", \"Result\": \"20.72\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-1\", \"Result\": \"30.6\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-2\", \"Result\": \"6.2\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-L\", \"Result\": \"24.3\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'16 RO-EN\", \"Metric\": \"BLEU\", \"Result\": \"37.96\"}]",
+    "source_documents": [
+      {
+        "content": "(b) For machine translation, we learn a small additional encoder that replaces the word embeddings in BART. The new encoder can use a disjoint vocabulary. re-implement strong pre-training approaches recently proposed for discriminative and generation tasks. We aim, as much as possible, to control for differences un- related to the pre-training objective. However, we do make minor changes to the learning rate and usage of layer normalisation in order to improve performance (tuning these separately for each objective). For refer- ence, we compare our implementations with published numbers from BERT, which was also trained for 1M steps on a combination of books and Wikipedia data. We compare the following approaches: We experiment with (1) treating the task as a stan- dard sequence-to-sequence problem, where the source input to the encoder and the target is the decoder out- put, or (2) adding the source as preﬁx to the target in the decoder, with a loss only on the target part of the sequence. We ﬁnd the former works better for BART models, and the latter for other models. To most directly compare our models on their ability to model their ﬁne-tuning objective (the log likelihood of the human text), we report perplexity in Table 1. 4.2 Tasks Language Model Similarly to GPT (Radford et al., 2018), we train a left-to-right Transformer language model. This model is equivalent to the BART decoder, without cross-attention. Permuted Language Model Based on XLNet (Yang et al., 2019), we sample 1/6 of the tokens, and gener- ate them in a random order autoregressively. For con- sistency with other models, we do not implement the relative positional embeddings or attention across seg- ments from XLNet. Masked Language Model Following BERT (Devlin et al., 2019), we replace 15% of tokens with [MASK] symbols, and train the model to independently predict the original tokens. SQuAD (Rajpurkar et al., 2016)a an extractive ques- tion answering task on Wikipedia paragraphs. Answers are",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 4,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 2: Results for large models on SQuAD and GLUE tasks. BART performs comparably to RoBERTa and XLNet, suggesting that BART’s uni-directional decoder layers do not reduce performance on discriminative tasks. Table 3: Results on two standard summarization datasets. BART outperforms previous work on summarization on two tasks and all metrics, with gains of roughly 6 points on the more abstractive dataset. on the CNN/DM summarization dataset, we hypothe- sised that larger pre-trained models may be better able to learn from this task. To help the model better ﬁt the data, we disabled dropout for the ﬁnal 10% of training steps. We use the same pre-training data as Liu et al. (2019), consisting of 160Gb of news, books, stories, and web text. 5.2 Discriminative Tasks Table 2 compares the performance of BART with sev- eral recent approaches on the well-studied SQuAD and GLUE tasks (Warstadt et al., 2018; Socher et al., 2013; Dolan & Brockett, 2005; Agirre et al., 2007; Williams et al., 2018; Dagan et al., 2006; Levesque et al., 2011). The most directly comparable baseline is RoBERTa, which was pre-trained with the same resources, but a different objective. Overall, BART performs simi- larly, with only small differences between the models on most tasks. suggesting that BART’s improvements on generation tasks do not come at the expense of clas- siﬁcation performance. Table 4: BART outperforms previous work on conver- sational response generation. Perplexities are renor- malized based on ofﬁcial tokenizer for ConvAI2. Summarization To provide a comparison with the state-of-the-art in summarization, we present results on two summarization datasets, CNN/DailyMail and XSum, which have distinct properties. Summaries in the CNN/DailyMail tend to resemble source sentences. Extractive models do well here, and even the baseline of the ﬁrst-three source sentences is highly competitive. Nevertheless, BART outperforms all existing work. 5.3 Generation Tasks We also experiment with",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 6,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Comparison of pre-training objectives. All models are of comparable size and are trained for 1M steps on a combination of books and Wikipedia data. Entries in the bottom two blocks are trained on identical data using the same code-base, and ﬁne-tuned with the same procedures. Entries in the second block are inspired by pre-training objectives proposed in previous work, but have been simpliﬁed to focus on evaluation objectives (see §4.1). Performance varies considerably across tasks, but the BART models with text inﬁlling demonstrate the most consistently strong performance. Performance of pre-training methods varies signiﬁ- cantly across tasks The effectiveness of pre-training methods is highly dependent on the task. For exam- ple, a simple language model achieves the best ELI5 performance, but the worst SQUAD results. Token masking is crucial Pre-training objectives based on rotating documents or permuting sentences perform poorly in isolation. The successful methods either use token deletion or masking, or self-attention masks. Deletion appears to outperform masking on generation tasks. Pure language models perform best on ELI5 The ELI5 dataset is an outlier, with much higher perplex- ities than other tasks, and is the only generation task where other models outperform BART. A pure lan- guage model performs best, suggesting that BART is less effective when the output is only loosely con- strained by the input. BART achieves the most consistently strong perfor- mance. With the exception of ELI5, BART models using text-inﬁlling perform well on all tasks. 5 Large-scale Pre-training Experiments Left-to-right pre-training improves generation The Masked Language Model and the Permuted Language Model perform less well than others on generation, and are the only models we consider that do not include left-to-right auto-regressive language modelling during pre-training. Recent work has shown that downstream performance can dramatically improve when pre-training is",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "with [MASK] symbols, and train the model to independently predict the original tokens. SQuAD (Rajpurkar et al., 2016)a an extractive ques- tion answering task on Wikipedia paragraphs. Answers are text spans extracted from a given document context. Similar to BERT (Devlin et al., 2019), we use concate- nated question and context as input to the encoder of BART, and additionally pass them to the decoder. The model includes classiﬁers to predict the start and end indices of each token. MNLI (Williams et al., 2017), a bitext classiﬁcation task to predict whether one sentence entails another. The ﬁne-tuned model concatenates the two sentences with appended an EOS token, and passes them to both the BART encoder and decoder. In contrast to BERT, the representation of the EOS token is used to classify the sentences relations. Multitask Masked Language Model As in UniLM (Dong et al., 2019), we train a Masked Language Model with additional self-attention masks. Self at- tention masks are chosen randomly in with the follow proportions: 1/6 left-to-right, 1/6 right-to-left, 1/3 un- masked, and 1/3 with the ﬁrst 50% of tokens unmasked and a left-to-right mask for the remainder. ELI5 (Fan et al., 2019), a long-form abstractive ques- tion answering dataset. Models generate answers con- ditioned on the concatenation of a question and sup- porting documents. XSum (Narayan et al., 2018), a news summarization dataset with highly abstractive summaries. Masked Seq-to-Seq Inspired by MASS (Song et al., 2019), we mask a span containing 50% of tokens, and train a sequence to sequence model to predict the masked tokens. ConvAI2 (Dinan et al., 2019), a dialogue response generation task, conditioned on context and a persona. For the Permuted LM, Masked LM and Multitask Masked LM, we use two-stream attention (Yang et al., 2019) to efﬁciently compute likelihoods of the output part of the sequence (using a diagonal self-attention mask on the output to predict words left-to-right). CNN/DM",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 4,
+          "start_index": 1804,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Comparison of pre-training objectives. All models are of comparable size and are trained for 1M steps on a combination of books and Wikipedia data. Entries in the bottom two blocks are trained on identical data using the same code-base, and ﬁne-tuned with the same procedures. Entries in the second block are inspired by pre-training objectives proposed in previous work, but have been simpliﬁed to focus on evaluation objectives (see §4.1). Performance varies considerably across tasks, but the BART models with text inﬁlling demonstrate the most consistently strong performance.\nModel SQuAD 1.1 MNLI ELI5 XSum ConvAI2 CNN/DM F1 Acc PPL PPL PPL PPL BERT Base (Devlin et al., 2019) 88.5 84.3 - - - - Masked Language Model Masked Seq2seq Language Model Permuted Language Model Multitask Masked Language Model 90.0 87.0 76.7 89.1 89.2 83.5 82.1 80.1 83.7 82.4 24.77 23.40 21.40 24.03 23.73 7.87 6.80 7.00 7.69 7.50 12.59 11.43 11.51 12.23 12.39 7.06 6.19 6.56 6.96 6.74 BART Base w/ Token Masking w/ Token Deletion w/ Text Inﬁlling w/ Document Rotation w/ Sentence Shufﬂing w/ Text Inﬁlling + Sentence Shufﬂing 90.4 90.4 90.8 77.2 85.4 90.8 84.1 84.1 84.0 75.3 81.5 83.8 25.05 24.61 24.26 53.69 41.87 24.17 7.08 6.90 6.61 17.14 10.93 6.62 11.73 11.46 11.05 19.87 16.67 11.12 6.10 5.87 5.83 10.59 7.89 5.41",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Results for large models on SQuAD and GLUE tasks. BART performs comparably to RoBERTa and XLNet, suggesting that BART’s uni-directional decoder layers do not reduce performance on discriminative tasks.\nSQuAD 1.1 EM/F1 SQuAD 2.0 MNLI m/mm EM/F1 SST QQP QNLI Acc Acc Acc Acc Acc Acc BERT UniLM XLNet RoBERTa BART 84.1/90.9 -/- 89.0/94.5 88.9/94.6 88.8/94.6 79.0/81.8 80.5/83.4 86.1/88.8 86.5/89.4 86.1/89.2 86.6/- 87.0/85.9 89.8/- 90.2/90.2 89.9/90.1 93.2 94.5 95.6 96.4 96.6 91.3 - 91.8 92.2 92.5 92.3 92.7 93.9 94.7 94.9 90.0 - 91.8 92.4 91.2 70.4 70.9 83.8 86.6 87.0 88.0 - 89.2 90.9 90.4 60.6 61.1 63.6 68.0 62.8",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Results on two standard summarization datasets. BART outperforms previous work on summarization on two tasks and all metrics, with gains of roughly 6 points on the more abstractive dataset.\nCNN/DailyMail R2 R1 RL R1 XSum R2 RL Lead-3 PTGEN (See et al., 2017) PTGEN+COV (See et al., 2017) UniLM BERTSUMABS (Liu & Lapata, 2019) BERTSUMEXTABS (Liu & Lapata, 2019) 40.42 36.44 39.53 43.33 41.72 42.13 17.62 15.66 17.28 20.21 19.39 19.60 36.67 33.42 36.38 40.51 38.76 39.18 16.30 29.70 28.10 - 38.76 38.81 1.60 9.21 8.02 - 16.33 16.50 11.95 23.24 21.72 - 31.15 31.27 BART 44.16 21.28 40.90 45.14 22.27 37.25",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Seq2Seq + Attention Best System BART ConvAI2 Valid F1 Valid PPL 16.02 19.09 20.72 35.07 17.51 11.85",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: BART achieves state-of-the-art results on the challenging ELI5 abstractive question answering dataset. Comparison models are from Fan et al. (2019).\nR1 ELI5 R2 RL Best Extractive Language Model Seq2Seq Seq2Seq Multitask BART 23.5 27.8 28.3 28.9 30.6 3.1 4.7 5.1 5.4 6.2 17.5 23.1 22.8 23.1 24.3",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: The performance (BLEU) of baseline and BART on WMT’16 RO-EN augmented with back- translation data. BART improves over a strong back- translation (BT) baseline by using monolingual English pre-training.\nRO-EN Baseline Fixed BART Tuned BART 36.80 36.29 37.96",
+        "metadata": {
+          "filename": "1910.13461.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

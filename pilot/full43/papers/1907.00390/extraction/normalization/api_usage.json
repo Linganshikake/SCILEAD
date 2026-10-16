@@ -1,0 +1,783 @@
+{
+  "requested_model": "gpt-4.1-2025-04-14",
+  "expected_requests": 13,
+  "actual_request_attempts": 13,
+  "completed_requests": 13,
+  "retries": 0,
+  "calls": [
+    {
+      "call": 1,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 1,
+        "record": 1,
+        "field": "Task",
+        "original_value": "Slot Filling",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Slot Filling\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 223
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWLt7MQf37Mm7LbKUmcF1zeQjv8Z",
+      "usage": {
+        "completion_tokens": 5,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 314,
+          "engine_ttlt_ms": 315,
+          "pre_inference_ms": 113,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 1004,
+          "service_ttlt_ms": 1037,
+          "user_visible_ttft_ms": 891
+        },
+        "prompt_tokens": 223,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 228
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Intent Detection and Slot Filling",
+      "seconds": 2.843
+    },
+    {
+      "call": 2,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 2,
+        "record": 1,
+        "field": "Metric",
+        "original_value": "F1-score",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: F1-score\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 238
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWLvduklgp7WUqoXJwL4q8Akg4nc",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 316,
+          "engine_ttlt_ms": 317,
+          "pre_inference_ms": 212,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 1046,
+          "service_ttlt_ms": 1061,
+          "user_visible_ttft_ms": 835
+        },
+        "prompt_tokens": 238,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 240
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "F1",
+      "seconds": 2.0
+    },
+    {
+      "call": 3,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 3,
+        "record": 2,
+        "field": "Task",
+        "original_value": "Intent Detection",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Intent Detection\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 223
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWLxodW2JHznTKu1Zownh1260ErP",
+      "usage": {
+        "completion_tokens": 5,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 9,
+          "engine_ttft_ms": 60,
+          "engine_ttlt_ms": 115,
+          "pre_inference_ms": 109,
+          "service_tbt_ms": 14,
+          "service_ttft_ms": 442,
+          "service_ttlt_ms": 513,
+          "user_visible_ttft_ms": 333
+        },
+        "prompt_tokens": 223,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 228
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Intent Detection and Slot Filling",
+      "seconds": 1.438
+    },
+    {
+      "call": 4,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 4,
+        "record": 3,
+        "field": "Task",
+        "original_value": "Sentence-level Semantic Frame Accuracy",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Sentence-level Semantic Frame Accuracy\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 226
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWM0qVxZ1M1VMYXHS6FGbtFvVNQ5",
+      "usage": {
+        "completion_tokens": 1,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_ttft_ms": 315,
+          "engine_ttlt_ms": 315,
+          "pre_inference_ms": 275,
+          "service_tbt_ms": 3,
+          "service_ttft_ms": 1178,
+          "service_ttlt_ms": 1181,
+          "user_visible_ttft_ms": 903
+        },
+        "prompt_tokens": 226,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 227
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "None",
+      "seconds": 4.078
+    },
+    {
+      "call": 5,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 5,
+        "record": 3,
+        "field": "Metric",
+        "original_value": "Sentence Accuracy",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: Sentence Accuracy\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 237
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWM3FcEg6pzdoIasSgjNZZEtPvjV",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 311,
+          "engine_ttlt_ms": 312,
+          "pre_inference_ms": 114,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 1170,
+          "service_ttlt_ms": 1191,
+          "user_visible_ttft_ms": 1056
+        },
+        "prompt_tokens": 237,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 240
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Sent-Accuracy",
+      "seconds": 2.469
+    },
+    {
+      "call": 6,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 6,
+        "record": 4,
+        "field": "Task",
+        "original_value": "Slot Filling",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Slot Filling\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 223
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWM5MV0SCPTfsbNwdXku0ryyhyVC",
+      "usage": {
+        "completion_tokens": 5,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 5,
+          "engine_ttft_ms": 44,
+          "engine_ttlt_ms": 74,
+          "pre_inference_ms": 222,
+          "service_tbt_ms": 2,
+          "service_ttft_ms": 415,
+          "service_ttlt_ms": 425,
+          "user_visible_ttft_ms": 193
+        },
+        "prompt_tokens": 223,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 228
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_861cf8a3da",
+      "raw_answer": "Intent Detection and Slot Filling",
+      "seconds": 1.531
+    },
+    {
+      "call": 7,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 7,
+        "record": 4,
+        "field": "Dataset",
+        "original_value": "Snips",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: Snips\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 526
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWM7OTJ73ztheUy5pXHF4rnWhL3B",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 9,
+          "engine_ttft_ms": 42,
+          "engine_ttlt_ms": 69,
+          "pre_inference_ms": 151,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 397,
+          "service_ttlt_ms": 412,
+          "user_visible_ttft_ms": 247
+        },
+        "prompt_tokens": 526,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 528
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "SNIPS",
+      "seconds": 1.359
+    },
+    {
+      "call": 8,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 8,
+        "record": 4,
+        "field": "Metric",
+        "original_value": "F1-score",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: F1-score\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 238
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWM8t5oI7K6zn8ZbUdn9eyxliud0",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_ttft_ms": 315,
+          "engine_ttlt_ms": 315,
+          "pre_inference_ms": 151,
+          "service_tbt_ms": 15,
+          "service_ttft_ms": 1036,
+          "service_ttlt_ms": 1067,
+          "user_visible_ttft_ms": 885
+        },
+        "prompt_tokens": 238,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 240
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "F1",
+      "seconds": 2.047
+    },
+    {
+      "call": 9,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 9,
+        "record": 5,
+        "field": "Task",
+        "original_value": "Intent Detection",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Intent Detection\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 223
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWMAAeZixNL8OJWPsAQeinUc6Jc9",
+      "usage": {
+        "completion_tokens": 5,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 313,
+          "engine_ttlt_ms": 314,
+          "pre_inference_ms": 100,
+          "service_tbt_ms": 1,
+          "service_ttft_ms": 600,
+          "service_ttlt_ms": 605,
+          "user_visible_ttft_ms": 499
+        },
+        "prompt_tokens": 223,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 228
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Intent Detection and Slot Filling",
+      "seconds": 1.515
+    },
+    {
+      "call": 10,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 10,
+        "record": 5,
+        "field": "Dataset",
+        "original_value": "Snips",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: Snips\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 526
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWMCaw5LKxxJCtgEEQwmR3e4WQOB",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 8,
+          "engine_ttft_ms": 46,
+          "engine_ttlt_ms": 70,
+          "pre_inference_ms": 105,
+          "service_tbt_ms": 9,
+          "service_ttft_ms": 220,
+          "service_ttlt_ms": 239,
+          "user_visible_ttft_ms": 116
+        },
+        "prompt_tokens": 526,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 528
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "SNIPS",
+      "seconds": 1.297
+    },
+    {
+      "call": 11,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 11,
+        "record": 6,
+        "field": "Task",
+        "original_value": "Sentence-level Semantic Frame Accuracy",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Sentence-level Semantic Frame Accuracy\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 226
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWMDxQKM0lBIcEBfV9u3zNrx7Gf5",
+      "usage": {
+        "completion_tokens": 1,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 311,
+          "engine_ttlt_ms": 312,
+          "pre_inference_ms": 126,
+          "service_tbt_ms": 2,
+          "service_ttft_ms": 1148,
+          "service_ttlt_ms": 1151,
+          "user_visible_ttft_ms": 1022
+        },
+        "prompt_tokens": 226,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 227
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "None",
+      "seconds": 2.531
+    },
+    {
+      "call": 12,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 12,
+        "record": 6,
+        "field": "Dataset",
+        "original_value": "Snips",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: Snips\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 526
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWMFSsUgCU6Wmz1X01tGrGjo7Tom",
+      "usage": {
+        "completion_tokens": 2,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 9,
+          "engine_ttft_ms": 36,
+          "engine_ttlt_ms": 62,
+          "pre_inference_ms": 92,
+          "service_tbt_ms": 3,
+          "service_ttft_ms": 224,
+          "service_ttlt_ms": 229,
+          "user_visible_ttft_ms": 132
+        },
+        "prompt_tokens": 526,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 528
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "SNIPS",
+      "seconds": 1.078
+    },
+    {
+      "call": 13,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 13,
+        "record": 6,
+        "field": "Metric",
+        "original_value": "Sentence Accuracy",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: Sentence Accuracy\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 237
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWMIZaJX2KOTTafLad8MTOSXIizr",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 34,
+          "engine_ttlt_ms": 52,
+          "pre_inference_ms": 100,
+          "service_tbt_ms": 0,
+          "service_ttft_ms": 302,
+          "service_ttlt_ms": 303,
+          "user_visible_ttft_ms": 202
+        },
+        "prompt_tokens": 237,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 240
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_9c5c9bff6e",
+      "raw_answer": "Sent-Accuracy",
+      "seconds": 2.547
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_accepted": true,
+  "seed_determinism_verified": false,
+  "candidate_order": "str(set), PYTHONHASHSEED=0",
+  "resume_policy": "Replay completed request at identical index/message only; no duplicate-name cache; unfinished attempts never retried",
+  "prompt_tokens": 3872,
+  "completion_tokens": 38,
+  "total_tokens": 3910
+}

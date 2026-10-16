@@ -1,0 +1,36 @@
+{
+  "attempts": 1,
+  "successful_responses": 0,
+  "failed_or_uncertain": 1,
+  "unknown_usage_attempts": 1,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "total_tokens": 0,
+  "request_seconds": 0.0,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "FAILED_OR_UNCERTAIN",
+      "position": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 1,
+        "field": "Task"
+      },
+      "prompt_sha256": "357f2f2396c4a7b4ae9e799c3f095072b17b046a9ced41db9620a45eab8dc192",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "finish_reason": "length",
+      "error_type": "AssertionError",
+      "error": "Response not complete stop; dependent processing paused",
+      "seconds": 0.0
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

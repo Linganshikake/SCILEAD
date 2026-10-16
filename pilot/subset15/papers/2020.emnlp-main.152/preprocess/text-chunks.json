@@ -1,0 +1,110 @@
+[
+  {
+    "content": "SlotReﬁne: A Fast Non-Autoregressive Model for Joint Intent Detection and Slot Filling Di Wu’ Liang Ding? Fan Lu’ Jian Xie! §Peking University inbath@163.com University of Washington lufan0929@gmail.com ‡Wuhan University xiejian1990@gmail.com Abstract Slot ﬁlling and intent detection are two main tasks in spoken language understanding (SLU) In this paper, we propose a novel system. non-autoregressive model named SlotReﬁne for joint intent detection and slot ﬁlling. Be- sides, we design a novel two-pass iteration mechanism to handle the uncoordinated slots problem caused by conditional independence of non-autoregressive model. Experiments demonstrate that our model signiﬁcantly out- performs previous models in slot ﬁlling task, while considerably speeding up the decoding (up to ×10.77). In-depth analyses show that 1) pretraining schemes could further enhance our model; 2) two-pass mechanism indeed remedy the uncoordinated slots. Introduction recurrent neural network based encoder-decoder framework with attention mechanism to model it, meanwhile using the encoded vector to predict in- tent. Goo et al. (2018) and Haihong et al. (2019) dig into the correlation between ID and SF deeper and modeled the relationship between them explic- itly. Qin et al. (2019) propagate the token-level intent results to the SF task, achieving signiﬁcant performance improvement. Brieﬂy summarized, most of the previous works heavily rely on autoregressive approaches, e.g., RNN based model or seq2seq architecture, to cap- ture the grammar structure in an utterance. And conditional random ﬁeld (CRF) is a popular auxil- iary module for SF task as it considers the correla- tions between tags. Thus, several state-of-the-art works combine the autoregressive model and CRF to achieve the competitive performance, which therefore are set as our baseline methods. Slot ﬁlling (SF) and intent detection (ID) play im- portant roles in spoken language understanding, especially for task-oriented dialogue",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "performance, which therefore are set as our baseline methods. Slot ﬁlling (SF) and intent detection (ID) play im- portant roles in spoken language understanding, especially for task-oriented dialogue system. For example, for an utterance like “Buy an air ticket from Beijing to Seattle”, intent detection works on sentence-level to indicate the task is about purchas- ing an air ticket, while the slot ﬁlling focus on words-level to ﬁgure out the departure and destina- tion of that ticket are “Beijing” and “Seattle”. In early studies, ID and SF were often modeled separately, where ID was modeled as a classiﬁca- tion task, while SF was regarded as a sequence labeling task. Due to the correlation between these two tasks, training them jointly could enhance each other. Zhang and Wang (2016) propose a joint model using bidirectional gated recurrent unit to learn the representation at each time step. Mean- while, a max-pooling layer is employed to capture the global features of a sentence for intent classi- ﬁcation. Liu and Lane (2016) cast the slot ﬁlling task as a tag generation problem and introduce a However, for SF task, we argue that identifying token dependencies among slot chunk is enough, and it is unnecessary to model the entire sequence dependency in autoregressive fashion, which leads to redundant computation and inevitable high la- tency. In this study, we cast these two tasks jointly as a non-autoregressive tag generation problem to get rid of unnecessary temporal dependencies. Partic- ularly, a Transformer (Vaswani et al., 2017) based architecture is adopted here to learn the represen- tations of an utterance in both sentence and word level simultaneously (Sec.§2.1). The slots and in- tent labels are predicted independently and simulta- neously, achieving better decoding efﬁciency. We further introduce a two-pass reﬁne mechanism (in Sec.§2.2) to model boundary prediction of each slots explicitly, which also handle the uncoordi- nated slots problem (e.g.,",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1797
+    }
+  },
+  {
+    "content": "decoding efﬁciency. We further introduce a two-pass reﬁne mechanism (in Sec.§2.2) to model boundary prediction of each slots explicitly, which also handle the uncoordi- nated slots problem (e.g., I-song follows B-singer) caused by conditional independence attribute. Experiments on two commonly-cited datasets 1932 Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing, pages 1932-1937, November 16-20, 2020. ©2020 Association for Computational Linguistics",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 3596
+    }
+  },
+  {
+    "content": "Figure 2: A example of uncoordinated slot tagging. scheme of our model is shown in Figure 1, details can be found in the corresponding caption. Note that we follow the common practice (Ramshaw and Marcus, 1995; Zhang and Wang, 2016; Hai- hong et al., 2019) to use “Inside–outside–beginning (IOB)” tagging format. show that our approach is signiﬁcantly and consis- tently superior to the existing models both in SF performance and efﬁciency (Sec.§3). Our contribu- tions are as follows: 2 Proposed Approaches 2.1 Non-Autoregressively Joint Model We extend the original multi-head Transformer en- coder in Vaswani et al. (2017) to construct the model architecture of SlotReﬁne. Please refer to Vaswani et al. (2017) for the details of Transformer. The main difference against the original Trans- former is that we model the sequential information with relative position representations (Shaw et al., 2018), instead of using absolute position encoding. For a given utterance, a special token CLS is inserted to the ﬁrst inputting position akin to the operation in BERT (Devlin et al., 2019). Difference from that in BERT is the corresponding output vector is used for next sentence classiﬁcation, we use it to predict the label of intent in SlotReﬁne. We denote the input sequence as x = (xcls, x1, ..., xl), where l is the utterance length. Each word xi will be embedded into a h-dimention vector to perform the multi-head self-attention computation. Then, the output of each model stack can be formulated as H = (hcls, h1, ..., hl). In this section, we ﬁrst describe how we model slot ﬁlling and intent detection task jointly by an non- autoregressive model. And then we describe the details of the two-pass reﬁne mechanism. The brief To jointly model the representations of ID and SF tasks, we directly concat 2 the representations of 1Our code is available: https://github.com/ moore3930/SlotRefine 2We follow (Goo et al., 2018) to fuse two representations with gating mechanism, but preliminary",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "concat 2 the representations of 1Our code is available: https://github.com/ moore3930/SlotRefine 2We follow (Goo et al., 2018) to fuse two representations with gating mechanism, but preliminary experiments show that simply concatenation performs best for our model structure.",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "hcls and hi before feed-forward computation, and then feed them into the softmax classiﬁer. Speciﬁ- cally, the intent detection and slot ﬁlling results are predicted as follows, respectively: y = softmax (Ww! ets + b') (1) y; = softmax (W® - [hes, hi] + b°) where y' and y; denote intent label of the utter- ance and slot label for each token 7, respectively. [hets, hi] is the concated vector. W and b are corre- sponding trainable parameters. The objective of our joint model can be formu- lated as: The learning objective is to maximize the condi- tional probability p (y', y°|2), which is optimized via minimizing its cross-entropy loss. Unlike au- toregressive methods, the likelihood of each slot in our approach can be optimized in parallel. into the model. In the ﬁrst pass, the initial slot tags are all setting to “O”, while in the second pass, the “B-tags” predicted in the ﬁrst pass is used as the corresponding slot tag input. These two iterations share the model and optimization goal, thus brings no extra parameters. Intuitively, in doing so, the model generates a draft in the first pass and tries to find the beginning of each slot chunk. In the second pass, by propa- gating the utterance again with the predicted “B- tags”, the model is forced to learn how many iden- tical “J-tags” follow them. Through this process, the slot labels predicted becomes more consistent, and the boundaries are more accurately identified. From a more general perspective, we can view this two-pass process as a trade-off between autoregres- sion and non-autoregression, where the complete markov chain process can be simplified as follow: p(y. yl) =p(y'|z) poly’, 2) 2.2 Two-pass Reﬁne Mechanism Due to the conditional independence between slot labels, it is difﬁcult for our proposed non- autoregressive model to capture the sequential de- pendency information among each slot chunk, thus leading to some uncoordinated slot labels. We name this problem as uncoordinated slots prob- lem. Take the",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "model to capture the sequential de- pendency information among each slot chunk, thus leading to some uncoordinated slot labels. We name this problem as uncoordinated slots prob- lem. Take the false tagging in Figure 2 for exam- ple, slot label “I-song” uncoordinately follows “B- singer”, which does not satisfy the Inside-Outside- Beginning tagging format. To address this problem, we introduce a two-pass reﬁne mechanism. As depicted in the Figure 1, in addition to each token embedding in the utterance, we also element-wisely add the slot tag embedding where ˜ys is the tagging results from the ﬁrst pass. Two-pass reﬁne mechanism is similar to the multi-round iterative mechanism in non- autoregressive machine translation (Lee et al., 2018; Gu et al., 2018; Ding et al., 2020; Kasai et al., 2020), such as Mask-predict (Ghazvininejad et al., 2019). However, we argue that our method is more suitable in this task. The label dependency of the tagging task (e.g., slot ﬁlling) is simple, where we only need to ensure the tagging labels of a slot are consistent from the beginning to the end. There- fore, two iterations to force the model to focus on the slot boundaries is enough in our task, intuitively. Mask-Predict can alleviate the problem caused by conditional independence too. However, it’s de- signed for a more complex goal, and it usually",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1806
+    }
+  },
+  {
+    "content": "introduce more iterations (e.g., 10 iters) to achieve competitive performance, which largely reduces the inference speed. 3 Experiment Datasets We choose two widely-used datasets: ATIS (Airline Travel Information Systems,Tur et al. (2010)) and Snips (collected by Snips personal voice assistant,Coucke et al. (2018)). Compared with ATIS, the Snips dataset is more complex due to its large vocabulary size, cross-domain intents and more out-of-vocabulary words. Metrics Three evaluation metrics are used in our experiments. F1-score and accuracy are applied for slot ﬁlling and intent detection task, respectively. Besides, we use sentence accuracy to indicate pro- portion of utterance in the corpus whose slots and intent are both correctly-predicted. Setup All embeddings are initialized with xavier method (Glorot and Bengio, 2010). The batch size is set to 32 and learning rate is 0.001. we set num- ber of Transformer layers, attention heads and hid- den sizes to {2,8,64} and {4,16,96} for ATIS and Snips datasets. In addition, we report the results of previous studies (Hakkani-T¨ur et al., 2016; Liu and Lane, 2016; Goo et al., 2018; Haihong et al., 2019; Qin et al., 2019) and conduct speed evalua- tion based on their open-source codes. Main Results Table 1 summarizes the model per- formance on ATIS and snips corpus. It can be seen that SlotReﬁne consistently outperforms other base- lines in all three metrics. Compared with our ba- sic non-autoregressive joint model in Section§ 2.1, SlotReﬁne achieve +1.18 and +1.55 sentence-level accuracy improvements for ATIS and Snips, respec- tively. It is worthy noting that our SlotReﬁne sig- niﬁcantly improves the slot ﬁlling task (F1-score↑). we attribute the improvement to that our two-pass mechanism successfully makes the model learn better slot boundaries. Speedup As each slot tagging result can be cal- culated in parallel with our approach, inference latency can be signiﬁcantly reduced. As shown in Table 2, on ATIS test set, our",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "slot boundaries. Speedup As each slot tagging result can be cal- culated in parallel with our approach, inference latency can be signiﬁcantly reduced. As shown in Table 2, on ATIS test set, our non-autoregressive model could achieve ×8.80 speedup compared with the existing state-of-the-art model (Haihong et al., 2019). And after introducing two-pass mech- anism (SlotReﬁne), our model still achieves com- petitive inference speedup (×4.31). Our decoding Table 2: “Latency” is the average time to decode an ut- terance without minibatching. “Speedup” is compared against existing SOTA model (Haihong et al., 2019). is conducted with a single Tesla P40 GPU. It is worth noting that for long sentences (Length≥12), the speedup achieves ×13 (not reported in table). Two-Pass Mechanism v.s. CRF In SF task, CRF is usually used to learn the dependence of slot labels. Two most important dependence rules CRF learned can be summarized as tag O can only be fol- lowed by O or B and tag B-* can only be followed by same-type label I-* or O, which can be per- fectly addressed with our proposed two-pass mech- anism. Experiments about +CRF can be found in Table 1&2 (“Our Joint Model +CRF”), we can see that two-pass mechanism equipped SlotReﬁne out- performs +CRF by averagely +0.89, meanwhile preserving ×2.8 speedup, demonstrating that two- pass mechanism can be a better substitute for CRF in this task for better performance and efﬁciency. Remedy Uncoordinated Slots in Training We visualize the number decrease of uncoordinated slots of the training process on ATIS dataset. As depicted in Figure 3, uncoordinated errors of both “One-Pass” and “Two-Pass” models decrease with training goes. Notably, the uncoordinated slots number of Two-Pass model drops signiﬁcantly",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1804
+    }
+  },
+  {
+    "content": "Table 3: Performance comparison between SlotReﬁne with GloVe initialzation and Bert based model on ATIS and Snips datasets. faster than the One-Pass model, achieving better convergence than +CRF after 50 epochs. This in- dicates that our proposed two-pass mechanism in- deed remedy the uncoordinated slots problem, mak- ing the slot ﬁlling more accurate. SlotReﬁne with Pretraining Recently, there are also some works based on large scale pretraining model BERT (Chen et al., 2019), where billions of external corpus are used and tremendous of model parameters are introduced. The number of pa- rameters of BERT is many orders of magnitude more than ours, thus it is unfair to compare perfor- mance of SlotReﬁne with them directly. To high- light the effectiveness of SlotReﬁne, we conduct experiments with two pretraining schemes, GloVe3 and BERT4, to compare with them. We ﬁnd that both GloVe and BERT could further enhance the SlotReﬁne, and it worth noting that “SlotReﬁne w/ BERT” outperforms existing pretraining based models. The detailed comparison can be found in Table 3. piece of evidence is, for Snips whose test set has a large number of OOV words, beneﬁts through pre-training are very obvious. However, for the ATIS whose test set has few OOV words, only a small sentence accuracy gain, 0.61 and 1.68 for GloVe and Bert respectivly, is obtained after using the pre-training method. 4 Conclusion In this paper, we ﬁrst reveal an uncoordinated slots problem for a classical language understanding task, i.e., slot ﬁlling. To address this problem, we present a novel non-autoregressive joint model for slot ﬁlling and intent detection with two-pass reﬁne mechanism (non-autoregressive reﬁner), which sig- niﬁcantly improves the performance while substan- tially speeding up the decoding. Further analyses show that our proposed non-autoregressive reﬁner has great potential to replace CRF in at least slot ﬁlling task. For the pre-training scheme of BERT, we follow the setting in Chen et",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "analyses show that our proposed non-autoregressive reﬁner has great potential to replace CRF in at least slot ﬁlling task. For the pre-training scheme of BERT, we follow the setting in Chen et al. (2019) and equip two- pass mechanism in the ﬁne-tune stage, where CLS token is used for intent detection. And for the pre- training scheme of GloVe, we ﬁx and compress the pretrained word vectors into the same dimension of the input hidden size in SlotReﬁne by a dense network. It is worth noting that through such sim- ple pre-training method, SlotReﬁne can achieve a results very close to the method implemented by BERT. We guess that the beneﬁts of the pre-training methods on this task mainly come from alleviat- ing the Out-of-Vocabulary (OOV) problem. One In the future, we plan to extend our non- autoregressive reﬁner to other Natural Language Understanding (NLU) tasks, e.g., named entity recognition (Tjong Kim Sang and De Meulder, 2003), semantic role labeling (He et al., 2018), and Natural Language Generation (NLG) tasks, e.g., machine translation (Vaswani et al., 2017), summa- rization (Liu and Lapata, 2019). Acknowledgments We thank the anonymous reviewers for their help- ful suggestions. We gratefully acknowledge the support of DuerOS department, Baidu company. Any opinions, ﬁndings, and conclusions or recom- mendations expressed in this material are those of the authors and do not necessarily reﬂect the view of Baidu company.",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1808
+    }
+  },
+  {
+    "content": "References",
+    "metadata": {
+      "filename": "2020.emnlp-main.152.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

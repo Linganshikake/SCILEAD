@@ -1,0 +1,173 @@
+[
+  {
+    "content": "Joint Slot Filling and Intent Detection via Capsule Neural Networks Abstract Being able to recognize words as slots and de- tect the intent of an utterance has been a keen issue in natural language understanding. The existing works either treat slot ﬁlling and in- tent detection separately in a pipeline man- ner, or adopt joint models which sequentially label slots while summarizing the utterance- level intent without explicitly preserving the hierarchical relationship among words, slots, and intents. To exploit the semantic hierarchy for effective modeling, we propose a capsule- based neural network model which accom- plishes slot ﬁlling and intent detection via a dynamic routing-by-agreement schema. A re- routing schema is proposed to further syner- gize the slot ﬁlling performance using the in- ferred intent representation. Experiments on two real-world datasets show the effectiveness of our model when compared with other alter- native model architectures, as well as existing natural language understanding services. 1 Introduction With the ever-increasing accuracy in speech recognition and complexity in user-generated ut- terances, it becomes a critical issue for mobile phones or smart speaker devices to understand the natural language in order to give informative re- sponses. Slot ﬁlling and intent detection play im- portant roles in Natural Language Understanding (NLU) systems. For example, given an utterance from the user, the slot ﬁlling annotates the utter- ance on a word-level, indicating the slot type men- tioned by a certain word such as the slot artist mentioned by the word Sungmin, while the in- tent detection works on the utterance-level to give categorical intent label(s) to the whole utterance. Figure 1 illustrates this idea. Code and data available at https://github.com/ czhang99/Capsule-NLU Figure 1: An example of an utterance with BOI format an- notation for slot ﬁlling, which indicates the slot of artist, play list owner, and play list name from",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "czhang99/Capsule-NLU Figure 1: An example of an utterance with BOI format an- notation for slot ﬁlling, which indicates the slot of artist, play list owner, and play list name from an utterance with an intent AddToPlaylist. To deal with diversely expressed utterances without additional feature engineering, deep neu- ral network based user intent detection models (Hu et al., 2009; Xu and Sarikaya, 2013; Zhang et al., 2016; Liu and Lane, 2016; Zhang et al., 2017; Chen et al., 2016; Xia et al., 2018) are proposed to classify user intents given their utterances in the natural language. Currently, the slot ﬁlling is usually treated as a sequential labeling task. A neural network such as a recurrent neural network (RNN) or a convolution neural network (CNN) is used to learn context- aware word representations, along with sequence tagging methods such as conditional random ﬁeld (CRF) (Lafferty et al., 2001) that infer the slot type for each word in the utterance. Word-level slot ﬁlling and utterance-level in- tent detection can be conducted simultaneously to achieve a synergistic effect. The recognized slots, which possess word-level signals, may give clues to the utterance-level intent of an utterance. For example, with a word Sungmin being rec- ognized as a slot artist, the utterance is more likely to have an intent of AddToPlayList intents such as GetWeather or than other BookRestaurant. Some existing works learn to ﬁll slots while detecting the intent of the utterance (Xu and Sarikaya, 2013; Hakkani-T¨ur et al., 2016; Liu and Lane, 2016; Goo et al., 2018): a convolution layer",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1819
+    }
+  },
+  {
+    "content": "or a recurrent layer is adopted to sequentially la- bel word with their slot types: the last hidden state of the recurrent neural network, or an attention- weighted sum of all convolution outputs are used to train an utterance-level classiﬁcation module for intent detection. Such approaches achieve decent performances but do not explicitly consider the hi- erarchical relationship between words, slots, and intents: intents are sequentially summarized from the word sequence. As the sequence becomes longer, it is risky to simply rely on the gate func- tion of RNN to compress all context information in a single vector (Cheng et al., 2016). In this work, we make the very ﬁrst attempt to bridge the gap between word-level slot modeling and the utterance-level intent modeling via a hier- archical capsule neural network structure (Hinton et al., 2011; Sabour et al., 2017). A capsule houses a vector representation of a group of neurons. The capsule model learns a hierarchy of feature detec- tors via a routing-by-agreement mechanism: cap- sules for detecting low-level features send their outputs to high-level capsules only when there is a strong agreement of their predictions to high-level capsules. an utterance-level intent AddToPlaylist. The dynamic routing-by-agreement assigns a larger weight from a lower-level capsule to a higher-level when the low-level feature is more predictive to one high-level feature, than other high-level fea- tures. Figure 2 illustrates this idea. The inferred utterance-level intent is also help- ful in reﬁning the slot ﬁlling result. For exam- ple, once an AddToPlaylist intent represen- tation is learned in IntentCaps, the slot ﬁlling may capitalize on the inferred intent representation and recognize slots that are otherwise neglected previ- ously. To achieve this, we propose a re-routing schema for capsule neural networks, which al- lows high-level features to be actively engaged in the dynamic routing between WordCaps and Slot- Caps, which",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "To achieve this, we propose a re-routing schema for capsule neural networks, which al- lows high-level features to be actively engaged in the dynamic routing between WordCaps and Slot- Caps, which improves the slot ﬁlling performance. To summarize, the contributions of this work are as follows: The aforementioned properties of capsule mod- language under- els are appealing for natural standing from a hierarchical perspective: words such as Sungmin are routed to concept-level slots such as artist, by learning how each word matches the slot representation. Concept- level slot features such as artist, playlist owner, and playlist collectively contribute to",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1798
+    }
+  },
+  {
+    "content": "2 Approach We propose to model the hierarchical relation- ship among each word, the slot it belongs to, and the intent label of the whole utterance by a hier- archical capsule neural network structure called CAPSULE-NLU. The proposed architecture con- sists of three types of capsules: 1) WordCaps that learn context-aware word representations, 2) SlotCaps that categorize words by their slot types via dynamic routing, and construct a representa- tion for each type of slot by aggregating words that belong to the slot, 3) IntentCaps determine the intent label of the utterance based on the slot representation as well as the utterance contexts. Once the intent label has been determined by In- tentCaps, the inferred utterance-level intent helps re-recognizing slots from the utterance by a re- routing schema. 2.1 WordCaps Given an input utterance x = (w1, w2, ..., wT ) of T words, where each word is initially represented by a vector of dimension DW . Here we simply trained word represenations from scratch. Vari- ous neural network structures can be used to learn context-aware word representations. For example, a recurrent neural network such as a bidirectional LSTM (Hochreiter and Schmidhuber, 1997) can be applied to learn representations of each word in the utterance: For each word w;, we concatenate each for- ward hidden state hy obtained from the forward LSTM fw with a backward hidden state hy from LSTM,, to obtain a hidden state h;. The whole hidden state matrix can be defined as H = (hy, hg,...,h) € R?*?24, where Dy is the number of hidden units in each LSTM. In this work, the parameters of WordCaps are trained with the whole model, while sophisticated pre- trained models such as ELMo (Peters et al., 2018) or BERT (Devlin et al., 2018) may also be inte- grated. 2.2 SlotCaps Traditionally, the learned hidden state ht for each word wt is used as the logit to predict its slot tag. When H for all words in the utterance is learned, sequential tagging methods like the",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Traditionally, the learned hidden state ht for each word wt is used as the logit to predict its slot tag. When H for all words in the utterance is learned, sequential tagging methods like the linear-chain CRF models the tag dependencies by assigning a transition score for each transition pattern between adjacent tags to ensure the best tag sequence of the utterance from all possible tag sequences. Instead of doing slot ﬁlling via sequential label- ing which does not directly consider the depen- dencies among words, the SlotCaps learn to rec- ognize slots via dynamic routing. The routing- by-agreement explicitly models the hierarchical relationship between capsules. For example, the routing-by-agreement mechanism send a low- level feature, e.g. a word representation in Word- Caps, to high-level capsules, e.g. SlotCaps, only when the word representation has a strong agree- ment with a slot representation. The agreement value on a word may vary when being recognized as different slots. For exam- ple, the word three may be recognized as a party size number slot or a time slot. The SlotCaps ﬁrst convert the word representation ob- tained in WordCaps with respect to each slot type. We denote pk|t as the resulting prediction vector of the t-th word when being recognized as the k- th slot: where k ∈ {1, 2, ..., K} denotes the slot type and t ∈ {1, 2, ..., T }. σ is the activation function such as tanh. Wk ∈ RDP ×2DH and bk ∈ RDP ×1 are the weight and bias matrix for the k-th capsule in SlotCaps, and DP is the dimension of the predic- tion vector. Slot Filling by Dynamic Routing-by-agreement We propose to determine the slot type for each word by dynamically route prediction vectors of each word from WordCaps to SlotCaps. The dy- namic routing-by-agreement learns an agreement value ckt that determines how likely the t-th word agrees to be routed to the k-th slot capsule. ckt is calculated by the dynamic routing-by-agreement algorithm (Sabour et al., 2017), which is brieﬂy",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "value ckt that determines how likely the t-th word agrees to be routed to the k-th slot capsule. ckt is calculated by the dynamic routing-by-agreement algorithm (Sabour et al., 2017), which is brieﬂy recalled in Algorithm 1. The above algorithm determines the agreement value ckt between WordCaps and SlotCaps while learning the slot representations vk in an unsuper- vised, iterative fashion. ct is a vector that consists of all ckt where k ∈ K. bkt is the logit (initialized as zero) representing the log prior probability that the t-th word in WordCaps agrees to be routed to the k-th slot capsule in SlotCaps (Line 2). During each iteration (Line 3), each slot representation vk",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 3599
+    }
+  },
+  {
+    "content": "Algorithm 1 Dynamic routing-by-agreement 1: procedure DYNAMIC ROUTING(pk|t, iter) 2: for each WordCaps t and SlotCaps k: bkt ← 0. for iter iterations do for all WordCaps t: ct ← softmax(bt) for all SlotCaps k: sk ← Σrcktpk|t for all SlotCaps k: vk = squash(sk) for all WordCaps t and SlotCaps k: bkt ← bkt + pk|t · vk end for Return vk 9: 10: end procedure is calculated by aggregating all the prediction vec- tors for that slot type {pk|t|t∈T }, weighted by the agreement values ckt obtained from bkt (Line 5-6): where a squashing function squash(·) is applied on the weighted sum sk to get vk for each slot type. Once we updated the slot representation vk in the current iteration, the logit bkt becomes larger when the dot product pk|t · vk is large. That is, when a prediction vector pk|t is more similar to a slot representation vk, the dot product is larger, in- dicating that it is more likely to route this word to the k-th slot type (Line 7). An updated, larger bkt will lead to a larger agreement value ckt between the t-th word and the k-th slot in the next itera- tion. On the other hand, it assigns low ckt when there is inconsistency between pk|t and vk. The agreement values learned via the unsupervised, it- erative algorithm ensures the outputs of the Word- Caps get sent to appropriate subsequent SlotCaps after iterslot iterations. Cross Entropy Loss for Slot Filling For the t-th word in an utterance, its slot type is determined as follows: The slot ﬁlling loss is deﬁned over the utterance as the following cross-entropy function: where yk t the t-th word. yk to the k-th slot type. indicates the ground truth slot type for t = 1 when the t-th word belongs 2.3 IntentCaps The IntentCaps take the output vk for each slot k ∈ {1, 2, ..., K} in SlotCaps as the input, and determine the utterance-level intent of the whole utterance. The IntentCaps also convert each slot representation in SlotCaps with respect to the in- tent type: where l ∈ {1, 2, ..., L} and L is the number of",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "the utterance-level intent of the whole utterance. The IntentCaps also convert each slot representation in SlotCaps with respect to the in- tent type: where l ∈ {1, 2, ..., L} and L is the number of intents. Wl ∈ RDL×DP and bl ∈ RDL×1 are the weight and bias matrix for the l-th capsule in IntentCaps. IntentCaps adopt the same dynamic routing-by- agreement algorithm, where: ul = DYNAMIC ROUTING(ql|k, iterintent). (8) Max-margin Loss for Intent Detection Based on the capsule theory, the orientation of the activation vector ul represents intent proper- ties while its length indicates the activation prob- ability. The loss function considers a max-margin loss on each labeled utterance: where ||u;|| is the norm of u, and [[] is an indicator function, z is the ground truth intent label for the utterance x. 2 is the weighting coefficient, and m* and m7 are margins. The intent of the utterance can be easily deter- mined by choosing the activation vector with the largest norm ˆz = arg max l∈{1,2,...,L} 2.4 Re-Routing The IntentCaps not only determine the intent of the utterance by the length of the activation vec- tor, but also learn discriminative intent representa- tions of the utterance by the orientations of the ac- tivation vectors. Previously, the dynamic routing- by-agreement shows how low-level features such as slots help construct high-level ideas such as in- tents. While the high-level features also work as a guide that helps learn low-level features. For example, the AddToPlaylist intent activation vector in IntentCaps also helps strength the exist- ing slots such as artist name during slot ﬁlling on the words Sungmin in SlotCaps.",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1801
+    }
+  },
+  {
+    "content": "Thus we propose a re-routing schema for Slot- Caps where the dynamic routing-by-agreement is realized by the following equation that replaces the Line 7 in Algorithm 1: where ˆuˆz is the intent activation vector with the largest norm. WRR ∈ RDP ×DL is a bi-linear weight matrix, and α as the coefﬁcient. The rout- ing information for each word is updated toward the direction where the prediction vector not only coincides with representative slots, but also to- wards the most-likely intent of the utterance. As a result, the re-routing makes SlotCaps obtain up- dated routing information as well as updated slot representations. 3 Experiment Setup To demonstrate the effectiveness of our pro- posed models, we compare the proposed model CAPSULE-NLU with existing alternatives, as well as commercial natural language understanding services. Datasets For each task, we evaluate our proposed models by applying it on two real-word datasets: SNIPS Natural Language Understanding bench- mark1 (SNIPS-NLU) and the Airline Travel Infor- mation Systems (ATIS) dataset (Tur et al., 2010). The statistical information on two datasets are shown in Table 1. SNIPS-NLU contains natural language corpus collected in a crowdsourced fashion to benchmark the performance of voice assistants. ATIS is a widely used dataset in spoken language under- standing, where audio recordings of people mak- ing ﬂight reservations are collected. Baselines We compare the proposed capsule- based model CAPSULE-NLU with other alterna- tives: 1) CNN TriCRF (Xu and Sarikaya, 2013) 1https://github.com/snipsco/nlu- benchmark/ introduces a Convolution Neural Network (CNN) based sequential labeling model for slot ﬁlling. The hidden states for each word are summed up to predict the utterance intent. We adopt the performance with lexical features. 2) Joint Seq. (Hakkani-T¨ur et al., 2016) adopts a Recurrent Neural Network (RNN) for slot ﬁlling and the last hidden state of the RNN is used to predict the ut- terance intent. 3)",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "lexical features. 2) Joint Seq. (Hakkani-T¨ur et al., 2016) adopts a Recurrent Neural Network (RNN) for slot ﬁlling and the last hidden state of the RNN is used to predict the ut- terance intent. 3) Attention BiRNN (Liu and Lane, 2016) further introduces a RNN based encoder- decoder model for joint slot ﬁlling and intent de- tection. An attention weighted sum of all encoded hidden states is used to predict the utterance intent. 4) Slot-gated Full Atten. (Goo et al., 2018) utilizes a slot-gated mechanism as a special gate function in Long Short-term Memory Network (LSTM) to improve slot ﬁlling by the learned intent context vector. The intent context vector is used for intent detection. 5) DR-AGG (Gong et al., 2018) aggre- gates word-level information for text classiﬁcation via dynamic routing. The high-level capsules af- ter routing are concatenated, followed by a multi- layer perceptron layer that predicts the utterance label. We used this capsule-based text classiﬁca- tion model for intent detection only. 6) IntentCap- sNet (Xia et al., 2018) adopts a multi-head self- attention to extract intermediate semantic features from the utterances, and uses dynamic routing to aggregate semantic features into intent represen- tations for intent detection. We use this capsule- based model for intent detection only. proposed model compare CAPSULE-NLU with commercial natural language understanding services, includ- ing api.ai (Now called DialogFlow)2, Waston Assistant3, Luis4, wit.ai5, snips.ai6, recast.ai7, and Amazon Lex8. Implementation Details The hyperparameters used for experiments are shown in Table 2. Table 2: Hyperparameter settings. 2https://dialogflow.com/ 3https://www.ibm.com/cloud/watson- assistant/ 4https://www.luis.ai/ 5https://wit.ai/ 6https://snips.ai/ 7https://recast.ai/ 8https://aws.amazon.com/lex/",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1799
+    }
+  },
+  {
+    "content": "Table 3: Slot ﬁlling and intention detection results using CAPSULE-NLU on two datasets. We use the validation data to choose hyperpa- rameters. For both datasets, we randomly initial- ize word embeddings using Xavier initializer and let them train with the model. In the loss func- tion, the down-weighting coefﬁcient λ is 0.5, mar- gins m+ and m− are set to 0.8 and 0.2 for all the existing intents. α is set as 0.1. RMSProp opti- mizer (Tieleman and Hinton, 2012) is used to min- imize the loss. To alleviate over-ﬁtting, we add the dropout to the LSTM layer with a dropout rate of 0.2. 4 Results Quantitative Evaluation The intent detection re- sults on two datasets are reported in Table 3, where the proposed capsule-based model performs con- sistently better than current learning schemes for joint slot ﬁlling and intent detection, as well as capsule-based neural network models that only fo- cuses on intent detection. These results demon- strate the novelty of the proposed capsule-based model CAPSULE-NLU in jointly modeling the hi- erarchical relationships among words, slots and in- tents via the dynamic routing between capsules. Also, we benchmark the intent detection perfor- mance of the proposed model with existing natu- ral language understanding services9 in Figure 3. Since the original data split is not available, we report the results with stratiﬁed 5-fold cross val- idation. From Figure 3 we can see that the pro- posed model CAPSULE-NLU is highly competi- tive with off-the-shelf systems that are available to use. Note that, our model archieves the perfor- mance without using pre-trained word represen- tations: the word embeddings are simply trained from scratch. Ablation Study To investigate the effectiveness of CAPSULE-NLU in joint slot ﬁlling and intent de- tection, we also report ablation test results in Ta- ble 3. “w/o Intent Detection” is the model without intent detection: only a dynamic routing is per- formed between WordCaps and SlotCaps for the slot",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "we also report ablation test results in Ta- ble 3. “w/o Intent Detection” is the model without intent detection: only a dynamic routing is per- formed between WordCaps and SlotCaps for the slot ﬁlling task, where we minimize Lslot during training; “w/o Joint Training” adopts a two-stage training where the model is ﬁrst trained for slot ﬁlling by minimizing Lslot, and then use the ﬁxed slot representations to train for the intent detec- tion task which minimizes Lintent. From the lower part of Table 3 we can see that by using a capsule- based hierarchical modeling between words and slots, the model CAPSULE-NLU w/o Intent De- tection is already able to outperform current alter- natives on slot ﬁlling that adopt a sequential label- ing schema. The joint training of slot ﬁlling and intent detection is able to give each subtask fur- ther improvements when the model parameters are updated jointly. 9https://www.slideshare.net/KonstantinSavenkov/nlu- intent-detection-benchmark-by-intento-august-2017",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "Visualizing Agreement Values between Cap- sule Layers Thanks to the dynamic routing-by- agreement schema, the dynamically learned agree- ment values between different capsule layers nat- urally reﬂect how low-level features are collec- tively aggregated into high-level ones for each in- put utterance. In this section, we harness the in- tepretability of the proposed capsule-based model via hierarchical modeling and provide case studies and visualizations. Between WordCaps and SlotCaps First we study the agreement value ckt between the t-th word in the WordCaps and the k-th slot capsule in SlotCaps. As shown in Figure 4, we observe that the dynamic routing-by-agreement is able to converge to an agreement quickly after the ﬁrst it- eration (shown in blue bars). It is able to assign a conﬁdent probability assignment close to 0 or 1. After the second iteration (shown in orange bars), the model is more certain about the routing deci- sions: probabilities are more leaning towards 0 or 1 as the model is conﬁdent about routing a word in WordCaps to its most appropriate slot in SlotCaps. However, we do ﬁnd that when unseen slot values like new object names emerge in utter- ances like show me the movie operetta for the theatre organ with an intent of SearchCreativeWork, the iterative dynamic routing process would be even more appealing. Figure 5 shows the agreement values learned by dynamic routing-by-agreement. Since the dy- namic routing-by-agreement is an iterative process controlled by the variable iterslot, we show the agreement values after the ﬁrst iteration in the left part of Figure 5, and the values after the second iteration in the right part. From the left part of Figure 5, we can see that after the ﬁrst iteration, the model considers the word operetta itself alone is likely to be an ob- ject name, probably because the following word for is usually a context word being annotated as O. Thus it tends to route word for to both the slot O and the slot I-object name.",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "likely to be an ob- ject name, probably because the following word for is usually a context word being annotated as O. Thus it tends to route word for to both the slot O and the slot I-object name. However, from the right part of Figure 5 we can see that after the second iteration, the dynamic routing found an agreement and is more certain to have operetta for the theatre organ as a whole for the slot B-object name and I-object name. Between SlotCaps and IntentCaps Similarly, we visualize the agreement values between each slot capsule in SlotCaps and each intent capsule in IntentCaps. The left part of Figure 6 shows that after the ﬁrst iteration, since the model is not able to correctly recognize operetta for the theatre organ as a whole, only the context slot O (correspond to the word show me the) and B-object name (correspond to the word operetta) contribute signiﬁcantly to the ﬁnal intent capsule. From the right part of Figure 6, we found that with the word operetta for the theatre organ being recognized in the lower capsule, the slots I-object name and B-object type contribute more to the correct intent capsule SearchCreativeWork, when comparing with other routing alternatives to other intent capsules.",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1801
+    }
+  },
+  {
+    "content": "5 Related Works Intent Detection With recent developments in deep neural networks, user intent detection mod- els (Hu et al., 2009; Xu and Sarikaya, 2013; Zhang et al., 2016; Liu and Lane, 2016; Zhang et al., 2017; Chen et al., 2016; Xia et al., 2018) are pro- posed to classify user intents given their diversely expressed utterances in the natural language. As a text classiﬁcation task, the decent performance on utterance-level intent detection usually relies on hidden representations that are learned in the intermediate layers via multiple non-linear trans- formations. Recently, various capsule based text classiﬁ- cation models are proposed that aggregate word- level features for utterance-level classiﬁcation via dynamic routing-by-agreement (Gong et al., 2018; Zhao et al., 2018; Xia et al., 2018). Among them, Xia et al. (2018) adopts self-attention to extract in- termediate semantic features and uses a capsule- based neural network for intent detection. How- ever, existing works do not study word-level su- pervisions for the slot ﬁlling task. In this work, we explicitly model the hierarchical relationship be- tween words and slots on the word-level, as well as intents on the utterance-level via dynamic routing- by-agreement. Slot Filling Slot ﬁlling annotates the utterance with ﬁner granularity: it associates certain parts of the utterance, usually named entities, with pre- deﬁned slot tags. Currently, the slot ﬁlling is usu- ally treated as a sequential labeling task. A re- current neural network such as Gated Recurrent Unit (GRU) or Long Short-term Memory Network (LSTM) is used to learn context-aware word repre- sentations, and Conditional Random Fields (CRF) are used to annotate each word based on its slot type. Recently, Shen et al. (2017); Tan et al. (2017) introduce the self-attention mechanism for CRF- free sequential labeling. Joint Modeling via Sequence Labeling To over- come the error propagation in the word-level slot ﬁlling task and the utterance-level",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "the self-attention mechanism for CRF- free sequential labeling. Joint Modeling via Sequence Labeling To over- come the error propagation in the word-level slot ﬁlling task and the utterance-level intent detection task in a pipeline, joint models are proposed to solve two tasks simultaneously in a uniﬁed frame- work. Xu and Sarikaya (2013) propose a Con- volution Neural Network (CNN) based sequential labeling model for slot ﬁlling. The hidden states corresponding to each word are summed up in a classiﬁcation module to predict the utterance in- tent. A Conditional Random Field module ensures the best slot tag sequence of the utterance from all possible tag sequences. Hakkani-T¨ur et al. (2016) adopt a Recurrent Neural Network (RNN) for slot ﬁlling and the last hidden state of the RNN is used to predict the utterance intent. Liu and Lane (2016) further introduce an RNN based encoder- decoder model for joint slot ﬁlling and intent de- tection. An attention weighted sum of all encoded hidden states is used to predict the utterance in- tent. Some speciﬁc mechanisms are designed for RNNs to explicitly encode the slot from the ut- terance. For example, Goo et al. (2018) utilize a slot-gated mechanism as a special gate function in Long Short-term Memory Network (LSTM) to improve slot ﬁlling by the learned intent context vector. However, as the sequence becomes longer, it is risky to simply rely on the gate function to sequentially summarize and compress all slots and context information in a single vector (Cheng et al., 2016). In this paper, we harness the capsule neural network to learn a hierarchy of feature detectors and explicitly model the hierarchical relationships among word-level slots and utterance-level intent. Also, instead of doing sequence labeling for slot ﬁlling, we use a dynamic routing-by-agreement schema between capsule layers to route each word in the utterance to its most appropriate slot type. And we further route slot representations, which are learned",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "we use a dynamic routing-by-agreement schema between capsule layers to route each word in the utterance to its most appropriate slot type. And we further route slot representations, which are learned dynamically from words, to the most appropriate intent capsule for intent detection. 6 Conclusions In this paper, a capsule-based model, namely CAPSULE-NLU, is introduced to harness the hi- erarchical relationships among words, slots, and intents in the utterance for joint slot ﬁlling and in- tent detection. Unlike treating slot ﬁlling as a se- quential prediction problem, the proposed model assigns each word to its most appropriate slots in SlotCaps by a dynamic routing-by-agreement schema. The learned word-level slot representa- tions are futher aggregated to get the utterance- level intent representations via dynamic routing- by-agreement. A re-routing schema is proposed to further synergize the slot ﬁlling performance using the inferred intent representation. Experiments on two real-world datasets show the effectiveness of the proposed models when compared with other alternatives as well as existing NLU services.",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 3605
+    }
+  },
+  {
+    "content": "7 Acknowledgments We thank the reviewers for their valuable com- ments. This work is supported in part by NSF through grants IIS-1526499, IIS-1763325, and CNS-1626432. References Probabilistic models for segmenting and labeling se- quence data. In ICML, ICML 2001, pages 282–289. Bing Liu and Ian Lane. 2016. Attention-based recur- rent neural network models for joint intent detection and slot ﬁlling. Interspeech, pages 685–689.",
+    "metadata": {
+      "filename": "1812.09471.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

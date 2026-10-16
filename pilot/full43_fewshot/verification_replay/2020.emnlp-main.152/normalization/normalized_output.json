@@ -1,0 +1,148 @@
+{
+    "2020.emnlp-main.152.pdf": {
+        "normalized_output": [
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "ATIS",
+                "Metric": "F1",
+                "Result": "96.22"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "ATIS",
+                "Metric": "Accuracy",
+                "Result": "97.11"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "ATIS",
+                "Metric": "Sent-Accuracy",
+                "Result": "86.96"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "SNIPS",
+                "Metric": "F1",
+                "Result": "93.72"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "SNIPS",
+                "Metric": "Accuracy",
+                "Result": "97.44"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "SNIPS",
+                "Metric": "Sent-Accuracy",
+                "Result": "84.38"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "ATIS",
+                "Metric": "F1",
+                "Result": "96.16"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "ATIS",
+                "Metric": "Accuracy",
+                "Result": "97.74"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "ATIS",
+                "Metric": "Sent-Accuracy",
+                "Result": "88.64"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "SNIPS",
+                "Metric": "F1",
+                "Result": "99.00"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "SNIPS",
+                "Metric": "Accuracy",
+                "Result": "99.04"
+            },
+            {
+                "Task": "Intent Detection and Slot Filling",
+                "Dataset": "SNIPS",
+                "Metric": "Sent-Accuracy",
+                "Result": "92.96"
+            }
+        ],
+        "source_documents": [
+            {
+                "content": "References",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 6,
+                    "start_index": 0,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "performance, which therefore are set as our baseline methods. Slot \ufb01lling (SF) and intent detection (ID) play im- portant roles in spoken language understanding, especially for task-oriented dialogue system. For example, for an utterance like \u201cBuy an air ticket from Beijing to Seattle\u201d, intent detection works on sentence-level to indicate the task is about purchas- ing an air ticket, while the slot \ufb01lling focus on words-level to \ufb01gure out the departure and destina- tion of that ticket are \u201cBeijing\u201d and \u201cSeattle\u201d. In early studies, ID and SF were often modeled separately, where ID was modeled as a classi\ufb01ca- tion task, while SF was regarded as a sequence labeling task. Due to the correlation between these two tasks, training them jointly could enhance each other. Zhang and Wang (2016) propose a joint model using bidirectional gated recurrent unit to learn the representation at each time step. Mean- while, a max-pooling layer is employed to capture the global features of a sentence for intent classi- \ufb01cation. Liu and Lane (2016) cast the slot \ufb01lling task as a tag generation problem and introduce a However, for SF task, we argue that identifying token dependencies among slot chunk is enough, and it is unnecessary to model the entire sequence dependency in autoregressive fashion, which leads to redundant computation and inevitable high la- tency. In this study, we cast these two tasks jointly as a non-autoregressive tag generation problem to get rid of unnecessary temporal dependencies. Partic- ularly, a Transformer (Vaswani et al., 2017) based architecture is adopted here to learn the represen- tations of an utterance in both sentence and word level simultaneously (Sec.\u00a72.1). The slots and in- tent labels are predicted independently and simulta- neously, achieving better decoding ef\ufb01ciency. We further introduce a two-pass re\ufb01ne mechanism (in Sec.\u00a72.2) to model boundary prediction of each slots explicitly, which also handle the uncoordi- nated slots problem (e.g.,",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 1,
+                    "start_index": 1797,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "slot boundaries. Speedup As each slot tagging result can be cal- culated in parallel with our approach, inference latency can be signi\ufb01cantly reduced. As shown in Table 2, on ATIS test set, our non-autoregressive model could achieve \u00d78.80 speedup compared with the existing state-of-the-art model (Haihong et al., 2019). And after introducing two-pass mech- anism (SlotRe\ufb01ne), our model still achieves com- petitive inference speedup (\u00d74.31). Our decoding Table 2: \u201cLatency\u201d is the average time to decode an ut- terance without minibatching. \u201cSpeedup\u201d is compared against existing SOTA model (Haihong et al., 2019). is conducted with a single Tesla P40 GPU. It is worth noting that for long sentences (Length\u226512), the speedup achieves \u00d713 (not reported in table). Two-Pass Mechanism v.s. CRF In SF task, CRF is usually used to learn the dependence of slot labels. Two most important dependence rules CRF learned can be summarized as tag O can only be fol- lowed by O or B and tag B-* can only be followed by same-type label I-* or O, which can be per- fectly addressed with our proposed two-pass mech- anism. Experiments about +CRF can be found in Table 1&2 (\u201cOur Joint Model +CRF\u201d), we can see that two-pass mechanism equipped SlotRe\ufb01ne out- performs +CRF by averagely +0.89, meanwhile preserving \u00d72.8 speedup, demonstrating that two- pass mechanism can be a better substitute for CRF in this task for better performance and ef\ufb01ciency. Remedy Uncoordinated Slots in Training We visualize the number decrease of uncoordinated slots of the training process on ATIS dataset. As depicted in Figure 3, uncoordinated errors of both \u201cOne-Pass\u201d and \u201cTwo-Pass\u201d models decrease with training goes. Notably, the uncoordinated slots number of Two-Pass model drops signi\ufb01cantly",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 4,
+                    "start_index": 1804,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "introduce more iterations (e.g., 10 iters) to achieve competitive performance, which largely reduces the inference speed. 3 Experiment Datasets We choose two widely-used datasets: ATIS (Airline Travel Information Systems,Tur et al. (2010)) and Snips (collected by Snips personal voice assistant,Coucke et al. (2018)). Compared with ATIS, the Snips dataset is more complex due to its large vocabulary size, cross-domain intents and more out-of-vocabulary words. Metrics Three evaluation metrics are used in our experiments. F1-score and accuracy are applied for slot \ufb01lling and intent detection task, respectively. Besides, we use sentence accuracy to indicate pro- portion of utterance in the corpus whose slots and intent are both correctly-predicted. Setup All embeddings are initialized with xavier method (Glorot and Bengio, 2010). The batch size is set to 32 and learning rate is 0.001. we set num- ber of Transformer layers, attention heads and hid- den sizes to {2,8,64} and {4,16,96} for ATIS and Snips datasets. In addition, we report the results of previous studies (Hakkani-T\u00a8ur et al., 2016; Liu and Lane, 2016; Goo et al., 2018; Haihong et al., 2019; Qin et al., 2019) and conduct speed evalua- tion based on their open-source codes. Main Results Table 1 summarizes the model per- formance on ATIS and snips corpus. It can be seen that SlotRe\ufb01ne consistently outperforms other base- lines in all three metrics. Compared with our ba- sic non-autoregressive joint model in Section\u00a7 2.1, SlotRe\ufb01ne achieve +1.18 and +1.55 sentence-level accuracy improvements for ATIS and Snips, respec- tively. It is worthy noting that our SlotRe\ufb01ne sig- ni\ufb01cantly improves the slot \ufb01lling task (F1-score\u2191). we attribute the improvement to that our two-pass mechanism successfully makes the model learn better slot boundaries. Speedup As each slot tagging result can be cal- culated in parallel with our approach, inference latency can be signi\ufb01cantly reduced. As shown in Table 2, on ATIS test set, our",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 4,
+                    "start_index": 0,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "=m | song to po fo tT tT t tT tT tT Play The Rolling Stone's Love in Vain",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 2,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 1: Performance comparison on ATIS and Snips datasets. \u201c\u2191\u201dindicates signi\ufb01cant difference (p < 0.05) with previous works. Model name written in bold refer to ours.\nModel Joint Seq (Hakkani-T\u00a8ur et al., 2016) Atten.-Based (Liu and Lane, 2016) Sloted-Gated (Goo et al., 2018) SF-ID (w/o CRF) (Haihong et al., 2019) SF-ID (w/ CRF) (Haihong et al., 2019) Stack-Propagation (Qin et al., 2019) Our Joint Model (in Sec.\u00a72.1) Our Joint Model +CRF SlotRe\ufb01ne ATIS Dataset Intent 92.60 91.10 95.41 96.58 97.09 96.90 96.84 96.54 97.11\u2191 Slot 94.30 94.20 95.42 95.50 95.80 95.90 95.33 95.71 96.22\u2191 Sent 80.70 78.90 83.73 86.00 86.90 86.50 85.78 85.71 86.96\u2191 Snips Dataset Slot 87.30 87.80 89.27 90.46 92.23 94.20 93.13 93.22 93.72 Intent Sent 73.20 96.90 74.10 96.70 76.43 96.86 78.37 97.00 80.43 97.29 86.90 98.00 82.83 97.21 82.51 96.79 84.38 97.44",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 3,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 2: \u201cLatency\u201d is the average time to decode an ut- terance without minibatching. \u201cSpeedup\u201d is compared against existing SOTA model (Haihong et al., 2019).\nModel Sloted-Gated SF-ID (with CRF) Stack-Propagation Our Joint Model Our Joint Model +CRF SlotRe\ufb01ne Latency Speedup 1.41\u00d7 11.31ms 1.22\u00d7 13.03ms 1.00\u00d7 15.94ms 10.77\u00d7 1.48ms 1.92\u00d7 8.32ms 4.31\u00d7 3.02ms",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 4,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 3: Performance comparison between SlotRe\ufb01ne with GloVe initialzation and Bert based model on ATIS and Snips datasets.\nATIS Dataset Intent 96.84 96.54 97.11 97.35 97.74 previous work with pretraining 97.50 97.50 Model Slot 95.33 95.71 96.22 96.24 96.16 Joint Model Joint Model with CRF SlotRe\ufb01ne SlotRe\ufb01ne with GloVe SlotRe\ufb01ne with BERT BERT-Joint (Chen et al., 2019) Stack-Propagation with BERT (Qin et al., 2019) 96.10 96.10 Sent 85.78 85.71 86.96 87.57 88.64 88.20 88.60 Snips Dataset Intent 97.21 96.79 97.44 98.36 99.04 Slot 93.31 93.22 93.72 96.33 97.05 97.00 97.00 98.60 99.00 Sent 82.83 82.51 84.38 91.06 92.96 92.80 92.90",
+                "metadata": {
+                    "filename": "2020.emnlp-main.152.pdf",
+                    "page_number": 5,
+                    "type": "Table"
+                }
+            }
+        ]
+    }
+}

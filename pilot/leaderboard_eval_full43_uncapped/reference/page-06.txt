@@ -1,0 +1,95 @@
+Note that a single paper can belong to multiple
+leaderboards when working on several task and
+dataset configurations. As mentioned in Section 3,
+we focus on popular and essential TDMs to keep a
+practical set of leaderboards. As a result, we only
+keep leaderboards with at least three TDMR tuples.
+5 Experiments
+5.1 Experimental Settings
+We used the LangChain 6 framework to prompt
+LLMs for TDMR extraction and normalization. We
+implemented various open and closed source large
+language models, namely Llama-2 (Touvron et al.,
+2023), Llama-3 (MetaAI, 2024), Mixtral (Jiang
+et al., 2024), and GPT-4 Turbo (OpenAI, 2023).
+To ensure a fair evaluation, identical prompts were
+employed across all models. All prompts are pre-
+sented in Appendix G. To ensure the robustness of
+our experimental results in the cold start setting, we
+run the inference with three different random pa-
+per orders and report the average evaluation scores
+across these runs, thereby mitigating the impact
+of any particular ordering on the results. We used
+AxCell (Kardas et al., 2020) as a baseline since it is
+the closest approach to ours. To better understand
+our normalization strategy, we further employed a
+baseline for the normalization step, which normal-
+izes the LLM extracted entities to the pre-defined
+set by calculating cosine similarity (CS). Note that
+this baseline is only used in the fully pre-defined
+TDM triples, as it requires pre-defined entity names
+to calculate similarity and is not capable of rec-
+ognizing newly-emerged entities. The model and
+experimental details can be viewed in Appendix C.
+5.2 Evaluation Settings
+Exact Tuple Match (ETM). We first investigate
+whether the models can extract correct tuples of
+task, dataset, metric, and result (TDMR) values
+from publications. We compute recall and preci-
+sion scores of tuple extraction. The recall metric
+measures the ratio of gold tuples that are correctly
+extracted, whereas precision measures how many
+of the extracted tuples are actually correct.
+Individual Item Match (IIM). Although the ex-
+tracted tuples may contain partially correct informa-
+tion, the ETM metric does not recognize or reward
+such outputs. For example, a TDM triple may be ac-
+curate, but Result is incorrect. Therefore, we assess
+6https://github.com/langchain-ai/langchain
+the extraction of individual components of TDMR
+tuples to gain a more nuanced understanding of
+the model’s performance. We employ precision
+and recall to measure to what extent a model can
+extract individual items. This allows us to identify
+local errors in the framework, suggesting potential
+directions for future work.
+Leaderboard Evaluation. We employ different
+metrics for leaderboard evaluation. We first mea-
+sure recall of leaderboard construction, i.e., the per-
+centage of gold leaderboards that a model correctly
+identifies. We then evaluate the paper and result
+coverage of the generated leaderboards. For each
+gold leaderboard, we compute the ratio of correctly
+assigned papers and results over the gold ones.
+Then, we calculate the macro-average of these re-
+sults as paper coverage (PC) and result coverage
+(RC). Lastly, we compare the paper rankings in the
+gold and model-generated leaderboards usingAver-
+age Overlap (AO)7 (Webber et al., 2010). AO can
+measure the similarity of two ranked leaderboards
+even when one is incomplete or over-inclusive,
+such as missing some papers or including wrong
+papers. This cannot be done if we simply compare
+the extracted result values. AO is calculated by
+comparing the overlap between the top-d gold and
+predicted papers of each leaderboard, denoted as
+Gd and Md respectively:
+Ad = |Gd ∩ Md|d ; AO = 1k k∑d=1 Ad (1)
+where Ad is agreement between two ranked lists,
+with k being the length of the shorter leaderboard.
+6 Results and Analysis
+In this section, we first inspect the main TDMR
+extraction and leaderboard construction results
+obtained under diverse experimental settings on
+SCILEAD. In addition, we augment our analysis by
+conducting human evaluation and error analysis on
+a new dataset containing recent NLP papers and pa-
+pers from the medical domain, showcasing the prac-
+tical utility of our proposed system in real-world
+scenarios where TDM triples are not pre-defined.
+6.1 Main Results on S CILEAD
+ETM Evaluation. Table 3 shows the ETM scores
+of different models under two settings: fully pre-
+defined TDM triples and partially pre-defined TDM
+7https://github.com/changyaochen/rbo
+7968

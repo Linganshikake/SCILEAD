@@ -1,0 +1,695 @@
+[
+  {
+    "content": "PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization Jingqing Zhang * 1 Yao Zhao * 2 Mohammad Saleh 2 Peter J. Liu 2 Abstract Recent work pre-training Transformers with self-supervised objectives on large text corpora has shown great success when ﬁne-tuned on downstream NLP tasks including text summa- rization. However, pre-training objectives tai- lored for abstractive text summarization have not been explored. Furthermore there is a lack of systematic evaluation across diverse do- In this work, we propose pre-training mains. large Transformer-based encoder-decoder mod- els on massive text corpora with a new self- supervised objective. In PEGASUS, important sentences are removed/masked from an input doc- ument and are generated together as one output sequence from the remaining sentences, similar to an extractive summary. We evaluated our best PEGASUS model on 12 downstream summariza- tion tasks spanning news, science, stories, instruc- tions, emails, patents, and legislative bills. Experi- ments demonstrate it achieves state-of-the-art per- formance on all 12 downstream datasets measured by ROUGE scores. Our model also shows surpris- ing performance on low-resource summarization, surpassing previous state-of-the-art results on 6 datasets with only 1000 examples. Finally we validated our results using human evaluation and show that our model summaries achieve human performance on multiple datasets. Imperial College London, London, UK 2Brain Team, Google Re- search, Mountain View, CA, USA. Correspondence to: <jingqing.zhang15@imperial.ac.uk>, Jingqing Yao Zhao <yaozhaoyz@google.com>, Mohammad Saleh <msaleh@google.com>, Peter J. Liu <peterjliu@google.com>. Proceedings of the 37 th International Conference on Machine Learning, Vienna, Austria, PMLR 119, 2020. Copyright 2020 by the author(s). Figure 1: The base architecture of PEGASUS is a standard Transformer encoder-decoder. Both GSG and MLM are applied simultaneously to this example as",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "PMLR 119, 2020. Copyright 2020 by the author(s). Figure 1: The base architecture of PEGASUS is a standard Transformer encoder-decoder. Both GSG and MLM are applied simultaneously to this example as pre-training ob- jectives. Originally there are three sentences. One sentence is masked with [MASK1] and used as target generation text (GSG). The other two sentences remain in the input, but some tokens are randomly masked by [MASK2] (MLM). Introduction Text summarization aims at generating accurate and concise summaries from input document(s). In contrast to extractive summarization which merely copies informative fragments from the input, abstractive summarization may generate novel words. A good abstractive summary covers principal information in the input and is linguistically ﬂuent. In abstractive sequence-to-sequence (Sutskever et al., 2014) has become a dominant framework using encoder-decoder architectures based on RNNs (Chung et al., 2014; Hochreiter & Schmidhuber, 1997) and more recently Transformers (Vaswani et al., 2017). Most prior work on neural abstractive summarization relied on large-scale, high-quality datasets of supervised document-summary pairs (Hermann et al., 2015) and achieved promising results (Rush et al., 2015; Nallapati et al., 2016; See et al., 2017). In recent years, there has been increased interest in collecting new summarization datasets that have more abstractive summaries (Narayan et al., 2018), have longer documents, (Cohan et al., 2018; Sharma et al., 2019), utilize multiple documents (Fabbri et al., 2019), and are sourced from diverse domains (Grusky et al., 2018; Koupaee & Wang, 2018; Kim et al., 2019; Kornilova & Eidelman, 2019; Zhang & Tetreault, 2019);",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "however, there has been little work on systematic evaluation of models across these broad settings. Contemporaneously, the adoption of Transformer models (Vaswani et al., 2017) pre-trained using self-supervised ob- jectives on large text corpora (Radford et al., 2018a; Devlin et al., 2019) have improved performance on many NLP tasks (Wang et al., 2018; Rajpurkar et al., 2016). best models and validated this in human evaluation studies. We found that PEGASUS summaries are at least as good as reference summaries for the datasets we assessed – XSum, CNN/DailyMail, and Reddit TIFU – even at low-levels of supervision. To summarize our contributions: Recent work leveraging such pre-training for Transformer- based sequence-to-sequence models (Dong et al., 2019; Song et al., 2019; Rothe et al., 2019; Lewis et al., 2019; Raffel et al., 2019) has extended the success to text genera- tion, including abstractive summarization. In this work, we study pre-training objectives speciﬁcally for abstractive text summarization and evaluate on 12 down- stream datasets spanning news (Hermann et al., 2015; Narayan et al., 2018; Grusky et al., 2018; Rush et al., 2015; Fabbri et al., 2019), science (Cohan et al., 2018), short stories (Kim et al., 2019), instructions (Koupaee & Wang, 2018), emails (Zhang & Tetreault, 2019), patents (Sharma et al., 2019), and legislative bills (Kornilova & Eidelman, 2019). We ﬁnd that masking whole sentences from a docu- ment and generating these gap-sentences from the rest of the document works well as a pre-training objective for down- stream summarization tasks. In particular, choosing puta- tively important sentences outperforms lead or randomly selected ones. We hypothesize this objective is suitable for abstractive summarization as it closely resembles the down- stream task, encouraging whole-document understanding and summary-like generation. We call this self-supervised objective Gap Sentences Generation (GSG). Using GSG to pre-train a Transformer",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "down- stream task, encouraging whole-document understanding and summary-like generation. We call this self-supervised objective Gap Sentences Generation (GSG). Using GSG to pre-train a Transformer encoder-decoder on large cor- pora of documents (Web and news articles) results in our method, Pre-training with Extracted Gap-sentences for Ab- stractive SUmmarization Sequence-to-sequence models, or PEGASUS. With our best 568M parameter model trained on the re- cently introduced C4 (Raffel et al., 2019) corpus we equal or exceed state-of-the-art on the 12 summarization tasks we consider. We further push forward the state-of-the-art using a newly collected text corpus comprised of news-like articles we call HugeNews, including the highly competitive XSum and CNN/DailyMail summarization datasets. 2 Related Work Dai & Le (2015); Ramachandran et al. (2017) used LM and autoencoder pre-training on in-domain data to improve per- formance of RNN sequence models. However, the combina- tion of pre-training with much larger external text corpora (such as Wikipedia, books, or Web-pages) and Transformer- based sequence models has led to a dramatic improvement in performance when ﬁne-tuned for both natural language un- derstanding and text generation tasks (Radford et al., 2018a; Devlin et al., 2019; Rothe et al., 2019; Yang et al., 2019; Joshi et al., 2019; Song et al., 2019; Dong et al., 2019; Lewis et al., 2019). Most similar to our approach are Transformer encoder-decoder models pre-trained on some masked input pre-training objective. Large-scale document-summary datasets are rare and in practice there is a mismatch between research datasets and real-world use-cases where collecting summaries is expen- sive; the most common setting is that of low-resource sum- marization. We simulate this setting and show that our model is able to adapt very quickly when ﬁne-tuning with small numbers of supervised pairs, obtaining state-of-the-art results in 6 datasets with only 1000 examples.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "this setting and show that our model is able to adapt very quickly when ﬁne-tuning with small numbers of supervised pairs, obtaining state-of-the-art results in 6 datasets with only 1000 examples. Qualitatively we observed high quality outputs from our MASS (Song et al., 2019) proposed masked sequence-to- sequence generation that reconstructs a sentence fragment given the remaining part of the sentence. A single sentence fragment was randomly selected. UniLM (Dong et al., 2019) proposed jointly training on three types of language modeling tasks: unidirectional (left- to-right and right-to-left), bidirectional (word-level mask,",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3600
+    }
+  },
+  {
+    "content": "with next sentence prediction), and sequence-to-sequence (word-level mask) prediction. however, such a procedure would only train a model to copy sentences, thus not suitable for abstractive summarization. T5 (Raffel et al., 2019) generalized the text-to-text frame- work to a variety of NLP tasks and showed the advantage of scaling up model size (to 11 billion parameters) and pre-training corpus, introducing C4, a massive text corpus derived from Common Crawl, which we also use in some of our models. T5 was pre-trained with randomly corrupted text spans of varying mask ratios and sizes of spans. Inspired by recent success in masking words and contiguous spans (Joshi et al., 2019; Raffel et al., 2019), we select and mask whole sentences from documents, and concatenate the gap-sentences into a pseudo-summary. The corresponding position of each selected gap sentence is replaced by a mask token [MASK1] to inform the model. Gap sentences ratio, or GSR, refers to the number of selected gap sentences to the total number of sentences in the document, which is similar to mask rate in other works. BART (Lewis et al., 2019) introduced a denoising autoen- coder to pre-train sequence-to-sequence models. BART corrupted text with an arbitrary noising function and learned to reconstruct the original text. For generation tasks, the noising function was text inﬁlling which used single mask tokens to mask random sampled spans of text. To even more closely approximate a summary, we select sentences that appear to be important/principal to the doc- ument. The resulting objective has both the empirically demonstrated beneﬁts of masking, and anticipates the form of the downstream task. In contrast to MASS, UniLM, BART and T5, the proposed PEGASUS masks multiple whole sentences rather than smaller continuous text spans. In our ﬁnal objective we deterministically choose sentences based on importance, rather than randomly. As in T5, PEGASUS does not recon- struct full input sequences, and",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "continuous text spans. In our ﬁnal objective we deterministically choose sentences based on importance, rather than randomly. As in T5, PEGASUS does not recon- struct full input sequences, and only generates the masked sentences as a single output sequence. In this work we focus entirely on downstream summarization (generative) tasks and do not evaluate on NLU classiﬁcation tasks. There has been some work on the low-resource, summa- rization setting using the CNN/DailyMail dataset. Radford et al. (2018b) showed that a large Transformer language model pre-trained on Web text could generate summaries if prompted with ”TL;DR”, achieving a ROUGE-2 of 8.27 on CNN/DailyMail. Khandelwal et al. (2019) pre-trained a Transformer language model on Wikipedia, and ﬁne-tuned using 3000 examples, achieving 13.1 ROUGE-2. We consider 3 primary strategies for selecting m gap sen- tences without replacement from a document, D = {xi}n, comprised of n sentences: Random Uniformly select m sentences at random. Lead Select the ﬁrst m sentences. Principal Select top-m scored sentences according to im- portance. As a proxy for importance we compute ROUGE1- F1 (Lin, 2004) between the sentence and the rest of the document, si = rouge(xi, D \\ {xi}), ∀i. In this formulation sentences are scored independently (Ind) and the top m selected. We also consider selecting them sequentially (Seq) as in Nallapati et al. (2017) by greedily maximizing the ROUGE1-F1 between selected sentences, S ∪ {xi}, and remaining sentences, D \\ (S ∪ {xi}) as in Algorithm 1. 3 Pre-training Objectives Algorithm 1 Sequential Sentence Selection We propose a new pre-training objective, GSG, in this work, but for comparison, we also evaluate BERT’s masked- language model objective, in isolation and in conjunction with GSG. 3.1 Gap Sentences Generation (GSG) We hypothesize that using a pre-training objective that more closely resembles the downstream task leads to better and faster ﬁne-tuning performance. Given our intended",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "Gap Sentences Generation (GSG) We hypothesize that using a pre-training objective that more closely resembles the downstream task leads to better and faster ﬁne-tuning performance. Given our intended use for abstractive summarization, our proposed pre-training objec- tive involves generating summary-like text from an input document. In order to leverage massive text corpora for pre- training, we design a sequence-to-sequence self-supervised objective in the absence of abstactive summaries. A naive option would be to pre-train as an extractive summarizer; When calculating ROUGE1-F1, we also consider n-grams as a set (Uniq) instead of double-counting identical n-grams as in the original implementation (Orig). This results in four variants of the principal sentence selection strategy, choosing Ind/Seq and Orig/Uniq options. An example containing lead, random and principal gap sen- tence selection strategies are shown in Figure 2.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 3602
+    }
+  },
+  {
+    "content": "INVITATION ONLY We are very excited to be co-hosting a major drinks reception with our friends at Progress. This event will sell out, so make sure to register at the link above. Speakers include Rajesh Agrawal, the London Deputy Mayor for Business, Alison McGovern, the Chair of Progress, and Seema Malhotra MP. Huge thanks to the our friends at the ACCA, who have supported this event. The Labour Business Fringe at this year’s Labour Annual Con- ference is being co-sponsored by Labour in the City and the Industry Forum. Speakers include John McDonnell, Shadow Chancellor, and Rebecca Long-Bailey, the Shadow Chief Secretary to the Treasury, and our own Chair, Kitty Ussher. Attendance is free, and refreshments will be provided. 5 Downstream Tasks/Datasets For downstream summarization, we only used public ab- stractive summarization datasets, and access them through TensorFlow Summarization Datasets 1, which provides publicly reproducible code for dataset processing and train/validation/test splits. We used train/validation/test ra- tio of 80/10/10 if no split was provided, and 10% train split as validation if there was no validation split. XSum (Narayan et al., 2018) consists of 227k BBC articles from 2010 to 2017 covering a wide variety of subjects along with professionally written single-sentence summaries. Figure 2: An example of sentences (from the C4 corpus) selected by Random, Lead and Ind-Orig respectively. Best viewed in color. CNN/DailyMail (Hermann et al., 2015) dataset contains 93k articles from the CNN, and 220k articles the Daily Mail newspapers. Both publishers supplement their articles with bullet point summaries. We use the non-anonymized variant used in See et al. (2017). 3.2 Masked Language Model (MLM) Following BERT, we select 15% tokens in the input text, and the selected tokens are (1) 80% of time replaced by a mask token [MASK2], or (2) 10% of time replaced by a random token, or (3) 10% of time unchanged. We apply MLM to train the Transformer",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "text, and the selected tokens are (1) 80% of time replaced by a mask token [MASK2], or (2) 10% of time replaced by a random token, or (3) 10% of time unchanged. We apply MLM to train the Transformer encoder as the sole pre-training objec- tive or along with GSG. When MLM is the sole pre-training objective, the Transformer decoder shares all parameters with encoder when ﬁne-tuning on downstream tasks follow- ing Rothe et al. (2019). Figure 1 simultaneously shows how both GSG and MLM are applied to the same example when used in conjunction. However, we found that MLM does not improve down- stream tasks at large number of pre-training steps (section 6.1.2), and chose not to include MLM in the ﬁnal model PEGASUSLARGE (section 6.2). NEWSROOM (Grusky et al., 2018) is a large dataset con- taining 1.3M article-summary pairs written by authors and editors in the newsrooms of 38 major publications between 1998 and 2017. Multi-News (Fabbri et al., 2019) is a multi-document sum- marization dataset consisting of 56k pairs of news ar- ticles and their human-written summaries from the site newser.com. Gigaword (Rush et al., 2015) contains 4M examples ex- tracted from news articles (seven publishers) from the Giga- word corpus (Graff et al., 2003). The task is to generate the headline from the ﬁrst sentence. arXiv, PubMed (Cohan et al., 2018) are two long document datasets of scientiﬁc publications from arXiv.org (113k) and PubMed (215k). The task is to generate the abstract from the paper body. 4 Pre-training Corpus For pre-training we considered two large text corpora: BIGPATENT (Sharma et al., 2019) consists of 1.3 million U.S. patents along with human summaries under nine patent classiﬁcation categories. WikiHow (Koupaee & Wang, 2018) is a large-scale dataset of instructions from the online WikiHow.com website. Each of 200k examples consists of multiple instruction-step para- graphs along with a summarizing sentence. The task is to generate the concatenated summary-sentences",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1795
+    }
+  },
+  {
+    "content": "the online WikiHow.com website. Each of 200k examples consists of multiple instruction-step para- graphs along with a summarizing sentence. The task is to generate the concatenated summary-sentences from the paragraphs. Reddit TIFU (Kim et al., 2019) contains 120K posts of informal stories from the online discussion forum Reddit, more speciﬁcally the TIFU sub-reddit from 2013-Jan to 2018-Mar. The sub-reddit posts strictly follow the rule of writing a descriptive ”TL;DR” summary and has higher qual- 1https://www.tensorflow.org/datasets/ catalog/overview",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 3594
+    }
+  },
+  {
+    "content": "ity than (V¨olske et al., 2017) (which used more subreddits) based on our manual inspection. We uses the TIFU-long subset (using TLDR as summaries) in the work. AESLC (Zhang & Tetreault, 2019) consists of 18k email bodies and their subjects from the Enron corpus (Klimt & Yang, 2004), a collection of email messages of employees in the Enron Corporation. available C4 corpus. Note that the y-axis in Figures 3, 4, 5 are normalized by the left-most bar using 1 ) where R1, R2, RL are ROUGE F1 scores and R1base, R2base, RLbase are the scores of the conﬁguration corresponding to the ﬁrst bar. BillSum (Kornilova & Eidelman, 2019) contains 23k US Congressional bills and human-written reference summaries from the 103rd-115th (1993-2018) sessions of Congress. We do not use the California test set which is out-of-distribution. Following Grusky et al., the number of examples and extrac- tive fragment coverage/density for all downstream datasets is illustrated in Appendix A. With more pre-training steps, the model observed more doc- uments in the pre-training corpus. A PEGASUSBASE model trained for 500k (highest we tried) steps did not observe all training examples on C4 nor HugeNews. Appendix B shows the number of pre-training steps had an unsurprisingly posi- tive impact on downstream dataset performance. We used 500k steps for the ablation studies and the large model. 6.1.1 PRE-TRAINING CORPUS 6 Experiments In a similar strategy to Raffel et al. (2019), to save time and computation we conducted pre-training ablation ex- periments using a reduced-size model with 223M param- eters, PEGASUSBASE, smaller batch size, and only 4 of 12 datasets before scaling up pre-training with the best set- tings to the ﬁnal 568M parameters, PEGASUSLARGE. The datasets (XSum, CNN/DailyMail, WikiHow and Reddit TIFU) were chosen for diversity in abstractiveness, writing style, and size. PEGASUSBASE had L = 12, H = 768, F = 3072, A = 12 and PEGASUSLARGE had L = 16, H = 1024, F = 4096, A = 16, where L",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Reddit TIFU) were chosen for diversity in abstractiveness, writing style, and size. PEGASUSBASE had L = 12, H = 768, F = 3072, A = 12 and PEGASUSLARGE had L = 16, H = 1024, F = 4096, A = 16, where L denotes the number of lay- ers for encoder and decoder (i.e. Transformer blocks), H for the hidden size, F for the feed-forward layer size and A for the number of self-attention heads. We pre-trained PEGASUSBASE with a batch size of 256 and PEGASUSLARGE with a batch size of 8192. We refer to PEGASUSBASE without pre-training as TransformerBASE. Figure 3 shows that pre-training on HugeNews was more effective than C4 on the two news downstream datasets, while the non-news informal datasets (WikiHow and Reddit TIFU) prefer the pre-training on C4. This suggests pre- training models transfer more effectively to downstream tasks when their domains are aligned better. 6.1.2 EFFECT OF PRE-TRAINING OBJECTIVES We used sinusoidal positional encoding following Vaswani et al. (2017). For optimization, both pre-training and ﬁne- tuning used Adafactor (Shazeer & Stern, 2018) with square root learning rate decay and dropout rate of 0.1. We used greedy-decoding for studies in Section 6.1, and used beam-search with a length-penalty, α, as in Wu et al. (2016) for the ﬁnal large model. All experiments’ hyper parameters can be found in Ap- pendix C and reported numbers are in Appendix D and E. GSG We compared six variants of GSG (Lead, Random, Ind-Orig, Ind-Uniq, Seq-Orig, Seq-Uniq) while choosing 30% sentences as gap sentences. As shown in Figure 4a, Ind- Orig achieved the best performance followed by Seq-Uniq. Ind-Orig and Seq-Uniq were consistently better (or similar) than Random and Lead across the four downstream datasets. Lead had decent performance on the two news datasets but was signiﬁcantly worse on the two non-news datasets, which agrees ﬁndings of lead bias in news datasets (See et al., 2017; Zhong et al., 2019). The results suggest choosing principal sentences works best for",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "worse on the two non-news datasets, which agrees ﬁndings of lead bias in news datasets (See et al., 2017; Zhong et al., 2019). The results suggest choosing principal sentences works best for downstream summarization tasks, and we chose Ind-Orig for the PEGASUSLARGE. 6.1 Ablations on PEGASUSBASE We used PEGASUSBASE to evaluate choices of pre-training corpus, pre-training objective, and vocabulary size. For re- producibility, we evaluated the latter two using the publicly A signiﬁcant hyper-parameter in GSG is the gap-sentences ratio (GSR). A low GSR makes the pre-training less chal- lenging and computationally efﬁcient. On the other hand, choosing gap sentences at a high GSR loses contextual in-",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 3605
+    }
+  },
+  {
+    "content": "formation necessary to guide the generation. We compared GSRs from 15% to 75%. For a fair comparison, the original documents were truncated to have up to 400 words. The maximum input length, Linput in the encoder and the maxi- mum target length, Ltarget in the decoder were set as 512 tokens. Figure 4b shows that different downstream datasets had slightly different optima. The best performance always had GSR lower than 50%. The model with 15% gap sentences achieved the highest ROUGE scores on CNN/DailyMail, while XSum/Reddit TIFU and WikiHow did better with 30% and 45% respectively. When scaling up to PEGASUSLARGE (Section 6.2), we chose an effective GSR of 30%. MLM As mentioned, the MLM objective can either be ap- plied solely or together with GSG. We jointly trained MLM with GSG Ind-Orig (MLM & Ind-Orig), which masks 30% sentences and extra 15% tokens in unselected sentences, as shown in Figure 1. Figure 4a shows that the model pre- trained with MLM alone performed signiﬁcantly worse and MLM & Ind-Orig had similar performance as Random. In- terestingly, when comparing MLM & Ind-Orig to Ind-Orig, we empirically observed MLM improved ﬁne-tuning per- formance at early pre-training checkpoints (100k - 200k steps), but inhibited further gains with more pre-training steps (500k). Therefore, we chose not to include MLM in PEGASUSLARGE. 6.1.3 EFFECT OF VOCABULARY We compared two tokenization methods2: Byte-pair- encoding algorithm (BPE) (Wu et al., 2016; Sennrich et al., 2016), and SentencePiece Unigram algorithm (Unigram) proposed in Kudo (2018). We evaluated Unigram with dif- ferent vocabulary sizes ranging from 32k to 256k. In these experiments, models were pre-trained for 500k steps on the C4 corpus with the Ind-Orig objective and 15% GSR. As shown in Figure 5, BPE and Unigram were compara- ble on news datasets while Unigram outperformed BPE 2Implemented in https://github.com/google/sentencepiece on non-news datasets, especially WikiHow. On XSum and CNN/DailyMail,",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Unigram were compara- ble on news datasets while Unigram outperformed BPE 2Implemented in https://github.com/google/sentencepiece on non-news datasets, especially WikiHow. On XSum and CNN/DailyMail, Unigram 96k achieved the highest ROUGE scores. On WikiHow and Reddit TIFU, the best conﬁgurations were Unigram 128k and 64k respectively. Therefore, we used the overall best vocabulary option Uni- gram 96k in PEGASUSLARGE. 6.2 Larger Model Results Compared with PEGASUSBASE, large model PEGASUSLARGE had increased capacity from larger hidden size (H : 768 → 1024, F : 3072 → 4096, A : 12 → 16), number of layers (L : 12 → 16) and traversed much more data, due to larger batch size (B : 256 → 8192) (same number of pre-training steps, 500k). We adopted the best practices found in the PEGASUSBASE ablation studies using the GSG (Ind-Orig) pre-training objective without MLM and Unigram vocab- ulary size of 96k. In total, PEGASUSLARGE had 568M parameters. To encourage the model to copy, which is an important as- pect of the more extractive datasets, we left 20% of selected sentences unchanged in the input instead of replacing with [MASK1]. We increased the GSR to 45% to achieve a sim- ilar number of “gaps” as the optimal 30% found above. We reported the performance of the models pre-trained on HugeNews and C4 separately. We conducted a simple hyper-parameter sweep of learning rate and length penalty,",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1797
+    }
+  },
+  {
+    "content": "Table 1: Results of PEGASUSLARGE and PEGASUSBASE on all downstream datasets compared with the previous SOTA, which are fetched from (Lewis et al., 2019; Shi et al., 2019; Fabbri et al., 2019; Koupaee & Wang, 2018; Kim et al., 2019; Subramanian et al., 2019; Song et al., 2019; Zhang & Tetreault, 2019; Kornilova & Eidelman, 2019). We only compared with previous abstractive models except on BillSum which had extractive results only. BIGPATENT, arXiv, PubMed and Multi-News datasets contain very long summaries and we truncate them to 256 tokens, in similar range compared to (Sharma et al., 2019; Cohan et al., 2018; Fabbri et al., 2019; Goodman et al., 2019). Best ROUGE numbers on each dataset and numbers within 0.15 of the best numbers are bolded. α, when ﬁne-tuning PEGASUSLARGE on each downstream dataset. CNN/DailyMail, Multi-News, arXiv, PubMed, BIG- PATENT datasets contain input documents longer than the maximum input length (Linput = 512 tokens) in pre- training. This would present a problem for position em- beddings which would never be updated for longer input lengths, but we conﬁrm the postulation that sinusoidal po- sitional encodings (Vaswani et al., 2017) generalize well when ﬁne-tuning PEGASUSLARGE beyond the input lengths observed in training up to Linput = 1024 tokens. Since average input length in BIGPATENT, arXiv, PubMed and Multi-News are well beyond 1024 tokens, further scaling up Linput or applying a two-stage approach (Liu et al., 2018) may improve performance even more, although this is out- side the scope of this work. Tables 1 and 2 show the performance improvements of PEGASUSBASE and PEGASUSLARGE on downstream datasets. While PEGASUSBASE exceeded current state-of- the-art on many datasets, PEGASUSLARGE achieved better than state-of-the-art results on all downstream datasets using HugeNews, although C4 performed better on WikiHow. The improvement from a Transformer model without pre- training (TransformerBASE) to PEGASUSLARGE was more signiﬁcant on",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "downstream datasets using HugeNews, although C4 performed better on WikiHow. The improvement from a Transformer model without pre- training (TransformerBASE) to PEGASUSLARGE was more signiﬁcant on smaller datasets. For example, the ROUGE2- F1 scores nearly tripled on AESLC and quintupled on Red- dit TIFU. The large jumps in performance suggest that small text summarization datasets beneﬁt the most from pre-training. We further investigate low resource summa- rization in Section 6.3. 6.3 Zero and Low-Resource Summarization In real-world practice, it is often difﬁcult to collect a large number of supervised examples to train or ﬁne-tune a sum- marization model. To simulate the low-resource summariza- tion setting, we picked the ﬁrst 10k (k = 1, 2, 3, 4) training examples from each dataset to ﬁne-tune PEGASUSLARGE (HugeNews) . We ﬁne-tuned the models up to 2000 steps with batch size 256, learning rate 0.0005, and picked the checkpoint with best validation performance. In Fig- ure. 6, in 8 out of 12 datasets, with just 100 examples",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "Table 3: Human evaluation side-by-side results on Likert (1-5) scale (higher is better). Scores are bolded if they are not worse than human-level performance by p < 0.01. PEGASUSLARGE could be ﬁne-tuned to generate summaries at comparable quality to TransformerBASE trained on the full supervised datasets ranging from 20k to 200k examples. PEGASUSLARGE also beat previous state-of-the-art results on 6 out of 12 datasets with only 1000 ﬁne-tuning examples. On CNN/DailyMail, with half the number of parame- ters PEGASUSLARGE demonstrated much better zero-shot (ROUGE2-F=13.28) performance than GPT-2 (ROUGE2- F=8.27). Using only 1000 examples, PEGASUSLARGE achieved ROUGE2-F of 19.35, much higher than the 13.1 obtained in Khandelwal et al. (2019) with 3000 examples. 6.4 Qualitative Observations and Human Evaluation Overall, we observed high-linguistic quality (in terms of ﬂu- ency and coherence), closely emulating the style of ground- truth summaries. While some previous work suggested that maximum likelihood training results in repetitive text in model outputs (Welleck et al., 2019) we found this to be rare in our outputs and did not require additional counter- measures to mitigate dis-ﬂuencies. pared to extractive ones and having no sense of linguis- tic quality, we found that choosing perplexity-optimized models using aggregated ROUGE (rather than directly op- timizing ROUGE as in Paulus et al. (2017)) resulted in qualitatively good models. Randomly sampled (by a pro- gram) model decodes across all datasets and a broad range of ROUGE scores can be found in Appendix I.We found that even low-ROUGE model summaries often were high- quality, Figure G.1. To assess how close PEGASUSLARGE is to human perfor- mance we conducted human evaluation experiments on Amazon Mechanical Turk comparing model summaries with (human) reference summaries given the input document. The examples were drawn from the XSum, CNN/DailyMail, and Reddit TIFU datasets; the ﬁrst two were chosen due to",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "comparing model summaries with (human) reference summaries given the input document. The examples were drawn from the XSum, CNN/DailyMail, and Reddit TIFU datasets; the ﬁrst two were chosen due to their popularity in past work, and the third was chosen for its signiﬁcant difference in style. Workers were asked to rate the summaries on a 1-5 scale, with higher being better (full experiment details provided in Appendix F) and a paired t-test was used to assess whether scores were signiﬁcantly different from human. In the ﬁrst experiment, PEGASUSLARGE (HugeNews), PEGASUSLARGE (C4), and TransformerBASE were com- pared with reference summaries; in the second experiment, PEGASUSLARGE (HugeNews) ﬁne-tuned using 10, 100, 1000, and all supervised examples were compared with references; the results are shown in Table 3. According to the signiﬁcance level of p < 0.01, both PEGASUSLARGE (HugeNews) and PEGASUSLARGE (C4) outputs were at least as good as the reference summaries in all cases. Even at low-levels of supervision PEGASUSLARGE (HugeNews) was not measurably worse than human summaries on XSum and CNN/DailyMail. In the Reddit TIFU case, however, per- haps due to its diverse writing styles, human performance required full supervision. Although ROUGE clearly has its draw-backs (Kryscinski et al., 2019), over-penalizing abstractive approaches com-",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1799
+    }
+  },
+  {
+    "content": "6.5 Test-set Overlap with Pre-training Corpus The pre-training corpora are a large collection of documents from the Internet and potentially have overlap with the down- stream test sets. In this section, we measured the extent of overlap between the pre-training corpus and downstream datasets. We also studied if the pre-trained model was able to exploit memorization to achieve higher performance on the downstream datasets. To measure the overlap, we calculated similarities between all pairs of downstream test set targets and pre-training documents. We use the ROUGE-2 recall as a similarity measure (common 2-grams / test set targets 2-grams). It is not necessarily exact match even if the similarity score is 1.0. We ﬁltered all test set examples that have similarity to any pre-training example above a threshold, and recalculated the ROUGE scores on the remaining test set. In Figure 7, we conducted this study on the pre-training corpus C4 and test set of XSum, CNN/Dailymail, Reddit TIFU and WikiHow, with a similarity threshold of 1.0 and 0.8. Results show that only XSum has signiﬁcant amount of overlap 15% to 20%, and ﬁltering those examples does not change ROUGE scores more than 1%. We also manually examined those overlapped examples with similarity of 1.0, and found that the models produce very different summaries compared to the human written ones, suggesting that there was no clear memorization. Table 4: Results (ROUGE-1/ROUGE-2/ROUGE-L F scores) of PEGASUSLARGE (mixed, stochastic) on down- stream datasets. ‡ We updated the BIGPATENT dataset to preserve casing, some format cleanings are also changed. tences ratio uniformly between 15%-45%. (3) Importance sentences were stochastically sampled with 20% uniform noise on their scores. (4) The model was pre-trained for 1.5M steps instead of 500k steps, as we observed slower con- vergence of pre-training perplexity. (5) The SentencePiece tokenizer was updated to encode the newline character. The PEGASUSLARGE (mixed,",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "1.5M steps instead of 500k steps, as we observed slower con- vergence of pre-training perplexity. (5) The SentencePiece tokenizer was updated to encode the newline character. The PEGASUSLARGE (mixed, stochastic) model achieved best results on almost all downstream tasks, as shown in Table 4. 7 Conclusion In this work, we proposed PEGASUS, a sequence-to- sequence model with gap-sentences generation as a pre- training objective tailored for abstractive text summariza- tion. We studied several gap-sentence selection methods and identiﬁed principle sentence selection as the optimal strategy. We demonstrated the effects of the pre-training corpora, gap-sentences ratios, vocabulary sizes and scaled up the best conﬁguration to achieve state-of-the-art results on all 12 diverse downstream datasets considered. We also showed that our model was able to adapt to unseen summa- rization datasets very quickly, achieving strong results in as little as 1000 examples. We ﬁnally showed our model sum- maries achieved human performance on multiple datasets using human evaluation. 8 Code and Model Checkpoints Release The training code and instructions for using model check- points can be found at 6.6 Additional PEGASUSLARGE Improvements https://github.com/google-research/ pegasus Following our experiments on PEGASUSLARGE pre-trained on C4 and HugeNews, we pre-trained a PEGASUSLARGE model on both corpora and stochastically sampled important sentences. The PEGASUSLARGE (mixed,stochastic) model includes the changes: (1) The model was pre-trained on the mixture of C4 and HugeNews weighted by their number of examples. (2) The model dynamically chose gap sen- Acknowledgments We thank Anastassia Kornilova, Eva Sharma, Shashi Narayan, Adam Roberts, Etienne Pot, and the Google News team for assistance with datasets, and Carey Radebaugh, David Grangier, Doug Eck, and Samy Bengio for reviewing the manuscript.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 1796
+    }
+  },
+  {
+    "content": "References",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 10,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Language Processing, pp. 1797–1807, Brussels, Belgium, October-November 2018. Association for Computational Linguistics. doi: 10.18653/v1/D18-1206. URL https: //www.aclweb.org/anthology/D18-1206.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 11,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Summarization, pp. 59–63, Copenhagen, Denmark, September 2017. Association for Computational Lin- guistics. doi: 10.18653/v1/W17-4508. URL https: //www.aclweb.org/anthology/W17-4508.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 12,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "A Datasets Statistics Following Grusky et al., we calculate extractive fragment coverage/density for all downstream datasets. They were deﬁned as where A is article, S is summary, and f ∈ F (A, S) are extractive fragments. High density indicates more extractive datasets and low coverage suggests more novel words in the summary. B Pre-training Steps a) Figure B.1: Performance increase on downstream datasets as PEGASUSBASE trains for more steps on C4.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 13,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "C PEGASUS Hyper Parameters Table C.1: Hyperparamters of the pre-training and ﬁne-tuning stages reported in section 6. The hyperparameters of ﬁne-tuning PEGASUSLARGE were decided by grid search while others were decided by empirically default commonly used values. Max input/target tokens correspond to Linput and Ltarget in Section 6.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 14,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "D Experiment Figures’ Numbers Table D.1: The raw ROUGE1-F1, ROUGE2-F1 and ROUGEL-F1 scores reported in corresponding ﬁgures.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 15,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "E Low Resource Numbers Table E.1: The ROUGE1-F1, ROUGE2-F1 and ROUGEL-F1 scores of low resource summarization reported in Figure 6 along with previous SOTA in Table 1. With 100 examples, PEGASUSLARGE beats previous SOTA on ROUGE2-F1 metrics on BIGPATENT, Reddit TIFU, and BillSum dataset. With 1000 examples, PEGASUSLARGE beats previous SOTA metrics on Multi-News, WikiHow, Reddit TIFU, BigPatent, AESLC and BillSum.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 16,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "F Human Evaluation Details In all human evaluation experiments we used the same task template shown in Figure F.1, where workers were asked to rate 4 summaries for a document on a scale of 1 (poor summary) to 5 (great summary). The order in which the summaries are presented for each task was random per example. Each task was independently done by 3 different workers and we retained the median score across workers for each summary. We paid 1 USD per task and used the following critieria for workers to ensure high-quality: With this criteria we observed high reproducibility in the conclusions of the huamn evaluation. Multiple runs of the same experiment with different workers meeting this criteria yielded very similar results. The HITT template is provided at https://github.com/google-research/pegasus. In experiment 1, the four summaries corresponded to 3 models (PEGASUSLARGE pre-trained on HugeNews, C4, and TransformerBASE) that were ﬁne-tuned using all the supervised examples along with the reference (human) summary. We sampled 100 examples from each dataset (XSum, CNN/DailyMail, Reddit TIFU). In experiment 2, we evaluated 4 models (PEGASUSLARGE pre-trained on HugeNews ﬁne-tuned using different amounts of supervision, 10, 100, 1000, and all examples) alongside the human summary. To do this with the same template, for each example we randomly selected 4 out of the 5 summaries. This resulted in fewer ratings per model, but did not increase the work (and cost) of the task. We used a paired t-test to determine statistical signiﬁcance when comparing the ratings of two sets of summaries. Figure F.1: A screenshot of the Amazon MTurk HIIT.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 17,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "G Example of summary with relatively low ROUGE2-F but qualitatively good. This ﬁgure shows an example model summary from the CNN/DailyMail dataset exhibiting high ﬂuency, coherence, although highly abstractive, and only ROUGE2-F of 16. The model understood that the football team ”Chelsea” could be paraphrased as ”Jose Mourinho’s side” and ”The Blues” and highlighted the same four matches to be played. Document: chelsea will face paris saint-germain, the french team who knocked jose mourinhos side out of the champions league this season, in a pre-season friendly in july. the blues, who were sent crashing out on away goals at the last-16 stage following a 2-2 draw at stamford bridge, will play psg in north carolina on july 25. it is one of three games mourinhos side will feature in across the pond as they gear up to defend a probable premier league title. john terry leads the celebrations as chelsea close in on the premier league title with a 0-0 draw at arsenal . eden hazard, the pfa player of the year, will line-up for chelsea when they travel to the usa in the summer . new york red bulls - july 22 - new jersey . paris saint-germain - july 25 - charlotte, north carolina . barcelona - july 28 - washington d.c. ﬁorentina - august 5 - stamford bridge . chelsea, 10 points ahead of arsenal with just four games to play, will also face the new york red bulls on july 22 and spanish giants barcelona six days later in washington. chelsea fans will then get to see their side before the premier league campaign kicks-off with a friendly against ﬁorentina at stamford bridge on august 5. all four matches mark chelseas participation in this summers pre-season international champions cup with manchester united, who mourinhos side will not face, la galaxy, porto and san jose earthquakes also involved. im pleased we are able to announce our ﬁxtures for what promises to be an exciting summer,’ said chelsea chairman bruce buck. as promised, we face some excellent opposition across",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 18,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "also involved. im pleased we are able to announce our ﬁxtures for what promises to be an exciting summer,’ said chelsea chairman bruce buck. as promised, we face some excellent opposition across several iconic venues in the united states and to top it off we are delighted to be hosting ﬁorentina at stamford ... ... ... Ground-truth: chelsea to play three matches inside six days in the united states . they will face new york red bulls, paris saint-germain and barcelona . ﬁorentina will then travel to stamford bridge for friendly on august 5 . four matches will make up chelsea’s participation in champions cup . read: chelsea interested in 43m antoine griezmann . Model: jose mourinho’s side will play psg in north carolina on july 25 . chelsea will also face the new york red bulls and barcelona . the blues will play ﬁorentina at stamford bridge on august 5 . Figure G.1: A CNN/DailyMail PEGASUSLARGE model summary with relatively low ROUGE2-F of 16, but qualitatively quite good, and factually accurate.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 18,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "H Abstractiveness of Summaries We compared the abstractiveness of model generated summaries with the human-written ones for all downstream datasets. We measured abstractiveness of summaries using average values of extractive coverage and extractive density (Grusky et al., 2018) on each dataset. More abstractive summaries have smaller extractive coverage (more novel words) and smaller extractive density (smaller spans copied from inputs). Figure H.1 shows that the summaries generated by models were all less abstractive than the human-written counterparts. However, the models that were ﬁnetuned on more abstractive datasets, such as XSum and Reddit TIFU, could generate more abstractive summaries than human-written ones on other datasets. I Example Model Outputs Model outputs were selected (and LATEX tables generated) automatically by a program in the following way: (1) pick ﬁrst 300 examples of triplets (document, gold summary, model output) from the dataset test split; (2) rank the examples by ROUGE1-F1/ROUGE2-F1/ROUGEL-F1 metrics in descending order; (3) divide the examples into 2-10 buckets depending on the documents lengths; (4) randomly pick one example from each bucket. We ﬁltered out examples that contain bad words from the link 3. Input documents were truncated at 300 words for visualization. Each page shows examples from one dataset sampled by one ROUGE metric. 3 https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words/blob/ master/en",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 19,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.1: Generated summaries by PEGASUSLARGE (HugeNews) on XSum sampled by ROUGE1-F1. XSum Johnson made his ﬁlm debut in the 1950s and featured in numerous ﬁlms, alongside stars such as Frank Sinatra, Laurence Olivier and Charlton Heston. A founder member of the Royal Shakespeare Company, Johnson played several lead roles including Romeo and Mark Anthony in Julius Caesar. He also appeared in several TV dramas such as Lewis and Silent Witness. Johnson died after a short illness at the Royal Marsden Hospital in Chelsea, London. He is survived by his wife Lynne, who he married in 2004, and his four children. Johnson was born in Upminster, Essex, and he left his training at the Royal Academy of Dramatic Art (RADA) to join Sir John Gielgud’s company. He joined the Royal Navy during World War Two and then made his ﬁlm debut in 1959, when he appeared in the MGM ﬁlm Never So Few, starring Frank Sinatra and Gina Lollobrigida. He also appeared in The Haunting (1963) and Khartoum (1966), opposite Laurence Olivier and Charlton Heston. His family said he was offered and turned down the role of James Bond after playing British spy Bulldog Drummond in Deadlier Than the Male (1967) and its sequel Some Girls Do (1969). His most recent ﬁlm credits include The Boy in the Striped Pyjamas (2008) and Lara Croft: Tomb Raider (2001). Gold British actor Richard Johnson, whose career spanned ﬁlm, theatre and TV, has died aged 87, his family has said. Model Actor Roger Johnson, best known for his roles in Deadlier Than the Male and Some Girls Do, has died at the age of 93. ROUGE1-F1 27.91",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 20,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.2: Generated summaries by PEGASUSLARGE (HugeNews) on XSum sampled by ROUGE2-F1. XSum Matthew Gillard, of Connsbrook Avenue in east Belfast, pleaded not guilty to charges including kidnapping and false imprisonment. The defendant, 25, also denied charges of common assault, assaulting a police ofﬁcer and driving dangerously. The charges relate to incidents in east Belfast and Comber on Saturday 4 April. Newtownards Magistrates Court heard that the defendant and the woman were in his car in east Belfast when he began questioning her about who she was seeing. A detective giving evidence in court said the woman tried to get out of the Seat Toledo car but the defendant allegedly drove off at speed, through a red light on Bloomﬁeld Avenue. When the car stopped on the Belfast Road in Comber, the woman escaped along a lane but was carried back to the car by the defendant, the court heard. An off-duty police sergeant saw this and went to help the woman. When the sergeant tried to intervene, the defendant allegedly drove his car at the ofﬁcer, forcing him to get out of the way. The sergeant was able to pull the keys from the ignition through the car’s open window, but the defendant wrenched them from his grasp. He then drove to the Grand Parade area of east Belfast where the woman was released. He is also alleged to have sent the woman a message threatening that if she went to police about the incident he would ”ruin her life in every possible way”. The court heard that the defendant handed himself over to police on Wednesday, despite being aware since Saturday that he was wanted by the PSNI. But during police interviews he refused to answer questions put to him. An application for bail was made but this was refused. Mr Gillard will appear again in court on 1 May. Gold A man accused of kidnapping his partner allegedly drove at a police ofﬁcer who tried to save her, a court has heard. Model A man has appeared in court charged with kidnapping and assaulting a woman.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 21,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "A man accused of kidnapping his partner allegedly drove at a police ofﬁcer who tried to save her, a court has heard. Model A man has appeared in court charged with kidnapping and assaulting a woman. ROUGE2-F1 6.06",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 21,
+      "type": "Text",
+      "start_index": 1797
+    }
+  },
+  {
+    "content": "Table I.3: Generated summaries by PEGASUSLARGE (HugeNews) on XSum sampled by ROUGEL-F1. There could be ”serious implications” for Gloucestershire Police, the police and crime commissioner has warned. Cotswold District Council’s proposal to form a unity authority with West Oxfordshire has proved controversial. But CDC says the plans - dubbed ’Coxit’ - are at an early stage but aim to improve accountability. CDC leader Lynden Stowe has said Gloucestershire’s ”historic borders” would remain under the proposals, which aim to improve the ”administration and the delivery of council services”. He told BBC Radio Gloucestershire a few weeks ago: ”We would expect the police to patrol up to the existing county borders, exactly as now, so if there’s a crime in Cirencester, Gloucestershire Police attend and if there’s a burglary in Burford, Thames Valley Police attend.” But Gloucestershire’s PCC Martin Surl said he had taken legal advice on the ”Coxit” proposal, and warned it could ”signal the end of Gloucestershire Police as we know it”. Under the Local Government and Public Involvement in Health Act 2007, he said the Cotswolds could become part of Thames Valley Police District. ”If they break away to a new district, we can’t continue policing just half a district,” he told the BBC. ”So, either we start taking some of Thames Valley’s area in Oxfordshire, or they start policing parts of Gloucestershire. Neither want that .” A spokesman for Cotswold District Council said they ”fully understand the initial concerns” but they were ”best addressed through the detailed studies that will now take place to assess the feasibility of the unitary proposal”. Mr Surl, an independent, is standing for re-election as Gloucestershire PCC on 5 May, alongside Labour’s Barry Kirby and the Conservatives’ Will Windsor Clive. Gold The Cotswolds could be policed by the Thames Valley force if plans to ”break away” from Gloucestershire County Council go ahead, it is claimed. Model Plans to create a new",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 22,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Will Windsor Clive. Gold The Cotswolds could be policed by the Thames Valley force if plans to ”break away” from Gloucestershire County Council go ahead, it is claimed. Model Plans to create a new district in the Cotswolds have been criticised by a police chief. ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 22,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "Table I.4: Generated summaries by PEGASUSLARGE (HugeNews) on CNN/DailyMail sampled by ROUGE1-F1. i yield to no one in my love of the old days warm beer, cricket on the village green, bobbies on bicycles two by two, all that but it’s rare a chance arises to compare the rose-tinted past with the brave new world, as it did on saturday evening when sky’s high-octane premier league coverage went head-to-head with arsenal v reading in the fa cup semi-ﬁnal on the bbc. as we know, the premier league has the money and prestige, but what the fa cup has is history, and boy does the bbc love a bit of history? lest you were in any doubt, its coverage of the semi-ﬁnal kicked off with footage of the late sir laurence olivier doing the st crispin’s day speech from the ﬁlm of henry v (’we happy few, we band of brothers,’ and so on). gary lineker, alan shearer, jason roberts and ian wright fronted the bbc’s coverage at wembley . bbc presenter lineker prepares to present the match of the day 50th anniversary special broadcast . reading defender nathaniel chaloboah (left) chases arsenal midﬁelder aaron ramsey (right) on saturday . gunners forward alexis sanchez celebrates after scoring his side’s winning goal in the fa cup semi-ﬁnal . stand-in match of the day presenter gabby logan (left) with pundits phil neville and robbie savage (right) the excuse, i guess, was that reading’s nickname is the royals, but as the second-tier team are also known as the biscuitmen. the bbc even gave us a moment of history at half-time with a breakdown, something that used to be a regular feature of tv outside broadcasts, when a feature on crystal palace’s shock semi-ﬁnal victory over liverpool 25 years ago came to a shuddering halt halfway through. in such instances, the bbc is lucky to ... ... ... Gold the weekend saw bbc’s fa cup coverage compete with sky’s premier league . it was a refreshing throwback to see the bbc’s use of archive footage . gary lineker remains one of the bbc’s prized assets and",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 23,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "weekend saw bbc’s fa cup coverage compete with sky’s premier league . it was a refreshing throwback to see the bbc’s use of archive footage . gary lineker remains one of the bbc’s prized assets and they must keep him . Model arsenal beat reading 1-0 in the fa cup semi-ﬁnal at wembley on saturday . the bbc presented the match of the day 50th anniversary special . the price of live premier league football is now way beyond the reach of the bbc, which may be the clincher in gary lineker’s future . ROUGE1-F1 29.47",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 23,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "Table I.5: Generated summaries by PEGASUSLARGE (HugeNews) on CNN/DailyMail sampled by ROUGE2-F1. CNN/DailyMail she’s a best-selling singer, actress, beauty buff and one of the world’s most stylish stars. and now, rita ora - who is only 24 and has already made the transition from a kosovan-born ﬂedgling singer to one of the globe’s most successful stars - has channeled her passion for fashion into a new adidas range. for her latest collaboration with adidas originals, rita has taken the brand’s classics and put her own bold spin on them. the result? a collection that is as daring and vibrant as the designer herself. scroll down for video . rita ora has channeled her passion for fashion into a new adidas range, so femail caught up with the global star to ﬁnd out her inﬂuences and plans for the future . speaking to femail about the inspiration behind her new range, which is emblazoned with graphic dragon prints and lands on may 1, rita said: ’the dragon print is all about my love of travel and soaking up different cultures. the print itself is inspired by asian culture and one of its most recognisable symbols. ’ive contrasted that with the ﬁt, basketball style cuts, which were inspired by american culture. my white smoke pack is about the body-mind-soul connection, about taking a moment for reﬂection. the graphic comes from the visual smoke creates when burning incense.’ the talented star, who also recently unveiled a beauty range for rimmel, couldn’t be happier with the ﬁnal result. she said: ’i love being able to go into design meetings with all these crazy ideas and then be able to create a product that hasnt existed before. from the initial stages to seeing my fans wearing the clothes and shoes - its been an amazing experience.’ the talented star, who also recently unveiled a beauty range for rimmel, ... ... ... Gold rita, 24, has designed range for adidas originals . designs are inspired by asian culture, she tells femail . star says she’s excited to see what the",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 24,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "a beauty range for rimmel, ... ... ... Gold rita, 24, has designed range for adidas originals . designs are inspired by asian culture, she tells femail . star says she’s excited to see what the future holds for her . Model rita, 24, has teamed up with adidas originals . has taken brand’s classics and put her own bold spin on them . promises there’s ’a little something for everyone’ in the range . cites marilyn monroe as her ultimate postergirl . ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 24,
+      "type": "Text",
+      "start_index": 1806
+    }
+  },
+  {
+    "content": "Table I.6: Generated summaries by PEGASUSLARGE (HugeNews) on CNN/DailyMail sampled by ROUGEL-F1. CNN/DailyMail danny willett gave a rules ofﬁcial, who had been in his line-of-sight, a verbal blast which was clearly audible to spectators surrounding the 17th green at the masters on thursday. englishman willett vented his anger after his second shot from beyond the green trickled all the way across the putting surface and left the preacher’s son facing a bogey or worse. ’of anyone you should know the rules,’ willett shouted loudly at the ofﬁcial, who was sitting about 60 yards away in a golf cart, outside the gallery ropes. danny willett waits to play a shot on the ﬁfth during the ﬁrst round at 2015 masters on thursday . the 27-year-old englishman carded a one-under 71 during his ﬁrst ever round at augusta . willett was still visibly angry as he left the green after salvaging a bogey, though he had calmed down by time he spoke to reporters about 30 minutes later. he said his ire had been raised because the ofﬁcial had been in his line-of-sight as he was preparing to play his shot. ’we were being timed (for slow play), which i can appreciate,’ willett said after carding a one-under 71 at augusta national. ’it’s a little bit tricky out here, so it takes a little bit of time, but you’d like to think the referee that’s timing you knows exactly where to put his buggy and where not to put his buggy.’ willett, 27, a two-time european tour winner, is playing in his ﬁrst masters. willett was left frustrated with a rules ofﬁcial for getting in his line-of-sight during his round . Gold englishman danny willett blasts timing referee for getting in line-of-sight . vented anger at ofﬁcial as he bogeyed the 17th at 2015 masters . willett carded a one-under 71 on opening round in ﬁrst time at augusta . Model danny willett gave a rules ofﬁcial a verbal blast during the ﬁrst round . the englishman vented his anger after his second shot from beyond the green trickled all the way across",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 25,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "at augusta . Model danny willett gave a rules ofﬁcial a verbal blast during the ﬁrst round . the englishman vented his anger after his second shot from beyond the green trickled all the way across the putting surface and left the preacher’s son facing a bogey or worse . willett was still visibly angry as he left the green after salvaging a bogey, though he had calmed down by time he spoke to reporters about 30 minutes later . he said his ire had been raised because the ofﬁcial had been in his line-of-sight as he was preparing to play his shot . ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 25,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "Table I.7: Generated summaries by PEGASUSLARGE (HugeNews) on NEWSROOM sampled by ROUGE1-F1. NEWSROOM Document (ID #91) ROUGE1-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 26,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.8: Generated summaries by PEGASUSLARGE (HugeNews) on NEWSROOM sampled by ROUGE2-F1. NEWSROOM Bryan Kay: Plenty of Americans play abroad, but far fewer have made careers as coaches of top sides outside MLS. Could former USA coach Bob Bradley break that pattern? Model American players are now a common presence in the Old World top divisions of England and Germany, but no American manager has yet made a name for himself ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 27,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.9: Generated summaries by PEGASUSLARGE (HugeNews) on NEWSROOM sampled by ROUGEL-F1. NEWSROOM Document (ID #157) Each Tuesday, WhatIfSports.com’s NFL simulation engine generates predictions and box scores for every NFL game for the coming week. Our highly sophisticated algorithms simulate every play of every game to produce each team’s likelihood to win. Each matchup is simulated 501 times. To account for injuries and roster moves announced late in the week, we will be re-simulating games on Thursdays through the season. Note: our predictions use the latest available team and player information, while NFL SimMatchup includes all players that were or will be available at any point during the 2015 season so that theoretical and ”what if” scenarios can be simulated. Week 4 was a prove it week for multiple teams, and most passed the test. The undefeated Atlanta Falcons went up against the Houston Texans in our Game of the Week, and as predicted, they continued their hot start to the season with a big win. Our Lock of the Week was the Colts winning against the Jags, and even without Andrew Luck, Indy pulled it off. For the week, our NFL simulation engine ﬁnished 9-6 and 4-4 against the spread. Nailed It: The NFL simulation engine had no problems with the Denver-Minnesota game. The engine predicted the Broncos would win by an average score of 27-20. The actual ﬁnal score? Broncos 23, Vikings 20. Wide Right: Its ﬁtting that the Buffalo Bills show up here at least once, right? The NFL simulation engine predicted the Bills would beat the Giants by an average score of 26-20 and win 64.4 percent of the time, but the Giants took care of business and upset the Bills 24-10 instead. Track our 2015 performance or view our accuracy last season. Week 5 Game to Watch Seattle at Cincinnati: The undefeated Bengals will play host to the reigning NFC champs ... ... ... Gold With news that Olivia’s (other) ex Edison Davis (Norm Lewis) is joining the race, Shondaland has completed",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 28,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "The undefeated Bengals will play host to the reigning NFC champs ... ... ... Gold With news that Olivia’s (other) ex Edison Davis (Norm Lewis) is joining the race, Shondaland has completed the fantasy. Model Y’all think a little toy buzzer is going to keep the truth from tumbling out from these jaws? ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 28,
+      "type": "Text",
+      "start_index": 1809
+    }
+  },
+  {
+    "content": "Table I.10: Generated summaries by PEGASUSLARGE (HugeNews) on Multi-News sampled by ROUGE1-F1. Multi-News ROUGE1-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 29,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.11: Generated summaries by PEGASUSLARGE (HugeNews) on Multi-News sampled by ROUGE2-F1. ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 30,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.12: Generated summaries by PEGASUSLARGE (HugeNews) on Multi-News sampled by ROUGEL-F1. Multi-News ”We stood there cryingﬁlming with tears rolling down our cheeks.” That’s Paul Nicklen’s take on a video he posted in December showing a starving polar bear on an island in the Canadian Arctic, National Geographic reports. The video was shot by Nicklen, a biologist and contributor to National Geographic, during a trip with the conservation group Sea Legacy. It shows the bear on Somerset Island, near the larger Bafﬁn Island, as it searches a garbage can for food. At one point, the bear shows signs of starvation. ”When scientists say bears are going extinct, I want people to realize what it looks like,” Nicklen tells National Geographic. ”Bears are going to starve to death. This is what a starving bear looks like.” The video has since been viewed more than 3.5 million times, and Nicklen says it struck a nerve. ”If you have any conscience at all, this video of a starving polar bear will break your heart,” Newsweek states. ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 31,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.13: Generated summaries by PEGASUSLARGE (HugeNews) on Gigaword sampled by ROUGE1-F1.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 32,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.14: Generated summaries by PEGASUSLARGE (HugeNews) on Gigaword sampled by ROUGE2-F1.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 33,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.15: Generated summaries by PEGASUSLARGE (HugeNews) on Gigaword sampled by ROUGEL-F1. Model Model UNK rope still broken ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 34,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.16: Generated summaries by PEGASUSLARGE (HugeNews) on WikiHow sampled by ROUGE1-F1. WikiHow Document (ID #295) If you hang up on a telemarketer right away, youll probably be placed on the no answer list, and will be called again eventually. You dont want to engage a telemarketer in conversation either, especially if you have absolutely no interest in their product or service. The easiest way to handle a telemarketer is to say, Please put me on your do not call list. If the telemarketer keeps interrupting you or a robot calls you, you might just have to hang up. If the same number persistently calls, report it to the FCC by calling 1-888-CALL-FCC or going to https://www.fcc.gov/. If you live in the United States, you can add yourself to the do not call registry. It’ll then become illegal for telemarketers to contact you: https://www.donotcall.gov/. If you do get contacted by a telemarketer after putting yourself on the list, you can report the number that called you to the FTC or FCC. If they tell you a mutual acquaintance or other contact, consider taking the call. If they dont or cant tell you, or if they got your contact information from some data pool or list, ask to be removed from their call list and hang up., Be clear about conveying your annoyance with phone calls, especially if you might want to do business with or purchase something from that company but dont want annoying callers. Make sure you provide them with an email address speciﬁcally for spam or sales deals. Gold Dont just hang up right away. Add yourself to the national do not call registry. Ask where they got your contact info. Tell them No calls, emails only. If youre running a business, in charge of purchasing, or otherwise need to ﬁeld sales pitches from time to time, tell telemarketers that you only respond to emails. Model Hang up immediately. Report persistent callers. Ask to be removed from the call list. Be clear about your preferences. ROUGE1-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 35,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.17: Generated summaries by PEGASUSLARGE (HugeNews) on WikiHow sampled by ROUGE2-F1. Gold Skip the sugar. Make hydration a priority. Try a piece of gum. Model Eat the right foods. Stay hydrated. Chew something. ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 36,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.18: Generated summaries by PEGASUSLARGE (HugeNews) on WikiHow sampled by ROUGEL-F1. Educate yourself. Be patient and kind. Keep them occupied. Don’t forget that people with dementia are different. Get support. Look for dementia products. ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 37,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.19: Generated summaries by PEGASUSLARGE (HugeNews) on Reddit TIFU sampled by ROUGE1-F1. Reddit TIFU",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 38,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.20: Generated summaries by PEGASUSLARGE (HugeNews) on Reddit TIFU sampled by ROUGE2-F1. Document (ID #293) this started two days ago and it followed up today. so we had a new sales guy start at the ofﬁce. i handle most of the i.t. helpdesk/network admin stuff as well as work in sales (its a private company). i was training him on our systems on his ﬁrst day and it got to around noon and a little bit past so we went out to lunch. chipotle! we’re talking about stuff getting to know each other. people always tend to ask questions about college, family blah blah blah. he asks me if i had any siblings, now this question is always tricky. well, my sister died 7 years ago, and i’m a pretty chill guy so i don’t like to bring it up and be the debby downer so i usually do a little white lie. if i have no connection whatsoever back to my real life i say 1, if not i say 2. so i said i have 2, i **was** the middle child growing up, (haven’t lied yet). hbu? he goes on saying he has an older sister.. nice dodged a bullet. so i make sure it went off on his topic so i didn’t have to lie through my teeth. i hate people feeling sorry for me, compassion isn’t really a trait that i have (before or after). so fast forward to today when he asks me to go to lunch again today. i try to keep my distance with people who i just meet just so i don’t seem like a stage 5 clinger. so i tell him the good place around the area and we go. this is when it gets bad.. he brings back up, ”so what do your sisters do” well i say my little sister is going to school ... ... ... Gold i lied to a new coworker about dead sister being alive, dads the boss. Model don’t lie to your boss. ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 39,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.21: Generated summaries by PEGASUSLARGE (HugeNews) on Reddit TIFU sampled by ROUGEL-F1. Reddit TIFU Document (ID #238) Model i pushed my brother and he broke his wrist. ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 40,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.22: Generated summaries by PEGASUSLARGE (HugeNews) on BIGPATENT sampled by ROUGE1-F1.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 41,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.23: Generated summaries by PEGASUSLARGE (HugeNews) on BIGPATENT sampled by ROUGE2-F1.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 42,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.24: Generated summaries by PEGASUSLARGE (HugeNews) on BIGPATENT sampled by ROUGEL-F1. BIGPATENT a paint ball gun control system which permits selective ﬁring of paint balls in response to the depression of the trigger . the system includes an electronic circuit which converts a dc current into a regulated pulse current , and an electromagnetic device which is actuated by the regulated pulse current to produce a reciprocating linear motion . a push rod attached to the emd is adapted to contact the trigger of the gun . ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 43,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.25: Generated summaries by PEGASUSLARGE (HugeNews) on arXiv sampled by ROUGE1-F1. arXiv ROUGE1-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 44,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.26: Generated summaries by PEGASUSLARGE (HugeNews) on arXiv sampled by ROUGE2-F1. arXiv ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 45,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.27: Generated summaries by PEGASUSLARGE (HugeNews) on arXiv sampled by ROUGEL-F1. ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 46,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.28: Generated summaries by PEGASUSLARGE (HugeNews) on PubMed sampled by ROUGE1-F1. ROUGE1-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 47,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.29: Generated summaries by PEGASUSLARGE (HugeNews) on PubMed sampled by ROUGE2-F1. PubMed ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 48,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.30: Generated summaries by PEGASUSLARGE (HugeNews) on PubMed sampled by ROUGEL-F1. PubMed Document (ID #240) ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 49,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.31: Generated summaries by PEGASUSLARGE (HugeNews) on AESLC sampled by ROUGE1-F1. ROUGE1-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 50,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.32: Generated summaries by PEGASUSLARGE (HugeNews) on AESLC sampled by ROUGE2-F1.",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 51,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.33: Generated summaries by PEGASUSLARGE (HugeNews) on AESLC sampled by ROUGEL-F1. ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 52,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.34: Generated summaries by PEGASUSLARGE (HugeNews) on BillSum sampled by ROUGE1-F1. BillSum ROUGE1-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 53,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Table I.35: Generated summaries by PEGASUSLARGE (HugeNews) on BillSum sampled by ROUGE2-F1. BillSum Document (ID #153) SECTION 1. SHORT TITLE. This Act may be cited as the Statewide PTV Access Act of 2009”. SEC. 2. SECONDARY TRANSMISSION OF NON- COMMERCIAL STATIONS BY SATELLITE CARRIERS OUTSIDE LOCAL MARKETS. (a) Secondary Transmissions.–Section 119(a)(2)(C) of title 17, United States Code, is amended– (1) by redesignating clauses (iii), (iv), and (v) as clauses (iv), (v), and (vi), respectively; and (2) by inserting after clause (ii) the following: (iii) Noncommercial educational broadcast stations.– (I) Secondary transmissions within state-wide network.–In the case of a State-wide network of noncommercial educational broadcast stations, the statutory license provided for in subparagraph (A) shall apply to the secondary transmission of any noncommercial educational broadcast station in that State-wide network to any subscriber in any county within that State that is located outside that station’s local market and is not served by a noncommercial educational television broadcast station that is located within that State. (II) State-wide network deﬁned.–In this clause, the term State-wide network of noncommercial educational broadcast stations’ is a network of three or more noncommercial educational broadcast stations that are licensed to a single State, political, educational, or special purpose subdivision of a State, or a single public agency.”. (b) Royalty Fee.–Section 119(b)(1)(B) of title 17, United States Code, is amended by inserting or paragraph (2)(C)(iii)” after subscriber under paragraph (3)”. SEC. 3. AMENDMENTS TO THE COMMUNICATIONS ACT OF 1934. (a) In General.–Section 325(b)(2) of the Communications Act of 1934 (47 U.S.C. 325 (b)(2)) is amended– (1) by striking or” at the end of subparagraph (D); (2) by striking the period at the end of subparagraph (E) and inserting ; or”; and (3) by inserting after subparagraph (E) the following new subparagraph: (F)",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 54,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "or” at the end of subparagraph (D); (2) by striking the period at the end of subparagraph (E) and inserting ; or”; and (3) by inserting after subparagraph (E) the following new subparagraph: (F) to retransmission of ... ... ... ROUGE2-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 54,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "Table I.36: Generated summaries by PEGASUSLARGE (HugeNews) on BillSum sampled by ROUGEL-F1. BillSum Document (ID #94) SECTION 1. SHORT TITLE. This Act may be cited as the Sensible Estate Tax Act of 2008”. SEC. 2. RESTORATION OF ESTATE TAX; REPEAL OF CARRYOVER BASIS. (a) In General.–The following provisions of the Economic Growth and Tax Relief Reconciliation Act of 2001, and the amendments made by such provisions, are hereby repealed: (1) Subtitles A and E of title V. (2) Subsection (d), and so much of subsection (f)(3) as relates to subsection (d), of section 511. (3) Paragraph (2) of subsection (b), and paragraph (2) of subsection (e), of section 521. The Internal Revenue Code of 1986 shall be applied as if such provisions and amendments had never been enacted. (b) Sunset Not To Apply.– (1) Subsection (a) of section 901 of the Economic Growth and Tax Relief Reconciliation Act of 2001 is amended by striking this Act” and all that follows and inserting this Act (other than title V) shall not apply to taxable, plan, or limitation years beginning after December 31, 2010.”. (2) Subsection (b) of such section 901 is amended by striking , estates, gifts, and transfers”. SEC. 3. UNIFIED CREDIT AGAINST THE ESTATE TAX. (a) In General.– Subsection (c) of section 2010 of the Internal Revenue Code of 1986 (relating to applicable credit amount) is amended by striking all that follows the applicable exclusion amount” and inserting . For purposes of the preceding sentence, the applicable exclusion amount is $2,000,000.”. (b) Inﬂation Adjustment.–Subsection (c) of section 2010 of such Code, as amended by subsection (a), is amended– (1) by striking For purposes of this section,” and inserting the following: (1) In general.–For purposes of this section,”, and (2) by adding at the end the following new paragraph: ... ... ... Meeting Our Responsibility to Medicare Beneﬁciaries Act of 2005 - Amends title XVIII (Medicare) of the Social Security Act to repeal the prohi- bition against",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 55,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "the following new paragraph: ... ... ... Meeting Our Responsibility to Medicare Beneﬁciaries Act of 2005 - Amends title XVIII (Medicare) of the Social Security Act to repeal the prohi- bition against interference by the Secretary of Health and Human Services with the negotiations between drug manufacturers and pharmacies and prescription drug plan sponsors. Grants the Secretary authority to negotiate contracts with manufacturers of covered Medicare part D (Voluntary Prescription Drug Beneﬁt Program) drugs, consistent with requirements and in furtherance of the goals of providing quality care and containing costs under Medicare part D. Requires the Secretary to exercise such authority with respect to covered part D drugs offered under fallback prescription drug plans, if the Secretary determines that the negotiated prices are not fair and affordable prices compared to prices obtained by other Federal programs for such drugs. Eliminates the MA Regional Plan Stabilization Fund (Slush Fund). Directs the Secretary to ensure that payments to Medicare Advantage organizations are adjusted based on factors to ensure that the health status of the enrollee is reﬂected in such adjusted payments, including adjusting for the difference between the health status of the enrollee and individuals enrolled under the original Medicare fee-for-service program under parts A and B of title XVIII (Medicare) of the Social Security Act. Amends SSA title XVIII to provide for a waiver of the part D late enrollment penalty for the transition period ROUGEL-F1",
+    "metadata": {
+      "filename": "1912.08777.pdf",
+      "page_number": 55,
+      "type": "Text",
+      "start_index": 1798
+    }
+  }
+]

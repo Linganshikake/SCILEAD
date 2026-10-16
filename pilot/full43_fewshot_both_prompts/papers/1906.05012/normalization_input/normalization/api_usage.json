@@ -1,0 +1,440 @@
+{
+  "attempts": 9,
+  "successful_responses": 9,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 10280,
+  "completion_tokens": 32,
+  "total_tokens": 10312,
+  "request_seconds": 18.624999999068677,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 1,
+        "field": "Task"
+      },
+      "prompt_sha256": "5bc5ff0a4ee71d292b54fc282ecfbe35a936d96acfa0b85b36d1e22512fe1705",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7glnmXCi3FWeLFEBGFAT61zxgFL",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 15,
+          "engine_ttft_ms": 40,
+          "engine_ttlt_ms": 99,
+          "pre_inference_ms": 75,
+          "service_tbt_ms": 9,
+          "service_ttft_ms": 283,
+          "service_ttlt_ms": 312,
+          "user_visible_ttft_ms": 208
+        },
+        "prompt_tokens": 1038,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1041
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "Summarization",
+      "response_sha256": "2be1a49bf262d760094b6fb2a7c944e75c2e0d4d75319685a29c0d19ad32c433",
+      "seconds": 1.6720000002533197
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 2,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 1,
+        "field": "Dataset"
+      },
+      "prompt_sha256": "fbcfcae8294a3fb4ba9dea213de6c0fd9538965242393cef9f35f99aece4baca",
+      "candidate_sha256": "b91ced4d2d7642a5aa2765e96aac3d313fa7fa573e5b47bce35cf4f08719d34b",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7gmfBZJLZlTo8WZpoBxecydFAjG",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 312,
+          "engine_ttlt_ms": 313,
+          "pre_inference_ms": 93,
+          "service_tbt_ms": 11,
+          "service_ttft_ms": 766,
+          "service_ttlt_ms": 799,
+          "user_visible_ttft_ms": 673
+        },
+        "prompt_tokens": 1340,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1152
+        },
+        "total_tokens": 1343
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Gigaword",
+      "response_sha256": "b28d454a78e9f8fcfa58b1402565f37b33918133373bf0c5df24549cdef72828",
+      "seconds": 1.6409999998286366
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 3,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 1,
+        "field": "Metric"
+      },
+      "prompt_sha256": "22fd01559ec3521bc06c6216c8acc28951f028c4e3a3d2ef8007bd819b577c1f",
+      "candidate_sha256": "950f9f8f9fd1b873e1269d87fdd9243e7ef494e02f00bc2e6dc83e36cd0c6bbd",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7goLrLSVeyK4bQZnLE3UDxaz7qp",
+      "usage": {
+        "completion_tokens": 5,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 7,
+          "engine_ttft_ms": 28,
+          "engine_ttlt_ms": 70,
+          "pre_inference_ms": 291,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 859,
+          "service_ttlt_ms": 896,
+          "user_visible_ttft_ms": 567
+        },
+        "prompt_tokens": 1049,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1024
+        },
+        "total_tokens": 1054
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "ROGUE-1",
+      "response_sha256": "92b327d8d4f24b83a2ab2d46c9ce174400b9082dc9608ed7d788997e988ae446",
+      "seconds": 1.9849999994039536
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 4,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 2,
+        "field": "Task"
+      },
+      "prompt_sha256": "5bc5ff0a4ee71d292b54fc282ecfbe35a936d96acfa0b85b36d1e22512fe1705",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7gqrLxx6ywo0B2yQO3qhWpUDIxK",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 314,
+          "engine_ttlt_ms": 315,
+          "pre_inference_ms": 121,
+          "service_tbt_ms": 0,
+          "service_ttft_ms": 792,
+          "service_ttlt_ms": 794,
+          "user_visible_ttft_ms": 671
+        },
+        "prompt_tokens": 1038,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1041
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Summarization",
+      "response_sha256": "f2d9d3a6b2fb663782435024d968dabb0c0e27aba7eeb3d82b3039f9c7f8d5ab",
+      "seconds": 2.2029999997466803
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 5,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 2,
+        "field": "Dataset"
+      },
+      "prompt_sha256": "fbcfcae8294a3fb4ba9dea213de6c0fd9538965242393cef9f35f99aece4baca",
+      "candidate_sha256": "b91ced4d2d7642a5aa2765e96aac3d313fa7fa573e5b47bce35cf4f08719d34b",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7gvHHWNIyxqFv9epvG8nPcN9ovz",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 311,
+          "engine_ttlt_ms": 312,
+          "pre_inference_ms": 190,
+          "service_tbt_ms": 6,
+          "service_ttft_ms": 725,
+          "service_ttlt_ms": 743,
+          "user_visible_ttft_ms": 535
+        },
+        "prompt_tokens": 1340,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1152
+        },
+        "total_tokens": 1343
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Gigaword",
+      "response_sha256": "965df13dca541e7007eebc3f7e674da35e7221845ca338f6446e04f55c990aac",
+      "seconds": 4.57799999974668
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 6,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 2,
+        "field": "Metric"
+      },
+      "prompt_sha256": "53d87fe91836e2d4d6bd5d68252660039cdfd80dd4447b8af53efa2b8339de32",
+      "candidate_sha256": "950f9f8f9fd1b873e1269d87fdd9243e7ef494e02f00bc2e6dc83e36cd0c6bbd",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7gx0bnpGnDLFykN80XzmVxiVXup",
+      "usage": {
+        "completion_tokens": 5,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 317,
+          "engine_ttlt_ms": 319,
+          "pre_inference_ms": 135,
+          "service_tbt_ms": 1,
+          "service_ttft_ms": 630,
+          "service_ttlt_ms": 637,
+          "user_visible_ttft_ms": 495
+        },
+        "prompt_tokens": 1049,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1054
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "ROGUE-2",
+      "response_sha256": "d1b0c32d2bf74cc928537b65461356bcfdde945c9a362c004a27c8bef7e014ce",
+      "seconds": 1.5619999999180436
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 7,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 3,
+        "field": "Task"
+      },
+      "prompt_sha256": "5bc5ff0a4ee71d292b54fc282ecfbe35a936d96acfa0b85b36d1e22512fe1705",
+      "candidate_sha256": "4c64b9ed9b1fd04b7f13b57cfec9a10501e90c7123c49169f44b2fa3e6f14e44",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7gzxkoQUg5e8Lpz4OpkK1ShK01S",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 32,
+          "engine_ttlt_ms": 49,
+          "pre_inference_ms": 150,
+          "service_tbt_ms": 6,
+          "service_ttft_ms": 505,
+          "service_ttlt_ms": 524,
+          "user_visible_ttft_ms": 356
+        },
+        "prompt_tokens": 1038,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1041
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "Summarization",
+      "response_sha256": "b794e069067bc0c29727c1e05ab08addfdb26da97a0f66658d1a18aab2c3cf92",
+      "seconds": 1.4840000001713634
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 8,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 3,
+        "field": "Dataset"
+      },
+      "prompt_sha256": "fbcfcae8294a3fb4ba9dea213de6c0fd9538965242393cef9f35f99aece4baca",
+      "candidate_sha256": "b91ced4d2d7642a5aa2765e96aac3d313fa7fa573e5b47bce35cf4f08719d34b",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7h0xyMoI0GMBJyeizfhfH9ZWnal",
+      "usage": {
+        "completion_tokens": 3,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 315,
+          "engine_ttlt_ms": 316,
+          "pre_inference_ms": 168,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 758,
+          "service_ttlt_ms": 779,
+          "user_visible_ttft_ms": 591
+        },
+        "prompt_tokens": 1340,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 1152
+        },
+        "total_tokens": 1343
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Gigaword",
+      "response_sha256": "4bbb925e41bed10d8bd3b1d3d63ad47724c9078a039b633cefc505af05abf0f6",
+      "seconds": 1.8590000001713634
+    },
+    {
+      "run_id": "fewshot_both_prompts",
+      "call": 9,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1906.05012.pdf",
+        "record": 3,
+        "field": "Metric"
+      },
+      "prompt_sha256": "9360a0fbe2f7e35cf06a38cec3bc3e93d22418bdd41bc840ae4f6a289b8300b2",
+      "candidate_sha256": "950f9f8f9fd1b873e1269d87fdd9243e7ef494e02f00bc2e6dc83e36cd0c6bbd",
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EZ7h2mPYqPqEulAutWst74JJve2jT",
+      "usage": {
+        "completion_tokens": 4,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 313,
+          "engine_ttlt_ms": 314,
+          "pre_inference_ms": 93,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 697,
+          "service_ttlt_ms": 714,
+          "user_visible_ttft_ms": 604
+        },
+        "prompt_tokens": 1048,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 1052
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "ROGUE-L",
+      "response_sha256": "4ee76ca6d4af6e737297749244ce290d9fa512fafac818ba313487b807ad32a9",
+      "seconds": 1.6409999998286366
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "content": "A Bi-model based RNN Semantic Frame Parsing Model for Intent Detection and Slot Filling Yilin Shen Samsung Research America {yu.wang1, yilin.shen, hongxia.jin}@samsung.com Jin Abstract Intent detection and slot ﬁlling are two main tasks for building a spoken language under- standing(SLU) system. Multiple deep learning based models have demonstrated good results on these tasks . The most effective algorithms are based on the structures of sequence to se- quence models (or ”encoder-decoder” mod- els), and generate the intents and semantic tags either using separate models((Yao et al., 2014; Mesnil et al., 2015; Peng and Yao, 2015; Kurata et al., 2016; Hahn et al., 2011)) or a joint model ((Liu and Lane, 2016a; Hakkani- T¨ur et al., 2016; Guo et al., 2014)). Most of the previous studies, however, either treat the intent detection and slot ﬁlling as two sepa- rate parallel tasks, or use a sequence to se- quence model to generate both semantic tags and intent. Most of these approaches use one (joint) NN based model (including encoder- decoder structure) to model two tasks, hence may not fully take advantage of the cross- impact between them. In this paper, new Bi-model based RNN semantic frame pars- ing network structures are designed to per- form the intent detection and slot ﬁlling tasks jointly, by considering their cross-impact to each other using two correlated bidirectional LSTMs (BLSTM). Our Bi-model structure with a decoder achieves state-of-the-art result on the benchmark ATIS data (Hemphill et al., 1990; Tur et al., 2010), with about 0.5% intent accuracy improvement and 0.9 % slot ﬁlling improvement. Introduction The research on spoken language understanding (SLU) system has progressed extremely fast dur- ing the past decades. Two important tasks in an SLU system are intent detection and slot ﬁlling. These two tasks are normally considered as paral- lel tasks but may have cross-impact on each other. The intent detection is treated as an utterance clas-",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "system are intent detection and slot ﬁlling. These two tasks are normally considered as paral- lel tasks but may have cross-impact on each other. The intent detection is treated as an utterance clas- siﬁcation problem, which can be modeled using conventional classiﬁers including regression, sup- port vector machines (SVMs) or even deep neu- ral networks (Haffner et al., 2003; Sarikaya et al., 2011). The slot ﬁlling task can be formulated as a sequence labeling problem, and the most pop- ular approaches with good performances are us- ing conditional random ﬁelds (CRFs) and recur- rent neural networks (RNN) as recent works (Xu and Sarikaya, 2013). Some works also suggested using one joint RNN model for generating results of the two tasks together, by taking advantage of the sequence to sequence(Sutskever et al., 2014) (or encoder- decoder) model, which also gives decent results as in literature(Liu and Lane, 2016a). In this paper, Bi-model based RNN structures are proposed to take the cross-impact between two tasks into account, hence can further improve the performance of modeling an SLU system. These models can generate the intent and semantic tags concurrently for each utterance. In our Bi-model structures, two task-networks are built for the pur- pose of intent detection and slot ﬁlling. Each task-network includes one BLSTM with or with- out a LSTM decoder (Hochreiter and Schmidhu- ber, 1997; Graves and Schmidhuber, 2005). The paper is organized as following: In sec- tion 2, a brief overview of existing deep learn- ing approaches for intent detection and slot ﬁll- ings are given. The new proposed Bi-model based RNN approach will be illustrated in detail in sec- tion 3. In section 4, two experiments on different datasets will be given. One is performed on the ATIS benchmark dataset, in order to demonstrate a state-of-the-art result for both semantic parsing tasks. The other experiment is tested on our inter- nal multi-domain dataset by comparing our new algorithm",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1792
+    }
+  },
+  {
+    "content": "dataset, in order to demonstrate a state-of-the-art result for both semantic parsing tasks. The other experiment is tested on our inter- nal multi-domain dataset by comparing our new algorithm with the current best performed RNN based joint model in literature for intent detection and slot ﬁlling.",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 3598
+    }
+  },
+  {
+    "content": "2 Background In this section, a brief background overview on using deep learning and RNN based approaches to perform intent detection and slot ﬁlling tasks is given. The joint model algorithm is also discussed for further comparison purpose. 2.1 Deep neural network for intent detection Using deep neural networks for intent detection is similar to a standard classiﬁcation problem, the only difference is that this classiﬁer is trained un- der a speciﬁc domain. For example, all data in ATIS dataset is under the ﬂight reservation do- main with 18 different intent labels. There are mainly two types of models that can be used: one is a feed-forward model by taking the average of all words’ vectors in an utterance as its input, the other way is by using the recurrent neural network which can take each word in an utterance as a vec- tor one by one (Xu and Sarikaya, 2014). 2.2 Recurrent Neural network for slot ﬁlling The slot ﬁlling task is a bit different from intent detection as there are multiple outputs for the task, hence only RNN model is a feasible approach for this scenario. The most straight-forward way is using single RNN model generating multiple se- manctic tags sequentially by reading in each word one by one (Liu and Lane, 2015; Mesnil et al., 2015; Peng and Yao, 2015). This approach has a constrain that the number of slot tags generated should be the same as that of words in an utter- ance. Another way to overcome this limitation is by using an encoder-decoder model containing two RNN models as an encoder for input and a decoder for output (Liu and Lane, 2016a). The ad- vantage of doing this is that it gives the system ca- pability of matching an input utterance and output slot tags with different lengths without the need of alignment. Besides using RNN, It is also possible to use the convolutional neural network (CNN) to- gether with a conditional random ﬁeld (CRF) to achieve slot ﬁlling task (Xu and Sarikaya, 2013). Joint model for two tasks It is also",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "also possible to use the convolutional neural network (CNN) to- gether with a conditional random ﬁeld (CRF) to achieve slot ﬁlling task (Xu and Sarikaya, 2013). Joint model for two tasks It is also possible to use one joint model for intent detection and slot ﬁlling (Guo et al., 2014; Liu and Lane, 2016a,b; Zhang and Wang, 2016; Hakkani- T¨ur et al., 2016). One way is by using one en- coder with two decoders, the ﬁrst decoder will generate sequential semantic tags and the second decoder generates the intent. Another approach is by consolidating the hidden states information from an RNN slot ﬁlling model, then generates its intent using an attention model (Liu and Lane, 2016a). Both of the two approaches demonstrates very good results on ATIS dataset. 3 Bi-model RNN structures for joint semantic frame parsing Despite the success of RNN based sequence to se- quence (or encoder-decoder) model on both tasks, most of the approaches in literature still use one single RNN model for each task or both tasks. They treat the intent detection and slot ﬁlling as two separate tasks. In this section, two new Bi-model structures are proposed to take their cross-impact into account, hence further improve their performance. One structure takes the advan- tage of a decoder structure and the other doesn’t. An asynchronous training approach based on two models’ cost functions is designed to adapt to these new structures. 3.1 Bi-model RNN Structures A graphical illustration of two Bi-model structures with and without a decoder is shown in Figure 1. The two structures are quite similar to each other except that Figure 1a contains a LSTM based de- coder, hence there is an extra decoder state st to be cascaded besides the encoder state ht. Remarks: The concept of using information from multiple- model/multi-modal to achieve better performance has been widely used in deep learning (Dean et al., 2012; Wang, 2017; Ngiam et al., 2011; Srivas- tava and Salakhutdinov, 2012), system identiﬁca-",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1796
+    }
+  },
+  {
+    "content": "model/multi-modal to achieve better performance has been widely used in deep learning (Dean et al., 2012; Wang, 2017; Ngiam et al., 2011; Srivas- tava and Salakhutdinov, 2012), system identiﬁca- tion (Murray-Smith and Johansen, 1997; Naren- dra et al., 2014, 2015) and also reinforcement learning ﬁeld recently (Narendra et al., 2016; Wang and Jin, 2018). Instead of using collective information, in this paper, our work introduces a totally new approach of training multiple neural networks asynchronously by sharing their internal state information. 3.1.1 Bi-model structure with a decoder The Bi-model structure with a decoder is shown as in Figure 1a. There are two inter-connected bidi- rectional LSTMs (BLSTMs) in the structure, one is for intent detection and the other is for slot ﬁll- ing. Each BLSTM reads in the input utterance se- quences (x1, x2, · · · , xn) forward and backward, and generates two sequences of hidden states hft and hbt. A concatenation of hft and hbt forms a",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3598
+    }
+  },
+  {
+    "content": "Intent: Flight Figure 1: Bi-model structure ﬁnal BLSTM state ht = [hft, hbt] at time step t. Hence, Our bidirectional LSTM fi(·) generates a sequence of hidden states (hi n), where i = 1 corresponds the network for intent detection task and i = 2 is for the slot ﬁlling task. t is com- bined together with h2 t from the other bidirectional LSTM f2(·) in slot ﬁlling task-network to generate the state of g1(·), s1 where ˆy1 all intent labels at the last time step n. n contains the predicted probabilities for For the slot ﬁlling task, a similar network struc- ture is constructed with a BLSTM f2(·) and a LSTM g2(·). f2(·) is the same as f1(·), by reading in the a word sequence as its input. The difference is that there will be an output y2 t at each time step t for g2(·), as it is a sequence labeling problem. At each step t: where y2 t. t is the predicted semantic tags at time step 3.1.2 Bi-Model structure without a decoder The Bi-model structure without a decoder is shown as in Figure 1b. In this model, there is no LSTM decoder as in the previous model. For the intent task, only one predicted output la- bel y1 intent is generated from BLSTM f1(·) at the last time step n, where n is the length of the ut- terance. Similarly, the state value h1 t and output intent label are generated as: For the slot ﬁlling task, the basic structure of BLSTM f2(·) is similar to that for the intent de- tection task f1(·), except that there is one slot tag label y2 t generated at each time step t. It also takes the hidden state from two BLSTMs f1(·) and f2(·), i.e. h1 together to generate its next state value h2 the slot tag y2 mathematically: 3.1.3 Asynchronous training One of the major differences in the Bi-model structure is its asynchronous training, which trains two task-networks based on their own cost func- tions in an asynchronous manner. The loss func- tion for intent detection task-network is L1, and for slot ﬁlling is L2. L1 and L2 are deﬁned using cross entropy as: and where k is",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "own cost func- tions in an asynchronous manner. The loss func- tion for intent detection task-network is L1, and for slot ﬁlling is L2. L1 and L2 are deﬁned using cross entropy as: and where k is the number of intent label types, m is the number of semantic tag types and n is the num- ber of words in a word sequence. In each train- ing iteration, both intent detection and slot ﬁlling networks will generate a groups of hidden states h1 and h2 from the models in previous iteration. The intent detection task-network reads in a batch",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1804
+    }
+  },
+  {
+    "content": "of input data xi and hidden states h2, and gener- ates the estimated intent labels ˆy1 intent. The intent detection task-network computes its cost based on function L1 and trained on that. Then the same batch of data xi will be fed into the slot ﬁlling task- network together with the hidden state h1 from in- tent task-network, and further generates a batch of outputs y2 i for each time step. Its cost value is then computed based on cost function L2, and further trained on that. The reason of using asynchronous training ap- proach is because of the importance of keeping two separate cost functions for different tasks. Do- ing this has two main advantages: 1. It ﬁlters the negative impact between two tasks in comparison to using only one joint model, by capturing more useful information and overcom- ing the structural limitation of one model. 2. The cross-impact between two tasks can only be learned by sharing hidden states of two models, which are trained using two cost functions sepa- rately. 4 Experiments In this section, our new proposed Bi-model struc- tures are trained and tested on two datasets, one is the public ATIS dataset (Hemphill et al., 1990) containing audio recordings of ﬂight reservations, and the other is our self-collected datset in three different domains: Food, Home and Movie. The ATIS dataset used in this paper follows the same format as in (Liu and Lane, 2015; Mesnil et al., 2015; Xu and Sarikaya, 2013; Liu and Lane, 2016a). The training set contains 4978 utterance and the test set contains 893 utterance, with a to- tal of 18 intent classes and 127 slot labels. The number of data for our self-collected dataset will be given in the corresponding experiment sections with a more detailed explanation. The perfor- mance is evaluated based on the classiﬁcation ac- curacy for intent detection task and F1-score for slot ﬁlling task. 4.1 Training Setup The layer sizes for both the LSTM and BLSTM networks in our model are chosen as 200. Based on the size",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "ac- curacy for intent detection task and F1-score for slot ﬁlling task. 4.1 Training Setup The layer sizes for both the LSTM and BLSTM networks in our model are chosen as 200. Based on the size of our dataset, the number of hidden layers is chosen as 2 and Adam optimization is used as in (Kingma and Ba, 2014). The size of word embedding is 300, which are initialized ran- domly at the beginning of experiment. 4.2 Performance on the ATIS dataset Our ﬁrst experiment is conducted on the ATIS benchmark dataset, and compared with the current existing approaches, by evaluating their intent detection accuracy and slot ﬁlling F1 scores. A Table 1: Performance of Different Models on ATIS Dataset detailed comparison is given in Table 1. Some of the models are designed for single slot ﬁlling task, hence only F1 scores are given. It can be observed that the new proposed Bi-model structures outperform the current state-of-the-art results on both intent detection and slot ﬁlling tasks, and the Bi-model with a decoder also outperform that without a decoder on our ATIS dataset. The current Bi-model with a decoder shows the state-of-the-art performance on ATIS benchmark dataset with 0.9% improvement on F1 score and 0.5% improvement on intent accuracy. Remarks: 1. It is worth noticing that the complexities of encoder-decoder based models are normally higher than the models without using encoder- decoder since two networks are used and more parameters need to be updated. This is another reason why we use two models with/without using encoder-decoder structures to demonstrate the new bi-model structure design. It can also be observed that the model with a decoder gives a better result due to its higher complexity. 2. It is also shown in the table that the joint model in (Liu and Lane, 2015, 2016a) achieves",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1806
+    }
+  },
+  {
+    "content": "better performance on intent detection task with slight degradation on slot ﬁlling, so a joint model is not necessary always better for both tasks. The bi-model approach overcomes this issue by generating two tasks’ results separately. 3. Despite the absolute improvement of intent accuracy and F1 scores are only 0.5% and 0.9% on ATIS dataset, the relative improvement is not small. For intent accuracy, the number of wrongly classiﬁed utterances reduced from 14 to 9, which gives us the 35.7% relative improvement on intent accuracy. Similarly, the relative improvement on F1 score is 22.63%. 4.3 Performance on multi-domain data In this experiment, the Bi-model structures are fur- ther tested on an internal collected dataset from our users in three domains: food, home and movie. There are 3 intents for each domain, 15 semantic tags in food domain, 16 semantic tags in home do- main, 14 semantic tags in movie domain. The data size of each domain is listed as in Table 2, and the split is 70% for training, 10% for validation and 20% for test. Due to the space limitation, only the best per- formed semantic frame parsing model on ATIS dataset in literature,i.e. attention based BiRNN (Liu and Lane, 2016a) is used for comparison with our Bi-model structures. Table 2 shows a perfor- mance comparison in three domains of data. The Bi-model structure with a decoder gives the best performance in all cases based on its intent accu- racy and slot ﬁlling F1 score. The intent accuracy has at least 0.5% improvement, the F1 score im- provement is around 1% to 3% for different do- mains. 5 Conclusion In this paper, a novel Bi-model based RNN seman- tic frame parsing model for intent detection and slot ﬁlling is proposed and tested. Two substruc- tures are discussed with the help of a decoder or not. The Bi-model structures achieve state-of-the- art performance for both intent detection and slot ﬁlling on ATIS benchmark data, and also surpass the previous best SLU model on the multi-domain",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "not. The Bi-model structures achieve state-of-the- art performance for both intent detection and slot ﬁlling on ATIS benchmark data, and also surpass the previous best SLU model on the multi-domain data. The Bi-model based RNN structure with a decoder also outperforms the Bi-model structure without a decoder on both ATIS and multi-domain data. References",
+    "metadata": {
+      "filename": "1812.10235.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1801
+    }
+  }
+]

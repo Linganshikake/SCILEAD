@@ -1,0 +1,66 @@
+Error importing huggingface_hub.hf_api: Write outside evaluation directory forbidden: C:\Users\Administrator\AppData\Local\Temp\g54z3o2w
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\leaderboard_eval_full43_uncapped\run_official_leaderboard_eval.py", line 9, in main
+    import leaderboard_eval as official
+  File "D:\C++\SCILEAD\emnlp2024-leaderboard-generation\leaderboard_eval.py", line 4, in <module>
+    import utils
+  File "D:\C++\SCILEAD\emnlp2024-leaderboard-generation\utils.py", line 1, in <module>
+    import model_init
+  File "D:\C++\SCILEAD\emnlp2024-leaderboard-generation\model_init.py", line 1, in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer, logging
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\transformers\__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\transformers\dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\transformers\utils\__init__.py", line 18, in <module>
+    from huggingface_hub import get_full_repo_name  # for backward compatibility
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1229, in _handle_fromlist
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\huggingface_hub\__init__.py", line 1044, in __getattr__
+    submod = importlib.import_module(submod_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\huggingface_hub\hf_api.py", line 56, in <module>
+    from ._commit_api import (
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\huggingface_hub\_commit_api.py", line 20, in <module>
+    from .file_download import hf_hub_url
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\huggingface_hub\file_download.py", line 22, in <module>
+    from ._local_folder import get_local_download_paths, read_download_metadata, write_download_metadata
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\huggingface_hub\_local_folder.py", line 61, in <module>
+    from .utils import WeakFileLock
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\huggingface_hub\utils\__init__.py", line 50, in <module>
+    from ._fixes import SoftTemporaryDirectory, WeakFileLock, yaml_dump
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\huggingface_hub\utils\_fixes.py", line 22, in <module>
+    from filelock import BaseFileLock, FileLock, SoftFileLock, Timeout
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\filelock\__init__.py", line 38, in <module>
+    from ._strict import StrictSoftFileClaim, StrictSoftFileClaimState, StrictSoftFileLock
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\filelock\_strict.py", line 79, in <module>
+    _LINK_HONORS_FOLLOW_SYMLINKS: Final[bool] = _probe_link_follow_symlinks()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\filelock\_strict.py", line 70, in _probe_link_follow_symlinks
+    with tempfile.TemporaryDirectory() as directory:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\tempfile.py", line 374, in mkdtemp
+    prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\tempfile.py", line 127, in _sanitize_params
+    dir = gettempdir()
+          ^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\tempfile.py", line 316, in gettempdir
+    return _os.fsdecode(_gettempdir())
+                        ^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\tempfile.py", line 309, in _gettempdir
+    tempdir = _get_default_tempdir()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\tempfile.py", line 204, in _get_default_tempdir
+    fd = _os.open(filename, _bin_openflags, 0o600)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\leaderboard_eval_full43_uncapped\common.py", line 20, in guard
+    if writing and not p.is_relative_to(RUN):raise RuntimeError('Write outside evaluation directory forbidden: '+str(p))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Write outside evaluation directory forbidden: C:\Users\Administrator\AppData\Local\Temp\g54z3o2w

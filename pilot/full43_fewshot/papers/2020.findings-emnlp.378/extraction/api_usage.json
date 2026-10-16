@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 6465,
+  "completion_tokens": 182,
+  "total_tokens": 6647,
+  "request_seconds": 5.484000000171363,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "c0926e6c6af6505de50032a5a2f7d2472d9aae9360af55ec5bf1f9e5e0f36ae8",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYx7n5ri51JlJf1fyussybQahwi9u",
+      "usage": {
+        "completion_tokens": 182,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 163,
+          "engine_ttlt_ms": 923,
+          "pre_inference_ms": 675,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 1213,
+          "service_ttlt_ms": 1993,
+          "user_visible_ttft_ms": 538
+        },
+        "prompt_tokens": 6465,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 6647
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Named Entity Recognition\", \"Dataset\": \"ON5E\", \"Metric\": \"F1\", \"Result\": \"90.32\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"WN16\", \"Metric\": \"F1\", \"Result\": \"55.14\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"WN17\", \"Metric\": \"F1\", \"Result\": \"50.68\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"ON4C\", \"Metric\": \"F1\", \"Result\": \"81.18\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"RE\", \"Metric\": \"F1\", \"Result\": \"96.62\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"WE\", \"Metric\": \"F1\", \"Result\": \"69.78\"}]",
+      "response_sha256": "be2d9019c3fd2eb0df2ff7ee9c77924b63edbbce0949ba1cb4ef35f67e9f3328",
+      "seconds": 5.484000000171363
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

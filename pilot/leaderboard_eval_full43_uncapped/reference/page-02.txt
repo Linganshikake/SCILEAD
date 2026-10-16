@@ -1,0 +1,103 @@
+quality control, such as normalizing the TDM en-
+tities across different leaderboards (Singh et al.,
+2019; Hou et al., 2019, 2021; Kabongo et al., 2021,
+2023a,b; Yang et al., 2022; Singh et al., 2024).
+However, these annotations are limited by indi-
+vidual researchers’ varying research interests, re-
+sulting in incomplete coverage of papers within a
+leaderboard and a lack of TDMs from each paper
+(see Appendix A for a detailed example). Such par-
+tial annotations hinder the evaluation of automatic
+leaderboard construction systems.
+Furthermore, all previous work on leaderboard
+construction mentioned above has formulated the
+task as matching the extracted TDM triples from a
+paper against a pre-defined TDM triple taxonomy.
+This assumption, however, falls short in capturing
+the dynamic nature of real-world scenarios. In re-
+ality, the landscape of leaderboards is constantly
+evolving, with new ones emerging as a natural con-
+sequence of ongoing research and innovation.
+To this end, we introduce SCILEAD, a manually-
+curated Scientific Leaderboard dataset, including
+27 leaderboards derived from 43 NLP papers. To
+avoid the pitfall of community-contributed leader-
+boards with incomplete and inaccurate information,
+we exhaustively annotate all unique TDM triples
+and the corresponding results from each paper and
+construct a complete leaderboard set for these pa-
+pers. As illustrated in Figure 1, we propose a three-
+stage framework for constructing leaderboards,
+harnessing the power of Large Language Mod-
+els (LLMs) through Retrieval-Augmented Gen-
+eration (RAG) prompting to streamline the pro-
+cess: (i) extracting task, dataset, metric and re-
+sult (TDMR) tuples from individual papers; (ii)
+normalizing extracted TDM triples to the existing
+pre-defined TDM triple taxonomy or creating new
+leaderboards; and (iii) ranking papers by their cor-
+responding performance to construct leaderboards.
+In the second step, we design three experimen-
+tal settings that mimic diverse real-world scenarios
+where we need to update existing leaderboards or
+create new ones from scratch. Specifically, the
+TDM triples are either fully specified, partially
+specified, or completely unknown during the con-
+struction process. Notably, the task becomes in-
+creasingly challenging in the second and third set-
+tings, which have been neglected by all prior work,
+as it demands reasoning across all existing leader-
+boards and generating novel ones.
+Following previous work, we evaluate TDM ex-
+traction using exact match metrics. We further
+propose various metrics to evaluate the constructed
+leaderboards, including coverage of correctly as-
+signed publications to the leaderboards and their
+result values. We also compare the rankings of the
+gold and constructed leaderboards.
+In summary, this work presents SCILEAD, a
+manually curated dataset of scientific leaderboards
+with comprehensive annotations. We propose an
+LLM-based framework for constructing scientific
+leaderboards in realistic scenarios. Our experi-
+ments demonstrate the competitiveness of our ap-
+proach in a cold start setting, where we evaluate its
+performance on four state-of-the-art LLMs. Fur-
+thermore, we show that our method can effectively
+reconstruct scientific leaderboards in real-world
+scenarios, highlighting its practical applicability.
+2 Related Work
+Scientific Leaderboard Construction. Table 1
+summarizes the differences between previous work
+and our study. In terms of data source, previous
+studies use either NLP-progress or paperswithcode.
+These sources, however, lack rigorous quality as-
+surance, such as standardizing TDM entities across
+different leaderboards and ensuring complete cov-
+erage of relevant publications. Similar to our work,
+Hou et al. (2019) and Kardas et al. (2020) extract
+TDM triples along with the results values and apply
+normalization for leaderboard construction. How-
+ever, both studies assume a closed domain and
+match extracted TDM triples to a pre-defined TDM
+triple taxonomy. On the other hand, some stud-
+ies only partially extract TDMR tuples and do not
+apply normalization. For example, Kabongo et al.
+(2023b) and Yang et al. (2022) extract TDM triples
+without results. Therefore, these works do not deal
+with leaderboard construction. In addition, Singh
+et al. (2024) extract the results values depending
+on the pre-defined TDM triples. Both Kabongo
+et al. (2023b) and Singh et al. (2024) leverage pre-
+defined TDM triples in an extraction process simi-
+lar to Hou et al. (2019). Since these approaches re-
+quire a pre-defined taxonomy of TDM triples, they
+are incompatible with a realistic task definition. In
+short, none of the previous work is adaptable to the
+constantly emerging benchmarks driven by new re-
+search and innovation. In this work, we address the
+aforementioned problems. Unlike previous work,
+we (1) manually construct our dataset directly from
+publications to ensure complete TDMR annota-
+tions, (2) apply normalization for leaderboard con-
+7964

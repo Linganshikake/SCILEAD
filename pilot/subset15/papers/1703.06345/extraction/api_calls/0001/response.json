@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n  {\"Task\": \"POS Tagging\", \"Dataset\": \"PTB\", \"Metric\": \"Accuracy\", \"Result\": \"95.41\"},\n  {\"Task\": \"Chunking\", \"Dataset\": \"CoNLL 2000\", \"Metric\": \"F1\", \"Result\": \"94.66\"},\n  {\"Task\": \"NER\", \"Dataset\": \"CoNLL 2003 English\", \"Metric\": \"F1\", \"Result\": \"91.21\"},\n  {\"Task\": \"NER\", \"Dataset\": \"CoNLL 2002 Spanish\", \"Metric\": \"F1\", \"Result\": \"85.77\"},\n  {\"Task\": \"NER\", \"Dataset\": \"CoNLL 2002 Dutch\", \"Metric\": \"F1\", \"Result\": \"85.19\"},\n  {\"Task\": \"POS Tagging\", \"Dataset\": \"Genia\", \"Metric\": \"Accuracy\", \"Result\": \"92.62\"},\n  {\"Task\": \"POS Tagging\", \"Dataset\": \"Twitter\", \"Metric\": \"Accuracy\", \"Result\": \"83.65\"}\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791890368,
+  "id": "chatcmpl-EYUpUxgEQZIzi9fmjYntI2VOAfdX3",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260929124039-e09d961f-default-r0-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 227,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 59,
+      "engine_ttlt_ms": 1019,
+      "pre_inference_ms": 299,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 585,
+      "service_ttlt_ms": 1551,
+      "user_visible_ttft_ms": 286
+    },
+    "prompt_tokens": 2046,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 2273
+  }
+}

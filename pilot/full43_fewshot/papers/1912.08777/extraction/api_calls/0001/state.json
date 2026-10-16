@@ -1,0 +1,47 @@
+{
+  "run_id": "fewshot",
+  "call": 1,
+  "status": "COMPLETE",
+  "position": {
+    "paper": "1912.08777.pdf",
+    "record": 0,
+    "field": "Extraction"
+  },
+  "prompt_sha256": "8c9d00752f07572e00fa0cd4b3f29ee594de21d7b77274b8e795b25838422ba6",
+  "candidate_sha256": null,
+  "requested_model": "gpt-4.1-2025-04-14",
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYxCBouaOimKiOQSlqxJNFcnD83G6",
+  "usage": {
+    "completion_tokens": 1238,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 3941,
+      "engine_ttlt_ms": 9397,
+      "pre_inference_ms": 263,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 5739,
+      "service_ttlt_ms": 11255,
+      "user_visible_ttft_ms": 5476
+    },
+    "prompt_tokens": 56753,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 57991
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_a265b6cf81",
+  "raw_answer": "[{\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"47.60\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"24.83\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"39.64\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"44.16\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"21.56\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"41.30\"}, {\"Task\": \"Summarization\", \"Dataset\": \"NEWSROOM\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"45.98\"}, {\"Task\": \"Summarization\", \"Dataset\": \"NEWSROOM\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"34.20\"}, {\"Task\": \"Summarization\", \"Dataset\": \"NEWSROOM\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"42.18\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Multi-News\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"47.65\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Multi-News\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"18.75\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Multi-News\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"24.95\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Gigaword\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"39.65\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Gigaword\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"20.47\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Gigaword\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"36.76\"}, {\"Task\": \"Summarization\", \"Dataset\": \"WikiHow\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"46.39\"}, {\"Task\": \"Summarization\", \"Dataset\": \"WikiHow\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"22.12\"}, {\"Task\": \"Summarization\", \"Dataset\": \"WikiHow\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"38.41\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Reddit TIFU\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"27.99\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Reddit TIFU\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"9.81\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Reddit TIFU\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"22.94\"}, {\"Task\": \"Summarization\", \"Dataset\": \"BIGPATENT\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"52.29\"}, {\"Task\": \"Summarization\", \"Dataset\": \"BIGPATENT\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"33.08\"}, {\"Task\": \"Summarization\", \"Dataset\": \"BIGPATENT\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"41.66\"}, {\"Task\": \"Summarization\", \"Dataset\": \"arXiv\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"44.21\"}, {\"Task\": \"Summarization\", \"Dataset\": \"arXiv\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"16.95\"}, {\"Task\": \"Summarization\", \"Dataset\": \"arXiv\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"25.67\"}, {\"Task\": \"Summarization\", \"Dataset\": \"PubMed\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"45.97\"}, {\"Task\": \"Summarization\", \"Dataset\": \"PubMed\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"20.15\"}, {\"Task\": \"Summarization\", \"Dataset\": \"PubMed\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"28.25\"}, {\"Task\": \"Summarization\", \"Dataset\": \"AESLC\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"37.68\"}, {\"Task\": \"Summarization\", \"Dataset\": \"AESLC\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"21.25\"}, {\"Task\": \"Summarization\", \"Dataset\": \"AESLC\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"36.51\"}, {\"Task\": \"Summarization\", \"Dataset\": \"BillSum\", \"Metric\": \"ROUGE-1 F1\", \"Result\": \"59.67\"}, {\"Task\": \"Summarization\", \"Dataset\": \"BillSum\", \"Metric\": \"ROUGE-2 F1\", \"Result\": \"41.58\"}, {\"Task\": \"Summarization\", \"Dataset\": \"BillSum\", \"Metric\": \"ROUGE-L F1\", \"Result\": \"47.59\"}]",
+  "response_sha256": "a4f3c8f03a014b5febae631cdb99e2f512b4199309d8060db5e11bbb893df766",
+  "seconds": 18.813000000081956
+}

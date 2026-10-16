@@ -1,0 +1,618 @@
+{
+  "requested_model": "gpt-4.1-2025-04-14",
+  "expected_requests": 10,
+  "actual_request_attempts": 10,
+  "completed_requests": 10,
+  "retries": 0,
+  "calls": [
+    {
+      "call": 1,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 1,
+        "record": 1,
+        "field": "Dataset",
+        "original_value": "WNUT-16",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: WNUT-16\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 529
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhIwFSDQ0Z48NyP7f6PLykyAN33",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 13,
+          "engine_ttft_ms": 42,
+          "engine_ttlt_ms": 133,
+          "pre_inference_ms": 185,
+          "service_tbt_ms": 14,
+          "service_ttft_ms": 345,
+          "service_ttlt_ms": 428,
+          "user_visible_ttft_ms": 160
+        },
+        "prompt_tokens": 529,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 535
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "WNUT-16 - English",
+      "seconds": 1.907,
+      "exact_member_of_standard_set": true
+    },
+    {
+      "call": 2,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 2,
+        "record": 2,
+        "field": "Dataset",
+        "original_value": "WNUT-17",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: WNUT-17\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 529
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhKKfkDkJUi8bbVA25lAapuTRcZ",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 16,
+          "engine_ttft_ms": 55,
+          "engine_ttlt_ms": 165,
+          "pre_inference_ms": 196,
+          "service_tbt_ms": 17,
+          "service_ttft_ms": 361,
+          "service_ttlt_ms": 465,
+          "user_visible_ttft_ms": 165
+        },
+        "prompt_tokens": 529,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 535
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "WNUT-17 - English",
+      "seconds": 1.469,
+      "exact_member_of_standard_set": true
+    },
+    {
+      "call": 3,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 3,
+        "record": 3,
+        "field": "Dataset",
+        "original_value": "CoNLL-03",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: CoNLL-03\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 529
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhLKyKfV8hjGuYL78H55FWsuj8C",
+      "usage": {
+        "completion_tokens": 1,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 7,
+          "engine_ttft_ms": 48,
+          "engine_ttlt_ms": 62,
+          "pre_inference_ms": 104,
+          "service_tbt_ms": 2,
+          "service_ttft_ms": 251,
+          "service_ttlt_ms": 253,
+          "user_visible_ttft_ms": 147
+        },
+        "prompt_tokens": 529,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 530
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "None",
+      "seconds": 1.297,
+      "exact_member_of_standard_set": false
+    },
+    {
+      "call": 4,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 4,
+        "record": 8,
+        "field": "Task",
+        "original_value": "Cross-domain NER Transfer",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Cross-domain NER Transfer\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 226
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhM8fFdZR6eGEnnBlvErqqaVoV1",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 313,
+          "engine_ttlt_ms": 314,
+          "pre_inference_ms": 122,
+          "service_tbt_ms": 3,
+          "service_ttft_ms": 957,
+          "service_ttlt_ms": 977,
+          "user_visible_ttft_ms": 835
+        },
+        "prompt_tokens": 226,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 232
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Named Entity Recognition (NER)",
+      "seconds": 1.875,
+      "exact_member_of_standard_set": true
+    },
+    {
+      "call": 5,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 5,
+        "record": 8,
+        "field": "Dataset",
+        "original_value": "CoNLL-03 (train) → CBS SciTech News (test)",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: CoNLL-03 (train) → CBS SciTech News (test)\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 539
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhOAqPL4EJfSiY31HZsifn8KP73",
+      "usage": {
+        "completion_tokens": 1,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 8,
+          "engine_ttft_ms": 47,
+          "engine_ttlt_ms": 63,
+          "pre_inference_ms": 229,
+          "service_tbt_ms": 13,
+          "service_ttft_ms": 431,
+          "service_ttlt_ms": 444,
+          "user_visible_ttft_ms": 202
+        },
+        "prompt_tokens": 539,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 540
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "None",
+      "seconds": 1.422,
+      "exact_member_of_standard_set": false
+    },
+    {
+      "call": 6,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 6,
+        "record": 9,
+        "field": "Task",
+        "original_value": "Semi-supervised NER",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Semi-supervised NER\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 226
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhQRIxYHdzcbNXnLEVEgEJ2vODt",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 5,
+          "engine_ttft_ms": 41,
+          "engine_ttlt_ms": 73,
+          "pre_inference_ms": 235,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 545,
+          "service_ttlt_ms": 570,
+          "user_visible_ttft_ms": 310
+        },
+        "prompt_tokens": 226,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 232
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "Named Entity Recognition (NER)",
+      "seconds": 1.594,
+      "exact_member_of_standard_set": true
+    },
+    {
+      "call": 7,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 7,
+        "record": 10,
+        "field": "Task",
+        "original_value": "NER with Context Retrieval",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: NER with Context Retrieval\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 226
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhR1H8InWBVeXxUBY23v2gr8up1",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 311,
+          "engine_ttlt_ms": 312,
+          "pre_inference_ms": 148,
+          "service_tbt_ms": 2,
+          "service_ttft_ms": 947,
+          "service_ttlt_ms": 962,
+          "user_visible_ttft_ms": 799
+        },
+        "prompt_tokens": 226,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 232
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Named Entity Recognition (NER)",
+      "seconds": 1.844,
+      "exact_member_of_standard_set": true
+    },
+    {
+      "call": 8,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 8,
+        "record": 10,
+        "field": "Dataset",
+        "original_value": "WNUT-17",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: WNUT-17\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 529
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhT3KV55SJRhYnhtGaH6UB4zinm",
+      "usage": {
+        "completion_tokens": 1,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 6,
+          "engine_ttft_ms": 44,
+          "engine_ttlt_ms": 56,
+          "pre_inference_ms": 247,
+          "service_tbt_ms": 11,
+          "service_ttft_ms": 479,
+          "service_ttlt_ms": 490,
+          "user_visible_ttft_ms": 232
+        },
+        "prompt_tokens": 529,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 530
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "None",
+      "seconds": 1.468,
+      "exact_member_of_standard_set": false
+    },
+    {
+      "call": 9,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 9,
+        "record": 11,
+        "field": "Task",
+        "original_value": "NER with Document-level Contexts",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: NER with Document-level Contexts\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 228
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhVqYO3uGWVTTJPLmg2KDnmQz4a",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 0,
+          "engine_ttft_ms": 317,
+          "engine_ttlt_ms": 318,
+          "pre_inference_ms": 173,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 923,
+          "service_ttlt_ms": 947,
+          "user_visible_ttft_ms": 750
+        },
+        "prompt_tokens": 228,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 234
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "Named Entity Recognition (NER)",
+      "seconds": 2.094,
+      "exact_member_of_standard_set": true
+    },
+    {
+      "call": 10,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 10,
+        "record": 11,
+        "field": "Dataset",
+        "original_value": "CoNLL-03",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+          },
+          {
+            "role": "user",
+            "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: CoNLL-03\n\nAnswer: "
+          }
+        ],
+        "estimated_prompt_tokens": 529
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYXhXbMEQWXyWFsMw3Tpc96yp48jl",
+      "usage": {
+        "completion_tokens": 1,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 8,
+          "engine_ttft_ms": 42,
+          "engine_ttlt_ms": 57,
+          "pre_inference_ms": 225,
+          "service_tbt_ms": 21,
+          "service_ttft_ms": 388,
+          "service_ttlt_ms": 409,
+          "user_visible_ttft_ms": 162
+        },
+        "prompt_tokens": 529,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 530
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "None",
+      "seconds": 1.563,
+      "exact_member_of_standard_set": false
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_accepted": true,
+  "seed_determinism_verified": false,
+  "candidate_order": "str(set), PYTHONHASHSEED=0",
+  "resume_policy": "Replay completed request at identical index/message only; no duplicate-name cache; unfinished attempts never retried",
+  "prompt_tokens": 4090,
+  "completion_tokens": 40,
+  "total_tokens": 4130
+}

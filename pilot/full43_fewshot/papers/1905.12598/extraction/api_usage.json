@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4834,
+  "completion_tokens": 222,
+  "total_tokens": 5056,
+  "request_seconds": 4.875,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1905.12598.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "d3a930bbf464645e8b6006a752af69e6b5addb6b2eff503c8ca4f76bc6d0562f",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxMkUskSK872u51jLm8V4qAutelb",
+      "usage": {
+        "completion_tokens": 222,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 73,
+          "engine_ttlt_ms": 962,
+          "pre_inference_ms": 224,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 578,
+          "service_ttlt_ms": 1407,
+          "user_visible_ttft_ms": 354
+        },
+        "prompt_tokens": 4834,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 5056
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Word Sense Induction\", \"Dataset\": \"SemEval 2013 Task 13\", \"Metric\": \"FNMI\", \"Result\": \"21.4\"}, {\"Task\": \"Word Sense Induction\", \"Dataset\": \"SemEval 2013 Task 13\", \"Metric\": \"FBC\", \"Result\": \"64.0\"}, {\"Task\": \"Word Sense Induction\", \"Dataset\": \"SemEval 2013 Task 13\", \"Metric\": \"AVG\", \"Result\": \"37.0\"}, {\"Task\": \"Word Sense Induction\", \"Dataset\": \"SemEval 2010 Task 14\", \"Metric\": \"F-S\", \"Result\": \"71.3\"}, {\"Task\": \"Word Sense Induction\", \"Dataset\": \"SemEval 2010 Task 14\", \"Metric\": \"V-M\", \"Result\": \"40.4\"}, {\"Task\": \"Word Sense Induction\", \"Dataset\": \"SemEval 2010 Task 14\", \"Metric\": \"AVG\", \"Result\": \"53.6\"}]",
+      "response_sha256": "35298288a581be3d6368a803d65c7bcf3e0c86db849aa5aaa102ee55e3a3bc00",
+      "seconds": 4.875
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

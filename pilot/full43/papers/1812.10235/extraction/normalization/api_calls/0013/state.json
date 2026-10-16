@@ -1,0 +1,59 @@
+{
+  "call": 13,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 13,
+    "record": 6,
+    "field": "Metric",
+    "original_value": "F1 Score",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: F1 Score\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 238
+  },
+  "max_tokens": null,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYWEvWUMAcRsgKtCebGQDFrQNKiIq",
+  "usage": {
+    "completion_tokens": 2,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 3,
+      "engine_ttft_ms": 34,
+      "engine_ttlt_ms": 42,
+      "pre_inference_ms": 256,
+      "service_tbt_ms": 2,
+      "service_ttft_ms": 11181,
+      "service_ttlt_ms": 11185,
+      "user_visible_ttft_ms": 10925
+    },
+    "prompt_tokens": 238,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 240
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "F1",
+  "seconds": 12.125
+}

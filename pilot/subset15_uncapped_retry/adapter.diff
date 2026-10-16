@@ -1,0 +1,45 @@
+--- previous_adapter
++++ authorized_uncapped_adapter
+@@ -18,7 +18,7 @@
+ import time
+ 
+ sys.dont_write_bytecode=True
+-ROOT=Path(__file__).resolve().parents[2]; REPO=ROOT/'emnlp2024-leaderboard-generation'; SUB=Path(os.environ.get('SCILEAD_RUN_ROOT',str(ROOT/'pilot/subset15'))).resolve()
++ROOT=Path(__file__).resolve().parents[2]; REPO=ROOT/'emnlp2024-leaderboard-generation'; SUB=Path(os.environ.get('SCILEAD_RUN_ROOT',str(ROOT/'pilot/subset15_uncapped_retry'))).resolve()
+ assert SUB.is_relative_to((ROOT/'pilot').resolve()),'Run root must remain inside SCILEAD/pilot'
+ MODEL='gpt-4.1-2025-04-14';BASE='https://9527.codes/v1';ENV_FILE=ROOT/'SCILEAD_small_test/.env'
+ KEY='';NETWORK=False;STAGE=''
+@@ -70,7 +70,8 @@
+     def request_hook(request):
+         payload=json.loads(request.content);a=ledger.active
+         assert request.method=='POST' and str(request.url)==BASE+'/chat/completions'
+-        assert payload['messages']==a['expected']['messages'] and payload['model']==MODEL and payload['max_tokens']==max_tokens and payload['temperature']==0 and payload['seed']==0
++        assert payload['messages']==a['expected']['messages'] and payload['model']==MODEL and payload.get('max_tokens')==max_tokens and payload['temperature']==0 and payload['seed']==0
++        assert max_tokens is not None or ('max_tokens' not in payload and 'max_completion_tokens' not in payload)
+         assert payload.get('n',1)==1 and not payload.get('stream',False)
+         assert len(list(calls.glob('*/attempt.json')))<len(plan)
+         with (a['folder']/'attempt.json').open('x',encoding='utf-8') as f:json.dump({'time':time.time(),'attempt':1},f)
+@@ -130,7 +131,7 @@
+     approval=read(SUB/'context_limit_exception.json')
+     assert approval['approved'] is True and row['id']==approval['paper']=='1912.08777.pdf'
+     input_limit=approval['input_limit']
+-    assert input_limit==60000 and approval['authorized_input_tokens']==54504
++    assert input_limit is None and approval['max_tokens'] is None and approval['authorized_input_tokens']==54504
+     out=Path(row['extraction_dir']);out.mkdir(parents=True,exist_ok=True)
+     if (out/'summary.json').exists():
+         s=read(out/'summary.json')
+@@ -148,10 +149,10 @@
+     assert plan==read(Path(approval['blocked_extraction_dir'])/'request_plan.json'),'Approved input changed'
+     assert sha(pre/'processed_docs.pkl')==approval['processed_docs_sha256']
+     save(out/'request_plan.json',plan)
+-    config={'paper':row['id'],'model':MODEL,'model_type':'gpt4-turbo-128k','is_few_shot':False,'zero_shot':True,'base_url':BASE,'temperature':0,'seed':0,'max_tokens':1024,'max_retries':0,'chain_type':'stuff','query':prompts['query'],'processed_docs_path':str(pre/'processed_docs.pkl'),'processed_docs_sha256':sha(pre/'processed_docs.pkl'),'evidence_count':len(docs),'prompt_sha256':sha(REPO/'prompts.json'),'estimated_prompt_tokens':tokens,'provider_context_limit':'UNVERIFIED','user_input_limit':input_limit,'input_limit_exception':str(SUB/'context_limit_exception.json')}
+-    save(out/'config.json',config);save(out/'dry_run.json',{'tokens':tokens,'under_30000':tokens<=30000,'within_authorized_exception':tokens<=input_limit,'paper_count':1,'evidence_count':len(docs),'gold_read':False})
+-    if tokens>input_limit:save(out/'summary.json',{'status':'TOKEN_LIMIT','tokens':tokens});return
+-    llm,ledger,client=model_with_ledger(out,plan,1024);start=time.monotonic()
++    config={'paper':row['id'],'model':MODEL,'model_type':'gpt4-turbo-128k','is_few_shot':False,'zero_shot':True,'base_url':BASE,'temperature':0,'seed':0,'max_tokens':None,'max_tokens_policy':'omitted; server determines output limit','max_retries':0,'chain_type':'stuff','query':prompts['query'],'processed_docs_path':str(pre/'processed_docs.pkl'),'processed_docs_sha256':sha(pre/'processed_docs.pkl'),'evidence_count':len(docs),'prompt_sha256':sha(REPO/'prompts.json'),'estimated_prompt_tokens':tokens,'provider_context_limit':'UNVERIFIED','user_input_limit':input_limit,'input_limit_exception':str(SUB/'context_limit_exception.json')}
++    save(out/'config.json',config);save(out/'dry_run.json',{'tokens':tokens,'under_30000':tokens<=30000,'within_authorized_exception':True,'paper_count':1,'evidence_count':len(docs),'gold_read':False})
++    assert tokens==54504, 'Previously approved complete input changed'
++    llm,ledger,client=model_with_ledger(out,plan,None);start=time.monotonic()
+     try:
+         chain=RetrievalQA.from_chain_type(llm=llm,chain_type='stuff',retriever=PreProcessedDocuments(docs=docs).init_retriever(),return_source_documents=True,chain_type_kwargs={'prompt':template})
+         result=chain.invoke(prompts['query']);assert result['source_documents']==docs

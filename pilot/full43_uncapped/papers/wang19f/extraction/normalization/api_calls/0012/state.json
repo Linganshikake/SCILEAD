@@ -1,0 +1,59 @@
+{
+  "call": 12,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 12,
+    "record": 5,
+    "field": "Dataset",
+    "original_value": "IWSLT2014 German→English",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'QQP', 'MRPC', 'BC5CDR', 'CoNLL-2002 - Spanish', 'WikiHow', 'NCBI', 'ReCoRD', 'ATIS', 'Multi-domain Food', 'WMT’14 EN-DE', 'SemEval 2013 Task 13', 'MapTask', 'Multi-domain Movie', 'Multi-domain Home', 'IWSLT’14 EN-DE', 'SQuAD 2.0', 'QNLI', 'Dailydialog (DyDA)', 'ELI5', 'STS-B', 'TACRED', 'Wikitext-2', 'WMT’14 EN-FR', 'CNN/DailyMail', 'CoNLL++', 'Newsroom', 'ICSI Meeting Recorder Dialog Act Corpus (MRDA)', 'Resume - Chinese', 'BIGPATENT', 'SNIPS', 'WMT’16 RO-EN', 'WMT’17 EN-ZH', 'Reddit TIFU', 'Google Billion Word', 'Multimodal', 'CoNLL-2000', 'AESLC', 'CoNLL-2003 - English', 'WNUT-16 - English', 'BillSum', 'Ontonotes v4 - Chinese', 'CoQA', 'New York Times (NYT)', 'Weibo - Chinese', 'CoLA', 'IWSLT’15 EN-VI', 'CoNLL-2002- Dutch', 'CCGBank', 'WNUT-17 - English', 'CoNLL-2003 - German', 'ConvAI2', 'Gigaword', 'SQuAD 1.1', 'SemEval 2010 Task 14', 'Multi-News', 'SST-2', 'WikiText-103', 'Ontonotes v5 - English', 'arXiv', 'PubMed', 'E-commerce', 'Penn Treebank (PTB)', 'Open Entity', 'WNLI', 'Switchboard Dialog Act Corpus (SWDA)', 'RTE', 'DSTC7', 'XSum', 'AX', 'MNLI-mm', 'MNLI-m'}\n\nInput: IWSLT2014 German→English\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 532
+  },
+  "max_tokens": null,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYXnb9C3QGB5FlQwEWPSjLXK7S36k",
+  "usage": {
+    "completion_tokens": 7,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 2,
+      "engine_ttft_ms": 50,
+      "engine_ttlt_ms": 68,
+      "pre_inference_ms": 90,
+      "service_tbt_ms": 2,
+      "service_ttft_ms": 201,
+      "service_ttlt_ms": 216,
+      "user_visible_ttft_ms": 111
+    },
+    "prompt_tokens": 532,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 539
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_a265b6cf81",
+  "raw_answer": "IWSLT’14 EN-DE",
+  "seconds": 2.172
+}

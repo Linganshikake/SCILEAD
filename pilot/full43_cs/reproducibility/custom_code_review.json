@@ -1,0 +1,70 @@
+{
+  "auto_map": {
+    "AutoConfig": "dangvantuan/bilingual_impl--config.BilingualConfig",
+    "AutoModel": "dangvantuan/bilingual_impl--modeling.BilingualModel",
+    "AutoModelForMaskedLM": "dangvantuan/bilingual_impl--modeling.BilingualForMaskedLM",
+    "AutoModelForMultipleChoice": "dangvantuan/bilingual_impl--modeling.BilingualForMultipleChoice",
+    "AutoModelForQuestionAnswering": "dangvantuan/bilingual_impl--modeling.BilingualForQuestionAnswering",
+    "AutoModelForSequenceClassification": "dangvantuan/bilingual_impl--modeling.BilingualForSequenceClassification",
+    "AutoModelForTokenClassification": "dangvantuan/bilingual_impl--modeling.BilingualForTokenClassification"
+  },
+  "actual_import_files": {
+    "config.py": {
+      "sha256": "44f0a6662cd9371ff1085e2e901f935904ac37074ac41779a804739297e1dfcd",
+      "imports": [
+        "collections",
+        "transformers.configuration_utils",
+        "transformers.onnx",
+        "transformers.utils",
+        "typing"
+      ],
+      "direct_eval_exec_open_import_calls": []
+    },
+    "modeling.py": {
+      "sha256": "5ec23be6e0619cf525a0b15225b4d47d1e1a9b56bebc31918ca17d487d1351b2",
+      "imports": [
+        "config",
+        "torch",
+        "torch.nn",
+        "transformers.activations",
+        "transformers.modeling_outputs",
+        "transformers.modeling_utils",
+        "transformers.pytorch_utils",
+        "transformers.utils",
+        "typing"
+      ],
+      "direct_eval_exec_open_import_calls": []
+    }
+  },
+  "review": "Inspected imports, top-level statements, model/config definitions and I/O patterns. Actual dependencies are torch, transformers, standard library, and relative config; no network/shell/config-reading operations in selected implementation.",
+  "unmodified_model_modules": [
+    {
+      "idx": 0,
+      "name": "0",
+      "path": "",
+      "type": "sentence_transformers.models.Transformer"
+    },
+    {
+      "idx": 1,
+      "name": "1",
+      "path": "1_Pooling",
+      "type": "sentence_transformers.models.Pooling"
+    },
+    {
+      "idx": 2,
+      "name": "2",
+      "path": "2_Normalize",
+      "type": "sentence_transformers.models.Normalize"
+    }
+  ],
+  "pooling": {
+    "word_embedding_dimension": 1024,
+    "pooling_mode_cls_token": false,
+    "pooling_mode_mean_tokens": true,
+    "pooling_mode_max_tokens": false,
+    "pooling_mode_mean_sqrt_len_tokens": false,
+    "pooling_mode_weightedmean_tokens": false,
+    "pooling_mode_lasttoken": false,
+    "include_prompt": true
+  }
+}

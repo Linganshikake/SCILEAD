@@ -1,0 +1,44 @@
+You will be given several parts of a research paper as input. Please extract different tuples including the name of the task
+addressed in the paper, utilized datasets and evaluation metrics and corresponding results. Extract these tuples for only
+the best results obtained by proposed methods of the paper not baselines. Please use json format for each different tuple.
+Example format: [{"Task": "Task name", "Dataset": "Dataset name", "Metric": "Metric name", "Result": "Result score"}].
+Your answer will immediately start with the json object satisfying the given template and contain nothing else.
+Table 21: System prompt for TDMR extraction from scientific papers.
+You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list.
+Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items
+matches, say None.
+Item list: {’Combinatory Categorial Grammar (CCG) Supertagging’, ’Constituency Parsing’, ’Dependency Parsing’,
+’Dialogue Act Classification’, ’Dialogue Generation’, ’Entity Typing’, ’Intent Detection and Slot Filling’, ’Language
+Modeling’, ’Linguistic Acceptability’, ’Machine Translation’, ’Named Entity Recognition (NER)’, ’Natural Language
+Inference (NLI)’, ’Paraphrase Detection’, ’Part-of-Speech (POS) Tagging’, ’Question Answering’, ’Question Generation’,
+’Relation Classification’, ’Response Generation’, ’Sentiment Analysis’, ’Summarization’, ’Text Chunking’, ’Text Similar-
+ity’, ’Word Sense Induction’}
+Input: POS Tagging
+Table 22: Example prompt for fully pre-defined TDM triples normalization setting of LLM outputs in terms of task
+names
+You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the
+list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other
+explanation.
+Item list: {’Combinatory Categorial Grammar (CCG) Supertagging’, ’Constituency Parsing’, ’Dependency Parsing’,
+’Dialogue Generation’, ’Entity Typing’, ’Language Modeling’, ’Linguistic Acceptability’, ’Machine Translation’, ’Natural
+Language Inference (NLI)’, ’Paraphrase Detection’, ’Part-of-Speech (POS) Tagging’, ’Question Answering’, ’Question
+Generation’, ’Relation Classification’, ’Response Generation’, ’Sentiment Analysis’, ’Summarization’, ’Text Chunking’,
+’Text Similarity’, ’Word Sense Induction’}
+Input: Named entity recognition
+Table 23: Example prompt for first step of partially pre-defined TDM triples normalization of LLM outputs in terms
+of task names. Different from the input set in Table 22, "Named Entity Recognition (NER)", "Intent Detection and
+Slot Filling" and "Dialogue Act Classification" tasks have been masked.
+You will be given a list of tuples. Then, an input tuple will be provided. If the input tuple matches one of the items in the
+list, your answer will be the matched item in the list. Else, output the tuple without changing it. Only output answer, DO
+NOT make any other explanation.
+Item list: {(Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, ATIS,
+Accuracy), (Summarization, CNN/DailyMail, ROGUE-1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy
+normalized mutual information (FNMI)), ...., (Machine Translation, WMT’14 EN-FR, BLEU), (Intent Detection and Slot
+Filling, SNIPS, F1), (Summarization, Gigaword, ROGUE-2), (Named Entity Recognition (NER), Ontonotes v5 - English,
+F1)}
+Input: (Entity Typing, WNUT-17, F1)
+Table 24: Example prompt for second step of partially pre-defined TDM triples normalization of LLM outputs
+in terms of task names. After the simulation of the newly introduced tasks or dataset, this prompt check whether
+given input matches with any leaderboard tuples to implement proper evaluation. Due to convenient demonstrations
+purposes, not all tuples in gold leaderboards are listed.
+7977

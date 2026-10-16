@@ -1,0 +1,102 @@
+{
+  "choices": [
+    {
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "detected": false,
+          "filtered": false
+        },
+        "protected_material_text": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[{\"Task\": \"Extreme Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-1\", \"Result\": \"31.89\"}, {\"Task\": \"Extreme Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-2\", \"Result\": \"11.54\"}, {\"Task\": \"Extreme Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-L\", \"Result\": \"25.75\"}, {\"Task\": \"Extreme Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"Human QA Accuracy\", \"Result\": \"46.05\"}, {\"Task\": \"Extreme Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"Human Ranking Score\", \"Result\": \"0.037\"}]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791999776,
+  "id": "chatcmpl-EYxI8LS7SVxOQh6TIBgKYoN9QxQ5k",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "serving_pipereplica": "d20260927094339-c1ca4ab1-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 164,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 6,
+      "engine_ttft_ms": 212,
+      "engine_ttlt_ms": 1158,
+      "pre_inference_ms": 219,
+      "service_tbt_ms": 6,
+      "service_ttft_ms": 530,
+      "service_ttlt_ms": 1472,
+      "user_visible_ttft_ms": 311
+    },
+    "prompt_tokens": 5755,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 5919
+  }
+}

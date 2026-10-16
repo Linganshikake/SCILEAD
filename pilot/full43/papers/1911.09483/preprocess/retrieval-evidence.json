@@ -1,0 +1,80 @@
+{
+  "1911.09483.pdf": [
+    {
+      "content": "training hyper-parameters are tuned on the validation set. MUSE-large For training MUSE-large, following Ott et al. (2018), parameters are updated every 32 steps. We train the model for 80K updates with a batch size of 5120 for En-Fr, and train the model for 30K updates with a batch size of 3584 for En-De. The dropout rate is set to 0.1 for En-Fr and 0.3 for En-De. We borrow the setup of optimizer from Wu et al. (2019a) and use the cosine learning rate schedule with 10000 warmup steps. The max learning rate is set to 0.001 on En-De translation and 0.0007 on En-Fr translation. For checkpoint averaging, following Wu et al. (2019a), we tune the average checkpoints for En-De translation tasks. For En-Fr translation, we do not average checkpoint but use the ﬁnal single checkpoint. MUSE-base We train and test MUSE-base on two small datasets, IWSLT 2014 De-En translation and IWSLT2015 En-Vi translation. Following Vaswani et al. (2017), we use Adam optimizer with a learning rate of 0.001. We use the warmup mechanism and invert the learning rate decay with warmup updates of 4K. For the De-En dataset, we train the model for 20K steps with a batch size of 4K. The parameters are updated every 4 steps. The dropout rate is set to 0.4. For the En-Vi dataset, we train the model for 10K steps with a batch size of 4K. The parameters are also updated every 4 steps. The dropout rate is set to 0.3. We save checkpoints every epoch and average the last 10 checkpoints for inference. During inference, we adopt beam search with a beam size of 5 for De-En, En-Fr and En-Vi trans- lation tasks. The length penalty is set to 0.8 for En-Fr according to the validation results, 1 for the two small datasets following the default setting of Ott et al. (2019). We do not tune beam width and length penalty but use the setting reported in Vaswani et al. (2017). The BLEU1 metric is adopted to evaluate the model performance during evaluation.",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 5,
+        "start_index": 1799,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "extractor. where W1, b1, W2, and b2 are projection parameters. 3 EXPERIMENT We evaluate MUSE on four machine translation tasks. This section describes the datasets, experi- mental settings, detailed results, and analysis. WMT14 En-Fr and En-De datasets The WMT 2014 English-French translation dataset, consisting of 36M sentence pairs, is adopted as a big dataset to test our model. We use the standard split of de- velopment set and test set. We use newstest2014 as the test set and use newstest2012 +newstest2013 as the development set. Following Gehring et al. (2017), we also adopt a joint source and target BPE factorization with the vocabulary size of 40K. For medium dataset, we borrow the setup of Vaswani et al. (2017) and adopt the WMT 2014 English-German translation dataset which consists of 4.5M sentence pairs, the BPE vocabulary size is set to 32K. The test and validation datasets we used are the same as Vaswani et al. (2017). IWSLT De-En and En-Vi datasets Besides, we perform experiments on two small IWSLT datasets to test the small version of MUSE with other comparable models. The IWSLT 2014 German-English",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 4,
+        "start_index": 1797,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "translation dataset consists of 160k sentence pairs. We also adopt a joint source and target BPE factorization with the vocabulary size of 32K. The IWSLT 2015 English-Vietnamese translation dataset consists of 133K training sentence pairs. For the En-Vi task, we build a dictionary including all source and target tokens. The vocabulary size for English is 17.2K, and the vocabulary size for the Vietnamese is 6.8K. For fair comparisons, we only compare models reported with the comparable model size and the same training data. We do not compare Wu et al. (2019b) because it is an ensemble method. We build MUSE-base and MUSE-large with the parameter size comparable to Transformer-base and Transformer-large. We adopt multi-head attention (Vaswani et al., 2017) as implementation of self- attention in MUSE module. The number of attention head is set to 4 for MUSE-base and 16 for MUSE-large. We also add the network architecture built by MUSE-simple in the similar way into the comparison. MUSE consists of 12 residual blocks for encoder and 12 residual blocks for decoder, the dimen- sion is set to 384 for MUSE-base and 768 for MUSE-large. The hidden dimension of non linear transformation is set to 768 for MUSE-base and 3072 for MUSE-large. The MUSE-large is trained on 4 Titan RTX GPUs while the MUSE-base is trained on a single NVIDIA RTX 2080Ti GPU. The batch size is calculated at the token level, which is called dynamic batching (Vaswani et al., 2017). We adopt dynamic convolution as the variant of depth-wise separa- ble convolution. We tune the kernel size on the validation set. For convolution with a single kernel, we use the kernel size of 7 for all layers. In case of dynamic selected kernels, the kernel size is 3 for small kernels and 15 for large kernels for all layers. The training hyper-parameters are tuned on the validation set. MUSE-large For training MUSE-large, following Ott et al. (2018), parameters are updated every 32 steps. We train the model for 80K updates",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 5,
+        "start_index": 0,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "language processing tasks. Recent studies explore convolutional neural networks (CNN) (Gehring et al., 2017) or self-attention (Vaswani et al., 2017) to support high-parallel sequence modeling and does not require auto-regressive structure during encoding, thus bringing large efﬁciency improve- ments. They are strong at capturing local or global dependencies. There are several studies on combining self-attention and convolution. However, they do not surpass both convectional and self-attention mechanisms. Sukhbaatar et al. (2019b) propose to augment convolution with self attention by directly concentrating them in computer vision tasks. However, as demonstrated in Table 3 there method does not work for sequence to sequence learning task. Since state-of-the-art models on question answering tasks still consist on self-attention and do no adopt ideas in QAnet (Yu et al., 2018). Both self-attention (Ott et al., 2018) and convolution (Wu et al., 2019a) outperforms Evolved transformer by near 2 BLEU scores on En-Fr translation. It seems that learning global and local context through stacking self-attention and convolution layers does not beat either self-attention or convolution models. In contrast, the proposed parallel multi- scale attention outperforms previous convolution or self-attention based models on main translation tasks, showing its effectiveness for sequence to sequence learning. 5 CONCLUSION AND FUTURE WORK Although the self-attention mechanism has been prevalent in sequence modeling, we ﬁnd that at- tention suffers from dispersed weights especially for long sequences, resulting from the insufﬁcient local information. To address this problem, we present Parallel Multi-scale Attention (MUSE) and MUSE-simple. MUSE-simple introduces the idea of parallel multi-scale attention into sequence to sequence learn- ing. And MUSE fuses self-attention, convolution, and point-wise transformation together to explic- itly learn global, local and token level sequence",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 9,
+        "start_index": 0,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "Table 1: MUSE-large outperforms all previous models under the standard training and evaluation setting on WMT14 En-De and WMT14 En-Fr datasets.\nModel En-De En-Fr ConvSeq2seq (Gehring et al., 2017) SliceNet (Kaiser et al., 2017) Transformer (Vaswani et al., 2017) Weighted Transformer (Ahmed et al., 2017) Layer-wise Coordination (He et al., 2018) Transformer (relative position) (Shaw et al., 2018) Transformer (Ott et al., 2018) Evolved Transformer (So et al., 2019) DynamicConv (Wu et al., 2019a) Local Joint Self-attention (Fonollosa et al., 2019) 25.2 26.1 28.4 28.9 29.1 29.2 29.3 29.8 29.7 29.7 40.5 - 41.0 41.4 - 41.5 43.2 41.3 43.2 43.3 MUSE-simple MUSE 29.8 29.9 43.2 43.5",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 6,
+        "type": "Table"
+      }
+    },
+    {
+      "content": "Table 2: MUSE-base outperforms previous state-of-the-art models on IWSLT De-En translation datasets and outperforms previous models without BPE processing on IWSLT En-Vi.\nModel En-Vi De-En NBMT (Huang et al., 2017) SACT (Lin et al., 2018) NP2MT (Feng et al., 2018) Fixup (Zhang et al., 2019) DynamicConv (Wu et al., 2019a) Macaron (Lu et al., 2019) Local Joint Self-attention (Fonollosa et al., 2019) 28.1 29.1 30.6 - - - - 30.1 - 31.7 34.5 35.2 35.4 35.7 MUSE-simple MUSE 30.7 31.3 35.8 36.3",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 6,
+        "type": "Table"
+      }
+    },
+    {
+      "content": "Table 3: Comparisons between MUSE and its variants on the IWSLT 2015 De-En translation task.\nModel BLEU MUSE MUSE-simple (without DepthConv) 36.3 35.8 substitute DepthConv with Convolution (k=3) substitute DepthConv with Convolution (k=5) substitute DepthConv with Convolution (k=7) 35.2 35.0 34.5 DepthConv without shared projection DepthConv single kernel (k=3) DepthConv single kernel (k=7) DepthConv single kernel (k=15) DepthConv single kernel (k=31) DepthConv single kernel (grow kernels among layers:3,7,15,31) DepthConv dynamically selected kernel (k=3,15) 34.9 36.2 36.2 36.0 35.8 35.9 36.3",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 7,
+        "type": "Table"
+      }
+    },
+    {
+      "content": "Table 4: The comparison between the inference speed of MUSE and Transformer.\nModel Inference Speed (tokens/s) Transformer MUSE 132 173 Acceleration 31%",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 8,
+        "type": "Table"
+      }
+    },
+    {
+      "content": "Table 5: Case study on the De-En dataset. The red bolded words denote the wrong translation and blue bolded words denote the correct translation. In case 1, transformer fails to capture the relationship between some words and their neighbors, such as “right” and “clap”. In case 2, the cause adverbial clause is correctly translated by MUSE while transformer misses the word “why” and fails to translate it.\nCase 1 Source wenn sie denken, dass die auf der linken seite jazz ist und die, auf der rechten seite swing ist, dann klatschen sie bitte. Target if you think the one on the left is jazz and the one on the right is swing, clap your hands. Transformer if you think it’s jazz on the left, and those on the right side of the swing are clapping, please. MUSE if you think the one on the left is jazz, and the one on the right is swing, please clap. Case 2 Source und deswegen haben wir uns entschlossen in berlin eine halle zu bauen, in der wir sozusagen die elektrischen verhltnisse der insel im mastab eins zu drei ganz genau abbilden knnen. Target and that’s why we decided to build a hall in berlin, where we could precisely reconstruct, so to speak, the electrical ratio of the island on a one to three scale. Transformer and so in berlin, we decided to build a hall where we could sort of map the electrical proportions of the island at scale one to three very precisely. MUSE and that’s why we decided to build a hall in berlin, where we can sort of map the electric relationship of the island at the scale one to three very precisely.",
+      "metadata": {
+        "filename": "1911.09483.pdf",
+        "page_number": 12,
+        "type": "Table"
+      }
+    }
+  ]
+}

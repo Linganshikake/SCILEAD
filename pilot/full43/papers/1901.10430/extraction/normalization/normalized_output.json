@@ -1,0 +1,148 @@
+{
+    "1901.10430.pdf": {
+        "normalized_output": [
+            {
+                "Task": "Machine Translation",
+                "Dataset": "WMT\u201914 EN-DE",
+                "Metric": "BLEU",
+                "Result": "29.7"
+            },
+            {
+                "Task": "Machine Translation",
+                "Dataset": "WMT\u201914 EN-FR",
+                "Metric": "BLEU",
+                "Result": "43.2"
+            },
+            {
+                "Task": "Machine Translation",
+                "Dataset": null,
+                "Metric": "BLEU",
+                "Result": "35.2"
+            },
+            {
+                "Task": "Machine Translation",
+                "Dataset": "WMT\u201917 EN-ZH",
+                "Metric": "BLEU",
+                "Result": "24.4"
+            },
+            {
+                "Task": "Language Modeling",
+                "Dataset": "Google Billion Word",
+                "Metric": "Perplexity",
+                "Result": "26.67"
+            },
+            {
+                "Task": "Summarization",
+                "Dataset": "CNN/DailyMail",
+                "Metric": null,
+                "Result": "39.84"
+            },
+            {
+                "Task": "Summarization",
+                "Dataset": "CNN/DailyMail",
+                "Metric": "ROGUE-2",
+                "Result": "16.25"
+            },
+            {
+                "Task": "Summarization",
+                "Dataset": "CNN/DailyMail",
+                "Metric": "ROGUE-L",
+                "Result": "36.73"
+            }
+        ],
+        "source_documents": [
+            {
+                "content": "Machine Translation. We report results on four benchmarks: For WMT English to German (En- De) we replicate the setup of Vaswani et al. (2017), based on WMT\u201916 training data with 4.5M sen- tence pairs, we validate on newstest2013 and test on newstest2014.3 The vocabulary is a 32K joint source and target byte pair encoding (BPE; Sennrich et al. 2016). For WMT English to French (En- Fr), we borrow the setup of Gehring et al. (2017) with 36M training sentence pairs from WMT\u201914, validate on newstest2012+2013 and test on newstest2014. The 40K vocabulary is based on a joint source and target BPE factorization. For WMT English to Chinese (Zh-En), we pre-process the WMT\u201917 training data following Hassan et al. (2018) resulting in 20M sentence pairs. We develop on devtest2017 and test on newstest2017. For IWSLT\u201914 German-English (De-En) we replicate the setup of Edunov et al. (2018) for 160K training sentence pairs and 10K joint BPE vocabulary. For this benchmark only, data is lowercased. For WMT En-De, WMT En-Fr, we measure case-sensitive tokenized BLEU.4 For WMT En-De only we apply compound splitting similar to Vaswani et al. (2017). For WMT Zh-En we measure detokenized BLEU to be comparable to Hassan et al. (2018).5 We train three random initializations of a each con\ufb01guration and report test accuracy of the seed which resulted in the highest validation BLEU. Ablations are conducted on the validation set and we report the mean BLEU and standard deviation on this set. WMT En-De, WMT En-Fr are based on beam search with a beam width of 5, IWSLT uses beam 4, and WMT Zh-En beam 8 following Hassan et al. (2018). For all datasets, we tune a length penalty as well as the number of checkpoints to average on the validation set. Language Modeling. We evaluate on the large-scale Billion word dataset (Chelba et al., 2013) which contains 768M tokens and has a vocabulary of nearly 800K types. Sentences in this dataset are shuf\ufb02ed and we batch sentences independently of each other. Models",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 5,
+                    "start_index": 0,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "dataset (Chelba et al., 2013) which contains 768M tokens and has a vocabulary of nearly 800K types. Sentences in this dataset are shuf\ufb02ed and we batch sentences independently of each other. Models are evaluated in terms of perplexity on the valid and test portions. Summarization. We test the model\u2019s ability to process long documents on the CNN-DailyMail summarization task (Hermann et al., 2015; Nallapati et al., 2016) comprising over 280K news arti- cles paired with multi-sentence summaries. Articles are truncated to 400 tokens (See et al., 2017) and we use a BPE vocabulary of 30K types (Fan et al., 2017). We evaluate in terms of F1-Rouge, that is Rouge-1, Rouge-2 and Rouge-L (Lin, 2004).6 When generating summaries, we follow stan- dard practice in tuning the maximum output length, disallowing repeating the same trigram, and we apply a stepwise length penalty (Paulus et al., 2017; Fan et al., 2017; Wu et al., 2016). Translation. We use a dropout rate of 0.3 for WMT En-De and IWSLT De-En, 0.1 for WMT En- Fr, and 0.25 for WMT Zh-En. WMT models are optimized with Adam and a cosine learning rate schedule (Kingma & Ba, 2015; Loshchilov & Hutter, 2016) where the learning rate is \ufb01rst linearly warmed up for 10K steps from 10\u22127 to 10\u22123 and then annealed following a cosine rate with a single cycle. For IWSLT\u201914 De-En, we use a schedule based on the inverse square root of the current step (Vaswani et al., 2017). We train the WMT models on 8 NVIDIA V100 GPUs for a total of 30K steps on WMT En-De, 40K steps for WMT Zh-En and 80K steps for WMT En-Fr. For IWSLT De-En we train for 50K steps on a single GPU. We use \ufb02oating point 16 precision and accumulate the gradients for 16 batches before applying an update (Ott et al., 2018), except for IWSLT where we do not accumulate gradients. Batches contain up to 459K source tokens and the same number of target tokens for both WMT En-De and WMT Zh-En, 655K for En-Fr, and 4K for IWSLT De-En. We use label smoothing with 0.1 weight for the",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 5,
+                    "start_index": 1803,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "REFERENCES",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 9,
+                    "start_index": 0,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "Batches contain up to 459K source tokens and the same number of target tokens for both WMT En-De and WMT Zh-En, 655K for En-Fr, and 4K for IWSLT De-En. We use label smoothing with 0.1 weight for the uniform prior distribution over the vocabulary (Szegedy et al., 2015; Pereyra et al., 2017). Language Modeling. We follow the same setup as for translation but remove the encoder module. For the Billion word benchmark we use an adaptive softmax output layer to reduce the computational burden of the large vocabulary (Grave et al., 2016; Press & Wolf, 2017) and tie it with variable sized 4https://github.com/moses-smt/mosesdecoder/blob/master/scripts/generic/multi-bleu.perl 5SacreBLEU hash: BLEU+case.mixed+lang.zh-en+numrefs.1+smooth.exp+test.wmt17+tok.13a+version.1.2.11 6We use the following parameters for ROUGE-1.5.5.pl: -m -a -n 2",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 5,
+                    "start_index": 3602,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "Table 1: Machine translation accuracy in terms of BLEU for WMT En-De and WMT En-Fr on newstest2014.\nModel Param (En-De) WMT En-De WMT En-Fr Gehring et al. (2017) Vaswani et al. (2017) Ahmed et al. (2017) Chen et al. (2018) Shaw et al. (2018) Ott et al. (2018) 216M 213M 213M 379M - 210M 25.2 28.4 28.9 28.5 29.2 29.3 40.5 41.0 41.4 41.0 41.5 43.2 LightConv DynamicConv 202M 213M 28.9 29.7 43.1 43.2",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 6,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 2: Machine translation accuracy in terms of BLEU on IWSLT and WMT Zh-En.\nModel Param (Zh-En) IWSLT WMT Zh-En Deng et al. (2018) Hassan et al. (2018) - - 33.1 - - 24.2 Self-attention baseline LightConv DynamicConv 292M 285M 296M 34.4 34.8 35.2 23.8 24.3 24.4",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 6,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 3: Ablation on WMT English-German newstest2013. (+) indicates that a result includes all preceding features. Speed results based on beam size 4, batch size 256 on an NVIDIA P100 GPU.\nModel Param BLEU Sent/sec Vaswani et al. (2017) Self-attention baseline (k=inf, H=16) Self-attention baseline (k=3,7,15,31x3, H=16) 213M 26.4 210M 26.9 \u00b1 0.1 210M 26.9 \u00b1 0.3 - 52.1 \u00b1 0.1 54.9 \u00b1 0.2 CNN (k=3) CNN Depthwise (k=3, H=1024) + Increasing kernel (k=3,7,15,31x4, H=1024) + DropConnect (H=1024) + Weight sharing (H=16) + Softmax-normalized weights [LightConv] (H=16) + Dynamic weights [DynamicConv] (H=16) Note: DynamicConv(H=16) w/o softmax-normalization 208M 25.9 \u00b1 0.2 195M 26.1 \u00b1 0.2 195M 26.4 \u00b1 0.2 195M 26.5 \u00b1 0.2 195M 26.5 \u00b1 0.1 195M 26.6 \u00b1 0.2 200M 26.9 \u00b1 0.2 diverges 200M 68.1 \u00b1 0.3 67.1 \u00b1 1.0 63.3 \u00b1 0.1 63.3 \u00b1 0.1 63.7 \u00b1 0.4 63.6 \u00b1 0.1 62.6 \u00b1 0.4 AAN decoder + self-attn encoder AAN decoder + AAN encoder 260M 26.8 \u00b1 0.1 310M 22.5 \u00b1 0.1 59.5 \u00b1 0.1 59.2 \u00b1 2.1",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 7,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 4: Language modeling results on the Google Billion Word test set. \u2020does not include embedding and softmax layers\nModel Param Valid Test 2-layer LSTM-8192-1024 (J\u00b4ozefowicz et al., 2016) Gated Convolutional Model (Dauphin et al., 2017) Mixture of Experts (Shazeer et al., 2017) \u2013 428M 4371M \u2020 \u2013 \u2013 \u2013 30.6 31.9 28.0 Self-attention baseline DynamicConv 331M 339M 26.67 26.60 26.73 26.67",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 8,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 5: Results on CNN-DailyMail summarization. We compare to likelihood trained approaches except for Celikyilmaz et al. (2018).\nModel Param Rouge-1 Rouge-2 Rouge-l LSTM (Paulus et al., 2017) CNN (Fan et al., 2017) - - 38.30 39.06 14.81 15.38 35.49 35.77 Self-attention baseline LightConv DynamicConv 90M 86M 87M 39.26 39.52 39.84 15.98 15.97 16.25 36.35 36.51 36.73 RL (Celikyilmaz et al., 2018) - 41.69 19.47 37.92",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 8,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 6: Alternatives to softmax-normalization in DynamicConv on WMT English-German new- stest2013 (\u20ac = 10~\u00b0).\nMethod BLEU W (No normalization) diverges softmax(W) 26.9 + 0.2 o(W) 26.6 + 0.3 anh(W) 25.6 + 0.2 wick diverges Ww + [Wwyete 26.8 + 0.2 power(W, 2) diverges abs(W) diverges wie: diverges abs(W) + iWlate 26.7 + 0.2",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 13,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 7: Inference speed of non-autoregressive models and small decoder versions of DynamicConv on WMT English-German newstest2014. For some models, the decoding speed (sent/sec) is derived by taking the inverse of the sentence generation latency in the literature.\nModel (batch size = 1, beam size = 1) Param BLEU Sent/sec NAT (+ FT) (Gu et al., 2018) NAT (+ FT + NPD=10) (Gu et al., 2018) NAT (+ FT + NPD=100) (Gu et al., 2018) LT, Improved Semhash (Kaiser et al., 2018) - - - - 17.7 18.7 19.2 19.8 25.6 12.7 3.9 9.5 IR idec = 1 (Lee et al., 2018) IR idec = 2 (Lee et al., 2018) IR idec = 5 (Lee et al., 2018) IR idec = 10 (Lee et al., 2018) IR Adaptive (Lee et al., 2018) - - - - - 13.9 17.0 20.3 21.6 21.5 - - - - - NART w/ hints (Li et al., 2019) NART w/ hints (B = 4, 9 candidates) (Li et al., 2019) - - 21.1 25.2 38.5 22.7 ENAT Embedding Mapping (Guo et al., 2019) ENAT Embedding Mapping (rescoring 9 candidates) (Guo et al., 2019) - - 20.7 24.3 41.7 20.4 Autoregressive (Gu et al., 2018) Autoregressive (Lee et al., 2018) Transformer (Li et al., 2019) Transformer (Guo et al., 2019) - - - - 22.7 23.8 27.3 27.4 2.5 - 1.3 1.6 DynamicConv (1-decoder layer (k=31)) DynamicConv (3-decoder layers (k=3,7,15)) DynamicConv (6-decoder layers (k=3,7,15,31,31,31)) 124M 153M 200M 26.1 27.7 28.5 15.2 7.2 3.9 Tok/sec - - - - 511.4 393.6 139.7 90.4 107.2 - - - - - 54.0 - - 423.0 202.3 110.9",
+                "metadata": {
+                    "filename": "1901.10430.pdf",
+                    "page_number": 14,
+                    "type": "Table"
+                }
+            }
+        ]
+    }
+}

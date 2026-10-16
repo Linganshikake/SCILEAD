@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Table 1: MUSE-large outperforms all previous models under the standard training and evaluation setting on WMT14 En-De and WMT14 En-Fr datasets.\nModel En-De En-Fr ConvSeq2seq (Gehring et al., 2017) SliceNet (Kaiser et al., 2017) Transformer (Vaswani et al., 2017) Weighted Transformer (Ahmed et al., 2017) Layer-wise Coordination (He et al., 2018) Transformer (relative position) (Shaw et al., 2018) Transformer (Ott et al., 2018) Evolved Transformer (So et al., 2019) DynamicConv (Wu et al., 2019a) Local Joint Self-attention (Fonollosa et al., 2019) 25.2 26.1 28.4 28.9 29.1 29.2 29.3 29.8 29.7 29.7 40.5 - 41.0 41.4 - 41.5 43.2 41.3 43.2 43.3 MUSE-simple MUSE 29.8 29.9 43.2 43.5",
+    "metadata": {
+      "filename": "1911.09483.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: MUSE-base outperforms previous state-of-the-art models on IWSLT De-En translation datasets and outperforms previous models without BPE processing on IWSLT En-Vi.\nModel En-Vi De-En NBMT (Huang et al., 2017) SACT (Lin et al., 2018) NP2MT (Feng et al., 2018) Fixup (Zhang et al., 2019) DynamicConv (Wu et al., 2019a) Macaron (Lu et al., 2019) Local Joint Self-attention (Fonollosa et al., 2019) 28.1 29.1 30.6 - - - - 30.1 - 31.7 34.5 35.2 35.4 35.7 MUSE-simple MUSE 30.7 31.3 35.8 36.3",
+    "metadata": {
+      "filename": "1911.09483.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: Comparisons between MUSE and its variants on the IWSLT 2015 De-En translation task.\nModel BLEU MUSE MUSE-simple (without DepthConv) 36.3 35.8 substitute DepthConv with Convolution (k=3) substitute DepthConv with Convolution (k=5) substitute DepthConv with Convolution (k=7) 35.2 35.0 34.5 DepthConv without shared projection DepthConv single kernel (k=3) DepthConv single kernel (k=7) DepthConv single kernel (k=15) DepthConv single kernel (k=31) DepthConv single kernel (grow kernels among layers:3,7,15,31) DepthConv dynamically selected kernel (k=3,15) 34.9 36.2 36.2 36.0 35.8 35.9 36.3",
+    "metadata": {
+      "filename": "1911.09483.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: The comparison between the inference speed of MUSE and Transformer.\nModel Inference Speed (tokens/s) Transformer MUSE 132 173 Acceleration 31%",
+    "metadata": {
+      "filename": "1911.09483.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Case study on the De-En dataset. The red bolded words denote the wrong translation and blue bolded words denote the correct translation. In case 1, transformer fails to capture the relationship between some words and their neighbors, such as “right” and “clap”. In case 2, the cause adverbial clause is correctly translated by MUSE while transformer misses the word “why” and fails to translate it.\nCase 1 Source wenn sie denken, dass die auf der linken seite jazz ist und die, auf der rechten seite swing ist, dann klatschen sie bitte. Target if you think the one on the left is jazz and the one on the right is swing, clap your hands. Transformer if you think it’s jazz on the left, and those on the right side of the swing are clapping, please. MUSE if you think the one on the left is jazz, and the one on the right is swing, please clap. Case 2 Source und deswegen haben wir uns entschlossen in berlin eine halle zu bauen, in der wir sozusagen die elektrischen verhltnisse der insel im mastab eins zu drei ganz genau abbilden knnen. Target and that’s why we decided to build a hall in berlin, where we could precisely reconstruct, so to speak, the electrical ratio of the island on a one to three scale. Transformer and so in berlin, we decided to build a hall where we could sort of map the electrical proportions of the island at scale one to three very precisely. MUSE and that’s why we decided to build a hall in berlin, where we can sort of map the electric relationship of the island at the scale one to three very precisely.",
+    "metadata": {
+      "filename": "1911.09483.pdf",
+      "page_number": 12,
+      "type": "Table"
+    }
+  }
+]

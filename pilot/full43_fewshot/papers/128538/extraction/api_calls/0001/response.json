@@ -1,0 +1,102 @@
+{
+  "choices": [
+    {
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "detected": false,
+          "filtered": false
+        },
+        "protected_material_text": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[{\"Task\": \"Named Entity Recognition\", \"Dataset\": \"WNUT 2016\", \"Metric\": \"F1\", \"Result\": \"53.48\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"WNUT 2017\", \"Metric\": \"F1\", \"Result\": \"50.52\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"CoNLL 2003 (English)\", \"Metric\": \"F1\", \"Result\": \"93.76\"}, {\"Task\": \"Named Entity Recognition (Multimodal)\", \"Dataset\": \"Multimodal\", \"Metric\": \"F1\", \"Result\": \"74.17\"}]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791999543,
+  "id": "chatcmpl-EYxENBHGEnf0sYCd54XzwOWIbnicU",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "serving_pipereplica": "d20260929094812-b8c9b166-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 139,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 140,
+      "engine_ttlt_ms": 787,
+      "pre_inference_ms": 141,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 764,
+      "service_ttlt_ms": 1406,
+      "user_visible_ttft_ms": 623
+    },
+    "prompt_tokens": 4531,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 4670
+  }
+}

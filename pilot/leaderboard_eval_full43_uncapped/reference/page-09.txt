@@ -1,0 +1,99 @@
+Evaluation R ∆R P ∆P F1 ∆F 1
+ETM 51.03 -3.50 51.01 -5.01 51.02 -4.25
+IIM - Task 92.66 1.56 92.11 1.49 92.39 1.53
+IIM - Dataset 85.55 -0.5 89.06 -3.58 87.27 -1.95
+IIM - Metric 93.39 6.93 95.74 7.56 94.55 7.24
+IIM - Result 67.78 -0.44 69.21 -1.13 68.48 -0.78
+Table 7: GPT-4 few-shot ETM and IIM results for fully
+pre-defined setting and delta values for zero-shot.
+Domain Task Dataset Metric Result CP
+NLP 0.76 0.88 0.88 0.44 0.59
+Med. 1.00 1.00 1.00 0.56 1.00
+All 0.84 0.92 0.92 0.48 0.72
+Table 8: Ratio of correct individual TDMR items in
+manual evaluated leaderboards in both domains. CP:
+Correctly assigned papers to leaderboards.
+sults in Table 7 show that few-shot prompting leads
+to a slight performance drop compared to zero-shot
+prompting for exact tuple match (ETM). In con-
+trast, for individual item match (IIM), the few-shot
+approach outperforms zero-shot prompting for task
+and metric extraction but underperforms for dataset
+and result extraction. Future research can explore
+better strategies for selecting few-shot examples to
+incorporate into the prompt (Wu et al., 2023).
+6.4 Results on Wild Datasets
+To get further insights into the performance of our
+framework in a real-world environment, we applied
+our framework to recent papers from two different
+domains (NLP and medical) and conducted manual
+analysis. We first collected 339 main conference
+and findings papers from the recent EACL 2024
+and sampled 12 papers from the medical domain
+from paperswithcode. We sampled papers from
+the most popular leaderboards in the medical do-
+main and manually checked whether their TDMR
+tuples matched the leaderboards. We performed the
+cold start setting with the best model (GPT-4) and
+gathered the same TDM triples to construct leader-
+boards from these papers. We sampled the most
+crowded 24 leaderboards and manually evaluated
+the correctness of TDMR tuples and leaderboards.
+Table 8 demonstrates that the task, dataset, and met-
+ric information is extracted and normalized with
+a high success rate. In contrast, there is signifi-
+cant room for improvement in the result extraction.
+Nevertheless, our framework can extract and nor-
+malize TDM triples, leading to high accuracy in
+assigning papers to the leaderboards across two do-
+mains. This emphasizes the generalizability of our
+framework for real-world scenarios.
+6.5 Error Analysis
+We performed a thorough error analysis from multi-
+ple angles. Given that extractingResults is the most
+challenging step for models, we identified the five
+papers with the lowest GPT-4 IIM-Results scores.
+Our analysis of 58 erroneous Results instances re-
+vealed three primary error categories. Firstly, 19
+errors (33%) occurred due to confusion with values
+in other tables, such as failing to extract the best
+results or mistakenly swapping dev and test sets.
+Secondly, 18 errors (31%) arose from confusion
+with the appendix material. Finally, the remaining
+21 errors (36%) involved missed extractions, often
+accompanied by errors in other TDM components.
+In addition, we also checked three leaderboards
+that have the lowest paper coverage scores and are
+constructed in the partially pre-defined setting. We
+observe that LLMs have difficulties normalizing
+task names that do not have similar surface forms
+to gold task names. For instance, “ Named Entity
+Recognition” is incorrectly mapped to “Syntactic
+Information Extraction”. We also observe errors
+in joint task names like Intent Detection and Slot
+Filling. Models may extract task names separately
+and not normalize them to the joint form.
+Furthermore, we observe that some errors can be
+attributed to the absence of explicit task or dataset
+names in the paper. For example, some papers in-
+troduce the tasks as GLUE Benchmark instead of
+referring to the original task names such as Sen-
+timent Analysis. This prevents the TDMR tuples
+from being associated with the correct leaderboards.
+Lastly, some errors occur due to the failure to re-
+trieve related text and tables from the papers.
+7 Conclusion
+We introduce SCILEAD, a new dataset addressing
+the limitations of existing leaderboard construction
+datasets by providing accurate and complete Task-
+Dataset-Metric-Result information from scientific
+papers. Furthermore, we develop an LLM-based
+framework to facilitate the automatic leaderboard
+construction process in realistic application scenar-
+ios. Our results show that LLMs excel in extract-
+ing task, dataset, and metric names and detecting
+correct leaderboards but struggle with extracting
+result values. Our work contributes to the auto-
+matic leaderboard construction problem, providing
+valuable insights for large-scale applications.
+7971

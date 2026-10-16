@@ -1,0 +1,108 @@
+{
+    "C18-1139.pdf": {
+        "normalized_output": [
+            {
+                "Task": "Named Entity Recognition (NER)",
+                "Dataset": null,
+                "Metric": "F1",
+                "Result": "93.09\u00b10.12"
+            },
+            {
+                "Task": "Named Entity Recognition (NER)",
+                "Dataset": null,
+                "Metric": "F1",
+                "Result": "88.32\u00b10.20"
+            },
+            {
+                "Task": "Text Chunking",
+                "Dataset": "CoNLL-2000",
+                "Metric": "F1",
+                "Result": "96.72\u00b10.05"
+            },
+            {
+                "Task": "Part-of-Speech (POS) Tagging",
+                "Dataset": "Penn Treebank (PTB)",
+                "Metric": "Accuracy",
+                "Result": "97.85\u00b10.01"
+            }
+        ],
+        "source_documents": [
+            {
+                "content": "Table 2: Summary of evaluation results or all proposed setups and baselines. We also list the best published scores for each task for reference. We signi\ufb01cantly outperform all previous works on NER, and slightly outperform the previous state-of-the-art in PoS tagging and chunking. 3.2 Model Training and Parameters Character-level language models. We train our LMs using SGD to perform truncated backpropagation through time (BPTT) with a window length of 250, a non-annealed learning rate of 20.0, a batch size of 100, clipping gradients at 0.25 and dropout probabilities of 0.25. We prepare the data by unking-the rarest 0.0001 percent of characters. We set the number of hidden states of the (one-layered) LSTM to 2048. We halt training by tracking the performance on the validation set, stopping when negligible gains were observed, or after 1 week, whichever came \ufb01rst. We train our English models on the 1-billion word corpus (Chelba et al., 2013) and our German models on a corpus of half a billion words aggregated from various open source corpora in the OPUS project2. After training, we \ufb01nd the models trained for the full week achieve character level perplexity on the supplied test-set of 2.42 for English and 2.38 for German. Resources did not allow us to train for longer or on larger language model variants. We hypothesize that more resources and time would permit learning an even better model. Sequence tagging model. We train the sequence tagging model using vanilla SGD with no momentum, clipping gradients at 5, for 150 epochs. We employ a simple learning rate annealing method in which we halve the learning rate if training loss does not fall for 5 consecutive epochs. Following recommendations of Reimers et al. (2017)\u2019s in-depth analysis of hyperparameters in sequence labeling, we utilize varia- tional dropout, set the number of hidden states per-layer of the LSTM to 256, set the number of LSTM layers to 1, and perform model selection over the learning rate \u2208 {0.01,",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 7,
+                    "start_index": 0,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "Scott Menard. 2018. Applied logistic regression analysis, volume 106. SAGE publications.",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 11,
+                    "start_index": 0,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "we utilize varia- tional dropout, set the number of hidden states per-layer of the LSTM to 256, set the number of LSTM layers to 1, and perform model selection over the learning rate \u2208 {0.01, 0.05, 0.1} and mini-batch size \u2208 {8, 16, 32}, choosing the model with the best F-measure (for NER and chunking) or accuracy (for PoS) in the best epoch as judged by performance on the validation set. Following Peters et al. (2017), we then repeat the experiment for the model chosen 5 times with different random seeds, and train using both train and development set, reporting both average performance and standard deviation over these runs on the test set as \ufb01nal performance. Classic word embeddings. Following Reimers et al. (2017), we use GLOVE embeddings for English NER and KOMNIOS embeddings (Komninos and Manandhar, 2016) for PoS tagging and chunking. For German, we use the German FASTTEXT embeddings (Grave et al., 2018). In con\ufb01gurations that train character features, we apply a BiLSTM with 25 hidden states to each word separately and extract the \ufb01nal hidden output states (see Lample et al. (2016)). 2We aggregate over the PARACRAWL, EUROPARL, OPENSUBTITLES2018, and WIKIPEDIA releases in OPUS for versatile text and to allow reproduction of our results.",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 7,
+                    "start_index": 1805,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "the impact of our proposed embeddings vis-a-vis earlier approaches. The setups are as follows: Proposed approach. We evaluate our proposed contextual string embeddings in the following con\ufb01gu- rations:",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 6,
+                    "start_index": 1807,
+                    "type": "Text"
+                }
+            },
+            {
+                "content": "Duncan Blythe Zalando Research M\u00a8uhlenstra\u00dfe 25 10243 Berlin {firstname.lastname}@zalando.de",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 1,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 1: Summary of evaluation results for best con\ufb01guration of proposed architecture, and current best published results. The proposed approach signi\ufb01cantly outperforms previous work on the CONLL03 NER task for German and English and slightly outperforms previous works on CONLL2000 chunking and Penn treebank PoS tagging.\nTask PROPOSED Previous best NER English NER German Chunking PoS tagging 93.09\u00b10.12 88.32\u00b10.2 96.72\u00b10.05 97.85\u00b10.01 92.22\u00b10.1 (Peters et al., 2018) 78.76 (Lample et al., 2016) 96.37\u00b10.05 (Peters et al., 2017) 97.64 (Choi, 2016)",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 3,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 2: Summary of evaluation results or all proposed setups and baselines. We also list the best published scores for each task for reference. We signi\ufb01cantly outperform all previous works on NER, and slightly outperform the previous state-of-the-art in PoS tagging and chunking.\nApproach NER-English F1-score NER-German F1-score Chunking F1-score POS Accuracy proposed PROPOSED PROPOSED+WORD PROPOSED+CHAR PROPOSED+WORD+CHAR PROPOSED+ALL 91.97\u00b10.04 93.07\u00b10.10 91.92\u00b10.03 93.09\u00b10.12 92.72\u00b10.09 85.78 \u00b1 0.18 88.20 \u00b1 0.21 85.88 \u00b1 0.20 88.32 \u00b1 0.20 n/a 96.68\u00b10.03 96.70\u00b10.04 96.72\u00b10.05 96.71\u00b10.07 96.65\u00b10.05 97.73\u00b10.02 97.82\u00b10.02 97.8\u00b10.01 97.76\u00b10.01 97.85\u00b10.01 baselines HUANG LAMPLE PETERS 88.54\u00b10.08 89.3\u00b10.23 92.34\u00b10.09 82.32 \u00b1 0.35 83.78 \u00b1 0.39 n/a 95.4\u00b10.08 95.34\u00b10.06 96.69\u00b10.05 96.94\u00b10.02 97.02\u00b10.03 97.81\u00b1 0.02 best published 92.22\u00b10.10 (Peters et al., 2018) 91.93\u00b10.19 (Peters et al., 2017) 91.71\u00b10.10 (Liu et al., 2017) 91.21 (Ma and Hovy, 2016) 78.76 (Lample et al., 2016) 77.20 (Seyler et al., 2017) 76.22 (Gillick et al., 2015) 75.72 (Qi et al., 2009) 96.37\u00b10.05 (Peters et al., 2017) 95.96\u00b10.08 (Liu et al., 2017) 95.77 (Hashimoto et al., 2016) 95.56 S\u00f8gaard et al. (2016) 97.64 (Choi, 2016) 97.55 (Ma and Hovy, 2016) 97.53\u00b10.03 (Liu et al., 2017) 97.30 (Lample et al., 2016)",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 7,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 3: Additional ablation experiment in which we evaluate our approach without BiLSTM and CRF. Here, we instead use a simple linear map over the embeddings to determine their direct information content.\nEmbedding + Architecture NER-English NER-German F1-score F1-score Chunking F1-score POS Accuracy PROPOSED+WORD +BiLSTM-CRF +Map-CRF +Map 93.07 \u00b1 0.10 90.17 \u00b1 0.06 79.86 \u00b1 0.12 88.20 \u00b1 0.21 85.17 \u00b1 0.04 76.97 \u00b1 0.16 96.70 \u00b1 0.04 96.05 \u00b1 0.04 90.55 \u00b1 0.05 97.82 \u00b1 0.02 97.62 \u00b1 0.01 97.35 \u00b1 0.01 PROPOSED +BiLSTM-CRF +Map-CRF +Map 91.97 \u00b1 0.04 88.62 \u00b1 0.15 81.42 \u00b1 0.16 85.78 \u00b1 0.18 82.27 \u00b1 0.22 73.90 \u00b1 0.09 96.68 \u00b1 0.03 95.96 \u00b1 0.05 90.50 \u00b1 0.06 97.73 \u00b1 0.02 97.53 \u00b1 0.02 97.26 \u00b1 0.01 CLASSIC WORD EMBEDDINGS +BiLSTM-CRF +Map-CRF +Map 88.54 \u00b1 0.08 66.53 \u00b1 0.03 48.79 \u00b1 0.27 82.32 \u00b1 0.35 72.69 \u00b1 0.12 57.43 \u00b1 0.12 95.40 \u00b1 0.08 91.26 \u00b1 0.04 65.01 \u00b1 0.50 96.94 \u00b1 0.02 94.06 \u00b1 0.02 89.58 \u00b1 0.02",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 8,
+                    "type": "Table"
+                }
+            },
+            {
+                "content": "Table 4: Examples of the word \u201cWashington\u201d in different contexts in the CONLL03 data set, and nearest neighbors using cosine distance over our proposed embeddings. Since our approach produces different embeddings based on context, we retrieve different nearest neighbors for each mention of the same word.\nWashington (a) Washington to curb support for [..] (1) Washington would also take [..] action [..] (2) Russia to clamp down on barter deals [..] (3) Brazil to use hovercrafts for [..] Washington (b) [..] Anthony Washington (U.S.) [..] (1) [..] Carla Sacramento ( Portugal ) [..] (2) [..] Charles Austin ( U.S. ) [..] (3) [..] Steve Backley ( Britain ) [..] Washington (c) [..] \ufb02own to Washington for [..] (1) [..] while visiting Washington to [..] (2) [..] journey to New York City and Washington [..] (14) [..] lives in Chicago [..] Washington (d) [..] when Washington came charging back [..] (1) [..] point for victory when Washington found [..] (4) [..] before England struck back with [..] (6) [..] before Ethiopia won the spot kick decider [..] Washington (e) [..] said Washington [..] (1) [..] subdue the never-say-die Washington [..] (4) [..] a private school in Washington [..] (9) [..] said Florida manager John Boles [..]",
+                "metadata": {
+                    "filename": "C18-1139.pdf",
+                    "page_number": 9,
+                    "type": "Table"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[{\"Task\": \"Slot Filling\", \"Dataset\": \"SNIPS-NLU\", \"Metric\": \"F1\", \"Result\": \"0.918\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"SNIPS-NLU\", \"Metric\": \"Accuracy\", \"Result\": \"0.977\"}, {\"Task\": \"Overall Joint Slot/Intent Accuracy\", \"Dataset\": \"SNIPS-NLU\", \"Metric\": \"Accuracy\", \"Result\": \"0.952\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"ATIS\", \"Metric\": \"F1\", \"Result\": \"0.809\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"0.847\"}, {\"Task\": \"Overall Joint Slot/Intent Accuracy\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"0.834\"}]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791999903,
+  "id": "chatcmpl-EYxKBaj3HmvauWR4IXhSb8fwbyRqb",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260930033459-c08d3808-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 186,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 72,
+      "engine_ttlt_ms": 829,
+      "pre_inference_ms": 108,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 362,
+      "service_ttlt_ms": 1114,
+      "user_visible_ttft_ms": 254
+    },
+    "prompt_tokens": 4766,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 4952
+  }
+}

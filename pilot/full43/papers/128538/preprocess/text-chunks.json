@@ -1,0 +1,182 @@
+[
+  {
+    "content": "InferNER: an attentive model leveraging the sentence-level information for Named Entity Recognition in Microblogs Abstract We investigate the problem of named entity recognition in the user-generated text such as social media posts. This task is rendered particularly difﬁcult by the restricted length and lim- ited grammatical coherence of this data type. Current state-of- the-art approaches rely on external sources such as gazetteers to alleviate some of these restrictions. We present a neural model able to outperform state of the art on this task without recurring to gazetteers or similar external sources of informa- tion. Our approach relies on word-, character-, and sentence- level information for NER in short-text. Social media posts like tweets often have associated images that may provide auxiliary context relevant to understand these texts. Hence, we also incorporate visual information and introduce an at- tention component which computes attention weight prob- abilities over textual and text-relevant visual contexts sepa- rately. Our model outperforms the current state of the art on various NER datasets. On WNUT 2016 and 2017, our model achieved 53.48% and 50.52% F1 score, respectively. With Multimodal model, our system also outperforms the current SOTA with an F1 score of 74% on the multimodal dataset. Our evaluation further suggests that our model also goes be- yond the current state-of-the-art on newswire data, hence cor- roborating its suitability for various NER tasks. Introduction Named Entity Recognition (NER) is a fundamental prepro- cessing step in many natural language processing applica- tions. The subtask of information extraction concerns identi- fying and classiﬁcation named entities mentioned in the nat- ural language text into predeﬁned categories (e.g., Person, Location, product, and others.). Commonly, NER is useful in recommendation and search engines where it helps con- tent classiﬁcation based on the subject and theme of the web",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "(e.g., Person, Location, product, and others.). Commonly, NER is useful in recommendation and search engines where it helps con- tent classiﬁcation based on the subject and theme of the web documents. incomplete phrases, spelling/grammatical errors, and hash- tags. Ambiguity is another challenge, for example in the mi- croblog, ”manchester nailed it.. #UCL” here word manch- ester is a city as well as a football league team. With con- cise context, it is often challenging to interpret these texts. A direct consequence of aforementioned characteristics of nat- ural language text makes NER on microblogs a non-trivial task (Limsopatham and Collier 2016; Partalas et al. 2016; Aguilar et al. 2017). However, NER on user-generated con- tent is crucial for other information extraction tasks such as relation extraction and applications such as question answer- ing. Many previous approaches to NER in user-generated text either rely on external resources or text normalization (see, e.g., (Aguilar et al. 2017; Partalas et al. 2016) ). In contrast to the previous systems, InferNER does not rely on exter- nal sources or any prepossessing techniques. Hence, it can be easily trained and ported to datasets and domains other than the ones it was tested on. Most of the previous neu- ral approaches employ conditional random ﬁeld (CRF) for NER on Microblogs. Previous works claimed that transfer learning from network to CRF boosts the NER performance (See, e.g., (Aguilar et al. 2019)). However, we achieve sim- ilar or better results without the CRF classiﬁer in most cases. The addition of CRF led to adverse outcomes in our case. Our approach not only considers word and character- level representations but also, sentence-level context. We provide the sentence-level context for each word in the in- put sequence. This approach helps to disambiguate words that might have many different meanings to the best of our knowledge. Furthermore, we also employ auxiliary context from images to better",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "in- put sequence. This approach helps to disambiguate words that might have many different meanings to the best of our knowledge. Furthermore, we also employ auxiliary context from images to better understand these microblog texts. We present an attention module that computes attention over heterogeneous modalities (text and images) in segregation to yield a summed vector to present state-of-the-art results. Our contributions can be summarized as follows: Microblogging platforms such as Twitter have gained tremendous attention in recent years due to the high vol- ume of content made available through them (Derczynski et al. 2014). However, microblogs often do not abide by the syntactic and semantic conventions of the language they are written in (Derczynski et al. 2014; Peres, Esteves, and Ma- heshwari 2017; Esteves et al. 2018). Instead, they use di- verse writing styles characterized by unorthodox capitaliza- tion, the frequent use of emotion icons and abbreviations, Copyright © 2021 by the authors. All rights reserved.",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 3603
+    }
+  },
+  {
+    "content": "when extracting entities from short texts and can be used as a foundation for future works on NER for short texts. Related Work In recent years, many proposed systems employ neural ar- chitectures for NER in microblogs. Most architectures use bidirectional long short term memory (BiLSTM) with a CRF at the end. For instance, the work in (Limsopatham and Collier 2016; Aguilar et al. 2017; von D¨aniken and Cieliebak 2017; Moon, Neves, and Carvalho 2018; Zhang et al. 2018) employ BiLSTM-CRF architecture. Further- more, many WNUT 1 submissions relied on a gazetteer as a supplementary source. Besides, many of the partici- pants to these challenges applied some preprocessing (e.g., Text normalization) to minimize the linguistic complexity of the microblogs they were to process (see, e.g., (Partalas et al. 2016)). von D¨aniken and Cieliebak (2017) was ﬁrst to employ sentence-level information for NER in short-text. They used sent2vec (Pagliardini, Gupta, and Jaggi 2017) to provide supplementary context. However, their reported re- sults were lower than their base system. The reason could be the way these supplementary context has been incorpo- rated. Aguilar et al. (2018; 2019) utilized phonetic or phono- logical representations of informal words to model noise and achieved state-of-the-art results on user-generated text. Other recent works employ pooled contextualized embed- dings (Akbik, Bergmann, and Vollgraf 2019), adversarial discriminative model to address the low-resource NER prob- lem (Zhou et al. 2019), and handling label mistakes with CrossWeigh framework (Wang et al. 2019) to present state- of-the-art results on different NER datasets. These recent ap- proaches still built on traditional BiLSTM-CRF architecture and need additional resources such as data. Our comprehen- sive benchmark with top-performing baselines is presented in Table 1. Methods Feature Extraction We utilize word, character and sentence embeddings for the NER task. Additionally, we consider",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "sive benchmark with top-performing baselines is presented in Table 1. Methods Feature Extraction We utilize word, character and sentence embeddings for the NER task. Additionally, we consider auxiliary context such as sentence-level information and context from images. 2-Stacked BiLSTM Word Encoder. We obtain word rep- resentations from the 2-stacked BiLSTM layers using deep contextualized representations (ELMo) (Peters et al. 2018) set to 1024 dimensions. We obtain the word representations by taking the sum of outputs of two layers stacked together. To the best of our knowledge, such feature extractors better leverage ELMo embeddings. Consider an input sequence x, = [21, 72, ...,%] where n is the sentence maximum length s. We first obtain an em- bedding matrix €(2,) and is then passed to a Bidirectional LSTM as given below: T = BLSTM(€e(ax)) The output r, is then passed to another Bidirectional LSTM layer similar to the one defined before. The output 1http://noisy-text.github.io/2020/ of the second layer is given by, o = BLST M (ro) r The ﬁnal word representation is the addition of the output from the ﬁrst RNN and the last RNN which is given by: wt = ro ⊕ r (1) Here, ⊕ stands for the addition of tensors. wt is the ﬁnal word representation. Character-Level Encoder. We extract character represen- tations using a CNN. Since the data lacks implicit linguis- tic formalism, therefore, we utilize orthographic represen- tations. First, we generate the orthographic sentence using set of rules as in (Limsopatham and Collier 2016; Aguilar et al. 2017). We then initialize the character sequences with 3 3 dim? dim | ta lookup table to output a character embedding of 30 dimen- sions (Aguilar et al. 2017; Ma and Hovy 2016). Not all words have an equal number of characters. Therefore, we computed the maximum character length of the word and applied character padding. Secondly, following Aguilar et al. (2017) we applied 2-stacked convolutions over charac- ter embedding and used",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "we computed the maximum character length of the word and applied character padding. Secondly, following Aguilar et al. (2017) we applied 2-stacked convolutions over charac- ter embedding and used global average pooling operation similar to Zhou et al.; Aguilar et al. (2015; 2017) to capture information from the feature map. Lastly, for a given input, we first obtain the embedding embedding matrix e€, and fi- nally we obtain the character-level representations from the final fully-connected layer that has a Rectifier Linear Unit (ReLU) as an activation function: a random uniform distribution of [- cy = ReLU(We,€c + be.) (2) where €, and c; represents the embedding matrix and output of the fully-connected layer, respectively.+ Sentence-level Encoder. In order to leverage more con- textual information, we use sentence-level encoder to extract sentence representation. This helps our model to consider sentence-level context while predicting the named entity for the word token. Cer et al. (2018) proposed a new method for computing sentence vectors called Universal Sentence En- coder (USE). Recent evaluations suggest that USE improve the performance of machine learning algorithms on several downstream tasks. We incorporate more semantic features in the form of sentence embeddings. For instance, we use 512- dimensional embedding model trained with a transformer encoder. For a given sentence input x,, we first obtain an embedding matrix €,. We then employ a feed-forward Dense network with ReLU as the activation function to obtain sen- tence representation s, as given as below: Image Features Image features carry information about what objects are depicted in the image, providing an ad- ditional context for understanding text. We use the Incep- tionV3 (Szegedy et al. 2015) model trained on the ImageNet dataset. Image features had the dimension of 8 × 8 × 2048, where 2048 is the dimension of a vector at each region N and 8 × 8 are the number of regions in the output image",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3604
+    }
+  },
+  {
+    "content": "trained on the ImageNet dataset. Image features had the dimension of 8 × 8 × 2048, where 2048 is the dimension of a vector at each region N and 8 × 8 are the number of regions in the output image vector. The images were resized to 299 × 299 and extract features from the ﬁnal convolution layer of InceptionV3.",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 5404
+    }
+  },
+  {
+    "content": "f Textual Model We deﬁne a BiLSTM-CNN model that takes the words, characters and sentence input into consideration. In order to incorporate the sentence-level representation so obtained in equation 3, we perform a RepeatVector operation to re- peat the sentence vector over the maximum sequence length: st = RepeatV ector(so) (4) In this way, we repeat as a whole the context of the sentence over each word in the sequence. We then concatenate each representations in, 1,2 and 4 as follows: m = [wt; ct; st] and feed this to a bidirectional LSTM layer followed by a softmax layer for the prediction given as followed: −→ h t = LST M (mi) ←− h t = LST M (mi) In order to obtain the bidirectional representation of the in- put, we concatenated forward ht and backward states ht, ht = [ (5) Finally, we predict the probabilities over N classes as given below: sof tmax(Wmht + bm) To this end, we share the methodology between our two ap- proaches. And the multimodal approach is the extension of the textual model we already deﬁned. Multimodal Model From previous works on multimodal named entity recogni- tion, it is consistent that the auxiliary context from images better helps understanding microblogging text. (Esteves et al. 2018; Moon, Neves, and Carvalho 2018; Zhang et al. 2018). Therefore, we also incorporate visual information and propose improvement over existing attention-based ap- proaches. Segregated Contextual Attention. We propose a segregated-contextual-attention-module that considers text and image as separate modalities. Instead of computing a single context vector over naively merged textual and vi- sual representations (e.g., [ht;vi]), we separately compute the textual and visual attention contexts as both modalities are considered as a whole. Then, we obtain the ﬁnal context vector as a summed vector of both textual and visual atten- tion context. We observe that a word is only related to the small part or region of the image and incorporating the whole image with",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "vector as a summed vector of both textual and visual atten- tion context. We observe that a word is only related to the small part or region of the image and incorporating the whole image with text may lead to suboptimal results consistent with the pre- vious research in Zhang et al. (2018). The reason is more ev- ident that the irrelevant regions would introduce noise, and at some point, the model will start to learn noise resulting in the worst results. To incorporate the visual context, we fol- low Zhang et al. (2018) and attend to those regions of the input image relevant to the text. To formulate visual atten- tion, consider a given text ht and image feature vector vi. We ﬁrst apply a RepeatVector operation over the orig- inal input image vector vi and generate n copies, where n is equal to the maximum sentence length. We then, convert image feature vector vi into an entirely new representation equal in the dimension of the text-vector by using a single layer perceptron as in (Zhang et al. 2018). The new image representation is given by, i = tanh(Wivi + bi) (6) Similarly, we apply another RepeatVector operation to ht and generate copies equal to the number of regions N in the image as we want to generate the text-relevant attention over the regions of the image. Thus, a new representation of text h h, = tanh(Wa, he + bn.) ©) Then, we concatenate each of the new representations as fol- lowed: Here, ⊕ denotes concatenation and zt is the concatenation of text and image new representations. We then feed zt to a neural network with (tanh) activation function as given be- low: zt = tanh(Wztzt + bzt) αt = softmax (Wαtzt + bαt) Then, a visual context vector Cv as a result of a dot product of origin image representation vi and attention weights αt is given below: i For computing text attention, we feed textual representation ht to a single-layer neural network followed by a softmax function to generate attention weight probabilities over ht as given below: aw =",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "For computing text attention, we feed textual representation ht to a single-layer neural network followed by a softmax function to generate attention weight probabilities over ht as given below: aw = tanh(Whtht + bht) αt = softmax(Waw aw + baw ) Textual context vector Ct is the weighted sum of dot prod- ucts of attention weights αt and text representation wt given by,",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 3597
+    }
+  },
+  {
+    "content": "Table 1: Results statistics over 4 datasets and comparison with the current state-of-the-art. Table 2: This table describe the importance of each type of feature in combination to the other. Then, we compute the overall context vector Cm by taking the sum of textual and visual context vectors as depicted in Figure 1 as given below: Cm = Ct + Cv Finally, the overall context vector Cm was fed to a fully- connected bi-directional LSTM layer followed by a softmax as illustrated in the Figure 1 to predict the probabilities over the k classes : Incorporating only text-relevant context from images could reduce noise. And by leveraging maximum information gain from the two modalities helps in better representation of the input, hence, yields better results. Experimentation In this section, we will discuss the experimental setup and evaluation results of the system across. Data Parameters. For the word-level BiLSTM, we set the number of units and dropout to 512 and 0.5 for each BiL- STM layer. The dropout helps the model to tackle overﬁt- ting (Srivastava et al. 2014). Following (Aguilar et al. 2017), we set the number of ﬁlters at each convolution layer to 64. We also set the sentence-level dense network with 256 hid- den states. For the fully-connected BiLSTM layer, we set the number of units and dropout rate to 200 and 0.3, respec- tively. To reduce the potential overﬁtting, we also apply an L2 weight regularization over convolutional and word-level BiLSTM layers with a rate of 10−3. We optimize the pa- rameters using RMSprop and apply early stopping technique with the patience of 3 epochs. We perform parameter search over the learning rate ∈ {10−3, 10−2, 10−1} and batch size ∈ {10, 20, 50}. We then select the best model with the high- est F1-score on the validation set. After determining the pa- rameters, we repeat the experiment 3 times with different random seeds, and train using both train and development set, reporting average performance on the test set as our ﬁnal",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "determining the pa- rameters, we repeat the experiment 3 times with different random seeds, and train using both train and development set, reporting average performance on the test set as our ﬁnal result. We used ofﬁcial WNUT script to compute the results 2. Results and Discussion WNUT 2016 results. One of the challenging aspects of the WNUT 2016 (Strauss et al. 2016) dataset is small train- ing data. Moreover, there are 10 entity types instead of the usual 4 entities with overlapping entities like person and musicartist. Similarly, entities like facility and company are also at many occasions ambiguous. Often, a sports-team is named under the country or city it belongs 2https://noisy-text.github.io/2017/emerging-rare-entities.html",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "to, causing a considerable overlap with the geo-loc en- tity type. By contrast to earlier mentioned approaches, our system goes beyond the current state-of-the-art with 53.48% F1 score on WNUT 2016 without the need for external re- sources and additional data. Our benchmark with current systems is shown in Table 1. WNUT 2017 results. The challenge that WNUT 2017 data (Derczynski et al. 2017) poses is the more frequent use of punctuation (Derczynski et al. 2014). Often, part of the name is also a common word (e.g., Andrew little) and some location names are also common person names (e.g., Smith), thus, causing difﬁculty (Derczynski et al. 2014). Entities like corporation, group, and product could easily be confused between each other. Current state-of-the-art, though do not rely on external resources, however, rely on the CRF based classiﬁer. For instance, Aguilar et al. (2019) emphasized the signiﬁcance of having a CRF prediction layer over softmax and reported an approximately 4% increase in F1 with CRF in comparison to a softmax. However, we found this claim not completely true since it may be dependent on the dataset. Consistent with our previous results, our model goes beyond the current state-of-the-art with an F1 score of 50.5% with- out relying on external resources and the CRF prediction layer. This improvement is not signiﬁcant; nevertheless, it gave us a consistent result. We also observe the improvement over hard to predict entities such as creative-work and product compared to the current state-of-the-art. Multimodal results. So far, we only consider the tex- tual context. In this experiment, we evaluate our multi- modal approach that considers the auxiliary context from the text’s images. With segregated attention network, our model achieved an F1 score of 74.17% on this data which is a considerable improvement over the state-of-the-art model of (Zhang et al. 2018). In one of our experiments, we merged the textual and visual representation and observed",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "74.17% on this data which is a considerable improvement over the state-of-the-art model of (Zhang et al. 2018). In one of our experiments, we merged the textual and visual representation and observed results with and without attention. On both occasions, we received sub-optimal results mainly due to the noise pose by the im- ages. Interestingly, considering textual and visual clues as entirely separate modalities and computing the ﬁnal context vector as a summed vector over two separately computed attention contexts helped improve information gain and re- duce the noise. CoNLL-03 results. Lastly, to verify our model as a gener- alized solution for NER, we also experimented with a stan- dard data set. Our evaluation results reveal that our model also goes beyond the state-of-the-art with 93.76% F1 score proving its suitability to the NER task. Ablation and analysis. To reﬂect the usefulness of each feature combination we experimented with word embed- dings only and observe 47.64% F1 score on WNUT 2016. We consider this result as a baseline and compare it with the results achieved by adding supplementary features to this baseline model. With word and character embeddings, the result improved by approximately 2% on WNUT 2017. Interestingly, we observed considerable improvement over baseline embedding with word and sentence-level informa- tion which is approximately 5% on WNUT 2016. However, not many previous works considered sentence-level infor- mation for the NER task. To the best of our knowledge, only von D¨aniken and Cieliebak (2017) employed sent2vec and reported negative results. In our case, sentence embedding from Universal-sentence-encoder in combination with word embedding improved our overall results. To ver- ify this experimental ﬁnding, we performed another ablation experiment on a different data set. On WNUT 2017, we ob- serve consistent improvement with the word and sentence feature combination as shown in Table 2. While Table 3 shows our model’s",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "ablation experiment on a different data set. On WNUT 2017, we ob- serve consistent improvement with the word and sentence feature combination as shown in Table 2. While Table 3 shows our model’s sample predictions on WNUT 2016 and 2017 test sets. In the ﬁrst example taken from the WNUT 2016 test dataset, our model can correctly classify ’Angels’ as sports-team without considering any external resources. It means that the network has based its prediction solely on the context. The second example from the WNUT 2017 test set has the word ’Leyonhjelm’ which is not an English word. Despite ’Leyonhjelm’ being an out-of-vocabulary word, our model can still correctly classify it as a person. In the third example, our model can correctly infer ’The’ belongs to the creative-work named entity which is ambiguous even for humans. Moreover, this is not the case for only one ex- ample; we observe many other examples where our model correctly classiﬁed the as the named entity part. According to Derczynski et al. (2017), WNUT 2017 data includes nu- merous entities that have either a common person name or a name of place counterpart. For example in Table 3, in ’Mi- ami Dolphins’ the word ’Miami’ is not a name of the place. Interestingly, our word-character model wrongly classify ’Miami’ as a location while our Word-sentence model cor- rectly classiﬁes it as a part of the group named entity. In another example, our model was correctly able to classify Leicester as a group. We believe that the sentence-level in- formation helped in this case and the model predicted purely based on the sentence’s whole context. In many other ex- amples, we also observed that our model was correctly able to infer the label for the name of the place as the counter- part of the named entities such as group. Our model strug- gled with common names as person entity and at many occa- sion failed to predict the right label. For example, our model missed ’Snowman’ and ’theguest’ even though the context was",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 3599
+    }
+  },
+  {
+    "content": "Our model strug- gled with common names as person entity and at many occa- sion failed to predict the right label. For example, our model missed ’Snowman’ and ’theguest’ even though the context was there. Overall, product and corporation were the difﬁcult classes to predict. To this end, we conclude that word embeddings are the essential information for NER, and with word and sentence combination, we observe the most improvement. Our anal- ysis also suggests that with the sentence-level information,",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 5397
+    }
+  },
+  {
+    "content": "we see consistent improvement in proving its usefulness. Conclusion We presented two models for NER on microblog data. The ﬁrst model considers solely textual information, while the second model also employs auxiliary information from im- ages. Our evaluation suggests that our model can be suc- cessfully applied to NER in microblogs and does not require external sources, preprocessing, and employing a CRF clas- siﬁer for sequence labelling. With our approach, we are not only able to go beyond the current state-of-the-art, but we are also able to address some of the weaknesses of the pre- vious systems. Our evaluation also suggests that InferNER can be easily ported to other NER tasks without the need to alter supplementary resources. References Aguilar, G.; Maharjan, S.; L´opez-Monroy, A.; and Solorio, T. 2017. A multi-task approach for named entity recognition in social media data. 148–153. Aguilar, G.; L´opez-Monroy, A. P.; Gonz´alez, F. A.; and Solorio, T. 2019. Modeling noisiness to recognize named en- tities using multitask neural networks on social media. CoRR abs/1906.04129. Akbik, A.; Bergmann, T.; and Vollgraf, R. 2019. Pooled contextualized embeddings for named entity recognition. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), 724–728. Minneapolis, Minnesota: Association for Computational Linguistics. Baevski, A.; Edunov, S.; Liu, Y.; Zettlemoyer, L.; and Auli, M. 2019. Cloze-driven pretraining of self-attention networks. CoRR abs/1903.07785. Cer, D.; Yang, Y.; Kong, S.; Hua, N.; Limtiaco, N.; John, R. S.; Constant, N.; Guajardo-Cespedes, M.; Yuan, S.; Tar, C.; Sung, Y.; Strope, B.; and Kurzweil, R. 2018. Universal sentence encoder. CoRR abs/1803.11175. Derczynski, L.; Maynard, D.; Rizzo, G.; Erp, M.; Gorrell, G.; Troncy, R.; Petrak, J.; and Bontcheva, K. 2014. Analysis of named entity recognition and linking for tweets.",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "CoRR abs/1803.11175. Derczynski, L.; Maynard, D.; Rizzo, G.; Erp, M.; Gorrell, G.; Troncy, R.; Petrak, J.; and Bontcheva, K. 2014. Analysis of named entity recognition and linking for tweets. Information Processing Management 51:32–49. Derczynski, L.; Nichols, E.; van Erp, M.; and Limsopatham, N. 2017. Results of the WNUT2017 shared task on novel and emerging entity recognition. In Proceedings of the 3rd Work- shop on Noisy User-generated Text, 140–147. Copenhagen, Denmark: Association for Computational Linguistics. Esteves, D.; Peres, R.; Lehmann, J.; and Napolitano, G. 2018. Named entity recognition in twitter using images and text. In Garrig´os, I., and Wimmer, M., eds., Current Trends in Web Engineering, 191–199. Cham: Springer International Pub- lishing. Limsopatham, N., and Collier, N. 2016. Bidirectional LSTM In Pro- for named entity recognition in twitter messages. ceedings of the 2nd Workshop on Noisy User-generated Text (WNUT), 145–152. Osaka, Japan: The COLING 2016 Orga- nizing Committee. Ma, X., and Hovy, E. H. 2016. End-to-end sequence labeling via bi-directional lstm-cnns-crf. CoRR abs/1603.01354. Moon, S.; Neves, L.; and Carvalho, V. 2018. Multimodal named entity recognition for short social media posts. CoRR abs/1802.07862. Pagliardini, M.; Gupta, P.; and Jaggi, M. 2017. Unsupervised learning of sentence embeddings using compositional n-gram features. CoRR abs/1703.02507. Partalas, I.; Lopez, C.; Derbas, N.; and Kalitvianski, R. 2016. Learning to search for recognizing named entities in twitter. In Proceedings of the 2nd Workshop on Noisy User-generated Text (WNUT), 171–177. Osaka, Japan: The COLING 2016 Organizing Committee. Peres, R.; Esteves, D.; and Maheshwari, G. 2017. Bidi- rectional lstm with a context input window for named entity recognition in tweets. 1–4. Peters, M. E.; Neumann, M.; Iyyer, M.; Gardner, M.; Clark, C.; Lee, K.; and Zettlemoyer, L. 2018. Deep contextualized word representations. CoRR abs/1802.05365. Ritter, A.; Clark, S.;",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "in tweets. 1–4. Peters, M. E.; Neumann, M.; Iyyer, M.; Gardner, M.; Clark, C.; Lee, K.; and Zettlemoyer, L. 2018. Deep contextualized word representations. CoRR abs/1802.05365. Ritter, A.; Clark, S.; Mausam; and Etzioni, O. 2011. Named entity recognition in tweets: An experimental study. In Pro- ceedings of the 2011 Conference on Empirical Methods in Natural Language Processing, 1524–1534. Edinburgh, Scot- land, UK.: Association for Computational Linguistics. Srivastava, N.; Hinton, G.; Krizhevsky, A.; Sutskever, I.; and Salakhutdinov, R. 2014. Dropout: A simple way to prevent neural networks from overﬁtting. Journal of Machine Learn- ing Research 15:1929–1958. Strauss, B.; Toma, B.; Ritter, A.; de Marneffe, M.-C.; and Xu, W. 2016. Results of the WNUT16 named entity recognition shared task. In Proceedings of the 2nd Workshop on Noisy User-generated Text (WNUT), 138–144. Osaka, Japan: The COLING 2016 Organizing Committee. Szegedy, C.; Vanhoucke, V.; Ioffe, S.; Shlens, J.; and Wojna, Z. 2015. Rethinking the inception architecture for computer vision. CoRR abs/1512.00567. Tjong Kim Sang, E. F., and De Meulder, F. 2003. Introduc- tion to the CoNLL-2003 shared task: Language-independent named entity recognition. In Proceedings of the Seventh Con- ference on Natural Language Learning at HLT-NAACL 2003, 142–147. von D¨aniken, P., and Cieliebak, M. 2017. Transfer learning and sentence level features for named entity recognition on tweets. In Proceedings of the 3rd Workshop on Noisy User- generated Text, 166–171. Copenhagen, Denmark: Associa- tion for Computational Linguistics. Wang, Z.; Shang, J.; Liu, L.; Lu, L.; Liu, J.; and Han, J. 2019. CrossWeigh: Training named entity tagger from imper- fect annotations. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Pro- cessing (EMNLP-IJCNLP), 5154–5163. Hong Kong, China: Association for Computational Linguistics. Zhang, Q.;",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 3602
+    }
+  },
+  {
+    "content": "Language Processing and the 9th International Joint Conference on Natural Language Pro- cessing (EMNLP-IJCNLP), 5154–5163. Hong Kong, China: Association for Computational Linguistics. Zhang, Q.; Fu, J.; Liu, X.; and Huang, X. 2018. Adaptive co-attention network for named entity recognition in tweets. In AAAI. Zhou, B.; Khosla, A.; Lapedriza, `A.; Oliva, A.; and Torralba, A. 2015. Learning deep features for discriminative localiza- tion. CoRR abs/1512.04150. Zhou, J. T.; Zhang, H.; Jin, D.; Zhu, H.; Fang, M.; Goh, R. S. M.; and Kwok, K. 2019. Dual adversarial neural transfer In Proceedings for low-resource named entity recognition. of the 57th Annual Meeting of the Association for Computa- tional Linguistics, 3461–3471. Florence, Italy: Association for Computational Linguistics.",
+    "metadata": {
+      "filename": "128538.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 5404
+    }
+  }
+]

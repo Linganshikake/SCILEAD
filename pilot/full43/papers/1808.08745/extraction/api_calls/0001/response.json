@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n    {\n        \"Task\": \"Extreme summarization\",\n        \"Dataset\": \"XSum\",\n        \"Metric\": \"ROUGE-1 F1\",\n        \"Result\": \"31.89\"\n    },\n    {\n        \"Task\": \"Extreme summarization\",\n        \"Dataset\": \"XSum\",\n        \"Metric\": \"ROUGE-2 F1\",\n        \"Result\": \"11.54\"\n    },\n    {\n        \"Task\": \"Extreme summarization\",\n        \"Dataset\": \"XSum\",\n        \"Metric\": \"ROUGE-L F1\",\n        \"Result\": \"25.75\"\n    },\n    {\n        \"Task\": \"Extreme summarization\",\n        \"Dataset\": \"XSum\",\n        \"Metric\": \"Human QA-based evaluation (percentage of questions answered correctly)\",\n        \"Result\": \"46.05\"\n    },\n    {\n        \"Task\": \"Extreme summarization\",\n        \"Dataset\": \"XSum\",\n        \"Metric\": \"Human ranking score\",\n        \"Result\": \"0.037\"\n    }\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791895180,
+  "id": "chatcmpl-EYW561C1R11oVlbXcse0m4oJUraHs",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260929065404-bc9aa654-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 212,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 6,
+      "engine_ttft_ms": 172,
+      "engine_ttlt_ms": 1344,
+      "pre_inference_ms": 99,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 428,
+      "service_ttlt_ms": 1564,
+      "user_visible_ttft_ms": 329
+    },
+    "prompt_tokens": 3506,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 3718
+  }
+}

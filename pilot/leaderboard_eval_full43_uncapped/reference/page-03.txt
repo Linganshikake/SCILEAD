@@ -1,0 +1,100 @@
+Related Work DataSource Norm Task FormExtr Constr
+(Hou et al., 2019) NProg. ✓ ✓ ✓
+(Kardas et al., 2020) PwC ✓ ✓ ✓
+(Yang et al., 2022) PwC - ∼ -
+(Kabongo et al., 2023b) PwC - ∼ -
+(Singh et al., 2024) PwC - ∼ ✓
+SCILEAD (Ours) Pub. ✓ ✓ ✓
+Table 1: Comparison of related work and ours. Data
+Source: Source of leaderboards: NProg.: NLP-progress,
+PwC: paperswithcode, Pub.: Publications. Norm refers
+to Normalization. Task Form: Task formulation, includ-
+ing Extr.: TDMR extraction and Constr.: Leaderboard
+Construction. ∼ indicates partial fulfillment.
+struction, and (3) propose different experimental
+settings to simulate real-world scenarios.
+Scientific Knowledge Graph Construction.
+Part of the scientific leaderboards can be viewed as
+a special type of scientific knowledge graph that in-
+cludes three types of entities (Task, Dataset, Metric)
+and the relations between them, which have been
+the primary focus of the previous studies on infor-
+mation extraction from scientific literature (Luan
+et al., 2018; Jain et al., 2020; Hou et al., 2021;
+Mondal et al., 2021; Pramanick et al., 2023). Our
+work in the cold start scenario, in which we do not
+assume any pre-defined TDM triple is given, con-
+structs such a scientific knowledge graph and links
+the papers to the nodes in the graph simultaneously.
+3 Our S CILEAD Dataset
+To facilitate a thorough evaluation of leaderboard
+construction, we require a dataset that satisfies
+the following criteria. (1) TDM coverage: the
+dataset should annotate a complete set of all task,
+dataset, metric (TDM) triples from individual publi-
+cations, thereby mitigating the problems of incom-
+plete and inaccurate information inherent in previ-
+ous datasets. (2) TDM disambiguation: mentions
+of the same TDM entities should be normalized
+to allow comparison of methods or research in the
+same leaderboards. (3) State-of-the-Art: for each
+leaderboard, the associated publications should be
+ranked based on the best-reported results obtained
+by their proposed methods (excluding baselines, ab-
+lation experiments, or reproduction of other meth-
+ods), which would restrict each publication to have
+a single entry per leaderboard. This enables evalua-
+tion using ranking similarity metrics. (4) Impact:
+the dataset should strike a balance between having
+too many or too few leaderboards, where the former
+Dataset item Count
+Papers 43
+Unique tasks 23
+Unique datasets 71
+Unique metrics 26
+Unique TDMs 138
+Leaderboards 27
+Avg. papers / leaderboard 5.19
+Table 2: Statistics of our SCILEAD dataset
+may result in very few papers per each leaderboard,
+and the latter only constructs popular ones.
+To fulfill these requirements, we created
+SCILEAD, a new manually-curated Scientific
+Leaderboard dataset. We first selected leader-
+boards that have a large number of publications
+from NLP-progress. We downloaded PDFs of the
+relevant publications from arXiv or correspond-
+ing venues. We then manually extracted a com-
+plete set of TDMR tuples from these publications
+(Coverage), in contrast to previous datasets. Next,
+we manually normalize mentions of TDM triples
+which refer to the same entities, building a com-
+plete TDM taxonomy for this dataset (Disambigua-
+tion). For an individual unique TDM triple from
+a paper, the best-reported performance was kept
+for the next step (State-of-the-Art). Lastly, we ag-
+gregate and rank the TDMR tuples from different
+papers under the corresponding leaderboards de-
+fined by TDM triples. After constructing all leader-
+boards, we filter out leaderboards of less than three
+entries (Impact). We present the dataset statistics
+in Table 2 and a few data instances in Appendix B.
+4 Framework
+Our proposed framework is illustrated in Figure 2.
+The main goal is to automatically construct leader-
+boards given a collection of scientific publications.
+The framework first receives as input a set of pa-
+pers in PDF form and extracts a complete set of
+TDMR tuples from these papers (§4.1). This first
+stage is realized by prompting an LLM augmented
+with a dense retriever. The extracted tuples are then
+passed into a normalization module in the second
+stage, which decides whether the TDM triples be-
+long to existing leaderboards or comprise new ones
+(§4.2). In particular, the normalization module
+maps these tuples to a pre-defined TDM taxonomy
+or dynamically updates the taxonomy to integrate
+new TDM entities. Finally, the corresponding best
+performances of these normalized TDM triples is
+being used to rank the competitive methods for
+7965

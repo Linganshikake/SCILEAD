@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4772,
+  "completion_tokens": 307,
+  "total_tokens": 5079,
+  "request_seconds": 3.171999999321997,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "2001.04063.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "096b1d6e2577b694a56d124a47c14cfb08b2efbb2cccddb7ed1fef05f32a755b",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxOpk65oKhK5ZwdNhYY3YJsbvrng",
+      "usage": {
+        "completion_tokens": 307,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 80,
+          "engine_ttlt_ms": 1263,
+          "pre_inference_ms": 116,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 437,
+          "service_ttlt_ms": 1610,
+          "user_visible_ttft_ms": 321
+        },
+        "prompt_tokens": 4772,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 5079
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-1\", \"Result\": \"44.20\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-2\", \"Result\": \"21.17\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-L\", \"Result\": \"41.30\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Gigaword\", \"Metric\": \"ROUGE-1\", \"Result\": \"39.51\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Gigaword\", \"Metric\": \"ROUGE-2\", \"Result\": \"20.42\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Gigaword\", \"Metric\": \"ROUGE-L\", \"Result\": \"36.69\"}, {\"Task\": \"Question Generation\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"BLEU-4\", \"Result\": \"25.80\"}, {\"Task\": \"Question Generation\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"METEOR\", \"Result\": \"27.54\"}, {\"Task\": \"Question Generation\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"ROUGE-L\", \"Result\": \"53.65\"}]",
+      "response_sha256": "fe10fc294de87236f8c7803363f8114ee7b338b45b4f1374967f89d516e20a4c",
+      "seconds": 3.171999999321997
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

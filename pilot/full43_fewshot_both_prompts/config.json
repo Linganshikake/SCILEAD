@@ -1,0 +1,34 @@
+{
+  "model": "gpt-4.1-2025-04-14",
+  "base_url": "https://9527.codes/v1",
+  "temperature": 0,
+  "seed": 0,
+  "stream": false,
+  "n": 1,
+  "is_few_shot": true,
+  "model_type": "gpt4-turbo-128k",
+  "extraction_prompt_key": "few-shot-extraction-system-prompt",
+  "normalization_prompt_key": "few-shot-normalization-system-prompt",
+  "output_limits": "omitted from HTTP payload",
+  "sdk_retries": 0,
+  "python_hash_seed": "0",
+  "worker_count": 1,
+  "source_extraction_run": "D:\\C++\\SCILEAD\\pilot\\full43_fewshot",
+  "zero_shot_reference": "D:\\C++\\SCILEAD\\pilot\\full43_uncapped",
+  "git_commit": "8bf74b0a830feb7035c6166dce3394dc344ae532",
+  "python_version": "3.11.17 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:16:54) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "D:\\miniconda3\\envs\\scilead\\python.exe",
+  "normalization": "Unmodified official main, full candidates, exact membership, no cache or postprocessing",
+  "timeout_seconds": {
+    "connect": 20,
+    "read": 180,
+    "write": 30,
+    "pool": 20
+  },
+  "reproduction_differences": [
+    "GPT-4.1 fixed snapshot replaces GPT-4 Turbo",
+    "Original default max_new_tokens=15 omitted under user-authorized configuration",
+    "Frozen local Gold and same 27 supplied leaderboard JSON; data hashes recorded"
+  ],
+  "new_extraction_requests": 0
+}

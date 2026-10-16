@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>SCILEAD 实验复现项目迁移记忆</title>
+<style>
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    line-height: 1.7;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    color: #222;
+}
+h1 { border-bottom: 3px solid #333; padding-bottom: 10px; }
+h2 { margin-top: 35px; border-left: 5px solid #555; padding-left: 12px; }
+h3 { margin-top: 25px; }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 7px 10px;
+    text-align: center;
+}
+th { background: #f2f2f2; }
+.left { text-align: left; }
+.note {
+    background: #f7f7f7;
+    border-left: 4px solid #888;
+    padding: 10px 15px;
+    margin: 15px 0;
+}
+.important {
+    background: #fff8e6;
+    border-left: 4px solid #e6a700;
+    padding: 10px 15px;
+}
+.done { color: #16803c; font-weight: bold; }
+.pending { color: #a65b00; font-weight: bold; }
+</style>
+</head>
+
+<body>
+
+<h1>SCILEAD 实验复现项目——迁移记忆</h1>
+
+<h2>一、项目基本信息</h2>
+
+<p>
+目标论文：
+<b>Efficient Performance Tracking: Leveraging Large Language Models for Automated Construction of Scientific Leaderboards</b>
+</p>
+
+<p>
+作者：Furkan Şahinuç, Thy Thy Tran, Yulia Grishina, Yufang Hou, Bei Chen, Iryna Gurevych。
+EMNLP 2024，论文页码 7963–7977。
+</p>
+
+<p>
+论文核心任务是从科学论文中自动抽取
+<strong>&lt;Task, Dataset, Metric, Result&gt; (TDMR)</strong>
+四元组，并进一步利用这些信息构建、更新 Scientific Leaderboards。
+论文提出三种主要实验设置：
+Fully Pre-defined、Partially Pre-defined、Cold Start。
+</p>
+
+<p>
+本项目的核心目标不是改进 SciLead，而是：
+<strong>尽可能严格复现原论文实验，再对复现实验与原论文结果进行系统比较。</strong>
+</p>
+
+<h2>二、当前总体状态</h2>
+
+<table>
+<tr>
+<th>实验</th>
+<th>状态</th>
+<th>核心结果</th>
+</tr>
+
+<tr>
+<td>Fully Pre-defined + LLM</td>
+<td class="done">已完成，已冻结为正式基线</td>
+<td>TDMR F1 = 42.1578%</td>
+</tr>
+
+<tr>
+<td>Fully Pre-defined + CS</td>
+<td class="done">已完成</td>
+<td>TDMR F1 = 54.2610%</td>
+</tr>
+
+<tr>
+<td>Partially Pre-defined</td>
+<td class="done">已完成</td>
+<td>TDMR F1 = 16.9384%</td>
+</tr>
+
+<tr>
+<td>Cold Start</td>
+<td class="done">3种论文顺序均完成</td>
+<td>27榜 LR = 39.51% ± 8.55%</td>
+</tr>
+
+<tr>
+<td>Few-shot GPT-4</td>
+<td class="done">已完成</td>
+<td>完整 Few-shot TDMR F1 = 55.7291%</td>
+</tr>
+
+<tr>
+<td>Leaderboard-level Evaluation</td>
+<td class="done">已完成</td>
+<td>Fully LLM：LR 81.48%，PC 48.71%，RC 31.80%，AO 46.25%</td>
+</tr>
+
+<tr>
+<td>Threshold=2</td>
+<td class="pending">暂缓</td>
+<td>缺少作者独立 threshold=2 榜单原文件</td>
+</tr>
+
+<tr>
+<td>Wild Datasets</td>
+<td class="pending">不做</td>
+<td>本阶段暂时排除</td>
+</tr>
+
+<tr>
+<td>AxCell</td>
+<td class="pending">暂停</td>
+<td>本地内存不足，尚未完成</td>
+</tr>
+
+<tr>
+<td>Llama-2 / Mixtral / Llama-3 等开源模型</td>
+<td class="pending">待服务器</td>
+<td>需要服务器 GPU</td>
+</tr>
+</table>
+
+<div class="important">
+<b>当前工作重点：</b>
+原论文可在本地完成的主要实验已经完成。
+现在优先进行所有实验结果的整体整理、分析、与原论文逐项比较，并准备向导师汇报。
+</div>
+
+<h2>三、正式冻结 Baseline：full43_uncapped</h2>
+
+<p>
+最终正式基线目录：
+</p>
+
+<pre>D:\C++\SCILEAD\pilot\full43_uncapped</pre>
+
+<p>
+覆盖：
+<b>43/43 篇论文、295/295 条 Gold TDMR</b>。
+原始抽取共得到 284 条 TDMR。
+</p>
+
+<p>
+最终统一配置：
+</p>
+
+<ul>
+<li>模型：<code>gpt-4.1-2025-04-14</code></li>
+<li>temperature = 0</li>
+<li>seed = 0</li>
+<li>Extraction 不发送客户端 output token 上限</li>
+<li>Normalization 不发送客户端 output token 上限</li>
+<li>根据 API 返回的 <code>finish_reason</code> 判断是否截断</li>
+<li>同时进行 JSON 完整性检查</li>
+<li>官方 Evaluation 源码未修改</li>
+<li>Gold 未修改</li>
+<li>预测结果未人工修正</li>
+</ul>
+
+<p>
+最终成功请求：
+<b>43 次 Extraction + 542 次 Normalization = 585 次成功请求</b>。
+</p>
+
+<p>
+这一版是后续所有实验比较时应该优先引用的 Zero-shot Fully Pre-defined Baseline。
+</p>
+
+<h3>Baseline 结果</h3>
+
+<table>
+<tr>
+<th>指标</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+</tr>
+<tr><td>Task IIM</td><td>0.960465</td><td>0.973422</td><td>0.966900</td></tr>
+<tr><td>Dataset IIM</td><td>0.820100</td><td>0.782224</td><td>0.800714</td></tr>
+<tr><td>Metric IIM</td><td>0.871096</td><td>0.836070</td><td>0.853224</td></tr>
+<tr><td>Result IIM</td><td>0.690160</td><td>0.718075</td><td>0.703841</td></tr>
+<tr><td>TDM Exact Match</td><td>0.639614</td><td>0.586965</td><td>0.612160</td></tr>
+<tr><td><b>TDMR Exact Match</b></td><td>0.411842</td><td>0.431786</td><td><b>0.421578</b></td></tr>
+</table>
+
+<p>
+严格数值辅助 Result F1：
+<b>0.586782</b>。
+</p>
+
+<p>
+Baseline 的主要错误：
+</p>
+
+<ul>
+<li>Baseline 数值混入</li>
+<li>Dev/Test 混淆</li>
+<li>表格标题与列错配</li>
+<li>方法变体选择错误</li>
+<li>字段绑定错误</li>
+<li>Dataset / Metric / Task 标准化失败</li>
+<li>复合 Result 处理错误</li>
+</ul>
+
+<p>
+标准化 null：
+Dataset 45、Metric 65、Task 12。
+</p>
+
+<p>
+严格数值诊断显示：有 64 条 Gold 的数值已经命中，但预测中的名称存在标准化 null；这说明标准化是 TDMR 误差的重要来源。
+</p>
+
+<h2>四、原论文结果与本地 Fully Baseline 对照</h2>
+
+<p>
+原论文 GPT-4 Turbo 的 ETM/TDMR-PR F1：
+</p>
+
+<table>
+<tr>
+<th>实验设置</th>
+<th>原论文 GPT-4</th>
+<th>本项目 GPT-4.1</th>
+<th>差值</th>
+</tr>
+<tr>
+<td>Fully Pre-defined</td>
+<td>55.27%</td>
+<td>42.16%</td>
+<td>-13.11 pp</td>
+</tr>
+<tr>
+<td>Fully + CS</td>
+<td>49.26%</td>
+<td>54.26%</td>
+<td>+5.00 pp</td>
+</tr>
+<tr>
+<td>Partially Pre-defined</td>
+<td>40.07%</td>
+<td>16.94%</td>
+<td>-23.13 pp</td>
+</tr>
+<tr>
+<td>Few-shot</td>
+<td>51.02%</td>
+<td>55.73%</td>
+<td>+4.71 pp</td>
+</tr>
+</table>
+
+<p>
+这些差异后续分析时需要考虑：
+</p>
+
+<ul>
+<li>原论文使用 GPT-4 Turbo，本项目使用 GPT-4.1-2025-04-14；</li>
+<li>部分历史运行存在 output token 上限差异，因此正式比较应优先使用统一 uncapped 结果；</li>
+<li>本项目完整 Gold 有 43 篇、295 条记录，但作者论文中部分 leaderboard-level 数据统计与当前本地 Gold 存在差异；</li>
+<li>LLM 生成具有一定随机性，即使 temperature=0，也不能简单把一次复现结果与作者历史运行完全视为同一运行。</li>
+</ul>
+
+<h2>五、Fully + CS 标准化实验</h2>
+
+<p>
+目录：
+</p>
+
+<pre>D:\C++\SCILEAD\pilot\full43_cs</pre>
+
+<p>
+使用：
+<code>Lajavaness/bilingual-embedding-large</code>，
+CPU FP32。
+</p>
+
+<p>
+这一实验不重新 Extraction，而是对相同的原始 Extraction 结果，将 LLM Normalization 替换为原论文 CS / cosine similarity normalization。
+</p>
+
+<table>
+<tr>
+<th>指标</th>
+<th>LLM Normalization F1</th>
+<th>CS Normalization F1</th>
+</tr>
+<tr><td>Task IIM</td><td>0.966900</td><td>0.972757</td></tr>
+<tr><td>Dataset IIM</td><td>0.800714</td><td>0.877961</td></tr>
+<tr><td>Metric IIM</td><td>0.853224</td><td>0.858958</td></tr>
+<tr><td>Result IIM</td><td>0.703841</td><td>0.703841</td></tr>
+<tr><td>TDM</td><td>0.612160</td><td>0.713128</td></tr>
+<tr><td><b>TDMR</b></td><td><b>0.421578</b></td><td><b>0.542610</b></td></tr>
+</table>
+
+<p>
+最重要发现：
+<b>在完全相同的 Extraction 结果下，仅替换 Normalization 方法，TDMR F1 从 42.16% 提升到 54.26%，提高 12.10 个百分点。</b>
+</p>
+
+<p>
+这说明：
+<strong>Normalization 是当前系统性能的重要瓶颈，尤其是 Dataset normalization。</strong>
+</p>
+
+<p>
+但 CS 并非全部正确。例如：
+</p>
+
+<ul>
+<li>WN16 / WN17 → WNUT-16 / WNUT-17：正确</li>
+<li>ON5E → BC5CDR：错误</li>
+<li>RE → RTE：错误</li>
+<li>ROUGE-L → BLEU：错误</li>
+<li>GLUE → SNIPS：错误</li>
+</ul>
+
+<p>
+因此“候选集合内”不等于“语义正确”。
+</p>
+
+<h2>六、Partially Pre-defined</h2>
+
+<p>
+目录：
+</p>
+
+<pre>D:\C++\SCILEAD\pilot\full43_partially</pre>
+
+<p>
+两阶段：
+</p>
+
+<ol>
+<li>Stage 1：模型扩展候选 Task / Dataset 集合；</li>
+<li>Stage 2：在部分 TDM 被隐藏的情况下继续标准化。</li>
+</ol>
+
+<p>
+Stage 1 候选集合：
+20 Task / 63 Dataset / 26 Metric
+→
+70 Task / 119 Dataset / 26 Metric。
+</p>
+
+<p>
+共新增 50 个 Task、56 个 Dataset。
+</p>
+
+<p>
+Stage 2 修改了 15 条 TDM。
+</p>
+
+<table>
+<tr>
+<th>指标</th>
+<th>Stage 1 F1</th>
+<th>Stage 2 F1</th>
+</tr>
+<tr><td>Task IIM</td><td>0.289100</td><td>0.408491</td></tr>
+<tr><td>Dataset IIM</td><td>0.482356</td><td>0.579829</td></tr>
+<tr><td>Metric IIM</td><td>0.843065</td><td>0.843065</td></tr>
+<tr><td>Result IIM</td><td>0.703841</td><td>0.703841</td></tr>
+<tr><td>TDM</td><td>0.110872</td><td>0.219500</td></tr>
+<tr><td><b>TDMR</b></td><td>0.089025</td><td><b>0.169384</b></td></tr>
+</table>
+
+<p>
+核心现象：
+<b>Partially Pre-defined 比 Fully Pre-defined 明显困难。</b>
+</p>
+
+<p>
+尤其是 Task / Dataset candidate discovery 会显著增加难度。
+</p>
+
+<p>
+阶段二大量未匹配回答原样返回输入三元组，导致原始名称无法对齐 Gold。
+</p>
+
+<h2>七、Cold Start</h2>
+
+<p>
+目录：
+</p>
+
+<pre>D:\C++\SCILEAD\pilot\full43_cold_start</pre>
+
+<p>
+完成了三轮不同论文顺序：
+</p>
+
+<ul>
+<li>默认顺序</li>
+<li>字符串 <code>"0"</code></li>
+<li>字符串 <code>"42"</code></li>
+</ul>
+
+<p>
+三轮共同覆盖：
+43 篇论文、284 条预测、295 条 Gold。
+</p>
+
+<table>
+<tr>
+<th>指标</th>
+<th>三轮均值 ± 样本标准差</th>
+</tr>
+<tr><td>LR</td><td>0.395062 ± 0.085533</td></tr>
+<tr><td>PC</td><td>0.104159 ± 0.026486</td></tr>
+<tr><td>RC</td><td>0.080850 ± 0.037352</td></tr>
+<tr><td>RBO</td><td>0.087514 ± 0.012494</td></tr>
+<tr><td>AO</td><td>0.113577 ± 0.028266</td></tr>
+</table>
+
+<p>
+Masked 10 榜：
+</p>
+
+<table>
+<tr>
+<th>指标</th>
+<th>均值 ± 样本标准差</th>
+</tr>
+<tr><td>LR</td><td>0.300000 ± 0.173205</td></tr>
+<tr><td>PC</td><td>0.118175 ± 0.062511</td></tr>
+<tr><td>RC</td><td>0.090794 ± 0.064471</td></tr>
+<tr><td>RBO</td><td>0.102954 ± 0.024495</td></tr>
+<tr><td>AO</td><td>0.106657 ± 0.027476</td></tr>
+</table>
+
+<p>
+Cold Start 的重要发现：
+<b>论文输入顺序会造成明显波动，尤其是 LR。</b>
+</p>
+
+<p>
+三轮没有挑选最佳结果，而是完整保留。
+</p>
+
+<h2>八、Few-shot GPT-4 / GPT-4.1</h2>
+
+<p>
+完成三个设置：
+</p>
+
+<table>
+<tr>
+<th>设置</th>
+<th>Extraction</th>
+<th>Normalization</th>
+<th>TDMR F1</th>
+</tr>
+<tr>
+<td>A</td>
+<td>Zero-shot</td>
+<td>Zero-shot</td>
+<td>0.421578</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Few-shot</td>
+<td>Zero-shot</td>
+<td>0.331236</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Few-shot</td>
+<td>Few-shot</td>
+<td><b>0.557291</b></td>
+</tr>
+</table>
+
+<p>
+Few-shot C 使用作者完整 Few-shot Prompt，包括作者提供的示例。
+</p>
+
+<p>
+C 组：
+</p>
+
+<table>
+<tr>
+<th>指标</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+</tr>
+<tr><td>Task IIM</td><td>0.958306</td><td>0.960871</td><td>0.959587</td></tr>
+<tr><td>Dataset IIM</td><td>0.893868</td><td>0.880297</td><td>0.887030</td></tr>
+<tr><td>Metric IIM</td><td>0.923984</td><td>0.882899</td><td>0.902974</td></tr>
+<tr><td>Result IIM</td><td>0.724558</td><td>0.728170</td><td>0.726360</td></tr>
+<tr><td>TDM</td><td>0.784675</td><td>0.743762</td><td>0.763671</td></tr>
+<tr><td><b>TDMR</b></td><td>0.555116</td><td>0.559482</td><td><b>0.557291</b></td></tr>
+</table>
+
+<p>
+B → C：
+143 个 null 字段 → 67 个 null 字段。
+</p>
+
+<p>
+因此 Few-shot 的关键发现是：
+<strong>Few-shot Extraction 单独使用反而降低整体 TDMR；但同时给 Extraction 和 Normalization 使用 Few-shot Prompt 后，TDMR 明显超过 Zero-shot。</strong>
+</p>
+
+<p>
+原论文 GPT-4 Few-shot TDMR-PR：
+<b>51.02%</b>；
+本项目 C：
+<b>55.73%</b>。
+</p>
+
+<h2>九、Leaderboard-level Evaluation</h2>
+
+<p>
+目录：
+</p>
+
+<pre>D:\C++\SCILEAD\pilot\leaderboard_eval_full43_uncapped</pre>
+
+<p>
+使用：
+43 篇冻结 Baseline + 27 个 Gold Leaderboards。
+</p>
+
+<p>
+构建得到 20 个有效非空榜。
+</p>
+
+<table>
+<tr>
+<th>指标</th>
+<th>本项目 Fully LLM</th>
+<th>原论文 GPT-4 Turbo</th>
+</tr>
+<tr><td>LR</td><td>81.48%</td><td>100.00%</td></tr>
+<tr><td>有效非空榜率</td><td>74.07%</td><td>100.00%</td></tr>
+<tr><td>PC</td><td>48.71%</td><td>70.37%</td></tr>
+<tr><td>RC</td><td>31.80%</td><td>51.79%</td></tr>
+<tr><td>AO</td><td>46.25%</td><td>53.87%</td></tr>
+</table>
+
+<p>
+这里的 LR 不是 TDMR F1。
+LR 表示能否正确识别/构建 Gold leaderboard。
+</p>
+
+<p>
+出现 LR < 100% 的核心原因主要包括：
+</p>
+
+<ul>
+<li>Dataset normalization null</li>
+<li>Dataset 名称未正确映射</li>
+<li>Metric 名称差异</li>
+<li>抽取阶段已有字段绑定错误</li>
+<li>某些榜单的所有预测结果均无法形成有效 leaderboard</li>
+</ul>
+
+<p>
+本地 27 榜中有 7 个空榜：
+Gigaword 三榜、WNUT-16 两榜、WSI 两榜。
+</p>
+
+<p>
+原论文与本地 Gold 的 leaderboard 统计存在差异：
+本地完整 Gold 有 141 个唯一 TDM、33 个至少三篇分组；
+作者正式榜单文件只有 27 个。
+因此 Leaderboard-level 对比必须注明数据版本边界。
+</p>
+
+<h2>十、Threshold=2</h2>
+
+<p>
+当前状态：
+<b>BLOCKED / 暂缓。</b>
+</p>
+
+<p>
+重新下载作者官方 Data ZIP 后，确认仍然只有 27 个榜单。
+</p>
+
+<p>
+本地诊断可以构造：
+</p>
+
+<ul>
+<li>141 个唯一 TDM</li>
+<li>33 个至少 3 篇论文的分组</li>
+<li>62 个至少 2 篇论文的分组</li>
+</ul>
+
+<p>
+但没有找到作者实际使用的 threshold=2 原始榜单文件，因此不能正式声称复现。
+</p>
+
+<p>
+原则：
+<strong>不使用推测出来的 62 个榜进行正式实验。</strong>
+</p>
+
+<h2>十一、Wild Datasets</h2>
+
+<p>
+原论文包含 Wild Datasets 实验。
+本项目决定：
+<b>暂时不做。</b>
+</p>
+
+<p>
+原因是该实验属于作者额外的现实场景人工分析，并不是 SCILEAD 主数据集上的核心定量复现实验。
+</p>
+
+<h2>十二、AxCell</h2>
+
+<p>
+原论文包含 AxCell 对照。
+</p>
+
+<p>
+本项目已经尝试进行 AxCell Extraction，但由于本地内存资源不足而暂停。
+</p>
+
+<p>
+因此：
+<b>AxCell 尚未形成正式可汇报实验结果。</b>
+</p>
+
+<h2>十三、服务器 GPU 才需要做的实验</h2>
+
+<p>
+目前尚未完成、且真正需要服务器 GPU 的主要是开源模型实验：
+</p>
+
+<ul>
+<li>Llama-2</li>
+<li>Mixtral</li>
+<li>Llama-3</li>
+<li>以及对应的 CS / Partially 等组合实验（如果最终需要完全复现论文全部模型表格）</li>
+</ul>
+
+<p>
+这些实验是后续服务器阶段的主要任务。
+</p>
+
+<h2>十四、原论文关键结果表</h2>
+
+<p>
+原论文 Fully / Partially 的 ETM（TDMR）结果：
+</p>
+
+<table>
+<tr>
+<th>模型</th>
+<th>Fully F1</th>
+<th>Partially F1</th>
+</tr>
+<tr><td>AxCell</td><td>19.26</td><td>—</td></tr>
+<tr><td>Llama-2 + CS</td><td>13.73</td><td>—</td></tr>
+<tr><td>Llama-2</td><td>11.81</td><td>5.87</td></tr>
+<tr><td>Mixtral + CS</td><td>25.54</td><td>—</td></tr>
+<tr><td>Mixtral</td><td>23.10</td><td>13.35</td></tr>
+<tr><td>Llama-3 + CS</td><td>26.00</td><td>—</td></tr>
+<tr><td>Llama-3</td><td>30.78</td><td>17.09</td></tr>
+<tr><td>GPT-4 + CS</td><td>49.26</td><td>—</td></tr>
+<tr>
+<td><b>GPT-4</b></td>
+<td><b>55.27</b></td>
+<td><b>40.07</b></td>
+</tr>
+</table>
+
+<p>
+原论文 Few-shot GPT-4：
+</p>
+
+<table>
+<tr>
+<th>指标</th>
+<th>R</th>
+<th>P</th>
+<th>F1</th>
+</tr>
+<tr><td>ETM</td><td>51.03</td><td>51.01</td><td>51.02</td></tr>
+<tr><td>IIM Task</td><td>92.66</td><td>92.11</td><td>92.39</td></tr>
+<tr><td>IIM Dataset</td><td>85.55</td><td>89.06</td><td>87.27</td></tr>
+<tr><td>IIM Metric</td><td>93.39</td><td>95.74</td><td>94.55</td></tr>
+<tr><td>IIM Result</td><td>67.78</td><td>69.21</td><td>68.48</td></tr>
+</table>
+
+<p>
+原论文 Fully GPT-4 IIM：
+</p>
+
+<ul>
+<li>Task F1 = 90.86</li>
+<li>Dataset F1 = 89.22</li>
+<li>Metric F1 = 87.31</li>
+<li>Result F1 = 69.26</li>
+</ul>
+
+<h2>十五、实验过程中的重要发现</h2>
+
+<h3>1. Dataset Normalization 是关键瓶颈</h3>
+
+<p>
+Fully LLM：
+Dataset IIM F1 = 80.07%
+</p>
+
+<p>
+CS：
+Dataset IIM F1 = 87.80%
+</p>
+
+<p>
+Few-shot：
+Dataset IIM F1 = 88.70%
+</p>
+
+<p>
+说明 Dataset normalization 对最终 TDMR 有非常直接的影响。
+</p>
+
+<h3>2. Normalization 对 TDMR 的影响非常大</h3>
+
+<p>
+相同 Extraction：
+</p>
+
+<p>
+LLM normalization：
+<b>42.16%</b>
+</p>
+
+<p>
+CS normalization：
+<b>54.26%</b>
+</p>
+
+<p>
+提升：
+<b>+12.10 个百分点</b>。
+</p>
+
+<h3>3. Few-shot 的作用不是简单“越多越好”</h3>
+
+<p>
+Zero-shot：
+42.16%
+</p>
+
+<p>
+Few-shot Extraction + Zero-shot Normalization：
+33.12%
+</p>
+
+<p>
+Few-shot Extraction + Few-shot Normalization：
+55.73%
+</p>
+
+<p>
+说明 Few-shot 对两个阶段存在明显交互作用。
+</p>
+
+<h3>4. Cold Start 对输入顺序敏感</h3>
+
+<p>
+三轮 Cold Start 的 LR：
+39.51% ± 8.55%。
+</p>
+
+<p>
+说明 Cold Start 中模型生成候选知识集合时存在明显的顺序效应。
+</p>
+
+<h3>5. Result Extraction 是最难的局部任务之一</h3>
+
+<p>
+Baseline Result IIM F1：
+70.38%。
+</p>
+
+<p>
+虽然明显低于 Task，但真正困难之处还包括：
+</p>
+
+<ul>
+<li>正确表格定位</li>
+<li>方法变体判断</li>
+<li>Dev/Test 区分</li>
+<li>Baseline / Proposed Method 区分</li>
+<li>多个指标绑定</li>
+<li>复合数值拆分</li>
+</ul>
+
+<h3>6. 数值正确不代表 TDMR 正确</h3>
+
+<p>
+存在大量“数值已经正确，但 Dataset/Task/Metric 错误”的样本。
+</p>
+
+<p>
+因此后续分析不能只看 Result IIM，而必须联合：
+IIM → TDM → TDMR → Leaderboard-level。
+</p>
+
+<h2>十六、API / 中转站信息</h2>
+
+<p>
+当前使用：
+</p>
+
+<pre>
+https://9527.codes/
+model = gpt-4.1-2025-04-14
+</pre>
+
+<p>
+VeriDrop 检测：
+<b>92%</b>。
+</p>
+
+<p>
+通过：
+</p>
+
+<ul>
+<li>基础请求</li>
+<li>模型一致性</li>
+<li>函数调用</li>
+<li>结构化输出</li>
+<li>协议规范性</li>
+<li>Token 计费</li>
+</ul>
+
+<p>
+未通过：
+</p>
+
+<ul>
+<li>流式一致性</li>
+<li>长上下文真实性</li>
+</ul>
+
+<p>
+一次长上下文检测显示：
+32k、523k 档位通过；
+995k 档位失败。
+</p>
+
+<p>
+因此实验统一使用非流式调用，并采用：
+temperature=0、seed=0、固定模型快照。
+</p>
+
+<p>
+之后已经取消客户端 output token 上限，以 API 的
+<code>finish_reason</code> + JSON 完整性判断是否真正发生截断。
+</p>
+
+<h2>十七、文件目录总览</h2>
+
+<table>
+<tr>
+<th>目录</th>
+<th>作用</th>
+</tr>
+
+<tr>
+<td><code>full43_uncapped</code></td>
+<td>正式冻结 Zero-shot Fully Baseline</td>
+</tr>
+
+<tr>
+<td><code>full43_cs</code></td>
+<td>CS normalization 对照</td>
+</tr>
+
+<tr>
+<td><code>full43_partially</code></td>
+<td>Partially Pre-defined 两阶段实验</td>
+</tr>
+
+<tr>
+<td><code>full43_cold_start</code></td>
+<td>三轮 Cold Start</td>
+</tr>
+
+<tr>
+<td><code>full43_fewshot_both_prompts</code></td>
+<td>完整 Few-shot A/B/C 最终结果</td>
+</tr>
+
+<tr>
+<td><code>leaderboard_eval_full43_uncapped</code></td>
+<td>Leaderboard-level Evaluation</td>
+</tr>
+
+<tr>
+<td><code>threshold2_preparation</code></td>
+<td>Threshold=2 数据审计，当前暂缓</td>
+</tr>
+
+<tr>
+<td><code>full43</code></td>
+<td>早期统一 Full Baseline，主要用于历史追踪</td>
+</tr>
+
+</table>
+
+<h2>十八、导师汇报当前需要回答的四个问题</h2>
+
+<ol>
+<li>
+<b>做了哪些实验？</b><br>
+Fully、Fully+CS、Partially、Cold Start、Few-shot、Leaderboard-level。
+</li>
+
+<li>
+<b>每个实验怎么做？</b><br>
+说明输入、Prompt、Normalization、候选集合、评价方式和模型。
+</li>
+
+<li>
+<b>为什么结果和论文不同？</b><br>
+重点从模型版本、数据版本、Normalization、Prompt、输出截断、随机性、实现边界等方面分析。
+</li>
+
+<li>
+<b>实验有什么发现？</b><br>
+重点突出 Dataset normalization、Normalization 对 TDMR 的影响、Few-shot 阶段交互、Cold Start 顺序敏感性、Result/表格绑定困难。
+</li>
+</ol>
+
+<h2>十九、后续工作原则</h2>
+
+<div class="important">
+<strong>原则：先完成原论文复现，再做方法改进。</strong>
+</div>
+
+<ul>
+<li>不要修改冻结 Baseline。</li>
+<li>不要为了提高分数人工修正预测。</li>
+<li>不要用诊断得到的 62 个 threshold=2 榜替代作者正式数据。</li>
+<li>Wild Datasets 当前不做。</li>
+<li>AxCell 暂停。</li>
+<li>服务器阶段主要完成开源模型实验。</li>
+<li>当前重点转向实验结果整体分析与导师汇报材料。</li>
+</ul>
+
+</body>
+</html>

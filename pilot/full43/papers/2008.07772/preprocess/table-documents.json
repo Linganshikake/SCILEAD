@@ -1,0 +1,34 @@
+[
+  {
+    "content": "Table 1: Test results on WMT’14 benchmarks, in terms of TER (T↓), METEOR (M↑), and BLEU. ∆ shows difference in BLEU score against baseline 6L-6L Default. Best results are boldfaced. 60L-12L ADMIN outper- forms 6L-6L in all metrics with statistical signiﬁcance (p < 0.05). Following convention, BLEU is computed by multi-bleu.perl via the standardized tokenization of the publicly-accessible dataset.\nWMT’14 English-French (FR) WMT’14 English-German (DE) Model #param T↓ M↑ BLEU↑ ∆ #param T↓ M↑ BLEU↑ ∆ 6L-6L Default 6L-6L ADMIN 60L-12L Default 60L-12L ADMIN 67M 67M 262M 262M 40.3 42.2 41.8 60.5 60.7 41.3 41.5 diverge 62.4 43.8 - 0.2 2.5 61M 61M 256M 256M 51.8 54.4 54.1 46.6 46.7 27.6 27.7 diverge 48.3 30.1 - 0.1 2.5",
+    "metadata": {
+      "filename": "2008.07772.pdf",
+      "page_number": 3,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "BLEU via multi-bleu.perl 60L-12L ADMIN (Wu et al., 2019b) (Wang et al., 2019) (Wu et al., 2019a) (Ott et al., 2018) (Vaswani et al., 2017) (So et al., 2019) (Gehring et al., 2017) BLEU via sacreBLEU.py 60L-12L ADMIN (Ott et al., 2018) (So et al., 2019) FR 43.8 43.3 - 43.2 43.2 41.8 41.3 40.5 FR 41.8 41.4 n/a DE 30.1 29.9 29.6 29.7 29.3 28.4 29.8 25.2 DE 29.5 28.6 29.2",
+    "metadata": {
+      "filename": "2008.07772.pdf",
+      "page_number": 3,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: BLEU comparison of different encoder and de- coder layers (using ADMIN initialization, on WMT’14 EN-FR). In the matrix, each element (i,j) indicates if the model in row i signiﬁcantly outperforms the model in column j (+), under-performs j (-), or has no statisti- cally signiﬁcant difference (=).\nModel a:6L-6L b:12L-12L c:24L-12L d:48L-12L e:60L-12L f:36L-36L g:12L-60L BLEU 41.5 42.6 43.3 43.6 43.8 43.7 43.1 a + + + + + + b - + + + + + c - - = + = = d - - = = = - e - - - = = - f - - = = = - g - - = + + +",
+    "metadata": {
+      "filename": "2008.07772.pdf",
+      "page_number": 4,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: Back-translation results on WMT’14 EN-FR.\nBLEU via multi-bleu.perl 36L-12L-768D ADMIN + BT 60L-12L ADMIN + BT BT (Edunov et al., 2018) 60L-12L ADMIN BLEU via sacreBLEU.py 36L-12L-768D ADMIN + BT 60L-12L ADMIN + BT 60L-12L ADMIN BT (Edunov et al., 2018)",
+    "metadata": {
+      "filename": "2008.07772.pdf",
+      "page_number": 5,
+      "type": "Table"
+    }
+  }
+]

@@ -1,0 +1,53 @@
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\leaderboard_eval_full43_uncapped\run_official_leaderboard_eval.py", line 9, in main
+    import leaderboard_eval as official
+  File "D:\C++\SCILEAD\emnlp2024-leaderboard-generation\leaderboard_eval.py", line 4, in <module>
+    import utils
+  File "D:\C++\SCILEAD\emnlp2024-leaderboard-generation\utils.py", line 1, in <module>
+    import model_init
+  File "D:\C++\SCILEAD\emnlp2024-leaderboard-generation\model_init.py", line 1, in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer, logging
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\transformers\__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\transformers\dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\transformers\utils\__init__.py", line 32, in <module>
+    from .generic import (
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\transformers\utils\generic.py", line 432, in <module>
+    import torch.utils._pytree as _torch_pytree
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\torch\__init__.py", line 236, in <module>
+    _load_global_deps()
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\torch\__init__.py", line 168, in _load_global_deps
+    if _running_with_deploy() or platform.system() == 'Windows':
+                                 ^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 926, in system
+    return uname().system
+           ^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 861, in uname
+    release, version, csd, ptype = win32_ver()
+                                   ^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 371, in win32_ver
+    major, minor, build = map(int, _syscmd_ver()[2].split('.'))
+                                   ^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 284, in _syscmd_ver
+    info = subprocess.check_output(cmd,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 992, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 1359, in _get_handles
+    p2cread = msvcrt.get_osfhandle(self._get_devnull())
+                                   ^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 1137, in _get_devnull
+    self._devnull = os.open(os.devnull, os.O_RDWR)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\leaderboard_eval_full43_uncapped\common.py", line 22, in guard
+    if writing and not p.is_relative_to(RUN):raise RuntimeError('Write outside evaluation directory forbidden: '+str(p))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Write outside evaluation directory forbidden: \\.\NUL\

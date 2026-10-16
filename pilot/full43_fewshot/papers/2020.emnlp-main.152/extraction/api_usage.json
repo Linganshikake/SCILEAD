@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4595,
+  "completion_tokens": 366,
+  "total_tokens": 4961,
+  "request_seconds": 7.234000000171363,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "2020.emnlp-main.152.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "51bca9fdf7f914069f70b1a66d49afc7bda9e0172927b7aa3c6591309e7872cf",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYx9xTXLiwCU3eJA6DpWWmBZeGDXU",
+      "usage": {
+        "completion_tokens": 366,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 8,
+          "engine_ttft_ms": 340,
+          "engine_ttlt_ms": 3418,
+          "pre_inference_ms": 199,
+          "service_tbt_ms": 8,
+          "service_ttft_ms": 1414,
+          "service_ttlt_ms": 4487,
+          "user_visible_ttft_ms": 1215
+        },
+        "prompt_tokens": 4595,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 4961
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Slot Filling\", \"Dataset\": \"ATIS\", \"Metric\": \"F1-score\", \"Result\": \"96.22\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"97.11\"}, {\"Task\": \"Joint Slot Filling and Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Sentence Accuracy\", \"Result\": \"86.96\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"Snips\", \"Metric\": \"F1-score\", \"Result\": \"93.72\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"Snips\", \"Metric\": \"Accuracy\", \"Result\": \"97.44\"}, {\"Task\": \"Joint Slot Filling and Intent Detection\", \"Dataset\": \"Snips\", \"Metric\": \"Sentence Accuracy\", \"Result\": \"84.38\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"ATIS\", \"Metric\": \"F1-score\", \"Result\": \"96.16\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"97.74\"}, {\"Task\": \"Joint Slot Filling and Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Sentence Accuracy\", \"Result\": \"88.64\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"Snips\", \"Metric\": \"F1-score\", \"Result\": \"99.00\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"Snips\", \"Metric\": \"Accuracy\", \"Result\": \"99.04\"}, {\"Task\": \"Joint Slot Filling and Intent Detection\", \"Dataset\": \"Snips\", \"Metric\": \"Sentence Accuracy\", \"Result\": \"92.96\"}]",
+      "response_sha256": "3c23854c018db629b272aa6739ef4ce2e24cd9545d9357ac1d7cbb467d5f9f07",
+      "seconds": 7.234000000171363
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

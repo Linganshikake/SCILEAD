@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n    {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT En-De\", \"Metric\": \"BLEU\", \"Result\": \"29.6\"},\n    {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT En-Fr\", \"Metric\": \"BLEU\", \"Result\": \"43.2\"},\n    {\"Task\": \"Machine Translation\", \"Dataset\": \"IWSLT De-En\", \"Metric\": \"BLEU\", \"Result\": \"35.5\"},\n    {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNN-DailyMail\", \"Metric\": \"Rouge-1\", \"Result\": \"40.59\"},\n    {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNN-DailyMail\", \"Metric\": \"Rouge-2\", \"Result\": \"18.97\"},\n    {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNN-DailyMail\", \"Metric\": \"Rouge-L\", \"Result\": \"36.81\"},\n    {\"Task\": \"Language Modeling\", \"Dataset\": \"WikiText-103\", \"Metric\": \"Test Perplexity\", \"Result\": \"23.3\"}\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791896978,
+  "id": "chatcmpl-EYWY6UlWgdZxMMVhGouRjkFxADMOj",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20261001233609-e5c1156b-default-r2-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 246,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 148,
+      "engine_ttlt_ms": 1259,
+      "pre_inference_ms": 190,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 781,
+      "service_ttlt_ms": 1870,
+      "user_visible_ttft_ms": 591
+    },
+    "prompt_tokens": 2788,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 3034
+  }
+}

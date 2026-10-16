@@ -1,0 +1,88 @@
+A Papers with Code Analysis
+We take (Xin et al., 2018) as an example paper. Its
+TDMR tuples are given in Table 9. However, its
+paperswithcode entry8 lacks of results for German,
+Spanish and Dutch datasets. In addition, the dataset
+for chunking task is confused with Penn Treebank.
+Task Dataset Metric Result
+Named Entity Recognition CoNLL-2003 - English F1 91.64
+Named Entity Recognition CoNLL-2003 - German F1 79.43
+Named Entity Recognition CoNLL-2002 - Spanish F1 86.68
+Named Entity Recognition CoNLL-2002- Dutch F1 87.81
+Text Chunking CoNLL-2000 F1 95.29
+Part-of-Speech Tagging Penn Treebank (PTB) F1 97.58
+Table 9: TDMR tuples from (Xin et al., 2018)
+B Dataset
+We present some representative data instances from
+SCILEAD in Table 10 and Table 11 for TDMR
+tuples and leaderboards respectively.
+C Experimental Details
+In the TDMR extraction step, Unstructured 9
+and Chroma 10 libraries were used for PDF
+parsing and vector database implementation.
+multi-qa-mpnet-base-dot-v1 (Reimers and
+Gurevych, 2019) was used as the embedding model
+for dense retrieval.
+All experiments with Mixtral, Llama-2, and
+Llama-3 used the instruction-tuned version and
+were run in 4-bit quantization on a single NVIDIA
+A100 GPU with 80GB memory, taking approxi-
+mately ∼13 hours in total. We used the Llama-2
+Chat 70B, Mixtral-8x7B-Instruct, Llama-3 Instruct
+70B versions, and the API version 1106-preview
+for GPT-4 Turbo. For reproducibility, we used
+greedy decoding for all models. In prompting, the
+only modifications made across the models were
+to conform to each model’s specific format require-
+ments, such as incorporating model-specific tokens.
+For embedding similarity model for nor-
+malization similarity baseline, we utilized
+bilingual-embedding-large (Thakur et al.,
+2021) because of its high performance in the
+Massive Text Embedding Benchmark (MTEB)
+(Muennighoff et al., 2023) for Semantic Textual
+Similarity (STS).
+8https://paperswithcode.com/paper/
+learning-better-internal-structure-of-words
+9https://github.com/Unstructured-IO/
+unstructured
+10https://github.com/chroma-core/chroma
+Unlike our framework, AxCell works on TeX
+files instead of PDFs. Therefore, we manually
+downloaded 36 TeX files from the 43 papers in
+our dataset. This poses an input constraint to their
+method. Performance measurements of AxCell for
+TDMR and leaderboard evaluation were made ac-
+cording to the gold labels of those 36 papers. To
+normalize AxCell outputs, we applied the fully pre-
+defined TDM triples setting using GPT-4 Turbo.
+Since some metrics are common across many
+tasks and datasets in leaderboards, only some items
+in the task and dataset are masked in the partially
+masking setting to avoid making the partially pre-
+defined setting too close to the cold start.
+Evaluation. We calculate exact tuple match
+scores as follows:
+ET MRecall = 1|P | ∑p∈P |T Gp ∩ T Mp ||T Gp | (2)
+ET MP recision= 1|P | ∑p∈P |T Gp ∩ T Mp ||T Mp | (3)
+where p represent a single paper in the set of all
+papers P in the dataset. T Gp and T Mp are gold and
+model generated tuple set for the paper p.
+For paper item type t, we calculate individual
+item match scores as follows:
+IIM Recallt = 1|P | ∑p∈P |I Gt,p ∩ I Mt,p||I Gt,p| , (4)
+IIM P recisiont = 1|P | ∑p∈P |I Gt,p ∩ I Mt,p||I Mt,p| , (5)
+where I Gt,p and I Mt,p represent the sets of gold and
+model generated unique type t items that belong to
+the paper p.
+D ETM without Result.
+Since extracting the correct results from the papers
+is the main bottleneck for exact match, we calculate
+ETM score by excluding Result (i.e., on TDMs,
+not TDMRs) in Table 12. We see that the scores
+of all models show a remarkable increase. In this
+setting, Llama-3 outperforms GPT-4 Turbo in the
+fully pre-defined TDM triples setting, but GPT-4
+Turbo is more robust in the partially pre-defined
+TDM triples setting.
+7974

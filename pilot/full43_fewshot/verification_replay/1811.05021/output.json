@@ -1,0 +1,83 @@
+{
+  "1811.05021.pdf": {
+    "output": "[{\"Task\": \"Dialogue Act Classification\", \"Dataset\": \"SwDA\", \"Metric\": \"Accuracy\", \"Result\": \"81.5\"}, {\"Task\": \"Dialogue Act Classification\", \"Dataset\": \"MapTask\", \"Metric\": \"Accuracy\", \"Result\": \"68.5\"}]",
+    "source_documents": [
+      {
+        "content": "[19] Y. Wan, Z. Zhao, M. Yang, G. Xu, H. Ying, J. Wu, and P. S. Yu, “Improving automatic source code summarization via deep reinforcement learning,” in Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering. ACM, 2018, pp. 397–407. [20] Z. Zhao, Q. Yang, D. Cai, X. He, and Y. Zhuang, “Video question answering via hierarchical spatio-temporal attention networks,” in International Joint Conference on Artiﬁcial Intelligence (IJCAI), vol. 2, 2017, p. 1. [35] J. Pennington, R. Socher, and C. Manning, “Glove: Global vectors for word representation,” in Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP), 2014, pp. 1532–1543. [36] H. Kumar, A. Agarwal, R. Dasgupta, S. Joshi, and A. Kumar, “Dialogue act sequence labeling using hierarchical encoder with crf,” arXiv preprint arXiv:1709.04250, 2017. [43] A. H. Anderson, M. Bader, E. G. Bard, E. Boyle, G. Doherty, S. Garrod, S. Isard, J. Kowtko, J. McAllister, J. Miller et al., “The hcrc map task corpus,” Language and speech, vol. 34, no. 4, pp. 351–366, 1991. [44] Y. Liu, K. Han, Z. Tan, and Y. Lei, “Using context information for dialog act classiﬁcation in dnn framework,” in Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, 2017, pp. 2170–2178. [46] Y. Ji, G. Haffari, and J. Eisenstein, “A latent variable recurrent neural network for discourse relation language models,” north american chapter of the association for computational linguistics, pp. 332–342, 2016. [47] F. N. Julia, K. M. Iftekharuddin, and A. U. ISLAM, “Dialog act classiﬁcation using acoustic and discourse information of maptask data,” International Journal of Computational Intelligence and Applications, vol. 9, no. 04, pp. 289–311, 2010.",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 10,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "is labeled with one of the 13 tags. Unlike SwDA, the MapTask corpus emphasizes on directions and conductions. Table II presents different statistics for both datasets. For SwDA, training and testing sets are provided but not the validation set, so we use the standard practice of taking a part of training data set as validation set [15]. We also shows the top 10 utterance labels on different datasets in Figure 3. Figure 3: The distribution of utterance labels on two datasets: a) SwDA, b) MapTask. B. Evaluation Metrics We employ the standard accuracy as the metric of evaluating our proposed ALDMN method. The accuracy is deﬁned as: where ˆyi and yi are the predicted label and ground true label, ] is the indicator function. When the predicted respectively. 1[ · ] equals to 1 otherwise 0. label is the same as the true, label 1[ · C. Implementation Details To train our proposed model, we ﬁrst randomize the training data and set the mini-batch to 128. For each batch, the utterance is padded with a special token <pad> to the maximum length. We regard the words whose occurrence is less than 2 as Out of Vocabulary (OOV) tokens and replace them with <unk>s. We remove all punctuation marks except interrogation and all characters are converted to lower-case. We set the memory updating iterations to 3. We adopt Adam [41] optimizer with the learning rate initialized to 0.01. We run the training data set for 45 epochs with early stopping when validation loss did not decline for ﬁve consecutive epochs. The random uniform initialization with range [ 0.1, 0.1] is used for all matrix variables, including word embedding and other weights. Both the embedding and hidden dimensions are set to d = 200. The",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 6,
+          "start_index": 1807,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "memory, and the function is to assign a weight to each lower position when computing an upper level representation. Such attention based approaches have achieved promising performances on a variety of NLP tasks [22]. Based on these works, [23] develops dynamic memory network which simultaneously contains memory updating mechanism and attention mechanism. [10] proposes an improved dynamic memory network with some modiﬁcations in memory and input module. The dynamic memory network has been successfully applied in many scenarios such as question answering and sentiment analysis. To the best of our knowledge, it’s the ﬁrst time that we apply dynamic memory network in DA classiﬁcation. C. Adversarial Learning training [24] introduces an end-to-end and deterministic way of data perturbation by utilizing the gradient information. It could design adversarial examples to attack [25] or improve robustness [26], [27] of neural network models. Adversarial training is originally used in the context of image classication tasks where the input data is continuous. Miyato et al. [9] adopt adversarial training to text classication by adding perturbations on word embeddings and also extends it to a semi-supervised setting by minimizing the entropy of the predicted label distributions on unlabeled data. Wu et al. [28] apply adversarial training in relation extraction within the multi-instance multi-label learning framework. There are also other works on regularizing classiﬁers by adding random noise to the data, such as dropout [29] and its variant for NLP tasks such as word dropout [30]. In [31], Xie et al. discuss various data noising techniques for language models. Sogaard and Li et al. [32] focus on linguistic adversaries. Inspired by these works, in this paper we apply adversarial training to train our dynamic memory network for the task of DA classiﬁcation. III. PRELIMINARIES In this section, we ﬁrst declare some notiﬁcations through this paper and formulate the DA classiﬁcation",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 2,
+          "start_index": 3600,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "to train our dynamic memory network for the task of DA classiﬁcation. III. PRELIMINARIES In this section, we ﬁrst declare some notiﬁcations through this paper and formulate the DA classiﬁcation problem math- ematically. We also present some background knowledge on dynamic memory network. A. Task Description of N conversations, i.e. with (Y 1, Y 2, . . . , Y N ) correspond- D ing target DAs. For each conversation C i, it consists of a series",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 2,
+          "start_index": 5406,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table I: A snippet of a conversation sample. Each utterance has related dialogue act label [5].\nSpeaker A B A B A B A B A B Utterance Hi, long time no see. Hi, how are you? What are you doing these days? I’m busying writing my paper. I heard that the deadline is coming. Yeah. You need to make a push. Sure, thats why I am so busy now. I can’t bother you for too long, goodbye. See you later. DA label Greeting Greeting Question Answer Statement Backchannel Opinion Agreement Farewell Farewell",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 1,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "is Table II: the vocabulary size. MinL, MeanL and MaxL indicate the minimum, mean and maximum of utterance length, respectively.\nDataset SwDA MapTask |C| 42 13 |V | MinL MeanL MaxL 19K 15K 16 2 56 4 118 21",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table III and Table IV respectively show the experimental Accuracy results of the methods on the SwDA and MRDA datasets. The hyper-parameters and parameters which achieve the best performance on the validation set are chosen to conduct the testing evaluation. From these two tables, we can ﬁnd that our proposed model ALDMN deﬁnitely outperforms other baselines in both datasets. On SwDA dataset, our model\nModel RCNN(Bulnsom et al. 2013) BiLSTM-Softmax(Khanpour et al. 2016) DRLM-Conditional(Ji et al. 2016) PDI(Tran et al. 2017) UCI(Liu et al. 2017) DMN(Kumar et al., 2015) ALDMN (Our Model) Accuracy(%) 73.9 75.8 77.0 75.6 79.9 75.2 81.5",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table III: Classiﬁcation accuracy on SwDA corpus, comparing our ALDMN model with other methods as described in literatures.\nModel ADC(Julia et al. 2010) GAN(Tran et al. 2017b) PDI(Tran et al. 2017a) DMN(Kumar et al., 2015) ALDMN (Our Model) Accuracy(%) 55.4 62.9 65.9 64.7 68.5",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Figure 7: The performance of our proposed model w.r.t. varying length of utterances on SwDA dataset.\nfo 59 04 00 68 00 00 00 00 00 qw 0.0 00 08 30 144 00 00 00 00 qyd 00 00 [8987 264 102 00 00 00 00 143 qy 00 03 07 00 00 00 oO 214 sd 00 00 04 00 ERM o2 of 01 00 40 ad 00 00 00 00 324 296 00 00 04 232 h 00 00 00 00 163 00 aa 00 00 00 00 52 00 b 00 00 00 08 00 00 sv 00 00 03 00 254 00 fo qw qyd qy sd_ ad",
+        "metadata": {
+          "filename": "1811.05021.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

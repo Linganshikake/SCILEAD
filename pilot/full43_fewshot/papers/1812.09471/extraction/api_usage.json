@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4766,
+  "completion_tokens": 186,
+  "total_tokens": 4952,
+  "request_seconds": 2.953000000678003,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1812.09471.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "c4ea86c8e5bacc895a6f281473f40f8183598dfb535eedb475088319d74c0bc0",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxKBaj3HmvauWR4IXhSb8fwbyRqb",
+      "usage": {
+        "completion_tokens": 186,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 72,
+          "engine_ttlt_ms": 829,
+          "pre_inference_ms": 108,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 362,
+          "service_ttlt_ms": 1114,
+          "user_visible_ttft_ms": 254
+        },
+        "prompt_tokens": 4766,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 4952
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Slot Filling\", \"Dataset\": \"SNIPS-NLU\", \"Metric\": \"F1\", \"Result\": \"0.918\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"SNIPS-NLU\", \"Metric\": \"Accuracy\", \"Result\": \"0.977\"}, {\"Task\": \"Overall Joint Slot/Intent Accuracy\", \"Dataset\": \"SNIPS-NLU\", \"Metric\": \"Accuracy\", \"Result\": \"0.952\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"ATIS\", \"Metric\": \"F1\", \"Result\": \"0.809\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"0.847\"}, {\"Task\": \"Overall Joint Slot/Intent Accuracy\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"0.834\"}]",
+      "response_sha256": "2326fbec49705db6e89d54a18f55e544cd2047b26e17b70c69687a79a84226c2",
+      "seconds": 2.953000000678003
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

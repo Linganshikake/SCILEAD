@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[{\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNNDM\", \"Metric\": \"ROUGE-1\", \"Result\": \"47.78\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNNDM\", \"Metric\": \"ROUGE-2\", \"Result\": \"23.55\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"CNNDM\", \"Metric\": \"ROUGE-L\", \"Result\": \"44.57\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-1\", \"Result\": \"49.07\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-2\", \"Result\": \"25.59\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-L\", \"Result\": \"40.40\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"NYT\", \"Metric\": \"ROUGE-1\", \"Result\": \"57.75\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"NYT\", \"Metric\": \"ROUGE-2\", \"Result\": \"38.64\"}, {\"Task\": \"Abstractive Summarization\", \"Dataset\": \"NYT\", \"Metric\": \"ROUGE-L\", \"Result\": \"54.54\"}]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1792000230,
+  "id": "chatcmpl-EYxPSIBakO9C7cLPAlvJrQJnQHd4l",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260929115553-204c3a2e-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 317,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 91,
+      "engine_ttlt_ms": 1397,
+      "pre_inference_ms": 126,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 463,
+      "service_ttlt_ms": 1765,
+      "user_visible_ttft_ms": 337
+    },
+    "prompt_tokens": 6238,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 6555
+  }
+}

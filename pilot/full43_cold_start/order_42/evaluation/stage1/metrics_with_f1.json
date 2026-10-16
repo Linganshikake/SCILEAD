@@ -1,0 +1,49 @@
+{
+  "stage": "stage1",
+  "input_path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_42\\stage1\\normalized_output.json",
+  "input_sha256": "74b7c2b297799a393c648a138b381a6b9d2ec9a5c25dc299d977ca7293d5e48b",
+  "papers": 43,
+  "gold_tdmrs": 295,
+  "predictions": 284,
+  "aggregate": {
+    "Task IIM": {
+      "Precision": 0.217718715393134,
+      "Recall": 0.24677002583979324,
+      "F1": 0.23133586782215698
+    },
+    "Dataset IIM": {
+      "Precision": 0.3178848283499447,
+      "Recall": 0.3138429684770314,
+      "F1": 0.3158509682944444
+    },
+    "Metric IIM": {
+      "Precision": 0.48975636766334424,
+      "Recall": 0.4908386187455955,
+      "F1": 0.4902968959816504
+    },
+    "Result IIM": {
+      "Precision": 0.6901599046947885,
+      "Recall": 0.718075219354289,
+      "F1": 0.7038408806738071
+    },
+    "TDM Exact Match": {
+      "Precision": 0.030961609449981543,
+      "Recall": 0.027732603313998662,
+      "F1": 0.029258286035526458
+    },
+    "TDMR Exact Match": {
+      "Precision": 0.027639350313768917,
+      "Recall": 0.024825626569812617,
+      "F1": 0.026157037714681218
+    }
+  },
+  "aggregation": "Official per-paper macro P/R. Additional F1 = harmonic mean of aggregate P/R, not arithmetic mean of per-paper F1.",
+  "mean_per_paper_f1_SEPARATE": {
+    "Task IIM": 0.22339495130192805,
+    "Dataset IIM": 0.31064867050711337,
+    "Metric IIM": 0.48225888817395385,
+    "Result IIM": 0.6885688725711231,
+    "TDM Exact Match": 0.02902865867982147,
+    "TDMR Exact Match": 0.02592788348602302
+  }
+}

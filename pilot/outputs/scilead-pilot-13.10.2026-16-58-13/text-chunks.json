@@ -1,0 +1,227 @@
+[
+  {
+    "text": "Improving Named Entity Recognition with Attentive Ensemble of Syntactic Information Abstract Named entity recognition (NER) is highly sen- sitive to sentential syntactic and semantic prop- erties where entities may be extracted accord- ing to how they are used and placed in the running text. To model such properties, one could rely on existing resources to providing helpful knowledge to the NER task; some ex- isting studies proved the effectiveness of doing so, and yet are limited in appropriately leverag- ing the knowledge such as distinguishing the important ones for particular context. In this paper, we improve NER by leveraging differ- ent types of syntactic information through at- tentive ensemble, which functionalizes by the proposed key-value memory networks, syntax attention, and the gate mechanism for encod- ing, weighting and aggregating such syntac- tic information, respectively. Experimental re- sults on six English and Chinese benchmark datasets suggest the effectiveness of the pro- posed model and show that it outperforms pre- vious studies on all experiment datasets.1 Introduction Named entity recognition (NER) is one of the most important and fundamental tasks in natural lan- guage processing (NLP), which identiﬁes named entities (NEs), such as locations, organizations, per- son names, etc., in running texts, and thus plays an important role in downstream NLP applications including question answering (Pang et al., 2019), semantic parsing (Dong and Lapata, 2018) and en- tity linking (Martins et al., 2019), etc. The main methodology for NER is convention- ally regarded as a sequence labeling task with mod- els such as hidden Markov model (HMM) (Bikel et al., 1997) and conditional random ﬁeld (CRF) (McCallum and Li, 2003) applied to it in previous studies. Recently, neural models play a dominate role in this task and illustrated promising results (Collobert et al., 2011; Huang et al., 2015; Lam- ple et al., 2016; Strubell et al., 2017; Yadav and",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "Recently, neural models play a dominate role in this task and illustrated promising results (Collobert et al., 2011; Huang et al., 2015; Lam- ple et al., 2016; Strubell et al., 2017; Yadav and Bethard, 2018; Chen et al., 2019; Jie and Lu, 2019; Liu et al., 2019d; Baevski et al., 2019), because they are powerful in encoding contextual informa- tion and thus drive NER systems to better under- stand the text and recognize NEs in the input text. Although it is straightforward and effective to use neural models to help NER, it is expected to incor- porate more useful features into an NER system. Among all such features, syntactic ones, such as part-of-speech (POS) labels, syntactic constituents, dependency relations, are of high importance to NER because they are effective in identifying the inherited structure in a piece of text and thus guide the system to ﬁnd appropriate NEs accordingly, which is proved in a large body of previous studies (McCallum, 2003; Li et al., 2017; Luo et al., 2018; Dang et al., 2018; Jie and Lu, 2019). Although promising results are obtained, existing models are limited in regarding extra features as gold ref- erences and directly concatenate them with word embeddings. Therefore, such features are not dis- tinguished and separately treated when they are used in those NER models, where the noise in the extra features (e.g., inaccurate POS tagging results) may hurt model performance. As a result, it is still a challenge to ﬁnd an appropriate way to incorpo- rate external information into neural models for NER. Moreover, in most cases, one would like to incorporate more than one types of extra features. Consequently, it is essential to design an effective mechanism to combine and weight those features so as to restrict the inﬂuence of noisy information. https://github.com/cuhksz-nlp/AESINER 4231 Findings of the Association for Computational Linguistics: EMNLP 2020, pages 4231-4245 November 16 - 20, 2020. ©2020 Association for Computational",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "text": "https://github.com/cuhksz-nlp/AESINER 4231 Findings of the Association for Computational Linguistics: EMNLP 2020, pages 4231-4245 November 16 - 20, 2020. ©2020 Association for Computational Linguistics",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 3604
+    }
+  },
+  {
+    "text": "Figure 1: The overall architecture of the proposed NER model integrated with attentive ensemble of different syn- tactic information. An example input sentence and its output entity labels are given and the syntactic information for the word “Salt” are illustrated with their processing through KVMN, syntax attention and the gate mechanism. In this paper, we propose a sequence labeling based neural model to enhance NER by incorporat- ing different types of syntactic information, which is conducted by attentive ensemble with key-value memory networks (KVMN) (Miller et al., 2016), syntax attention and the gate mechanism. Particu- larly, the KVMN is applied to encode the context features and their syntax information from different types, e.g., POS labels, syntactic constituents, or dependency relations; syntax attention is proposed to weight different types of such syntactic informa- tion, and the gate mechanism controls the contribu- tion of the results from the context encoding and the syntax attention to the NER process. Through the attentive ensemble, important syntactic information is highlighted and emphasized during labeling NEs. In addition, to further improve NER performance, we also try different types of pre-trained word em- beddings, which is demonstrated to be effective in previous studies (Akbik et al., 2018; Jie and Lu, 2019; Liu et al., 2019b; Yan et al., 2019). We exper- iment our approach on six widely used benchmark datasets from the general domain, where half of them are in English and the other half are in Chi- nese. Experimental results on all datasets suggest the effectiveness of our approach to enhance NER through syntactic information, where state-of-the- art results are achieved on all datasets. 2 The Proposed Model . . . NER is conventionally regarded as a typical se- labeli k. wh . ,_. abenns tas > where wth tokens ie on tat a “th its Thy NE abete > notated WIEN US cofresponeing apes 41” its a a \"++ Yn in the same rene! n Follo ing this",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "regarded as a typical se- labeli k. wh . ,_. abenns tas > where wth tokens ie on tat a “th its Thy NE abete > notated WIEN US cofresponeing apes 41” its a a \"++ Yn in the same rene! n Follo ing this paradigm, we propose a neura mode depicted in Figure | with attentive ensemble to in- P 8 corporate different types of syntactic information, where it can be conceptually formalized by where C denotes the set of all syntactic information types and c is one of them; Mc is the KVMN for encoding syntactic information of type c with Kc and V c referring to the keys and values in it, respec- tively; SA denotes the syntax attention to weight different types of syntactic information obtained through Mc; GM refers to the gate mechanism to control how to use the encodings from context en- coder and that from SA. In the following text, we ﬁrstly introduce how we extract different types of syntactic information, then illustrate the attentive ensemble of syntactic information through KVMN, syntax attention, and gate mechanism, ﬁnally elab- orate the encoding and decoding of the input text for NER as shown in the left part of Figure 1.",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1796
+    }
+  },
+  {
+    "text": "2.1 Syntactic Information Extraction A good representation of the input text is the key to obtain good model performance for many NLP tasks (Song et al., 2017; Sileo et al., 2019). Nor- mally, a straightforward way to improve model performance is to enhance text representation by embeddings of extra features, which is demon- strated to be useful across tasks (Marcheggiani and Titov, 2017; Song et al., 2018a; Zhang et al., 2019; Huang and Carley, 2019; Tian et al., 2020c), in- cluding NER (Zhang and Yang, 2018; Seyler et al., 2018; Sui et al., 2019; Gui et al., 2019b,a; Liu et al., 2019b). Among different types of extra features, the syntactic one has been proved to be helpful in previous studies for NER, where the effectiveness of POS labels, syntactic constituents, and depen- dency relations, are demonstrated by McCallum (2003), Li et al. (2017), and Cetoli et al. (2018), respectively. In this paper, we also focus on these three types of syntactic information. In doing so, we obtain the POS labels, the syntax tree and the dependency parsing results from an off-the-shelf NLP toolkit (e.g., Stanford Parser) for each input sequence X . Then, for each token xi in X , we extract its context features and related syntactic information according to the following procedures. the tree to ﬁnd the ﬁrst acceptable syntactic node2, and select all tokens under that node as the con- text features and the combination of tokens and their syntactic nodes as the constituent information. For example, in Figure 2(b), we start from “Salt” and extract its ﬁrst accepted node “NP”, then col- lect the tokens under “NP” as the context features (i.e., “Salt”, “Lake”, and “City”) and combine them with “NP” to get the constituent information (i.e., “Salt NP”, “Lake NP”, and “City NP”). For dependency relations, we ﬁnd all context features for each xi by collecting all its dependents and governor from X ’s dependency parse, and then regard the combination of the context features and their",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "relations, we ﬁnd all context features for each xi by collecting all its dependents and governor from X ’s dependency parse, and then regard the combination of the context features and their in-bound dependency types as the correspond- ing dependency information. For example, as illus- trated in Figure 2(c), for “Salt”, its context features are “Salt” and “City” (the governor of “Salt”), and their corresponding dependency information are “Salt compound” and “City root”.3 As a result, for each type of syntactic inforam- tion, we obtain a list of context features and a list of syntactic information instances, which are modeled by a KVMN module to enhance input text repre- sentation and thus improve model performance. For POS labels, we treat every xi as the central word and employ a window of ±1 word to extract its context words and their corresponding POS la- bels. For example, in the example in Figure 2(a), for “Salt”, the ±1 word window covers its left and right words, so that the resulting context features are “Salt”, “is”, and “Lake”, and we use the com- bination of such words and their POS labels as the POS information (i.e., “Salt NNP”, “is BVZ”, and “Lake NNP”) for the NER task. 2.2 KVMN for Syntactic Information Since the syntactic information is obtained from off-the-shelf toolkits, it is possible that there is noise in the extracted syntactic information, which may hurt model performance if it is not lever- aged appropriately. Inspired by the studies that 2There are 10 accepted constituent nodes, including NP, VP, PP, ADVP, SBAR, ADJP, PRT, INTJ, CONJP and LST, which are selected from the types used in the CoNLL-2003 shared task (Sang and Meulder, 2003). For syntactic constituents, we start with xi at the leaf of X ’s syntax tree, then search up through 3Note that, in this case, we do not have context features selected from the dependents since “Salt” do not have any dependents according to the dependency parse result.",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "text": "use KVMN and its variants to weight and lever- age extra features to enhance model performance in many NLP tasks (Miller et al., 2016; Mino et al., 2017; Xu et al., 2019b; Tian et al., 2020d), for each type of the syntactic information (de- noted as c), we propose a KVMN module (Mc) to model the pair-wisely organized context features and the syntactic information instances. Specif- ically, for each xi in the input, we ﬁrstly map its context features and the syntactic information to keys and values in the KVMN, which are de- noted by Kc i = i,mi [vc i,1, . . . , vc ], respectively, with mi the number of context features for xi. Next, we use two matrices to map them to their embeddings, i,j and evc with ekc i,j referring to the embedding of kc i,j for vc i,j, respectively. Then, for each token xi and its associated context features Kc i and syntactic in- formation V c i , the weight assigned to the syntactic information vc where hi is the hidden vector for xi obtained from the context encoder. Afterwards, we apply the weights pc i,j to their corresponding syntactic infor- mation vc i,j by where sc is the output of Mc, containing the i weighted syntactic information in type c. There- fore, KVMN ensures that the syntactic information are weighted according to their corresponding con- text features, so that important information could be distinguished and leveraged accordingly. 2.3 The Syntax Attention Upon encoding each type of syntactic information by KVMN, one can assemble different types of them with an overall representation. The most straightforward way of doing so is to concatenate the encoding from each type by sc i where si is the aggregated results of sc i , the embed- ding for each syntactic type from Mc. However, given the fact that different syntactic information may conﬂict to each other, it is expected to have a more effective way to combine them. Motivated by studies that selectively leverage different features by assigning different weights to them",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "may conﬂict to each other, it is expected to have a more effective way to combine them. Motivated by studies that selectively leverage different features by assigning different weights to them (Kumar et al., 2018; Higashiyama et al., 2019; Tian et al., 2020a,b), we propose a syntax attention for the syntactic information ensemble. Particularly, for each syntactic type c, we ﬁrstly concatenate sc i with hi and use the resulting vector to compute the weight qc i for sc i : qc i ) + bc q · (hi ⊕ sc i = σ(Wc q) where Wc q and bc q are trainable vector and variable, respectively, and σ is the sigmoid function. Then, a softmax function is applied over all types of syn- tactic information to compute their corresponding attentions ac i , which is formalized by In the last, we apply the weights to their corre- sponding encoded syntactic information vectors by where si is the output of the syntax attention of different syntactic information types. 2.4 The Gate Mechanism To enhance NER with the syntactic information encoded by KVMN and combined by syntax atten- tion, we propose a gate mechanism (GM) to incor- porate it to the backbone NER model, where we expect such mechanism could dynamically weight and decide how to leverage the syntactic informa- tion in labeling NEs. In detail, we propose a reset function ri to evaluate the encodings from the con- text encoder and the syntax attention by where Wr1, Wr2 are trainable matrices and br the bias term, and use to control the contribution of them, where oi is the output of the gate mechanism corresponding to in- put xi, 1 is a 1-vector with its dimension matching hi and ◦ the element-wise multiplication operation. 2.5 Encoding and Decoding for NER To provide hi to KVMN, we adopt Adapted- Transformer4 (Yan et al., 2019) as the context en- 4The Adapted-Transformer additionally models direction and distance information of the input, which are demonstrated",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "text": "coder in this work. So that the encoding of the input text can be formalized as where H = [h1, h2, · · · , hi, · · · , hn] and E = [e1, e2, · · · , ei, · · · , en] are lists of hidden vectors and embeddings of X , respectively. Note that, since pre-trained embeddings contain context infor- mation learned from large-scale corpora, and differ- ent types of them may carry heterogeneous context information learned from different algorithms and corpora, we incorporate multiple pre-trained em- beddings by direct concatenating them in the input: 2015).5 These datasets come from a wide range of sources so that we are able to comprehensively eval- uate our approach with them. In detail, WN16 and WN17 are constructed from social media; ON5e consists of mixed sources, such as telephone con- versation, newswire, etc.; ON4c is from news do- main; RE and WE are extracted from Chinese on- line resources. For all datasets, we use their origi- nal splits and the statistics of them with respect to the number of entity types (# T.), sentences (# S.) and total entities (# E.) in the train/dev/test sets are reported in Table 1. 3.2 Implementation ei = ⊕ z∈Z where ei is the ﬁnal word representation to feed the context encoder; ez i represents the word embedding of xi in embedding type z and Z the set of all embedding types. For the output, upon the receiving of oi, a train- able matrix Wo is used to align its dimension to the output space by ui = Wo · oi. Finally, we apply a conditional random ﬁeld (CRF) decoder to predict the labels ˆyi ∈ T (where T is the set with all NE labels) in the output sequence ˆY by To label NEs, we use the BIOES tagging scheme instead of the standard BIO scheme for the reason that previous studies have shown optimistic im- provement with this scheme (Lample et al., 2016; Yan et al., 2019). For the text input, we use three types of embeddings for each language by de- fault. Speciﬁcally, for English, we use Glove (100- dimension)6 (Pennington et al., 2014), ELMo",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "2016; Yan et al., 2019). For the text input, we use three types of embeddings for each language by de- fault. Speciﬁcally, for English, we use Glove (100- dimension)6 (Pennington et al., 2014), ELMo (Pe- ters et al., 2018), and the BERT-cased large7 (De- vlin et al., 2019) (the derived embeddings for each word); for Chinese, we use pre-trained character and bi-gram embeddings8 released by Zhang and Yang (2018) (denoted as Giga), Tencent Embed- ding9 (Song et al., 2018b), and ZEN10 (Diao et al., 2019). For both BERT and ZEN, we follow their where Wc and bc are trainable parameters to model the transition for yi−1 to yi. 3 Experimental Settings 5Among these datasets, ON5e and ON4c are multi-lingual datasets. We follow Yan et al. (2019) by extracting the corre- sponding English and Chinese part from them. 3.1 Datasets 6We download the Glove.6B embedding from https: //nlp.stanford.edu/projects/glove/ In our experiments, we use three English bench- mark datasets, i.e., OntoNotes 5.0 (ON5e) (Prad- han et al., 2013) , WNUT-16 (WN16), WNUT- 17 (WN17) (Derczynski et al., 2017), and three Chinese datasets, i.e., OntoNotes 4.0 (ON4c) (Weischedel et al., 2011), Resume (RE) (Zhang and Yang, 2018), Weibo (WE) (Peng and Dredze, to be useful for NER comparing to the vanilla Transformer. 7We obtain the pre-trained BERT from https:// github.com/google-research/bert. 8We obtain the embeddings from https://github. com/jiesutd/LatticeLSTM. 9We use the ofﬁcial release from https://ai. tencent.com/ailab/nlp/embedding.html. 10We use the pre-trained ZEN-base downloaded from https://github.com/sinovation/ZEN. Note that we do not use the Chinese BERT since ZEN performs better across three Chinese datasets. For reference, we report the results of using BERT in Appendix A.",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "text": "Table 2: F 1 scores of the baseline model and ours enhanced with different types of syntactic information (“POS.”, “CON.” and “DEP.” refer to POS labels, syntactic constituents and dependency relations, respectively). default settings, i.e., 24 layers of self-attention with 1024 dimensional embeddings for BERT-large and 12 layers of self-attention with 768 dimensional embeddings for ZEN-base. For syntactic informa- tion, we use the Stanford CoreNLP Toolkit11 (Man- ning et al., 2014) to produce the aforementioned three types of syntactic information, i.e. POS la- bels, syntactic constituents, and dependency rela- tions, for each input text. In the context encoding layer, we use a two-layer Adapted-Transformer en- coder12 with 128 hidden units and 12 heads and set the dropout rate to 0.2. For the memory module, all key and value embeddings are initialized ran- domly. During the training process, we ﬁx all pre- trained embeddings and use Adam (Kingma and Ba, 2015) to optimize negative log-likelihood loss function with the learning rate set to η = 0.0001, β1 = 0.9 and β2 = 0.99. In all experiments, we run a maximum of 100 epochs with the batch size of 32 and tune the hyper-parameters on the devel- opment set.13 The model that achieves the highest performance on the development set is evaluated on the test set with respect to the F 1 scores obtained from the ofﬁcial conlleval toolkits14. 4 Experimental Results 4.1 Effect of Key-Value Memory Networks To explore how different syntactic information helps NER, we run the baselines without syntactic information and the ones with each type of syntac- tic information through KVMN.15 Experimental results (F 1) are reported in Table 2 for all datasets. It is observed from the results that the models with syntactic information outperform the baseline in all cases, which demonstrates the effectiveness of using KVMN in our model. In addition, it is also noticed that the best performed model is not ex- actly the same one across",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "the baseline in all cases, which demonstrates the effectiveness of using KVMN in our model. In addition, it is also noticed that the best performed model is not ex- actly the same one across different datasets, which indicates the contributions of different syntactic in- formation vary in those datasets. For example, in most datasets, models using syntactic constituents achieve the best results, which can be explained by that syntactic constituents provide important cues of NE chunks. As a comparison, POS labels are 11We use its 3.9.2 version downloaded from https:// stanfordnlp.github.io/CoreNLP/. 12We also try other encoders (i.e., Bi-LSTM and Trans- former) and report their results in Appendix B for reference. 13We report the hyper-parameter settings of different mod- els as well as the best one in Appendix C. 14https://www.clips.uantwerpen.be/ conll2000/chunking/conlleval.txt. 15Syntax attention and the gate mechanism are not applied.",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1804
+    }
+  },
+  {
+    "text": "Table 4: F 1 scores of our models with and without applying the gate mechanism (“GM”) when different syntactic information are combined by syntactic attention. the most effective syntactic information for WE dataset, which can be attributed to the natural of the dataset that most sentences in social media are not formally written, so that their parsing results could be inaccurate and mislead the NER process. 4.2 Effect of Syntax Attention To examine the effectiveness of syntax attention (SA), we compare it with another strategy through direct concatenation (DC) of the KVMN output to model ouptut. The results are reported in Ta- ble 3 with applying all combinations of different syntactic information by DC and SA. ent syntactic information may provide conﬂict cues to NE tags and thus result in inferior performance. Second, on the contrary, SA is able to improve NER with integrating multiple types of syntactic information, where consistent improvements are observed among all datasets when more types of syntactic information are incorporated. As a result, the best results are achieved by the model using all types of syntactic information. This observation suggests that the syntax attention is able to weight different syntactic information and distinguish im- portant ones from others, thus alleviate possible conﬂicts of them when labeling entities. There are several observations. First, interest- ingly, compared to the results in Table 2, direct concatenation of different syntactic information hurts NER performance in most cases. For exam- ple, on the RE dataset, the ensemble of all types of syntactic information through DC obtains the worst results compared to all other results with integrat- ing less information under the same setting. The reason behind this phenomenon could be that differ- 4.3 Effect of the Gate Mechanism We experiment our model under its best setting (i.e., SA over all combinations of syntactic infor- mation with KVMN) with and without the gate",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "could be that differ- 4.3 Effect of the Gate Mechanism We experiment our model under its best setting (i.e., SA over all combinations of syntactic infor- mation with KVMN) with and without the gate mechanism to investigate its effectiveness of ac- tively controlling the information ﬂow from the context encoder and SA. The results are presented in Table 4, where the ones without using the gate",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1797
+    }
+  },
+  {
+    "text": "mechanism are obtained directly from Table 3.16 It is clearly shown that in all cases, the model with gate mechanism achieves superior performance to the other one without it. These results suggest that the importance of the information from the context encoder and SA varies, so that the proposed gate mechanism is effective in balancing them. 4.4 Comparison with Previous Studies To further illustrate the effectiveness of our models, we compare the best performing one, i.e., the last line in Table 4, with the results from previous stud- ies. The results are shown in Table 5, where our approach outperforms previous models with BERT encoder (marked by “*”) and achieves state-of-the- art results on all English and Chinese datasets. This observation indicates that incorporate different em- beddings as input is more effective than directly using pre-trained models. In addition, compared to some previous studies (Luo et al., 2018; Dang et al., 2018)17 that leverage multiple types of syntactic information by regarding the information as gold references and directly concatenating their embed- dings with word embeddings, our approach has its superiority by using attentive ensemble through KVMN, syntax attention, and the gate mechanism to selectively learn from different syntactic infor- mation according to their contribution to NER, where such multi-phase strategy of attentive en- semble guarantees the appropriateness of learning them in a reasonable manner. 5 Analyses 5.1 Effect of Different Word Embeddings Neural models are sensitive to input embeddings, which is also true for our approach. Consider that different types of embeddings carry contextual in- formation learned from various corpora and algo- rithms, we explore the effect of those embeddings when they are used separately or combined as the input. The experiment is performed on our best model (i.e., KVMN+SA+GM on all syntactic in- formation), with the results reported in Table 6. It is clearly observed that for all",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "or combined as the input. The experiment is performed on our best model (i.e., KVMN+SA+GM on all syntactic in- formation), with the results reported in Table 6. It is clearly observed that for all English and Chi- nese datasets, the model with all three embeddings achieves the best performance and its performance drops consistently when more types of embeddings are excluded. It is conﬁrmed that different types of embedding do provide complement context in- formation to enhance the understanding of input texts for NER. Particularly, although contextual- ized embeddings (i.e., ELMo, BERT, and ZEN) show signiﬁcantly better performance than oth- ers (especially on Chinese), combining them with static embeddings still provide further improve- ment on the F 1 score of NER systems. 5.2 Case Study To better understand how attentive ensemble of syn- tactic information helps NER, we conduct a case study for the word “Bill” in an example sentence “Mason was one of the drafters of the Bill of Rights” from the ON5e dataset. Figure 3 visualizes the weights for different context features in KVMN, as well as the weights from SA and GM, where darker colors refer to higher weights.18 16The results of those models on the development sets of all datasets are reported in Appendix D. 17Luo et al. (2018) and Dang et al. (2018) do not report their results on all general domain benchmark datasets, because the focus of their studies is biomedical NER. Therefore, we report our runs of their method in Table 5 (marked by “†”). Interestingly, in this case, both POS labels and dependency relations receiving highest weights 18For the weights, we visualize pc ac i in Eq. (6) for SA, and ||ri||2 for ri in Eq. (8) for GM.",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1804
+    }
+  },
+  {
+    "text": "suggest a misleading “PERSON” label19 because of their context features, so that an incorrect NER prediction is expected if treating the three types of syntactic information equally. However, the syntac- tic constituents give strong indication of the correct label through the word “Rights” for a “LAW” entity. Later, the syntax attention ensures that the con- stituent information should be emphasized and the gate mechanism also tends to use syntax for this in- put with higher weights. Therefore this case clearly illustrates the contribution of each component in our attentive ensemble of syntactic information. exploited POS labels and syntactic constituents in their methods and found that the combination of them improves NER performance. Yet they are limited in regarding such syntactic information as gold references and directly concatenated them to the input embeddings, so that noises are expected to affect NER accordingly. Compared with them, our model provides an alternative option to lever- age syntactic information with attentive ensemble to encode, weight and select them to help NER, which proves its effectiveness and has the potential to be applied in other similar tasks. 6 Related Work 7 Conclusion Recently, neural models play dominant roles in NER because of their effectiveness in capturing contextual information in the text without requir- ing to extract manually crafted features (Huang et al., 2015; Lample et al., 2016; Strubell et al., 2017; Zhang and Yang, 2018; Peters et al., 2018; Yadav and Bethard, 2018; Cetoli et al., 2018; Ak- bik et al., 2018, 2019; Chen et al., 2019; Devlin et al., 2019; Zhu and Wang, 2019; Liu et al., 2019b; Baevski et al., 2019; Yan et al., 2019; Xu et al., 2019a; Zhu et al., 2020; Luo et al.). However, to enhance NER, it is straightforward to incor- porate more knowledge to it than only modeling from contexts. Therefore, additional resources such as knowledge base (Kazama and Torisawa, 2008; Tkachenko and Simanovsky, 2012;",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "to incor- porate more knowledge to it than only modeling from contexts. Therefore, additional resources such as knowledge base (Kazama and Torisawa, 2008; Tkachenko and Simanovsky, 2012; Seyler et al., 2018; Liu et al., 2019b,a; Gui et al., 2019b,a) and syntactic information (McCallum, 2003; Mohit and Hwa, 2005; Finkel and Manning, 2009; Li et al., 2017; Luo et al., 2018; Cetoli et al., 2018; Jie and Lu, 2019) are applied in previous studies. Partic- ularly, Luo et al. (2018) and Dang et al. (2018) 19“Bill” is part of the “PERSON” entity in most cases. In this paper, we proposed a neural model following the sequence labeling paradigm to enhance NER through attentive ensemble of syntactic informa- tion. Particularly, the attentive ensemble consists of three components in a sequence: each type of syn- tactic information is encoded by key-value mem- ory networks, different information types are then weighted in syntax attention, and the gate mecha- nism is ﬁnally applied to control the contribution of syntax attention outputs to NER for different contexts. In doing so, different syntactic informa- tion are comprehensively and selectively learned to enhance NER, where the experimental results on six benchmark datasets in English and Chinese conﬁrm the validity and effectiveness of our model with state-of-the-art performance obtained. Acknowledgments Xiang Ao is partially supported by the National Natural Science Foundation of China under Grant No.61976204, U1811461, the Project of Youth In- novation Promotion Association CAS and Beijing Nova Program Z201100006820062. i '",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 1808
+    }
+  },
+  {
+    "text": "References Twenty-Eighth International Joint Conference on Ar- tiﬁcial Intelligence, IJCAI 2019, Macao, China, Au- gust 10-16, 2019, pages 4946–4953. Tao Gui, Yicheng Zou, Qi Zhang, Minlong Peng, Jinlan Fu, Zhongyu Wei, and Xuanjing Huang. 2019b. A Lexicon-Based Graph Neural Network for Chinese",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 10,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "In Proceedings of the 2019 Conference on NER. Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Nat- ural Language Processing, EMNLP-IJCNLP 2019, Hong Kong, China, November 3-7, 2019, pages 1040–1050. Linguistics: Human Language Technologies, Vol- ume 2 (Short Papers), pages 253–258, New Orleans, Louisiana. Tianyu Liu, Jin-Ge Yao, and Chin-Yew Lin. 2019b. To- wards Improving Neural Named Entity Recognition with Gazetteers. In Proceedings of the 57th Confer- ence of the Association for Computational Linguis- tics, ACL 2019, Florence, Italy, July 28- August 2, 2019, Volume 1: Long Papers, pages 5301–5307. Ying Luo, Fengshun Xiao, and Hai Zhao. Hierarchi- cal Contextualized Representation for Named Entity",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 11,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "Recognition. In The Thirty-Fourth AAAI Conference on Artiﬁcial Intelligence, AAAI 2020, The Thirty- Second Innovative Applications of Artiﬁcial Intelli- gence Conference, IAAI 2020, The Tenth AAAI Sym- posium on Educational Advances in Artiﬁcial Intel- ligence, EAAI 2020, pages 8441–8448. Conference on Empirical Methods in Natural Lan- guage Processing, pages 1400–1409.",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 12,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "Appendix A: Comparison Between BERT and ZEN on Chinese Datasets Table 7: Experimental results (F 1 scores) of our mod- els (i.e. the full model with attentive ensemble of all syntactic information), where BERT or ZEN is used as one of the three types of embeddings (the others are Giga and Tencent Embedding) in the embedding layer. In the main experiments, we use ZEN (Diao et al., 2019) rather than BERT (Devlin et al., 2019) as part of the embeddings of input texts on all Chinese datasets. The reason is that compared to BERT, ZEN achieves better performance across all Chinese datasets, which is demonstrated in Table 7. In this experiment, the results (F 1 scores) show the performance of our best performing model (i.e. the full model with attentive ensemble of all syntactic information) on the test set of all three Chinese datasets. Speciﬁcally, either BERT or ZEN is used as one of the three types of embeddings (the others are Giga and Tencent Embedding). Appendix B: Effect of Different Context Encoders (a) Performance on all English datasets. Table 8: Experimental results (F 1 scores) of our mod- els with and without applying syntactic information (at- tentive ensemble of all syntactic information) using dif- ferent types of context encoders. In the main experiments, we use Adapted- Transformer (Yan et al., 2019) as the context en- coder. In this experiment, we try other two popular context encoders, i.e., Bi-LSTM and Transformer (Vaswani et al., 2017), with attentive ensemble of all syntactic information). The results (F 1) on the test set of all datasets are reported in Table 8, where the corresponding baselines without using syntactic information are also reported for refer- ence. From the results, we ﬁnd that all models with attentive ensemble to incorporate syntactic informa- tion consistently outperform their corresponding baselines across all English and Chinese datasets, which demonstrates the robustness of our approach to leverage syntactic information to",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 14,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "text": "informa- tion consistently outperform their corresponding baselines across all English and Chinese datasets, which demonstrates the robustness of our approach to leverage syntactic information to improve NER. Appendix C: Hyper-parameter Settings We try different values for hyper-parameters for our model, presented in Table 9. The best values for all hyper-parameters are also reported, which 4244",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 14,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "text": "Table 9: Values tested for different hyper-parameters and the best one used in our experiments. are obtained by tuning our model with the given hyper-parameter values on the development set of each dataset. Appendix D: The Results of Our Models on the Development Set Table 10: F 1 scores of our models under different conﬁgurations on the development set of all datasets. “GM” is the gate mechanism; “P.”, “C.” and “D.” refer to POS labels, syntactic constituents and dependency relations, respectively. In Table 10, we report the experimental results (F 1) of our models (i.e., with all types of embed- dings and KVMN) under different conﬁgurations (using syntax attention on different combinations of syntactic information and whether to use the gate mechanism) on development set of all datasets.",
+    "metadata": {
+      "filename": "2020.findings-emnlp.378.pdf",
+      "page_number": 15,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

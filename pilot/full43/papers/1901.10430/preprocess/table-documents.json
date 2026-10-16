@@ -1,0 +1,58 @@
+[
+  {
+    "content": "Table 1: Machine translation accuracy in terms of BLEU for WMT En-De and WMT En-Fr on newstest2014.\nModel Param (En-De) WMT En-De WMT En-Fr Gehring et al. (2017) Vaswani et al. (2017) Ahmed et al. (2017) Chen et al. (2018) Shaw et al. (2018) Ott et al. (2018) 216M 213M 213M 379M - 210M 25.2 28.4 28.9 28.5 29.2 29.3 40.5 41.0 41.4 41.0 41.5 43.2 LightConv DynamicConv 202M 213M 28.9 29.7 43.1 43.2",
+    "metadata": {
+      "filename": "1901.10430.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: Machine translation accuracy in terms of BLEU on IWSLT and WMT Zh-En.\nModel Param (Zh-En) IWSLT WMT Zh-En Deng et al. (2018) Hassan et al. (2018) - - 33.1 - - 24.2 Self-attention baseline LightConv DynamicConv 292M 285M 296M 34.4 34.8 35.2 23.8 24.3 24.4",
+    "metadata": {
+      "filename": "1901.10430.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: Ablation on WMT English-German newstest2013. (+) indicates that a result includes all preceding features. Speed results based on beam size 4, batch size 256 on an NVIDIA P100 GPU.\nModel Param BLEU Sent/sec Vaswani et al. (2017) Self-attention baseline (k=inf, H=16) Self-attention baseline (k=3,7,15,31x3, H=16) 213M 26.4 210M 26.9 ± 0.1 210M 26.9 ± 0.3 - 52.1 ± 0.1 54.9 ± 0.2 CNN (k=3) CNN Depthwise (k=3, H=1024) + Increasing kernel (k=3,7,15,31x4, H=1024) + DropConnect (H=1024) + Weight sharing (H=16) + Softmax-normalized weights [LightConv] (H=16) + Dynamic weights [DynamicConv] (H=16) Note: DynamicConv(H=16) w/o softmax-normalization 208M 25.9 ± 0.2 195M 26.1 ± 0.2 195M 26.4 ± 0.2 195M 26.5 ± 0.2 195M 26.5 ± 0.1 195M 26.6 ± 0.2 200M 26.9 ± 0.2 diverges 200M 68.1 ± 0.3 67.1 ± 1.0 63.3 ± 0.1 63.3 ± 0.1 63.7 ± 0.4 63.6 ± 0.1 62.6 ± 0.4 AAN decoder + self-attn encoder AAN decoder + AAN encoder 260M 26.8 ± 0.1 310M 22.5 ± 0.1 59.5 ± 0.1 59.2 ± 2.1",
+    "metadata": {
+      "filename": "1901.10430.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: Language modeling results on the Google Billion Word test set. †does not include embedding and softmax layers\nModel Param Valid Test 2-layer LSTM-8192-1024 (J´ozefowicz et al., 2016) Gated Convolutional Model (Dauphin et al., 2017) Mixture of Experts (Shazeer et al., 2017) – 428M 4371M † – – – 30.6 31.9 28.0 Self-attention baseline DynamicConv 331M 339M 26.67 26.60 26.73 26.67",
+    "metadata": {
+      "filename": "1901.10430.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Results on CNN-DailyMail summarization. We compare to likelihood trained approaches except for Celikyilmaz et al. (2018).\nModel Param Rouge-1 Rouge-2 Rouge-l LSTM (Paulus et al., 2017) CNN (Fan et al., 2017) - - 38.30 39.06 14.81 15.38 35.49 35.77 Self-attention baseline LightConv DynamicConv 90M 86M 87M 39.26 39.52 39.84 15.98 15.97 16.25 36.35 36.51 36.73 RL (Celikyilmaz et al., 2018) - 41.69 19.47 37.92",
+    "metadata": {
+      "filename": "1901.10430.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 6: Alternatives to softmax-normalization in DynamicConv on WMT English-German new- stest2013 (€ = 10~°).\nMethod BLEU W (No normalization) diverges softmax(W) 26.9 + 0.2 o(W) 26.6 + 0.3 anh(W) 25.6 + 0.2 wick diverges Ww + [Wwyete 26.8 + 0.2 power(W, 2) diverges abs(W) diverges wie: diverges abs(W) + iWlate 26.7 + 0.2",
+    "metadata": {
+      "filename": "1901.10430.pdf",
+      "page_number": 13,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 7: Inference speed of non-autoregressive models and small decoder versions of DynamicConv on WMT English-German newstest2014. For some models, the decoding speed (sent/sec) is derived by taking the inverse of the sentence generation latency in the literature.\nModel (batch size = 1, beam size = 1) Param BLEU Sent/sec NAT (+ FT) (Gu et al., 2018) NAT (+ FT + NPD=10) (Gu et al., 2018) NAT (+ FT + NPD=100) (Gu et al., 2018) LT, Improved Semhash (Kaiser et al., 2018) - - - - 17.7 18.7 19.2 19.8 25.6 12.7 3.9 9.5 IR idec = 1 (Lee et al., 2018) IR idec = 2 (Lee et al., 2018) IR idec = 5 (Lee et al., 2018) IR idec = 10 (Lee et al., 2018) IR Adaptive (Lee et al., 2018) - - - - - 13.9 17.0 20.3 21.6 21.5 - - - - - NART w/ hints (Li et al., 2019) NART w/ hints (B = 4, 9 candidates) (Li et al., 2019) - - 21.1 25.2 38.5 22.7 ENAT Embedding Mapping (Guo et al., 2019) ENAT Embedding Mapping (rescoring 9 candidates) (Guo et al., 2019) - - 20.7 24.3 41.7 20.4 Autoregressive (Gu et al., 2018) Autoregressive (Lee et al., 2018) Transformer (Li et al., 2019) Transformer (Guo et al., 2019) - - - - 22.7 23.8 27.3 27.4 2.5 - 1.3 1.6 DynamicConv (1-decoder layer (k=31)) DynamicConv (3-decoder layers (k=3,7,15)) DynamicConv (6-decoder layers (k=3,7,15,31,31,31)) 124M 153M 200M 26.1 27.7 28.5 15.2 7.2 3.9 Tok/sec - - - - 511.4 393.6 139.7 90.4 107.2 - - - - - 54.0 - - 423.0 202.3 110.9",
+    "metadata": {
+      "filename": "1901.10430.pdf",
+      "page_number": 14,
+      "type": "Table"
+    }
+  }
+]

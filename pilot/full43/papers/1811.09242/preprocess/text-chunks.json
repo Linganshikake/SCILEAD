@@ -1,0 +1,227 @@
+[
+  {
+    "content": "AutoSense Model for Word Sense Induction Reinald Kim Amplayo Seung-won Hwang Min Song Yonsei University {rktamplayo, seungwonh, min.song}@yonsei.ac.kr Abstract Word sense induction (WSI), or the task of automatically dis- covering multiple senses or meanings of a word, has three main challenges: domain adaptability, novel sense detection, and sense granularity ﬂexibility. While current latent variable models are known to solve the ﬁrst two challenges, they are not ﬂexible to different word sense granularities, which differ very much among words, from aardvark with one sense, to play with over 50 senses. Current models either require hy- perparameter tuning or nonparametric induction of the num- ber of senses, which we ﬁnd both to be ineffective. Thus, we aim to eliminate these requirements and solve the sense granularity problem by proposing AutoSense, a latent vari- able model based on two observations: (1) senses are rep- resented as a distribution over topics, and (2) senses gen- erate pairings between the target word and its neighboring word. These observations alleviate the problem by (a) throw- ing garbage senses and (b) additionally inducing ﬁne-grained word senses. Results show great improvements over the state- of-the-art models on popular WSI datasets. We also show that AutoSense is able to learn the appropriate sense granular- ity of a word. Finally, we apply AutoSense to the unsuper- vised author name disambiguation task where the sense gran- ularity problem is more evident and show that AutoSense is evidently better than competing models. We share our data and code here: https://github.com/rktamplayo/ AutoSense. Figure 1: Three senses of the noun cold and six of 17 senses of the noun play in WordNet. Sense granularity problem refers to the inﬂexibility of the model to the different number of senses different words may have (i.e. 3 vs. 17). task similar to the WSI is the unsupervised author name dis- ambiguation (UAND) task (Song et al. 2007), where it",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "the model to the different number of senses different words may have (i.e. 3 vs. 17). task similar to the WSI is the unsupervised author name dis- ambiguation (UAND) task (Song et al. 2007), where it aims to automatically ﬁnd different authors, instead of words, with the same name. Introduction Word sense induction (WSI) is the task where given an am- biguous target word (e.g. cold) and texts where the word is used, we automatically discover its multiple senses or mean- ings (e.g. (1) nose infection, (2) absence of heat, etc.). We show examples of words with multiple senses and example usage in a text1 in Figure 1. It is distinct from its similar supervised counterpart, word sense disambiguation (WSD) (Stevenson and Wilks 2003), because WSI models should consider the following challenges due to its unsupervised nature: (C1) adaptability to new domains, (C2) ability to detect novel senses, and (C3) ﬂexibility to different word sense granularities (Jurgens and Klapaftis 2013). Another Copyright © 2019, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved. 1All sense meanings are copied from WordNet: http:// wordnetweb.princeton.edu/perl/webwn In this paper, we consider a latent variable modeling ap- proach to WSI problem as it is proven to be more effec- tive than other approaches (Chang, Pei, and Chen 2014; Komninos and Manandhar 2016). Speciﬁcally, we look into methods based on Latent Dirichlet Allocation (LDA) (Blei, Ng, and Jordan 2003), a topic modeling method that au- tomatically discovers the topics underlying a set of docu- ments using Dirichlet priors to infer the multinomial dis- tribution over words and topics. LDA naturally answers two of the three main problems mentioned above, i.e. (C1) and (C2), of the WSI task (Brody and Lapata 2009). How- ever, it is not ﬂexible with regards to (C3), or the sense granularity problem, as it requires the users to specify the number of senses: Current systems (Wang et al. 2015;",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1799
+    }
+  },
+  {
+    "content": "and Lapata 2009). How- ever, it is not ﬂexible with regards to (C3), or the sense granularity problem, as it requires the users to specify the number of senses: Current systems (Wang et al. 2015; Chang, Pei, and Chen 2014) required to set the number of senses to a small number (set to 3 or 5 in the literature) to get a good accuracy, however many words may have a large number of senses, e.g. play in Figure 1.",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 3602
+    }
+  },
+  {
+    "content": "To this end, we propose a latent variable model called AutoSense that solves all the challenges of WSI, including overcoming the sense granularity problem. Consider Figure 2 on ﬁnding the senses of the target word cold. An LDA model naively considers the topics as senses and thus dif- ferentiates the usage of cold in the medical and science do- mains, even though the same sense is commonly used in the two domains. This results in too many senses induced by the model. We extend LDA using two observations. First, we introduce a separate latent variable for senses, which can be represented as a distribution over topics. This in- troduces more accurate induced senses (e.g. the cold: nose infection sense can be from a mixture of medical, science, and temperature topics), as well as garbage senses (colored red in the ﬁgure) as most topic distributions will not be as- signed to any instance. Second, we enforce senses to gen- erate target-neighbor pairs, a pair (wt, w) which consists of the target word wt and one of its neighboring word w, at once. This separates the topic distributions into ﬁne-grained senses based on lexical semantic features easily captured by the target-neighbor pairs. For example, the cold: absence of heat and the cold: sensation from low temperature senses are both related to temperature, but have different syntactic and semantic usage. By applying the two observations above, AutoSense re- moves the strict requirement on correctly setting the num- ber of senses by throwing garbage senses and introducing ﬁne-grained senses. Nonparametric models (Teh et al. 2004; Lau, Cook, and Baldwin 2013) have also been used to solve this problem by automatically inducing the number of senses, however our experiments show that these models are less effective than parametric models and induce incorrect number of senses. Our proposed model is parametric, and is also able to adapt to the different number of senses of dif- ferent words, even when the number of senses is",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "models and induce incorrect number of senses. Our proposed model is parametric, and is also able to adapt to the different number of senses of dif- ferent words, even when the number of senses is set to an arbitrarily large number. Moreover, the model can also be used in other tasks such as UAND where the variance in the number of senses is large. To the best of our knowledge, we are the ﬁrst to experiment extensively on the sense granular- ity problem of parametric latent variable models. In our experiments, we estimate the parameters of the model using collapsed Gibbs sampling and get the sense dis- tribution of each instance as the WSI solution. We evaluate our model using the SemEval 2010 and 2013 WSI datasets (Manandhar et al. 2010; Jurgens and Klapaftis 2013). Re- sults show that AutoSense performs superior than previous state-of-the-art models. We also provide analyses and ex- periments that shows how AutoSense overcomes the issue on sense granularity. Finally, we show that our model per- forms the best on unsupervised author name disambiguation (UAND), where the sense granularities are extremely varied. Related Work Previous works on WSI used context vectors and attributes (Almuhareb, Poesio, and others 2006), pretrained classiﬁca- tion systems (Tsvetkov et al. 2014), and alignment of par- allel corpus (Yao, Van Durme, and Callison-Burch 2012). In the most recent shared task on WSI (Jurgens and Kla- paftis 2013), top models used lexical substitution method (AI-KU) (Baskaya et al. 2013) and Hierarchical Dirichlet Process trained with additional instances (Unimelb) (Lau, Cook, and Baldwin 2013). Latent variable models such as LDA (Blei, Ng, and Jor- dan 2003) are used to induce the word sense of a target word after rigorous preprocessing and feature extraction (LDA, Spectral) (Goyal and Hovy 2014). More recent models in- troduced a latent variable for the sense of a word, with the assumption that a sense has multiple concepts (HC, HC+Zipf) (Chang, Pei, and",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1804
+    }
+  },
+  {
+    "content": "(LDA, Spectral) (Goyal and Hovy 2014). More recent models in- troduced a latent variable for the sense of a word, with the assumption that a sense has multiple concepts (HC, HC+Zipf) (Chang, Pei, and Chen 2014) and that topics and senses should be inferred jointly (STM) (Wang et al. 2015). In this paper, we also use a separate sense latent variable, however we show boost in performance by representing it with more versatility and by incorporating the use of target- neighbor pairs. HC was also extended to a nonparametric model (BNP-HC) (Teh et al. 2004) in order to automati- cally set the number of senses of a word, providing ﬂexi- bility to the sense granularity (Yao and Van Durme 2011; Lau et al. 2012; Lau, Cook, and Baldwin 2013). In our ex- periments, we show that the sense granularity induced from nonparametric models are incorrect making the models less effective. Recent inclusions to the WSI models are neural-based dense distributional representation models. STM also used word embeddings (Mikolov et al. 2013) to assign similarity weights during inference (STM+w2v) (Wang et al. 2015). Existing sense embeddings are also used to perform word sense induction (CRP-PPMI, SE-WSI-ﬁx, WG, DIVE) (Song 2016; Pelevina et al. 2016; Chang et al. 2018). These models, on their own, do not perform well on the WSI task until recently when embeddings of words and their depen- dencies are used to construct a probabilistic model (MCC) (Komninos and Manandhar 2016). We show that neural- based embeddings are still ineffective for this task and that our model performs better than these models as well. In the unsupervised author name disambiguation (UAND) domain, LDA-based models have also been used (Shu, Long, and Meng 2009) to employ text features for the task, while non-text features such as co-authors, publication venue, year, and citations are found to be stronger features (Tang et al. 2012). In this paper, we study on how to improve the performance of text features for UAND",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3601
+    }
+  },
+  {
+    "content": "such as co-authors, publication venue, year, and citations are found to be stronger features (Tang et al. 2012). In this paper, we study on how to improve the performance of text features for UAND using latent vari- able models, which can later be combined with non-text fea- tures in the future work.",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 5400
+    }
+  },
+  {
+    "content": "Proposed Model There are two reasons why Latent Dirichlet Allocation (LDA) (Blei, Ng, and Jordan 2003) is not effective for WSI. First, LDA tries to give instance assignments to all senses even when it is unnecessary. For example, when the num- ber of senses S is set to 10, the model tries to assign all the senses to all instances even when the original number of senses of a target word is 3. LDA extensions (Wang et al. 2015; Chang, Pei, and Chen 2014) mitigated this problem by setting S to a small number (e.g. 3 or 5). However, this is not a good solution because there are many words with more than ﬁve senses. Second, LDA and its extensions do not consider the existence of ﬁne-grained senses. For exam- ple, the cold: absence of heat and the cold: sensation from low temperature senses are ﬁne-grained senses because they are similarly related to temperature yet have different usage. AutoSense Model To solve the problems above, we propose to extend LDA in two parts. First, we introduce a new latent variable, apart from the topic latent variable, to represent word senses. Pre- vious works also attempted to introduce a separate sense la- tent variable to generate all the words (Chang, Pei, and Chen 2014), or to generate only the neighboring words within a lo- cal context, decided by a strict user-speciﬁed window (Wang et al. 2015). We improve by softening the strict local context assumption by introducing a switch variable which decides whether a word not in a local context should be generated by conditioning also on the sense latent variable. Our exper- iments show that our sense representation provides superior improvements from previous models. Second, we force the model to generate target-neighbor pairs at once in the local context, instead of generating words one by one. A target-neighbor pair (wt, w) consists of the target word wt and a neighboring word w in the lo- cal context. For example, the target-neighbor pairs in “cold snowy weather”, where wt is cold, are",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "A target-neighbor pair (wt, w) consists of the target word wt and a neighboring word w in the lo- cal context. For example, the target-neighbor pairs in “cold snowy weather”, where wt is cold, are (cold, snowy) and (cold, weather). These pairs give explicit information on the lexical semantics of the target word given the neighbor- ing words. In our running example (Figure 2), the cold: ab- sence of heat and the cold: sensation from low temperature senses can be easily differentiated when we are given the target-neighbor pairs (cold, weather) and (cold, climate) for the former, and (cold, water) and (cold, f resh) for the latter sense, rather than the individual words. These extensions bring us to our proposed model called AutoSense. The graphical representation of AutoSense is shown in Figure 3, while the meaning of the notations used in this paper is shown in Table 1. Generative process For each instance, we divide the text into two contexts: the local context L which includes the target word wt and its neighboring words wl, and the global context M which contains the other remaining words wm. Words from different contexts are generated separately. In the global context M , words wm are generated from either a sense s or a topic t latent variable. The selection is done by a switch variable x. If x = 1, then the word generation is done by using the sense variable s. Otherwise, it is done by using the topic variable t. The probability of a global context word wm in document d is given below. P (wm|s)P (s|d)+ In the local context L, words wl are generated from both sense s and topic t variables. Also, the target word wt is generated along with wl as target-neighbor pairs (wt, wl)",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "using the sense variable s. Sense and topic variables are de- pendent to each other, so we generate them using the joint probability p(s, t|d). We factorize p(s, t|d) approximately using ideas from dependency networks (Heckerman et al. 2000) to avoid independency assumptions, i.e. p(a, b|c) = p(a|b, c)p(b|a, c), and deﬁcient modeling (Brown et al. i.e. p(a|b, c)p(b|a, c) = 1993) to ignore redundancies, p(a|b)p(a|c)p(b|a)p(b|c)p(a, b). The probability of a local context word wl in document d given below. Inference We use collapsed Gibbs sampling (Grifﬁths and Steyvers 2004) to estimate the latent variables. At each tran- sition step of the Markov chain, for each word wm in the global context, we draw the switch x ∼ {1, 2}, and the sense s = k or the topic t = j variables using the conditional probabilities given below. The variable C AB represents the ab number of a ∈ A and b ∈ B assignments, excluding the current word. The rest corresponds to the other remaining variables, such as the instance d, the current word wm, the θ and φ distributions, and the α, β, and γ Dirichlet priors. yy 121 Cer +Ta yw 1 chy +Vin8 Subsequently, for each word w; and the target word w; (forming the target-neighbor pair (w;,, w;)) in the local con- text, we draw the sense s = k and the topic t = 7 variables using the conditional probability given below. Word sense induction After inference is done, the ap- proximate probability of the sense s of the target word in a given document d is induced using the sense distribution of the document as shown in the equation below, where C AB ab represents the number of a ∈ A and b ∈ B assignments. We also calculate the word distribution of each sense using the second equation below to inspect the meaning of sense. Experimental setup Datasets and preprocessing We use two publicly avail- able datasets: SemEval 2010 Task 14 (Manandhar et al. 2010) and SemEval 2013 Task 13 (Jurgens and Klapaftis 2013). The SemEval 2010 dataset2 consists of 50 verbs and 50",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "We use two publicly avail- able datasets: SemEval 2010 Task 14 (Manandhar et al. 2010) and SemEval 2013 Task 13 (Jurgens and Klapaftis 2013). The SemEval 2010 dataset2 consists of 50 verbs and 50 nouns, each with different number of instances for a to- tal of 8915 instances. SemEval 2013 dataset3 consists of 20 verbs, 20 nouns, and 10 adjectives, with a total of 4664 in- stances. For preprocessing, we do tokenization, lemmatization, and removing of symbols to build the word lists using Stan- ford CoreNLP (Manning et al. 2014). We divide the word lists into two contexts: the local and global context. Follow- ing (Wang et al. 2015), we set the local context window to 10, with a maximum number of words of 21 (i.e. 10 words before and 10 words after). Other words are put into the global context. Note however that AutoSense has a less strict global/local context assumption as it treats some words in the global context as local depending on the switch variable. Parameter setting We set the hyperparameters to α = 0.1, β = 0.01, γ = 0.3, following the conventional setup (Grifﬁths and Steyvers 2004; Chemudugunta, Smyth, and Steyvers 2006). We arbitrarily set the number of senses to S = 15, and the number of topics T = 2S = 30, following (Wang et al. 2015). We also include four other versions of our model: AutoSense−wp removes the target-neighbor pair constraint and transforms the local context to that of STM, AutoSense−sw removes the switch variable and transforms the global context to that of LDA, AutoSenses=X is a tuned and best version of the model, where the number of senses is tuned over a separate development set provided by the shared tasks and X is the tuned number of sense, different for each dataset, and AutoSenses=100 is the overestimated and worst version of the model, where we set the number of senses to an arbitrary large number, i.e. 100. We set the number of iterations to 2000 and run the Gibbs sampler. Following the convention of previous works (Lau et al.",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "where we set the number of senses to an arbitrary large number, i.e. 100. We set the number of iterations to 2000 and run the Gibbs sampler. Following the convention of previous works (Lau et al. 2012; Goyal and Hovy 2014; Wang et al. 2015), we assume convergence when the number of iterations is high. However, due to the randomized nature of Gibbs sampling, we report the average scores over 5 runs of Gibbs sampling. We then use the distribution θs|d as shown in Equation 1 as the solution of the WSI problem. 2https://www.cs.york.ac.uk/semeval2010_WSI 3https://www.cs.york.ac.uk/semeval-2013/ task13/",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 3608
+    }
+  },
+  {
+    "content": "Table 2: Performance of different models on the datasets. Best scores are bold-faced. LVMs are Latent Variable Mod- els, while NBEs are Neural-based Embeddings. Experiments Word sense induction SemEval 2010 For the SemEval 2010 dataset, we com- pare models using two unsupervised metrics: V-measure (V- M) and paired F-score (F-S). V-M favors a high number of senses (e.g. assigning one cluster per instance), while F-S favors a small number of senses (e.g. all instances in one cluster) (Manandhar et al. 2010). In order to get a common ground for comparison, we do a geometric average AVG of both metrics, following (Wang et al. 2015). Finally, we also report the absolute difference between the actual (3.85) and induced number of senses as δ(#S). We compare with seven other models: a) LDA on co- occurrence graphs (LDA) and b) spectral clustering on co- occurrence graphs (Spectral) as reported in (Goyal and Hovy 2014), c) Hidden Concept (HC), d) HC using Zipf’s law (HC+Zipf), and e) Bayesian nonparametric version of HC (BNP-HC) as reported in (Chang, Pei, and Chen 2014), f) CRP-based sense embeddings with positive PMI vectors as pre-trained vectors (CRP-PPMI), and g) Multi-Sense Skip-gram Model (SE-WSI-ﬁx) as reported in (Song 2016). Results are shown in Table 2a, where AutoSense outper- forms other competing models on AVG. Among the Au- toSense models, the AutoSense−wp and AutoSense−sw ver- sion perform the worst, emphasizing the necessity of the target-neighbor pairs and the switch variable. The overesti- mated AutoSenses=100 performs better than previously pro- posed models, proving the robustness of our model on the different word sense granularities. On the δ(#S) metric, the untuned AutoSense and AutoSenses=5 perform the best. The V-M metric needs to be interpreted carefully, because it can easily be maximized by separating all instances into dif- ferent sense clusters and thus overestimating the actual num- ber of senses #S and decreasing the F-S metric. The model",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "because it can easily be maximized by separating all instances into dif- ferent sense clusters and thus overestimating the actual num- ber of senses #S and decreasing the F-S metric. The model BNP-HC is an example of such: Though its V-M metric is the highest, it scores the lowest on the F-S metric and greatly overestimates #S, thus having a very high δ(#S). The goal is thus a good balance of V-M and F-S (i.e. highest AVG), and a close estimation of #S (i.e. lowest δ(#S), which is successfully achieved by our models. SemEval 2013 Two metrics are used for the SemEval 2013 dataset: fuzzy B-cubed (F-BC) and fuzzy normalized mutual information (F-NMI). F-BC gives preference to la- belling all instances with the same sense, while F-NMI gives preference to labelling all instances with distinct senses. Therefore, computing the AVG of both metrics is also nec- essary in this experiment, for ease of comparison, as also suggested in (Wang et al. 2015). We use seven baselines: a) lexical substitution method (AI-KU) and b) nonparametric HDP model (Unimelb) as reported in (Jurgens and Klapaftis 2013), c) Sense-Topic Model STM, d) STM with word2vec weights (STM+w2v) as reported in (Wang et al. 2015), e) Word Graph embed- dings (WG), f) Distributional Inclusion Vector Embedding (DIVE) as reported in (Chang et al. 2018), and g) Multi Con- text Continuous model MCC as reported in (Komninos and Manandhar 2016). Results are shown in Table 2b. Among the models, all versions of AutoSense perform better than other models on AVG. The untuned AutoSense and AutoSenses=7 especially garner noticeable increase of 6.1% on fuzzy B-cubed metric from MCC, the previous best model. We also notice a big 6.0% decrease on the fuzzy B-cubed of AutoSense when the target-neighbor pair context is removed. This means that in- troducing the target-neighbor pair is crucial to the improve- ment of the model. Finally, the overestimated AutoSense model performs as well as the other AutoSense models, even",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "This means that in- troducing the target-neighbor pair is crucial to the improve- ment of the model. Finally, the overestimated AutoSense model performs as well as the other AutoSense models, even outperforming all previous models on AVG, which proves the effectiveness of AutoSense even when s is set to a large value. For completeness, we also report STM with additional contexts, STM+actual and STM+ukWac (Wang et al. 2015), where they used the actual additional contexts from the orig- inal data and semantically similar contexts from ukWac, respectively, as additional global context. With the perfor- mance gain we achieved, AutoSense without additional con- text can perform comparably to models with additional con- texts: Our model greatly outperforms these models on the",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 3601
+    }
+  },
+  {
+    "content": "Table 3: Six of the 15 senses of the target verb book using AutoSense with S = 15. The word lists shown are prepro- cessed to remove stopwords and the target word. The ﬁrst three senses are senses which are assigned at least once to an instance document. The last three are garbage senses. F-BC metric by at least 2%. Also, considering that both Au- toSense and STM are LDA-based models, the same data en- hancements can straightforwardly be applied when the needs arise. We similarly apply the actual additional contexts to AutoSense and ﬁnd that we achieve state-of-the-art perfor- mance on AVG. Sense granularity problem The main weakness of LDA when used on WSI task is the sense granularity problem. Recent models such as HC (Chang, Pei, and Chen 2014) and STM (Wang et al. 2015) mitigated this problem by tuning the number of senses hy- perparameter S to minimize the error. However, such tuning, often empirically set to a small number such as S = 3 (Wang et al. 2015), fails to infer varying number of senses of words, especially for words with a higher number of senses. Non- parametric models such as HDP and BNP-HC (Lau, Cook, and Baldwin 2013; Chang, Pei, and Chen 2014) claim to au- tomatically induce different S for each word. However, as shown in the results in Table 2, the estimated S is far from the actual number of senses and both models are ineffective. On the other hand, Table 2 also shows that AutoSense is effective even when S is overestimated. We explain why through an example result shown in Table 3, where the tar- get word is the verb book, the actual number of senses is three, and S is set to 15. First, we see that there are senses which are not assigned to any instance document, signiﬁed by ∗, which we call garbage senses. We notice that effec- tively representing a new latent variable for sense as a distri- bution over topics forces the model to throw garbage senses. Second, while it is easy to distinguish the third sense (i.e., book: register in a booker)",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "a new latent variable for sense as a distri- bution over topics forces the model to throw garbage senses. Second, while it is easy to distinguish the third sense (i.e., book: register in a booker) to the two other senses, the ﬁrst and second senses both refer to planning or arranging for an event in advance. Incorporating the target-neighbor pairs helps the model differentiates both into ﬁne-grained senses book: arrange for and reserve in advance and book: engage for a performance. We compare the competing models quantitatively on how they correctly detect the actual number of sense clusters us- ing cluster error, which is the mean absolute error between the detected number and the actual number of sense clusters. We compare the cluster errors of LDA (Blei, Ng, and Jordan 2003), STM (Wang et al. 2015), HC (Chang, Pei, and Chen 2014), and a nonparametric model HDP (Teh et al. 2004), SemEval 2010 Cluster Error SemEval 2013 with AutoSense. We report the results in Figure 4. Results show that the cluster error of LDA increases sharply as the number of senses exceeds the actual mean number of senses. HC and STM also throw garbage senses since they also in- troduce in some way a new sense variable, however the clus- ter errors of both models still increase when S is set beyond the maximum number of senses. We argue that this is be- cause ﬁrst, the sense representation is not optimal as they as- sume strict local/global context assumption, and second and most importantly, the models do not produce ﬁne-grained senses. AutoSense does both garbage sense throwing and ﬁne-grained sense induction, which helps in the detection of the actual word granularity. Finally, the cluster error of AutoSense is always better than that of HDP. This shows that AutoSense, despite being a parametric model, automat- ically detects the number of sense clusters without parameter tuning and is more accurate than the automatic detection of nonparametric models. Unsupervised author name",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "a parametric model, automat- ically detects the number of sense clusters without parameter tuning and is more accurate than the automatic detection of nonparametric models. Unsupervised author name disambiguation Unsupervised author name disambiguation (UAND) is a task very similar to the WSI task, where ambiguous author names are the target words. However, one additional chal- lenge of UAND is that there can be as many as 100 authors",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 3592
+    }
+  },
+  {
+    "content": "with the same name, whereas words can have at most 20 dif- ferent senses, at least in our datasets, as shown in the dataset statistics in Table 4. Moreover, the standard deviations of the author name disambiguation datasets are also higher, which means that there is more variation on the number of senses per target author name. Thus, in this task, the sense gran- ularity problem is more difﬁcult and needs to be addressed properly. Current state-of-the-art models use non-text features such as publication venue and citations (Tang et al. 2012). We ar- gue that text features also provide informative clues to dis- ambiguate author names. In this experiment, we make use of text features such as the title and abstract of research pa- pers as data instance of the task. In addition, we also include in our dataset author names and the publication venue as pseudo-words. In this way, we can reformulate the UAND task as a WSI task, and exploit text features not used in cur- rent techniques. Experimental setup We use two publicly available datasets for the UAND task: Arnet4 and PubMed5. The Ar- net dataset contains 100 ambiguous author names and a to- tal of 7528 papers as data instance. Each instance includes the title, author list, and publication venue of a research paper authored by the given author name. In addition, we also manually extract the abstracts of the research papers for additional context. The PubMed dataset contains 37 author names with a total of 2875 research papers as instances. It includes the PubMed ID of the papers authored by the given author name. We extract the title, author list, publication venue, and abstract of each PubMed ID from the PubMed website. We use LDA (Blei, Ng, and Jordan 2003), HC (Chang, Pei, and Chen 2014) and STM (Wang et al. 2015) as base- lines. We do not compare with non-text feature-based mod- els (Tang et al. 2012; Cen et al. 2013) because our goal is to compare sense topic models on a task where the sense granularities are more",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "lines. We do not compare with non-text feature-based mod- els (Tang et al. 2012; Cen et al. 2013) because our goal is to compare sense topic models on a task where the sense granularities are more varied. For STM and AutoSense, the title, publication venue and the author names are used as lo- cal contexts while the abstract is used as the global context. This decision is based on conclusions from previous works (Tang et al. 2012) that the title, publication venue, and the author names are more informative than the abstract when disambiguating author names. We use the same parameters as used above, and we set S to 5, 25, 50, and 100 to com- 4https://aminer.org/disambiguation 5https://github.com/Yonsei-TSMM/author_ Table 5: Paired F1 measures of competing models with dif- ferent number of senses S on UAND datasets. pare the performances of the models as the number of senses increases. Results For evaluation, we use the pairwise F1 measure to compare the performance of competing models, follow- ing (Tang et al. 2012). Results are shown in Figure 5. Au- toSense performs the best on almost all settings, except on the PubMed dataset and when S = 5, where it garners a comparable result with STM. However, in the case where S is set close to the maximum number of senses in the dataset (i.e. 28 in PubMed and 112 in Arnet), AutoSense performs the best among the models. LDA and HC perform badly on all settings and greatly decrease their performances when S becomes high. STM also shows decrease in performance on the PubMed dataset when S = 100. This is because the PubMed dataset has a lower maximum number of senses, and STM is sensitive in the setting of S, and thus hurts the robustness of the model to different sense granularities. Conclusion We proposed a solution to answer the sense granularity prob- lem, one of the major challenges of the WSI task. We in- troduced AutoSense, a latent variable model that not only throws away garbage senses, but also induces ﬁne-grained",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1804
+    }
+  },
+  {
+    "content": "the sense granularity prob- lem, one of the major challenges of the WSI task. We in- troduced AutoSense, a latent variable model that not only throws away garbage senses, but also induces ﬁne-grained senses. We showed that AutoSense greatly outperforms the current state-of-the-art models in both SemEval 2010 and 2013 WSI datasets. We also show experiments on how Au- toSense is able to overcome sense granularity problem, a well-known ﬂaw of latent variable models on. We further applied our model to UAND task, a similar task but with more varying number of senses, and showed that AutoSense performs the best among latent variable models, proving its robustness to different sense granularities.",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 3598
+    }
+  },
+  {
+    "content": "search Foundation of Korea (NRF), funded by the Ministry of Science, ICT (No.NRF-2017M3C4A7065887). References [Almuhareb, Poesio, and others 2006] Almuhareb, A.; Poe- sio, M.; et al. 2006. Msda: Wordsense discrimination using context vectors and attributes. In ECAI, 543–547. [Baskaya et al. 2013] Baskaya, O.; Sert, E.; Cirik, V.; and Yuret, D. 2013. Ai-ku: Using substitute vectors and co- occurrence modeling for word sense induction and disam- biguation. SemEval 300–306. [Blei, Ng, and Jordan 2003] Blei, D. M.; Ng, A. Y.; and Jor- dan, M. I. 2003. Latent dirichlet allocation. Journal of machine Learning research 3(Jan):993–1022. [Brody and Lapata 2009] Brody, S., and Lapata, M. 2009. Bayesian word sense induction. In EACL, 103–111. Asso- ciation for Computational Linguistics. [Brown et al. 1993] Brown, P. F.; Pietra, V. J. D.; Pietra, S. A. D.; and Mercer, R. L. 1993. The mathematics of statis- tical machine translation: Parameter estimation. Computa- tional linguistics 19(2):263–311. [Cen et al. 2013] Cen, L.; Dragut, E. C.; Si, L.; and Ouzzani, M. 2013. Author disambiguation by hierarchical agglomer- ative clustering with adaptive stopping criterion. In SIGIR, 741–744. ACM. [Chang et al. 2018] Chang, H.-S.; Agrawal, A.; Ganesh, A.; Desai, A.; Mathur, V.; Hough, A.; and McCallum, A. 2018. Efﬁcient graph-based word sense induction by dis- arXiv preprint tributional inclusion vector embeddings. arXiv:1804.03257. [Chang, Pei, and Chen 2014] Chang, B.; Pei, W.; and Chen, M. 2014. Inducing word sense with automatically learned hidden concepts. In COLING, 355–364. [Chemudugunta, Smyth, and Steyvers 2006] Chemudugunta, C.; Smyth, P.; and Steyvers, M. 2006. Modeling general and speciﬁc aspects of documents with a probabilistic topic model. In NIPS, volume 19, 241–248. [Goyal and Hovy 2014] Goyal, K., and Hovy, E. H. 2014. Unsupervised word sense induction using distributional statistics. In COLING, 1302–1310. [Grifﬁths and Steyvers 2004] Grifﬁths, T. L., and Steyvers, M.",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "and Hovy 2014] Goyal, K., and Hovy, E. H. 2014. Unsupervised word sense induction using distributional statistics. In COLING, 1302–1310. [Grifﬁths and Steyvers 2004] Grifﬁths, T. L., and Steyvers, M. 2004. Finding scientiﬁc topics. Proceedings of the Na- tional academy of Sciences 101(suppl 1):5228–5235. [Heckerman et al. 2000] Heckerman, D.; Chickering, D. M.; Meek, C.; Rounthwaite, R.; and Kadie, C. 2000. Depen- dency networks for inference, collaborative ﬁltering, and data visualization. Journal of Machine Learning Research 1(Oct):49–75. [Jurgens and Klapaftis 2013] Jurgens, D., and Klapaftis, I. 2013. Semeval-2013 task 13: Word sense induction for In *SEM, volume 2, 290– graded and non-graded senses. 299. [Komninos and Manandhar 2016] Komninos, A., and Man- andhar, S. 2016. Structured generative models of continuous features for word sense induction. COLING 11. [Lau et al. 2012] Lau, J. H.; Cook, P.; McCarthy, D.; New- man, D.; and Baldwin, T. 2012. Word sense induction for novel sense detection. In EACL, 591–601. Association for Computational Linguistics. [Lau, Cook, and Baldwin 2013] Lau, J. H.; Cook, P.; and Baldwin, T. 2013. unimelb: Topic modelling-based word In SemEval, sense induction for web snippet clustering. 217–221. [Manandhar et al. 2010] Manandhar, S.; Klapaftis, I. P.; Dli- gach, D.; and Pradhan, S. S. 2010. Semeval-2010 task 14: Word sense induction & disambiguation. In Proceedings of the 5th international workshop on semantic evaluation, 63– 68. Association for Computational Linguistics. [Manning et al. 2014] Manning, C.; Surdeanu, M.; Bauer, J.; Finkel, J.; Bethard, S.; and McClosky, D. 2014. The stanford corenlp natural language processing toolkit. In Proceedings of 52nd annual meeting of the association for computational linguistics: system demonstrations, 55–60. [Mikolov et al. 2013] Mikolov, T.; Sutskever, I.; Chen, K.; Corrado, G. S.; and Dean, J. 2013. Distributed represen- tations of words and phrases and their compositionality. In",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1800
+    }
+  },
+  {
+    "content": "demonstrations, 55–60. [Mikolov et al. 2013] Mikolov, T.; Sutskever, I.; Chen, K.; Corrado, G. S.; and Dean, J. 2013. Distributed represen- tations of words and phrases and their compositionality. In NIPS, 3111–3119. [Pelevina et al. 2016] Pelevina, M.; Areﬁev, N.; Biemann, C.; and Panchenko, A. 2016. Making sense of word em- beddings. In Proceedings of the 1st Workshop on Represen- tation Learning for NLP, 174–183. [Shu, Long, and Meng 2009] Shu, L.; Long, B.; and Meng, W. 2009. A latent topic model for complete entity resolu- tion. In ICDE, 880–891. IEEE. [Song et al. 2007] Song, Y.; Huang, J.; Councill, I. G.; Li, J.; and Giles, C. L. 2007. Efﬁcient topic-based unsupervised name disambiguation. In JCDL, 342–351. ACM. [Song 2016] Song, L. 2016. Word embeddings, sense em- beddings and their application to word sense induction. The University of Rochester, April. [Stevenson and Wilks 2003] Stevenson, M., and Wilks, Y. 2003. Word sense disambiguation. The Oxford Handbook of Comp. Linguistics 249–265. [Tang et al. 2012] Tang, J.; Fong, A. C.; Wang, B.; and Zhang, J. 2012. A uniﬁed probabilistic framework for name disambiguation in digital library. IEEE Transactions on Knowledge and Data Engineering 24(6):975–987. [Teh et al. 2004] Teh, Y. W.; Jordan, M. I.; Beal, M. J.; and Blei, D. M. 2004. Sharing clusters among related groups: Hierarchical dirichlet processes. In NIPS, 1385–1392. [Tsvetkov et al. 2014] Tsvetkov, Y.; Schneider, N.; Hovy, D.; Bhatia, A.; Faruqui, M.; and Dyer, C. 2014. Augmenting english adjective senses with supersenses. In LREC. J.; Bansal, M.; Gimpel, K.; [Wang et al. 2015] Wang, Ziebart, B. D.; and Clement, T. Y. 2015. A sense-topic model for word sense induction with unsupervised data en- richment. Transactions of the Association for Computa- tional Linguistics 3:59–71. [Yao and Van Durme 2011] Yao, X., and Van Durme, B. In 2011. Nonparametric bayesian word sense induction.",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 3595
+    }
+  },
+  {
+    "content": "Proceedings of TextGraphs-6: Graph-based Methods for Natural Language Processing, 10–14. Association for Com- putational Linguistics. [Yao, Van Durme, and Callison-Burch 2012] Yao, X.; Van Durme, B.; and Callison-Burch, C. 2012. Expectations of word sense in parallel corpora. In NAACL-HLT, 621–625. Association for Computational Linguistics.",
+    "metadata": {
+      "filename": "1811.09242.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

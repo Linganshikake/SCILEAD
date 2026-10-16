@@ -1,0 +1,70 @@
+Paper Name Task Dataset Metric Result
+1703.06345.pdf Named Entity Recognition (NER) CoNLL-2003 - English F1 91.26
+1703.06345.pdf Named Entity Recognition (NER) CoNLL-2002 - Spanish F1 85.77
+1703.06345.pdf Named Entity Recognition (NER) CoNLL-2002- Dutch F1 85.19
+1703.06345.pdf Text Chunking CoNLL-2000 F1 95.41
+1703.06345.pdf Part-of-Speech (POS) Tagging Penn Treebank (PTB) Accuracy 97.55
+1603.01354.pdf Named Entity Recognition (NER) CoNLL-2003 - English Precision 91.35
+1603.01354.pdf Named Entity Recognition (NER) CoNLL-2003 - English Recall 91.06
+1603.01354.pdf Named Entity Recognition (NER) CoNLL-2003 - English F1 91.21
+1603.01354.pdf Part-of-Speech (POS) Tagging Penn Treebank (PTB) Accuracy 97.55
+1709.04109.pdf Named Entity Recognition (NER) CoNLL-2003 - English F1 91.85
+1709.04109.pdf Text Chunking CoNLL-2000 F1 96.13
+1709.04109.pdf Part-of-Speech (POS) Tagging Penn Treebank (PTB) Accuracy 97.59
+Table 10: Example TDMR instances from SCILEAD. TDMR tuples per each paper are color coded.
+Task: Named Entity Recognition (NER)
+Result
+Task: Part-of-Speech (POS) Tagging
+ResultDataset: CoNLL-2003 - English Dataset: Penn Treebank (PTB)
+Metric: F1 Metric: Accuracy
+1709.04109.pdf 91.85 1709.04109.pdf 97.59
+1703.06345.pdf 91.26 1603.01354.pdf 97.55
+1603.01354.pdf 91.21 1703.06345.pdf 97.55
+Table 11: Example leaderboards from SCILEAD based on common TDMR tuples in Table 10. The same color codes
+are used.
+Model R (% change) P (% change) F1 (% change)
+Fully
+AxCell 25.78 (88.59) 55.08 (69.01) 35.12 (82.35)
+Llama-2 + CS 39.54 (83.14) 40.66 (304.17) 40.09 (191.99)
+Llama-2 34.91 (128.92) 35.85 (272.27) 35.37 (199.49)
+Mixtral + CS 52.05 (111.50) 58.44 (120.20) 55.06 (115.58)
+Mixtral 48.75 (124.34) 55.66 (125.71) 51.97 (124.98)
+Llama-3 + CS 58.07 (96.58) 62.02 (167.10) 59.98 (130.69)
+Llama-3 72.56 (103.82) 77.13 (184.51) 74.77 (142.92)
+GPT-4 + CS 63.82 (31.02) 68.95 (38.40) 66.29 (34.57)
+GPT-4 70.40 (29.10) 75.28 (34.38) 72.75 (31.63)
+Partially
+Llama-2 22.99 (132.45) 27.23 (553.00) 24.93 (324.70)
+Mixtral 24.48 (99.51) 27.89 (90.38) 26.07 (95.28)
+Llama-3 45.30 (141.60) 50.75 (223.25) 47.87 (180.11)
+GPT-4 51.89 (31.17) 56.08 (38.13) 53.90 (34.51)
+Table 12: ETM scores without Result (%). Percentage
+change relative to Table 3 are given in parenthesis high-
+lighted in teal. The best results of each normalization
+setting are underlined. Overall best results are given in
+bold.
+Model ETM ETM w/o ResultR P F1 R P F1
+Llama-2 7.33 4.33 5.45 26.60 33.27 29.56
+Mixtral 12.49 13.45 12.95 27.85 29.87 28.83
+Llama-3 22.82 19.04 20.78 53.42 58.84 56.00
+GPT-4 45.47 46.90 46.17 60.24 64.43 62.26
+Table 13: ETM scores (%) with and without Result
+values in partially pre-defined setting on the leaderboard
+dataset with paper threshold two.
+Model IIM-Task IIM-Dataset IIM-MetricR P F1 R P F1 R P F1
+Llama-2 42.98 39.70 41.27 33.14 41.05 36.67 59.34 61.24 60.28
+Mixtral 60.72 50.23 54.98 44.45 49.67 46.92 71.19 78.72 74.77
+Llama-3 80.39 65.72 72.32 62.86 66.81 64.77 88.90 94.90 91.80
+GPT-4 78.30 63.82 70.32 79.52 83.29 81.36 89.27 92.21 90.72
+Table 14: IIM scores (%) in partially pre-defined setting
+on the leaderboard dataset with paper threshold two.
+E Paper Threshold Results
+We provide full results for leaderboard threshold of
+two papers in Tables 13, 14, 15 and 16.
+F Cold Start Results
+We provide standard deviation values for cold start
+experiments in Tables 17, 18, 19 and 20.
+G Prompts
+Table 21 shows the system prompt for TDMR ex-
+traction phase. In Table 22, we provide prompt
+7975

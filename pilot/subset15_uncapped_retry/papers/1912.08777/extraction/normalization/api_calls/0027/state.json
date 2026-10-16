@@ -1,0 +1,59 @@
+{
+  "call": 27,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 27,
+    "record": 13,
+    "field": "Metric",
+    "original_value": "Likert Scale (1-5)",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: Likert Scale (1-5)\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 242
+  },
+  "max_tokens": 15,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYVISNmj0XUX4xfqGtDygHTwxnKdF",
+  "usage": {
+    "prompt_tokens": 242,
+    "completion_tokens": 1,
+    "total_tokens": 243,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "service_ttft_ms": 496,
+      "user_visible_ttft_ms": 408,
+      "pre_inference_ms": 88,
+      "service_tbt_ms": 12,
+      "service_ttlt_ms": 509,
+      "engine_ttft_ms": 52,
+      "engine_ttlt_ms": 61,
+      "engine_tbt_ms": 4
+    }
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_a265b6cf81",
+  "raw_answer": "None",
+  "seconds": 2.25
+}

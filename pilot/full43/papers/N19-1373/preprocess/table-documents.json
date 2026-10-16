@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Table 1: A snippet of a conversation sample from the SwDA Corpus. Each utterance has a corresponding di- alogue act label.\nSpeaker Utterance A A Okay. Um, what did you do this weekend? Well, uh, pretty much spent most of my time in the yard. [Throat Clearing] Uh-Huh. What do you have planned for your yard? Well, we’re in the process of, revitalizing it. B B A A B DA label Other Question Statement Non Verbal Backchannel Question Statement",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 1,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: Number of utterances by dataset. |C| denotes number of classes and |V| is the vocabulary size.\nDataset MRDA SwDA |C| 5 43 |V| 12k 20k Train Validation Test 15k 78k 5k 193k 16k 23k",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 4,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: DA Classiﬁcation Accuracy\nModel TF-IDF GloVe Kalchbrenner and Blunsom (2013) Lee and Dernoncourt (2016) Khanpour et al. (2016) Ji et al. (2016) Shen and Lee (2016) Li and Wu (2016) Ortega and Vu (2017) Tran et al. (2017) Kumar et al. (2018) Chen et al. (2018) Our Method Human Agreement SwDA MRDA 66.5 73.9 73.9 75.8 77.0 72.6 79.4 73.8 74.5 79.2 81.3 82.9 84.0 78.7 - 84.6 86.8 - - - 84.3 - 90.9 91.7 91.1 -",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 4,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: methods when integrated with the hierarchical model\nMethod Baseline TF-IDF GloVe Pre-trained on Corpus Skip Thought Vectors Paragraph vectors Joint Learning RNN-Encoder Bi-RNN-LastState Bi-RNN-MaxPool CNN Bi-RNN + Attention + Context Bi-RNN + Self-attention + Context SwDA MRDA 66.5 78.7 72.6 72.5 82.8 82.6 74.8 76.2 77.6 76.9 80.1 81.8 81.1 82.9 85.7 85.4 86.7 84.5 87.7 89.2 88.6 91.1",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 5,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Hyperparameter space and tuned values\nHyperparams Word Embeddings Range of values GloVe 100D GloVe 200D GloVe 300D Final value GloVe 300D + ELMo 1024D Word2vec 300D Word2vec 200D ELMo 1024D GloVe 300D + ELMo 1024D Word2Vec 300D + ELMo 1024D Sentence GRU Size (u) Utterance GRU 20 - 600 Size (k) Learning Rate Dropout Optimizer 20 - 300 0.01 - 2.0 0.1 - 0.8 SGD, RMSProp, Adam 50 100 0.015 0.3 Adam",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  }
+]

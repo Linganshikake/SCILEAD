@@ -1,0 +1,59 @@
+{
+  "call": 4,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 4,
+    "record": 4,
+    "field": "Metric",
+    "original_value": "EM",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: EM\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 236
+  },
+  "max_tokens": null,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYXdhDA7QyAWQjFUViErmGj0nxGr7",
+  "usage": {
+    "completion_tokens": 5,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 0,
+      "engine_ttft_ms": 315,
+      "engine_ttlt_ms": 316,
+      "pre_inference_ms": 197,
+      "service_tbt_ms": 1,
+      "service_ttft_ms": 858,
+      "service_ttlt_ms": 864,
+      "user_visible_ttft_ms": 661
+    },
+    "prompt_tokens": 236,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 241
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_8c4c3e6d7a",
+  "raw_answer": "Exact Match (EM)",
+  "seconds": 3.781
+}

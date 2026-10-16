@@ -1,0 +1,40 @@
+{
+  "paper": "1711.05568.pdf",
+  "status": "COMPLETE",
+  "pdf_pages": 10,
+  "strategy": "hi_res",
+  "infer_table_structure": true,
+  "chunk_size": 2000,
+  "chunk_overlap": 200,
+  "embedding": "multi-qa-mpnet-base-dot-v1",
+  "retrieval": "similarity default k=4 plus all tables",
+  "elements": 194,
+  "table_count": 7,
+  "table_pages": [
+    1,
+    6,
+    6,
+    6,
+    7,
+    7,
+    8
+  ],
+  "categories": {
+    "Header": 1,
+    "UncategorizedText": 10,
+    "Title": 8,
+    "NarrativeText": 85,
+    "Table": 7,
+    "FigureCaption": 10,
+    "Image": 4,
+    "ListItem": 55,
+    "Formula": 14
+  },
+  "text_chunks": 25,
+  "evidence_count": 11,
+  "evidence_types": {
+    "Text": 4,
+    "Table": 7
+  },
+  "seconds": 81.0
+}

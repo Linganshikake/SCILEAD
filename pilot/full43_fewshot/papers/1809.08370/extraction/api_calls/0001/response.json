@@ -1,0 +1,102 @@
+{
+  "choices": [
+    {
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "detected": false,
+          "filtered": false
+        },
+        "protected_material_text": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[{\"Task\": \"Combinatory Categorial Grammar (CCG) Supertagging\", \"Dataset\": \"CCGBank\", \"Metric\": \"Accuracy\", \"Result\": \"96.05\"}, {\"Task\": \"Text Chunking\", \"Dataset\": \"CoNLL-2000\", \"Metric\": \"F1\", \"Result\": \"96.98\"}, {\"Task\": \"Named Entity Recognition (NER)\", \"Dataset\": \"CoNLL-2003\", \"Metric\": \"F1\", \"Result\": \"92.61\"}, {\"Task\": \"Fine-Grained NER (FGN)\", \"Dataset\": \"OntoNotes\", \"Metric\": \"F1\", \"Result\": \"88.81\"}, {\"Task\": \"Part-of-Speech (POS) Tagging\", \"Dataset\": \"Penn Treebank WSJ\", \"Metric\": \"Accuracy\", \"Result\": \"97.74\"}, {\"Task\": \"Dependency Parsing\", \"Dataset\": \"Penn Treebank (Stanford Dependencies v3.3.0)\", \"Metric\": \"UAS\", \"Result\": \"96.61\"}, {\"Task\": \"Dependency Parsing\", \"Dataset\": \"Penn Treebank (Stanford Dependencies v3.3.0)\", \"Metric\": \"LAS\", \"Result\": \"95.02\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"IWSLT 2015 English-Vietnamese tst2013\", \"Metric\": \"BLEU\", \"Result\": \"29.58\"}]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791999832,
+  "id": "chatcmpl-EYxJ295ZmCiT7mpTbJhJ1fUSUeYTM",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "detected": false,
+          "filtered": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "serving_pipereplica": "d20260927094339-c1ca4ab1-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 307,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 6,
+      "engine_ttft_ms": 520,
+      "engine_ttlt_ms": 2441,
+      "pre_inference_ms": 260,
+      "service_tbt_ms": 6,
+      "service_ttft_ms": 946,
+      "service_ttlt_ms": 2791,
+      "user_visible_ttft_ms": 687
+    },
+    "prompt_tokens": 6318,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 6625
+  }
+}

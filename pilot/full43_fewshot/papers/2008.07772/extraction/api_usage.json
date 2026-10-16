@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4797,
+  "completion_tokens": 389,
+  "total_tokens": 5186,
+  "request_seconds": 7.32799999974668,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "2008.07772.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "b935293c8bb7df8e11e8b5000b3ebd2a38266b174069f2595c703ab95f52a5fd",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxPCZqUUK328v8gn2NvEO4BdMclZ",
+      "usage": {
+        "completion_tokens": 389,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 12,
+          "engine_ttft_ms": 319,
+          "engine_ttlt_ms": 4904,
+          "pre_inference_ms": 244,
+          "service_tbt_ms": 12,
+          "service_ttft_ms": 995,
+          "service_ttlt_ms": 5594,
+          "user_visible_ttft_ms": 751
+        },
+        "prompt_tokens": 4797,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2176
+        },
+        "total_tokens": 5186
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_8c4c3e6d7a",
+      "raw_answer": "[{\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-French\", \"Metric\": \"BLEU (multi-bleu.perl)\", \"Result\": \"43.8\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-French\", \"Metric\": \"BLEU (sacreBLEU.py)\", \"Result\": \"41.8\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-French\", \"Metric\": \"TER\", \"Result\": \"40.3\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-French\", \"Metric\": \"METEOR\", \"Result\": \"62.4\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-German\", \"Metric\": \"BLEU (multi-bleu.perl)\", \"Result\": \"30.1\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-German\", \"Metric\": \"BLEU (sacreBLEU.py)\", \"Result\": \"29.5\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-German\", \"Metric\": \"TER\", \"Result\": \"46.6\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-German\", \"Metric\": \"METEOR\", \"Result\": \"48.3\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-French\", \"Metric\": \"BLEU (multi-bleu.perl, Back-Translation)\", \"Result\": \"46.4\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'14 English-French\", \"Metric\": \"BLEU (sacreBLEU.py, Back-Translation)\", \"Result\": \"44.4\"}]",
+      "response_sha256": "3fcfa342581ef5ade066fb8b779528dee31eae82bf820eea07a8b41fd475106b",
+      "seconds": 7.32799999974668
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

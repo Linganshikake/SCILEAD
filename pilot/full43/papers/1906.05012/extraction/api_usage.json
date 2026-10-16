@@ -1,0 +1,74 @@
+{
+  "requested_model": "gpt-4.1-2025-04-14",
+  "expected_requests": 1,
+  "actual_request_attempts": 1,
+  "completed_requests": 1,
+  "retries": 0,
+  "calls": [
+    {
+      "call": 1,
+      "status": "COMPLETE",
+      "expected": {
+        "call": 1,
+        "messages": [
+          {
+            "role": "system",
+            "content": "You will be given several parts of a research paper as input. Please extract different tuples including the name of the task addressed in the paper, utilized datasets and evaluation metrics and corresponding results. Extract these tuples for only the best results obtained by proposed methods of the paper not baselines. Please use json format for each different tuple. Example format: [{\"Task\": \"Task name\", \"Dataset\": \"Dataset name\", \"Metric\": \"Metric name\", \"Result\": \"Result score\"}]. Your answer will immediately start with the json object satisfying the given template and contain nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Main task, datasets and evaluation metrics.\n\nRetrieved document contents:\n\nare shared between the article and template encoders. The k of k-max pooling is set to 10. L2 weight de- cay with λ = 3 × 10−6 is performed over all train- able variables. The initial learning rate is 0.001 and multiplied by 0.1 every 10K steps. Dropout between layers is applied. BiSET. A two-layer BiLSTM is used as the en- coder, and another two-layer LSTM as the de- coder. The sizes of word embeddings and LSTM hidden states are both set to 500. We only apply dropout in the LSTM stack with a rate of 0.3. The learning rate is set to 0.001 for the ﬁrst 50K steps and halved every 10K steps. Beam search with size 5 is applied to search for optimal answers. 3.2 Evaluation Metrics Following previous work (Nallapati et al., 2016; Zhou et al., 2017; Cao et al., 2018a), we use the standard F1 scores of ROUGE-1, ROUGE- 2 and ROUGE-L (Lin and Hovy, 2003) to eval- uate the selected templates and generated sum- maries, where the ofﬁcial ROUGE script5 is ap- plied. We employ the normalized discounted cu- mulative gain (NDCG) (J¨arvelin and Kek¨al¨ainen, 2002) from information retrieval to evaluate the Fast Rerank module. 4 Results and Analysis In this section, we report our experimental results with thorough analysis and discussions. 4.1 Performance of Retrieve The Retrieve module is intended to narrow down the search range for a best template. We evaluated this module by considering three types of tem- plates: (a) Random means a randomly selected summary from the training corpus; (b) Retrieve- top is the highest-ranked summary by Retrieve; (c) N-Optimal means among the N top search results, the template is speciﬁed as the summary with largest ROUGE score with gold summary. As the results show in Table 1, randomly se- lected templates are totally irrelevant and unhelp- ful. When they are replaced by the Retrieve-top 5The ROUGE evaluation option: -m -n 2 -w 1.2\n\ntemplates, the results improve apparently, demon- strating the relatedness of top-ranked summaries to gold summaries. Furthermore, when the N- Optimal templates are used, additional improve- ments can be observed as N grows. This trend is also conﬁrmed by Figure 3, in which the ROUGE scores increase before 30 and stabilize afterwards. These results suggest that the ranges given by Re- trieve indeed help to ﬁnd quality templates. 4.2 Fast Rerank As mentioned before, the role of Fast Rerank is to re-rank the initial search results and return a best template for summarization. To examine the effect of this module, we studied its ranking quality un- der different ranges as in Section 4.1. The original rankings by Retrieve are presented for comparison with the NDCG metric. We regard the ROUGE- 2 score of each candidate template with the ref- erence summary as the ground truth. As shown in Figure 4, Fast Rerank consistently provides en- hanced rankings over the original. Interaction Approaches In Section 2.3, we also explored three alternative approaches to integrating an article with its tem- plate. The results are shown in Table 2, from which we can note that none of these approaches help yield satisfactory performance. Even though DCN Attention works impressively in machine reading comprehension, it performs even worse in this task than the simple concatenation. We conjecture the reason is that the DCN Attention attempts to fuse the template information into an article as in ma- chine reading comprehension, rather than selects key information from the two to form an enhanced article representation. Table 2: Results of different interaction approaches. 4.4 BiSET The overall performance of all the studied mod- els is shown in Table 3. The results show that our model signiﬁcantly outperforms all the baseline models and sets a new state of the art for abstrac- tive sentence summarization. To evaluate the im- pact of templates on our model, we also imple- mented BiSET with\n\nvocabulary size and fed through a softmax layer to output the target word distribution: p(wt|w1, ..., wt−1) = sof tmax(Wpha t ) 2.5 Training The Retrieve module involves an unsupervised process with traditional indexing and retrieval techniques. For Fast Rerank, since there is no ground truth available, we use ROUGE-13 (Lin and Hovy, 2003) to evaluate the saliency of a can- didate template with respect to the gold summary of current source article. Therefore, the loss func- tion is deﬁned as: (21) where s is a score predicted by Equation 9, and N is the product of the training set size, D, and the number of retrieved templates for each article. the loss function is chosen as the negative log-likelihood between the generated summary, w, and the true summary, w∗: (22) where L is the length of the true summary, θ con- tains all the trainable variables, and x and y denote the source article and the template, respectively. 3 Experiments In this section, we introduce our evaluations on a standard dataset. 3.1 Dataset and Implementation The dataset used for evaluation is Annotated En- glish Gigaword (Napoles et al., 2012), a parallel corpus formed by pairing the ﬁrst sentence of an article with its headline. For a fair comparison, we use the version preprocessed by Rush et al. (2015)4 as previous work. During training, both the Fast Rerank and BiSET modules have a batch size of 64 with the Adam optimizer (Kingma and Ba, 2015). We also apply grad clipping (Pascanu et al., 2013) with a 3We also tried ROUGE-2 and ROUGE-L, but ROUGE-1 shows to be more suitable. range of [-5,5]. The differences of the two mod- ules in settings are listed below. Fast Rerank. We set the size of word embeddings to 300, the convolution encoder block number to 1, and the kernel size of CNN to 3. The weights are shared between the article and template encoders. The k of k-max pooling is set to 10. L2 weight de- cay with λ = 3 × 10−6 is performed over all train- able variables. The initial learning\n\nfew (5 to 30) related articles, the summaries of which will be treated as candidate templates. 2.2 Fast Rerank The above retrieval process is essentially based on superﬁcial word matching and cannot measure the deep semantic relationship between two articles. Therefore, the Fast Rerank module is developed to identify a best template from the candidates based on their deep semantic relevance with the source article. We regard the candidate with highest rel- evance as the template. As illustrated in Figure 1, this module consists of a Convolution Encoder Block, a Similarity Matrix and a Pooling Layer. Convolution Encoder Block. This block maps the input article and its candidate templates into high-level representations. The popular ways to this are either by using recurrent neural network (RNN) or a stack of convolutional neural network (CNN), while none of them are suitable for our problem. This is because a source article is usu- ally much longer than a template, and both RNN and CNN may lead to semantic irrelevance after encodings. Instead, we implement a new convo- lution encoder block which includes a word em- bedding layer, a 1-D convolution followed by a non-linearity function, and residual connections (Gehring et al., 2017). Formally, given word embeddings {ei}E i=1 ∈ Rd of an article, we use a 1-D convolution with kernel k ∈ R2d×kd and bias bh ∈ R2d to extract the n-gram features: where hi ∈ R2d. We pad both sides of an arti- cle/template with zeros to keep ﬁxed length. Af- ter that, we employ the gated linear unit (GLU) (Dauphin et al., 2017) as our activation function to control the proportion of information to pass through. GLU takes half the dimension of hi as input and reduces the input dimension to d. Let i , h2 hi = [h1 where ri ∈ Rd, σ is the sigmoid function, and ⊗ means element-wise multiplication. To retain the original information, we add residual connections\n\nTable 1: Performance of different types of templates.\nType Random Retrieve-top 5-Optimal 10-Optimal 15-Optimal 20-Optimal 30-Optimal ROUGE-1 ROUGE-2 2.58 23.46 32.69 35.90 37.82 38.92 40.49 0.00 7.67 11.74 13.32 16.79 17.72 19.01 ROUGE-L 2.48 20.94 28.71 31.42 34.08 34.94 36.10\n\nTable 2: Results of different interaction approaches.\nInteraction method Concatenation Concate+multi self-att DCN Attention Bi-selective layer 32.26 33.15 31.53 39.11 30.19 31.21 27.96 36.87\n\nTable 3: Performance of all the models, where results marked with ‡ are taken from the corresponding papers.\nModel ABS‡ (Rush et al., 2015) ABS+‡ (Rush et al., 2015) RAS-Elman‡ (Chopra et al., 2016) Featseq2seq‡ et al., 2016) Open-NMT‡ (Klein et al., 2017) SEASS‡ (Zhou et al., 2017) S2S+CGU‡ (Lin et al., 2018) FTSum‡ (Cao et al., 2018b) R3Sum‡ (Cao et al., 2018a) BiSET (Nallapati ROUGE-1 29.55 29.78 33.78 32.67 34.07 36.15 36.30 37.27 37.04 39.11 ROUGE-2 11.32 11.89 15.97 15.59 16.35 17.54 18.00 17.65 19.03 19.78 ROUGE-L 26.42 26.97 31.15 30.64 31.78 33.63 33.80 34.24 34.46 36.87\n\nTable 4: Performance of BiSET with different types of templates, where Random means randomly-selected templates, and N-rerank denotes the best templates re- ranked by Fast Rerank under range N .\nTemplate Type Random 5-rerank 10-rerank 20-rerank 30-rerank ROUGE-1 ROUGE-2 33.85 37.69 38.34 38.89 39.11 15.83 18.62 19.35 19.64 19.78 ROUGE-L 31.14 34.38 34.97 36.67 36.87\n\nTable 5: ROUGE F1 scores of ablated models.\nModel Concatenation BiSET without T2A BiSET without A2T BiSET(full) ROUGE-1 ROUGE-2 ROUGE-L 15.30 16.55 19.21 19.78 32.26 34.51 39.02 39.11 30.19 31.17 36.02 36.87\n\nTable 6: Results of human evaluation.\nModel R3Sum Open-NMT BiSET(random template) BiSET(without A2T) BiSET(best template) Reference Info Concise Read 3.90 3.83 3.30 3.86 3.69 3.26 3.71 3.69 3.09 3.72 3.75 3.24 3.93 3.98 3.35 3.55 3.89 3.91\n\nSource Ref Temp BiSET factory orders for manufactured goods rose #.# the commerce depart- percent in September, ment said here Thursday. September factory orders up #.# percent. January factory orders in US up #.# percent. factory orders up #.# percent in September.\n\nTable 7: Examples of the generated templates and sum- maries by our model. ‘#’ refers to masked numbers.\nSource Ref Temp BiSET some #.# billion people worldwide are expected to watch Germany face Costa Rica on television at the opening match of football’s World Cup, German public broadcaster zdf said Thursday. #.# billion tv viewers expected for opening World Cup match. billions around world watch the Olympic Games opening ceremony. #.# billions around world expected to watch World Cup..\n\n Output json:\n\n"
+          }
+        ],
+        "estimated_prompt_tokens": 2978
+      },
+      "max_tokens": null,
+      "model": "gpt-4.1-2025-04-14",
+      "temperature": 0,
+      "seed": 0,
+      "attempts": 1,
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYWKJwc6zC6QHFThPda8lrCgRR2YZ",
+      "usage": {
+        "completion_tokens": 139,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 73,
+          "engine_ttlt_ms": 615,
+          "pre_inference_ms": 159,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 439,
+          "service_ttlt_ms": 976,
+          "user_visible_ttft_ms": 280
+        },
+        "prompt_tokens": 2978,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 3117
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[\n  {\n    \"Task\": \"Abstractive sentence summarization\",\n    \"Dataset\": \"Annotated English Gigaword\",\n    \"Metric\": \"ROUGE-1\",\n    \"Result\": \"39.11\"\n  },\n  {\n    \"Task\": \"Abstractive sentence summarization\",\n    \"Dataset\": \"Annotated English Gigaword\",\n    \"Metric\": \"ROUGE-2\",\n    \"Result\": \"19.78\"\n  },\n  {\n    \"Task\": \"Abstractive sentence summarization\",\n    \"Dataset\": \"Annotated English Gigaword\",\n    \"Metric\": \"ROUGE-L\",\n    \"Result\": \"36.87\"\n  }\n]",
+      "seconds": 2.406
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_accepted": true,
+  "seed_determinism_verified": false,
+  "candidate_order": "str(set), PYTHONHASHSEED=0",
+  "resume_policy": "Replay completed request at identical index/message only; no duplicate-name cache; unfinished attempts never retried",
+  "prompt_tokens": 2978,
+  "completion_tokens": 139,
+  "total_tokens": 3117
+}

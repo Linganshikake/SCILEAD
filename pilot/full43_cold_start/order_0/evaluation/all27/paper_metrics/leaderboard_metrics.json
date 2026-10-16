@@ -1,0 +1,35 @@
+{
+  "aggregate": {
+    "gold_leaderboards": 27,
+    "nonempty_valid_result_boards": 8,
+    "tdm_hit_boards": 8,
+    "LR_exact_tdm_hit": 0.2962962962962963,
+    "LR_nonempty_finite_result": 0.2962962962962963,
+    "PC_official": 0.07557319223985891,
+    "RC_official": 0.043915343915343914,
+    "RBO_official_value_rankings": 0.0817283950617284,
+    "AO_paper_id_macro_all_gold_boards": 0.11876543209876543,
+    "AO_nonempty_only_DIAGNOSTIC": 0.4008333333333333,
+    "supplementary_joint_paper_result_coverage": 0.043915343915343914
+  },
+  "conventions": {
+    "LR_primary": "LR is exact normalized TDM hit before numeric conversion. Finite-result nonempty-board rate is separately reported. No >=3 prediction filter is added.",
+    "AO": "(1/k) sum_{d=1..k} |G[:d] intersect M[:d]| / d, k=min(lengths); elements are paper IDs",
+    "AO_empty": "Zero when k=0; all target gold boards remain in macro denominator",
+    "AO_ties": "Sort Result using official metric direction, then paper_id ascending; no dense or fractional ranks",
+    "numeric_conversion": "Unmodified official constructor; duplicate (TDM,paper) uses last valid convertible tuple in original input order",
+    "RBO_library_version": "0.1.3",
+    "RBO_signature": "(self, k: Optional[float] = None, p: float = 1.0, ext: bool = False) -> float",
+    "RBO_caveat": "Official rbo() default p=1 is unweighted overlap over deduplicated result-value rankings. Supplementary AO uses distinct paper IDs, retaining tied papers.",
+    "new_api_requests": 0
+  },
+  "sources": {
+    "paper_url": "https://aclanthology.org/2024.emnlp-main.453.pdf",
+    "formula_pdf_page": 6,
+    "table5_pdf_page": 8,
+    "gold_path": "C:\\Users\\Administrator\\Desktop\\KG\\SCILEAD_DATA\\data\\leaderboards.json",
+    "gold_sha256": "b32320009c1471442e6c110df52d77c64538373b298b4f47865a912761d62657",
+    "prediction_path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_0\\stage2\\leaderboard_normalized_output.json",
+    "prediction_sha256": "73c198455e9b78bf75b6889fe3f360e18ef0a68249c5a09819f85e13d5cf3cb7"
+  }
+}

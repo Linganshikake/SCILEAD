@@ -1,0 +1,83 @@
+{
+  "D18-1523.pdf": {
+    "output": "[{\"Task\": \"Word Sense Induction (WSI)\", \"Dataset\": \"SemEval 2013 Task 13\", \"Metric\": \"AVG\", \"Result\": \"25.43 ± 0.48\"}, {\"Task\": \"Word Sense Induction (WSI)\", \"Dataset\": \"SemEval 2013 Task 13\", \"Metric\": \"NMI\", \"Result\": \"0.22 ± 0.12\"}]",
+    "source_documents": [
+      {
+        "content": "References",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 6,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Supplementary Material Statistics of the SemEval 2013 Task 13 Dataset SemEval 2013 Task 13 consists of 50 targets, each has a lemma and a part of speech (20 verbs, 20 nouns and 10 adjectives). We use the dataset only for evaluation. Most targets have around 100 la- beled instances (sentences containing a usage of the target in its designated part of speech together with one or more WordNet senses assigned by hu- man labeler). Exceptions are the targets of trace.n and book.v which have 37 and 22 labeled in- stances accordingly. Leaving out the two anoma- lous targets mentioned above we are left with 4605 instances from 48 targets: 19 verb, 19 noun and 10 adjective targets. We note that the small size of the dataset should make one cautious to draw quick conclusions, yet, our results seem to be consistent. Effect of the Choice of Number of Clusters An important statistic of the dataset is the num- ber of senses per target. The average number of senses per target in the dataset is 6.94 (stdev:2.71). Breaking down by part of speech, the means and standard deviations of target senses are: verbs: 5.90 (±1.37), nouns: 7.32 (±2.21), adjectives: 7.11 (±3.54). In this work we follow this statis- tic and always look for 7 clusters. Figure 2 shows the accuracy as a function of the number of clus- ters. While 7 clusters indeed produces the highest scores, all numbers in the range 4 to 15 produce state-of-the-art results. We leave the selection of per-instance number of clusters to future work. Figure 2 also tells us our system is better at in- ducing senses for adjectives, at least according to task score. The Importance of Lemmatization The ablation results in the paper indicate that for verbs, using symmetric patterns without lemmati- zation yields poor results. We present the analysis the motivated our use of lemmatization. Consider the samples from the biLM with and without sym- metric patterns, for the instance It was when I was a high-school student that I became convinced",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 7,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "of j that are assigned to cluster i. 2.5 Additional Processing Lemmatization The WSI task is deﬁned over lemmas, and some target words have morpholog- ical variability within a sense. This is especially common with verb tenses, e.g., “I booked a ﬂight” and “I am booking a ﬂight”. As the conjunctive 3In this work, we use 7 clusters, which roughly matches the number of senses for each target word in the corpus. Dy- namically selecting the number of clusters is left for future work. The effect of changing the number of clusters is ex- plored in the supplementary material.",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 3,
+          "start_index": 3613,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "numbers as well. Results Table 2 summarizes the results. Our system using symmetric patterns outperforms all other setups with an AVG score of 25.4, establish- ing a new state-of-the-art on the task. 3 Experiments and Results We evaluate our method on the SemEval 2013 Task 13 dataset (Jurgens and Klapaftis, 2013), containing 50 ambiguous words each with roughly 100 in-sentence instances, where each instance is soft-labeled with one or more WordNet senses. Experiment Protocol Due to the stochastic na- ture of the algorithm, we repeat each experiment 30 times and report the mean scores together with the standard deviation. Ablation and analysis We perform ablations to explore the contribution of the different compo- nents (Symmetric Patterns (SP), Lemmatization (LEM) and TF-IDF re-weighting). Figure (1) shows the results for the entire dataset (ALL, top), as well as broken-down by part-of-speech. All components are beneﬁcial and are needed for ob- taining the best performance in all cases. How- ever, their relative importance differs across parts- of-speech. Adjectives gain the most from the use of the dynamic symmetric patterns, while nouns gain the least. For verbs, the lemmatization is",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 4,
+          "start_index": 1805,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Predicted substitutes for two senses of sound, for context-only and the symmetric-pattern approaches.\nContext Only Forward dist. Backward dist. Symmetric Pattern Forward dist. Backward dist. This is a sound idea, I like it. sad 0.02 great 0.02 huge 0.02 very 0.02 lesson 0.02 bad 0.12 good 0.09 great 0.06 wonderful 0.05 nice 0.04 welcome 0.09 practical 0.03 comprehensive 0.03 light 0.02 balanced 0.02 funny 0.10 beautiful 0.05 fun 0.04 simple 0.04 interesting 0.03 I liked the sound of the harpsichord idea 0.12 fact 0.07 article 0.05 guy 0.04 concept 0.02 sounds 0.04 version 0.03 rhythm 0.03 strings 0.03 piece 0.03 feel 0.15 felt 0.11 thought 0.07 smell 0.06 sounds 0.05 sight 0.16 sounds 0.11 rhythm 0.04 tone 0.03 noise 0.03",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 4,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Evaluation Results on the SemEval 2013 Task 13 Dataset. SW: Embeddings similarity based feature weighting. AAC: Extending instance sentences from their traced source. AUC: Adding similar sentences from the dataset originating corpus. We report our mean scores over 30 runs ± standard deviation\nModel Ours MCC-S Sense-Topic (SW) Sense-Topic AI-KU unimelb Sense-Topic (AAC) Sense-Topic (AUC) FNMI FBC Original task dataset 11.26 ± 0.48 7.62 7.14 6.96 6.5 6.0 With data enrichment 9.39 9.74 57.49 ± 0.23 55.6 55.4 53.5 39.0 48.3 59.1 54.5 AVG 25.43 ± 0.48 20.58 19.89 19.30 15.92 17.02 23.56 23.04",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "fw LM, no SP: bw LM, no SP: fw LM, with SP: went, got, started, wasn, loved 1990s, decade, 1980s, afterwards, changed",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "fw LM, no SP: bw LM, no SP: fw LM, with SP: bw LM, with SP: be, be, remain, likely, be becoming, grown becoming, much, becomes remains, remain, which, continue, how rising, overseas, booming, abroad, expanded",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Correlation between tense and sense. NMI is averaged on all verbs, using best matching sense. SP: Symmetric Patterns, LEM: Lemmatizing predictions, ALL: LEM, SP, TFIDF. The bold line show symmetric patterns without lemmatization excessively correlates tense and sense and provides additional validation to our hypothesis, suggesting its essential to lemmatizate when symmetric patterns are used.\nNMI (mean ± STD) Settings 0.15 ± 0.07 Gold labels 0.22 ± 0.12 Final model 0.19 ± 0.08 w/o SP 0.18 ± 0.07 w/o TFIDF 0.67± 0.12 w/o LEM w/o LEM and SP 0.26 ± 0.09 0.24 ± 0.08 w/o ALL",
+        "metadata": {
+          "filename": "D18-1523.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

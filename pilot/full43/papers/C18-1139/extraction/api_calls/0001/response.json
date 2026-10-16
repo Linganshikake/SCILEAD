@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n  {\n    \"Task\": \"Named Entity Recognition (English)\",\n    \"Dataset\": \"CONLL03\",\n    \"Metric\": \"F1-score\",\n    \"Result\": \"93.09±0.12\"\n  },\n  {\n    \"Task\": \"Named Entity Recognition (German)\",\n    \"Dataset\": \"CONLL03\",\n    \"Metric\": \"F1-score\",\n    \"Result\": \"88.32±0.20\"\n  },\n  {\n    \"Task\": \"Chunking\",\n    \"Dataset\": \"CONLL2000\",\n    \"Metric\": \"F1-score\",\n    \"Result\": \"96.72±0.05\"\n  },\n  {\n    \"Task\": \"Part-of-Speech Tagging\",\n    \"Dataset\": \"Penn Treebank\",\n    \"Metric\": \"Accuracy\",\n    \"Result\": \"97.85±0.01\"\n  }\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791897470,
+  "id": "chatcmpl-EYWg2r98vKxaNrGRHamTbRkzb1Fs9",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20261008200441-9f66ba1d-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_8c4c3e6d7a",
+  "usage": {
+    "completion_tokens": 183,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 11,
+      "engine_ttft_ms": 315,
+      "engine_ttlt_ms": 2276,
+      "pre_inference_ms": 205,
+      "service_tbt_ms": 11,
+      "service_ttft_ms": 1061,
+      "service_ttlt_ms": 2998,
+      "user_visible_ttft_ms": 856
+    },
+    "prompt_tokens": 2591,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 2774
+  }
+}

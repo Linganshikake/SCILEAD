@@ -1,0 +1,182 @@
+[
+  {
+    "content": "Improving Neural Language Modeling via Adversarial Training Dilin Wang * 1 Chengyue Gong * 1 Qiang Liu 1 Abstract Recently, substantial progress has been made in language modeling by using deep neural net- works. However, in practice, large scale neural language models have been shown to be prone to overﬁtting. In this paper, we present a simple yet highly effective adversarial training mech- anism for regularizing neural language models. The idea is to introduce adversarial noise to the output embedding layer while training the mod- els. We show that the optimal adversarial noise yields a simple closed form solution, thus al- lowing us to develop a simple and time efﬁ- cient algorithm. Theoretically, we show that our adversarial mechanism effectively encour- ages the diversity of the embedding vectors, help- ing to increase the robustness of models. Em- pirically, we show that our method improves on the single model state-of-the-art results for lan- guage modeling on Penn Treebank (PTB) and Wikitext-2, achieving test perplexity scores of 46.01 and 38.65, respectively. When applied to machine translation, our method improves over various transformer-based translation baselines in BLEU scores on the WMT14 English-German and IWSLT14 German-English tasks. 1. Introduction Statistical language modeling is a fundamental task in ma- chine learning, with wide applications in various areas, in- cluding automatic speech recognition (e.g., Yu & Deng, 2016), machine translation (e.g., Koehn, 2009) and com- puter vision (e.g., Xu et al., 2015), to name a few. Re- cently, deep neural network models, especially recurrent neural networks (RNN) based models, have emerged to be one of the most powerful approaches for language model- ing (e.g., Merity et al., 2018a; Yang et al., 2018; Vaswani et al., 2017; Anderson et al., 2018). *Equal contribution 1Department of Computer Science, UT Austin. Correspondence to: Dilin Wang <dilin@cs.utexas.edu>, Chengyue Gong <cygong@cs.utexas.edu>.",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "et al., 2017; Anderson et al., 2018). *Equal contribution 1Department of Computer Science, UT Austin. Correspondence to: Dilin Wang <dilin@cs.utexas.edu>, Chengyue Gong <cygong@cs.utexas.edu>. Proceedings of the 36 th International Conference on Machine Learning, Long Beach, California, PMLR 97, 2019. Copyright 2019 by the author(s). Unfortunately, a major challenge in training large scale RNN-based language models is their tendency to overﬁt; this is caused by the high complexity of RNN models and the discrete nature of language inputs. Although various regularization techniques, such as early stop and dropout (e.g., Gal & Ghahramani, 2016), have been investigated, severe overﬁtting is still widely observed in state-of-the-art benchmarks, as evidenced by the large gap between train- ing and testing performance. In this paper, we develop a simple yet surprisingly efﬁcient minimax training strategy for regularization. Our idea is to inject an adversarial perturbation on the word embed- ding vectors in the softmax layer of the language models, and seek to ﬁnd the optimal parameters that maximize the worst-case performance subject to the adversarial pertur- bation. Importantly, we show that the optimal perturbation vectors yield a simple and computationally efﬁcient form under our construction, allowing us to derive a simple and fast training algorithm (see Algorithm 1), which can be eas- ily implemented based a minor modiﬁcation of the standard maximum likelihood training and does not introduce addi- tional training parameters. An intriguing theoretical property of our method is that it provides an effective mechanism to encourage diversity of word embedding vectors, which is widely observed to yield better generalization performance in neural language mod- els (e.g., Mu et al., 2018; Gao et al., 2019; Liu et al., 2018b; Cogswell et al., 2016; Khodak et al., 2018). In previous works, the diversity is often enforced explicitly by adding additional diversity penalty",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "Mu et al., 2018; Gao et al., 2019; Liu et al., 2018b; Cogswell et al., 2016; Khodak et al., 2018). In previous works, the diversity is often enforced explicitly by adding additional diversity penalty terms (e.g., Gao et al., 2019), which may impact the likelihood optimization and are com- putationally expensive when the vocabulary size is large. Interestingly, we show that our adversarial training effec- tively enforces diversity without explicitly introducing the additional diversity penalty, and is signiﬁcantly more com- putationally efﬁcient than direct regularizations. Empirically, we ﬁnd that our adversarial method can signif- icantly improve the performance of state-of-the-art large- scale neural language modeling and machine translation. For language modeling, we establish a new single model state-of-the-art result for the Penn Treebank (PTB) and WikiText-2 (WT2) datasets to the best of our knowledge, achieving 46.01 and 38.65 test perplexity scores, respec- tively. On the large scale WikiText-103 (WT3) dataset,",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 3602
+    }
+  },
+  {
+    "content": "our method improves the Quasi-recurrent neural networks (QRNNs) (Merity et al., 2018b) baseline. To demonstrate the broad applicability of the method, we also apply our method to improve machine translation, us- ing Transformer (Vaswani et al., 2017) as our base model. By incorporating our adversarial training, we improve a variety of Transformer-based translation baselines on the WMT2014 English-German and IWSTL2014 German- English translations. embedding). It has been found that it is often useful to tie the input and output embeddings, that is, setting w; = w (known as the weight-tying trick), which reduces the total number of free parameters and yields significant improve- ment of performance (e.g., Press & Wolf, 2016; Inan et al., 2017). Given a set of sentences {:‘.,}2, the parameters @ and w are jointly trained by maximizing the log-likelihood: 2. Background: Neural Language Modeling Typical word-level language models are speciﬁed as a product of conditional probabilities using the chain rule: This optimization involves joint training of a large num- ber of parameters [θ, w], including both the neural weights and word embedding vectors, and is hence highly prone to overﬁtting in practice. where x1:T = [x1, · · · , xT ] denotes a sentence of length T , with xt ∈ V the t-th word and V the vocabulary set. In modern deep language models, the conditional probabili- ties p(xt|x1:t−1) are often speciﬁed using recurrent neural networks (RNNs), in which the context x1:t−1 at each time t is represented using a hidden state vector ht ∈ Rdh de- ﬁned recursively via where f is a nonlinear map with a trainable parameter θ. The conditional probabilities are then deﬁned using a soft- max function: 3. Main Method We propose a simple algorithm that effectively alleviates overﬁtting in deep neural language models, based on in- jecting adversarial perturbation on the output embedding vectors wi in the softmax function (Eqn. (3)). Our method is embarrassingly simple, adding",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "in deep neural language models, based on in- jecting adversarial perturbation on the output embedding vectors wi in the softmax function (Eqn. (3)). Our method is embarrassingly simple, adding virtually no additional computational overhead over standard maximum likeli- hood training, while achieving substantial improvement on challenging benchmarks (see Section 5). We also draw the- oretical insights on this simple mechanism, showing that it implicitly promotes diversity among the output embedding vectors {wi}, which is widely believed to increase robust- ness of the results (e.g., Cortes & Vapnik, 1995; Liu et al., 2018b; Gao et al., 2019). 3.1. Adversarial MLE where w = {w;} C R@ is the coefficient of softmax; w; can be viewed as an embedding vector for word i € V and h;, the embedding vector of context 21.41. The in- ner product w,, ae measures the similarity between word ax, and context - 2 :4—1, which is converted into a probabil- ity using the softmax function. Our idea is to introduce an adversarial noise on the out- put embedding vectors w = {wi} in maximum likelihood training (4): In practice, the nonlinear map f is specified by typical RNN units, such as LSTM (Hochreiter & Schmidhuber, 1997) or GRU (Chung et al., 2014), applied on another set of embedding vectors wi € R® of the words, that is, where 6;.;,¢ is an adversarial perturbation applied on the embedding vector w; of word j € Y, in the ¢-th sentence at the t-th location. We use || - || to denote the L2 norm throughout this paper; € controls the magnitude of the ad- versarial perturbation. where @’ is the weight of the RNN unit frnn, and 0 = [w’, 6’] is trained jointly with w. Here, w/ is the embed- ding vector of word , fed into the model from the input side (and hence called the input embedding), while w; is the embedding vector from the output side (called the output A key property of this formulation is that, with fixed model parameters [0, w], the adversarial perturbation 6 = {6;.1,0} has an",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "w; is the embedding vector from the output side (called the output A key property of this formulation is that, with fixed model parameters [0, w], the adversarial perturbation 6 = {6;.1,0} has an elementary closed form solution, which allows us to derive a simple and efficient algorithm (Algorithm 1) by optimizing [8, w] and 6 alternately.",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3603
+    }
+  },
+  {
+    "content": "Theorem 3.1. For each conditional probability term p(xt = i | x1:t−1; θ, w) = Softmax(i, w, ht) in (3), the optimization of the adversarial perturbation in (5) is for- mulated as Algorithm 1 Adversarial MLE Training Input Training data D = {z‘.-}, 0,w while not converge do 1:T }, model parameters Sample a mini-batch M from the data D. For each sentence vp in the minibatch set the adversarial noise on p(af|2{.,_1) and t < T, to be This is equivalent to just adding adversarial perturbation on w; with magnitude e: where h! is the RNN hidden state related to define in (2). Update {6,w} using gradient ascent of likelihood (4) on minibatch M, log- which is further equivalent to end while Remark. We find it is practically useful to choose a to adapt with the norm of w;, that is, € = a||w;|| for each word, and a is a hyperparameter. As a result, we have AdvSoft, (i, w, h) := min where w;, = {w;: j # i}. In practice, we propose to optimize [9, w] and 6 = {6;.4,0} alternatively. Fixing 6, the models parameters [6, w] are updated using gradient descent as standard maximum like- lihood training. Fixing [0, w], the adversarial noise 6 is updated using the elementary solution in (6), which intro- duces almost no additional computational cost. See Al- gorithm 1. Our algorithm can be viewed as an approxi- mate gradient descent optimization of AdvSoft.(i, w,h), but without back-propagating through the norm term e||/|. Empirically, we note that back-propagating through e||h|| seems to make the performance worse, as the training error would diverge within a few epochs. This is maybe because the gradient of e||h|| forces ||h|| to be large in order to in- crease AdvSoft,(i, w, h), which is not encouraged in our setting. €, once there exists a context vector h with which w; domi- nates the other words according to AdvSoft. This is a sim- ple property implied by the definition of the adversarial set- ting: if there exists an w; within the ¢-ball of w;, then w; (and w;) can never dominate",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "words according to AdvSoft. This is a sim- ple property implied by the definition of the adversarial set- ting: if there exists an w; within the ¢-ball of w;, then w; (and w;) can never dominate the other, because the winner is always penalized by the adversarial perturbation. Definition 3.2. Given a set of embedding vectors w = {wi}iev, a word i € V is said to be €-recognizable if there exists a vector h € R* on which w; dominates all the other words under €-adversarial perturbation, in that In this case, we have AdvSoft.(i,w,h) > 1/|V|, and w; would be classified to be the target word of context h, de- spite the adversarial perturbation. Theorem 3.3. Given a set of embedding vectors w = {wi}iev, ifa word w; is €-recognizable, then we must have that is, w; is separated from the embedding vectors of all other words by at least € distance. 3.2. Diversity of Embedding Vectors An interesting property of our adversarial strategy is that it can be viewed as a mechanism to encourage diversity among word embedding vectors: we show that an embed- ding vector wi is guaranteed to be separated from the em- bedding vectors of all the other words by at least distance Proof. If there exists 7 # i such that ||w; — w;|| < 6 following the adversarial optimization, we must have which forms a contradiction.",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "Note that maximizing the adversarial training objective function can be viewed as enforcing each w; to be e- recognized by its corresponding context vector h, and hence implicitly enforces diversity between the recognized words and the other words. We should remark that the con- text vector h in Definition 3.2 does not have to exist in the training set, although it will more likely happen in the train- ing set due to the training. In fact, we can draw a more explicit connection between pairwise distance and adversarial softmax function. Theorem 3.4. Following the deﬁnition in (7), we have where o(t) = 1/(1 + exp(—t)) is the sigmoid function and ®(i, w,a) is an “energy function” that measures the distance from w; to the other words w;, Vj # i: 4. Related Works and Discussions Adversarial training Adversarial machine learning has been an active research area recently (Szegedy et al., 2013; Goodfellow et al., 2015; Athalye et al., 2018), in which al- gorithms are developed to either attack existing models by constructing adversarial examples, or train robust models to defend adversarial attacks. More related to our work, (Sankaranarayanan et al., 2018) proposes a layer-wise ad- versarial training method to regularize deep neural net- works. In statistics learning and robust statistics, various adversarial-like ideas are also leveraged to construct efﬁ- cient and robust estimators, mostly for preventing model speciﬁcation or data corruption (e.g., Maronna et al., 2018; Duchi et al., 2016). Compared to these works, our work leverages the adversarial idea as a regularization technique speciﬁcally for neural language models and focuses on in- troducing adversarial noise only on the softmax layers, so that a simple closed form solution can be obtained. Proof. We have AdvSoft, (i, w, h) where Direct Diversity Regularization There has been a body of literature on increasing the robustness by directly adding various forms of diversity-enforcing penalty functions (e.g., Elsayed",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "w, h) where Direct Diversity Regularization There has been a body of literature on increasing the robustness by directly adding various forms of diversity-enforcing penalty functions (e.g., Elsayed et al., 2018; Xie et al., 2017; Liu et al., 2016; 2017; Chen et al., 2017; Wang et al., 2018). In the par- ticular setting of enforcing diversity of word embeddings, Gao et al. (2019) show that adding a cosine similarity reg- ularizer improves language modeling performance, which has the form iat er tn: However, in language modeling, one disadvantage of the direct diversity regular- ization approach is that the vocabulary size |V| can be huge, and calculating the summation term exactly at each step is not feasible, while approximation with mini-batch samples may make it ineffective. Our method promotes diversity implicitly with theoretical guarantees and does not intro- duce computational overhead. Note that (w; — w;)\"h > —||w; — wil| - ||h||, we have Large-margin classiﬁcation In a general sense, our method can be seen as an instance of constructing large- margin classiﬁers by enforcing the distance of a word to its neighbors larger than a margin if it’s recognized by any context. Learning large-margin classiﬁers has been ex- tensively studied in the literature; see e.g., Weston et al. (1999); Tsochantaridis et al. (2005); Jiang et al. (2018); El- sayed et al. (2018); Liu et al. (2016; 2017). Therefore, maximizing AdvSoft,.(i,w,h), as our algo- rithm advocates, also maximizes the energy function (i, w, ||h||) to enforce min; z;(\\|w; — w,||) larger than € by placing a higher penalty on cases in which this is vio- lated. Other Regularization Techniques for Language Mod- els Various other techniques have been also developed to address overﬁtting in RNN language models. For exam- ple, Gal & Ghahramani (2016) propose to use variational inference-based dropout (Srivastava et al., 2014) on recur- rent neural networks, in which the same dropout mask is repeated at each time",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1803
+    }
+  },
+  {
+    "content": "exam- ple, Gal & Ghahramani (2016) propose to use variational inference-based dropout (Srivastava et al., 2014) on recur- rent neural networks, in which the same dropout mask is repeated at each time step for inputs, outputs, and recurrent layers for regularizing RNN models. Merity et al. (2018a)",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 3599
+    }
+  },
+  {
+    "content": "suggest to use DropConnect (Wan et al., 2013) on the re- current weight matrices and report a series of encouraging benchmark results. Other types of regularization include activation regularization (Merity et al., 2017a), layer nor- malization (Ba et al., 2016), and frequency agnostic train- ing (Gong et al., 2018), etc. Our work is orthogonal to these regularization and optimization techniques and can be eas- ily combined with them to achieve further improvements, as we demonstrate in our experiments. 5. Empirical Results We demonstrate the effectiveness of our method in two ap- plications: neural language modeling and neural machine translation, and compare them with state-of-the-art archi- tectures and learning methods. All models are trained with the weight-tying trick (Press & Wolf, 2016; Inan et al., 2017). Our code is available at: https://github. com/ChengyueGongR/advsoft. 5.1. Experiments on Language Modeling We test our method on three benchmark datasets: Penn Treebank (PTB), Wikitext-2 (WT2) and Wikitext-103 (WT103). Experimental settings For the PTB and WT2 datasets, we closely follow the regularization and optimization tech- niques introduced in AWD-LSTM (Merity et al., 2018a), which stacks a three-layer LSTM and performs optimiza- tion with a bag of tricks. The WT103 corpus contains around 103 million tokens, which is signiﬁcantly larger than the PTB and WT2 datasets. In this case, we use Quasi-Recurrent neural networks (QRNN)-based language models (Merity et al., 2018b; Bradbury et al., 2017) as our base model for ef- ﬁciency. QRNN allows for parallel computation across both time-step and minibatch dimensions, enabling high throughput and good scaling for long sequences and large datasets. Yang et al. (2018) show that softmax-based language mod- els yield low-rank approximations and do not have enough capacity to model complex natural language. They propose a mixture of softmax (MoS) to break the softmax bottle- neck and achieve signiﬁcant",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "els yield low-rank approximations and do not have enough capacity to model complex natural language. They propose a mixture of softmax (MoS) to break the softmax bottle- neck and achieve signiﬁcant improvements. We also eval- uated our method within the MoS framework by directly following the experimental settings in Yang et al. (2018), except we replace the original softmax function with our adversarial softmax function. PTB The PTB corpus (Marcus et al., 1993) has been a standard dataset used for benchmarking language models. It consists of 923k training, 73k validation and 82k test words. We use the processed version provided by Mikolov et al. (2010) that is widely used for this dataset (e.g., Mer- ity et al., 2018a; Yang et al., 2018; Kanai et al., 2018; Gong et al., 2019). The training procedure of AWD-LSTM-based language models can be decoupled into two stages: 1) optimizing the model with SGD and averaged SGD (ASGD); 2) restart- ing ASGD for ﬁne-tuning. We report the perplexity scores at the end of both stages. We also report the perplexity scores with a recent proposed post-process method, dynam- ical evaluation (Krause et al., 2018) after ﬁne-tuning. WT2 and WT103 The WT2 and WT103 datasets are introduced in Merity et al. (2017b) as an alternative to the PTB dataset, and which contain lightly pre-possessed Wikipedia articles. The WT2 and WT103 contain approxi- mately 2 million and 103 million words, respectively. Applying Adversarial MLE training To investigate the effectiveness of our approach, we simply replace the soft- max layer of baseline methods with our adversarial softmax function, with all other the parameters and architectures untouched. We empirically found that adding small an- nealed Gaussian noise in the input embedding layer makes",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 1792
+    }
+  },
+  {
+    "content": "our noisy model converge more quickly. We experimented with different ways of scaling the Gaussian dropout level and found that a small Gaussian noise with zero mean and a small variance, such that it decreases from 0.2 to 0.0 over the duration of the run, works well for all the tasks. Note the optimal adversarial noise 6; = —eh/||h|| (see Al- gorithm 1) given RNN prediction h associated with a target word w;. Here, € controls the magnitude of of the noise level. When € = 0, our approach reduces to the original MLE training. We propose setting the noise level adaptive that proportional to the L2 norm of the target word embed- dings, namely, by setting « = aJ|w;|| with a as a hyperpa- rameter. Figure 2 shows the training and validation perplexities on the PTB dataset with different choices of α. We ﬁnd that α in the range of [0.001, 0.01] perform similarly well. Larger values (e.g., α = 0.05) causes more difﬁcult optimization and hence underﬁtting, while smaller values (e.g., α = 0 (the baseline approach)) tends to overﬁt as we observe from standard MLE training. We set α = 0.005 for the rest of experiments unless otherwise speciﬁed. a margin of 2.29/2.38 and 3.92/3.59 in validation and test perplexity on the PTB and WT2 dataset. We also improve the AWD-LSTM-MoS baseline by an amount of 1.18/1.17 and 2.14/2.03 in perplexity for both datasets. On PTB, we improve the AWD-LSTM-MoS with partial shufﬂed (Press, 2019) baseline by an amount of 1.3/1.48 in perplexity. Results on PTB and WT2 The results on the PTB and WT2 corpus are illustrated in Tables 1 and 2, respectively. Methods with our adversarial softmax outperform the base- lines in all settings. Our results establish a new single model state-of-the-art on PTB and WT2, achieving per- plexity scores of 46.01 and 38.65, respectively. Speciﬁ- cally, our approach signiﬁcantly improves AWD-LSTM by Results on WT103 Table 3 shows that on the large- scale WT103 dataset, we improve the QRNN baseline with 1.4/1.4 points in",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "respectively. Speciﬁ- cally, our approach signiﬁcantly improves AWD-LSTM by Results on WT103 Table 3 shows that on the large- scale WT103 dataset, we improve the QRNN baseline with 1.4/1.4 points in perplexity on validation and test sets, respectively. With dynamic evaluation, our method can achieve a test perplexity of 28.0, which is, to the authors’ knowledge, better than all existing CNN- or RNN-based models with similar numbers of model parameters.",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1799
+    }
+  },
+  {
+    "content": "Table 2. Perplexities on validation and test sets on the Wikitext-2 dataset. Analysis We further analyze the properties of the learned word embeddings on the WT2 dataset. Figure 1 (a) shows the distribution (via kernel density estimation) of the L2 distance between each word and its nearest neigh- bor learned by our method and the baseline, which veriﬁes the diversity promoting property of our method. Figure 1 (b) shows the singular values of word embedding matrix learned by our model and that by the baseline model. We can see that, when trained with our method, the singular values distribute more uniformly, an indication that our em- bedding vectors ﬁlls a higher dimensional subspace. Figure 1 (c) shows the training and validation perplexi- ties of our method and baseline on AWD-LSTM. We can see that our method is less prone to overﬁtting. While the baseline model reaches a smaller training error quickly, our method has a larger training error at the same stage because it optimizes a more difﬁcult adversarial objective, yet yields a signiﬁcantly lower validation error. 5.2. Experiments on Machine Translation We apply our method on machine translation tasks. Neu- ral machine translation aims at building a single neural network that maximize translation performance. Given a source sentence s, translation is equivalent to ﬁnding a tar- get sentence t by maximizing the conditional probability p(t|s). Here, we ﬁt a parametrized model to maximize the conditional probability using a parallel training corpus. Speciﬁcally, we use an RNN encoder-decoder framework (Cho et al., 2014; Gehring et al., 2017b; Vaswani et al., 2017), upon which we apply our adversarial MLE training that learns to translate. Datasets We evaluate the proposed method on two trans- lation tasks: WMT2014 English → German (En→De) and IWSLT2014 German → English (De→En) translation. We use the parallel corpora publicly available at WMT 2014 and IWSLT 2014, which have been widely used for bench- mark neural",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "→ German (En→De) and IWSLT2014 German → English (De→En) translation. We use the parallel corpora publicly available at WMT 2014 and IWSLT 2014, which have been widely used for bench- mark neural machine translation tasks (Vaswani et al., 2017; Gehring et al., 2017b). For fair comparison, we fol- low the standard data pre-processing procedures described in Ranzato et al. (2016); Bahdanau et al. (2017). WMT2014 En→De We use the original training set for model training, which consists of 4.5 million sentence pairs. Source and target sentences are encoded by 37K shared sub-word tokens based on byte-pair encoding (BPE) (Sennrich et al., 2016b). We use the concatenation of new- stest2012 and newstest2013 as the validation set and test on newstest2014. IWSLT2014 De→En This dataset contains 160K training sequences pairs and 7K validation sentence pairs. Sen- tences are encoded using BPE with a shared vocabulary of about 33K tokens. We use the concatenation of dev2010, tst2010, tst2011 and tst2011 as the test set, which is widely used in prior works (Bahdanau et al., 2017).",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1806
+    }
+  },
+  {
+    "content": "Table 3. Perplexities on validation and test sets on the Wikitext-103 dataset. Experimental settings We choose the Transformer- based translation model (Vaswani et al., 2017) as our base model and use Tensor2Tensor (Vaswani et al., 2018) 1 for implemen- tation. Speciﬁcally, to be consistent with prior works, we closely follow the settings reported in Vaswani et al. (2017). We use the Adam optimizer (Kingma & Ba, 2014) and follow the learning rate warm-up strategy in Vaswani et al. (2017). Sentences are pre-processed using byte-pair encoding (Sennrich et al., 2016a) into subword tokens before training, and we measure the ﬁnal performance with the BLEU score. the WMT2014 De→En task, we evaluate on For the Transformer-Base and Transformer-Big architectures, which consist of a 6-layer encoder and a 6-layer decoder with 512-dimensional and 1024-dimensional hidden units per layer, respectively. For the IWSLT2014 De→En task, we evaluate on two standard conﬁgurations: Transformer- Small and Transformer-Base. For Transformer-Small, we stack a 4-layer encoder and a 4-layer decoder with 256- dimensional hidden units per layer. For Transformer-Base, we set the batch size to 6400 and the dropout rate to 0.4 following Wang et al. (2019). For both tasks, we share the BPE subword vocabulary for decoder and encoder. Table 4. BLEU scores on the WMT2014 Ee→De machine trans- lation task. Table 5. BLEU scores on the IWSLT2014 De→En machine translation task. Results From Table 4 and Table 5, we can see that our method improves over the baseline algorithms for all settings. On the WMT2014 De→En translation task, our method reaches 28.43 and 29.52 in BLEU score with the Transformer Base and Transformer Big archi- tectures, respectively; this yields an 1.13/1.12 improve- ment over their corresponding baseline models. On the IWSLT2014 De→En dataset, our method improves the BLEU score from 32.47 to 33.61 and 34.43 to 35.18 for the Transformer-Small and Transformer-Base conﬁgurations,",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "corresponding baseline models. On the IWSLT2014 De→En dataset, our method improves the BLEU score from 32.47 to 33.61 and 34.43 to 35.18 for the Transformer-Small and Transformer-Base conﬁgurations, respectively. 6. Conclusion In this work, we present an adversarial MLE training strat- egy for neural language modeling, which promotes diver- sity in the embedding space and improves the generaliza- tion performance. Our approach can be easily used as a drop-in replacement for standard MLE-based model with no additional training parameters and computational over- head. Applying this approach to a variety of language modeling and machine translation tasks, we achieve im- provements over state-of-the-art baseline models on stan- dard benchmarks. 1https://github.com/tensorﬂow/tensor2tensor",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1793
+    }
+  },
+  {
+    "content": "Acknowledgement This work is supported in part by NSF CRII 1830161 and NSF CAREER 1846421. We would like to acknowledge Google Cloud for their support. References",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

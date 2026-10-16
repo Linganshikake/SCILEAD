@@ -1,0 +1,58 @@
+[
+  {
+    "content": "Table 1: Comparison of summarization datasets: size of training, validation, and test sets and average document and summary length (in terms of words and sentences). The proportion of novel bi-grams that do not appear in source documents but do appear in the gold summaries quantiﬁes corpus bias towards extractive methods.\nDatasets CNN DailyMail NYT XSum # docs (train/val/test) 90,266/1,220/1,093 196,961/12,148/10,397 96,834/4,000/3,452 204,045/11,332/11,334 avg. doc length avg. summary length % novel bi-grams in gold summary 52.90 52.16 54.70 83.31 words 760.50 653.33 800.04 431.07 sentences words 45.70 54.65 45.54 23.26 sentences 3.59 3.86 2.44 1.00 33.98 29.33 35.55 19.77",
+    "metadata": {
+      "filename": "1908.08345.pdf",
+      "page_number": 5,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: ROUGE F1 results on CNN/DailyMail test set (R1 and R2 are shorthands for unigram and bigram overlap; RL is the longest common subsequence). Re- sults for comparison systems are taken from the au- thors’ respective papers or obtained on our data by run- ning publicly released software.\nModel ORACLE LEAD-3 R1 RL R2 52.59 31.24 48.87 40.42 17.62 36.67 Extractive SUMMARUNNER (Nallapati et al., 2017) 39.60 16.20 35.30 40.00 18.20 36.60 REFRESH (Narayan et al., 2018b) 41.05 18.77 37.54 LATENT (Zhang et al., 2018) 41.59 19.01 37.98 NEUSUM (Zhou et al., 2018) 41.00 18.40 37.20 SUMO (Liu et al., 2019) 40.90 18.02 37.17 TransformerEXT Abstractive PTGEN (See et al., 2017) PTGEN+COV (See et al., 2017) DRM (Paulus et al., 2018) BOTTOMUP (Gehrmann et al., 2018) DCA (Celikyilmaz et al., 2018) TransformerABS 36.44 15.66 33.42 39.53 17.28 36.38 39.87 15.82 36.90 41.22 18.68 38.34 41.69 19.47 37.92 40.21 17.76 37.09 BERT-based BERTSUMEXT 43.25 20.24 39.63 BERTSUMEXT w/o interval embeddings 43.20 20.22 39.59 43.85 20.34 39.90 BERTSUMEXT (large) 41.72 19.39 38.76 BERTSUMABS 42.13 19.60 39.18 BERTSUMEXTABS",
+    "metadata": {
+      "filename": "1908.08345.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: ROUGE Recall results on NYT test set. Re- sults for comparison systems are taken from the au- thors’ respective papers or obtained on our data by run- ning publicly released software. Table cells are ﬁlled with — whenever results are not available.\nModel ORACLE LEAD-3 R1 49.18 39.58 R2 33.24 20.11 RL 46.02 35.78 Extractive COMPRESS (Durrett et al., 2016) SUMO (Liu et al., 2019) TransformerEXT 42.20 42.30 41.95 24.90 — 22.70 22.68 38.60 38.51 Abstractive PTGEN (See et al., 2017) PTGEN + COV (See et al., 2017) DRM (Paulus et al., 2018) TransformerABS 42.47 43.71 42.94 35.75 25.61 — 26.40 — 26.02 — 17.23 31.41 BERT-based BERTSUMEXT BERTSUMABS BERTSUMEXTABS 46.66 48.92 49.02 26.35 30.84 31.02 42.62 45.41 45.55",
+    "metadata": {
+      "filename": "1908.08345.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: ROUGE F1 results on the XSum test set. Results for comparison systems are taken from the au- thors’ respective papers or obtained on our data by run- ning publicly released software.\nModel ORACLE LEAD R1 29.79 16.30 R2 RL 8.81 22.66 1.60 11.95 Abstractive PTGEN (See et al., 2017) PTGEN+COV (See et al., 2017) TCONVS2S (Narayan et al., 2018a) TransformerABS 9.21 23.24 29.70 28.10 8.02 21.72 31.89 11.54 25.75 9.77 23.01 29.41 BERT-based BERTSUMABS BERTSUMEXTABS 38.76 16.33 31.15 38.81 16.50 31.27",
+    "metadata": {
+      "filename": "1908.08345.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4 summarizes our results on the XSum dataset. Recall that summaries in this dataset are highly abstractive (see Table 1) consisting of a sin- gle sentence conveying the gist of the document. Extractive models here perform poorly as corrob- orated by the low performance of the LEAD base- line (which simply selects the leading sentence from the document), and the ORACLE (which se- lects a single-best sentence in each document) in Table 4. As a result, we do not report results for extractive models on this dataset. The second\n˜lrE 2e-2 2e-3 ˜lrD 1 50.69 37.21 0.1 9.33 8.73 0.01 10.13 9.52 0.001 19.26 16.88",
+    "metadata": {
+      "filename": "1908.08345.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Figure 3: Proportion of novel n-grams in model gener- ated summaries.\nExtractive LEAD NEUSUM SUMO Transformer BERTSUM CNN/DM NYT 36.2† — 38.1† 32.5† 41.9 42.5† 42.2† 41.7† 37.8† 58.9",
+    "metadata": {
+      "filename": "1908.08345.pdf",
+      "page_number": 9,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 7: QA-based and ranking-based evaluation. Models with † are signiﬁcantly different from BERT- SUM (using a paired student t-test; p < 0.05). Table cells are ﬁlled with — whenever system output is not available. GOLD is not used in QA setting, and LEAD is not used in Rank evaluation.\nAbstractive LEAD PTGEN BOTTOMUP TCONVS2S GOLD BERTSUM CNN/DM QA Rank 42.5† — 33.3† -0.24† 40.6† -0.16† — — — 0.22† 0.17 56.1 NYT QA Rank 36.2† — 30.5† -0.27† — — — — — 0.33† 41.8 -0.07 XSum QA Rank 9.20† — 23.7† -0.36† — — -0.20† 52.1 — 0.38† 0.19 57.5",
+    "metadata": {
+      "filename": "1908.08345.pdf",
+      "page_number": 9,
+      "type": "Table"
+    }
+  }
+]

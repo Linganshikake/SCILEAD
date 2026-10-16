@@ -1,0 +1,32 @@
+{
+  "time": "2026-10-13T17:39:58.457816+08:00",
+  "ready_for_authorized_single_request": true,
+  "checks": {
+    "paper_id_exact": true,
+    "paper_count": 1,
+    "evidence_count": 16,
+    "evidence_sha256_matches_stage3": true,
+    "table5_all_six_scores_present": true,
+    "official_zero_shot_template": true,
+    "roles": [
+      "system",
+      "user"
+    ],
+    "stuff_context_exact": true,
+    "gold_not_read_or_appended": true,
+    "key_present": true,
+    "windows_output_path_valid": true,
+    "input_under_30000": true,
+    "within_official_model_context": true
+  },
+  "content_tokens": 4205,
+  "estimated_prompt_tokens": 4216,
+  "tokenizer": "o200k_base",
+  "estimation_method": "Chat message content/role tokens + 3 tokens per message + 3 reply primer; actual server usage may differ.",
+  "max_output_tokens": 1024,
+  "provider_context_limit": "UNVERIFIED",
+  "provider_limit_exception_authorized_by_user": true,
+  "actual_model_calls": 0,
+  "offline_chain_test": "PASS using FakeListChatModel; no API request",
+  "gold_separation": "Messages assembled exclusively from official zero-shot prompt/query and immutable pickle; audit guard rejects Gold access before response."
+}

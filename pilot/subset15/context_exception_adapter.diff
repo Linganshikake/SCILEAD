@@ -1,0 +1,38 @@
+--- validated_subset5_api.py
++++ subset15_large_input_api.py
+@@ -18,7 +18,7 @@
+ import time
+ 
+ sys.dont_write_bytecode=True
+-ROOT=Path(__file__).resolve().parents[2]; REPO=ROOT/'emnlp2024-leaderboard-generation'; SUB=Path(os.environ.get('SCILEAD_RUN_ROOT',str(ROOT/'pilot/subset5'))).resolve()
++ROOT=Path(__file__).resolve().parents[2]; REPO=ROOT/'emnlp2024-leaderboard-generation'; SUB=Path(os.environ.get('SCILEAD_RUN_ROOT',str(ROOT/'pilot/subset15'))).resolve()
+ assert SUB.is_relative_to((ROOT/'pilot').resolve()),'Run root must remain inside SCILEAD/pilot'
+ MODEL='gpt-4.1-2025-04-14';BASE='https://9527.codes/v1';ENV_FILE=ROOT/'SCILEAD_small_test/.env'
+ KEY='';NETWORK=False;STAGE=''
+@@ -127,6 +127,10 @@
+     info['duplicates']=len(rows)-len({json.dumps(r,sort_keys=True) for r in rows});return info
+ 
+ def extraction(row):
++    approval=read(SUB/'context_limit_exception.json')
++    assert approval['approved'] is True and row['id']==approval['paper']=='1912.08777.pdf'
++    input_limit=approval['input_limit']
++    assert input_limit==60000 and approval['authorized_input_tokens']==54504
+     out=Path(row['extraction_dir']);out.mkdir(parents=True,exist_ok=True)
+     if (out/'summary.json').exists():
+         s=read(out/'summary.json')
+@@ -141,10 +145,12 @@
+     prompts=read(REPO/'prompts.json');template=TDMPrompt(prompts['tdm-extraction-system-prompt'],'gpt4-turbo-128k').prompt_template
+     messages=wire(template.format_messages(question=prompts['query'],context='\n\n'.join(d.page_content for d in docs)))
+     tokens=estimate(messages);plan=[{'call':1,'messages':messages,'estimated_prompt_tokens':tokens}]
++    assert plan==read(Path(approval['blocked_extraction_dir'])/'request_plan.json'),'Approved input changed'
++    assert sha(pre/'processed_docs.pkl')==approval['processed_docs_sha256']
+     save(out/'request_plan.json',plan)
+-    config={'paper':row['id'],'model':MODEL,'model_type':'gpt4-turbo-128k','is_few_shot':False,'zero_shot':True,'base_url':BASE,'temperature':0,'seed':0,'max_tokens':1024,'max_retries':0,'chain_type':'stuff','query':prompts['query'],'processed_docs_path':str(pre/'processed_docs.pkl'),'processed_docs_sha256':sha(pre/'processed_docs.pkl'),'evidence_count':len(docs),'prompt_sha256':sha(REPO/'prompts.json'),'estimated_prompt_tokens':tokens,'provider_context_limit':'UNVERIFIED','user_input_limit':30000}
+-    save(out/'config.json',config);save(out/'dry_run.json',{'tokens':tokens,'under_30000':tokens<=30000,'paper_count':1,'evidence_count':len(docs),'gold_read':False})
+-    if tokens>30000:save(out/'summary.json',{'status':'TOKEN_LIMIT','tokens':tokens});return
++    config={'paper':row['id'],'model':MODEL,'model_type':'gpt4-turbo-128k','is_few_shot':False,'zero_shot':True,'base_url':BASE,'temperature':0,'seed':0,'max_tokens':1024,'max_retries':0,'chain_type':'stuff','query':prompts['query'],'processed_docs_path':str(pre/'processed_docs.pkl'),'processed_docs_sha256':sha(pre/'processed_docs.pkl'),'evidence_count':len(docs),'prompt_sha256':sha(REPO/'prompts.json'),'estimated_prompt_tokens':tokens,'provider_context_limit':'UNVERIFIED','user_input_limit':input_limit,'input_limit_exception':str(SUB/'context_limit_exception.json')}
++    save(out/'config.json',config);save(out/'dry_run.json',{'tokens':tokens,'under_30000':tokens<=30000,'within_authorized_exception':tokens<=input_limit,'paper_count':1,'evidence_count':len(docs),'gold_read':False})
++    if tokens>input_limit:save(out/'summary.json',{'status':'TOKEN_LIMIT','tokens':tokens});return
+     llm,ledger,client=model_with_ledger(out,plan,1024);start=time.monotonic()
+     try:
+         chain=RetrievalQA.from_chain_type(llm=llm,chain_type='stuff',retriever=PreProcessedDocuments(docs=docs).init_retriever(),return_source_documents=True,chain_type_kwargs={'prompt':template})

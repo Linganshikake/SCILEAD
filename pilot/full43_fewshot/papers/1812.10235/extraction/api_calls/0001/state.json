@@ -1,0 +1,47 @@
+{
+  "run_id": "fewshot",
+  "call": 1,
+  "status": "COMPLETE",
+  "position": {
+    "paper": "1812.10235.pdf",
+    "record": 0,
+    "field": "Extraction"
+  },
+  "prompt_sha256": "60239144b6d2ff07d5507a75e6f2a8d219bb1e417e1707dfaca412dbeff87986",
+  "candidate_sha256": null,
+  "requested_model": "gpt-4.1-2025-04-14",
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYxLy5JU3qCo4aV1CwJ7zQzeMyiZB",
+  "usage": {
+    "completion_tokens": 260,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 74,
+      "engine_ttlt_ms": 1240,
+      "pre_inference_ms": 211,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 588,
+      "service_ttlt_ms": 1696,
+      "user_visible_ttft_ms": 377
+    },
+    "prompt_tokens": 4266,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 4526
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "[{\"Task\": \"Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"98.99%\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"ATIS\", \"Metric\": \"F1 Score\", \"Result\": \"96.89%\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"Movie (internal multi-domain)\", \"Metric\": \"Accuracy\", \"Result\": \"95.91%\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"Movie (internal multi-domain)\", \"Metric\": \"F1 Score\", \"Result\": \"93.8%\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"Food (internal multi-domain)\", \"Metric\": \"Accuracy\", \"Result\": \"99.49%\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"Food (internal multi-domain)\", \"Metric\": \"F1 Score\", \"Result\": \"95.8%\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"Home (internal multi-domain)\", \"Metric\": \"Accuracy\", \"Result\": \"99.27%\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"Home (internal multi-domain)\", \"Metric\": \"F1 Score\", \"Result\": \"98.2%\"}]",
+  "response_sha256": "e24ec08a6347218f6b4f3d7d545d39b439b24e6b7564a71a58ef210528d0fab2",
+  "seconds": 4.703999999910593
+}

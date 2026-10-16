@@ -1,0 +1,3233 @@
+[
+  {
+    "type": "Title",
+    "element_id": "7309fc2cd0e7c10a269abd768e2ccbb8",
+    "text": "InferNER: an attentive model leveraging the sentence-level information for Named Entity Recognition in Microblogs",
+    "metadata": {
+      "detection_class_prob": 0.9662570357322693,
+      "coordinates": {
+        "points": [
+          [
+            213.79166666666666,
+            270.93376611111097
+          ],
+          [
+            213.79166666666666,
+            355.0648772222224
+          ],
+          [
+            1486.2199055555545,
+            355.0648772222224
+          ],
+          [
+            1486.2199055555545,
+            270.93376611111097
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "ed50a8d4743650db11180046d6e9f901",
+    "text": "Moemmur Shahzad,1 Ayesha Amin,2 Diego Esteves,3 Axel-Cyrille Ngonga Ngomo,1 1Universit¨at Paderborn 2Universit¨at des Saarlandes 3Farfetch moemmur@mail.uni-paderborn.de, ayam00001@stud.uni-saarland.de, diegoesteves@gmail.com, axel.ngonga@upb.de",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            264.25,
+            399.57958583333345
+          ],
+          [
+            264.25,
+            528.3914488888886
+          ],
+          [
+            1434.3640277777777,
+            528.3914488888886
+          ],
+          [
+            1434.3640277777777,
+            399.57958583333345
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "7309fc2cd0e7c10a269abd768e2ccbb8",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "ebf237f98f05c4390df1cde93629de8d",
+    "text": "Abstract",
+    "metadata": {
+      "detection_class_prob": 0.8619850277900696,
+      "coordinates": {
+        "points": [
+          [
+            428.670654296875,
+            605.7849538888885
+          ],
+          [
+            428.670654296875,
+            633.4588427777772
+          ],
+          [
+            534.6820678710938,
+            633.4588427777772
+          ],
+          [
+            534.6820678710938,
+            605.7849538888885
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3342bb2f768357b0677a5e8d360534aa",
+    "text": "We investigate the problem of named entity recognition in the user-generated text such as social media posts. This task is rendered particularly difﬁcult by the restricted length and lim- ited grammatical coherence of this data type. Current state-of- the-art approaches rely on external sources such as gazetteers to alleviate some of these restrictions. We present a neural model able to outperform state of the art on this task without recurring to gazetteers or similar external sources of informa- tion. Our approach relies on word-, character-, and sentence- level information for NER in short-text. Social media posts like tweets often have associated images that may provide auxiliary context relevant to understand these texts. Hence, we also incorporate visual information and introduce an at- tention component which computes attention weight prob- abilities over textual and text-relevant visual contexts sepa- rately. Our model outperforms the current state of the art on various NER datasets. On WNUT 2016 and 2017, our model achieved 53.48% and 50.52% F1 score, respectively. With Multimodal model, our system also outperforms the current SOTA with an F1 score of 74% on the multimodal dataset. Our evaluation further suggests that our model also goes be- yond the current state-of-the-art on newswire data, hence cor- roborating its suitability for various NER tasks.",
+    "metadata": {
+      "detection_class_prob": 0.9457241892814636,
+      "coordinates": {
+        "points": [
+          [
+            174.18264770507812,
+            651.4315066666663
+          ],
+          [
+            174.18264770507812,
+            1285.1659511111109
+          ],
+          [
+            792.898193359375,
+            1285.1659511111109
+          ],
+          [
+            792.898193359375,
+            651.4315066666663
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e24b4738777fea2a424979f77ab70144",
+    "text": "Introduction Named Entity Recognition (NER) is a fundamental prepro- cessing step in many natural language processing applica- tions. The subtask of information extraction concerns identi- fying and classiﬁcation named entities mentioned in the nat- ural language text into predeﬁned categories (e.g., Person, Location, product, and others.). Commonly, NER is useful in recommendation and search engines where it helps con- tent classiﬁcation based on the subject and theme of the web documents.",
+    "metadata": {
+      "detection_class_prob": 0.9546341896057129,
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999991,
+            1324.9456577777776
+          ],
+          [
+            149.99999999999991,
+            1637.6858933333333
+          ],
+          [
+            819.099609375,
+            1637.6858933333333
+          ],
+          [
+            819.099609375,
+            1324.9456577777776
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a70b7df3301879d257b811666afbff7d",
+    "text": "incomplete phrases, spelling/grammatical errors, and hash- tags. Ambiguity is another challenge, for example in the mi- croblog, ”manchester nailed it.. #UCL” here word manch- ester is a city as well as a football league team. With con- cise context, it is often challenging to interpret these texts. A direct consequence of aforementioned characteristics of nat- ural language text makes NER on microblogs a non-trivial task (Limsopatham and Collier 2016; Partalas et al. 2016; Aguilar et al. 2017). However, NER on user-generated con- tent is crucial for other information extraction tasks such as relation extraction and applications such as question answer- ing.",
+    "metadata": {
+      "detection_class_prob": 0.9531432390213013,
+      "coordinates": {
+        "points": [
+          [
+            885.6898803710938,
+            605.9786711111109
+          ],
+          [
+            885.6898803710938,
+            968.5081155555553
+          ],
+          [
+            1555.908447265625,
+            968.5081155555553
+          ],
+          [
+            1555.908447265625,
+            605.9786711111109
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d6868424366fb773e74ade8b58645dfc",
+    "text": "Many previous approaches to NER in user-generated text either rely on external resources or text normalization (see, e.g., (Aguilar et al. 2017; Partalas et al. 2016) ). In contrast to the previous systems, InferNER does not rely on exter- nal sources or any prepossessing techniques. Hence, it can be easily trained and ported to datasets and domains other than the ones it was tested on. Most of the previous neu- ral approaches employ conditional random ﬁeld (CRF) for NER on Microblogs. Previous works claimed that transfer learning from network to CRF boosts the NER performance (See, e.g., (Aguilar et al. 2019)). However, we achieve sim- ilar or better results without the CRF classiﬁer in most cases. The addition of CRF led to adverse outcomes in our case. Our approach not only considers word and character- level representations but also, sentence-level context. We provide the sentence-level context for each word in the in- put sequence. This approach helps to disambiguate words that might have many different meanings to the best of our knowledge. Furthermore, we also employ auxiliary context from images to better understand these microblog texts. We present an attention module that computes attention over heterogeneous modalities (text and images) in segregation to yield a summed vector to present state-of-the-art results. Our contributions can be summarized as follows:",
+    "metadata": {
+      "detection_class_prob": 0.9438210725784302,
+      "coordinates": {
+        "points": [
+          [
+            887.4999999999998,
+            972.787004444444
+          ],
+          [
+            887.4999999999998,
+            1700.6108933333333
+          ],
+          [
+            1557.783203125,
+            1700.6108933333333
+          ],
+          [
+            1557.783203125,
+            972.787004444444
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "a932492fb522420a81f39153e67a49ad",
+    "text": "Microblogging platforms such as Twitter have gained tremendous attention in recent years due to the high vol- ume of content made available through them (Derczynski et al. 2014). However, microblogs often do not abide by the syntactic and semantic conventions of the language they are written in (Derczynski et al. 2014; Peres, Esteves, and Ma- heshwari 2017; Esteves et al. 2018). Instead, they use di- verse writing styles characterized by unorthodox capitaliza- tion, the frequent use of emotion icons and abbreviations,",
+    "metadata": {
+      "detection_class_prob": 0.9548381567001343,
+      "coordinates": {
+        "points": [
+          [
+            149.29811096191406,
+            1640.4536711111111
+          ],
+          [
+            149.29811096191406,
+            1911.6581155555555
+          ],
+          [
+            821.3628540039062,
+            1911.6581155555555
+          ],
+          [
+            821.3628540039062,
+            1640.4536711111111
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b101b0974356f0a3b47c8b1b236c2670",
+    "text": "• We present a network that leverages the sentence-level context.",
+    "metadata": {
+      "detection_class_prob": 0.9104635715484619,
+      "coordinates": {
+        "points": [
+          [
+            886.5406494140625,
+            1715.8880615234375
+          ],
+          [
+            886.5406494140625,
+            1775.5858933333334
+          ],
+          [
+            1556.846435546875,
+            1775.5858933333334
+          ],
+          [
+            1556.846435546875,
+            1715.8880615234375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "38025cea02ee4f059640a591243ddd3e",
+    "text": "• We combine textual information with visual clues using a neural architecture with segregated attention to outper- form state of the art on current benchmark datasets for NER on short texts.",
+    "metadata": {
+      "detection_class_prob": 0.9253678321838379,
+      "coordinates": {
+        "points": [
+          [
+            885.8984375,
+            1791.1781005859375
+          ],
+          [
+            885.8984375,
+            1911.4442266666665
+          ],
+          [
+            1556.1949462890625,
+            1911.4442266666665
+          ],
+          [
+            1556.1949462890625,
+            1791.1781005859375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e608d9fc24d76ae04183e620b539533d",
+    "text": "Copyright © 2021 by the authors. All rights reserved.",
+    "metadata": {
+      "detection_class_prob": 0.8143300414085388,
+      "coordinates": {
+        "points": [
+          [
+            149.62203979492188,
+            1930.473173333333
+          ],
+          [
+            149.62203979492188,
+            1955.3798399999998
+          ],
+          [
+            683.0026666666668,
+            1955.3798399999998
+          ],
+          [
+            683.0026666666668,
+            1930.473173333333
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "7bd414d8700f26d7c1490b0416181907",
+    "text": "• Our ablation study elucidates the most important features",
+    "metadata": {
+      "detection_class_prob": 0.8379577398300171,
+      "coordinates": {
+        "points": [
+          [
+            891.0810546875,
+            1926.7530517578125
+          ],
+          [
+            891.0810546875,
+            1955.97756
+          ],
+          [
+            1552.137451171875,
+            1955.97756
+          ],
+          [
+            1552.137451171875,
+            1926.7530517578125
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "749185ec727f72c3e81d1a32911518f2",
+    "text": "when extracting entities from short texts and can be used as a foundation for future works on NER for short texts.",
+    "metadata": {
+      "detection_class_prob": 0.9117019176483154,
+      "coordinates": {
+        "points": [
+          [
+            173.97642517089844,
+            155.81582641601562
+          ],
+          [
+            173.97642517089844,
+            214.09422666666651
+          ],
+          [
+            815.1758422851562,
+            214.09422666666651
+          ],
+          [
+            815.1758422851562,
+            155.81582641601562
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8265fc473a4c572f1b7fbcf896e2091a",
+    "text": "Related Work In recent years, many proposed systems employ neural ar- chitectures for NER in microblogs. Most architectures use bidirectional long short term memory (BiLSTM) with a CRF at the end. For instance, the work in (Limsopatham and Collier 2016; Aguilar et al. 2017; von D¨aniken and Cieliebak 2017; Moon, Neves, and Carvalho 2018; Zhang et al. 2018) employ BiLSTM-CRF architecture. Further- more, many WNUT 1 submissions relied on a gazetteer as a supplementary source. Besides, many of the partici- pants to these challenges applied some preprocessing (e.g., Text normalization) to minimize the linguistic complexity of the microblogs they were to process (see, e.g., (Partalas et al. 2016)). von D¨aniken and Cieliebak (2017) was ﬁrst to employ sentence-level information for NER in short-text. They used sent2vec (Pagliardini, Gupta, and Jaggi 2017) to provide supplementary context. However, their reported re- sults were lower than their base system. The reason could be the way these supplementary context has been incorpo- rated. Aguilar et al. (2018; 2019) utilized phonetic or phono- logical representations of informal words to model noise and achieved state-of-the-art results on user-generated text. Other recent works employ pooled contextualized embed- dings (Akbik, Bergmann, and Vollgraf 2019), adversarial discriminative model to address the low-resource NER prob- lem (Zhou et al. 2019), and handling label mistakes with CrossWeigh framework (Wang et al. 2019) to present state- of-the-art results on different NER datasets. These recent ap- proaches still built on traditional BiLSTM-CRF architecture and need additional resources such as data. Our comprehen- sive benchmark with top-performing baselines is presented in Table 1.",
+    "metadata": {
+      "detection_class_prob": 0.9256500601768494,
+      "coordinates": {
+        "points": [
+          [
+            149.6311798095703,
+            249.45121333333304
+          ],
+          [
+            149.6311798095703,
+            1245.266845703125
+          ],
+          [
+            818.3523559570312,
+            1245.266845703125
+          ],
+          [
+            818.3523559570312,
+            249.45121333333304
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "ebf237f98f05c4390df1cde93629de8d",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "4f3086d16e92fd691b05a141eec2cd71",
+    "text": "Methods",
+    "metadata": {
+      "detection_class_prob": 0.8165372610092163,
+      "coordinates": {
+        "points": [
+          [
+            418.52825927734375,
+            1270.2496337890625
+          ],
+          [
+            418.52825927734375,
+            1305.9017688888869
+          ],
+          [
+            544.2731323242188,
+            1305.9017688888869
+          ],
+          [
+            544.2731323242188,
+            1270.2496337890625
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "902a9a8c75d33be1c9e8fdde3e0dcc32",
+    "text": "Feature Extraction We utilize word, character and sentence embeddings for the NER task. Additionally, we consider auxiliary context such as sentence-level information and context from images.",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            150.00000000000003,
+            1320.1525052777756
+          ],
+          [
+            150.00000000000003,
+            1453.377559999998
+          ],
+          [
+            812.5129000000004,
+            1453.377559999998
+          ],
+          [
+            812.5129000000004,
+            1320.1525052777756
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "214e14d0bd85c6fe03c19633af614d90",
+    "text": "2-Stacked BiLSTM Word Encoder. We obtain word rep- resentations from the 2-stacked BiLSTM layers using deep contextualized representations (ELMo) (Peters et al. 2018) set to 1024 dimensions. We obtain the word representations by taking the sum of outputs of two layers stacked together. To the best of our knowledge, such feature extractors better leverage ELMo embeddings.",
+    "metadata": {
+      "detection_class_prob": 0.9528674483299255,
+      "coordinates": {
+        "points": [
+          [
+            150.0,
+            1470.7958984375
+          ],
+          [
+            150.0,
+            1682.7831155555536
+          ],
+          [
+            817.8124389648438,
+            1682.7831155555536
+          ],
+          [
+            817.8124389648438,
+            1470.7958984375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bea76d4f62c98ce79e29c176ea67f9de",
+    "text": "Consider an input sequence x, = [21, 72, ...,%] where n is the sentence maximum length s. We first obtain an em- bedding matrix €(2,) and is then passed to a Bidirectional LSTM as given below:",
+    "metadata": {
+      "detection_class_prob": 0.934357225894928,
+      "coordinates": {
+        "points": [
+          [
+            150.0,
+            1686.1587344444424
+          ],
+          [
+            150.0,
+            1805.766448888887
+          ],
+          [
+            817.5469360351562,
+            1805.766448888887
+          ],
+          [
+            817.5469360351562,
+            1686.1587344444424
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "bce9be69367f2393b526af9243db60fc",
+    "text": "T = BLSTM(€e(ax)) The output r, is then passed to another Bidirectional LSTM layer similar to the one defined before. The output",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            150.0000000000001,
+            1807.9254011111093
+          ],
+          [
+            150.0000000000001,
+            1898.3081155555535
+          ],
+          [
+            812.5129000000003,
+            1898.3081155555535
+          ],
+          [
+            812.5129000000003,
+            1807.9254011111093
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ff963856651d804e987d75c67ae78ccb",
+    "text": "1http://noisy-text.github.io/2020/",
+    "metadata": {
+      "detection_class_prob": 0.770980179309845,
+      "coordinates": {
+        "points": [
+          [
+            182.750732421875,
+            1926.4015599999998
+          ],
+          [
+            182.750732421875,
+            1955.3798399999998
+          ],
+          [
+            515.552734375,
+            1955.3798399999998
+          ],
+          [
+            515.552734375,
+            1926.4015599999998
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "cb19b3fabbed54ff16cc1cc260830683",
+    "text": "of the second layer is given by,",
+    "metadata": {
+      "detection_class_prob": 0.8242717385292053,
+      "coordinates": {
+        "points": [
+          [
+            887.5,
+            154.53907775878906
+          ],
+          [
+            887.5,
+            183.8952178955078
+          ],
+          [
+            1231.9207763671875,
+            183.8952178955078
+          ],
+          [
+            1231.9207763671875,
+            154.53907775878906
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d305d792094dd1d66595a7d505bfedd0",
+    "text": "o = BLST M (ro) r The ﬁnal word representation is the addition of the output from the ﬁrst RNN and the last RNN which is given by: wt = ro ⊕ r (1) Here, ⊕ stands for the addition of tensors. wt is the ﬁnal word representation.",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            887.4999999999997,
+            191.59206777777752
+          ],
+          [
+            887.4999999999997,
+            377.8636711111103
+          ],
+          [
+            1550.0129000000006,
+            377.8636711111103
+          ],
+          [
+            1550.0129000000006,
+            191.59206777777752
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "6eefaf828b931241220f9def8beabcc4",
+    "text": "Character-Level Encoder. We extract character represen- tations using a CNN. Since the data lacks implicit linguis- tic formalism, therefore, we utilize orthographic represen- tations. First, we generate the orthographic sentence using set of rules as in (Limsopatham and Collier 2016; Aguilar et al. 2017). We then initialize the character sequences with 3 3 dim? dim | ta lookup table to output a character embedding of 30 dimen- sions (Aguilar et al. 2017; Ma and Hovy 2016). Not all words have an equal number of characters. Therefore, we computed the maximum character length of the word and applied character padding. Secondly, following Aguilar et al. (2017) we applied 2-stacked convolutions over charac- ter embedding and used global average pooling operation similar to Zhou et al.; Aguilar et al. (2015; 2017) to capture information from the feature map. Lastly, for a given input, we first obtain the embedding embedding matrix e€, and fi- nally we obtain the character-level representations from the final fully-connected layer that has a Rectifier Linear Unit (ReLU) as an activation function: a random uniform distribution of [-",
+    "metadata": {
+      "detection_class_prob": 0.9430581331253052,
+      "coordinates": {
+        "points": [
+          [
+            886.3331909179688,
+            408.988525390625
+          ],
+          [
+            886.3331909179688,
+            1037.8497822222214
+          ],
+          [
+            1553.5452880859375,
+            1037.8497822222214
+          ],
+          [
+            1553.5452880859375,
+            408.988525390625
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "9112773e756a19b0241ed7a409a3d882",
+    "text": "cy = ReLU(We,€c + be.) (2) where €, and c; represents the embedding matrix and output of the fully-connected layer, respectively.+",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            887.5000000000006,
+            1040.0087344444437
+          ],
+          [
+            887.5000000000006,
+            1129.1747822222214
+          ],
+          [
+            1550.0113572222233,
+            1129.1747822222214
+          ],
+          [
+            1550.0113572222233,
+            1040.0087344444437
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1788a82a689d469cddfd9f25192d7bca",
+    "text": "Sentence-level Encoder. In order to leverage more con- textual information, we use sentence-level encoder to extract sentence representation. This helps our model to consider sentence-level context while predicting the named entity for the word token. Cer et al. (2018) proposed a new method for computing sentence vectors called Universal Sentence En- coder (USE). Recent evaluations suggest that USE improve the performance of machine learning algorithms on several downstream tasks. We incorporate more semantic features in the form of sentence embeddings. For instance, we use 512- dimensional embedding model trained with a transformer encoder. For a given sentence input x,, we first obtain an embedding matrix €,. We then employ a feed-forward Dense network with ReLU as the activation function to obtain sen- tence representation s, as given as below:",
+    "metadata": {
+      "detection_class_prob": 0.9524137377738953,
+      "coordinates": {
+        "points": [
+          [
+            885.017822265625,
+            1161.2210649999995
+          ],
+          [
+            885.017822265625,
+            1617.1997699999995
+          ],
+          [
+            1555.1513671875,
+            1617.1997699999995
+          ],
+          [
+            1555.1513671875,
+            1161.2210649999995
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "parent_id": "4f3086d16e92fd691b05a141eec2cd71",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "6f7b4dc3484a266e69b016b870d5386d",
+    "text": "8 = ReLU(W.,€s + be,) (3)",
+    "metadata": {
+      "detection_class_prob": 0.6250778436660767,
+      "coordinates": {
+        "points": [
+          [
+            1064.926513671875,
+            1617.4281788888884
+          ],
+          [
+            1064.926513671875,
+            1649.3371449999995
+          ],
+          [
+            1553.538818359375,
+            1649.3371449999995
+          ],
+          [
+            1553.538818359375,
+            1617.4281788888884
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "724499d024a7a2bfefd486e03f49685e",
+    "text": "Image Features Image features carry information about what objects are depicted in the image, providing an ad- ditional context for understanding text. We use the Incep- tionV3 (Szegedy et al. 2015) model trained on the ImageNet dataset. Image features had the dimension of 8 × 8 × 2048, where 2048 is the dimension of a vector at each region N and 8 × 8 are the number of regions in the output image vector. The images were resized to 299 × 299 and extract features from the ﬁnal convolution layer of InceptionV3.",
+    "metadata": {
+      "detection_class_prob": 0.9546260833740234,
+      "coordinates": {
+        "points": [
+          [
+            884.6357421875,
+            1683.4295654296875
+          ],
+          [
+            884.6357421875,
+            1955.9775599999998
+          ],
+          [
+            1550.560546875,
+            1955.9775599999998
+          ],
+          [
+            1550.560546875,
+            1683.4295654296875
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 2,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "245843abef9e72e7efac30138a994bf6",
+    "text": "[",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            238.0,
+            594.0
+          ],
+          [
+            238.0,
+            596.0
+          ],
+          [
+            240.0,
+            596.0
+          ],
+          [
+            240.0,
+            594.0
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Image",
+    "element_id": "f8d4ee214f5e62c47001cb15e5f24145",
+    "text": "==> [Label] “Pe — Vector ~ —uiput) dy 1 a Image vector 2-Stacked { Character) [Sentence Teese Word Encoder} Level Encoder, Level Encoder a Embedding layer ) Text Input J Tmmage Input",
+    "metadata": {
+      "detection_class_prob": 0.8880183696746826,
+      "coordinates": {
+        "points": [
+          [
+            240.13259887695312,
+            128.10838317871094
+          ],
+          [
+            240.13259887695312,
+            756.9140014648438
+          ],
+          [
+            732.9801635742188,
+            756.9140014648438
+          ],
+          [
+            732.9801635742188,
+            128.10838317871094
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "252f10c83610ebca1a059c0bae8255eb",
+    "text": "f",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            237.0,
+            726.0
+          ],
+          [
+            237.0,
+            750.0
+          ],
+          [
+            240.0,
+            750.0
+          ],
+          [
+            240.0,
+            726.0
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "49cfef2df39655e43910911f3c7c0468",
+    "text": "Figure 1: Multimodal Model",
+    "metadata": {
+      "detection_class_prob": 0.7782857418060303,
+      "coordinates": {
+        "points": [
+          [
+            318.73583984375,
+            796.7064488888888
+          ],
+          [
+            318.73583984375,
+            824.3803377777776
+          ],
+          [
+            643.1974487304688,
+            824.3803377777776
+          ],
+          [
+            643.1974487304688,
+            796.7064488888888
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "252f10c83610ebca1a059c0bae8255eb",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "89c1b3e11db638b18c164cedc05dc00c",
+    "text": "Textual Model We deﬁne a BiLSTM-CNN model that takes the words, characters and sentence input into consideration. In order to incorporate the sentence-level representation so obtained in equation 3, we perform a RepeatVector operation to re- peat the sentence vector over the maximum sequence length: st = RepeatV ector(so) (4) In this way, we repeat as a whole the context of the sentence over each word in the sequence. We then concatenate each representations in, 1,2 and 4 as follows: m = [wt; ct; st] and feed this to a bidirectional LSTM layer followed by a softmax layer for the prediction given as followed:",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999983,
+            879.2136163888888
+          ],
+          [
+            149.99999999999983,
+            1251.2608933333333
+          ],
+          [
+            812.5129000000005,
+            1251.2608933333333
+          ],
+          [
+            812.5129000000005,
+            879.2136163888888
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "252f10c83610ebca1a059c0bae8255eb",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "1a3d908d3b1862ed1774f439d996869d",
+    "text": "−→ h t = LST M (mi) ←− h t = LST M (mi) In order to obtain the bidirectional representation of the in- put, we concatenated forward ht and backward states ht,",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999974,
+            1241.88929
+          ],
+          [
+            149.99999999999974,
+            1393.6219922222224
+          ],
+          [
+            812.5129000000001,
+            1393.6219922222224
+          ],
+          [
+            812.5129000000001,
+            1241.88929
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "252f10c83610ebca1a059c0bae8255eb",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "91d77714f1827463cc8888e0932a057e",
+    "text": "−→ ht;",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            478.7139096666664,
+            1382.3198455555557
+          ],
+          [
+            478.7139096666664,
+            1428.9858811111112
+          ],
+          [
+            514.0822507777775,
+            1428.9858811111112
+          ],
+          [
+            514.0822507777775,
+            1382.3198455555557
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "252f10c83610ebca1a059c0bae8255eb",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "UncategorizedText",
+    "element_id": "6cc7e9056d8a80aaac2c35bd34ff958c",
+    "text": "←− ht]",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            518.6916666666664,
+            1382.3198455555557
+          ],
+          [
+            518.6916666666664,
+            1428.9858811111112
+          ],
+          [
+            554.0544729999998,
+            1428.9858811111112
+          ],
+          [
+            554.0544729999998,
+            1382.3198455555557
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "252f10c83610ebca1a059c0bae8255eb",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+    "text": "ht = [",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            408.4444444444441,
+            1398.7698455555558
+          ],
+          [
+            408.4444444444441,
+            1428.9858811111112
+          ],
+          [
+            478.7253426666664,
+            1428.9858811111112
+          ],
+          [
+            478.7253426666664,
+            1398.7698455555558
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3991d6c931b607755d06605c50066056",
+    "text": "(5) Finally, we predict the probabilities over N classes as given below:",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999974,
+            1399.3786711111113
+          ],
+          [
+            149.99999999999974,
+            1487.9358933333333
+          ],
+          [
+            812.5010877777775,
+            1487.9358933333333
+          ],
+          [
+            812.5010877777775,
+            1399.3786711111113
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "b37cc060550fc91465825f4da2006c2a",
+    "text": "sof tmax(Wmht + bm) To this end, we share the methodology between our two ap- proaches. And the multimodal approach is the extension of the textual model we already deﬁned.",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999983,
+            1490.0948455555558
+          ],
+          [
+            149.99999999999983,
+            1617.5970044444448
+          ],
+          [
+            812.5129000000004,
+            1617.5970044444448
+          ],
+          [
+            812.5129000000004,
+            1490.0948455555558
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "4b44870e57a0641b6eff05d32abae6d5",
+    "text": "Multimodal Model From previous works on multimodal named entity recogni- tion, it is consistent that the auxiliary context from images better helps understanding microblogging text. (Esteves et al. 2018; Moon, Neves, and Carvalho 2018; Zhang et al. 2018). Therefore, we also incorporate visual information and propose improvement over existing attention-based ap- proaches.",
+    "metadata": {
+      "detection_class_prob": 0.9531655311584473,
+      "coordinates": {
+        "points": [
+          [
+            147.5694580078125,
+            1644.8136163888892
+          ],
+          [
+            147.5694580078125,
+            1895.094226666667
+          ],
+          [
+            819.6160888671875,
+            1895.094226666667
+          ],
+          [
+            819.6160888671875,
+            1644.8136163888892
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "e2ab27632635709d4782288fe8187694",
+    "text": "Segregated Contextual Attention. We propose a segregated-contextual-attention-module that considers text",
+    "metadata": {
+      "detection_class_prob": 0.9024164080619812,
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999983,
+            1896.8857421875
+          ],
+          [
+            149.99999999999983,
+            1955.9775600000003
+          ],
+          [
+            814.5856323242188,
+            1955.9775600000003
+          ],
+          [
+            814.5856323242188,
+            1896.8857421875
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2a10ebaffd711e7406ad42a4416787ab",
+    "text": "and image as separate modalities. Instead of computing a single context vector over naively merged textual and vi- sual representations (e.g., [ht;vi]), we separately compute the textual and visual attention contexts as both modalities are considered as a whole. Then, we obtain the ﬁnal context vector as a summed vector of both textual and visual atten- tion context.",
+    "metadata": {
+      "detection_class_prob": 0.9487959146499634,
+      "coordinates": {
+        "points": [
+          [
+            887.4999999999998,
+            155.97589333333354
+          ],
+          [
+            887.4999999999998,
+            366.2997822222217
+          ],
+          [
+            1554.3170166015625,
+            366.2997822222217
+          ],
+          [
+            1554.3170166015625,
+            155.97589333333354
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "8b080210e24b872228f56844a80507d1",
+    "text": "We observe that a word is only related to the small part or region of the image and incorporating the whole image with text may lead to suboptimal results consistent with the pre- vious research in Zhang et al. (2018). The reason is more ev- ident that the irrelevant regions would introduce noise, and at some point, the model will start to learn noise resulting in the worst results. To incorporate the visual context, we fol- low Zhang et al. (2018) and attend to those regions of the input image relevant to the text. To formulate visual atten- tion, consider a given text ht and image feature vector vi. We ﬁrst apply a RepeatVector operation over the orig- inal input image vector vi and generate n copies, where n is equal to the maximum sentence length. We then, convert image feature vector vi into an entirely new representation equal in the dimension of the text-vector by using a single layer perceptron as in (Zhang et al. 2018). The new image representation is given by,",
+    "metadata": {
+      "detection_class_prob": 0.9477276802062988,
+      "coordinates": {
+        "points": [
+          [
+            885.291015625,
+            369.8842266666661
+          ],
+          [
+            885.291015625,
+            884.6192266666644
+          ],
+          [
+            1556.7493896484375,
+            884.6192266666644
+          ],
+          [
+            1556.7493896484375,
+            369.8842266666661
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "cd627fe25f25f4842f7a2c72926ddcd5",
+    "text": "i = tanh(Wivi + bi) (6) Similarly, we apply another RepeatVector operation to ht and generate copies equal to the number of regions N in the image as we want to generate the text-relevant attention over the regions of the image. Thus, a new representation of text h",
+    "metadata": {
+      "detection_class_prob": 0.920244038105011,
+      "coordinates": {
+        "points": [
+          [
+            885.0859375,
+            892.56151222222
+          ],
+          [
+            885.0859375,
+            1078.133103333331
+          ],
+          [
+            1558.094970703125,
+            1078.133103333331
+          ],
+          [
+            1558.094970703125,
+            892.56151222222
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "893baf5ebd000562348de3c2c8ae31e2",
+    "text": "h, = tanh(Wa, he + bn.) ©) Then, we concatenate each of the new representations as fol- lowed:",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            887.5,
+            1073.6779783333309
+          ],
+          [
+            887.5,
+            1171.4692266666646
+          ],
+          [
+            1550.0129000000006,
+            1171.4692266666646
+          ],
+          [
+            1550.0129000000006,
+            1073.6779783333309
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "parent_id": "71c6abbb5b8fdaad9ca0fe03548c65da",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "3f7c77d956631d3a2be712414bcfc6dd",
+    "text": ", , aah Ov;",
+    "metadata": {
+      "detection_class_prob": 0.6389092803001404,
+      "coordinates": {
+        "points": [
+          [
+            1147.6,
+            1167.4502005555532
+          ],
+          [
+            1147.6,
+            1208.9803255555535
+          ],
+          [
+            1292.3944091796875,
+            1208.9803255555535
+          ],
+          [
+            1292.3944091796875,
+            1167.4502005555532
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3b45142a0165b31a16176ec8ee048a6f",
+    "text": "Here, ⊕ denotes concatenation and zt is the concatenation of text and image new representations. We then feed zt to a neural network with (tanh) activation function as given be- low:",
+    "metadata": {
+      "detection_class_prob": 0.9363666772842407,
+      "coordinates": {
+        "points": [
+          [
+            885.8513793945312,
+            1220.0365122222202
+          ],
+          [
+            885.8513793945312,
+            1339.6442266666645
+          ],
+          [
+            1555.2154541015625,
+            1339.6442266666645
+          ],
+          [
+            1555.2154541015625,
+            1220.0365122222202
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d8de56371af758d0d81ab31fec065fdd",
+    "text": "zt = tanh(Wztzt + bzt) αt = softmax (Wαtzt + bαt) Then, a visual context vector Cv as a result of a dot product of origin image representation vi and attention weights αt is given below:",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            887.4999999999984,
+            1344.2504011111089
+          ],
+          [
+            887.4999999999984,
+            1523.785893333331
+          ],
+          [
+            1550.0042788888875,
+            1523.785893333331
+          ],
+          [
+            1550.0042788888875,
+            1344.2504011111089
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "c5caf4523f0f9b090285e58f9f4de6db",
+    "text": "Cv = αt,ivi",
+    "metadata": {
+      "detection_class_prob": 0.8257047533988953,
+      "coordinates": {
+        "points": [
+          [
+            1125.8621826171875,
+            1529.0458984375
+          ],
+          [
+            1125.8621826171875,
+            1593.291015625
+          ],
+          [
+            1310.46435546875,
+            1593.291015625
+          ],
+          [
+            1310.46435546875,
+            1529.0458984375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "36e81c6898bb196339267168e798003c",
+    "text": "i For computing text attention, we feed textual representation ht to a single-layer neural network followed by a softmax function to generate attention weight probabilities over ht as given below:",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            887.4999999999984,
+            1575.1114366666645
+          ],
+          [
+            887.4999999999984,
+            1725.9553377777756
+          ],
+          [
+            1550.012899999999,
+            1725.9553377777756
+          ],
+          [
+            1550.012899999999,
+            1575.1114366666645
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5cde637e5a6b121f690eea062019b5fc",
+    "text": "aw = tanh(Whtht + bht) αt = softmax(Waw aw + baw ) Textual context vector Ct is the weighted sum of dot prod- ucts of attention weights αt and text representation wt given by,",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            887.4999999999985,
+            1728.114289999998
+          ],
+          [
+            887.4999999999985,
+            1894.1303377777756
+          ],
+          [
+            1550.001092222221,
+            1894.1303377777756
+          ],
+          [
+            1550.001092222221,
+            1728.114289999998
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "feacf49fc85341b43d4c3551853f1f1c",
+    "text": "Ct = αt,iwi i",
+    "metadata": {
+      "detection_class_prob": 0.793228268623352,
+      "coordinates": {
+        "points": [
+          [
+            1127.3720703125,
+            1899.70556640625
+          ],
+          [
+            1127.3720703125,
+            1964.8275477777754
+          ],
+          [
+            1309.063720703125,
+            1964.8275477777754
+          ],
+          [
+            1309.063720703125,
+            1899.70556640625
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 3,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "f2c25f6cc42cc3215be141cebf4f706b",
+    "text": "Approaches (Partalas et al. 2016) (Limsopatham and Collier 2016) (von D¨aniken and Cieliebak 2017) (Zhang et al. 2018) (Aguilar et al. 2019) (Akbik, Bergmann, and Vollgraf 2019) (Baevski et al. 2019) (Wang et al. 2019) (Zhou et al. 2019) Ours WNUT 2016 46.16 52.41 - - - - - - 53.43 53.48 WNUT 2017 - - 40.78 - 45.55 49.59 - 50.03% - 50.52 CoNLL 2003 (Eng) - - - - 89.01 93.09 93.5 93.47 - 93.76 Multimodal - - - 70.69 - - - - - 74.17",
+    "metadata": {
+      "detection_class_prob": 0.9204869270324707,
+      "coordinates": {
+        "points": [
+          [
+            174.6433563232422,
+            149.92477416992188
+          ],
+          [
+            174.6433563232422,
+            518.4749755859375
+          ],
+          [
+            1533.02685546875,
+            518.4749755859375
+          ],
+          [
+            1533.02685546875,
+            149.92477416992188
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "text_as_html": "<table><thead><th>Approaches</th><th>WNUT 2016</th><th>WNUT 2017</th><th>CoNLL 2003 (Eng)</th><th>Multimodal</th></thead><tr><td>(Partalas et al. 2016)</td><td>46.16</td><td>-</td><td>-</td><td>-</td></tr><tr><td>(Limsopatham and Collier 2016)</td><td>52.41</td><td>-</td><td>-</td><td>-</td></tr><tr><td>(von Daniken and Cieliebak 2017)</td><td>-</td><td>40.78</td><td>-</td><td>-</td></tr><tr><td>(Zhang et al. 2018)</td><td>-</td><td>-</td><td>-</td><td>70.69</td></tr><tr><td>(Aguilar et al. 2019)</td><td>-</td><td>45.55</td><td>89.01</td><td>-</td></tr><tr><td>(Akbik, Bergmann, and Vollgraf 2019)</td><td>-</td><td>49.59</td><td>93.09</td><td>-</td></tr><tr><td>(Baevski et al. 2019)</td><td>-</td><td>-</td><td>93.5</td><td>-</td></tr><tr><td>(Wang et al. 2019)</td><td>-</td><td>50.03%</td><td>93.47</td><td>-</td></tr><tr><td>(Zhou et al. 2019)</td><td>53.43</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Ours</td><td>53.48</td><td>50.52</td><td>93.76</td><td>74.17</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "6bc024d08fe0d1eb25c57f61b5e01547",
+    "text": "Table 1: Results statistics over 4 datasets and comparison with the current state-of-the-art.",
+    "metadata": {
+      "detection_class_prob": 0.8585980534553528,
+      "coordinates": {
+        "points": [
+          [
+            349.6333333333333,
+            546.5453377777777
+          ],
+          [
+            349.6333333333333,
+            574.2192266666667
+          ],
+          [
+            1343.458031111111,
+            574.2192266666667
+          ],
+          [
+            1343.458031111111,
+            546.5453377777777
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "992454f52ebf6621a0fc59abcd12480a",
+    "text": "Combinations 2-Stacked Word BiLSTM 2-Stacked Word BiLSTM + Character 2-Stacked Word BiLSTM + Sentence All features WNUT 2016 47.64 (Baseline) 49.81 52.79 53.48 WNUT 2017 47.27 (Baseline) 48.13 49.87 50.52",
+    "metadata": {
+      "detection_class_prob": 0.8986890912055969,
+      "coordinates": {
+        "points": [
+          [
+            410.42236328125,
+            605.4212646484375
+          ],
+          [
+            410.42236328125,
+            762.9058837890625
+          ],
+          [
+            1282.35205078125,
+            762.9058837890625
+          ],
+          [
+            1282.35205078125,
+            605.4212646484375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "text_as_html": "<table><thead><th>Combinations</th><th>WNUT 2016</th><th>WNUT 2017</th></thead><tr><td>2-Stacked Word BiLSTM</td><td>47.64 (Baseline)</td><td>47.27 (Baseline)</td></tr><tr><td>2-Stacked Word BiLSTM + Character</td><td>49.81</td><td>48.13</td></tr><tr><td>2-Stacked Word BiLSTM + Sentence</td><td>52.79</td><td>49.87</td></tr><tr><td>All features</td><td>53.48</td><td>50.52</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "5a421b6678bc9048b445d43db8612904",
+    "text": "Table 2: This table describe the importance of each type of feature in combination to the other.",
+    "metadata": {
+      "detection_class_prob": 0.7381483912467957,
+      "coordinates": {
+        "points": [
+          [
+            320.4083333333333,
+            790.5897822222221
+          ],
+          [
+            320.4083333333333,
+            818.2636711111111
+          ],
+          [
+            1372.680284444444,
+            818.2636711111111
+          ],
+          [
+            1372.680284444444,
+            790.5897822222221
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "feb2657fd9e4c8823f08c9fc7da78a03",
+    "text": "Then, we compute the overall context vector Cm by taking the sum of textual and visual context vectors as depicted in Figure 1 as given below:",
+    "metadata": {
+      "detection_class_prob": 0.9268576502799988,
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999997,
+            878.9920677777776
+          ],
+          [
+            149.99999999999997,
+            968.1581155555555
+          ],
+          [
+            812.5129000000004,
+            968.1581155555555
+          ],
+          [
+            812.5129000000004,
+            878.9920677777776
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "b1b04877c7414058423f927c513dddbf",
+    "text": "4. Finally, we use the CoNLL 2003 dataset (Tjong Kim Sang and De Meulder 2003), which is a collection of newswire articles from Reuters that also has four entity types.",
+    "metadata": {
+      "detection_class_prob": 0.9193368554115295,
+      "coordinates": {
+        "points": [
+          [
+            880.5805555555557,
+            879.4297485351562
+          ],
+          [
+            880.5805555555557,
+            968.1581155555555
+          ],
+          [
+            1551.2974853515625,
+            968.1581155555555
+          ],
+          [
+            1551.2974853515625,
+            879.4297485351562
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "ebf5e04bb49ad23b31ee3e651eb77b24",
+    "text": "Cm = Ct + Cv Finally, the overall context vector Cm was fed to a fully- connected bi-directional LSTM layer followed by a softmax as illustrated in the Figure 1 to predict the probabilities over the k classes :",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            150.00000000000014,
+            970.3170677777777
+          ],
+          [
+            150.00000000000014,
+            1120.3664488888887
+          ],
+          [
+            812.5129000000007,
+            1120.3664488888887
+          ],
+          [
+            812.5129000000007,
+            970.3170677777777
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Formula",
+    "element_id": "7f056af951dbfa64238846cfe4d7c1c2",
+    "text": "BLST M (Cm)",
+    "metadata": {
+      "detection_class_prob": 0.6742294430732727,
+      "coordinates": {
+        "points": [
+          [
+            395.2583333333335,
+            1127.1044921875
+          ],
+          [
+            395.2583333333335,
+            1160.09977
+          ],
+          [
+            568.101806640625,
+            1160.09977
+          ],
+          [
+            568.101806640625,
+            1127.1044921875
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "520a34410e140fde16c7628ca6fa9502",
+    "text": "Incorporating only text-relevant context from images could reduce noise. And by leveraging maximum information gain from the two modalities helps in better representation of the input, hence, yields better results.",
+    "metadata": {
+      "detection_class_prob": 0.936837911605835,
+      "coordinates": {
+        "points": [
+          [
+            147.3655242919922,
+            1179.3647822222222
+          ],
+          [
+            147.3655242919922,
+            1298.363671111111
+          ],
+          [
+            817.0014038085938,
+            1298.363671111111
+          ],
+          [
+            817.0014038085938,
+            1179.3647822222222
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "ff0e5077468509a7d8446ab630f0776e",
+    "text": "Experimentation",
+    "metadata": {
+      "detection_class_prob": 0.8692452311515808,
+      "coordinates": {
+        "points": [
+          [
+            361.3333333333336,
+            1337.1990966796875
+          ],
+          [
+            361.3333333333336,
+            1371.4063720703125
+          ],
+          [
+            605.011962890625,
+            1371.4063720703125
+          ],
+          [
+            605.011962890625,
+            1337.1990966796875
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "2c4d28cb78ee8a137776f156dfb97226",
+    "text": "In this section, we will discuss the experimental setup and evaluation results of the system across.",
+    "metadata": {
+      "detection_class_prob": 0.9364903569221497,
+      "coordinates": {
+        "points": [
+          [
+            146.3317413330078,
+            1387.618896484375
+          ],
+          [
+            146.3317413330078,
+            1446.5331155555557
+          ],
+          [
+            817.8984985351562,
+            1446.5331155555557
+          ],
+          [
+            817.8984985351562,
+            1387.618896484375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "ff0e5077468509a7d8446ab630f0776e",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "e703d1ff639a05bb129b0b546e2983fa",
+    "text": "Data",
+    "metadata": {
+      "detection_class_prob": 0.8385578989982605,
+      "coordinates": {
+        "points": [
+          [
+            149.1822052001953,
+            1480.3687744140625
+          ],
+          [
+            149.1822052001953,
+            1512.9777830555556
+          ],
+          [
+            214.65147399902344,
+            1512.9777830555556
+          ],
+          [
+            214.65147399902344,
+            1480.3687744140625
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "f8da185c379719c2cc37e12aff85ad2f",
+    "text": "1. We use the WNUT 2016 (Strauss et al. 2016) data set comprised of the combination of train and development data originated from the work on the Twitter NER task (Ritter et al. 2011). The tokens were distributed over ten named entity types.",
+    "metadata": {
+      "detection_class_prob": 0.9225006699562073,
+      "coordinates": {
+        "points": [
+          [
+            143.08055555555583,
+            1531.053671111111
+          ],
+          [
+            143.08055555555583,
+            1680.4914488888887
+          ],
+          [
+            824.5828247070312,
+            1680.4914488888887
+          ],
+          [
+            824.5828247070312,
+            1531.053671111111
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "1e31d2bdba271885425e7990b9891433",
+    "text": "2. WNUT 2017 (Derczynski et al. 2017) is the second dataset we use in our work. The primary source of this data is Twitter. Additional sources include Red- dit, YouTube, and StackExchange. The tokens were dis- tributed over six entity types.",
+    "metadata": {
+      "detection_class_prob": 0.9307562708854675,
+      "coordinates": {
+        "points": [
+          [
+            138.06884765625,
+            1696.737060546875
+          ],
+          [
+            138.06884765625,
+            1848.6775599999999
+          ],
+          [
+            818.4716796875,
+            1848.6775599999999
+          ],
+          [
+            818.4716796875,
+            1696.737060546875
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "ListItem",
+    "element_id": "fc9e6f67370f3adee5cab5eb5ed2430a",
+    "text": "3. We also consider multimodal data from Zhang et al. (2018) to evaluate our multimodal approach. The dataset has four common entity types.",
+    "metadata": {
+      "detection_class_prob": 0.931160569190979,
+      "coordinates": {
+        "points": [
+          [
+            136.63162231445312,
+            1867.363037109375
+          ],
+          [
+            136.63162231445312,
+            1955.97756
+          ],
+          [
+            817.8160400390625,
+            1955.97756
+          ],
+          [
+            817.8160400390625,
+            1867.363037109375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "69af7d754db70c62186eaaa1e31cf4cb",
+    "text": "Parameters. For the word-level BiLSTM, we set the number of units and dropout to 512 and 0.5 for each BiL- STM layer. The dropout helps the model to tackle overﬁt- ting (Srivastava et al. 2014). Following (Aguilar et al. 2017), we set the number of ﬁlters at each convolution layer to 64. We also set the sentence-level dense network with 256 hid- den states. For the fully-connected BiLSTM layer, we set the number of units and dropout rate to 200 and 0.3, respec- tively. To reduce the potential overﬁtting, we also apply an L2 weight regularization over convolutional and word-level BiLSTM layers with a rate of 10−3. We optimize the pa- rameters using RMSprop and apply early stopping technique with the patience of 3 epochs. We perform parameter search over the learning rate ∈ {10−3, 10−2, 10−1} and batch size ∈ {10, 20, 50}. We then select the best model with the high- est F1-score on the validation set. After determining the pa- rameters, we repeat the experiment 3 times with different random seeds, and train using both train and development set, reporting average performance on the test set as our ﬁnal result. We used ofﬁcial WNUT script to compute the results 2.",
+    "metadata": {
+      "detection_class_prob": 0.9424951076507568,
+      "coordinates": {
+        "points": [
+          [
+            887.1436767578125,
+            983.346065
+          ],
+          [
+            887.1436767578125,
+            1620.0414488888891
+          ],
+          [
+            1553.2935791015625,
+            1620.0414488888891
+          ],
+          [
+            1553.2935791015625,
+            983.346065
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "0e152cb17a27f4073937a8c4c39867c1",
+    "text": "Results and Discussion WNUT 2016 results. One of the challenging aspects of the WNUT 2016 (Strauss et al. 2016) dataset is small train- ing data. Moreover, there are 10 entity types instead of the usual 4 entities with overlapping entities like person and musicartist. Similarly, entities like facility and company are also at many occasions ambiguous. Often, a sports-team is named under the country or city it belongs",
+    "metadata": {
+      "detection_class_prob": 0.9513323307037354,
+      "coordinates": {
+        "points": [
+          [
+            885.6954345703125,
+            1651.0039911111114
+          ],
+          [
+            885.6954345703125,
+            1904.1525600000002
+          ],
+          [
+            1551.5509033203125,
+            1904.1525600000002
+          ],
+          [
+            1551.5509033203125,
+            1651.0039911111114
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "6f0f7800211218360eb6727f7aa10b21",
+    "text": "2https://noisy-text.github.io/2017/emerging-rare-entities.html",
+    "metadata": {
+      "detection_class_prob": 0.8623682260513306,
+      "coordinates": {
+        "points": [
+          [
+            922.6472222222222,
+            1926.4015599999998
+          ],
+          [
+            922.6472222222222,
+            1955.3798399999998
+          ],
+          [
+            1538.3817138671875,
+            1955.3798399999998
+          ],
+          [
+            1538.3817138671875,
+            1926.4015599999998
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "20c147f8dd38b41983add0ca94f53f64",
+    "text": "to, causing a considerable overlap with the geo-loc en- tity type. By contrast to earlier mentioned approaches, our system goes beyond the current state-of-the-art with 53.48% F1 score on WNUT 2016 without the need for external re- sources and additional data. Our benchmark with current systems is shown in Table 1.",
+    "metadata": {
+      "detection_class_prob": 0.9531391859054565,
+      "coordinates": {
+        "points": [
+          [
+            150.0,
+            154.06917277777774
+          ],
+          [
+            150.0,
+            335.8581155555549
+          ],
+          [
+            815.99560546875,
+            335.8581155555549
+          ],
+          [
+            815.99560546875,
+            154.06917277777774
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "d306be5acb96a9a8a76263deafea057a",
+    "text": "WNUT 2017 results. The challenge that WNUT 2017 data (Derczynski et al. 2017) poses is the more frequent use of punctuation (Derczynski et al. 2014). Often, part of the name is also a common word (e.g., Andrew little) and some location names are also common person names (e.g., Smith), thus, causing difﬁculty (Derczynski et al. 2014). Entities like corporation, group, and product could easily be confused between each other. Current state-of-the-art, though do not rely on external resources, however, rely on the CRF based classiﬁer. For instance, Aguilar et al. (2019) emphasized the signiﬁcance of having a CRF prediction layer over softmax and reported an approximately 4% increase in F1 with CRF in comparison to a softmax. However, we found this claim not completely true since it may be dependent on the dataset. Consistent with our previous results, our model goes beyond the current state-of-the-art with an F1 score of 50.5% with- out relying on external resources and the CRF prediction layer. This improvement is not signiﬁcant; nevertheless, it gave us a consistent result. We also observe the improvement over hard to predict entities such as creative-work and product compared to the current state-of-the-art.",
+    "metadata": {
+      "detection_class_prob": 0.9462854862213135,
+      "coordinates": {
+        "points": [
+          [
+            150.00000000000009,
+            341.79606499999915
+          ],
+          [
+            150.00000000000009,
+            978.4914488888861
+          ],
+          [
+            817.2237548828125,
+            978.4914488888861
+          ],
+          [
+            817.2237548828125,
+            341.79606499999915
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "209b8a696d91aedf932ef2594b6ced5a",
+    "text": "Multimodal results. So far, we only consider the tex- tual context. In this experiment, we evaluate our multi- modal approach that considers the auxiliary context from the text’s images. With segregated attention network, our model achieved an F1 score of 74.17% on this data which is a considerable improvement over the state-of-the-art model of (Zhang et al. 2018). In one of our experiments, we merged the textual and visual representation and observed results with and without attention. On both occasions, we received sub-optimal results mainly due to the noise pose by the im- ages. Interestingly, considering textual and visual clues as entirely separate modalities and computing the ﬁnal context vector as a summed vector over two separately computed attention contexts helped improve information gain and re- duce the noise. CoNLL-03 results. Lastly, to verify our model as a gener- alized solution for NER, we also experimented with a stan- dard data set. Our evaluation results reveal that our model also goes beyond the state-of-the-art with 93.76% F1 score proving its suitability to the NER task. Ablation and analysis. To reﬂect the usefulness of each feature combination we experimented with word embed- dings only and observe 47.64% F1 score on WNUT 2016. We consider this result as a baseline and compare it with the results achieved by adding supplementary features to this baseline model. With word and character embeddings, the result improved by approximately 2% on WNUT 2017. Interestingly, we observed considerable improvement over baseline embedding with word and sentence-level informa- tion which is approximately 5% on WNUT 2016. However, not many previous works considered sentence-level infor- mation for the NER task. To the best of our knowledge, only",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            149.99999999999994,
+            984.4266205555529
+          ],
+          [
+            149.99999999999994,
+            1955.9775599999975
+          ],
+          [
+            812.5129000000004,
+            1955.9775599999975
+          ],
+          [
+            812.5129000000004,
+            984.4266205555529
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "8d5452b31eb82217f8950256a3ed971a",
+    "text": "Nr. 1 2 3 4 5 Prediction Angels manager Mike Scioscia said tuesday he’s expect I remember having parliament on the radio in my car and hearing Leyonhjelm [give this speach] . The Six Thatchers How Miami Dolphins defensive end spot stacks up ... if Leicester wins the champions league and manu wins Europa league",
+    "metadata": {
+      "detection_class_prob": 0.8095448017120361,
+      "coordinates": {
+        "points": [
+          [
+            958.289794921875,
+            145.2955780029297
+          ],
+          [
+            958.289794921875,
+            467.2765808105469
+          ],
+          [
+            1469.594482421875,
+            467.2765808105469
+          ],
+          [
+            1469.594482421875,
+            145.2955780029297
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "text_as_html": "<table><thead><th></th><th>Prediction</th><th></th></thead><tr><td></td><td>Angels manager Mike tuesday he’s expect</td><td>Scioscia said</td></tr><tr><td>2</td><td>I remember having the radio in my car and _ Leyonhjelm [give this speach]</td><td>parliament on hearing</td></tr><tr><td>3</td><td>. The Six Thatchers</td><td></td></tr><tr><td>4 5</td><td>How Miami Dolphins spot stacks up ... if Leicester wins the</td><td>defensive end</td></tr><tr><td></td><td>and manu wins Europa league</td><td>champions league</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "FigureCaption",
+    "element_id": "ff3fc9d1dc9cf2972456e782d0263a24",
+    "text": "Table 3: Sample predictions from WNUT 2016 and 2017 datasets.",
+    "metadata": {
+      "detection_class_prob": 0.8793839812278748,
+      "coordinates": {
+        "points": [
+          [
+            884.0305786132812,
+            494.3814488888888
+          ],
+          [
+            884.0305786132812,
+            552.4970044444444
+          ],
+          [
+            1556.3323974609375,
+            552.4970044444444
+          ],
+          [
+            1556.3323974609375,
+            494.3814488888888
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "792229c88e44c763b2ac1c0721da68f2",
+    "text": "von D¨aniken and Cieliebak (2017) employed sent2vec and reported negative results. In our case, sentence embedding from Universal-sentence-encoder in combination with word embedding improved our overall results. To ver- ify this experimental ﬁnding, we performed another ablation experiment on a different data set. On WNUT 2017, we ob- serve consistent improvement with the word and sentence feature combination as shown in Table 2. While Table 3 shows our model’s sample predictions on WNUT 2016 and 2017 test sets. In the ﬁrst example taken from the WNUT 2016 test dataset, our model can correctly classify ’Angels’ as sports-team without considering any external resources. It means that the network has based its prediction solely on the context. The second example from the WNUT 2017 test set has the word ’Leyonhjelm’ which is not an English word. Despite ’Leyonhjelm’ being an out-of-vocabulary word, our model can still correctly classify it as a person. In the third example, our model can correctly infer ’The’ belongs to the creative-work named entity which is ambiguous even for humans. Moreover, this is not the case for only one ex- ample; we observe many other examples where our model correctly classiﬁed the as the named entity part. According to Derczynski et al. (2017), WNUT 2017 data includes nu- merous entities that have either a common person name or a name of place counterpart. For example in Table 3, in ’Mi- ami Dolphins’ the word ’Miami’ is not a name of the place. Interestingly, our word-character model wrongly classify ’Miami’ as a location while our Word-sentence model cor- rectly classiﬁes it as a part of the group named entity. In another example, our model was correctly able to classify Leicester as a group. We believe that the sentence-level in- formation helped in this case and the model predicted purely based on the sentence’s whole context. In many other ex- amples, we also observed that our model was correctly able to infer the label for the name of the place as the counter- part of the named entities such as group. Our model strug- gled with common names as person entity and at many occa- sion failed to predict the right label. For example, our model missed ’Snowman’ and ’theguest’ even though the context was there. Overall, product and corporation were the difﬁcult classes to predict.",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            887.5,
+            586.5731155555554
+          ],
+          [
+            887.5,
+            1833.1275599999994
+          ],
+          [
+            1550.0140111111116,
+            1833.1275599999994
+          ],
+          [
+            1550.0140111111116,
+            586.5731155555554
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "73dac7fe13d8c5484c1ca8b7a5ae601b",
+    "text": "To this end, we conclude that word embeddings are the essential information for NER, and with word and sentence combination, we observe the most improvement. Our anal- ysis also suggests that with the sentence-level information,",
+    "metadata": {
+      "detection_class_prob": 0.9380687475204468,
+      "coordinates": {
+        "points": [
+          [
+            884.0167236328125,
+            1836.9786711111108
+          ],
+          [
+            884.0167236328125,
+            1955.9775599999998
+          ],
+          [
+            1556.2767333984375,
+            1955.9775599999998
+          ],
+          [
+            1556.2767333984375,
+            1836.9786711111108
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 5,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "aa4556195495d5f3444f9c8276a2d6f2",
+    "text": "we see consistent improvement in proving its usefulness.",
+    "metadata": {
+      "detection_class_prob": 0.8564524054527283,
+      "coordinates": {
+        "points": [
+          [
+            149.16256713867188,
+            155.97867111111094
+          ],
+          [
+            149.16256713867188,
+            183.65256
+          ],
+          [
+            779.0551683333337,
+            183.65256
+          ],
+          [
+            779.0551683333337,
+            155.97867111111094
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "e703d1ff639a05bb129b0b546e2983fa",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "9e63c2ef1516ddeeb96e3a354b54aaf1",
+    "text": "Conclusion",
+    "metadata": {
+      "detection_class_prob": 0.8538894653320312,
+      "coordinates": {
+        "points": [
+          [
+            401.8972222222222,
+            225.09843555555543
+          ],
+          [
+            401.8972222222222,
+            258.3073244444443
+          ],
+          [
+            560.6025022222223,
+            258.3073244444443
+          ],
+          [
+            560.6025022222223,
+            225.09843555555543
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "3a876250625866d0f8cf85f8e4ac79af",
+    "text": "We presented two models for NER on microblog data. The ﬁrst model considers solely textual information, while the second model also employs auxiliary information from im- ages. Our evaluation suggests that our model can be suc- cessfully applied to NER in microblogs and does not require external sources, preprocessing, and employing a CRF clas- siﬁer for sequence labelling. With our approach, we are not only able to go beyond the current state-of-the-art, but we are also able to address some of the weaknesses of the pre- vious systems. Our evaluation also suggests that InferNER can be easily ported to other NER tasks without the need to alter supplementary resources.",
+    "metadata": {
+      "detection_class_prob": 0.9567115306854248,
+      "coordinates": {
+        "points": [
+          [
+            147.87823486328125,
+            277.6870044444444
+          ],
+          [
+            147.87823486328125,
+            640.2164488888875
+          ],
+          [
+            819.91064453125,
+            640.2164488888875
+          ],
+          [
+            819.91064453125,
+            277.6870044444444
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "9e63c2ef1516ddeeb96e3a354b54aaf1",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "Title",
+    "element_id": "a0d7deccf89e42d02a9d66b0c1889689",
+    "text": "References",
+    "metadata": {
+      "detection_class_prob": 0.8401414752006531,
+      "coordinates": {
+        "points": [
+          [
+            404.1055555555555,
+            684.0123244444429
+          ],
+          [
+            404.1055555555555,
+            717.2212133333318
+          ],
+          [
+            559.8124389648438,
+            717.2212133333318
+          ],
+          [
+            559.8124389648438,
+            684.0123244444429
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "42c50946ab1b1be2d676b7d1b70ac532",
+    "text": "Aguilar, G.; Maharjan, S.; L´opez-Monroy, A.; and Solorio, T. 2017. A multi-task approach for named entity recognition in social media data. 148–153. Aguilar, G.; L´opez-Monroy, A. P.; Gonz´alez, F. A.; and Solorio, T. 2019. Modeling noisiness to recognize named en- tities using multitask neural networks on social media. CoRR abs/1906.04129. Akbik, A.; Bergmann, T.; and Vollgraf, R. 2019. Pooled contextualized embeddings for named entity recognition. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), 724–728. Minneapolis, Minnesota: Association for Computational Linguistics. Baevski, A.; Edunov, S.; Liu, Y.; Zettlemoyer, L.; and Auli, M. 2019. Cloze-driven pretraining of self-attention networks. CoRR abs/1903.07785. Cer, D.; Yang, Y.; Kong, S.; Hua, N.; Limtiaco, N.; John, R. S.; Constant, N.; Guajardo-Cespedes, M.; Yuan, S.; Tar, C.; Sung, Y.; Strope, B.; and Kurzweil, R. 2018. Universal sentence encoder. CoRR abs/1803.11175. Derczynski, L.; Maynard, D.; Rizzo, G.; Erp, M.; Gorrell, G.; Troncy, R.; Petrak, J.; and Bontcheva, K. 2014. Analysis of named entity recognition and linking for tweets. Information Processing Management 51:32–49. Derczynski, L.; Nichols, E.; van Erp, M.; and Limsopatham, N. 2017. Results of the WNUT2017 shared task on novel and emerging entity recognition. In Proceedings of the 3rd Work- shop on Noisy User-generated Text, 140–147. Copenhagen, Denmark: Association for Computational Linguistics. Esteves, D.; Peres, R.; Lehmann, J.; and Napolitano, G. 2018. Named entity recognition in twitter using images and text. In Garrig´os, I., and Wimmer, M., eds., Current Trends in Web Engineering, 191–199. Cham: Springer International Pub- lishing. Limsopatham, N., and Collier, N. 2016. Bidirectional LSTM In Pro- for named entity recognition in twitter messages. ceedings of the 2nd Workshop on Noisy User-generated Text (WNUT), 145–152. Osaka, Japan: The COLING 2016 Orga- nizing Committee. Ma, X., and Hovy, E. H. 2016. End-to-end sequence labeling via bi-directional lstm-cnns-crf. CoRR abs/1603.01354.",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            177.6749999999999,
+            737.0981733333322
+          ],
+          [
+            177.6749999999999,
+            1955.379839999999
+          ],
+          [
+            784.8383777777777,
+            1955.379839999999
+          ],
+          [
+            784.8383777777777,
+            737.0981733333322
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "a0d7deccf89e42d02a9d66b0c1889689",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  },
+  {
+    "type": "NarrativeText",
+    "element_id": "89d0e281a099b505559721f097318ff3",
+    "text": "Moon, S.; Neves, L.; and Carvalho, V. 2018. Multimodal named entity recognition for short social media posts. CoRR abs/1802.07862. Pagliardini, M.; Gupta, P.; and Jaggi, M. 2017. Unsupervised learning of sentence embeddings using compositional n-gram features. CoRR abs/1703.02507. Partalas, I.; Lopez, C.; Derbas, N.; and Kalitvianski, R. 2016. Learning to search for recognizing named entities in twitter. In Proceedings of the 2nd Workshop on Noisy User-generated Text (WNUT), 171–177. Osaka, Japan: The COLING 2016 Organizing Committee. Peres, R.; Esteves, D.; and Maheshwari, G. 2017. Bidi- rectional lstm with a context input window for named entity recognition in tweets. 1–4. Peters, M. E.; Neumann, M.; Iyyer, M.; Gardner, M.; Clark, C.; Lee, K.; and Zettlemoyer, L. 2018. Deep contextualized word representations. CoRR abs/1802.05365. Ritter, A.; Clark, S.; Mausam; and Etzioni, O. 2011. Named entity recognition in tweets: An experimental study. In Pro- ceedings of the 2011 Conference on Empirical Methods in Natural Language Processing, 1524–1534. Edinburgh, Scot- land, UK.: Association for Computational Linguistics. Srivastava, N.; Hinton, G.; Krizhevsky, A.; Sutskever, I.; and Salakhutdinov, R. 2014. Dropout: A simple way to prevent neural networks from overﬁtting. Journal of Machine Learn- ing Research 15:1929–1958. Strauss, B.; Toma, B.; Ritter, A.; de Marneffe, M.-C.; and Xu, W. 2016. Results of the WNUT16 named entity recognition shared task. In Proceedings of the 2nd Workshop on Noisy User-generated Text (WNUT), 138–144. Osaka, Japan: The COLING 2016 Organizing Committee. Szegedy, C.; Vanhoucke, V.; Ioffe, S.; Shlens, J.; and Wojna, Z. 2015. Rethinking the inception architecture for computer vision. CoRR abs/1512.00567. Tjong Kim Sang, E. F., and De Meulder, F. 2003. Introduc- tion to the CoNLL-2003 shared task: Language-independent named entity recognition. In Proceedings of the Seventh Con- ference on Natural Language Learning at HLT-NAACL 2003, 142–147. von D¨aniken, P., and Cieliebak, M. 2017. Transfer learning and sentence level features for named entity recognition on tweets. In Proceedings of the 3rd Workshop on Noisy User- generated Text, 166–171. Copenhagen, Denmark: Associa- tion for Computational Linguistics. Wang, Z.; Shang, J.; Liu, L.; Lu, L.; Liu, J.; and Han, J. 2019. CrossWeigh: Training named entity tagger from imper- fect annotations. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Pro- cessing (EMNLP-IJCNLP), 5154–5163. Hong Kong, China: Association for Computational Linguistics. Zhang, Q.; Fu, J.; Liu, X.; and Huang, X. 2018. Adaptive co-attention network for named entity recognition in tweets. In AAAI. Zhou, B.; Khosla, A.; Lapedriza, `A.; Oliva, A.; and Torralba, A. 2015. Learning deep features for discriminative localiza- tion. CoRR abs/1512.04150. Zhou, J. T.; Zhang, H.; Jin, D.; Zhu, H.; Fang, M.; Goh, R. S. M.; and Kwok, K. 2019. Dual adversarial neural transfer In Proceedings for low-resource named entity recognition. of the 57th Annual Meeting of the Association for Computa- tional Linguistics, 3461–3471. Florence, Italy: Association for Computational Linguistics.",
+    "metadata": {
+      "coordinates": {
+        "points": [
+          [
+            915.1749999999998,
+            158.1481733333321
+          ],
+          [
+            915.1749999999998,
+            1955.3798399999985
+          ],
+          [
+            1522.340422222222,
+            1955.3798399999985
+          ],
+          [
+            1522.340422222222,
+            158.1481733333321
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1700,
+        "layout_height": 2200
+      },
+      "last_modified": "2026-10-13T20:27:53",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 6,
+      "parent_id": "a0d7deccf89e42d02a9d66b0c1889689",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\128538\\input",
+      "filename": "128538.pdf"
+    }
+  }
+]

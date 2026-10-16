@@ -1,0 +1,110 @@
+{
+  "common": {
+    "enabled": false,
+    "state": "BLOCKED_MISSING_OFFICIAL_THRESHOLD2_ARTIFACT",
+    "execution_authorized_this_round": false,
+    "model": "gpt-4.1-2025-04-14",
+    "base_url": "https://9527.codes/v1",
+    "temperature": 0,
+    "seed": 0,
+    "stream": false,
+    "output_limit_parameters": "OMITTED",
+    "max_retries": 0,
+    "python_hash_seed": "0",
+    "raw_input": {
+      "path": "D:\\C++\\SCILEAD\\pilot\\full43_uncapped\\merged\\output.json",
+      "sha256": "9f3a65245032f96dfd2bedc27073dc3232b7b238ab4b26a4604543c39ce6bedc",
+      "bytes": 758717
+    },
+    "gold_annotations": {
+      "path": "C:\\Users\\Administrator\\Desktop\\KG\\SCILEAD_DATA\\data\\tdm_annotations.json",
+      "sha256": "603dd077ae174e4beefc24a9a73b7436e1e3cb6c9aaee042adc4d4aa5ea75aaf",
+      "bytes": 61265
+    },
+    "verified_threshold2_path": null,
+    "verified_threshold2_sha256": null,
+    "shared_masked_subset_path": null,
+    "shared_masked_subset_sha256": null,
+    "prompt_file": {
+      "path": "D:\\C++\\SCILEAD\\emnlp2024-leaderboard-generation\\prompts.json",
+      "sha256": "72983f27f184aa565afcf676e7bef32dc782c9d3d055c949a790c0d594152629",
+      "bytes": 12052
+    },
+    "no_new_pdf_embedding_retrieval_extraction": true
+  },
+  "fully_llm": {
+    "normalization_input": {
+      "path": "D:\\C++\\SCILEAD\\pilot\\full43_uncapped\\merged\\normalized_output.json",
+      "sha256": "955c223d97efa961b0acfb9269f4f279f37cb752de3edee48b8b75e2d1eddf96",
+      "bytes": 759575
+    },
+    "action_after_data_ready": "offline_evaluation_only"
+  },
+  "fully_cs": {
+    "normalization_input": {
+      "path": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\normalization\\embedding_normalized_output.json",
+      "sha256": "637fb5fe9e2a5515d5c544137e6e7e4b6f441b37d81681d4dba762d58ed3a3e7",
+      "bytes": 760193
+    },
+    "action_after_data_ready": "offline_evaluation_only"
+  },
+  "partially": {
+    "cold_start": false,
+    "masking_seed": 0,
+    "preserve_author_artifact_order": true,
+    "masking_function": "tdm_llm_masked_normalization.sample_tdms",
+    "stage1": "RUN_NEW_DYNAMIC_NORMALIZATION_AFTER_NEXT_STAGE_AUTHORIZATION",
+    "stage2": "RUN_NEW_ALIGNMENT_AGAINST_ALL_VERIFIED_TARGET_BOARDS",
+    "evaluation": "ALL_TARGET_BOARDS_AND_SHARED_NEW_PARTIALLY_MASKED_SUBSET"
+  },
+  "cold_start": {
+    "order_default": {
+      "cold_start_seed": null,
+      "seed_type": "NoneType",
+      "reuse_stage1": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_default\\stage1\\normalized_output.json",
+        "sha256": "d4df0c1983fac7ae1a423aab723839dddca44d59fc01a77b6476c031f0fa1997",
+        "bytes": 762336
+      },
+      "preserve_paper_order": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_default\\paper_order.json",
+        "sha256": "54d38d26a0f2d7f467bcbbfc586de126b6b506e81927bfec5f963fd24a54f28b",
+        "bytes": 2590
+      },
+      "stage2": "RUN_NEW_ALIGNMENT_AGAINST_ALL_VERIFIED_TARGET_BOARDS_AFTER_NEXT_STAGE_AUTHORIZATION",
+      "evaluation": "ALL_TARGET_BOARDS_AND_SAME_NEW_PARTIALLY_MASKED_SUBSET"
+    },
+    "order_0": {
+      "cold_start_seed": "0",
+      "seed_type": "str",
+      "reuse_stage1": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_0\\stage1\\normalized_output.json",
+        "sha256": "ffc32067cbaf77b164548fac5a5a3eb9528d920e5ffb9e1d87c85e56f4a064ac",
+        "bytes": 762190
+      },
+      "preserve_paper_order": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_0\\paper_order.json",
+        "sha256": "b0d3fc8bba6e526648fd59b303090ecfad5aeb8ea927a9d350d5db05ab86545a",
+        "bytes": 2596
+      },
+      "stage2": "RUN_NEW_ALIGNMENT_AGAINST_ALL_VERIFIED_TARGET_BOARDS_AFTER_NEXT_STAGE_AUTHORIZATION",
+      "evaluation": "ALL_TARGET_BOARDS_AND_SAME_NEW_PARTIALLY_MASKED_SUBSET"
+    },
+    "order_42": {
+      "cold_start_seed": "42",
+      "seed_type": "str",
+      "reuse_stage1": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_42\\stage1\\normalized_output.json",
+        "sha256": "74b7c2b297799a393c648a138b381a6b9d2ec9a5c25dc299d977ca7293d5e48b",
+        "bytes": 762364
+      },
+      "preserve_paper_order": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_42\\paper_order.json",
+        "sha256": "644a34f460097e69debec29439a833a95382457d38f683644011e09061a2db1b",
+        "bytes": 2598
+      },
+      "stage2": "RUN_NEW_ALIGNMENT_AGAINST_ALL_VERIFIED_TARGET_BOARDS_AFTER_NEXT_STAGE_AUTHORIZATION",
+      "evaluation": "ALL_TARGET_BOARDS_AND_SAME_NEW_PARTIALLY_MASKED_SUBSET"
+    }
+  }
+}

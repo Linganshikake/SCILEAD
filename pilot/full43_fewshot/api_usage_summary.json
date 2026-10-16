@@ -1,0 +1,68 @@
+{
+  "stages": {
+    "extract": {
+      "requests": 43,
+      "successful_responses": 43,
+      "failed_or_uncertain": 0,
+      "unknown_usage_attempts": 0,
+      "prompt_tokens": 272642,
+      "completion_tokens": 9868,
+      "total_tokens": 282510,
+      "request_seconds": 443.3300000010058
+    },
+    "normalize": {
+      "requests": 456,
+      "successful_responses": 453,
+      "failed_or_uncertain": 3,
+      "unknown_usage_attempts": 3,
+      "prompt_tokens": 148037,
+      "completion_tokens": 1610,
+      "total_tokens": 149647,
+      "request_seconds": 1518.8969999868423
+    }
+  },
+  "total": {
+    "requests": 499,
+    "successful_responses": 496,
+    "failed_or_uncertain": 3,
+    "unknown_usage_attempts": 3,
+    "prompt_tokens": 420679,
+    "completion_tokens": 11478,
+    "total_tokens": 432157,
+    "request_seconds": 1962.226999987848
+  },
+  "wall_seconds_since_api_start": 37986.81755924225,
+  "wall_time_note": "Includes waiting for explicit retry authorization and offline analysis; request_seconds sums observed HTTP durations.",
+  "baseline_selected_usage": {
+    "requests": 585,
+    "extract_requests": 43,
+    "prompt_tokens": 349287,
+    "completion_tokens": 14148,
+    "total_tokens": 363435,
+    "normalize_requests": 542
+  },
+  "billing_cost": "UNVERIFIED; only returned token usage reported; mock tests excluded; three original HTTP 502 attempts retain unknown billed usage",
+  "automatic_retries": 0,
+  "authorized_manual_retries": 3,
+  "authorized_recovery_new_attempts": 8,
+  "archived_attempt_stages": [
+    {
+      "paper": "D19-1367.pdf",
+      "stage": "normalize",
+      "path": "D:\\C++\\SCILEAD\\pilot\\full43_fewshot\\papers\\D19-1367\\normalization_input\\normalization",
+      "reason": "HTTP 502; explicitly authorized one replacement in independent directory"
+    },
+    {
+      "paper": "K19-1036.pdf",
+      "stage": "normalize",
+      "path": "D:\\C++\\SCILEAD\\pilot\\full43_fewshot\\papers\\K19-1036\\normalization_input\\normalization",
+      "reason": "HTTP 502; explicitly authorized one replacement in independent directory"
+    },
+    {
+      "paper": "N19-1373.pdf",
+      "stage": "normalize",
+      "path": "D:\\C++\\SCILEAD\\pilot\\full43_fewshot\\papers\\N19-1373\\normalization_input\\normalization",
+      "reason": "HTTP 502; explicitly authorized one replacement in independent directory"
+    }
+  ]
+}

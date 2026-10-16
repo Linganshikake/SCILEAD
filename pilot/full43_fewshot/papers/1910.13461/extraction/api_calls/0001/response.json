@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[{\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-1\", \"Result\": \"44.16\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-2\", \"Result\": \"21.28\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-L\", \"Result\": \"40.90\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-1\", \"Result\": \"45.14\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-2\", \"Result\": \"22.27\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-L\", \"Result\": \"37.25\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"F1\", \"Result\": \"90.9\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"EM\", \"Result\": \"84.1\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 2.0\", \"Metric\": \"F1\", \"Result\": \"89.4\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 2.0\", \"Metric\": \"EM\", \"Result\": \"86.5\"}, {\"Task\": \"Natural Language Inference\", \"Dataset\": \"MNLI\", \"Metric\": \"Accuracy\", \"Result\": \"89.2\"}, {\"Task\": \"Dialogue Response Generation\", \"Dataset\": \"ConvAI2\", \"Metric\": \"Perplexity\", \"Result\": \"11.85\"}, {\"Task\": \"Dialogue Response Generation\", \"Dataset\": \"ConvAI2\", \"Metric\": \"Valid F1\", \"Result\": \"20.72\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-1\", \"Result\": \"30.6\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-2\", \"Result\": \"6.2\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-L\", \"Result\": \"24.3\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'16 RO-EN\", \"Metric\": \"BLEU\", \"Result\": \"37.96\"}]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791999317,
+  "id": "chatcmpl-EYxAjVdaemUtUU6fak2jhVe3Hjkk6",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260930033459-c08d3808-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 571,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 124,
+      "engine_ttlt_ms": 2500,
+      "pre_inference_ms": 245,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 640,
+      "service_ttlt_ms": 3012,
+      "user_visible_ttft_ms": 395
+    },
+    "prompt_tokens": 5579,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 6150
+  }
+}

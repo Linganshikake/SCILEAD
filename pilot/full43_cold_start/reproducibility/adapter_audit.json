@@ -1,0 +1,26 @@
+{
+  "adapter_sha256": {
+    "common.py": "ecf157c6eb284427a57d28d643f67064166b880a986995db5bc8a675212747cf",
+    "engine.py": "09d4f32229085ae9fd0e7f90f03f36011a95a7129620978b92c29dfa8b54f4f1",
+    "run_cold.py": "368a7756cf7c237c694bf1caa1e37f1df2fe54209d191e7fc37db7cc91579eac",
+    "evaluate.py": "5d43a5239a5079d5a8223196bff37c6a9671df462d209079a958abdf99df7a78",
+    "verify_run.py": "5b2145adebdb7c325f4eccd2a2eff80ae2d8d91d6109d1dcdfe83da4cb496e4c",
+    "launch.py": "a49d30b808717633694087fe6f68163d5b656ad3cedd2d6e3c52ccb690b780de"
+  },
+  "method_execution": "Unchanged original main functions executed directly; factory only adapts transport. Observer records and asserts local state.",
+  "prior_engine_source": "D:\\C++\\SCILEAD\\pilot\\full43_partially\\engine.py",
+  "changes": [
+    "Cold Start observer permits Metric additions as official cold_start=True",
+    "run_id in log metadata",
+    "official system prompt assertion",
+    "run-specific output paths and CLI seed types",
+    "float equality tolerance 1e-14 for order-dependent summation only; original evaluation unchanged",
+    "Copied leaderboard evaluator labels LR exact-TDM as primary per task; formulas and numeric values unchanged"
+  ],
+  "source_statistics_evidence": [
+    "leaderboard_eval_full43_uncapped/reference/page-06.txt",
+    "leaderboard_eval_full43_uncapped/reference/page-13.txt",
+    "leaderboard_eval_full43_uncapped/reference/page-14.txt"
+  ],
+  "author_ddof": "UNCONFIRMED"
+}

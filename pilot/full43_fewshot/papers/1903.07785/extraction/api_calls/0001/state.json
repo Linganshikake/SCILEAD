@@ -1,0 +1,47 @@
+{
+  "run_id": "fewshot",
+  "call": 1,
+  "status": "COMPLETE",
+  "position": {
+    "paper": "1903.07785.pdf",
+    "record": 0,
+    "field": "Extraction"
+  },
+  "prompt_sha256": "7a9b82e50a03efaade201b86983f771e7c71dd91bacdfd7197a15c75f9e253f7",
+  "candidate_sha256": null,
+  "requested_model": "gpt-4.1-2025-04-14",
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYxBjlsdKPegyOAmTpHXplI5ThVlH",
+  "usage": {
+    "completion_tokens": 313,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 86,
+      "engine_ttlt_ms": 1627,
+      "pre_inference_ms": 138,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 423,
+      "service_ttlt_ms": 1958,
+      "user_visible_ttft_ms": 285
+    },
+    "prompt_tokens": 5571,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 2304
+    },
+    "total_tokens": 5884
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "[{\"Task\": \"Sentence Similarity\", \"Dataset\": \"MRPC\", \"Metric\": \"F1\", \"Result\": \"83.7\"}, {\"Task\": \"Sentence Similarity\", \"Dataset\": \"QQP\", \"Metric\": \"F1\", \"Result\": \"71.7\"}, {\"Task\": \"Sentence Similarity\", \"Dataset\": \"STS-B\", \"Metric\": \"Spearman correlation coefficient\", \"Result\": \"83.4\"}, {\"Task\": \"Natural Language Inference\", \"Dataset\": \"MNLI-m\", \"Metric\": \"Accuracy\", \"Result\": \"84.3\"}, {\"Task\": \"Natural Language Inference\", \"Dataset\": \"MNLI-mm\", \"Metric\": \"Accuracy\", \"Result\": \"83.8\"}, {\"Task\": \"Natural Language Inference\", \"Dataset\": \"QNLI\", \"Metric\": \"Accuracy\", \"Result\": \"89.8\"}, {\"Task\": \"Natural Language Inference\", \"Dataset\": \"RTE\", \"Metric\": \"Accuracy\", \"Result\": \"63.7\"}, {\"Task\": \"Single Sentence Classification\", \"Dataset\": \"CoLA\", \"Metric\": \"Matthews correlation coefficient\", \"Result\": \"52.8\"}, {\"Task\": \"Single Sentence Classification\", \"Dataset\": \"SST-2\", \"Metric\": \"Accuracy\", \"Result\": \"94.6\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"CoNLL-2003\", \"Metric\": \"F1\", \"Result\": \"95.6\"}]",
+  "response_sha256": "723d79ef830ec837cec96cfa6cd405b21cf6d3d6bf37d2cfff15c34f35c74e11",
+  "seconds": 5.328000000678003
+}

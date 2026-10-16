@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 5858,
+  "completion_tokens": 223,
+  "total_tokens": 6081,
+  "request_seconds": 5.265999999828637,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1911.10390.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "09c5ae99f4a76991f9303e55c061e440ed7da959a3d9d540dff0eec2742df665",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxOe5qEWJ1nreJ1mvbBZciwV2xVA",
+      "usage": {
+        "completion_tokens": 223,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 89,
+          "engine_ttlt_ms": 1030,
+          "pre_inference_ms": 134,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 431,
+          "service_ttlt_ms": 1368,
+          "user_visible_ttft_ms": 297
+        },
+        "prompt_tokens": 5858,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 6081
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Summarization\", \"Dataset\": \"Newsroom\", \"Metric\": \"ROUGE-1\", \"Result\": \"45.93\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Newsroom\", \"Metric\": \"ROUGE-2\", \"Result\": \"24.14\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Newsroom\", \"Metric\": \"ROUGE-L\", \"Result\": \"42.51\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Newsroom\", \"Metric\": \"BERT-S\", \"Result\": \"66.20\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Newsroom\", \"Metric\": \"Human Informativeness\", \"Result\": \"2.865\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Newsroom\", \"Metric\": \"Human Grammaticality\", \"Result\": \"2.855\"}, {\"Task\": \"Summarization\", \"Dataset\": \"Newsroom\", \"Metric\": \"Human Truthfulness\", \"Result\": \"2.738\"}]",
+      "response_sha256": "5eae080ba0773c7e268f9e6aa86cb60137c4aade0d650837e0518918dfb40613",
+      "seconds": 5.265999999828637
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

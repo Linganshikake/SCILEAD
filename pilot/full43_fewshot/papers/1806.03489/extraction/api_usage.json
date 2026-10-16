@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4937,
+  "completion_tokens": 70,
+  "total_tokens": 5007,
+  "request_seconds": 30.32799999974668,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1806.03489.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "45edc838bae5523e76e8211d5dc437a364b90be3b5b4ad7ada2d114144a2c0d6",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxGtGtxy09U4IblG32vkhYzX16Fa",
+      "usage": {
+        "completion_tokens": 70,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 5,
+          "engine_ttft_ms": 159,
+          "engine_ttlt_ms": 501,
+          "pre_inference_ms": 314,
+          "service_tbt_ms": 5,
+          "service_ttft_ms": 916,
+          "service_ttlt_ms": 1263,
+          "user_visible_ttft_ms": 602
+        },
+        "prompt_tokens": 4937,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 5007
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "[{\"Task\": \"Named Entity Recognition\", \"Dataset\": \"CONLL-2003\", \"Metric\": \"F1\", \"Result\": \"91.73\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"ONTONOTES 5.0\", \"Metric\": \"F1\", \"Result\": \"87.95\"}]",
+      "response_sha256": "f9dc958273ea8f53e4e36f2957effcd238397adc903a5fc166388498b721704d",
+      "seconds": 30.32799999974668
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

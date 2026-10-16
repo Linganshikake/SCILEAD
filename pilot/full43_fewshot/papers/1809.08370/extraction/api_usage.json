@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 6318,
+  "completion_tokens": 307,
+  "total_tokens": 6625,
+  "request_seconds": 41.46899999957532,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1809.08370.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "b2beef46397371af7d06587c35950ff4778485239cb9aa76bec5348031691eb6",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxJ295ZmCiT7mpTbJhJ1fUSUeYTM",
+      "usage": {
+        "completion_tokens": 307,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 6,
+          "engine_ttft_ms": 520,
+          "engine_ttlt_ms": 2441,
+          "pre_inference_ms": 260,
+          "service_tbt_ms": 6,
+          "service_ttft_ms": 946,
+          "service_ttlt_ms": 2791,
+          "user_visible_ttft_ms": 687
+        },
+        "prompt_tokens": 6318,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 6625
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_a265b6cf81",
+      "raw_answer": "[{\"Task\": \"Combinatory Categorial Grammar (CCG) Supertagging\", \"Dataset\": \"CCGBank\", \"Metric\": \"Accuracy\", \"Result\": \"96.05\"}, {\"Task\": \"Text Chunking\", \"Dataset\": \"CoNLL-2000\", \"Metric\": \"F1\", \"Result\": \"96.98\"}, {\"Task\": \"Named Entity Recognition (NER)\", \"Dataset\": \"CoNLL-2003\", \"Metric\": \"F1\", \"Result\": \"92.61\"}, {\"Task\": \"Fine-Grained NER (FGN)\", \"Dataset\": \"OntoNotes\", \"Metric\": \"F1\", \"Result\": \"88.81\"}, {\"Task\": \"Part-of-Speech (POS) Tagging\", \"Dataset\": \"Penn Treebank WSJ\", \"Metric\": \"Accuracy\", \"Result\": \"97.74\"}, {\"Task\": \"Dependency Parsing\", \"Dataset\": \"Penn Treebank (Stanford Dependencies v3.3.0)\", \"Metric\": \"UAS\", \"Result\": \"96.61\"}, {\"Task\": \"Dependency Parsing\", \"Dataset\": \"Penn Treebank (Stanford Dependencies v3.3.0)\", \"Metric\": \"LAS\", \"Result\": \"95.02\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"IWSLT 2015 English-Vietnamese tst2013\", \"Metric\": \"BLEU\", \"Result\": \"29.58\"}]",
+      "response_sha256": "b1cc0afb7ce991ec88926143dd5ac2efb2a8620c5a80c4de92c87ffb8c29b09b",
+      "seconds": 41.46899999957532
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

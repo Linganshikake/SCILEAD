@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 5923,
+  "completion_tokens": 293,
+  "total_tokens": 6216,
+  "request_seconds": 9.656000000424683,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1908.08345.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "cb8189fe88d144161a00346151c1543f529a23c0fce8845c9c8fa97ac1cc81bc",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxNsSzCZeechfQO195t8tLzJbY1M",
+      "usage": {
+        "completion_tokens": 293,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 355,
+          "engine_ttlt_ms": 1386,
+          "pre_inference_ms": 237,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 1413,
+          "service_ttlt_ms": 2439,
+          "user_visible_ttft_ms": 1176
+        },
+        "prompt_tokens": 5923,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 6216
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-1\", \"Result\": \"43.85\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-2\", \"Result\": \"20.34\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-L\", \"Result\": \"39.90\"}, {\"Task\": \"Summarization\", \"Dataset\": \"NYT\", \"Metric\": \"ROUGE-1\", \"Result\": \"49.02\"}, {\"Task\": \"Summarization\", \"Dataset\": \"NYT\", \"Metric\": \"ROUGE-2\", \"Result\": \"31.02\"}, {\"Task\": \"Summarization\", \"Dataset\": \"NYT\", \"Metric\": \"ROUGE-L\", \"Result\": \"45.55\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-1\", \"Result\": \"38.81\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-2\", \"Result\": \"16.50\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-L\", \"Result\": \"31.27\"}]",
+      "response_sha256": "3905a8dc76c2effc3c4b7e68c123cd5b8cd4ce4577fe731ce1441e303390f1e1",
+      "seconds": 9.656000000424683
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

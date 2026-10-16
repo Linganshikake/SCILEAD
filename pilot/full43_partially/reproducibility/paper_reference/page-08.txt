@@ -1,0 +1,96 @@
+Model IIM-Task IIM-Dataset IIM-Metric IIM-ResultR P F1 R P F1 R P F1 R P F1
+Fully
+AxCell 58.52 68.98 63.32 33.87 63.66 44.22 51.36 69.35 59.01 18.41 45.32 26.18
+Llama-2 + CS 67.20 59.83 63.30 58.81 68.93 63.47 61.41 67.36 64.25 31.61 23.75 27.12Llama-2 60.74 55.45 57.97 55.03 62.60 58.57 65.49 71.51 68.37
+Mixtral + CS 91.99 86.27 89.04 73.20 85.03 78.67 71.78 76.56 74.09 41.75 44.62 43.13Mixtral 89.74 86.85 88.27 71.26 81.68 76.12 67.20 76.72 71.65
+Llama-3 + CS 90.85 85.69 88.19 78.62 82.43 80.48 81.41 87.02 84.12 49.56 39.50 43.96Llama-3 92.17 87.33 89.68 87.75 92.09 89.87 89.48 94.90 92.11
+GPT-4 + CS 90.77 90.70 90.73 79.93 86.36 83.02 81.49 86.36 83.85 68.22 70.34 69.26GPT-4 91.10 90.62 90.86 86.05 92.64 89.22 86.46 88.18 87.31
+Partially
+Llama-2 42.98 39.70 41.27 33.14 41.05 36.67 59.34 61.24 60.28 31.61 23.75 27.12
+Mixtral 60.72 50.23 54.98 44.45 49.67 46.92 71.19 78.72 74.77 41.75 44.62 43.13
+Llama-3 80.39 65.72 72.32 62.86 66.81 64.77 88.90 94.90 91.80 49.56 39.50 43.96
+GPT-4 78.30 63.82 70.32 79.52 83.29 81.36 89.27 92.21 90.72 68.22 70.34 69.26
+Table 4: Individual item match (IIM) scores (%). R: Recall, P: Precision, F1: F1 score. The best results for each
+setting are underlined. Overall highest results are given in bold. Since normalization is not applied to Results, its
+scores are the same across both settings. The evaluation of the cold start setting is not applicable, as no pre-defined
+labels are used and only gold leaderboards with a minimum of three entries are used for normalization.
+Model LR PC RC AO
+Fully
+AxCell 40.00 25.78 15.45 11.93
+Llama-2 + CS 70.37 35.23 8.88 4.60
+Llama-2 70.37 34.96 8.26 4.96
+Mixtral + CS 96.30 53.60 20.58 13.83
+Mixtral 88.89 46.85 16.32 11.96
+Llama-3 + CS 81.48 60.15 22.65 21.45
+Llama-3 96.30 79.18 29.30 25.49
+GPT-4 + CS 92.59 63.70 45.59 38.66
+GPT-4 100.00 70.37 51.79 53.87
+Partially
+Llama-2 74.07 30.75 4.02 1.18
+Mixtral 77.78 28.70 12.01 12.47
+Llama-3 92.59 61.90 19.01 19.52
+GPT-4 88.89 55.92 40.06 43.71
+Cold Start
+Llama-2 16.05 5.66 0.49 0.05
+Mixtral 49.38 20.49 8.10 3.03
+Llama-3 79.01 58.78 17.18 17.63
+GPT-4 81.48 58.74 46.13 48.15
+Table 5: Gold leaderboard evaluation (%). LR: Leader-
+board recall, PC: Paper coverage, RC: Result coverage,
+AO: Average Overlap. The best results for each setting
+are underlined. Overall best results are given in bold.
+Standard dev. for cold start are given in Appendix F.
+with a minimum of three papers, but we also ex-
+plored the effects of reducing this threshold to two
+papers. Notably, this change significantly increased
+the number of leaderboards from 27 to 62. Table 15
+demonstrates the leaderboard construction results,
+and all other evaluation results can be seen in Ap-
+pendix E. In general, the overall performance drops
+compared to the main results in Table 5. This is ex-
+pected due to the increased number of leaderboards.
+Notably, most of our key findings from the main ex-
+periments remain consistent. However, one notable
+exception is the performance of GPT-4, which ex-
+cels in the partially pre-defined setting compared to
+the cold start setting, contrary to our main results.
+We attribute this discrepancy to the fact that the
+cold start setting is more severely disadvantaged
+Model LR PC RC AO
+Partially
+Llama-2 60.00 17.76 6.71 2.08
+Mixtral 60.00 20.26 13.26 20.28
+Llama-3 90.00 57.38 11.83 7.01
+GPT-4 70.00 50.57 33.50 26.03
+Cold Start
+Llama-2 10.00 3.10 0.67 0.00
+Mixtral 53.33 22.67 10.97 7.91
+Llama-3 86.67 78.14 22.59 14.79
+GPT-4 83.33 60.76 43.11 37.50
+Table 6: Leaderboard evaluation only on masked leader-
+boards from partially masking setting (%). Metrics are
+the same as Table 5. Standard dev. for cold start are
+given in Appendix F.
+in the second normalization step, which becomes
+increasingly challenging as the number of leader-
+boards grows. In other words, the cold start setting
+struggles to effectively distinguish between simi-
+lar TDM pairs in the second normalization step,
+leading to this observed performance difference.
+Zero-shot vs Few-shot. While zero-shot prompt-
+ing LLMs achieves impressive performance in
+leaderboard construction, we additionally explore
+whether including few-shot examples in the prompt
+can further enhance the results. To this end, we
+conducted experiments using the best model (GPT-
+4 Turbo) in the fully pre-defined setting. We se-
+lected a paper not included in SCILEAD but work-
+ing on similar tasks as an example. We provided
+text chunks, including TDM information, along
+with the results tables and the expected results for
+TDMR extraction. For normalization, we used
+the same pre-defined entity set. The remaining
+experimental details were identical to the main ex-
+periments. Unlike previous work, where few-shot
+prompting often yields performance gains, our re-
+7970

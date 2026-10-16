@@ -1,0 +1,538 @@
+{
+  "automatic_category_counts": {
+    "numeric_result_missing_or_changed": 26,
+    "correct": 19,
+    "normalization_null": 15,
+    "numeric_match_but_binding_or_label_mismatch": 5
+  },
+  "papers": [
+    {
+      "paper": "1702.02098.pdf",
+      "categories": {
+        "numeric_result_missing_or_changed": 2
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 1,
+          "field": "Dataset",
+          "original": "CoNLL-2003",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 2,
+          "field": "Dataset",
+          "original": "OntoNotes",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [
+        {
+          "prediction_index": 1,
+          "gold_index": 1,
+          "prediction": "90.65 ± 0.15",
+          "gold": 90.65
+        }
+      ],
+      "non_scalar_raw_results": [
+        {
+          "index": 1,
+          "value": "90.65 ± 0.15"
+        },
+        {
+          "index": 2,
+          "value": "86.84 ± 0.19"
+        }
+      ],
+      "extra_predictions_without_strict_numeric_gold_match": [
+        {
+          "index": 1,
+          "raw": {
+            "Task": "Named Entity Recognition",
+            "Dataset": "CoNLL-2003",
+            "Metric": "F1",
+            "Result": "90.65 ± 0.15"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": null,
+            "Metric": "F1",
+            "Result": "90.65 ± 0.15"
+          }
+        },
+        {
+          "index": 2,
+          "raw": {
+            "Task": "Named Entity Recognition",
+            "Dataset": "OntoNotes",
+            "Metric": "F1",
+            "Result": "86.84 ± 0.19"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": null,
+            "Metric": "F1",
+            "Result": "86.84 ± 0.19"
+          }
+        }
+      ]
+    },
+    {
+      "paper": "2020.emnlp-main.152.pdf",
+      "categories": {
+        "numeric_result_missing_or_changed": 2,
+        "correct": 2,
+        "normalization_null": 2
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 3,
+          "field": "Task",
+          "original": "Sentence-level Joint Accuracy",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 6,
+          "field": "Task",
+          "original": "Sentence-level Joint Accuracy",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": [
+        {
+          "index": 2,
+          "raw": {
+            "Task": "Slot Filling",
+            "Dataset": "ATIS",
+            "Metric": "F1-score",
+            "Result": "96.16"
+          },
+          "normalized": {
+            "Task": "Intent Detection and Slot Filling",
+            "Dataset": "ATIS",
+            "Metric": "F1",
+            "Result": "96.16"
+          }
+        },
+        {
+          "index": 5,
+          "raw": {
+            "Task": "Slot Filling",
+            "Dataset": "Snips",
+            "Metric": "F1-score",
+            "Result": "99.00"
+          },
+          "normalized": {
+            "Task": "Intent Detection and Slot Filling",
+            "Dataset": "SNIPS",
+            "Metric": "F1",
+            "Result": "99.00"
+          }
+        }
+      ]
+    },
+    {
+      "paper": "2105.03654.pdf",
+      "categories": {
+        "numeric_match_but_binding_or_label_mismatch": 3,
+        "numeric_result_missing_or_changed": 3,
+        "normalization_null": 1
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 3,
+          "field": "Dataset",
+          "original": "CoNLL-03",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": [
+        {
+          "index": 4,
+          "raw": {
+            "Task": "Named Entity Recognition",
+            "Dataset": "CoNLL++",
+            "Metric": "Accuracy",
+            "Result": "94.62"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": "CoNLL++",
+            "Metric": "Accuracy",
+            "Result": "94.62"
+          }
+        },
+        {
+          "index": 6,
+          "raw": {
+            "Task": "Named Entity Recognition",
+            "Dataset": "NCBI",
+            "Metric": "Accuracy",
+            "Result": "89.22"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": "NCBI",
+            "Metric": "Accuracy",
+            "Result": "89.22"
+          }
+        },
+        {
+          "index": 7,
+          "raw": {
+            "Task": "Named Entity Recognition",
+            "Dataset": "E-commerce",
+            "Metric": "Accuracy",
+            "Result": "84.10"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": "E-commerce",
+            "Metric": "Accuracy",
+            "Result": "84.10"
+          }
+        },
+        {
+          "index": 8,
+          "raw": {
+            "Task": "Cross-domain NER Transfer",
+            "Dataset": "CBS SciTech News (trained on CoNLL-03)",
+            "Metric": "Accuracy",
+            "Result": "76.38"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": "CoNLL-2003 - English",
+            "Metric": "Accuracy",
+            "Result": "76.38"
+          }
+        },
+        {
+          "index": 9,
+          "raw": {
+            "Task": "Named Entity Recognition",
+            "Dataset": "WNUT-17",
+            "Metric": "F1 Score",
+            "Result": "62.29"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": "WNUT-17 - English",
+            "Metric": "F1",
+            "Result": "62.29"
+          }
+        }
+      ]
+    },
+    {
+      "paper": "1910.13461.pdf",
+      "categories": {
+        "numeric_result_missing_or_changed": 14,
+        "normalization_null": 9,
+        "numeric_match_but_binding_or_label_mismatch": 1,
+        "correct": 1
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 2,
+          "field": "Dataset",
+          "original": "MNLI",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 3,
+          "field": "Metric",
+          "original": "ROUGE-2",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 4,
+          "field": "Metric",
+          "original": "ROUGE-1",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 5,
+          "field": "Metric",
+          "original": "ROUGE-L",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 6,
+          "field": "Metric",
+          "original": "ROUGE-1",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 7,
+          "field": "Metric",
+          "original": "ROUGE-2",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 8,
+          "field": "Metric",
+          "original": "ROUGE-L",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 10,
+          "field": "Metric",
+          "original": "ROUGE-1",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 11,
+          "field": "Metric",
+          "original": "ROUGE-2",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 12,
+          "field": "Metric",
+          "original": "ROUGE-L",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": [
+        {
+          "index": 1,
+          "raw": {
+            "Task": "Extractive Question Answering",
+            "Dataset": "SQuAD 1.1",
+            "Metric": "F1",
+            "Result": "90.9"
+          },
+          "normalized": {
+            "Task": "Question Answering",
+            "Dataset": "SQuAD 1.1",
+            "Metric": "F1",
+            "Result": "90.9"
+          }
+        },
+        {
+          "index": 2,
+          "raw": {
+            "Task": "Natural Language Inference",
+            "Dataset": "MNLI",
+            "Metric": "Accuracy",
+            "Result": "86.6"
+          },
+          "normalized": {
+            "Task": "Natural Language Inference (NLI)",
+            "Dataset": null,
+            "Metric": "Accuracy",
+            "Result": "86.6"
+          }
+        }
+      ]
+    },
+    {
+      "paper": "D18-1105.pdf",
+      "categories": {
+        "normalization_null": 1,
+        "correct": 1
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 1,
+          "field": "Dataset",
+          "original": "SwDA",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": []
+    },
+    {
+      "paper": "1703.06345.pdf",
+      "categories": {
+        "numeric_result_missing_or_changed": 2,
+        "correct": 2,
+        "numeric_match_but_binding_or_label_mismatch": 1
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 6,
+          "field": "Dataset",
+          "original": "Genia",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        },
+        {
+          "record": 7,
+          "field": "Dataset",
+          "original": "Twitter",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": [
+        {
+          "index": 2,
+          "raw": {
+            "Task": "Chunking",
+            "Dataset": "CoNLL 2000",
+            "Metric": "F1",
+            "Result": "94.66"
+          },
+          "normalized": {
+            "Task": "Text Chunking",
+            "Dataset": "CoNLL-2000",
+            "Metric": "F1",
+            "Result": "94.66"
+          }
+        },
+        {
+          "index": 3,
+          "raw": {
+            "Task": "NER",
+            "Dataset": "CoNLL 2003 English",
+            "Metric": "F1",
+            "Result": "91.21"
+          },
+          "normalized": {
+            "Task": "Named Entity Recognition (NER)",
+            "Dataset": "CoNLL-2003 - English",
+            "Metric": "F1",
+            "Result": "91.21"
+          }
+        },
+        {
+          "index": 6,
+          "raw": {
+            "Task": "POS Tagging",
+            "Dataset": "Genia",
+            "Metric": "Accuracy",
+            "Result": "92.62"
+          },
+          "normalized": {
+            "Task": "Part-of-Speech (POS) Tagging",
+            "Dataset": null,
+            "Metric": "Accuracy",
+            "Result": "92.62"
+          }
+        },
+        {
+          "index": 7,
+          "raw": {
+            "Task": "POS Tagging",
+            "Dataset": "Twitter",
+            "Metric": "Accuracy",
+            "Result": "83.65"
+          },
+          "normalized": {
+            "Task": "Part-of-Speech (POS) Tagging",
+            "Dataset": null,
+            "Metric": "Accuracy",
+            "Result": "83.65"
+          }
+        }
+      ]
+    },
+    {
+      "paper": "1903.07785.pdf",
+      "categories": {
+        "numeric_result_missing_or_changed": 3,
+        "correct": 7,
+        "normalization_null": 1
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 10,
+          "field": "Dataset",
+          "original": "CoNLL-2003",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": [
+        {
+          "index": 1,
+          "raw": {
+            "Task": "CoLA (Corpus of Linguistic Acceptability)",
+            "Dataset": "GLUE/CoLA",
+            "Metric": "Matthews correlation coefficient (mcc)",
+            "Result": "56.6"
+          },
+          "normalized": {
+            "Task": "Linguistic Acceptability",
+            "Dataset": "CoLA",
+            "Metric": "Matthew's Correlation Coefficient (MCC)",
+            "Result": "56.6"
+          }
+        },
+        {
+          "index": 9,
+          "raw": {
+            "Task": "RTE (Recognizing Textual Entailment)",
+            "Dataset": "GLUE/RTE",
+            "Metric": "Accuracy",
+            "Result": "65.1"
+          },
+          "normalized": {
+            "Task": "Natural Language Inference (NLI)",
+            "Dataset": "RTE",
+            "Metric": "Accuracy",
+            "Result": "65.1"
+          }
+        }
+      ]
+    },
+    {
+      "paper": "1711.05568.pdf",
+      "categories": {
+        "correct": 2
+      },
+      "normalization_out_of_set": [],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": []
+    },
+    {
+      "paper": "wang19f.pdf",
+      "categories": {
+        "correct": 4,
+        "normalization_null": 1
+      },
+      "normalization_out_of_set": [
+        {
+          "record": 5,
+          "field": "Dataset",
+          "original": "IWSLT2014 German-English (De→En)",
+          "raw_answer": "None",
+          "finish_reason": "stop"
+        }
+      ],
+      "strict_vs_official_differences": [],
+      "non_scalar_raw_results": [],
+      "extra_predictions_without_strict_numeric_gold_match": []
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n    {\n        \"Task\": \"Intent Detection\",\n        \"Dataset\": \"ATIS\",\n        \"Metric\": \"Accuracy\",\n        \"Result\": \"98.99%\"\n    },\n    {\n        \"Task\": \"Slot Filling\",\n        \"Dataset\": \"ATIS\",\n        \"Metric\": \"F1 Score\",\n        \"Result\": \"96.89%\"\n    },\n    {\n        \"Task\": \"Intent Detection\",\n        \"Dataset\": \"Internal Multi-domain (Movie)\",\n        \"Metric\": \"Accuracy\",\n        \"Result\": \"95.91%\"\n    },\n    {\n        \"Task\": \"Slot Filling\",\n        \"Dataset\": \"Internal Multi-domain (Movie)\",\n        \"Metric\": \"F1 Score\",\n        \"Result\": \"93.8%\"\n    },\n    {\n        \"Task\": \"Intent Detection\",\n        \"Dataset\": \"Internal Multi-domain (Food)\",\n        \"Metric\": \"Accuracy\",\n        \"Result\": \"99.49%\"\n    },\n    {\n        \"Task\": \"Slot Filling\",\n        \"Dataset\": \"Internal Multi-domain (Food)\",\n        \"Metric\": \"F1 Score\",\n        \"Result\": \"95.8%\"\n    },\n    {\n        \"Task\": \"Intent Detection\",\n        \"Dataset\": \"Internal Multi-domain (Home)\",\n        \"Metric\": \"Accuracy\",\n        \"Result\": \"99.27%\"\n    },\n    {\n        \"Task\": \"Slot Filling\",\n        \"Dataset\": \"Internal Multi-domain (Home)\",\n        \"Metric\": \"F1 Score\",\n        \"Result\": \"98.2%\"\n    }\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791895754,
+  "id": "chatcmpl-EYWEM3bfBYjwyCJpSDMhtdbB9HRIS",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260927094339-c1ca4ab1-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 316,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 127,
+      "engine_ttlt_ms": 1599,
+      "pre_inference_ms": 179,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 484,
+      "service_ttlt_ms": 1856,
+      "user_visible_ttft_ms": 306
+    },
+    "prompt_tokens": 2017,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 2333
+  }
+}

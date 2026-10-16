@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 5522,
+  "completion_tokens": 73,
+  "total_tokens": 5595,
+  "request_seconds": 5.391000000759959,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1603.01354.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "1aa9548fede948459075897a17850662055afc55167646981c38d4d480765af3",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxF73zbvjbPR6BELqow8OA4zybUT",
+      "usage": {
+        "completion_tokens": 73,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 6,
+          "engine_ttft_ms": 83,
+          "engine_ttlt_ms": 550,
+          "pre_inference_ms": 613,
+          "service_tbt_ms": 6,
+          "service_ttft_ms": 1034,
+          "service_ttlt_ms": 1476,
+          "user_visible_ttft_ms": 421
+        },
+        "prompt_tokens": 5522,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 5595
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"POS Tagging\", \"Dataset\": \"WSJ portion of Penn Treebank (PTB)\", \"Metric\": \"Accuracy\", \"Result\": \"97.55\"}, {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"CoNLL 2003\", \"Metric\": \"F1\", \"Result\": \"91.21\"}]",
+      "response_sha256": "d0017104fa25a3873c8831a0d18fdb8e9ff075cfc6ad840a4c0fd2be5a12f2e6",
+      "seconds": 5.391000000759959
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

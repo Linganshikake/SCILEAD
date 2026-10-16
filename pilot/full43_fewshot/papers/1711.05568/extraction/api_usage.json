@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4837,
+  "completion_tokens": 60,
+  "total_tokens": 4897,
+  "request_seconds": 3.031000000424683,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1711.05568.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "1d82013818d9c31a3948593569dc1c24c0914d7173177202af2962a3bacd087b",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxChmHGYzhchgbw5krStF8AB2Wc4",
+      "usage": {
+        "completion_tokens": 60,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 79,
+          "engine_ttlt_ms": 306,
+          "pre_inference_ms": 225,
+          "service_tbt_ms": 3,
+          "service_ttft_ms": 586,
+          "service_ttlt_ms": 758,
+          "user_visible_ttft_ms": 361
+        },
+        "prompt_tokens": 4837,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 4897
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Dialogue Act Recognition\", \"Dataset\": \"SwDA\", \"Metric\": \"Accuracy\", \"Result\": \"81.3\"}, {\"Task\": \"Dialogue Act Recognition\", \"Dataset\": \"MRDA\", \"Metric\": \"Accuracy\", \"Result\": \"91.7\"}]",
+      "response_sha256": "2ca15ab09d73bbcf1ab2835f67a38301e6d6de21ab9d6ff549c9541dc1f3476a",
+      "seconds": 3.031000000424683
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

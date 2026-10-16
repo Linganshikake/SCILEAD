@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "content_filter_result": {
+        "error": {
+          "code": "content_filter_error",
+          "message": "The contents are not filtered"
+        }
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n    {\n        \"Task\": \"POS Tagging\",\n        \"Dataset\": \"Wall Street Journal (WSJ) portion of Penn Treebank (PTB)\",\n        \"Metric\": \"Accuracy\",\n        \"Result\": \"97.55\"\n    },\n    {\n        \"Task\": \"Named Entity Recognition (NER)\",\n        \"Dataset\": \"CoNLL 2003 English\",\n        \"Metric\": \"F1\",\n        \"Result\": \"91.21\"\n    }\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791894797,
+  "id": "chatcmpl-EYVyvr6CCTALDtH0TiHcCmC8pp9cY",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260928082146-1085b96e-default-r0-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 97,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 171,
+      "engine_ttlt_ms": 687,
+      "pre_inference_ms": 130,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 1049,
+      "service_ttlt_ms": 1559,
+      "user_visible_ttft_ms": 919
+    },
+    "prompt_tokens": 3273,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 3370
+  }
+}

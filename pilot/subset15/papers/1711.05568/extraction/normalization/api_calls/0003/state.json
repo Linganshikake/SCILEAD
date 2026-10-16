@@ -1,0 +1,59 @@
+{
+  "call": 3,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 3,
+    "record": 2,
+    "field": "Task",
+    "original_value": "Dialogue Act Recognition",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Dialogue Act Recognition\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 224
+  },
+  "max_tokens": 15,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYV15ciDEpTfyk59iqABxRB2JKFnD",
+  "usage": {
+    "completion_tokens": 3,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 7,
+      "engine_ttft_ms": 32,
+      "engine_ttlt_ms": 59,
+      "pre_inference_ms": 165,
+      "service_tbt_ms": 0,
+      "service_ttft_ms": 348,
+      "service_ttlt_ms": 349,
+      "user_visible_ttft_ms": 183
+    },
+    "prompt_tokens": 224,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 227
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "Dialogue Act Classification",
+  "seconds": 3.375
+}

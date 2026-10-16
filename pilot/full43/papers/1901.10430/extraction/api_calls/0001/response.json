@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n  {\n    \"Task\": \"Machine Translation\",\n    \"Dataset\": \"WMT English-German (newstest2014)\",\n    \"Metric\": \"BLEU\",\n    \"Result\": \"29.7\"\n  },\n  {\n    \"Task\": \"Machine Translation\",\n    \"Dataset\": \"WMT English-French (newstest2014)\",\n    \"Metric\": \"BLEU\",\n    \"Result\": \"43.2\"\n  },\n  {\n    \"Task\": \"Machine Translation\",\n    \"Dataset\": \"IWSLT'14 German-English\",\n    \"Metric\": \"BLEU\",\n    \"Result\": \"35.2\"\n  },\n  {\n    \"Task\": \"Machine Translation\",\n    \"Dataset\": \"WMT English-Chinese (newstest2017)\",\n    \"Metric\": \"BLEU\",\n    \"Result\": \"24.4\"\n  },\n  {\n    \"Task\": \"Language Modeling\",\n    \"Dataset\": \"Google Billion Word\",\n    \"Metric\": \"Perplexity\",\n    \"Result\": \"26.67\"\n  },\n  {\n    \"Task\": \"Summarization\",\n    \"Dataset\": \"CNN-DailyMail\",\n    \"Metric\": \"Rouge-1\",\n    \"Result\": \"39.84\"\n  },\n  {\n    \"Task\": \"Summarization\",\n    \"Dataset\": \"CNN-DailyMail\",\n    \"Metric\": \"Rouge-2\",\n    \"Result\": \"16.25\"\n  },\n  {\n    \"Task\": \"Summarization\",\n    \"Dataset\": \"CNN-DailyMail\",\n    \"Metric\": \"Rouge-L\",\n    \"Result\": \"36.73\"\n  }\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791895901,
+  "id": "chatcmpl-EYWGjMjDLTZ3stHuf7HcLdJ4RPL1g",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260930025115-a80c64b1-default-r0-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 343,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 79,
+      "engine_ttlt_ms": 1488,
+      "pre_inference_ms": 132,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 408,
+      "service_ttlt_ms": 1817,
+      "user_visible_ttft_ms": 276
+    },
+    "prompt_tokens": 3277,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 3620
+  }
+}

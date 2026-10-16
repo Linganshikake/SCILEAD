@@ -1,0 +1,146 @@
+[
+  {
+    "content": "Word Sense Induction with Neural biLM and Symmetric Patterns Asaf Amrami † and Yoav Goldberg † ‡ † Computer Science Department, Bar Ilan University, Israel ‡ Allen Institute for Artiﬁcial Intelligence {asaf.amrami, yoav.goldberg}@gmail.com Abstract (d) Bass scales are the worst. An established method for Word Sense Induc- tion (WSI) uses a language model to predict probable substitutes for target words, and in- duces senses by clustering these resulting sub- stitute vectors. We replace the ngram-based language model (LM) with a recurrent one. Beyond being more accurate, the use of the recurrent LM allows us to effectively query it in a creative way, using what we call dynamic symmetric patterns. The combination of the RNN-LM and the dynamic symmetric patterns results in strong substitute vectors for WSI, allowing to surpass the cur- rent state-of-the-art on the SemEval 2013 WSI shared task by a large margin. Introduction This calls for a soft clustering, allowing to prob- abilistically associate a given mention to two senses. The problem of WSI has been extensively stud- ied with a series of shared tasks on the topic (Agirre and Soroa, 2007; Manandhar et al., 2010; the latest being Jurgens and Klapaftis, 2013), SemEval 2013 Task 13 (Jurgens and Klapaftis, 2013). Recent state-of-the-art approaches to WSI rely on generative graphical models (Lau et al., 2013; Wang et al., 2015; Komninos and Manand- har, 2016). In these works, the sense is modeled as a latent variable that inﬂuences the context of the target word. The later models explicitly differ- entiate between local (syntactic, close to the dis- ambiguated word) and global (thematic, semantic) context features. We deal with the problem of word sense induc- tion (WSI): given a target lemma and a collection of within-sentence usages it, cluster the usages (instances) according to the different senses of the target lemma. For example, for the sentences: Substitute Vectors Baskaya et al. (2013) take a different",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "usages it, cluster the usages (instances) according to the different senses of the target lemma. For example, for the sentences: Substitute Vectors Baskaya et al. (2013) take a different approach to the problem, based on sub- stitute vectors. They represent each instance as a distribution of possible substitute words, as deter- mined by a language model (LM). The substitute vectors are then clustered to obtain senses. We would like to cluster (a) and (c) in one group and (b) in another.1 Note that some mentions are ambiguous. For example, (d) matches both the music and the ﬁsh senses: Baskaya et al. (2013) derive their probabilities from a 4-gram language model. Their system (AI- KU) was one of the best performing at the time of SemEval 2013 shared task. Our method is inspired by the AI-KU use of substitution based sense in- duction, but deviate from it by moving to a recur- rent language model. Besides being more accu- rate, this allows us to further improve the quality of the derived substitutions by the incorporation of dynamic symmetric patterns. 1This example shows homonymy, a case where the same word form has two distinct meaning. A more subtle case is polysemy, where the senses share some semantic similarity. In “She played a low bass note”, the sense of bass is related to the sense in (b), but distinct from it. The WSI task we tackle in this work deals with both cases. BiLM Bidirectional RNNs were shown to be ef- fective for word-sense disambiguation and lexi- cal substitution tasks (Melamud et al., 2016; Yuan et al., 2016; Raganato et al., 2017). We adopt the 4860 Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, pages 4860-4867 Brussels, Belgium, October 31 - November 4, 2018. ©2018 Association for Computational Linguistics",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1807
+    }
+  },
+  {
+    "content": "ELMo biLM model of Peters et al. (2018), which was shown to produce very competitive results for many NLP tasks. We use the pre-trained ELMo biLM provided by Peters et al. (2018).2 How- ever, rather than using the LSTM state vectors as suggested in the ELMo paper, we opt instead to use the predicted word probabilities. Moving from continuous and opaque state vectors to dis- crete and transparent word distributions allows far better control of the resulting representations (e.g. by sampling, re-weighting and lemmatizing the words) as well as better debugging opportunities. the move to the neural biLM already outperforms the AI-KU system, and matches the previous state-of-the-art. However, we observe that the substitute vectors do not take into account the disambiguated word itself. We ﬁnd that this often results in noisy substitutions. As a motivating example, consider the sentence “the doctor recommends oranges for your health”. Here, running is a perfectly good substitution, as the “fruitness” of the target word itself isn’t rep- resented in the context. We would like the sub- stitutes word distribution representing the target word to take both kinds of information—the con- text as well as the target word—into account. Dynamic Symmetric Patterns Our main pro- posal incorporates such information. It is moti- vated by Hearst patterns (Hearst, 1992; Widdows and Dorow, 2002; Schwartz et al., 2015), and made possible by neural LMs. Neural LMs are better in capturing long-range dependencies, and can handle and predict unseen text by generalizing from similar contexts. Conjunctions, and in partic- ular the word and, are known to combine expres- sions of the same kind. Recently, Schwartz et al. (2015) used conjunctive symmetric patterns to de- rive word embeddings that excel at capturing word similarity. Similarly, Kozareva et al. (2008) search for doubly-anchored patterns including the word and in a large web-corpus to improve semantic- class induction. The method of",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "at capturing word similarity. Similarly, Kozareva et al. (2008) search for doubly-anchored patterns including the word and in a large web-corpus to improve semantic- class induction. The method of Schwartz et al. (2015) result in context-independent embeddings, while that of Kozareva et al. (2008) takes some context into account but is restricted to exact cor- pus matches and thus suffers a lot from sparsity. We make use of the rich sequence represen- tation capabilities of the neural biLM to de- rive context-dependent symmetric pattern substi- 2We thank the ELMo team for sharing the pre-trained models. tutions. Relying on the generalization properties of neural language models and the abundance of the “X and Y” pattern, we present the language model with a dynamically created incomplete pat- tern, and ask it to predict probable completion can- didates. Rather than predicting the word distribu- tion following the doctor recommends , we in- stead predict the distribution following the doctor recommends oranges and . This provides sub- stantial improvement, resulting in state-of-the-art performance on the SemEval 2013 shared task. The code for reproducing the experiments and our analyses is available at https://github. com/asafamr/SymPatternWSI. 2 Method Given a target word (lemma and its part-of-speech pair), together with several sentences in which the target word is used (instances), our goal is to clus- ter the word usages such that each cluster corre- sponds to a different sense of the target word. Fol- lowing the SemEval 2013 shared task and motivat- ing example (d) from the introduction, we seek a soft (probabilistic) clustering, in which each word instance is assigned with a probability of belong- ing to each of the sense-clusters. Our algorithm works in three stages: (1) We ﬁrst associate each instance with a probability dis- tribution over in-context word-substitutes. This probability distribution is based on a neural biLM (section 2.1). (2) We associate",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1799
+    }
+  },
+  {
+    "content": "stages: (1) We ﬁrst associate each instance with a probability dis- tribution over in-context word-substitutes. This probability distribution is based on a neural biLM (section 2.1). (2) We associate each instance with k representatives, each containing multiple sam- ples from its associated word distributions (section 2.3). (3) Finally, we cluster the representatives and use the hard clustering to derive a soft-clustering over the instances (section 2.4). We use the pre-trained neural biLM as a black- box, but use linguistically motivated processing of both its input and its output: we rely on the gen- eralization power of the biLM and query it using dynamic symmetric patterns (section 2.2); and we lemmatize the resulting word distributions. Running example In what follows, we demon- strate the algorithm using a running example of in- ducing senses from the word sound, focusing on the instance sentence: I liked the sound of the harpsichord. 2.1 biLM Derived Substitutions We follow the ELMo biLM approach (Peters et al., 2018) and consider two separately trained",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3596
+    }
+  },
+  {
+    "content": "language models, a forward model trained for predicting p→(wi|w1, ..., wi−1) and a backward model p←(wi|wn, ..., wi+1). Rather than combin- ing the two models’ predictions into a single dis- tribution, we simply associate the target word with two distributions, one from p→ and one from p←. For convenience, we use LM→(w1w2...wi−1 ) to denote the distribution p→(wi|w1, ..., wi−1) denote and p←(wi|wn, ..., wi+1). Context-based substitution In purely context-based setup (the one used in the AI-KU system) we represent the target word sounds by the two distributions: LM→(<s> I liked the of the harpsichord </s> ) LM←( The resulting top predictions from each distribu- tion are: {idea:0.12, fact:0.07, article: 0.05, guy: 0.04, concept: 0.02} and {sounds:0.04, version: strings: 0.03, piece: 0.02} respectively. 2.2 Dynamic Symmetric Patterns As discussed in the introduction, conditioning solely on context is ignoring valuable infor- mation. This is evident in the resulting word distributions. We use the coordinative sym- metric pattern X and Y in order to produce a substitutes vector incorporating both the word and its context. Concretely, we represent a target word w; by p_,(w’|wi,...,w;,and) and p_(w'|wn,..,Wi,and). For our running exam- ple, this translates to: LM_,(<s> I liked the sound and __) LM. (__and sound of the harpsichord . </s>) with resulting top words: {feel: 0.15, felt: 0.11, thought: 0.07, smell: 0.06, sounds: 0.05} and {sight: 0.16, sounds: 0.11, rhythm: 0.04, tone: 0.03, noise: 0.03}. The distributions predicted using the and pat- tern exhibit a much nicer behavior, and incorpo- rate global context (resulting in sensing related substitutes) as well as local and syntactic informa- tion that resulting from the target word itself. Ta- ble 1 compares the context-only and symmetric- pattern substitutes for two senses of the word sound. 2.3 Representative Generation To perform fuzzy clustering, we follow AI-KU and associate each instance with k representatives,",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "and symmetric- pattern substitutes for two senses of the word sound. 2.3 Representative Generation To perform fuzzy clustering, we follow AI-KU and associate each instance with k representatives, but deviate in the way the representatives are gen- erated. Specifically, each representative is a set of size 2€ , containing ¢ samples from the forward distribution and @ samples from the backward dis- tribution. In the symmetric pattern case above, a plausible representative, assuming £ = 2, would be: {feel, sounds, sight, rhythm} where two words were predicted by each side LM. In this work, we use = 4 and k = 20. 2.4 Sense Clustering After obtaining k representatives for each of the n word instances, we cluster the nk representa- tives into distinct senses and translate this hard- clustering of representatives into a probabilistic clustering of the originating instances. Hard-clustering of representatives Let V be the vocabulary obtained from all the representa- tives. We associate each representative with a sparse |V | dimensional bag-of-features vector, and arrange the representatives into a nk × |V | matrix M where each row corresponds to a representa- tive. We now cluster M ’s rows into senses. We found it is beneﬁcial to transform the matrix us- ing TF-IDF. Treating each representative as a doc- ument, TF-IDF reduces the weight of uninforma- tive words shared by many representatives. We use agglomerative clustering (cosine distance, av- erage linkage) and induce a ﬁxed number of clus- ters.3 We use sklearn (Pedregosa et al., 2011) for both TF-IDF weighting and clustering. Inducing soft clustering over instances After clustering the representatives, we induce a soft- clustering over the instances by associating each instance j to sense i based on the proportion of representatives of j that are assigned to cluster i. 2.5 Additional Processing Lemmatization The WSI task is deﬁned over lemmas, and some target words have morpholog- ical variability within a sense. This",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "of j that are assigned to cluster i. 2.5 Additional Processing Lemmatization The WSI task is deﬁned over lemmas, and some target words have morpholog- ical variability within a sense. This is especially common with verb tenses, e.g., “I booked a ﬂight” and “I am booking a ﬂight”. As the conjunctive 3In this work, we use 7 clusters, which roughly matches the number of senses for each target word in the corpus. Dy- namically selecting the number of clusters is left for future work. The effect of changing the number of clusters is ex- plored in the supplementary material.",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 3613
+    }
+  },
+  {
+    "content": "symmetric pattern favors morphologically-similar words, the resulting substitute vectors for these two sentences will differ, each of them agreeing with the tense of its source instance. To deal with this, we lemmatize the predictions made by the language model prior to adding them to the rep- resentatives. Such removal of morphological in- ﬂection is straightforward when using the word distributions but much less trivial when using raw LM state vectors, further motivating our choice of working with the word distributions. The substan- tial importance of the lemmatization is explored in the ablation experiments in the next section, as well as in the supplementary material. Distribution cutoff and bias Low ranked LM prediction tend to become noisier. We thus con- sider only the top 50 word predicted by each LM, re-normalizing their probabilities to sum to one. Additionally, we ignore the ﬁnal bias vec- tor during prediction (words are predicted via sof tmax(W x) rather than sof tmax(W x + b)). This removes unconditionally probable (frequent) words from the top LM predictions. Evaluation metrics We follow previous work (Wang et al., 2015; Komninos and Manandhar, 2016) and evaluate on two measures: Fuzzy Nor- malized Mutual Information (FNMI) and Fuzzy B-Cubed (FBC) as well as their geometric mean (AVG). Systems We compare against three graphical- model based systems which, as far as we know, represent the current state of the art: MCC-S (Komninos and Manandhar, 2016), Sense-Topic (Wang et al., 2015) and unimelb (Lau et al., 2013). We also compare against the AI-KU sys- tem. Wang et al. also present a method for dataset enrichment that boosted their model performance. We didn’t use the suggested methods and compare ourselves to the vanilla settings, but report the en- richment numbers as well. Results Table 2 summarizes the results. Our system using symmetric patterns outperforms all other setups with an AVG score of 25.4, establish- ing a new state-of-the-art on the",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "numbers as well. Results Table 2 summarizes the results. Our system using symmetric patterns outperforms all other setups with an AVG score of 25.4, establish- ing a new state-of-the-art on the task. 3 Experiments and Results We evaluate our method on the SemEval 2013 Task 13 dataset (Jurgens and Klapaftis, 2013), containing 50 ambiguous words each with roughly 100 in-sentence instances, where each instance is soft-labeled with one or more WordNet senses. Experiment Protocol Due to the stochastic na- ture of the algorithm, we repeat each experiment 30 times and report the mean scores together with the standard deviation. Ablation and analysis We perform ablations to explore the contribution of the different compo- nents (Symmetric Patterns (SP), Lemmatization (LEM) and TF-IDF re-weighting). Figure (1) shows the results for the entire dataset (ALL, top), as well as broken-down by part-of-speech. All components are beneﬁcial and are needed for ob- taining the best performance in all cases. How- ever, their relative importance differs across parts- of-speech. Adjectives gain the most from the use of the dynamic symmetric patterns, while nouns gain the least. For verbs, the lemmatization is",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1805
+    }
+  },
+  {
+    "content": "ric patterns achieves a higher mean score of 20.5, while using both yields 22.8. Finally, for nouns it is the TF-IDF scoring that plays the biggest role. 4 Conclusions We describe a simple and effective WSI method based on a neural biLM and a novel dynamic ap- plication of the X and Y symmetric pattern. The method substantially improves on the state-of-the- art. Our results provide further validation that RNN-based language models contain valuable se- mantic information. The main novelty in our proposal is querying the neural LM in a creative way, in what we call dynamic symmetric patterns. We believe that the use of such dynamic symmetric patterns (or more generally dynamic Hearst patterns) will be bene- ﬁcial to NLP tasks beyond WSI. In contrast to previous work, we used discrete predicted word distributions rather than the con- tinuous RNN states. This paid off by allowing us to inspect and debug the representation, as well to control it in a meaningful way by injecting linguis- tic knowledge in the form of lemmatization, and by distributional cutoff and TF-IDF re-weighing. We encourage others to consider using explicit, discrete representations when appropriate. crucial for obtaining good performance, especially when symmetric patterns are used: using symmet- ric patterns without lemmatization, the mean score drops to 17.0. Lemmatization without symmet- Acknowledgments The work was supported in part by the Israeli Science Foundation (grant num- ber 1555/15 and the German Research Foundation via the German-Israeli Project Cooperation (DIP, grant DA 1600/1-1). 4864",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "References",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "Supplementary Material Statistics of the SemEval 2013 Task 13 Dataset SemEval 2013 Task 13 consists of 50 targets, each has a lemma and a part of speech (20 verbs, 20 nouns and 10 adjectives). We use the dataset only for evaluation. Most targets have around 100 la- beled instances (sentences containing a usage of the target in its designated part of speech together with one or more WordNet senses assigned by hu- man labeler). Exceptions are the targets of trace.n and book.v which have 37 and 22 labeled in- stances accordingly. Leaving out the two anoma- lous targets mentioned above we are left with 4605 instances from 48 targets: 19 verb, 19 noun and 10 adjective targets. We note that the small size of the dataset should make one cautious to draw quick conclusions, yet, our results seem to be consistent. Effect of the Choice of Number of Clusters An important statistic of the dataset is the num- ber of senses per target. The average number of senses per target in the dataset is 6.94 (stdev:2.71). Breaking down by part of speech, the means and standard deviations of target senses are: verbs: 5.90 (±1.37), nouns: 7.32 (±2.21), adjectives: 7.11 (±3.54). In this work we follow this statis- tic and always look for 7 clusters. Figure 2 shows the accuracy as a function of the number of clus- ters. While 7 clusters indeed produces the highest scores, all numbers in the range 4 to 15 produce state-of-the-art results. We leave the selection of per-instance number of clusters to future work. Figure 2 also tells us our system is better at in- ducing senses for adjectives, at least according to task score. The Importance of Lemmatization The ablation results in the paper indicate that for verbs, using symmetric patterns without lemmati- zation yields poor results. We present the analysis the motivated our use of lemmatization. Consider the samples from the biLM with and without sym- metric patterns, for the instance It was when I was a high-school student that I became convinced",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "the motivated our use of lemmatization. Consider the samples from the biLM with and without sym- metric patterns, for the instance It was when I was a high-school student that I became convinced of this fact for the ﬁrst time. Another sentence, in another tense: The issue will become more pressing as an estimated 40,000 to 50,000 Chinese, mostly unskilled, come to settle each year. When using the symmetric patterns, the pre- dicted verbs tend to share the tense of the target word. This results in targets of different tenses hav- ing nearly distinct distributions, even when the tar- gets share the same sense, splitting the single sense cluster to two (or more) tense clusters. We quan- tify this intuition by computing the correlation be- tween tense and induced clusters (senses), as given by the Normalized Mutual Information (NMI). We measure NMI between verb instance tense in sen- tence and their most probable induced cluster in the different settings, as well as the NMI of the verb instances and the gold clusters. Table 3 sum- marize the results. We see that in the gold clus- ters there is indeed very little correlation (0.15) between the the tense and the sense. When us- ing SP but not lemmatization (w/o LEM), the cor- relation is substantially higher (0.67). When not using either lemmatization of SP (w/o LEM and SP) the correlation is 0.27, much closer to the gold one. Performing explicit lemmatization naturally",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 1806
+    }
+  },
+  {
+    "content": "reduces the correlation with tense, and using the full model (Final model) results in a correlation to 0.22, close to the gold number of 0.15. Some Failure Modes of Dynamic Symmetric Patterns While the use of dynamic symmetric patterns im- proves performance and generally produces good substitutes for contextualized words, we also iden- tify some failure modes and unexpected behavior. Common conjunctions Some target words have a strong prior to appear in common phrases involving a conjunction, causing the strong local pattern to override context-based hints. For example, when the LM is asked to complete ... , its prior on church makes it a very probable completion, regardless of context and sense. This phenomena motivated our use TF-IDF for weighing of too common words. Relatedly, a common completion for symmetric patterns is the word then, as and then is a very common phrase. This completion even ignores the target word and could be troublesome if a global, cross-lemma, clustering is attempted. Multi word phrases substitutes Sometime the LM does interpret the and as a trigger for a sym- metric relation, but on a chunk extending beyond the target word. For example, when presented with the query The human heart not only makes heart sounds and , the forward LM predicted in its top twenty suggestions the word muscle, fol- lowed by a next-word prediction of movements. That is, the symmetry extends beyond “sounds” to the phrase “heart sounds” which could be substi- tutes by “muscle movements”. We didn’t specif- ically address this in the current work, but note that restricting the prediction to agree with the tar- get word on part-of-speech and plurality may help in mitigating this. Furthermore, this suggests an exciting direction for moving from single words towards handling of multi-word units. Table 3: Correlation between tense and sense. NMI is averaged on all verbs, using best matching sense. SP: Symmetric Patterns, LEM: Lemmatizing predictions, ALL: LEM, SP, TFIDF.",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "of multi-word units. Table 3: Correlation between tense and sense. NMI is averaged on all verbs, using best matching sense. SP: Symmetric Patterns, LEM: Lemmatizing predictions, ALL: LEM, SP, TFIDF. The bold line show symmetric patterns without lemmatization excessively correlates tense and sense and provides additional validation to our hypothesis, suggesting its essential to lemmatizate when symmetric patterns are used.",
+    "metadata": {
+      "filename": "D18-1523.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 1802
+    }
+  }
+]

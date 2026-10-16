@@ -1,0 +1,125 @@
+[
+  {
+    "type": "Table",
+    "element_id": "8147597b3ce91dbf7bab24f195bb0cc5",
+    "text": "Sentence what Slots Intent O ﬂights O leave O from O atis ﬂight phoenix B-fromloc",
+    "metadata": {
+      "detection_class_prob": 0.8581990003585815,
+      "coordinates": {
+        "points": [
+          [
+            204.10902404785156,
+            1921.505615234375
+          ],
+          [
+            204.10902404785156,
+            2013.8272705078125
+          ],
+          [
+            809.6785888671875,
+            2013.8272705078125
+          ],
+          [
+            809.6785888671875,
+            1921.505615234375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1654,
+        "layout_height": 2339
+      },
+      "last_modified": "2026-10-13T20:26:24",
+      "text_as_html": "<table><thead><th>Sentence |</th><th>what |</th><th>flights</th><th>| leave</th><th>| from</th><th>phoenix</th></thead><tr><td>Slots</td><td>{e)</td><td>O</td><td>{e)</td><td>O</td><td>B-fromloc</td></tr><tr><td>Intent</td><td></td><td></td><td>atis_flight</td><td></td><td></td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 1,
+      "parent_id": "8de2a6e07c3e4df67625a60f079764a4",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\1907.00390\\input",
+      "filename": "1907.00390.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "fb3cf3801734ecac784213ffb7bcfea4",
+    "text": "Model Joint Seq (Hakkani-T¨ur et al., 2016) Atten.-Based (Liu and Lane, 2016) Sloted-Gated (Goo et al., 2018) SF-First (with CRF) SF-First (without CRF) ID-First (with CRF) ID-First (without CRF) SF-ID Network Slot (F1) 94.30 94.20 95.42 95.75 95.55 95.80 95.58 ATIS Dataset Intent (Acc) 92.60 91.10 95.41 97.76 97.40 97.09 96.58 Sen. (Acc) 80.70 78.90 83.73 86.79 85.95 86.90 86.00 Slot (F1) 87.30 87.80 89.27 91.43 90.34 92.23 90.46 Snips Dataset Intent (Acc) 96.90 96.70 96.86 97.43 97.34 97.29 97.00 Sen. (Acc) 73.20 74.10 76.43 80.57 78.43 80.43 78.37",
+    "metadata": {
+      "detection_class_prob": 0.9326927661895752,
+      "coordinates": {
+        "points": [
+          [
+            219.33827209472656,
+            172.439697265625
+          ],
+          [
+            219.33827209472656,
+            438.6023864746094
+          ],
+          [
+            1435.209228515625,
+            438.6023864746094
+          ],
+          [
+            1435.209228515625,
+            172.439697265625
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1654,
+        "layout_height": 2339
+      },
+      "last_modified": "2026-10-13T20:26:24",
+      "text_as_html": "<table><thead><th colspan=\"2\"></th><th colspan=\"2\" rowspan=\"2\">Model</th><th colspan=\"3\">ATIS Dataset</th><th colspan=\"3\">Snips Dataset</th></thead><thead><th colspan=\"2\"></th><th>Slot (FI)</th><th>Intent (Acc)</th><th>Sen. (Acc)</th><th>| Slot (FI)</th><th>Intent (Acc)</th><th>Sen. (Acc.</th></thead><tr><td colspan=\"2\" rowspan=\"3\">Joint Seq (Hakkani-Tiir et al., 2016) Atten.-Based (Liu and Lane, 2016) Sloted-Gated (Goo et al., 2018)</td><td>94.30</td><td>92.60</td><td>80.70</td><td>87.30</td><td>96.90</td><td>73.20</td></tr><tr><td colspan=\"2\"></td><td>94.20</td><td>91.10</td><td>78.90</td><td>87.80</td><td>96.70</td><td>74.10</td></tr><tr><td colspan=\"2\"></td><td>95.42</td><td>95.41</td><td>83.73</td><td>89.27</td><td>96.86</td><td>76.43</td></tr><tr><td rowspan=\"4\">SF-ID Network</td><td></td><td>SF-First (with CRF)</td><td>95.75</td><td>97.76</td><td>86.79</td><td>91.43</td><td>97.43</td><td>80.57</td></tr><tr><td></td><td>SF-First (without CRF)</td><td>95.55</td><td>97.40</td><td>85.95</td><td>90.34</td><td>97.34</td><td>78.43</td></tr><tr><td></td><td>ID-First (with CRF)</td><td>95.80</td><td>97.09</td><td>86.90</td><td>92.23</td><td>97.29</td><td>80.43</td></tr><tr><td>ID-First (without CRF)</td><td>95.58</td><td>96.58</td><td>86.00</td><td>90.46</td><td>97.00</td><td>78.37</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "36b7fdf339953b3add9b0729c0d089bf",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\1907.00390\\input",
+      "filename": "1907.00390.pdf"
+    }
+  },
+  {
+    "type": "Table",
+    "element_id": "09cf92791672e6c6172129ef1d7fedff",
+    "text": "Model Without SF-ID ID subnet Only SF subnet Only SF-ID (no interaction) SF-ID (SF-First) SF-ID (ID-First) ATIS Slot Intent 95.05 95.43 95.14 95.34 95.74 95.75 95.56 95.75 95.80 95.75 97.76 97.09 Snips Slot Intent 88.9 89.57 90.7 96.23 97.42 96.71 90.97 91.43 92.23 97.01 97.43 97.29",
+    "metadata": {
+      "detection_class_prob": 0.9201321005821228,
+      "coordinates": {
+        "points": [
+          [
+            204.33944702148438,
+            553.618896484375
+          ],
+          [
+            204.33944702148438,
+            836.5249633789062
+          ],
+          [
+            823.23876953125,
+            836.5249633789062
+          ],
+          [
+            823.23876953125,
+            553.618896484375
+          ]
+        ],
+        "system": "PixelSpace",
+        "layout_width": 1654,
+        "layout_height": 2339
+      },
+      "last_modified": "2026-10-13T20:26:24",
+      "text_as_html": "<table><thead><th rowspan=\"2\">Model</th><th colspan=\"2\">ATIS</th><th colspan=\"2\">Snips</th></thead><thead><th></th><th>Slot</th><th>Intent</th><th>Slot</th><th>—_ Intent</th></thead><tr><td>Without SF-ID</td><td>95.05</td><td>95.34</td><td>88.9</td><td>96.23</td></tr><tr><td>ID subnet Only</td><td>95.43</td><td>95.74</td><td>89.57</td><td>97.42</td></tr><tr><td>SF subnet Only</td><td>95.14</td><td>95.75</td><td>90.7</td><td>96.71</td></tr><tr><td>SF-ID (no interaction)</td><td>95.56</td><td>95.75</td><td>90.97</td><td>97.01</td></tr><tr><td>SF-ID (SF-First)</td><td>95.75</td><td>97.76</td><td>9143</td><td>97.43</td></tr><tr><td>SF-ID (ID-First)</td><td>95.80</td><td>97.09</td><td>92.23</td><td>97.29</td></tr></table>",
+      "filetype": "application/pdf",
+      "languages": [
+        "eng"
+      ],
+      "page_number": 4,
+      "parent_id": "36b7fdf339953b3add9b0729c0d089bf",
+      "file_directory": "D:\\C++\\SCILEAD\\pilot\\full43\\papers\\1907.00390\\input",
+      "filename": "1907.00390.pdf"
+    }
+  }
+]

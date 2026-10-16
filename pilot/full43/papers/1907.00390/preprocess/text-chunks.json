@@ -1,0 +1,83 @@
+[
+  {
+    "content": "A Novel Bi-directional Interrelated Model for Joint Intent Detection and Slot Filling Abstract A spoken language understanding (SLU) sys- tem includes two main tasks, slot ﬁlling (SF) and intent detection (ID). The joint model for the two tasks is becoming a tendency in SLU. But the bi-directional interrelated connections between the intent and slots are not established In this paper, in the existing joint models. we propose a novel bi-directional interrelated model for joint intent detection and slot ﬁll- ing. We introduce an SF-ID network to es- tablish direct connections for the two tasks to help them promote each other mutually. Besides, we design an entirely new iteration mechanism inside the SF-ID network to en- hance the bi-directional interrelated connec- tions. The experimental results show that the relative improvement in the sentence-level se- mantic frame accuracy of our model is 3.79% and 5.42% on ATIS and Snips datasets, respec- tively, compared to the state-of-the-art model. Introduction Spoken language understanding plays an impor- tant role in spoken dialogue system. SLU aims at extracting the semantics from user utterances. Concretely, it identiﬁes the intent and captures se- mantic constituents. These two tasks are known as intent detection and slot ﬁlling (Tur and De Mori, 2011), respectively. For instance, the sentence ‘what ﬂights leave from phoenix’ sampled from It can be the ATIS corpus is shown in Table 1. seen that each word in the sentence corresponds to one slot label, and a speciﬁc intent is assigned for the whole sentence. Traditional pipeline approaches manage the two mentioned tasks separately. Intent detection is seen as a semantic classiﬁcation problem to pre- dict the intent label. General approaches such as support vector machine (SVM) (Haffner et al., 2003) and recurrent neural network (RNN) (Lai et al., 2015) can be applied. Slot ﬁlling is re- garded as a sequence labeling task. Popular ap- proaches include conditional random",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "(Haffner et al., 2003) and recurrent neural network (RNN) (Lai et al., 2015) can be applied. Slot ﬁlling is re- garded as a sequence labeling task. Popular ap- proaches include conditional random ﬁeld (CRF) (Raymond and Riccardi, 2007), long short-term memory (LSTM) networks (Yao et al., 2014). Considering the unsatisfactory performance of pipeline approaches caused by error propagation, the tendency is to develop a joint model (Chen et al., 2016a; Zhang and Wang, 2016) for intent de- tection and slot ﬁlling tasks. Liu and Lane (2016) proposed an attention-based RNN model. How- ever, it just applied a joint loss function to link the two tasks implicitly. Hakkani-T¨ur et al. (2016) in- troduced a RNN-LSTM model where the explicit relationships between the slots and intent are not established. Goo et al. (2018) proposed a slot- gated model which applies the intent information to slot ﬁlling task and achieved superior perfor- mance. But the slot information is not used in in- tent detection task. The bi-directional direct con- nections are still not established. In fact, the slots and intent are correlative, and the two tasks can mutually reinforce each other. This paper pro- poses an SF-ID network which consists of an SF subnet and an ID subnet. The SF subnet applies intent information to slot ﬁlling task while the ID subnet uses slot information in intent detection In this case, the bi-directional interrelated task. connections for the two tasks can be established. Our contributions are summarized as follows: 1) We propose an SF-ID network to establish the in- terrelated mechanism for slot ﬁlling and intent de- tection tasks. Specially, a novel ID subnet is pro- posed to apply the slot information to intent detec-",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "tion task. 2) We establish a novel iteration mecha- nism inside the SF-ID network in order to enhance the connections between the intent and slots. 3) The experiments on two benchmark datasets show the effectiveness and superiority of the proposed model. 2.2 SF-ID Network The SF-ID network consists of an SF subnet and an ID subnet. The order of the SF and ID subnets can be customized. Depending on the order of the two subnets, the model have two modes: SF-First and ID-First. The former subnet can produce ac- tive effects to the latter one by a medium vector. 2 Proposed Approaches This section ﬁrst introduces how we acquire the integration of context of slots and intent by atten- tion mechanism. And then it presents an SF-ID network which establishes the direct connections between intent and slots. The model architecture based on bi-directional LSTM (BLSTM) is shown in Figure 2.1 Integration of Context In SLU, word tags are determined not only by the corresponding terms, but also the context (Chen et al., 2016b). The intent label is also relevant with every element in the utterance. To capture such de- pendencies, attention mechanism is introduced. Slot ﬁlling: The ith slot context vector ci slot is computed as the weighted sum of BLSTM’s hid- den states (h1, ..., ht): 2.2.1 SF-First Mode In the SF-First mode, the SF subnet is executed first. We apply the intent context vector Cinze and slot context vector Cgjoz in the SF subnet and gener- ate the slot reinforce vector rsjo¢. Then, the newly- formed vector 7’s/o¢ 18 fed to the ID subnet to bring the slot information. SF subnet: The SF subnet applies the intent and slot information (i.e. Cinze and Csioz) in the calcu- lation of a correlation factor f which can indicate the relationship of the intent and slots. This corre- lation factor f is defined by: tanh(chrot In addition, we introduce a slot reinforce vector rslot deﬁned by (3), and it is fed to the ID subnet to bring slot information. where the attention weight α",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "lation factor f is defined by: tanh(chrot In addition, we introduce a slot reinforce vector rslot deﬁned by (3), and it is fed to the ID subnet to bring slot information. where the attention weight α is acquired the same way as in (Liu and Lane, 2016). Intent detection: The intent context vector cinte is calculated as the same way as cslot, in particu- lar, it just generates one intent label for the whole sentence. 1The code is available at https://github.com/ ZephyrChenzf/SF-ID-Network-For-NLU",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1801
+    }
+  },
+  {
+    "content": "where the weight αi of ri slot is computed as: exp(ei,i) j=1 exp(ei,j) We also introduce an intent reinforce vector rinte which is computed as the sum of the reinforce vec- tor r and intent context vector rinte. rinte = r + cinte Iteration Mechanism: The intent reinforce vector rinte can also be fed into the SF subnet. In fact, this intent reinforce vector rinte can improve the effect of relation factor f because it contains the hybrid information of intent and slots, and (2) can be replaced by: With the change in the relation factor f , a new slot reinforce vector rslot is acquired. Thus, the ID subnet can takes a new rslot and exports a new rinte. In this case, both SF subnet and ID subnet are updated, one iteration is completed. In theory, the interaction between the SF sub- net and ID subnet can repeat endlessly, which is denoted as the iteration mechanism in our model. The intent and slot reinforce vectors act as the links between the SF subnet and the ID subnet and their values continuously change during the itera- tion process. After the iteration mechanism, the rinte and rslot participate in the ﬁnal prediction of intent and slots, respectively. For the intent detection task, the intent reinforce vector rinte and the last hidden state hT of BLSTM are utilized in the ﬁnal intent prediction: yinte = sof tmax(W hy inteconcat(hT , rinte)) (9) For the slot ﬁlling task, the hidden state hi com- bined with its corresponding slot reinforce vector ri slot are used in the ith slot label prediction. The ﬁnal expression without CRF layer is: 2.2.2 In the ID-First mode, the ID subnet is performed before the SF subnet. In this case, there are some differences in the calculation of ID subnet in the ﬁrst iteration. ID subnet: Unlike the Slot-First mode, the rein- force vector r is acquired by the hidden states and the context vectors of BLSTM. Thus, (4) (5) (6) can be replaced by: The intent reinforce vector rinte is still deﬁned by (7), and it is fed to the SF subnet. SF",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "r is acquired by the hidden states and the context vectors of BLSTM. Thus, (4) (5) (6) can be replaced by: The intent reinforce vector rinte is still deﬁned by (7), and it is fed to the SF subnet. SF subnet: The intent reinforce vector rinte is fed to the SF subnet and the relation factor f is calcu- lated the same way as (8). Other algorithm details are the same as in SF-First mode. Iteration Mechanism: Iteration mechanism in ID-First mode is almost the same as that in SF- First mode except for the order of the two subnets. 2.3 CRF layer Slot ﬁlling is essentially a sequence labeling prob- lem. For the sequence labeling task, it is beneﬁcial to consider the correlations between the labels in neighborhoods. Therefore, we add the CRF layer above the SF subnet outputs to jointly decode the best chain of labels of the utterance. 3 Experiment Dataset: We conducted experiments using two public datasets, the widely-used ATIS dataset (Hemphill et al., 1990) and custom-intent-engine dataset called the Snips (Coucke et al., 2018), which is collected by Snips personal voice assis- tant. Compared with the ATIS dataset, the Snips dataset is more complex due to its large vocabu- lary and cross-domain intents. Evaluation Metrics: We use three evaluation",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1799
+    }
+  },
+  {
+    "content": "metrics in the experiments. For the slot ﬁlling task, the F1-score is applied. For the intent de- tection task, the accuracy is utilized. Besides, the sentence-level semantic frame accuracy (sentence accuracy) is used to indicate the general perfor- mance of both tasks, which refers to proportion of the sentence whose slots and intent are both correctly-predicted in the whole corpus. Training Details: In our experiments, the layer size for the BLSTM networks is set to 64. Dur- ing training, the adam optimization (Kingma and Ba, 2014) is applied. Besides, the learning rate is updated by ηt = η0/(1 + pt) with a decay rate of p = 0.05 and an initial learning rate of η0 = 0.01, and t denotes the number of completed steps. Model Performance: The performance of the models are given in Table 2, wherein it can be seen that our model outperforms the baselines in all three aspects: slot ﬁlling (F1), intent detection (Acc) and sentence accuracy (Acc). Specially, on the sentence-level semantic frame results, the rel- ative improvement is around 3.79% and 5.42% for ATIS and Snips respectively, indicating that SF- ID network can beneﬁt the SLU performance sig- niﬁcantly by introducing the bi-directional interre- lated mechanism between the slots and intent. Analysis of Seperate Subnets: We analyze the effect of seperate subnets, and the obtained results are given in Table 3. The experiments are con- ducted when the CRF layer is added. As we can see, both models including only the SF subnet or the ID subnet have acheived better results than the BLSTM model. Therefore, we believe that both SF subnet and ID subnet have signiﬁcance in per- formance improvement. Beside, we also analyse the condition with inde- pendent SF and ID subnet, in other words, when there is no interaction in SF and ID subnet. We can see it also obtains good results. However, the SF-ID network which allows the two subnets inter- act with each other achieve better results. This is because the bi-directional",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "and ID subnet. We can see it also obtains good results. However, the SF-ID network which allows the two subnets inter- act with each other achieve better results. This is because the bi-directional interrelated mechanism help the two subnets promote each other mutually, which improves the performance in both tasks. Analysis of Model Mode: In Table 2, it can be seen that the ID-First mode achieves better perfor- mance in the slot ﬁlling task. This is because the ID-First mode treats the slot ﬁlling task as a more important task, because the SF subnet can utilize the intent information output from the ID subnet. Similarly, the SF-First mode performs better in the intent detection task. In general, the difference be- tween the two modes is minor. Iteration Mechanism: The effect of iteration mechanism is shown in Figure 3. The experiments are conducted in SF-First mode. Sentence accu- racy is applied as the performance measure be- cause it can reﬂect the overall model performance. It increases gradually and reaches the maximum value when the iteration number is three on both ATIS and Snips dataset, indicating the effective-",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1798
+    }
+  },
+  {
+    "content": "ness of iteration mechanism. It may credit to the iteration mechanism which can enhance the con- nections between intent and slots. After that, the sentence accuracy gradually gets stabilized with minor drop. On balance, the iteration mechanism with proper iteration number can beneﬁt the SLU performance. CRF Layer: From Table 2 it can be seen that the CRF layer has a positive effect on the general model performance. This is because the CRF layer can obtain the maximum possible label sequence on the sentence level. However, CRF layer mainly focuses on sequence labeling problems. So the improvement of the slot ﬁlling task obviously ex- ceeds that of the intent detection task. In general, the performance is improved by the CRF layer. 4 Conclusion In this paper, we propose a novel SF-ID network which provides a bi-directional interrelated mech- anism for intent detection and slot ﬁlling tasks. And an iteration mechanism is proposed to en- hance the interrelated connections between the intent and slots. The bi-directional interrelated model helps the two tasks promote each other mu- tually. Our model outperforms the baselines on two public datasets greatly. This bi-directional interrelated mechanism between slots and intent provides guidance for the future SLU work. Acknowledgments The authors would like to thank the reviewers for their valuable comments. This work was sup- ported in part by the National Key R&D Pro- gram of China under Grant SQ2018YFB140079 and 2018YFB1403003. References Doumouro, Thibault Gisselbrecht, Francesco Calta- girone, Thibaut Lavril, et al. 2018. Snips voice plat- form: an embedded spoken language understanding system for private-by-design voice interfaces. arXiv preprint arXiv:1805.10190.",
+    "metadata": {
+      "filename": "1907.00390.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

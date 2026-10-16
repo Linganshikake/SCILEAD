@@ -1,0 +1,47 @@
+# Private configuration and authentication material
+.env
+.env.*
+*.env
+credentials.json
+credentials
+.netrc
+.pypirc
+id_rsa
+id_ed25519
+*.pem
+*.key
+.aws/
+.codex/
+.claude/
+
+# Local environments, caches and system tools
+/assets/
+/tools/
+/cleanup_records/
+/.scilead-validation-cache/
+/smoke/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.cache/
+node_modules/
+
+# Download separately: papers, archives, pretrained weights and binaries
+*.pdf
+*.zip
+*.safetensors
+*.onnx
+*.bin
+*.pt
+*.pth
+*.dll
+*.exe
+*.pdb
+
+# Do not add a nested Git repository; upstream source is an attributed snapshot
+emnlp2024-leaderboard-generation/.git/
+Thumbs.db
+.DS_Store

@@ -1,0 +1,64 @@
+{
+  "D18-1105.pdf": [
+    {
+      "content": "Tasks, pages 143–148, Taipei, Taiwan. Asian Feder- ation of Natural Language Processing.",
+      "metadata": {
+        "filename": "D18-1105.pdf",
+        "page_number": 7,
+        "start_index": 0,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "References Automatic Speech Recognition and Understanding, pages 88–95.",
+      "metadata": {
+        "filename": "D18-1105.pdf",
+        "page_number": 6,
+        "start_index": 0,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "We conduct our experimental evaluation on two dialog act benchmark datasets. Table 1: Dialog Act Datasets Statistics Table 1 summarizes dataset statistics. We use the train, validation and test splits as deﬁned in (Lee and Dernoncourt, 2016; Ortega and Vu, 2017). 3.2 Experimental Setup We setup our experimental evaluation, as follows: given a classiﬁcation task and a dataset, we gen- erate an on-device model. The size of the model can be conﬁgured (by adjusting the projection ma- trix P) to ﬁt in the memory footprint of the de- vice, i.e. a phone has more memory compared to a smart watch. For each classiﬁcation task, we re- port Accuracy on the test set. 3.3 Hyperparameter and Training For both datasets we used the following: 2- layer SGNN (PT =80,d=14 × FullyConnected256 × FullyConnected256), mini-batch size of 100, dropout rate of 0.25, learning rate was initialized to 0.025 with cosine annealing decay (Loshchilov and Hutter, 2016). Unlike prior approaches (Lee and Dernoncourt, 2016; Ortega and Vu, 2017) that rely on pre-trained word embeddings, we learn the projection weights on the ﬂy during training, i.e word embeddings (or vocabularies) do not need to be stored. Instead, features are computed on the ﬂy and are dynamically compressed via the pro- jection matrices into projection vectors. These val- ues were chosen via a grid search on development sets, we do not perform any other dataset-speciﬁc tuning. Training is performed through stochastic gradient descent over shufﬂed mini-batches with Nesterov momentum optimizer (Sutskever et al., 2013), run for 1M steps. 4 Results Tables 2 and 3 show results on the SwDA and MRDA dialog act datasets. Overall, our SGNN model consistently outperforms the baselines and prior state-of-the-art deep learning models.",
+      "metadata": {
+        "filename": "D18-1105.pdf",
+        "page_number": 4,
+        "start_index": 1812,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "4.1 Baselines We compare our model against a majority class baseline and Naive Bayes classiﬁer (Lee and Der- noncourt, 2016). Our model signiﬁcantly outper- forms both baselines by 12 to 35% absolute. 4.2 Comparison against State-of-art Methods We also compare our performance against prior work using HMMs (Stolcke et al., 2000) and re- cent deep learning methods like CNN (Lee and Dernoncourt, 2016), RNN (Khanpour et al., 2016) and RNN with gated attention (Tran et al., 2017). To the best of our knowledge, (Lee and Der- noncourt, 2016; Ortega and Vu, 2017; Tran et al., 2017) are the latest approaches in dialog act clas- siﬁcation, which also reported on the same data splits. Therefore, we compare our research against these works. According to (Ortega and Vu, 2017), prior work by (Ji and Bilmes, 2006) achieved promising results on the MRDA dataset, but since the evaluation was conducted on a different data split, it is hard to compare them directly. For both SwDA and MRDA datasets, our SGNNs obtains the best result of 83.1 and 86.7 ac- curacy outperforming prior state-of-the-art work. This is very impressive given that we work with very small memory footprint and we do not rely on pre-trained word embeddings. Our study also shows that the proposed method is very effective for such natural language tasks compared to more complex neural network architectures such as deep CNN (Lee and Dernoncourt, 2016) and RNN vari- ants (Khanpour et al., 2016; Ortega and Vu, 2017). We believe that the compression techniques like locality sensitive projections jointly coupled with non-linear functions are effective at capturing low- dimensional semantic text representations that are useful for text classiﬁcation applications. 4.3 Discussion on Model Size and Inference LSTMs have millions of parameters, while our on-device architecture has just 300K parameters (order of magnitude lower). Most deep learning methods also use large vocabulary size of 10K or higher. Each word embedding is",
+      "metadata": {
+        "filename": "D18-1105.pdf",
+        "page_number": 5,
+        "start_index": 0,
+        "type": "Text"
+      }
+    },
+    {
+      "content": "Table 1: Dialog Act Datasets Statistics\nDatasets Class Vocab. 20K 42 SwDA 12K 5 MRDA Train Validation 193K 78K 23K 16K Test 5K 15K",
+      "metadata": {
+        "filename": "D18-1105.pdf",
+        "page_number": 4,
+        "type": "Table"
+      }
+    },
+    {
+      "content": "Table 2: SwDA Dataset Results\nMethod Majority Class (baseline) (Ortega and Vu, 2017) Naive Bayes (baseline) (Khanpour et al., 2016) HMM (Stolcke et al., 2000) DRLM-conditional training (Ji and Bilmes, 2006) DRLM-joint training (Ji and Bilmes, 2006) LSTM (Lee and Dernoncourt, 2016) CNN (Lee and Dernoncourt, 2016) Gated-Attention&HMM (Tran et al., 2017) RNN+Attention (Ortega and Vu, 2017) RNN (Khanpour et al., 2016) SGNN: Self-Governing Neural Network (ours)",
+      "metadata": {
+        "filename": "D18-1105.pdf",
+        "page_number": 5,
+        "type": "Table"
+      }
+    },
+    {
+      "content": "Table 3: MRDA Dataset Results\nMethod Majority Class (baseline)(Ortega and Vu, 2017) Naive Bayes (baseline) (Khanpour et al., 2016) Graphical Model (Ji and Bilmes, 2006) CNN (Lee and Dernoncourt, 2016) RNN+Attention(Ortega and Vu, 2017) RNN (Khanpour et al., 2016) SGNN: Self-Governing Neural Network (ours)",
+      "metadata": {
+        "filename": "D18-1105.pdf",
+        "page_number": 5,
+        "type": "Table"
+      }
+    }
+  ]
+}

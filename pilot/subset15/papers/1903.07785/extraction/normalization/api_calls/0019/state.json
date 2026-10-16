@@ -1,0 +1,59 @@
+{
+  "call": 19,
+  "status": "COMPLETE",
+  "expected": {
+    "call": 19,
+    "record": 9,
+    "field": "Task",
+    "original_value": "RTE (Recognizing Textual Entailment)",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None."
+      },
+      {
+        "role": "user",
+        "content": "\n\nItem list: {'Language Modeling', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Dialogue Generation', 'Dialogue Act Classification', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent Detection and Slot Filling', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: RTE (Recognizing Textual Entailment)\n\nAnswer: "
+      }
+    ],
+    "estimated_prompt_tokens": 231
+  },
+  "max_tokens": 15,
+  "model": "gpt-4.1-2025-04-14",
+  "temperature": 0,
+  "seed": 0,
+  "attempts": 1,
+  "http_status": 200,
+  "request_id": null,
+  "returned_model": "gpt-4.1-2025-04-14",
+  "response_id": "chatcmpl-EYUsLRgbvF0daDXeUiETEZT07fUkf",
+  "usage": {
+    "completion_tokens": 8,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 33,
+      "engine_ttlt_ms": 71,
+      "pre_inference_ms": 176,
+      "service_tbt_ms": 2,
+      "service_ttft_ms": 376,
+      "service_ttlt_ms": 395,
+      "user_visible_ttft_ms": 200
+    },
+    "prompt_tokens": 231,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 239
+  },
+  "finish_reason": "stop",
+  "system_fingerprint": "fp_11edcc854b",
+  "raw_answer": "Natural Language Inference (NLI)",
+  "seconds": 1.328
+}

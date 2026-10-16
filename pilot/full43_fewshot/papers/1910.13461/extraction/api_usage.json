@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 5579,
+  "completion_tokens": 571,
+  "total_tokens": 6150,
+  "request_seconds": 6.0,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1910.13461.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "18becc412329ce789bca1a48da5f03d4937213ae641bd2589e39f3befb6e0b2a",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxAjVdaemUtUU6fak2jhVe3Hjkk6",
+      "usage": {
+        "completion_tokens": 571,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 124,
+          "engine_ttlt_ms": 2500,
+          "pre_inference_ms": 245,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 640,
+          "service_ttlt_ms": 3012,
+          "user_visible_ttft_ms": 395
+        },
+        "prompt_tokens": 5579,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 6150
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-1\", \"Result\": \"44.16\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-2\", \"Result\": \"21.28\"}, {\"Task\": \"Summarization\", \"Dataset\": \"CNN/DailyMail\", \"Metric\": \"ROUGE-L\", \"Result\": \"40.90\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-1\", \"Result\": \"45.14\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-2\", \"Result\": \"22.27\"}, {\"Task\": \"Summarization\", \"Dataset\": \"XSum\", \"Metric\": \"ROUGE-L\", \"Result\": \"37.25\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"F1\", \"Result\": \"90.9\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"EM\", \"Result\": \"84.1\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 2.0\", \"Metric\": \"F1\", \"Result\": \"89.4\"}, {\"Task\": \"Question Answering\", \"Dataset\": \"SQuAD 2.0\", \"Metric\": \"EM\", \"Result\": \"86.5\"}, {\"Task\": \"Natural Language Inference\", \"Dataset\": \"MNLI\", \"Metric\": \"Accuracy\", \"Result\": \"89.2\"}, {\"Task\": \"Dialogue Response Generation\", \"Dataset\": \"ConvAI2\", \"Metric\": \"Perplexity\", \"Result\": \"11.85\"}, {\"Task\": \"Dialogue Response Generation\", \"Dataset\": \"ConvAI2\", \"Metric\": \"Valid F1\", \"Result\": \"20.72\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-1\", \"Result\": \"30.6\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-2\", \"Result\": \"6.2\"}, {\"Task\": \"Abstractive Question Answering\", \"Dataset\": \"ELI5\", \"Metric\": \"ROUGE-L\", \"Result\": \"24.3\"}, {\"Task\": \"Machine Translation\", \"Dataset\": \"WMT'16 RO-EN\", \"Metric\": \"BLEU\", \"Result\": \"37.96\"}]",
+      "response_sha256": "b5146eb913f7f7a0e5a61fe6d422ee71edb2e98d0d0bb5199992e7ed500bcb7b",
+      "seconds": 6.0
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

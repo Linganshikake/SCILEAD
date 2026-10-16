@@ -1,0 +1,155 @@
+[
+  {
+    "content": "Towards better substitution-based word sense induction Asaf Amrami † and Yoav Goldberg † ‡ † Computer Science Department, Bar Ilan University, Israel ‡ Allen Institute for Artiﬁcial Intelligence {asaf.amrami, yoav.goldberg}@gmail.com Abstract Word sense induction (WSI) is the task of un- supervised clustering of word usages within a sentence to distinguish senses. Recent work obtain strong results by clustering lexical sub- stitutes derived from pre-trained RNN lan- guage models (ELMo). Adapting the method to BERT improves the scores even further. We extend the previous method to support a dynamic rather than a ﬁxed number of clus- ters as supported by other prominent methods, and propose a method for interpreting the re- sulting clusters by associating them with their most informative substitutes. We then per- form extensive error analysis revealing the re- maining sources of errors in the WSI task. Our code is available at https://github. com/asafamr/bertwsi. 1 Introduction Word Sense Induction Word Sense Induction (WSI) is the task of clustering in-context usages of words to groups that represent senses. A WSI system is given multiple sentences containing us- ages (instances) of target lemma+part-of-speech, and is expected to group together usages in which the target is used in the same sense. E.g., in: we would like to group (1) and (3) into one sense and (2) to a different one.1 WSI was explored in several SemEval shared tasks (Agirre and Soroa, 2007; Manandhar et al., 2010; Jurgens and Klapaftis, 2013), with the gold-labels following human annotation accord- ing to the WordNet (Miller, 1998) sense inven- tory. WordNet senses are very ﬁne-grained and 1Things are often more challenging: a warm hand, for ex- ample, might belong to either of the senses above, requiring larger context to disambiguate. often hard to tag even for experts (Snyder and Palmer, 2004), leading the latest evaluation (Se- mEval 2013 task 13) to replace the hard-clustering task with a",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "larger context to disambiguate. often hard to tag even for experts (Snyder and Palmer, 2004), leading the latest evaluation (Se- mEval 2013 task 13) to replace the hard-clustering task with a soft-clustering one, in which each in- stance can simultaneously belong to several clus- ters, each with a different label. This clustering is then compared to the human-taggers’ disagree- ment data. Up until recently, state-of-the-art results for WSI were dominated by a series of increasingly sophisticated graphical models (Lau et al., 2013; Wang et al., 2015; Komninos and Manandhar, 2016; Amplayo et al., 2018). A competing approach relies on substitute vec- tors: each target instance is represented by a dis- tribution over possible in-context probable sub- stitutes for the word, and clustering is per- formed over these distributions. This approach by Baskaya et al. (2013) was implemented in the AI- KU system using n-gram language models (LM). In recent work (Amrami and Goldberg, 2018), henceforth referred to as LSDP (Language-model Substitution with Dynamic Patterns), we showed that by replacing the n-gram LM with ELMo- based biLM (Peters et al., 2018) and adding a dy- namic patterns technique, the substitute vectors approach can achieve state-of-the-art results (Sec- tion 2). In this work, we further explore the use of substitute-based approaches for WSI. After verify- ing that the approach transfers to the recently in- troduced BERT deep masked LM (Devlin et al., 2018) (with a very signiﬁcant improvement in WSI scores), we make two additional contribu- tions to the mentioned method: (a) we present a method to move from a ﬁxed number of senses across target words to choosing a dynamic num- ber of senses for each target (as supported by most other WSI methods, e.g., (Teh et al., 2005; Komninos and Manandhar, 2016; Amplayo et al.,",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 1,
+      "type": "Text",
+      "start_index": 1802
+    }
+  },
+  {
+    "content": "2018); and (b) we suggest to use the substitutes as a mean of interpreting / analyzing the result- ing sense cluster by considering prominent word substitutes. This enables a more in-depth error analysis, showcasing and quantifying the remain- ing kinds of errors in WSI. 2 The LSDP WSI Method We describe the LSDP-algorithm, which we ex- tend. Given k in-sentence instances of a tar- get word which we wish to cluster into senses, each instance is associated with r representa- tives. Each representative is composed of n words, which are sampled with replacement from the LM.2 The sampled words are lemmatized, and each representative is then represented as a one- hot vector of its lemmas (multiple occurrences of the same lemma within a representative are dis- carded). The resulting set of k ∗ r 1-hot vec- tors goes through TFIDF transform to discount un- informative words, and the resulting vectors are clustered into a predeﬁned number of clusters us- ing hierarchical clustering with cosine distance and average linkage. This provides a hard clus- tering over representatives. This clustering is con- verted to a soft-clustering over instances, by asso- ciating each instance to a cluster according to the percentage of its representative that are assigned to that cluster. Sampling the representatives from the ELMo biLM does not take into account the word itself when predicting substitutes. The dynamic pat- terns approach in LSDP overcomes this by query- ing the LM for a linguistically motivated manip- ulated context that take the target word into ac- count. By way of example, to get substitutes for brown in “my dogs are brown”, the forward LM is presented with “my dogs are brown and 0” rather than with “my dogs are 0”. This encourages rele- vant substitutes such as black and discourages less desirable ones like barking. 3 Better Substitution Based WSI 3.1 From ELMo to Bert Contextualized vector representations from the recently introduced BERT model (Devlin et al., 2018)",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "discourages less desirable ones like barking. 3 Better Substitution Based WSI 3.1 From ELMo to Bert Contextualized vector representations from the recently introduced BERT model (Devlin et al., 2018) were shown to outperform ELMo on sev- eral NLP tasks. Like ELMo, BERT is trained in a Sampling is performed from the softmax distribution over the top-f logits, and while ignoring the bias terms. self-supervised manner to predict words in a sen- tence. BERT differs from ELMo by being based on a Transformer (Vaswani et al., 2017) instead of an LSTM, being truly bidirectional deep model, and, most importantly for our purposes, being trained in a “noisy masked LM” setup in which the train- ing procedure receives a sentence, replaces some words with a MASK symbol and randomly per- turbs some others, and then attempts to predict the original words from the resulting text. Thus, the model learns representations which are predictive of the words in context, and can also take into ac- count the current word when making a prediction. For further details, see (Devlin et al., 2018). The dynamic patterns in LSDP were motivated by the BiLM not “seeing” the target word other- wise. In contrast, BERT’s architecture and training procedure does allow providing the word together with its context when predicting substitutes. Sim- ply replacing the ELMo LM with BERT’s, with- out dynamic patterns, already provides state-of- the-art results for the SemEval 2013 task, with an AVG score of 37.0 compared to 25.4 with the full LSDP. However, during BERT training words are sometimes randomly replaced, making BERT sus- picious and often predicting substitutes by con- text alone: a probable substitute for “my [dogs] are brown” according to BERT is eyes, which is clearly not a lexical substitute for dog. This suggests BERT could also beneﬁt from dy- namic patterns. However, the pattern from Am- rami and Goldberg (2018) did not show big im- provements as-is. Instead, we use parenthetical patterns.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 1797
+    }
+  },
+  {
+    "content": "This suggests BERT could also beneﬁt from dy- namic patterns. However, the pattern from Am- rami and Goldberg (2018) did not show big im- provements as-is. Instead, we use parenthetical patterns. We empirically found that the pattern “target ( or even [MASK] )” (e.g. my dogs (or even [MASK]) are brown) yields good results.3 This pattern resulted in similar scores to using the vanilla sentence and predicting over the target token, while yielding somewhat different results. We combine the two by averaging the logits from both predictions prior to the softmax.4 Results Evaluation on SemEval 2013 and Se- mEval 2010 yield state-of-the-art results on both datasets mainly due to BERT powerful LM (Tables 3Among others, our search for other patterns included parenthesized and apposition based lexical substitute promot- ing patterns such as and [MASK],or [MASK] as well as hy- ponymy promoting patterns like such as [MASK] 4We also further divide the inputs logits by a temperature parameter to smooth the distribution and diversify the words. We also lemmatize BERT word pieces to predicted lemma- tized words, and pad the sentence with the [CLS] and [SEP] tokens as required by BERT.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 2,
+      "type": "Text",
+      "start_index": 3599
+    }
+  },
+  {
+    "content": "Table 2: Evaluation Results on the SemEval 2010 Task 14 Dataset. We report our mean (STD) scores over 10 runs. ND: no dynamic patterns. 1,2). The addition of dynamic patterns contribute almost 2 additional points to the already high AVG scores.5 3.2 Dynamic Number of Clusters LSDP uses a ﬁxed number of 7 clusters for all target words, a choice which was shown to work well on the SemEval 2013 task 13 dataset. How- ever, using a ﬁxed number this way is obvi- ously sub-optimal.6 Our proposal is based on the premise—supported by empirical observation— that the substitution-based representation clearly identiﬁes the “core” senses that explain most of the mass in the data (as evident by the result- ing high task scores), but also introduces some >To comply with the hard-clustering setup of SemEval 2010, we compute the soft-clustering and take the most prob- able sense for each instance. The hard clustering also sug- gests the use of V-measure and F-score instead of FNMI and FBC for SemEval 2010. We use £ = 200, temperature = 1.25, nReps = 15, nSenses = 7, minInstances = 2, nRepSamps = 20. The compared systems are: AutoSense (Amplayo et al., 2018), MCC-S (Komninos and Manandhar, 2016), SenseTopic (Wang et al., 2015), SE-WSI-fix (Song, 2016). AI-KU (Baskaya et al., 2013) , BNP-HC (Teh et al., 2005) , LDA (Blei et al., 2003). Numbers taken from the corresponding publications. 6Indeed, other works on WSI (Teh et al., 2005; Komninos and Manandhar, 2016; Amplayo et al., 2018) does attempt to infer the number of clusters for each sense. Teh et al. (2005) do it by employing a stick breaking clustering process and Komninos and Manandhar (2016) use a model selection cri- teria to prevent over speciﬁcation.Amplayo et al. (2018) pre- form a cleanup stage similar to what we propose. noise around more niche usages or less clear-cut instances. We thus follow a strategy in which we provide a relaxed upper-bound on the number of senses (we use 10), induce this number of clusters, and mark",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "around more niche usages or less clear-cut instances. We thus follow a strategy in which we provide a relaxed upper-bound on the number of senses (we use 10), induce this number of clusters, and mark each cluster as being either weak or strong. We then discard the weak clusters, merging each of them into a corresponding strong cluster. For each target, we induce a soft clustering of the corresponding word occurrences into a ﬁxed number of c = 10 senses. Each instance (word oc- currence) is now probabilisticaly associated with c senses. We say that a sense dominates an instance if it is the most probable sense for that instance. We identify senses that dominate less then m = 2 instances and mark them as weak senses. The re- maining senses (those that dominate m or more instances) are marked as strong. Recall that each sense is also a hard clustering over representatives. We associate each sense with the average vector of its representatives (centroid). For each of the weak senses w, we ﬁnd the closest strong sense s to w according to the cosine dis- tance between their centroids, assign ws represen- tatives to s and discard w. We then re-do the soft clustering of instances based on the set of strong senses and the representatives within them. Evaluating the dynamic number of senses Un- fortunately, this dynamic sense number assign- ment did not improve AVG WSI scores on the Se- mEval 2013 dataset. However, eye-balling the re- sults indicates that the method produces reason- able sense induction solutions. Digging further, we found out that using the gold (oracle) number of senses for each target also had a very minimal effect on the WSI scores (∼ 0.5 AVG addition). The AVG score in the SemEval 2013 WSI task is the geometric mean of the FNMI metric and the FBC metric, where the ﬁrst one prefers many small clusters, while the second one prefer fewer and larger clusters. Nei- ther of FNMI, FBC and AVG are sufﬁcient for in- dicating a good number of clusters.7 The",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 1801
+    }
+  },
+  {
+    "content": "where the ﬁrst one prefers many small clusters, while the second one prefer fewer and larger clusters. Nei- ther of FNMI, FBC and AVG are sufﬁcient for in- dicating a good number of clusters.7 The metrics also do not penalize over- speciﬁcation of small senses: while FBC and F- S should discourage over-speciﬁcation, their mea- sures are proportional in instance pairs and would not punish small mass perturbations, even if those 7The story for the SemEval 2010 WSI task metrics is sim- ilar, with V-Measure favoring smaller clusters and F-S favor- ing larger ones.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 3,
+      "type": "Text",
+      "start_index": 3598
+    }
+  },
+  {
+    "content": "produce an excessive number of senses. We thus aim for a more direct measure for evaluating the produced number of sense-clusters. (Song, 2016; Amplayo et al., 2018), compare the absolute number of senses. We instead opt for the somewhat eas- ier task of measuring the correlation between the number of induced senses and the gold number of senses. To motivate measuring correlation and not absolute numbers, recall that the SemEval task’s sense-inventory is based on WordNet, whose sense hierarchy is very ﬁne-grained. For example, it differentiates between dark used to describe skin color and dark used to describe objects such as pants. A coarser grained WSI solution may con- stantly produce fewer senses for each target yet still be valuable.8 By measuring correlation to the gold number of senses rather than absolute differ- ence we could add invariance to sense granularity. Our system results in a spearman rank correla- tion of 0.43±0.05 (all p-values < 0.03) with the gold number of senses on SemEval 2013. Is that a good number? To put the number in context, we compare it to the correlation of the gold WordNet senses to a human-created coarser sense inventory: senses in the New Oxford American Dictionary — NOAD (McKean, 2005). We map from WordNet to NOAD by using the work of Yuan et al. (2016) who annotated the SemCor corpus with NOAD senses in addition to the existing WordNet ones.9 As expected, comparing the solution obtained by this oracle mapping to the SemEval 2013 gold labels result in very high WSI scores (FNMI 52.1, FBC 84.7, AVG 66.4). More interesting is the correlation of sense numbers: 0.47, compared to 0.43 obtained by our method. Our method spear- man rank correlation to the number of senses in the NOAD labels is 0.44. 3.3 Cluster Interpretability The substitution-based method lends itself to in- trospection by considering the substitutes. We highlight the most prominent and informative word substitutes for each sense by computing the pointwise mutual",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "method lends itself to in- trospection by considering the substitutes. We highlight the most prominent and informative word substitutes for each sense by computing the pointwise mutual information (PMI) between sub- 8For example, in the context of query-based search, a user may be satisﬁed with the coarse grained distinction of ”dark(blackness) times” and ”dark(sad) times”. 9We take the most probable NOAD sense to each Word- Net one, according to the parallel corpus. This reduces the 399 senses SemEval to 205 (89 of which were not found in SemCor and left intact). Overall, 87% of the tokens were mapped to their coarse grained NOAD senses. stitute words and sense clusters. We then an- notate each sense with its top 10 most associ- ated substitutes (its signature). These sense sig- natures can be said to present the essence of what is captured by each sense cluster. As an example, one induced sense for the target meet(VERB)10 is characterized by the words “convene”, “group”, “crowd”, indicating the sense of a meeting that in- volves many participants. Interestingly, the Word- Net meet(VERB) entry does not make such a dis- tinction between meeting types by the number of their participants, highlighting a case were the un- supervised algorithm reﬁned the human curated lexicon. Inspecting clusters and their signatures allows us to identify good and bad clusters, and identify failure modes in its process, as we do in the next section. 4 Detailed Error Analysis Armed with the cluster signatures, we turn to man- ually inspect all the produced sense clusters and their associated words. We identify the following characteristic failure modes: LM: errors of the underlying BERT LM;11 SPLIT: an additional cluster for an existing sense, for example the sense encouraging, close, per- sonal, ... for warm(ADJ) when the sense compas- sionate, favorable, kind, ... already exists; TEMPLATE: substitutes rely excessively on a template-like pattern; TOPIC: substitutes rely excessively on",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 1812
+    }
+  },
+  {
+    "content": "sonal, ... for warm(ADJ) when the sense compas- sionate, favorable, kind, ... already exists; TEMPLATE: substitutes rely excessively on a template-like pattern; TOPIC: substitutes rely excessively on topical words; MERGE: cluster includes several distinct senses; OTHER: cluster includes an incoherent mix of multiple senses with incoherent substitutes. We sort the SemEval 2013 targets according to our accuracy on them, and consider the 20% top scoring targets (TOP), 20% middle scoring (MID), and 20% bottom scoring (BOT), each containing 10 targets. For each of these groups, we inspect all induced senses, and manually categorizing to the above failure cases, or to OK in case they are correct. Figure 1 summarizes the results.12 A clear trend is that the majority of issues relate to split- ting and merging of clusters and relying on top- ical substitutions, while language-modeling and 10Additional examples are provided in the appendix. 11Often resulting on transcribed speech, a domain BERT was not trained on. 12The supplementary material shows examples of the ana- lyzed cases as well as suggestions for handling the identiﬁed failure cases in future work.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 4,
+      "type": "Text",
+      "start_index": 3611
+    }
+  },
+  {
+    "content": "template-following problems are far less severe. 5 Conclusion We improved a recent WSI method by allowing it to produce a dynamic number of senses, and by showing how the resulting clusters could be in- spected and validated through the identiﬁcation of per-sense characteristic substitutes. These are then used to perform error analysis of the method and its culprits, highlighting the major modes of fail- ure and their prevalence, suggesting promising av- enues for future work. Additionally, incorporating BERT as an LM improves the state of the art in two recent SemEval WSI tasks by a large margin, and validates the utility of the dynamic-patterns approach of Amrami and Goldberg (2018). References",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 5,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "A Handling of identiﬁed failure modes Some of the failure modes mentioned in section 4 can be remedied by various means. LM and TEMPLATE cases are relatively rare and stand out when debugging the ﬁnal solution. Their distinct distribution usually pushes them into clusters of their own, allowing identiﬁcation and possibly their removal before rerunning the procedure. Using a suitable LM for the target domain is im- portant, and indeed most LM failure we encoun- tered are due to transcribed spoken text. Fine- tuning BERT on the domain of interest could im- prove results. The MERGE and TOPIC cases deal with the discerning resolution of our method. An interest- ing direction for future work is ﬁnding a way to collect additional target usages to better model the borderline cases. This also seems like a promising direction to take with SPLIT cases. The OTHER classiﬁed senses are cases where our method completely fails. These include targets such as become(VERB) which are indeed hard to sense-induce without some mental process, specif- ically with substitutions alone. For example, the WordNet senses differentiate between “become: transform into a change in state” and “become: something else”, similarly to Spanish’s ser/estar distinction. B Quality analysis examples The following provides examples of the different error categories we use, as well as demonstrates the senses that are induced by the method for some cases, and their descriptions according to the PMI method. Each table shows an induced sense, its high- ranking PMI words, and sentences associated to this sense. We additionally provide our assess- ment of that sense (OK, SPLIT, MERGE, TOPIC, TEMPLATE, LM, OTHER), as well as the gold- label WordNet sense for each sentence. We begin with the senses for meet(VERB), a target that our method scores high on (Table 3). We follow with wait(VERB), a target which our methods scores low on (Table 4). Finally, Table 5 demonstrates the error categories not present in the",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "a target that our method scores high on (Table 3). We follow with wait(VERB), a target which our methods scores low on (Table 4). Finally, Table 5 demonstrates the error categories not present in the previous ones.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 6,
+      "type": "Text",
+      "start_index": 1795
+    }
+  },
+  {
+    "content": "pose game, or battle Table 3: Senses induced for the target meet(VERB) on which our method perform relatively well. At the end of each sentence in parentheses is its tagged WordNet sense in the gold labels. In our manual inspection, Sense #1 seems semantically close enough to be classiﬁed OK. Sense #3 is classiﬁed as SPLIT due its similarity to sense #1. Sense #7 is classiﬁed as TOPIC due to its substitutes which are not lexical. It’s interesting to see the method induced a sense for group meeting, sense #4, with substitutes such as convene and crowd.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 7,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "No. High PMI words Class OK Table 4: Senses induced for the target wait(VERB) on which our method perform poorly. In our manual inspec- tion, sense #6 is classiﬁed as OTHER, this class of found senses usually group up a large portion of unrelated sentence, making their differentiating substitutes an incoherent bag of left-overs. Sense #2’s substitutes aren’t very informative for its sense (”serve as a waiter”) but they do distinguish this sentence from the other sensed sentences.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 8,
+      "type": "Text",
+      "start_index": 0
+    }
+  },
+  {
+    "content": "This sense cluster the meaning of two unrelated concepts: ”strikes again” as in ”does it again”, and ”strike” as in ”worker uprising”. The characteristic substitutes are still informative. sight(NOUN) TEMPLATE advance, propose, glamour, diamond, lipstick, wing, aspiration This template of X set her sights on Y, produces a distinct substitutes distribution which pushes the sentences above into a sense of their own. This ”over-ﬁts” the target usage, giving weight to substitutes such as ”lipstick” in the example above. Table 5: Examples of error cases not appearing the previous two clustering solutions.",
+    "metadata": {
+      "filename": "1905.12598.pdf",
+      "page_number": 9,
+      "type": "Text",
+      "start_index": 0
+    }
+  }
+]

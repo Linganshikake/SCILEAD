@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n  {\n    \"Task\": \"Abstractive sentence summarization\",\n    \"Dataset\": \"Annotated English Gigaword\",\n    \"Metric\": \"ROUGE-1\",\n    \"Result\": \"39.11\"\n  },\n  {\n    \"Task\": \"Abstractive sentence summarization\",\n    \"Dataset\": \"Annotated English Gigaword\",\n    \"Metric\": \"ROUGE-2\",\n    \"Result\": \"19.78\"\n  },\n  {\n    \"Task\": \"Abstractive sentence summarization\",\n    \"Dataset\": \"Annotated English Gigaword\",\n    \"Metric\": \"ROUGE-L\",\n    \"Result\": \"36.87\"\n  }\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791896123,
+  "id": "chatcmpl-EYWKJwc6zC6QHFThPda8lrCgRR2YZ",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20261001183642-fdf85242-default-r2-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 139,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 73,
+      "engine_ttlt_ms": 615,
+      "pre_inference_ms": 159,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 439,
+      "service_ttlt_ms": 976,
+      "user_visible_ttft_ms": 280
+    },
+    "prompt_tokens": 2978,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 3117
+  }
+}

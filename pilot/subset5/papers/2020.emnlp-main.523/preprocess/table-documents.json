@@ -1,0 +1,98 @@
+[
+  {
+    "content": "Table 1: Results of entity typing on the Open Entity dataset.\nPrec. Rec. F1 Name 77.4 60.6 68.0 UFET (Zhang et al., 2019) 76.4 71.0 73.6 BERT (Zhang et al., 2019) 78.4 72.9 75.6 ERNIE (Zhang et al., 2019) KEPLER (Wang et al., 2019b) 77.2 74.2 75.7 KnowBERT (Peters et al., 2019) 78.6 73.7 76.1 79.3 75.8 77.5 K-Adapter (Wang et al., 2020) 77.6 75.0 76.2 RoBERTa (Wang et al., 2020) 79.9 76.6 78.2 LUKE",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 5,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: Results of relation classiﬁcation on the TA- CRED dataset.\nName BERT (Zhang et al., 2019) C-GCN (Zhang et al., 2018b) ERNIE (Zhang et al., 2019) SpanBERT (Joshi et al., 2020) MTB (Baldini Soares et al., 2019) KnowBERT (Peters et al., 2019) KEPLER (Wang et al., 2019b) K-Adapter (Wang et al., 2020) RoBERTa (Wang et al., 2020) LUKE Prec. Rec. F1 67.2 64.8 66.0 69.9 63.3 66.4 70.0 66.1 68.0 70.8 70.9 70.8 - 71.5 71.6 71.4 71.5 70.4 73.0 71.7 68.9 75.4 72.0 70.2 72.4 71.3 70.4 75.1 72.7 -",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: Results of named entity recognition on the CoNLL-2003 dataset.\nName F1 LSTM-CRF (Lample et al., 2016) 91.0 92.2 ELMo (Peters et al., 2018) 92.8 BERT (Devlin et al., 2019) 93.1 Akbik et al. (2018) 93.5 Baevski et al. (2019) 92.4 RoBERTa 94.3 LUKE",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: Results of cloze-style question answering on the ReCoRD dataset. All models except RoBERTa (en- semble) are based on a single model.\nName DocQA+ELMo (Zhang et al., 2018a) BERT (Wang et al., 2019a) XLNet+Veriﬁer (Li et al., 2019) RoBERTa (Liu et al., 2020) RoBERTa (ensemble) (Liu et al., 2020) LUKE Test Dev F1 EM 44.1 45.4 45.4 46.7 71.3 72.0 80.6 82.1 81.5 82.7 89.0 89.5 Dev F1 Test EM - - - - 90.0 90.6 90.8 91.4 90.6 91.2 - -",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Results of extractive question answering on the SQuAD 1.1 dataset.\nName BERT (Devlin et al., 2019) SpanBERT (Joshi et al., 2020) XLNet (Yang et al., 2019) ALBERT (Lan et al., 2020) RoBERTa (Liu et al., 2020) LUKE Test Dev F1 EM 84.2 91.1 85.1 91.8 88.8 94.6 89.0 94.5 89.9 95.1 89.3 94.8 88.9 94.6 89.8 95.0 90.2 95.4 Dev F1 Test EM - - - - - -",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 6: Ablation study of our entity representations.\nName LUKE w/o entity inputs LUKE CoNLL-2003 (Test F1) 92.9 94.3 SQuAD (Dev EM) 89.2 89.8 SQuAD (Dev F1) 94.8 95.0",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Open Entity (Test F1) 77.9 78.2 TACRED (Test F1) 72.2 72.7 CoNLL-2003 (Test F1) 94.1 94.3 ReCoRD (Dev EM) 90.1 90.8 ReCoRD (Dev F1) 90.7 91.4 SQuAD (Dev EM) 89.2 89.8",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 9,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 7: Ablation study of our entity-aware self-attention mechanism.\nName RoBERTa w/ extra training RoBERTa LUKE CoNLL-2003 (Test F1) 92.5 92.4 94.3 SQuAD (Dev EM) 89.1 88.9 89.8 SQuAD (Dev F1) 94.7 94.6 95.0",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 9,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 9: Hyper-parameters used to pretrain LUKE.\nName Value Maximum word length 512 Batch size 2048 Peak learning rate le-5 Peak learning rate (first 100K steps) | 5e-4 Learning rate decay linear ‘Warmup steps 2500 Mask probability for words 15% Mask probability for entities 15% Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam (3; 0.9 Adam {32 0.999 Adam € le-6",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 11,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 10: Hyper-parameters used for the extra pretrain- ing of RoBERTa on our Wikipedia corpus.\nName Value Maximum word length 512 Batch size 2048 Peak learning rate le-5 Learning rate decay linear Warmup steps 2500 Mask probability for words | 15% Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam (3; 0.9 Adam 32 0.999 Adam € le-6",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 11,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 11: Hyper-parameters and other details of our experiments.\nName Learning rate Batch size Training epochs Training time Number of GPUs Dev score Open Entity TACRED CoNLL-2003 1e-5 32 5 190min 1 72.0 F1 1e-5 4 3 10min 1 78.5 F1 1e-5 8 5 203min 1 97.1 F1 ReCoRD 1e-5 32 2 92min 8 90.8 EM/91.4 F1 SQuAD 15e-6 48 2 42min 8 89.8 EM/95.0 F1",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 12,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 12: Common hyper-parameters used in our ex- periments.\nName Value Maximum word length | 512 Learning rate decay linear Warmup ratio 0.06 Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam 3; 0.9 Adam 82 0.98 Adam € le-6",
+    "metadata": {
+      "filename": "2020.emnlp-main.523.pdf",
+      "page_number": 12,
+      "type": "Table"
+    }
+  }
+]

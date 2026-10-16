@@ -1,0 +1,20 @@
+{
+  "requests": 491,
+  "all_logical_message_content_equal": true,
+  "all_expected_hashes_correct": true,
+  "explanation": "LangChain serializes HTTP message dictionary keys content then role; captured message plan uses role then content. Python dict equality confirms same roles and content in same message order; non-canonical JSON hash is sensitive to object-key order.",
+  "sample": {
+    "file": "D:\\C++\\SCILEAD\\pilot\\full43_fewshot\\papers\\2020.findings-emnlp.378\\extraction\\api_calls\\0001\\request.json",
+    "dict_equal": true,
+    "state_matches_expected_hash": true,
+    "raw_dict_order_digest_matches": false,
+    "expected_key_order": [
+      "role",
+      "content"
+    ],
+    "wire_key_order": [
+      "content",
+      "role"
+    ]
+  }
+}

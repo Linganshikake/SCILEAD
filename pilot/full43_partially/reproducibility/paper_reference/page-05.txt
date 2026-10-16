@@ -1,0 +1,102 @@
+defined entity names in this setting. We discard
+a TDM triple if any entities cannot be mapped to
+an existing entity list. Implementation details and
+utilized prompts are given in Appendix G.
+Algorithm 1 Partially pre-defined TDM / cold start
+1: for each t ∈ {task, dataset, metric} do
+2: S′t ← Pre-defined taxonomy of type t
+3: Lt ← LLM extraction outputs of type t
+4: for each lt ∈ Lt do
+5: lt ← LLMNorm (lt, S′t)
+6: if lt not in S′t then
+7: S′t ← S′t + {lt}
+Partially Pre-defined TDM Triples. Unlike the
+previous setting, where the TDM taxonomy is fully
+pre-defined, here we assume that the TDM taxon-
+omy is partially defined. To simulate this setting,
+we mask a subset of entities in the fully pre-defined
+TDM triples. The masked subset represents unseen
+leaderboards, mimicking the continuous updating
+and evolution in research. As shown in Algorithm
+1, we first initialize our new entity name set S′t by
+removing the masked entity names Mt from the
+initial set St. LLMs first decide whether the given
+extracted entity name lt matches with any element
+in S′t. If the model cannot find a match, our algo-
+rithm considers it a newly introduced entity name
+and adds it to S′t. This process repeats until all
+extracted entity names are processed. In this frame-
+work, we want to simulate the real-world scenario
+where newly introduced tasks and datasets would
+create new leaderboards while the old ones will be
+mapped to existing leaderboards.
+For example, assume that one of the masked
+leaderboard task names is “Named Entity Recogni-
+tion (NER)”. If the LLM extraction result is NER
+and no other task names represent this task in S′t
+at this point, NER will be added to S′t, and other
+LLM extracted task names related to Named Entity
+Recognition will be normalized to this entry in the
+following process. Since NER is not directly com-
+parable with the pre-defined leaderboard names,
+we require an additional normalization step at the
+TDM triple level to enable direct comparison be-
+tween newly created leaderboards and gold leader-
+boards during evaluation, as the new leaderboards
+may not always utilize the pre-defined TDM triple
+names. Please refer to Appendix G for more details
+about the second normalization step.
+Cold Start. In the cold start setting, we do not
+use any pre-defined entity names to simulate the
+scenario where no leaderboard exists. We mask all
+pre-defined entity names in St and start the process
+with an empty set S′t (i.e., S′t = St − Mt = ∅).
+As in the partially pre-defined TDM triples setting,
+S′t is a dynamic set. We gradually update S′t by
+adding new items and processing the entity names
+individually. For instance, LLM encounters a new
+entity, “Summary Generation”, and adds it to the
+empty set S′t. When LLM encounters “Document
+Summarization” in the subsequent steps, it asso-
+ciates this new entity with “Summary Generation”
+and does not update S′t and maps “Document Sum-
+marization” to “Summary Generation”. Similar to
+the previous setting, after extracting all TDMR tu-
+ples from individual papers and normalizing each
+element with the newly defined TDM entities, we
+carry out the second normalization step at the TDM
+triple level.
+4.3 Leaderboard Construction
+In scientific papers, a diverse array of metrics are
+employed for evaluation, ranging from commonly
+used measures (e.g., accuracy) to task-specific met-
+rics (e.g., perplexity). While many of these metrics
+are optimally scaled in [0, 1], others, like root mean
+squared error, may have arbitrary scales. However,
+the reported values of these metrics can vary across
+papers, making it challenging to develop a univer-
+sal normalization method that can scale all result
+values to a common range for comparison.
+To mitigate this complexity, we have devel-
+oped a post-processing procedure specifically for
+percentage-like metrics, which are scaled between
+0 and 1, such as F1 score and accuracy, in our cur-
+rent dataset. This procedure begins by identifying
+whether a predicted metric is percentage-like us-
+ing a pre-defined list of such metrics. Then, we
+perform post-processing on the corresponding ex-
+tracted values. The post-processing involves two
+steps: first, we clean the extracted results by re-
+moving special characters (e.g., % or ±), as well
+as mean and standard deviation values if presented.
+Next, we standardize the reporting style by convert-
+ing all values to percentages, thereby eliminating
+inconsistencies that may arise from presenting val-
+ues as floating points in [0, 1] or as percentages.
+For metrics with different ranges (e.g., perplexity),
+we retain the extracted values in their original form.
+After this process, we gather the same normal-
+ized TDM triples and their corresponding results.
+We automatically sort result values to determine
+the rankings of the papers in the same leaderboard.
+7967

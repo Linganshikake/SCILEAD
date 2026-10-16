@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n    {\"Task\": \"Entity Typing\", \"Dataset\": \"Open Entity\", \"Metric\": \"F1\", \"Result\": \"78.2\"},\n    {\"Task\": \"Relation Classification\", \"Dataset\": \"TACRED\", \"Metric\": \"F1\", \"Result\": \"72.7\"},\n    {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"CoNLL-2003\", \"Metric\": \"F1\", \"Result\": \"94.3\"},\n    {\"Task\": \"Cloze-style Question Answering\", \"Dataset\": \"ReCoRD\", \"Metric\": \"EM\", \"Result\": \"90.8\"},\n    {\"Task\": \"Cloze-style Question Answering\", \"Dataset\": \"ReCoRD\", \"Metric\": \"F1\", \"Result\": \"91.4\"},\n    {\"Task\": \"Extractive Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"EM\", \"Result\": \"89.8\"},\n    {\"Task\": \"Extractive Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"F1\", \"Result\": \"95.0\"}\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791888311,
+  "id": "chatcmpl-EYUIJa7XiyFY0YwRk3BB3cz6ihecO",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260928075303-508606e1-default-r1-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_a265b6cf81",
+  "usage": {
+    "completion_tokens": 243,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 5,
+      "engine_ttft_ms": 173,
+      "engine_ttlt_ms": 1386,
+      "pre_inference_ms": 171,
+      "service_tbt_ms": 5,
+      "service_ttft_ms": 550,
+      "service_ttlt_ms": 1749,
+      "user_visible_ttft_ms": 379
+    },
+    "prompt_tokens": 3496,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 3739
+  }
+}

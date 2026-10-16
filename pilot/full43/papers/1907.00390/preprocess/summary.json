@@ -1,0 +1,36 @@
+{
+  "paper": "1907.00390.pdf",
+  "status": "COMPLETE",
+  "pdf_pages": 5,
+  "strategy": "hi_res",
+  "infer_table_structure": true,
+  "chunk_size": 2000,
+  "chunk_overlap": 200,
+  "embedding": "multi-qa-mpnet-base-dot-v1",
+  "retrieval": "similarity default k=4 plus all tables",
+  "elements": 88,
+  "table_count": 3,
+  "table_pages": [
+    1,
+    4,
+    4
+  ],
+  "categories": {
+    "Header": 1,
+    "UncategorizedText": 4,
+    "Title": 12,
+    "NarrativeText": 32,
+    "Table": 3,
+    "FigureCaption": 6,
+    "ListItem": 16,
+    "Image": 3,
+    "Formula": 11
+  },
+  "text_chunks": 9,
+  "evidence_count": 7,
+  "evidence_types": {
+    "Text": 4,
+    "Table": 3
+  },
+  "seconds": 35.297
+}

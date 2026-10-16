@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 4330,
+  "completion_tokens": 180,
+  "total_tokens": 4510,
+  "request_seconds": 3.3590000001713634,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1907.00390.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "a3f446c14815cd2325c237fadbf8f31fd150121b053cf46784f2715b35426ea1",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYxNRjjsBZl3hhRTn0CCMmLDYkNGp",
+      "usage": {
+        "completion_tokens": 180,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 62,
+          "engine_ttlt_ms": 756,
+          "pre_inference_ms": 117,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 375,
+          "service_ttlt_ms": 1045,
+          "user_visible_ttft_ms": 258
+        },
+        "prompt_tokens": 4330,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 2304
+        },
+        "total_tokens": 4510
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Slot Filling\", \"Dataset\": \"ATIS\", \"Metric\": \"F1-score\", \"Result\": \"95.80\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"97.76\"}, {\"Task\": \"Sentence-level Semantic Frame Accuracy\", \"Dataset\": \"ATIS\", \"Metric\": \"Accuracy\", \"Result\": \"86.90\"}, {\"Task\": \"Slot Filling\", \"Dataset\": \"Snips\", \"Metric\": \"F1-score\", \"Result\": \"92.23\"}, {\"Task\": \"Intent Detection\", \"Dataset\": \"Snips\", \"Metric\": \"Accuracy\", \"Result\": \"97.43\"}, {\"Task\": \"Sentence-level Semantic Frame Accuracy\", \"Dataset\": \"Snips\", \"Metric\": \"Accuracy\", \"Result\": \"80.57\"}]",
+      "response_sha256": "3778cb95d7d347c824b833b8a1dd8330318a4556e80634bf20ad650bb2d9b69a",
+      "seconds": 3.3590000001713634
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

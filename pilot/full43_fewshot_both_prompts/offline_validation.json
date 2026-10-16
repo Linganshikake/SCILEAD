@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "new_api_requests": 0,
+  "original_main_executed": true,
+  "is_few_shot": true,
+  "prompt_key": "few-shot-normalization-system-prompt",
+  "checks": [
+    "original dispatch uses exact Few-shot system and Human template",
+    "static three examples once; dynamic candidates separate",
+    "all three fields in-set and out-of-set handling",
+    "whitespace response not cleaned",
+    "exact original names skip LLM",
+    "repeated unknown fields invoke independently",
+    "Result strings/evidence/order unchanged",
+    "completed request position replays locally",
+    "uncertain transport errors retained and retry blocked"
+  ],
+  "test_dir": "D:\\C++\\SCILEAD\\pilot\\full43_fewshot_both_prompts\\offline_tests\\1792039091682624200"
+}

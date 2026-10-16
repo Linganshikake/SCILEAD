@@ -1,0 +1,49 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "[\n  {\"Task\": \"Entity Typing\", \"Dataset\": \"Open Entity\", \"Metric\": \"F1\", \"Result\": \"78.2\"},\n  {\"Task\": \"Relation Classification\", \"Dataset\": \"TACRED\", \"Metric\": \"F1\", \"Result\": \"72.7\"},\n  {\"Task\": \"Named Entity Recognition\", \"Dataset\": \"CoNLL-2003\", \"Metric\": \"F1\", \"Result\": \"94.3\"},\n  {\"Task\": \"Cloze-style Question Answering\", \"Dataset\": \"ReCoRD\", \"Metric\": \"EM\", \"Result\": \"90.8\"},\n  {\"Task\": \"Cloze-style Question Answering\", \"Dataset\": \"ReCoRD\", \"Metric\": \"F1\", \"Result\": \"91.4\"},\n  {\"Task\": \"Extractive Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"EM\", \"Result\": \"89.8\"},\n  {\"Task\": \"Extractive Question Answering\", \"Dataset\": \"SQuAD 1.1\", \"Metric\": \"F1\", \"Result\": \"95.0\"}\n]",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791901150,
+  "id": "chatcmpl-EYXdOd85FagqHAhtFfj6NO1yLE0EF",
+  "model": "gpt-4.1-2025-04-14",
+  "object": "chat.completion",
+  "routing": {
+    "serving_pipereplica": "d20260929070338-2828e253-default-r0-dp0-default"
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_11edcc854b",
+  "usage": {
+    "completion_tokens": 243,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "latency_checkpoint": {
+      "engine_tbt_ms": 4,
+      "engine_ttft_ms": 82,
+      "engine_ttlt_ms": 1151,
+      "pre_inference_ms": 118,
+      "service_tbt_ms": 4,
+      "service_ttft_ms": 709,
+      "service_ttlt_ms": 1773,
+      "user_visible_ttft_ms": 592
+    },
+    "prompt_tokens": 3496,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    },
+    "total_tokens": 3739
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "model": "gpt-4.1-2025-04-14",
+  "base_url": "https://9527.codes/v1",
+  "temperature": 0,
+  "seed": 0,
+  "max_tokens": 15,
+  "max_retries": 0,
+  "expected_calls": 12,
+  "max_allowed_calls": 12,
+  "zero_shot": true,
+  "official_prompt_branch": "gpt4-turbo-128k",
+  "python_hash_seed": "0",
+  "gold_sha256": "603dd077ae174e4beefc24a9a73b7436e1e3cb6c9aaee042adc4d4aa5ea75aaf",
+  "extraction_sha256": "dc1dfc1381569d73457017b9bf9299d8f25752d80af62a4cdb58ab50bd5d5838",
+  "extraction_config_sha256": "9c174a78336265f070036dba3317acd53b4074b41acbbe18d937a5137c68d419",
+  "source_hashes": {
+    "tdm_llm_normalization.py": "ec52b06b96cba9b0bd2d22159e2adafb3604b53d519e412a08505e94afab5d64",
+    "tdm_eval.py": "d84cb867a9ba1bb1311210c80705c55697b0b370ae12ec566bc8f8ff8f7ba606",
+    "prompting.py": "314179a7a9a8ee644ed90362efc3caae0d01a9f0886e110264dca95e3c24c06d",
+    "utils.py": "ddfdd911d835917a55230dfd14f433b5abe4d664e484b30e0acfdf256c2b7c8e",
+    "model_init.py": "40d4d542600f9febd520f4a90dd962473d8155acaab5ba575c023c7240ec90e4",
+    "prompts.json": "72983f27f184aa565afcf676e7bef32dc782c9d3d055c949a790c0d594152629",
+    "requirements.txt": "9a074c4962e8dd756bf46ee5bf87d54b75f09542a9de0e16da3962b037e4adf1"
+  },
+  "implementation": "Call unmodified tdm_llm_normalization.main; replace only model initialization and in-memory config compatibility fields.",
+  "cost_warning": "Official normalization_costs.txt may contain unsupported zero/estimated OpenAI costs. It is not third-party billing; use token logs.",
+  "timeout_seconds": {
+    "connect": 20,
+    "read": 180,
+    "write": 30,
+    "pool": 20
+  }
+}

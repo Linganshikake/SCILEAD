@@ -1,0 +1,104 @@
+{
+  "1812.09471.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Intent Detection and Slot Filling",
+        "Dataset": "MNLI-m",
+        "Metric": "F1",
+        "Result": "0.918"
+      },
+      {
+        "Task": "Intent Detection and Slot Filling",
+        "Dataset": "MNLI-m",
+        "Metric": "Accuracy",
+        "Result": "0.977"
+      },
+      {
+        "Task": "Intent Detection and Slot Filling",
+        "Dataset": "MNLI-m",
+        "Metric": "Accuracy",
+        "Result": "0.809"
+      },
+      {
+        "Task": "Intent Detection and Slot Filling",
+        "Dataset": "ATIS",
+        "Metric": "F1",
+        "Result": "0.952"
+      },
+      {
+        "Task": "Intent Detection and Slot Filling",
+        "Dataset": "ATIS",
+        "Metric": "Accuracy",
+        "Result": "0.948"
+      },
+      {
+        "Task": "Intent Detection and Slot Filling",
+        "Dataset": "ATIS",
+        "Metric": "Accuracy",
+        "Result": "0.834"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "Algorithm 1 Dynamic routing-by-agreement 1: procedure DYNAMIC ROUTING(pk|t, iter) 2: for each WordCaps t and SlotCaps k: bkt ← 0. for iter iterations do for all WordCaps t: ct ← softmax(bt) for all SlotCaps k: sk ← Σrcktpk|t for all SlotCaps k: vk = squash(sk) for all WordCaps t and SlotCaps k: bkt ← bkt + pk|t · vk end for Return vk 9: 10: end procedure is calculated by aggregating all the prediction vec- tors for that slot type {pk|t|t∈T }, weighted by the agreement values ckt obtained from bkt (Line 5-6): where a squashing function squash(·) is applied on the weighted sum sk to get vk for each slot type. Once we updated the slot representation vk in the current iteration, the logit bkt becomes larger when the dot product pk|t · vk is large. That is, when a prediction vector pk|t is more similar to a slot representation vk, the dot product is larger, in- dicating that it is more likely to route this word to the k-th slot type (Line 7). An updated, larger bkt will lead to a larger agreement value ckt between the t-th word and the k-th slot in the next itera- tion. On the other hand, it assigns low ckt when there is inconsistency between pk|t and vk. The agreement values learned via the unsupervised, it- erative algorithm ensures the outputs of the Word- Caps get sent to appropriate subsequent SlotCaps after iterslot iterations. Cross Entropy Loss for Slot Filling For the t-th word in an utterance, its slot type is determined as follows: The slot ﬁlling loss is deﬁned over the utterance as the following cross-entropy function: where yk t the t-th word. yk to the k-th slot type. indicates the ground truth slot type for t = 1 when the t-th word belongs 2.3 IntentCaps The IntentCaps take the output vk for each slot k ∈ {1, 2, ..., K} in SlotCaps as the input, and determine the utterance-level intent of the whole utterance. The IntentCaps also convert each slot representation in SlotCaps with respect to the in- tent type: where l ∈ {1, 2, ..., L} and L is the number of",
+        "metadata": {
+          "filename": "1812.09471.pdf",
+          "page_number": 4,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "lexical features. 2) Joint Seq. (Hakkani-T¨ur et al., 2016) adopts a Recurrent Neural Network (RNN) for slot ﬁlling and the last hidden state of the RNN is used to predict the ut- terance intent. 3) Attention BiRNN (Liu and Lane, 2016) further introduces a RNN based encoder- decoder model for joint slot ﬁlling and intent de- tection. An attention weighted sum of all encoded hidden states is used to predict the utterance intent. 4) Slot-gated Full Atten. (Goo et al., 2018) utilizes a slot-gated mechanism as a special gate function in Long Short-term Memory Network (LSTM) to improve slot ﬁlling by the learned intent context vector. The intent context vector is used for intent detection. 5) DR-AGG (Gong et al., 2018) aggre- gates word-level information for text classiﬁcation via dynamic routing. The high-level capsules af- ter routing are concatenated, followed by a multi- layer perceptron layer that predicts the utterance label. We used this capsule-based text classiﬁca- tion model for intent detection only. 6) IntentCap- sNet (Xia et al., 2018) adopts a multi-head self- attention to extract intermediate semantic features from the utterances, and uses dynamic routing to aggregate semantic features into intent represen- tations for intent detection. We use this capsule- based model for intent detection only. proposed model compare CAPSULE-NLU with commercial natural language understanding services, includ- ing api.ai (Now called DialogFlow)2, Waston Assistant3, Luis4, wit.ai5, snips.ai6, recast.ai7, and Amazon Lex8. Implementation Details The hyperparameters used for experiments are shown in Table 2. Table 2: Hyperparameter settings. 2https://dialogflow.com/ 3https://www.ibm.com/cloud/watson- assistant/ 4https://www.luis.ai/ 5https://wit.ai/ 6https://snips.ai/ 7https://recast.ai/ 8https://aws.amazon.com/lex/",
+        "metadata": {
+          "filename": "1812.09471.pdf",
+          "page_number": 5,
+          "start_index": 1799,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "2 Approach We propose to model the hierarchical relation- ship among each word, the slot it belongs to, and the intent label of the whole utterance by a hier- archical capsule neural network structure called CAPSULE-NLU. The proposed architecture con- sists of three types of capsules: 1) WordCaps that learn context-aware word representations, 2) SlotCaps that categorize words by their slot types via dynamic routing, and construct a representa- tion for each type of slot by aggregating words that belong to the slot, 3) IntentCaps determine the intent label of the utterance based on the slot representation as well as the utterance contexts. Once the intent label has been determined by In- tentCaps, the inferred utterance-level intent helps re-recognizing slots from the utterance by a re- routing schema. 2.1 WordCaps Given an input utterance x = (w1, w2, ..., wT ) of T words, where each word is initially represented by a vector of dimension DW . Here we simply trained word represenations from scratch. Vari- ous neural network structures can be used to learn context-aware word representations. For example, a recurrent neural network such as a bidirectional LSTM (Hochreiter and Schmidhuber, 1997) can be applied to learn representations of each word in the utterance: For each word w;, we concatenate each for- ward hidden state hy obtained from the forward LSTM fw with a backward hidden state hy from LSTM,, to obtain a hidden state h;. The whole hidden state matrix can be defined as H = (hy, hg,...,h) € R?*?24, where Dy is the number of hidden units in each LSTM. In this work, the parameters of WordCaps are trained with the whole model, while sophisticated pre- trained models such as ELMo (Peters et al., 2018) or BERT (Devlin et al., 2018) may also be inte- grated. 2.2 SlotCaps Traditionally, the learned hidden state ht for each word wt is used as the logit to predict its slot tag. When H for all words in the utterance is learned, sequential tagging methods like the",
+        "metadata": {
+          "filename": "1812.09471.pdf",
+          "page_number": 3,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "5 Related Works Intent Detection With recent developments in deep neural networks, user intent detection mod- els (Hu et al., 2009; Xu and Sarikaya, 2013; Zhang et al., 2016; Liu and Lane, 2016; Zhang et al., 2017; Chen et al., 2016; Xia et al., 2018) are pro- posed to classify user intents given their diversely expressed utterances in the natural language. As a text classiﬁcation task, the decent performance on utterance-level intent detection usually relies on hidden representations that are learned in the intermediate layers via multiple non-linear trans- formations. Recently, various capsule based text classiﬁ- cation models are proposed that aggregate word- level features for utterance-level classiﬁcation via dynamic routing-by-agreement (Gong et al., 2018; Zhao et al., 2018; Xia et al., 2018). Among them, Xia et al. (2018) adopts self-attention to extract in- termediate semantic features and uses a capsule- based neural network for intent detection. How- ever, existing works do not study word-level su- pervisions for the slot ﬁlling task. In this work, we explicitly model the hierarchical relationship be- tween words and slots on the word-level, as well as intents on the utterance-level via dynamic routing- by-agreement. Slot Filling Slot ﬁlling annotates the utterance with ﬁner granularity: it associates certain parts of the utterance, usually named entities, with pre- deﬁned slot tags. Currently, the slot ﬁlling is usu- ally treated as a sequential labeling task. A re- current neural network such as Gated Recurrent Unit (GRU) or Long Short-term Memory Network (LSTM) is used to learn context-aware word repre- sentations, and Conditional Random Fields (CRF) are used to annotate each word based on its slot type. Recently, Shen et al. (2017); Tan et al. (2017) introduce the self-attention mechanism for CRF- free sequential labeling. Joint Modeling via Sequence Labeling To over- come the error propagation in the word-level slot ﬁlling task and the utterance-level",
+        "metadata": {
+          "filename": "1812.09471.pdf",
+          "page_number": 8,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Dataset statistics.\nDataset Vocab Size Average Sentence Length #Intents #Slots #Training Samples #Validation Samples #Test Samples SNIPS-NLU ATIS 11,241 9.05 7 72 13,084 700 700 722 11.28 21 120 4,478 500 893",
+        "metadata": {
+          "filename": "1812.09471.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Hyperparameter settings.\nDataset SNIPS-NLU 1024 1024 ATIS DW DH DP DL 128 256 512 512 512 512 iterslot 2 3 iterintent 2 3",
+        "metadata": {
+          "filename": "1812.09471.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Slot ﬁlling and intention detection results using CAPSULE-NLU on two datasets.\nModel CNN TriCRF (Xu and Sarikaya, 2013) Joint Seq. (Hakkani-T¨ur et al., 2016) Attention BiRNN (Liu and Lane, 2016) Slot-Gated Full Atten. (Goo et al., 2018) DR-AGG (Gong et al., 2018) IntentCapsNet (Xia et al., 2018) CAPSULE-NLU CAPSULE-NLU w/o Intent Detection CAPSULE-NLU w/o Joint Training Slot (F1) - 0.873 0.878 0.888 - - 0.918 0.902 0.902 SNIPS-NLU Intent (Acc) Overall (Acc) Slot (F1) - 0.969 0.967 0.970 0.966 0.974 0.973 - 0.977 - 0.732 0.741 0.755 - - 0.809 - 0.804 0.944 0.942 0.942 0.948 - - 0.952 0.948 0.948 ATIS Intent (Acc) Overall (Acc) - 0.926 0.911 0.936 0.914 0.948 0.950 - 0.847 - 0.807 0.789 0.822 - - 0.834 - 0.743",
+        "metadata": {
+          "filename": "1812.09471.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

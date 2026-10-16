@@ -1,0 +1,840 @@
+{
+  "2020.findings-emnlp.378.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "90.32"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "55.14"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "50.68"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "81.18"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "96.62"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "69.78"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "coder in this work. So that the encoding of the input text can be formalized as where H = [h1, h2, · · · , hi, · · · , hn] and E = [e1, e2, · · · , ei, · · · , en] are lists of hidden vectors and embeddings of X , respectively. Note that, since pre-trained embeddings contain context infor- mation learned from large-scale corpora, and differ- ent types of them may carry heterogeneous context information learned from different algorithms and corpora, we incorporate multiple pre-trained em- beddings by direct concatenating them in the input: 2015).5 These datasets come from a wide range of sources so that we are able to comprehensively eval- uate our approach with them. In detail, WN16 and WN17 are constructed from social media; ON5e consists of mixed sources, such as telephone con- versation, newswire, etc.; ON4c is from news do- main; RE and WE are extracted from Chinese on- line resources. For all datasets, we use their origi- nal splits and the statistics of them with respect to the number of entity types (# T.), sentences (# S.) and total entities (# E.) in the train/dev/test sets are reported in Table 1. 3.2 Implementation ei = ⊕ z∈Z where ei is the ﬁnal word representation to feed the context encoder; ez i represents the word embedding of xi in embedding type z and Z the set of all embedding types. For the output, upon the receiving of oi, a train- able matrix Wo is used to align its dimension to the output space by ui = Wo · oi. Finally, we apply a conditional random ﬁeld (CRF) decoder to predict the labels ˆyi ∈ T (where T is the set with all NE labels) in the output sequence ˆY by To label NEs, we use the BIOES tagging scheme instead of the standard BIO scheme for the reason that previous studies have shown optimistic im- provement with this scheme (Lample et al., 2016; Yan et al., 2019). For the text input, we use three types of embeddings for each language by de- fault. Speciﬁcally, for English, we use Glove (100- dimension)6 (Pennington et al., 2014), ELMo",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "2.1 Syntactic Information Extraction A good representation of the input text is the key to obtain good model performance for many NLP tasks (Song et al., 2017; Sileo et al., 2019). Nor- mally, a straightforward way to improve model performance is to enhance text representation by embeddings of extra features, which is demon- strated to be useful across tasks (Marcheggiani and Titov, 2017; Song et al., 2018a; Zhang et al., 2019; Huang and Carley, 2019; Tian et al., 2020c), in- cluding NER (Zhang and Yang, 2018; Seyler et al., 2018; Sui et al., 2019; Gui et al., 2019b,a; Liu et al., 2019b). Among different types of extra features, the syntactic one has been proved to be helpful in previous studies for NER, where the effectiveness of POS labels, syntactic constituents, and depen- dency relations, are demonstrated by McCallum (2003), Li et al. (2017), and Cetoli et al. (2018), respectively. In this paper, we also focus on these three types of syntactic information. In doing so, we obtain the POS labels, the syntax tree and the dependency parsing results from an off-the-shelf NLP toolkit (e.g., Stanford Parser) for each input sequence X . Then, for each token xi in X , we extract its context features and related syntactic information according to the following procedures. the tree to ﬁnd the ﬁrst acceptable syntactic node2, and select all tokens under that node as the con- text features and the combination of tokens and their syntactic nodes as the constituent information. For example, in Figure 2(b), we start from “Salt” and extract its ﬁrst accepted node “NP”, then col- lect the tokens under “NP” as the context features (i.e., “Salt”, “Lake”, and “City”) and combine them with “NP” to get the constituent information (i.e., “Salt NP”, “Lake NP”, and “City NP”). For dependency relations, we ﬁnd all context features for each xi by collecting all its dependents and governor from X ’s dependency parse, and then regard the combination of the context features and their",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 3,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 9: Values tested for different hyper-parameters and the best one used in our experiments. are obtained by tuning our model with the given hyper-parameter values on the development set of each dataset. Appendix D: The Results of Our Models on the Development Set Table 10: F 1 scores of our models under different conﬁgurations on the development set of all datasets. “GM” is the gate mechanism; “P.”, “C.” and “D.” refer to POS labels, syntactic constituents and dependency relations, respectively. In Table 10, we report the experimental results (F 1) of our models (i.e., with all types of embed- dings and KVMN) under different conﬁgurations (using syntax attention on different combinations of syntactic information and whether to use the gate mechanism) on development set of all datasets.",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 15,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "https://github.com/cuhksz-nlp/AESINER 4231 Findings of the Association for Computational Linguistics: EMNLP 2020, pages 4231-4245 November 16 - 20, 2020. ©2020 Association for Computational Linguistics",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 1,
+          "start_index": 3604,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Statistics of all datasets with respect to the number of NE types (T.), sentences (S.), and total NEs (E.).\nENGLISH CHINESE TYPE ON5E WN16 WN17 ON4C RE WE # T. = 18 # T. = 10 # T. = 6 # T. = 4 # T. = 8 # T. = 4 # S. # E. # S. # E. # S. # E. # S. # E. # S. # E. # S. # E. TRAIN 59.9K 81.8K 8.5K 11.1K DEV 8.3K 11.3K TEST 2.4K 1.0K 3.9K 1.5K 0.7K 3.5K 3.4K 1.0K 1.3K 2.0K 15.7K 13.4K 7.0K 4.3K 0.8K 7.7K 4.3K 1.1K 3.8K 13.4K 1.5K 0.5K 1.6K 0.5K 1.4K 0.3K 0.3K 1.9K 0.4K 0.4K",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: F 1 scores of the baseline model and ours enhanced with different types of syntactic information (“POS.”, “CON.” and “DEP.” refer to POS labels, syntactic constituents and dependency relations, respectively).\nSYNTACTIC INFORMATION ON5E WN16 WN17 ON4C RE WE POS. CON. DEP. √ √ √ 89.32 89.51 89.64 89.58 53.81 53.94 54.59 54.37 48.96 49.68 49.82 49.47 79.04 79.53 79.76 80.03 95.84 96.09 96.11 96.02 67.79 68.76 68.11 68.64",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: F 1 scores of our models with different combinations of syntactic information. “TYPE” indicates how they are combined, where “DC” and “SA” refer to direct concatenation and syntax attention, respectively.\nTYPE SYNTACTIC INFORMATION ON5E WN16 WN17 ON4C RE WE DC POS. √ √ √ CON. √ √ √ DEP. √ √ √ 89.61 89.56 89.60 89.62 54.11 54.03 54.26 54.41 49.61 49.74 49.58 49.63 79.61 79.83 79.89 79.81 95.72 96.11 96.08 95.31 68.27 68.51 68.36 68.49 SA √ √ √ √ √ √ √ √ √ 89.68 89.76 89.78 89.86 54.68 54.61 54.56 54.79 49.81 49.89 49.96 50.21 79.92 80.29 80.41 80.65 96.19 96.23 96.31 96.43 68.94 69.01 68.76 69.37",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: F 1 scores of our models with and without applying the gate mechanism (“GM”) when different syntactic information are combined by syntactic attention.\nGM SYNTACTIC INFORMATION ON5E WN16 WN17 ON4C RE WE √ POS. √ √ CON. √ √ DEP. 89.68 90.09 54.68 54.92 49.81 50.28 79.92 80.31 96.19 96.51 68.94 69.31 √ √ √ √ √ 89.76 90.08 54.61 54.78 49.89 50.16 80.29 80.64 96.23 96.47 69.01 69.47 √ √ √ √ √ 89.78 90.11 54.56 54.96 49.96 50.36 80.41 80.87 96.31 96.51 68.76 69.24 √ √ √ √ √ √ √ 89.86 90.32 54.79 55.14 50.21 50.68 80.65 81.18 96.43 96.62 69.37 69.78",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Comparison of F 1 scores of our best performing model (i.e. the full model with attentive ensemble of all syntactic information) with that reported in previous studies on all English and Chinese benchmark datasets. “*” indicates the studies using BERT as the text encoder; “†” means the results are our runs of their models.\nENGLISH CHINESE MODEL ON5E WN16 WN17 MODEL ON4C RE WE CHIU AND NICHOLS (2016) †LUO ET AL. (2018) †DANG ET AL. (2018) AKBIK ET AL. (2018) JIE AND LU (2019) YAN ET AL. (2019) ∗DEVLIN ET AL. (2019) ZHOU ET AL. (2019) AKBIK ET AL. (2019) DAI ET AL. (2019) LIU ET AL. (2019B) ∗LUO ET AL. 86.12 88.79 88.91 89.30 89.88 89.78 89.16 - - 89.83 89.94 90.30 - 51.26 51.84 - - 54.06 54.36 53.43 - - - - - 48.63 48.12 - - 48.98 49.52 42.83 49.59 - - - ZHANG AND YANG (2018) YAN ET AL. (2019) GUI ET AL. (2019B) ZHU AND WANG (2019) GUI ET AL. (2019A) LIU ET AL. (2019C) SUI ET AL. (2019) DING ET AL. (2019) ∗MENG ET AL. (2019) XU ET AL. (2019A) MA ET AL. (2020) ∗HU AND WEI (2020) 73.88 72.43 74.89 73.64 74.45 74.43 74.79 76.00 80.62 - 75.54 80.20 - 95.00 95.37 94.94 95.11 95.21 - - 96.54 - 95.59 95.80 58.79 58.17 60.21 59.31 59.92 59.84 63.09 59.50 67.60 68.93 61.24 64.00 OURS 90.32 55.14 50.68 OURS 81.18 96.62 69.78",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Experimental results (F 1 scores) of our best performing model (i.e., the full model with attentive ensemble of all syntactic information) using different pre-trained embeddings and their combinations as input.\nENGLISH CHINESE EMBEDDINGS ON5E WN16 WN17 EMBEDDINGS ON4C RE WE GLOVE ELMO BERT √ √ √ √ √ √ √ √ √ √ √ √ 89.37 89.71 89.53 89.91 89.82 90.13 90.32 47.92 53.96 53.74 54.36 54.16 54.92 55.14 43.24 47.92 48.74 48.21 49.61 50.12 50.68 GIGA √ √ √ √ TENCENT ZEN √ √ √ √ √ √ √ √ 72.11 73.54 80.06 74.86 80.49 80.81 81.18 94.99 95.21 95.98 95.46 96.24 96.41 96.62 61.94 63.06 68.84 63.96 68.94 69.42 69.78",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Figure 3: An illustration of how our model encodes syntactic information through KVMN, weights them by syntax attention (SA) and learns from the gate mechanism (GM), where the weights for different features and information types are visualized. The example sentence is shown at the top with the gold NE tags for each word marked below. The weights assigned to different syntactic information for “Bill” in KVMN, SA, and GM are highlighted with colors, where the darker colors referring to higher values.\nMason was one of the drafters of the Rights S-PER O oO oO oO oO oO B-LAW E-LAW re KVMN SA i GM iP. | C. 'D. nmod uP || Context 1 NP ' case 4 ' ' ' ' or NNP IN | let\\ _nmo i Cc. es: Syntax a: the (Bi of | the (Bill) of Rights)| drafters of the | Bill) Rights \\\\p. (1;",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 7: Experimental results (F 1 scores) of our mod- els (i.e. the full model with attentive ensemble of all syntactic information), where BERT or ZEN is used as one of the three types of embeddings (the others are Giga and Tencent Embedding) in the embedding layer.\nEMBEDDINGS ON4C RE WE BERT + GIGA + TENCENT ZEN + GIGA + TENCENT 80.91 81.18 96.56 96.62 69.61 69.78",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Context Encoder Syntactic Information ON5e WN16 WN17 Bi-LSTM √ 88.56 89.64 51.16 53.39 48.11 49.56 Transformer √ 88.97 89.92 52.31 54.56 48.69 50.21 Adapted- Transformer √ 89.32 90.32 53.81 55.14 48.96 50.68",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "(b) Performance on all Chinese datasets.\nContext Encoder Syntactic Information ON4c RE WE Bi-LSTM √ 77.32 80.03 94.81 96.08 65.72 68.11 Transformer √ 78.18 80.46 95.26 96.31 67.16 69.24 Adapted- Transformer √ 79.04 81.18 95.84 96.62 67.79 69.78",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 9: Values tested for different hyper-parameters and the best one used in our experiments.\nVALUES BEST DROPOUT RATE LEARNING RATE BATCH SIZE NUMBER OF LAYERS NUMBER OF HEAD HIDDEN UNITS 0, 0.1, 0.2, 0.3 e−5, e−4, e−3 8, 16, 32 1, 2, 4 4, 8, 12 64, 128, 256 0.2 e−4 32 2 12 128",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 15,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 10: F 1 scores of our models under different conﬁgurations on the development set of all datasets. “GM” is the gate mechanism; “P.”, “C.” and “D.” refer to POS labels, syntactic constituents and dependency relations, respectively.\nGM SYN. ON5E WN16 WN17 ON4C RE WE √ P. C. D. √ √ √ √ 86.21 86.78 55.54 56.26 49.48 49.76 77.06 77.65 96.04 67.86 96.34 68.35 √ √ √ √ √ 86.41 86.84 56.31 56.84 49.69 50.02 77.31 77.56 96.12 67.63 96.31 67.86 √ √ √ √ √ 86.58 86.92 56.56 57.26 49.75 50.18 77.42 77.74 96.12 67.52 96.39 68.14 √ √ √ √ √ √ √ 86.71 56.41 87.03 57.38 50.04 50.51 77.61 96.41 68.16 78.05 96.46 68.92",
+        "metadata": {
+          "filename": "2020.findings-emnlp.378.pdf",
+          "page_number": 15,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "1709.04109.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "91.71"
+      },
+      {
+        "Task": "Part-of-Speech (POS) Tagging",
+        "Dataset": null,
+        "Metric": "Accuracy",
+        "Result": "97.53"
+      },
+      {
+        "Task": "Text Chunking",
+        "Dataset": "CoNLL-2000",
+        "Metric": "F1",
+        "Result": "95.96"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "representation learning. In ACL. Pennington, J.; Socher, R.; and Manning, C. D. 2014. Glove: Global vectors for word representation. In EMNLP. Peters, M. E.; Ammar, W.; Bhagavatula, C.; and Power, R. 2017. Semi-supervised sequence tagging with bidirectional language models. arXiv:1705.00108. Ratinov, L., and Roth, D. 2009. Design challenges and mis- conceptions in named entity recognition. In CoNLL. Rei, M. 2017. Semi-supervised multitask learning for se- quence labeling. In ACL. 2017. Reporting score Reimers, N., and Gurevych, I. distributions makes a difference: Performance study of arXiv preprint lstm-networks for sequence tagging. arXiv:1707.09861. Sha, F., and Pereira, F. 2003. Shallow parsing with condi- tional random ﬁelds. In NAACL-HLT. Shang, J.; Liu, J.; Jiang, M.; Ren, X.; Voss, C. R.; and Han, J. 2017. Automated phrase mining from massive text corpora. arXiv:1702.04457. Søgaard, A., and Goldberg, Y. 2016. Deep multi-task learn- ing with low level tasks supervised at lower layers. In ACL. Søgaard, A. 2011. Semisupervised condensed nearest neigh- bor for part-of-speech tagging. In NAACL-HLT. Srivastava, R. K.; Greff, K.; and Schmidhuber, J. 2015. Highway networks. arXiv:1505.00387. Sun, X. 2014. Structure regularization for structured predic- tion. In NIPS. Tjong Kim Sang, E. F., and Buchholz, S. 2000. Introduc- tion to the conll-2000 shared task: Chunking. In Learning language in logic and CoNLL. Tjong Kim Sang, E. F., and De Meulder, F. 2003. Introduc- tion to the conll-2003 shared task: Language-independent named entity recognition. In Natural language learning at NAACL-HLT. Yang, Z.; Salakhutdinov, R.; and Cohen, W. W. 2017. Trans- fer learning for sequence tagging with hierarchical recurrent networks. arXiv:1703.06345.",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 8,
+          "start_index": 3605,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "the limits of language modeling. arXiv:1602.02410. Jozefowicz, R.; Zaremba, W.; and Sutskever, I. 2015. An empirical exploration of recurrent network architectures. In ICML. Karpathy, A. 2015. The unreasonable effectiveness of re- current neural networks. http://karpathy.github. io/2015/05/21/rnn-effectiveness/. Accessed: 2017-08-22. Lafferty, J. D.; McCallum, A.; and Pereira, F. 2001. Con- ditional random ﬁelds: Probabilistic models for segmenting and labeling sequence data. In ICML. Lample, G.; Ballesteros, M.; Kawakami, K.; Subramanian, S.; and Dyer, C. 2016. Neural architectures for named entity recognition. In NAACL-HLT. Liu, L.; Ren, X.; Zhu, Q.; Zhi, S.; Gui, H.; Ji, H.; and Han, J. 2017. Heterogeneous Supervision for Relation Extraction: A Representation Learning Approach. Proc. EMNLP. Luo, G.; Huang, X.; Lin, C.-Y.; and Nie, Z. 2015. Joint named entity recognition and disambiguation. In EMNLP. Ma, X., and Hovy, E. 2016. End-to-end sequence labeling via bi-directional lstm-cnns-crf. In ACL. Manning, C. D. 2011. Part-of-speech tagging from 97% to 100%: is it time for some linguistics? In International Con- ference on Intelligent Text Processing and Computational Linguistics. Springer. Marcus, M. P.; Marcinkiewicz, M. A.; and Santorini, B. 1993. Building a large annotated corpus of english: The penn treebank. Computational linguistics. McCallum, A., and Li, W. 2003. Early results for named entity recognition with conditional random ﬁelds, feature in- duction and web-enhanced lexicons. In CoNLL. Mikolov, T.; Sutskever, I.; Chen, K.; Corrado, G. S.; and Dean, J. 2013. Distributed representations of words and phrases and their compositionality. In NIPS. Peng, N., and Dredze, M. 2016. Improving named entity recognition for chinese social media with word segmenta- tion representation learning. In ACL. Pennington, J.; Socher, R.; and Manning, C. D. 2014. Glove: Global vectors for word representation. In EMNLP. Peters, M. E.; Ammar, W.; Bhagavatula, C.; and Power,",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 8,
+          "start_index": 1804,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "ments in the ﬁnal version. Research was sponsored in part by the U.S. Army Research Lab. under Cooperative Agree- ment No. W911NF-09-2-0053 (NSCTA), National Science Foundation IIS 16-18481, IIS 17-04532, and IIS-17-41317, grant 1U54GM114838 awarded by NIGMS through funds provided by the trans-NIH Big Data to Knowledge (BD2K) initiative (www.bd2k.nih.gov), and Google PhD Fellowship. The views and conclusions contained in this document are those of the author(s) and should not be interpreted as repre- senting the ofﬁcial policies of the U.S. Army Research Lab- oratory or the U.S. Government. The U.S. Government is au- thorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation hereon. References Chieu, H. L., and Ng, H. T. 2002. Named entity recognition: A maximum entropy approach using global information. In COLING. Chiu, J. P. C., and Nichols, E. 2016. Named entity recogni- tion with bidirectional lstm-cnns. TACL. Collobert, R.; Weston, J.; Bottou, L.; Karlen, M.; Kavukcuoglu, K.; and Kuksa, P. P. 2011. Natural language processing (almost) from scratch. JMLR. Fernandez, J.; Yu, Z.; and Downey, D. 2017. Vecshare: A framework for sharing word representation vectors. Florian, R.; Ittycheriah, A.; Jing, H.; and Zhang, T. 2003. Named entity recognition through classiﬁer combination. In CoNLL. Glorot, X., and Bengio, Y. 2010. Understanding the dif- ﬁculty of training deep feedforward neural networks. In Proceedings of the Thirteenth International Conference on Artiﬁcial Intelligence and Statistics. Hashimoto, K.; Xiong, C.; Tsuruoka, Y.; and Socher, R. 2016. A joint many-task model: Growing a neural network for multiple nlp tasks. arXiv:1611.01587. Jozefowicz, R.; Vinyals, O.; Schuster, M.; Shazeer, N.; and Wu, Y. 2016. Exploring the limits of language modeling. arXiv:1602.02410. Jozefowicz, R.; Zaremba, W.; and Sutskever, I. 2015. An empirical exploration of recurrent network architectures. In ICML. Karpathy, A. 2015. The",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 8,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "annotations. Introduction Linguistic sequence labeling is a fundamental framework. It has been applied to a variety of tasks including part-of- speech (POS) tagging, noun phrase chunking and named en- tity recognition (NER) (Ma and Hovy 2016; Sha and Pereira 2003). These tasks play a vital role in natural language understanding and fulﬁll lots of downstream applications, such as relation extraction, syntactic parsing, and entity link- ing (Liu et al. 2017; Luo et al. 2015). Traditional methods employed machine learning models like Hidden Markov Models (HMMs) and Conditional Ran- dom Fields (CRFs), and have achieved relatively high per- formance. However, these methods have a heavy reliance on handcrafted features (e.g., whether a word is capitalized) and language-speciﬁc resources (e.g., gazetteers). Therefore, it Copyright © 2018, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved. could be difﬁcult to apply them to new tasks or shift to new domains. To overcome this drawback, neural networks (NNs) have been proposed to automatically extract features during model learning. Nevertheless, considering the over- whelming number of parameters in NNs and the relatively small size of most sequence labeling corpus, annotations alone may not be sufﬁcient to train complicated models. So, guiding the learning process with extra knowledge could be a wise choice. Accordingly, transfer learning and multi-task learning have been proposed to incorporate such knowledge. For ex- ample, NER can be improved by jointly conducting other re- lated tasks like entity linking or chunking (Luo et al. 2015; Peng and Dredze 2016). After all, these approaches would require additional supervision on related tasks, which might be hard to get, or not even existent for low-resource lan- guages or special domains. Alternatively, abundant knowledge can be extracted from raw texts, and enhance a variety of tasks. Word embedding techniques represent words in",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 1,
+          "start_index": 1802,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Notation Table.\nword-level input character-level input space after xi label sequence output of forward character-level LSTM at ci, output of backward character-level LSTM at ci, output of forward-to-LM highway unit output of backward-to-LM highway unit output of forward-to-SL highway unit output of backward-to-SL highway unit input of word-level bi-LSTM at xi output of word-level bi-LSTM at xi",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 2,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Dataset summary.\nDataset CoNLL03 NER CoNLL00 chunking WSJ # of Sentences Dev 3,466 1,000 5,527 Train 14,987 7,936 38,219 Test 3,684 2,012 5,426",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 4,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Hyper-parameters of LM-LSTM-CRF.\nLayer character-level embedding character-level LSTM Highway word-level embedding word-level bi-LSTM Optimization Parameter dimension depth state size depth dimension depth state size η0 POS NER chunking 30 1 300 1 100 1 300 0.015 0.01",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 4,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: F1 score on the CoNLL03 NER dataset. We mark models adopting pre-trained word embedding as †, and record models which leverage language models as ‡.\nExtra Resource gazetteers AIDA dataset CoNLL 2000 / PTB-POS dataset 1B Word dataset & 4096-8192-1024 1B Word dataset None Index & Model 0) Collobert et al. 2011† 1) Chiu et al. 2016† 2) Luo et al. 2015 Type reported reported reported 3) Yang et al. 2017† reported 4) Peters et al. 2017†‡ reported 5) Peters et al. 2017†‡ 6) Collobert et al. 2011† 7) Luo et al. 2015 8) Chiu et al. 2016† 9) Yang et al. 2017† 10) Peters et al. 2017† 11) Peters et al. 2017†‡ 12) Rei 2017 †‡ 13) Lample et al. 2016† 14) Ma et al. 2016† reported reported reported reported reported reported reported mean max reported mean max reported mean max reported 15) LM-LSTM-CRF †‡ mean max F1 score Value (±std) 89.59 91.62±0.33 91.20 91.26 91.93±0.19 91.62±0.23 88.67 89.90 90.91±0.20 91.20 90.87±0.13 90.79±0.15 87.38±0.36 87.94 86.26 90.76±0.08 91.14 90.94 91.37±0.17 91.67 91.21 91.71±0.10 91.85",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Accuracy on the WSJ dataset. We mark models adopting pre-trained word embedding as †, and record mod- els which leverage language models as ‡.\nType reported reported reported reported mean max reported mean±std maximum 97.51 mean±std maximum 97.46 97.55 reported 97.53±0.03 15) LM-LSTM-CRF †‡ mean±std",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Training statistics of TagLM (index 4 and 5) and LM-LSTM-CRF on the CoNLL03 NER dataset.\nCoNLLO03 NER WSJ POS: CoNLLO00 Chunking Model h | FiScore || h | Accuracy | hb Fi Score LSTM-CRF 46 90.76 37 97.35 26 94.37 LSTM-CNN-CRF 7 91.22 21 97.42 6 95.80, LM-LSTM-CRF 6 9171 16 97.53 5 95.96 LSTM-CRF* 4 91.19 8 OT 44 2 ‘95.82 LSTM-CNN-CRF* 3 90.98 7 96.98 2 95.51",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 7: F1 score on the CoNLL00 chunking dataset. We mark models adopting pre-trained word embedding as †, and record models which leverage language models as ‡.\nExtra Resource PTB-POS Ind & Model 19) Hashimoto et al. 2016† 20) Søgaard et al. 2016† Type reported reported F1 score Value (±std) 95.77 95.56 CoNLL 2000 / PTB-POS dataset 1B Word dataset None 3)Yang et al. 2017† 4) Peters et al. 2017†‡ 21) Hashimoto et al. 2016† 22) Søgaard et al. 2016† 9) Yang et al. 2017† 12) Rei 2017†‡ 13) Lample et al. 2016† 14) Ma et al. 2016† 15) LM-LSTM-CRF †‡ reported 95.41 96.37±0.05 95.02 95.28 94.66 94.24±0.11 94.33 93.88 94.37±0.07 reported reported reported reported mean max reported mean maximum 94.49 mean maximum 95.93 mean maximum 96.13 95.80±0.13 95.96±0.08",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 8: Training time and performance of LSTM-CRF, LSTM-CNN-CRF and LM-LSTM-CRF on three datasets. Our re-implementations are marked with *\nInd & Model 15) LM-LSTM-CRF 5) Peters et al. 2017 4) Peters et al. 2017 F1score Module 91.71 total LSTM-2048-512 LSTM-2048-512 4096-8192-1024 LSTM-2048-512 91.62 91.93 Time · Device 6 320 320 14112 320 h·GTX 1080 h·Telsa K40 h·Telsa K40 h·Telsa K40 h·Telsa K40",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 9: Effect of hidden state size of LSTM\nModel LM-LSTM-CRF LSTM-CRF LSTM-CNN-CRF State Size 300 200 100 300 200 100 300 200 100 F1score±std 91.71±0.10 91.63±0.23 91.13±0.32 90.76±0.08 90.41±0.07 90.74±0.22 91.22±0.19 91.37±0.17 91.18±0.10 Recall±std 92.14±0.12 92.07±0.22 91.60±0.37 90.82±0.08 90.63±0.07 91.08±0.50 91.70±0.16 91.08±0.53 91.56±0.16 Precision±std 91.30±0.13 91.19±0.30 90.67±0.32 90.69±0.08 90.20±0.07 90.42±0.17 90.74±0.27 90.58±0.11 90.81±0.15",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 10: Effect of language model and highway\nState Size Model F1score±std 91.71±0.10 LM-LSTM-CRF 91.43±0.09 LM-LSTM-CRF NL LM-LSTM-CRF NH 91.16±0.22 91.63±0.23 LM-LSTM-CRF 91.44±0.10 LM-LSTM-CRF NL LM-LSTM-CRF NH 91.34±0.28 91.13±0.32 LM-LSTM-CRF 91.17±0.11 LM-LSTM-CRF NL LM-LSTM-CRF NH 91.01±0.19 300 200 100 Recall±std 92.14±0.12 91.85±0.18 91.67±0.28 92.07±0.22 91.95±0.16 91.79±0.18 91.60±0.37 91.72±0.14 91.50±0.21 Precision±std 91.30±0.13 91.01±0.19 90.66±0.23 91.19±0.30 90.94±0.16 90.89±0.30 90.67±0.32 90.61±0.21 90.53±0.30",
+        "metadata": {
+          "filename": "1709.04109.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "D18-1279.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2002 - Spanish",
+        "Metric": "F1",
+        "Result": "86.68"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2002- Dutch",
+        "Metric": "F1",
+        "Result": "87.81"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2003 - English",
+        "Metric": "F1",
+        "Result": "91.64"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2003 - German",
+        "Metric": "F1",
+        "Result": "79.43"
+      },
+      {
+        "Task": "Text Chunking",
+        "Dataset": "CoNLL-2000",
+        "Metric": "F1",
+        "Result": "95.29"
+      },
+      {
+        "Task": "Part-of-Speech (POS) Tagging",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "97.58"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "(such as transfer learning, joint training), hand- crafted features, or any character preprocessing, we do not replace any rare words into UNKNOWN. Named entity recognition. CoNLL-2002 and CoNLL2003 datasets (Tjong Kim Sang, 2002; Tjong Kim Sang and De Meulder, 2003) con- tain named entity labels for Spanish, Dutch, En- glish and German as separate datasets. These four datasets contain different types of named entities: locations, persons, organizations, and miscella- neous entities. Unlike some approaches, we do not combine the validation set with the training set. Although POS tags were made available for these datasets, we do not leverage those as addi- tional information which sets our approach apart from that of transfer learning. Part-of-speech tagging. The Wall Street Jour- nal (WSJ) portion of Penn Treebank (PTB) (Mar- cus et al., 1993) contains 25 sections and catego- rizes each word into one out of 45 POS tags. We adopt the standard split and use sections 0-18 as training data, sections 19-21 as development data, and sections 22-24 as test data. Syntactic chunking. The CoNLL 2000 chunk- ing task (Tjong Kim Sang and Buchholz, 2000) uses sections 15-18 from the Wall Street Journal corpus for training and section 20 for testing. It deﬁnes 11 syntactic chunk types (e.g., NP, VP, ADJP), we adopt the standard split and sample 1000 sentences from the training set as the devel- opment set. 4.2 Training Settings Initialization. The size of the dimensions of char- acter embeddings is 32 which are randomly ini- tialized using a uniform distribution. We adopt the same initialization method for randomly ini- tialized word embeddings that are updated during training. For IntNet, the ﬁlter size of the initial convolution is 32 and that of other convolutions is 16. We have used ﬁlters of size [3, 4, 5] for all the kernels. The number of convolutional layers are 5 and 9 for IntNet-5 and IntNet-9, respectively, and we have adopted the same weight initialization as that of",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 6,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "tokens PADDING and UNKNOWN. We do not perform any character-level preprocessing, including case nor- malization, digit replacement (e.g. replacing all sequences of digits 0-9 with a single “0”), nor do we use any capitalization features (e.g. allCaps, upperInitial, lowercase, mixedCaps, noinfo). Convolutional blocks. The input for the Int- is the sequence of character embeddings Net {rchar , ..., rchar }. First is the initial convolutional n 1 layer, which is a temporal convolutional mod- ule that computes 1-D convolutions. Let xi ∈ Rdchar×rchar be the concatenation of the charac- ter embeddings for each w. The initial convolu- tional layer applies a matrix-vector operation to each successive window of size kchar. An input k-grams xi:i+k−1 is transformed through a convo- lution ﬁlter wc: where ci is the feature map of 1-D convolution, f",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 3,
+          "start_index": 3606,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "not leverage any ex- ternal resources, hand-crafted features, additional knowledge, joint training, or character-level pre- processing, and achieves new state-of-the-art per- formance for various sequence labeling tasks, in- cluding named entity recognition, part-of-speech tagging and syntactic chunking. In the future, we would like to explore using the IntNet model for other NLP tasks. References",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 9,
+          "start_index": 1797,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "where u is the number of salient features which is equal to the total number of output feature maps in the last layer. If each function Fl produces p feature maps, we obtain (p0 + p × L−1 2 ) represen- tations, where p0 is the number of output feature maps in the initial convolution layer. 3.2 Bi-directional RNN Given the character-to-word representations are computed by IntNet in Equation 6, we denote the input vector (z1, z2, . , zn) for a sentence. . LSTM (Hochreiter and Schmidhuber, 1997) re- turns the sequence (h1, h2, . . . , hn) that repre- sents the sequential information at every step. We use the following implementation: i, = 0 (W2i2, + Writy—1 + Weitr—1 + bi) fi = o(Wepzt + Wryhi-1 + Weper-1 + be) CG = tanh(Weetz + Wachi-1 + be) ee =fOac1 tho 0, = 0(W2o2%1 + Wholti—1 + Weots + bo) hy = 0; © tanh(e;), where o is the element-wise sigmoid function and © is the element-wise product. z; is the input vec- tor at time t and i;, f;, 0;, c; are the input gate, forget gate, output gate, and cell vectors, all of which are the same size as the hidden vector h;. W.i, Wz, Wzo, Wee denote the weight matrices of different gates for input 2; Whi, War, Who; Whe are the weight matrices for hidden state h;, and b;, by, bo, b, denote the bias vectors. Forward LSTM and backward LSTM compute the repre- sentations of hy and h; for left and right context of the sentence, respectively. We concatenate two hidden states to form the output of bi-directional LSTM th;, hi] for capturing context information from both sides. 3.3 Scoring Function Instead of predicting each label independently, we consider the correlations between labels in neigh- borhoods and jointly decode the best chain of la- bels for a given input sentence by leveraging a conditional random ﬁeld (Lafferty et al., 2001). Formally, the sequence of labels is deﬁned as: To deﬁne the scoring function f (h, y) for each position t, we multiply the hidden state hw t with a parameter vector wyt that is indexed by the tag yt to",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: F1 score of different character-to-word models.\nModel Baseline + char-LSTM + char-CNN + char-CNN-5 + char-CNN-9 + char-ResNet-9 + char-DenseNet-9 + char-IntNet-9 + char-IntNet-5 Spanish NER Dutch NER English NER German NER 54.07±0.42 70.73±0.42 64.29±0.47 79.93±0.43 63.53±0.41 79.78±0.41 64.26±0.42 79.63±0.38 63.97±0.46 79.25±0.56 66.15±0.44 74.34±0.45 67.54±0.46 78.25±0.52 70.11±0.41 78.53±0.44 69.48±0.42 80.44±0.43 63.49±0.42 77.16±0.47 76.43±0.48 76.92±0.42 74.82±0.46 76.54±0.39 76.71±0.53 76.93±0.47 78.06±0.45 77.51±0.39 83.98±0.46 83.85±0.38 83.60±0.39 83.31±0.47 83.91±0.42 84.16±0.41 83.83±0.44 85.34±0.39 Chunking 91.97±0.21 93.31±0.23 92.67±0.24 93.11±0.26 92.92±0.27 93.85±0.24 93.82±0.25 93.94±0.26 94.27±0.23 PTB POS 95.76±0.13 97.14±0.11 97.02±0.12 97.15±0.12 97.13±0.13 96.99±0.15 97.13±0.11 97.19±0.12 97.23±0.11",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: F1 score of our proposed models in comparison with state-of-the-art results.\nModel Conv-CRF+Lexicon (Collobert et al., 2011) LSTM-CRF+Lexicon (Huang et al., 2015) LSTM-CRF+Lexicon+char-CNN (Chiu and Nichols, 2016) LSTM-Softmax+char-LSTM (Ling et al., 2015) LSTM-CRF+char-LSTM (Lample et al., 2016) LSTM-CRF+char-CNN (Ma and Hovy, 2016) GRM-CRF+char-GRU (Yang et al., 2017) LSTM-CRF LSTM-CRF+char-LSTM LSTM-CRF+char-CNN LSTM-CRF+char-IntNet-9 LSTM-CRF+char-IntNet-5 Spanish - - - - 85.75 - 84.69 80.33±0.37 86.12±0.34 85.91±0.38 85.71±0.39 86.68±0.35 Dutch - - - - 81.74 - 85.00 79.87±0.28 87.13±0.25 86.69±0.22 87.38±0.27 87.81±0.24 English 89.59 90.10 90.77 - 90.94 91.21 91.20 88.41±0.22 91.13±0.15 91.11±0.14 91.39±0.16 91.64±0.17 German - - - - 78.76 - - 73.42±0.39 78.31±0.35 78.15±0.31 79.43±0.33 78.58±0.32 Chunking 94.32 94.46 - - - - 94.66 94.29±0.11 94.97±0.09 94.91±0.08 95.08±0.07 95.29±0.08 POS 97.29 97.43 - 97.55 - 97.55 97.55 96.63±0.08 97.49±0.04 97.45±0.03 97.51±0.04 97.58±0.02",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: F1 score of different models for IV, OOTV, OOEV and OOBV.\nDev Test Model IV char-LSTM 97.15 97.10 char-CNN 96.86 char-IntNet-9 char-IntNet-5 96.65 char-LSTM 93.68 93.85 char-CNN 93.79 char-IntNet-9 93.94 char-IntNet-5 English OOTV OOEV OOBV 87.07 89.41 89.87 88.02 95.45 90.04 90.16 91.95 90.52 88.31 90.14 88.10 82.64 100.00 92.48 84.09 100.00 92.65 94.94 82.31 100.00 83.91 92.72 100.00 IV 86.97 87.45 87.92 87.21 86.97 64.72 87.56 87.11 German OOTV OOEV OOBV 64.76 68.35 85.80 63.28 57.14 86.13 67.98 76.07 85.29 64.17 67.10 85.00 62.74 69.67 83.95 58.19 69.67 83.67 65.75 74.33 83.85 60.92 67.22 83.60 IV 89.63 88.93 88.43 88.56 87.19 87.81 87.08 87.19 Spanish OOTV OOEV OOBV 74.13 78.14 89.06 71.96 72.90 88.85 72.09 88.58 74.53 78.90 70.23 88.47 76.01 95.29 87.79 73.68 87.96 88.46 77.16 95.29 87.98 78.02 97.38 88.42 IV 94.50 94.54 93.68 94.63 95.13 94.25 94.42 94.71 Dutch OOTV OOEV OOBV 72.37 80.00 87.98 68.77 74.55 87.27 75.58 89.09 87.49 74.40 89.09 88.56 72.34 78.26 83.00 73.37 73.27 82.50 75.46 85.02 83.85 76.99 82.13 84.84",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: Nearest neighbours of different models for frequent words, rare words and OOV words.\nModel char-LSTM char-CNN char-IntNet Frequent Words newspapers enclosures nelsonville entrances newpapers necklaces newspaper newspapermen newpapers nitriﬁcation megaphones newpapers wallpapers escapers carcases spacers slipped stirred clipped snipped striped stiﬂed slipper slippy stripped shipped stopped blipped unclipped tripped dripped slopped world wolrd worde lowed wowed crowd worli worle worse werle wereld eworld offworld homeworld linuxworld westworld Rare Words youthf ul luthier loughmoe wrathful slothful ephorus mouthful eeyou Commerce Committee Computer Comments Corrects Clippers Committee Community Commodities mouthfeel Communist Comments motul yourself Commissioner mouthful mirthful Commodities mouthfuls Clarence youths Commission slothful Commons sessions cessions sensible stepanos stefanos constans suppressions oppressions digressions confessions ﬁssions recessions accessions missions conversions possessions OOV Words 11-month T hursdays undetermined Thousands undereducated 19-month Tunbridge underpinned 10-month Standings undermined 12-month Torrance underlined 14-month Phillies underprepared 11-inch determined 31-month Thursday overdetermined 51-month Wednesday determinist 1-month determiners 21-month determiner 41-month undermined 55-month determined 51-month overdetermined 22-month unexamined 25-month predetermined 12-month Tuesday Ecuador Windass Thursday Saturday thursdays Tuesday tuesdays",
+        "metadata": {
+          "filename": "D18-1279.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "2020.emnlp-main.523.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Entity Typing",
+        "Dataset": "Open Entity",
+        "Metric": "F1",
+        "Result": "78.2"
+      },
+      {
+        "Task": "Relation Classification",
+        "Dataset": "TACRED",
+        "Metric": "F1",
+        "Result": "72.7"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "94.3"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "ReCoRD",
+        "Metric": "Exact Match (EM)",
+        "Result": "90.8"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "ReCoRD",
+        "Metric": "F1",
+        "Result": "91.4"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "Exact Match (EM)",
+        "Result": "89.8"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "F1",
+        "Result": "95.0"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "Table 12: Common hyper-parameters used in our ex- periments. • number of training epochs: 2, 3, 5 We do not tune the hyper-parameters of the SQuAD dataset, and use the ones described in Liu et al. (2020). The hyper-parameters and other details, including the training time, number of GPUs used, and the best score on the development set, are shown in Table 11. For the other hyper-parameters, we simply follow Liu et al. (2020) (see Table 12). We optimize the model using AdamW with learn- ing rate warmup and linear decay of the learning rate. We also use early stopping based on perfor- mance on the development set. The details of the datasets used in our experiments are provided be- low. dataset is obtained from the LDC website.3 We compute the reported results using our code based on that of Zhang et al. (2019). B.3 CoNLL-2003 The CoNLL-2003 dataset comprises training, de- velopment, and test sets, containing 14,987, 3,466, and 3,684 sentences, respectively. Each sentence contains annotations of four entity types, namely person, location, organization, and miscellaneous. The dataset is downloaded from the relevant web- site.4 The reported results are computed using the conlleval script obtained from the website. B.4 ReCoRD The ReCoRD dataset consists of 100,730 train- ing, 10,000 development, and 10,000 test ques- tions created based on 80,121 unique news articles. The dataset is obtained from the relevant website.5 We compute the performance on the development set using the ofﬁcial evaluation script downloaded from the website. Performance on the test set is ob- tained by submitting our model to the leaderboard. B.5 SQuAD 1.1 B.1 Open Entity The Open Entity dataset used in Zhang et al. (2019) consists of training, development, and test sets, where each set contains 1,998 examples with labels of nine general entity types. The dataset is down- loaded from the website for Zhang et al. (2019).2 We compute the reported results using our code based on that of Zhang et al.",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "points. Furthermore, it achieves a new state of the art on this competitive dataset by outperforming the previous state of the art reported in Baevski et al. (2019) by 0.8 F1 points. 4.4 Cloze-style Question Answering We evaluate our model on the ReCoRD dataset (Zhang et al., 2018a), a cloze-style QA dataset con- sisting of over 120K examples. An interesting char- acteristic of this dataset is that most of its questions cannot be solved without external knowledge. The following is an example question and its answer in the dataset: Question: According to claims in the suit, “Parts of ’Stairway to Heaven,’ instantly recog- nizable to the music fans across the world, sound almost identical to signiﬁcant portions of ‘X.”’ Answer: Taurus Given a question and a passage, the task is to ﬁnd the entity mentioned in the passage that ﬁts the missing entity (denoted by X in the question above). In this dataset, annotations of entity spans (start and end positions) in a passage are provided, and the answer is contained in the provided entity spans one or multiple times. Following past work, we evaluate the models using exact match (EM) and token-level F1 on the development and test sets. Model We solve this task by assigning a relevance score to each entity in the pas- sage and selecting the entity with the high- est score as the answer. Following Liu et al. (2020), given a question q1, q2, ..., qj, and a passage p1, p2, ..., pl, the input word sequence [CLS]q1, q2, ..., qj[SEP] is constructed as: [SEP]p1, p2, ..., pl[SEP]. Further, we input [MASK] entities corresponding to the missing en- tity and all entities in the passage. We compute the relevance score of each entity in the passage using a linear classiﬁer with the concatenated representa- tion of the missing entity and the corresponding en- tity. We train the model using binary cross-entropy loss averaged over all entities in the passage, and select the entity with the highest score (logit) as the answer. Baselines",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 7,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "examples with labels of nine general entity types. The dataset is down- loaded from the website for Zhang et al. (2019).2 We compute the reported results using our code based on that of Zhang et al. (2019). The SQuAD 1.1 dataset contains 87,599 training, 10,570 development, and 9,533 test questions cre- ated based on 536 Wikipedia articles. The dataset is downloaded from the relevant website.6 We com- pute performance on the development set using the ofﬁcial evaluation script downloaded from the web- site. Performance on the test set is obtained by submitting our model to the leaderboard. B.2 TACRED The TACRED dataset contains 68,124 training ex- amples, 22,631 development examples, and 15,509 test examples with labels of their relation types. The total number of relation types is 42. The 2https://github.com/thunlp/ERNIE 3https://catalog.ldc.upenn.edu/ LDC2018T24 4https://www.clips.uantwerpen.be/ conll2003/ner 5https://sheng-z.github.io/ ReCoRD-explorer 6https://rajpurkar.github.io/ SQuAD-explorer",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "start_index": 1800,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "hidden dimensions, 24 hidden layers, L = 64 atten- tion head dimensions, and 16 self-attention heads. The number of dimensions of the entity token em- bedding is set to H = 256. The total number of parameters is approximately 483 M, consisting of 355 M in RoBERTa and 128 M in our entity em- beddings. The input text is tokenized into words using RoBERTa’s tokenizer with the vocabulary consisting of Vw = 50K words. For computational efﬁciency, our entity vocabulary does not include all entities but only the Ve = 500K entities most frequently appearing in our entity annotations. The entity vocabulary also includes two special entities, i.e., [MASK] and [UNK]. is trained via iterations over Wikipedia pages in a random order for 200K steps. To reduce training time, we initialize the parame- ters that LUKE have in common with RoBERTa (parameters in the transformer and the embeddings for words) using RoBERTa. Following past work (Devlin et al., 2019; Liu et al., 2020), we mask 15% of all words and entities at random. If an entity does not exist in the vocabulary, we replace it with the [UNK] entity. We perform pretraining using the original self-attention mechanism rather than our entity-aware self-attention mechanism because we want an ablation study of our mechanism but can not afford to run pretraining twice. Query matri- ces of our self-attention mechanism (Qw2e, Qe2w, and Qe2e) are learned using downstream datasets. Further details of our pretraining are described in Appendix A. 4 Experiments We conduct extensive experiments using ﬁve entity- related tasks: entity typing, relation classiﬁcation, NER, cloze-style QA, and extractive QA. We use similar model architectures for all tasks based on a simple linear classiﬁer on top of the representa- tions of words, entities, or both. Unless otherwise speciﬁed, we create the input word sequence by inserting tokens of [CLS] and [SEP] into the original word sequence as the ﬁrst and the last to- kens, respectively. The input",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Results of entity typing on the Open Entity dataset.\nPrec. Rec. F1 Name 77.4 60.6 68.0 UFET (Zhang et al., 2019) 76.4 71.0 73.6 BERT (Zhang et al., 2019) 78.4 72.9 75.6 ERNIE (Zhang et al., 2019) KEPLER (Wang et al., 2019b) 77.2 74.2 75.7 KnowBERT (Peters et al., 2019) 78.6 73.7 76.1 79.3 75.8 77.5 K-Adapter (Wang et al., 2020) 77.6 75.0 76.2 RoBERTa (Wang et al., 2020) 79.9 76.6 78.2 LUKE",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Results of relation classiﬁcation on the TA- CRED dataset.\nName BERT (Zhang et al., 2019) C-GCN (Zhang et al., 2018b) ERNIE (Zhang et al., 2019) SpanBERT (Joshi et al., 2020) MTB (Baldini Soares et al., 2019) KnowBERT (Peters et al., 2019) KEPLER (Wang et al., 2019b) K-Adapter (Wang et al., 2020) RoBERTa (Wang et al., 2020) LUKE Prec. Rec. F1 67.2 64.8 66.0 69.9 63.3 66.4 70.0 66.1 68.0 70.8 70.9 70.8 - 71.5 71.6 71.4 71.5 70.4 73.0 71.7 68.9 75.4 72.0 70.2 72.4 71.3 70.4 75.1 72.7 -",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Results of named entity recognition on the CoNLL-2003 dataset.\nName F1 LSTM-CRF (Lample et al., 2016) 91.0 92.2 ELMo (Peters et al., 2018) 92.8 BERT (Devlin et al., 2019) 93.1 Akbik et al. (2018) 93.5 Baevski et al. (2019) 92.4 RoBERTa 94.3 LUKE",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: Results of cloze-style question answering on the ReCoRD dataset. All models except RoBERTa (en- semble) are based on a single model.\nName DocQA+ELMo (Zhang et al., 2018a) BERT (Wang et al., 2019a) XLNet+Veriﬁer (Li et al., 2019) RoBERTa (Liu et al., 2020) RoBERTa (ensemble) (Liu et al., 2020) LUKE Test Dev F1 EM 44.1 45.4 45.4 46.7 71.3 72.0 80.6 82.1 81.5 82.7 89.0 89.5 Dev F1 Test EM - - - - 90.0 90.6 90.8 91.4 90.6 91.2 - -",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Results of extractive question answering on the SQuAD 1.1 dataset.\nName BERT (Devlin et al., 2019) SpanBERT (Joshi et al., 2020) XLNet (Yang et al., 2019) ALBERT (Lan et al., 2020) RoBERTa (Liu et al., 2020) LUKE Test Dev F1 EM 84.2 91.1 85.1 91.8 88.8 94.6 89.0 94.5 89.9 95.1 89.3 94.8 88.9 94.6 89.8 95.0 90.2 95.4 Dev F1 Test EM - - - - - -",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Ablation study of our entity representations.\nName LUKE w/o entity inputs LUKE CoNLL-2003 (Test F1) 92.9 94.3 SQuAD (Dev EM) 89.2 89.8 SQuAD (Dev F1) 94.8 95.0",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Open Entity (Test F1) 77.9 78.2 TACRED (Test F1) 72.2 72.7 CoNLL-2003 (Test F1) 94.1 94.3 ReCoRD (Dev EM) 90.1 90.8 ReCoRD (Dev F1) 90.7 91.4 SQuAD (Dev EM) 89.2 89.8",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 7: Ablation study of our entity-aware self-attention mechanism.\nName RoBERTa w/ extra training RoBERTa LUKE CoNLL-2003 (Test F1) 92.5 92.4 94.3 SQuAD (Dev EM) 89.1 88.9 89.8 SQuAD (Dev F1) 94.7 94.6 95.0",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 9: Hyper-parameters used to pretrain LUKE.\nName Value Maximum word length 512 Batch size 2048 Peak learning rate le-5 Peak learning rate (first 100K steps) | 5e-4 Learning rate decay linear ‘Warmup steps 2500 Mask probability for words 15% Mask probability for entities 15% Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam (3; 0.9 Adam {32 0.999 Adam € le-6",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 11,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 10: Hyper-parameters used for the extra pretrain- ing of RoBERTa on our Wikipedia corpus.\nName Value Maximum word length 512 Batch size 2048 Peak learning rate le-5 Learning rate decay linear Warmup steps 2500 Mask probability for words | 15% Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam (3; 0.9 Adam 32 0.999 Adam € le-6",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 11,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 11: Hyper-parameters and other details of our experiments.\nName Learning rate Batch size Training epochs Training time Number of GPUs Dev score Open Entity TACRED CoNLL-2003 1e-5 32 5 190min 1 72.0 F1 1e-5 4 3 10min 1 78.5 F1 1e-5 8 5 203min 1 97.1 F1 ReCoRD 1e-5 32 2 92min 8 90.8 EM/91.4 F1 SQuAD 15e-6 48 2 42min 8 89.8 EM/95.0 F1",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 12: Common hyper-parameters used in our ex- periments.\nName Value Maximum word length | 512 Learning rate decay linear Warmup ratio 0.06 Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam 3; 0.9 Adam 82 0.98 Adam € le-6",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "1905.03197.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Summarization",
+        "Dataset": "CNN/DailyMail",
+        "Metric": null,
+        "Result": "43.33"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "CNN/DailyMail",
+        "Metric": null,
+        "Result": "20.21"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "CNN/DailyMail",
+        "Metric": null,
+        "Result": "40.51"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "Gigaword",
+        "Metric": null,
+        "Result": "35.75"
+      },
+      {
+        "Task": "Question Generation",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "BLEU-4",
+        "Result": "25.61"
+      },
+      {
+        "Task": "Question Generation",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "METEOR",
+        "Result": "25.06"
+      },
+      {
+        "Task": "Question Generation",
+        "Dataset": "SQuAD 1.1",
+        "Metric": null,
+        "Result": "52.04"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "90.0"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": null,
+        "Metric": "Exact Match (EM)",
+        "Result": "87.7"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "CoQA",
+        "Metric": "F1",
+        "Result": "84.9"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "CoQA",
+        "Metric": "F1",
+        "Result": "82.5"
+      },
+      {
+        "Task": "Response Generation",
+        "Dataset": "DSTC7",
+        "Metric": "BLEU-4",
+        "Result": "4.39"
+      },
+      {
+        "Task": "Response Generation",
+        "Dataset": "DSTC7",
+        "Metric": "METEOR",
+        "Result": "9.195"
+      },
+      {
+        "Task": "Response Generation",
+        "Dataset": "DSTC7",
+        "Metric": null,
+        "Result": "0.120"
+      },
+      {
+        "Task": "Response Generation",
+        "Dataset": "DSTC7",
+        "Metric": null,
+        "Result": "0.391"
+      },
+      {
+        "Task": null,
+        "Dataset": null,
+        "Metric": "AVG",
+        "Result": "80.8"
+      },
+      {
+        "Task": null,
+        "Dataset": "SST-2",
+        "Metric": "Accuracy",
+        "Result": "94.9"
+      },
+      {
+        "Task": null,
+        "Dataset": "MNLI-m",
+        "Metric": "Accuracy",
+        "Result": "87.0"
+      },
+      {
+        "Task": null,
+        "Dataset": "MRPC",
+        "Metric": "F1",
+        "Result": "92.7"
+      },
+      {
+        "Task": null,
+        "Dataset": "STS-B",
+        "Metric": "Spearman Correlation",
+        "Result": "89.3"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "Appendix A Long Text Generation: A Case Study Our model can generate text samples using the left-to-right setting. We picked three text samples sampled from left to right using our model, as shown in Table 12. We use the top-40 truncating sampling strategy [32], and forbid duplicate 4-grams during generation. For each example, we sampled 10 times from the same input and we hand-picked the best one; as such, these samples should be considered to be better than the average model output. From the examples, we ﬁnd that the model can produce ﬂuent output with somewhat consistent contents which ﬁts the inputs’ genres and topics. In the ﬁrst example, given a modiﬁed excerpt from the novel “1984” as input, the model’s output is like a short paragraph in an fantasy novel; for the other two with input from Wikipedia, the model makes up “facts” with plausible names, time stamps and events written in the Wikipedia style. Appendix B GLUE Benchmark As shown in Table 13, we summarize the data size and the evaluation metrics used for the General Language Understanding Evaluation (GLUE) benchmark.",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 13,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "16.38 20.76 23.75 Table 8: Question generation results on SQuAD. MTR is short for METEOR, and RG for ROUGE. Results in the groups use different data splits. EM F1 UNILM QA Model (Section 3.2) + UNILM Generated Questions Table 9: Question generation based on UNILM improves question answering results on the SQuAD development set. Table 10: Response generation results. Div-1 and Div-2 indicate diversity of unigrams and bigrams, respectively. test sets, and keep the original development set. We also conduct experiments following the data split as in [51], which uses the reversed dev-test split. The question generation task is formulated as a sequence-to-sequence problem. The ﬁrst segment is the concatenation of input passage and answer, while the second segment is the generated question. We ﬁne-tune UNILM on the training set for 10 epochs. We set batch size to 32, masking probability to 0.7, and learning rate to 2e-5. The rate of label smoothing is 0.1. The other hyper-parameters are the same as pre-training. During decoding, we truncate the input to 464 tokens by selecting a passage chunk which contains the answer. The evaluation metrics BLEU-4, METEOR, and ROUGE-L are computed by the same scripts as in [12]. The results3 are presented in Table 8. CorefNQG [11] is based on a sequence-to-sequence model with attention and a feature-rich encoder. MP-GSN [51] uses an attention-based sequence-to-sequence model with a gated self-attention encoder. SemQG [50] uses two semantics-enhanced rewards to regularize the generation. UNILM outperforms previous models and achieves a new state-of-the-art for question generation. Generated Questions Improve QA The question generation model can automatically harvest a large number of question-passage-answer examples from a text corpus. We show that the augmented data generated by question generation improves the question answering model. We generate ﬁve million answerable examples, and four million unanswerable examples by modifying the",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 8,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "by a wide margin, which signiﬁcantly closes the gap between generative method and extractive method. 3.3 Question Generation We conduct experiments for the answer-aware question generation task [52]. Given an input passage and an answer span, our goal is to generate a question that asks for the answer. The SQuAD 1.1 dataset [33] is used for evaluation. Following [12], we split the original training set into training and",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 7,
+          "start_index": 3608,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "ﬁrst three sentences in a document as its summary. PGNet [37] is a sequence-to-sequence model based on the pointer-generator network. S2S-ELMo [13] uses a sequence-to-sequence model augmented with pre-trained ELMo representations, which is termed as SRC-ELMO+SHDEMB in [13]. Bottom-Up [16] is a sequence-to-sequence model augmented with a bottom-up content selector for selecting salient phrases. We also include in Table 3 the best reported extractive summarization result [27] on the dataset. As shown in Table 3, our model outperforms all previous abstractive systems, creating a new state-of-the-art abstractive summarization result on the dataset. Our model also outperforms the best extractive model [27] by 0.88 point in ROUGE-L. In Table 4, we evaluate the models on Gigaword with different scales (10K and 3.8M). Both Transformer [43] and OpenNMT [23] implement standard attentional sequence-to-sequence models. Re3Sum [4] retrieves summaries as candidate templates, and then use an extended sequence-to- sequence model to generate summaries. MASS [39] is a pre-trained sequence-to-sequence model based on Transformer networks. Experimental results show that UNILM achieves better performance than previous work. Besides, in the low-resource setting (i.e., only 10,000 examples are used as training data), our model outperforms MASS by 7.08 point in ROUGE-L. 3.2 Question Answering (QA) The task is to answer a question given a passage [33, 34, 15]. There are two settings. The ﬁrst is called extractive QA, where the answer is assumed to be a text span in the passage. The other is called generative QA, where the answer needs to be generated on the ﬂy. Extractive QA This task can be formulated as a NLU task where we need to predict the start and end positions of the answer spans within the passage. We ﬁne-tune the pre-trained UNILM as a",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 6,
+          "start_index": 1804,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Comparison between language model (LM) pre-training objectives.\nELMo GPT BERT UNILM Left-to-Right LM v v Right-to-Left LM v Bidirectional LM v Sequence-to-Sequence LM v v v",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 2,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: The uniﬁed LM is jointly pre-trained by multiple language modeling objectives, sharing the same parameters. We ﬁne-tune and evaluate the pre-trained uniﬁed LM on various datasets, including both language understanding and generation tasks.\nBackbone Network LM Objectives of Uniﬁed Pre-training What Uniﬁed LM Learns Example Downstream Tasks Transformer with shared parameters for all LM objectives Bidirectional LM Unidirectional LM Sequence-to-Sequence LM Bidirectional encoding Unidirectional decoding Unidirectional decoding conditioned on bidirectional encoding GLUE benchmark Extractive question answering Long text generation Abstractive summarization Question generation Generative question answering",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 2,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Evaluation results on CNN/DailyMail summarization. Models in the ﬁrst block are ex- tractive systems listed here for reference, while the others are abstractive models. The results of the best reported extractive model are taken from [27]. RG is short for ROUGE.\nRG-1 RG-2 RG-L RG-1 RG-2 RG-L Extractive Summarization LEAD-3 Best Extractive [27] Abstractive Summarization 40.42 43.25 17.62 20.24 36.67 39.63 10K Training Examples Transformer [43] MASS [39] UNILM 10.97 25.03 32.96 2.23 9.48 14.68 10.42 23.48 30.56 PGNet [37] Bottom-Up [16] S2S-ELMo [13] UNILM 39.53 41.22 41.56 43.33 17.28 18.68 18.94 20.21 37.98 38.34 38.47 40.51 Full Training Set OpenNMT [23] Re3Sum [4] MASS [39] UNILM 36.73 37.04 37.66 38.45 17.86 19.03 18.53 19.45 33.68 34.46 34.89 35.75",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Extractive QA results on the SQuAD development set. Table 6: Extractive QA results on the CoQA development set. Table 7: Generative QA results on the CoQA development set.\nEM F1 F1 F1 RMR+ELMo [20] BERTLARGE UNILM 71.4 78.9 80.5 73.7 81.8 83.4 DrQA+ELMo [35] BERTLARGE UNILM 67.2 82.7 84.9 Seq2Seq [35] PGNet [35] UNILM 27.5 45.4 82.5",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "BLEU-4 MTR RG-L CorefNQG [11] SemQG [50] UNILM 15.16 18.37 22.12 19.12 22.65 25.06 - 46.68 51.07 MP-GSN [51] SemQG [50] UNILM 20.25 24.20 25.61 44.48 48.91 52.04",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 9: Question generation based on UNILM improves question answering results on the SQuAD development set.\nNIST-4 BLEU-4 METEOR Entropy-4 Div-1 Div-2 Avg len Best System in DSTC7 Shared Task 2.523 2.669 UNILM 1.83 4.39 8.07 8.27 9.030 9.195 0.109 0.120 0.325 0.391 15.133 14.807 Human Performance 2.650 3.13 8.31 10.445 0.167 0.670 18.76",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 11: GLUE test set results scored using the GLUE evaluation server.\nModel CoLA SST-2 MRPC STS-B QQP MNLI-m/mm QNLI RTE WNLI AX Score MCC Acc F1 S Corr F1 Acc Acc Acc Acc Acc GPT 45.4 BERTLARGE 60.5 61.1 UNILM 91.3 94.9 94.5 82.3 89.3 90.0 80.0 86.5 87.7 70.3 72.1 71.7 82.1/81.4 86.7/85.9 87.0/85.9 87.4 92.7 92.7 56.0 70.1 70.9 53.4 65.1 65.1 29.8 39.6 38.4 72.8 80.5 80.8",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 12: Text samples generated by our model using left-to-right generation.\nWinston sat back. A complete sense of had helplessness descended upon him. Winston sat back. A sense of complete helplessness had descended upon him. He was now helpless and unmoving. What would that mean? To become a monk under her mother’s rule. What would it mean for him to be put at the center of the most dangerous of all of demons, the demon known as Azrael? He would never know exactly what that was, or even how it would end, unless he could sense the strength of Azrael’s mind and soul. It wasn’t only the existence of his mother, it was all he knew, and every moment. He was trapped within her embrace, a trapped, torn, battered, crippling presence he only knew it would mean was eternity. And in the instant that he was lost his life changed forever, when Azraelis’ spirit touched his mind, he was engulfed in this dark and mystical, so enchanting and beautiful force. (...) yellow Bert is Muppet character on the long running children’s television show, Sesame Street. a Bert is a yellow Muppet character on the long running children’s television show, Sesame Street. He would typically appear as a sidekick or as a villain in the show; he is usually portrayed as a cowardly and untrustworthy ﬁgure that tends to intrude on the normal life of the street, such as “The Story of the Mole” , “The Story from the Side”, and “Bump the Bush”. His voice was provided by Michael Combs. Bert was a regular cast member of Sesame Street, and his appearance was always played throughout the series by two of his regular cast members, Frank Laughner and Michael Combs. (...) Maurice Ravel (7 March 1875 - 28 December 1937) was a French composer, pianist and conductor. Maurice Ravel (7 March 1875 - 28 December 1937) was a French composer, pianist and conductor. He was born in Paris, and studied piano with Eugene Massenet. In the early 1900s Ravel became interested in the composition of music, and he composed much of his early music for the piano. Ravel’s early work is marked by a marked sense of lyricism, but in the later years of his career he developed a strong preference for orchestral forms. His ﬁrst work, “le Grand Cours d’ Auvergne”, was composed in 1909 by Maurice Ravel, a student of Jules Massenet, and was published by A.F.A. in 1912. It was re-published in 1912 by the publisher J.S.D.M. de l’Etablissement Musicale de la Musique Francaise. Ravel wrote the piano concerto “la Tragedie et la Chanson Dans le Theatre des Champs Elysees” in 1916. (...)",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Corpus #Train/#Dev/#Test Metrics Single-Sentence Classiﬁcation CoLA (Acceptability) 8.5k/1k/1k SST-2 (Sentiment) 67k/872/1.8k Matthews corr Accuracy Pairwise Text Classiﬁcation MNLI (NLI) RTE (NLI) QNLI (NLI) WNLI (NLI) QQP (Paraphrase) MRPC (Paraphrase) 393k/20k/20k 2.5k/276/3k 108k/5.7k/5.7k 634/71/146 364k/40k/391k 3.7k/408/1.7k Accuracy Accuracy Accuracy Accuracy F1 score F1 score Text Similarity STS-B (Similarity) Spearman corr",
+        "metadata": {
+          "filename": "1905.03197.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

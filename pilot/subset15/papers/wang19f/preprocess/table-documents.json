@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Improving Neural Language Modeling via Adversarial Training\nMethod Variational LSTM (Gal & Ghahramani, 2016) Variational LSTM + weight tying (Inan et al., 2017) NAS-RNN (Zoph & Le, 2017) DARTS (Liu et al., 2018a) w/o dynamic evaluation AWD-LSTM (Merity et al., 2018a) AWD-LSTM + Ours AWD-LSTM + MoS (Yang et al., 2018) AWD-LSTM + MoS + Ours AWD-LSTM + MoS + Partial Shufﬂed (Press, 2019) AWD-LSTM + MoS + Partial Shufﬂed + Ours + dynamic evaluation (Krause et al., 2018) AWD-LSTM (Merity et al., 2018a) AWD-LSTM +Ours AWD-LSTM + MoS (Yang et al., 2018) AWD-LSTM + MoS + Ours AWD-LSTM + MoS + Partial Shufﬂed (Press, 2019) AWD-LSTM + MoS + Partial Shufﬂed + Ours Params 19M 51M 54M 23M 24M 24M 22M 22M 22M 22M 24M 24M 22M 22M 22M 22M Valid - 71.1 - 58.3 60.00 57.15 56.54 54.98 55.89 54.10 51.60 49.31 48.33 47.15 47.93 46.63 Test 73.4 68.5 62.4 56.1 57.30 55.01 54.44 52.87 53.92 52.20 51.10 48.72 47.69 46.52 47.49 46.01",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2. Perplexities on validation and test sets on the Wikitext-2 dataset.\nMethod Variational LSTM (Inan et al., 2017) (h = 650) Variational LSTM (Inan et al., 2017) (h = 650) + weight tying 1-layer LSTM (Mandt et al., 2017) 2-layer skip connection LSTM (Mandt et al., 2017) (tied) DARTS (Liu et al., 2018a) w/o ﬁne-tune AWD-LSTM (Merity et al., 2018a) AWD-LSTM + Ours AWD-LSTM + MoS (Yang et al., 2018) AWD-LSTM + MoS + Ours + ﬁne-tune AWD-LSTM (Merity et al., 2018a) AWD-LSTM + Ours AWD-LSTM + MoS (Yang et al., 2018) AWD-LSTM + MoS + Ours + dynamic evaluation (Krause et al., 2018) AWD-LSTM (Merity et al., 2018a) AWD-LSTM + Ours AWD-LSTM + MoS (Yang et al., 2018) AWD-LSTM + MoS + Ours Params 28M 28M 24M 24M 33M 33M 33M 35M 35M 33M 33M 35M 35M 33M 33M 35M 35M Valid 92.3 91.5 69.3 69.1 69.5 69.10 65.76 66.01 64.07 68.60 64.01 63.88 61.93 46.40 42.48 42.41 40.27 Test 87.7 87.0 65.9 65.9 66.9 66.00 63.04 63.33 61.42 65.80 61.56 61.45 59.62 44.30 40.71 40.68 38.65",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3. Perplexities on validation and test sets on the Wikitext-103 dataset.\nMethod LSTM (Grave et al., 2017) Temporal CNN (Bai et al., 2018) GCNN (Dauphin et al., 2016) LSTM + Hebbian (Rae et al., 2018) 4 layer QRNN (Merity et al., 2018b) 4 layer QRNN + Ours + post process (Rae et al., 2018) LSTM + Hebbian + Cache + MbPA (Rae et al., 2018) 4 layer QRNN + Ours + dynamic evaluation Valid - - - 36.0 32.0 30.6 29.0 27.2 Test 48.7 45.2 37.2 36.4 33.0 31.6 29.2 28.0",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Method Local Attention (Luong et al., 2015) ByteNet (Kalchbrenner et al., 2016) ConvS2S (Gehring et al., 2017b) Transformer Base (Vaswani et al., 2017) Transformer Base + Ours Transformer Big (Vaswani et al., 2017) Transformer Big + (Gao et al., 2019) Transformer Big + Ours BLEU 20.90 23.75 25.16 27.30 28.43 28.40 28.94 29.52",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4. BLEU scores on the WMT2014 Ee→De machine trans- lation task.\nMethod Actor-critic (Bahdanau et al., 2017) CNN-a (Gehring et al., 2017a) Transformer Small (Vaswani et al., 2017) Transformer Small + Ours Transformer Base + (Wang et al., 2019) Transformer Base + Ours BLEU 28.53 30.04 32.47 33.61 34.43 35.18",
+    "metadata": {
+      "filename": "wang19f.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  }
+]

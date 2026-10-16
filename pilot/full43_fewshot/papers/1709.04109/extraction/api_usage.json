@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "successful_responses": 1,
+  "failed_or_uncertain": 0,
+  "unknown_usage_attempts": 0,
+  "prompt_tokens": 6522,
+  "completion_tokens": 103,
+  "total_tokens": 6625,
+  "request_seconds": 3.875,
+  "mock": false,
+  "calls": [
+    {
+      "run_id": "fewshot",
+      "call": 1,
+      "status": "COMPLETE",
+      "position": {
+        "paper": "1709.04109.pdf",
+        "record": 0,
+        "field": "Extraction"
+      },
+      "prompt_sha256": "11655ac477c8bbe9ebd8d321500cb0040a0118a2c63d7f90ac060bfa6d815de0",
+      "candidate_sha256": null,
+      "requested_model": "gpt-4.1-2025-04-14",
+      "http_status": 200,
+      "request_id": null,
+      "returned_model": "gpt-4.1-2025-04-14",
+      "response_id": "chatcmpl-EYx8ANmdR1jGvHkHvkLEWFIAvtKJ3",
+      "usage": {
+        "completion_tokens": 103,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 4,
+          "engine_ttft_ms": 361,
+          "engine_ttlt_ms": 813,
+          "pre_inference_ms": 272,
+          "service_tbt_ms": 4,
+          "service_ttft_ms": 1460,
+          "service_ttlt_ms": 1922,
+          "user_visible_ttft_ms": 1188
+        },
+        "prompt_tokens": 6522,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 6625
+      },
+      "finish_reason": "stop",
+      "system_fingerprint": "fp_11edcc854b",
+      "raw_answer": "[{\"Task\": \"Named Entity Recognition\", \"Dataset\": \"CoNLL03 NER\", \"Metric\": \"F1 score\", \"Result\": \"91.71\"}, {\"Task\": \"Part-of-Speech Tagging\", \"Dataset\": \"WSJ\", \"Metric\": \"Accuracy\", \"Result\": \"97.53\"}, {\"Task\": \"Chunking\", \"Dataset\": \"CoNLL00 chunking\", \"Metric\": \"F1 score\", \"Result\": \"95.96\"}]",
+      "response_sha256": "955491df050bf24b90bb30e63b8706ec65ff476736b123c8e5a10d5b094d6a2a",
+      "seconds": 3.875
+    }
+  ],
+  "billing_cost": null,
+  "seed": 0,
+  "seed_parameter_acceptance_observable": true,
+  "determinism_not_guaranteed": true
+}

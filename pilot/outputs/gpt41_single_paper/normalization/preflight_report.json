@@ -1,0 +1,229 @@
+{
+  "time": "2026-10-13T18:14:13.244702+08:00",
+  "status": "AWAITING_USER_APPROVAL",
+  "gold_path": "C:\\Users\\Administrator\\Desktop\\KG\\SCILEAD_DATA\\data\\tdm_annotations.json",
+  "gold_sha256": "603dd077ae174e4beefc24a9a73b7436e1e3cb6c9aaee042adc4d4aa5ea75aaf",
+  "gold_papers": 43,
+  "gold_tdmrs": 295,
+  "target_paper": "2020.findings-emnlp.378.pdf",
+  "target_gold_tdmrs": 6,
+  "extracted_tdmrs": 6,
+  "standard_label_counts": {
+    "Task": 23,
+    "Dataset": 71,
+    "Metric": 26
+  },
+  "expected_model_requests": 12,
+  "actual_model_requests": 0,
+  "calls_by_field": {
+    "Task": 6,
+    "Dataset": 6
+  },
+  "field_checks": [
+    {
+      "record": 1,
+      "field": "Task",
+      "original_value": "Named Entity Recognition",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 1,
+      "field": "Dataset",
+      "original_value": "ON5E",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 1,
+      "field": "Metric",
+      "original_value": "F1",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 1,
+      "field": "Result",
+      "original_value": "90.32",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 2,
+      "field": "Task",
+      "original_value": "Named Entity Recognition",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 2,
+      "field": "Dataset",
+      "original_value": "WN16",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 2,
+      "field": "Metric",
+      "original_value": "F1",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 2,
+      "field": "Result",
+      "original_value": "55.14",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 3,
+      "field": "Task",
+      "original_value": "Named Entity Recognition",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 3,
+      "field": "Dataset",
+      "original_value": "WN17",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 3,
+      "field": "Metric",
+      "original_value": "F1",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 3,
+      "field": "Result",
+      "original_value": "50.68",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 4,
+      "field": "Task",
+      "original_value": "Named Entity Recognition",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 4,
+      "field": "Dataset",
+      "original_value": "ON4C",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 4,
+      "field": "Metric",
+      "original_value": "F1",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 4,
+      "field": "Result",
+      "original_value": "81.18",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 5,
+      "field": "Task",
+      "original_value": "Named Entity Recognition",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 5,
+      "field": "Dataset",
+      "original_value": "RE",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 5,
+      "field": "Metric",
+      "original_value": "F1",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 5,
+      "field": "Result",
+      "original_value": "96.62",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 6,
+      "field": "Task",
+      "original_value": "Named Entity Recognition",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 6,
+      "field": "Dataset",
+      "original_value": "WE",
+      "requires_llm": true,
+      "action": "LLM"
+    },
+    {
+      "record": 6,
+      "field": "Metric",
+      "original_value": "F1",
+      "requires_llm": false,
+      "action": "preserve original string"
+    },
+    {
+      "record": 6,
+      "field": "Result",
+      "original_value": "69.78",
+      "requires_llm": false,
+      "action": "preserve original string"
+    }
+  ],
+  "repeated_inputs": [
+    {
+      "field": "Task",
+      "value": "Named Entity Recognition",
+      "count": 6
+    }
+  ],
+  "official_caching": false,
+  "hypothetical_calls_with_cache_NOT_USED": 7,
+  "estimated_total_prompt_tokens": 4502,
+  "estimated_each_prompt_tokens": [
+    224,
+    527,
+    224,
+    527,
+    224,
+    527,
+    224,
+    527,
+    224,
+    525,
+    224,
+    525
+  ],
+  "max_completion_tokens_per_request": 15,
+  "max_total_completion_tokens": 180,
+  "key_present": true,
+  "credential_source": "designated dotenv:API_KEY",
+  "seed": 0,
+  "temperature": 0,
+  "python_hash_seed": "0",
+  "set_serialization": "Original str(set); PYTHONHASHSEED=0 fixes iteration order for reproducible dry-run/request correspondence.",
+  "out_of_set_response_handling": "Official exact membership check; None when invalid. No strip, quote removal, manual correction or retries.",
+  "prompt_exposure": "Only entire-dataset field-name set and current predicted field value. No paper ID, Result, Gold tuple relationships, source documents or other field types in request.",
+  "provider_context_limit": "UNVERIFIED",
+  "provider_pricing": "UNVERIFIED; third-party billing not available",
+  "ready_for_request_after_user_approval": true
+}
