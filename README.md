@@ -54,4 +54,3 @@ SciLead 的官方入口见 [作者 README](emnlp2024-leaderboard-generation/READ
 
 上游源码保持作者的 [Apache-2.0 LICENSE](emnlp2024-leaderboard-generation/LICENSE) 和 [NOTICE](emnlp2024-leaderboard-generation/NOTICE)。数据、论文摘录、第三方模型及实验生成内容不因与源码一同归档而自动获得相同许可证；使用时遵守各自来源的授权。
 
-API Key、`.env`、认证凭据和无关本机配置均不应提交。`.gitignore` 已包含相应防护规则。本次上传不运行任何实验，也不改变 Prompt、Gold、模型输出或评价方法。
