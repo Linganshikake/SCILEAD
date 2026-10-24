@@ -1,0 +1,19 @@
+Method,<bold>Params</bold>,Valid,Test
+Variational LSTM (gal2016theoretically),19M,-,73.4
+Variational LSTM + weight tying (inan2016tying),51M,71.1,68.5
+NAS-RNN (zoph2016neural),54M,-,62.4
+DARTS (liu2018darts),23M,58.3,56.1
+w/o dynamic evaluation,w/o dynamic evaluation,w/o dynamic evaluation,w/o dynamic evaluation
+AWD-LSTM (merity2017regularizing),24M,60.00,57.30
+<bold>AWD-LSTM + Ours</bold>,24M,<bold>57.15</bold>,<bold>55.01</bold>
+AWD-LSTM + MoS (yang2017breaking),22M,56.54,54.44
+<bold>AWD-LSTM + MoS + Ours</bold>,22M,<bold>54.98</bold>,<bold>52.87</bold>
+AWD-LSTM + MoS + Partial Shuffled (press2019partially),22M,55.89,53.92
+<bold>AWD-LSTM + MoS + Partial Shuffled + Ours</bold>,22M,<bold>54.10</bold>,<bold>52.20</bold>
++ dynamic evaluation (krause2017dynamic),+ dynamic evaluation (krause2017dynamic),+ dynamic evaluation (krause2017dynamic),+ dynamic evaluation (krause2017dynamic)
+AWD-LSTM  (merity2017regularizing),24M,51.60,51.10
+<bold>AWD-LSTM +Ours</bold>,24M,<bold>49.31</bold>,<bold>48.72</bold>
+AWD-LSTM + MoS (yang2017breaking),22M,48.33,47.69
+<bold>AWD-LSTM + MoS + Ours</bold>,22M,<bold>47.15</bold>,<bold>46.52</bold>
+AWD-LSTM + MoS + Partial Shuffled (press2019partially),22M,47.93,47.49
+<bold>AWD-LSTM + MoS + Partial Shuffled + Ours</bold>,22M,<bold>46.63</bold>,<bold>46.01</bold>

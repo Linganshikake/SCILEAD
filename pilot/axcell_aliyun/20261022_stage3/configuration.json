@@ -1,0 +1,49 @@
+{
+  "name": "AxCell Extraction (stage3 only; GPT-4.1 Fully Normalization pending P3/P4)",
+  "axcell_commit": "f4648d8fee1aa8482d007a38828da9dc06630f0e",
+  "scilead_commit": "8bf74b0a830feb7035c6166dce3394dc344ae532",
+  "official_entrypoint": "ResultsExtractor(models)(paper,in_place=True)",
+  "single_adapter_sha256": "074537f9041a8acff837c2a320c5f097c4b41e782a9d63bd3dd8ff36815ae27b",
+  "thresholds": [
+    0.8,
+    0.85
+  ],
+  "use_crf": false,
+  "cpu": true,
+  "serial": true,
+  "es_policy": "Independent empty initial ES index per paper, same as verified single-paper setup; original paper_limit=30,corpus_limit=10 unchanged. Author corpus not established.",
+  "es_image": "docker.elastic.co/elasticsearch/elasticsearch-oss@sha256:a0115e92049eae8a83d89f119c23b69720f2e94af7bf97d170b7316eb0a6ff5b",
+  "worker_memory_hard_gib": 18,
+  "worker_memory_early_stop_gib": 14,
+  "es_memory_hard_gib": 3,
+  "es_memory_early_stop_gib": 2.4,
+  "start_mem_available_min_gib": 6,
+  "run_mem_available_stop_gib": 4,
+  "disk_reserve_gib": 20,
+  "sampling_seconds": 2,
+  "stop_grace_seconds": 2,
+  "wall_time_limit_seconds": 1800,
+  "no_progress_memory_growth": "growth >2GiB / approx90s AND no pipeline event >90s -> stop batch",
+  "new_oom_stops_batch": true,
+  "preexisting_kernel_oom_count": 1,
+  "max_attempts_per_new_paper": 1,
+  "reused_paper": "1511.08308.pdf",
+  "new_extraction_count": 36,
+  "runnable_count": 37,
+  "excluded_parse_failed": [
+    "1905.03197.pdf",
+    "2203.16804.pdf"
+  ],
+  "author36_membership": "UNVERIFIED",
+  "api_calls_authorized": 0,
+  "normalization_authorized": false,
+  "evaluation_authorized": false,
+  "queue_sha256": "44d1307677942bd8c9e1a84a39855dab409bd1b6d1e44d44cccb4f2c88ae7306",
+  "remote_before_sha256": "8f89cecb5a8d6a339b8b563d18e2131e4c213a8391141cd3c0023f517037251a",
+  "scripts": {
+    "controller.py": "c824a6d1b892e0af8e730f352037b3cde7356a72b295d778a58749e7f7e55e4a",
+    "worker.py": "84b131175d0f6f0073f86f15b9892d44ff19de1d2b39e0ec3774afbcd5688f18",
+    "policy.py": "ed3bad7b7d8a63a4d75774d33cf95f2b2eec06e8ead4da33ef7ea3bb6c70c26c",
+    "test_policy.py": "ade281448aaaefd39f37c21b050d3bc8261616ae4f6f670fda9f2cf81c866f5d"
+  }
+}

@@ -1,0 +1,3838 @@
+[
+  {
+    "sequence": 0,
+    "step": "type_prediction::predict",
+    "time": "2026-10-22T19:04:47.695391+08:00"
+  },
+  {
+    "sequence": 1,
+    "step": "type_prediction::multiclass_predicted",
+    "time": "2026-10-22T19:04:47.772098+08:00"
+  },
+  {
+    "sequence": 2,
+    "step": "type_prediction::predicted",
+    "time": "2026-10-22T19:04:47.772708+08:00",
+    "tables": [
+      {
+        "table": "table_01.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_02.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_03.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_04.csv",
+        "prediction": "IRRELEVANT"
+      }
+    ]
+  },
+  {
+    "sequence": 3,
+    "step": "structure_prediction::label_tables",
+    "time": "2026-10-22T19:04:51.046873+08:00"
+  },
+  {
+    "sequence": 4,
+    "step": "structure_prediction::evidences_split",
+    "time": "2026-10-22T19:04:51.073967+08:00"
+  },
+  {
+    "sequence": 5,
+    "step": "structure_prediction::annotations",
+    "time": "2026-10-22T19:05:22.487701+08:00"
+  },
+  {
+    "sequence": 6,
+    "step": "structure_prediction::tables_labeled",
+    "time": "2026-10-22T19:05:22.507770+08:00"
+  },
+  {
+    "sequence": 7,
+    "step": "linking::call",
+    "time": "2026-10-22T19:05:22.508149+08:00"
+  },
+  {
+    "sequence": 8,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:22.545028+08:00"
+  },
+  {
+    "sequence": 9,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.225856+08:00"
+  },
+  {
+    "sequence": 10,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.227859+08:00"
+  },
+  {
+    "sequence": 11,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.241373+08:00"
+  },
+  {
+    "sequence": 12,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.242827+08:00"
+  },
+  {
+    "sequence": 13,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.257025+08:00"
+  },
+  {
+    "sequence": 14,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.258443+08:00"
+  },
+  {
+    "sequence": 15,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.272474+08:00"
+  },
+  {
+    "sequence": 16,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.273829+08:00"
+  },
+  {
+    "sequence": 17,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.286454+08:00"
+  },
+  {
+    "sequence": 18,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.287788+08:00"
+  },
+  {
+    "sequence": 19,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.300777+08:00"
+  },
+  {
+    "sequence": 20,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.302113+08:00"
+  },
+  {
+    "sequence": 21,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.302657+08:00"
+  },
+  {
+    "sequence": 22,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.304184+08:00"
+  },
+  {
+    "sequence": 23,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.304739+08:00"
+  },
+  {
+    "sequence": 24,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.305963+08:00"
+  },
+  {
+    "sequence": 25,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.306498+08:00"
+  },
+  {
+    "sequence": 26,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.307723+08:00"
+  },
+  {
+    "sequence": 27,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.308363+08:00"
+  },
+  {
+    "sequence": 28,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.309579+08:00"
+  },
+  {
+    "sequence": 29,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.310114+08:00"
+  },
+  {
+    "sequence": 30,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.311335+08:00"
+  },
+  {
+    "sequence": 31,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.311873+08:00"
+  },
+  {
+    "sequence": 32,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.313118+08:00"
+  },
+  {
+    "sequence": 33,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.313668+08:00"
+  },
+  {
+    "sequence": 34,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.314925+08:00"
+  },
+  {
+    "sequence": 35,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.315484+08:00"
+  },
+  {
+    "sequence": 36,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.316777+08:00"
+  },
+  {
+    "sequence": 37,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.317346+08:00"
+  },
+  {
+    "sequence": 38,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.318586+08:00"
+  },
+  {
+    "sequence": 39,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.319144+08:00"
+  },
+  {
+    "sequence": 40,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.320477+08:00"
+  },
+  {
+    "sequence": 41,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.321035+08:00"
+  },
+  {
+    "sequence": 42,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.322276+08:00"
+  },
+  {
+    "sequence": 43,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.322839+08:00"
+  },
+  {
+    "sequence": 44,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.324094+08:00"
+  },
+  {
+    "sequence": 45,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.324670+08:00"
+  },
+  {
+    "sequence": 46,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.325922+08:00"
+  },
+  {
+    "sequence": 47,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.326493+08:00"
+  },
+  {
+    "sequence": 48,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.327754+08:00"
+  },
+  {
+    "sequence": 49,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.328341+08:00"
+  },
+  {
+    "sequence": 50,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.329606+08:00"
+  },
+  {
+    "sequence": 51,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.330182+08:00"
+  },
+  {
+    "sequence": 52,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.331431+08:00"
+  },
+  {
+    "sequence": 53,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.332007+08:00"
+  },
+  {
+    "sequence": 54,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.333312+08:00"
+  },
+  {
+    "sequence": 55,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.333890+08:00"
+  },
+  {
+    "sequence": 56,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.335172+08:00"
+  },
+  {
+    "sequence": 57,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.335756+08:00"
+  },
+  {
+    "sequence": 58,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.337062+08:00"
+  },
+  {
+    "sequence": 59,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.337657+08:00"
+  },
+  {
+    "sequence": 60,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.338945+08:00"
+  },
+  {
+    "sequence": 61,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.339544+08:00"
+  },
+  {
+    "sequence": 62,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.340901+08:00"
+  },
+  {
+    "sequence": 63,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.341518+08:00"
+  },
+  {
+    "sequence": 64,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.342810+08:00"
+  },
+  {
+    "sequence": 65,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.343421+08:00"
+  },
+  {
+    "sequence": 66,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.344744+08:00"
+  },
+  {
+    "sequence": 67,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.345374+08:00"
+  },
+  {
+    "sequence": 68,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.346667+08:00"
+  },
+  {
+    "sequence": 69,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.347283+08:00"
+  },
+  {
+    "sequence": 70,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.348629+08:00"
+  },
+  {
+    "sequence": 71,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.349258+08:00"
+  },
+  {
+    "sequence": 72,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.350562+08:00"
+  },
+  {
+    "sequence": 73,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.351188+08:00"
+  },
+  {
+    "sequence": 74,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.352507+08:00"
+  },
+  {
+    "sequence": 75,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.353140+08:00"
+  },
+  {
+    "sequence": 76,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.354469+08:00"
+  },
+  {
+    "sequence": 77,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.355104+08:00"
+  },
+  {
+    "sequence": 78,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.356420+08:00"
+  },
+  {
+    "sequence": 79,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.357078+08:00"
+  },
+  {
+    "sequence": 80,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.358400+08:00"
+  },
+  {
+    "sequence": 81,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.359032+08:00"
+  },
+  {
+    "sequence": 82,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.360427+08:00"
+  },
+  {
+    "sequence": 83,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.361080+08:00"
+  },
+  {
+    "sequence": 84,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.362401+08:00"
+  },
+  {
+    "sequence": 85,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.363114+08:00"
+  },
+  {
+    "sequence": 86,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.364497+08:00"
+  },
+  {
+    "sequence": 87,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.365153+08:00"
+  },
+  {
+    "sequence": 88,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.366495+08:00"
+  },
+  {
+    "sequence": 89,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.367154+08:00"
+  },
+  {
+    "sequence": 90,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.368514+08:00"
+  },
+  {
+    "sequence": 91,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.369189+08:00"
+  },
+  {
+    "sequence": 92,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.370530+08:00"
+  },
+  {
+    "sequence": 93,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.371199+08:00"
+  },
+  {
+    "sequence": 94,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.372569+08:00"
+  },
+  {
+    "sequence": 95,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.373241+08:00"
+  },
+  {
+    "sequence": 96,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.374588+08:00"
+  },
+  {
+    "sequence": 97,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.375268+08:00"
+  },
+  {
+    "sequence": 98,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.376662+08:00"
+  },
+  {
+    "sequence": 99,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.377350+08:00"
+  },
+  {
+    "sequence": 100,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.378737+08:00"
+  },
+  {
+    "sequence": 101,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.379428+08:00"
+  },
+  {
+    "sequence": 102,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.380806+08:00"
+  },
+  {
+    "sequence": 103,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.381512+08:00"
+  },
+  {
+    "sequence": 104,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.382874+08:00"
+  },
+  {
+    "sequence": 105,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.383583+08:00"
+  },
+  {
+    "sequence": 106,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.385006+08:00"
+  },
+  {
+    "sequence": 107,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.385711+08:00"
+  },
+  {
+    "sequence": 108,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.387163+08:00"
+  },
+  {
+    "sequence": 109,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.387878+08:00"
+  },
+  {
+    "sequence": 110,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.389347+08:00"
+  },
+  {
+    "sequence": 111,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.390064+08:00"
+  },
+  {
+    "sequence": 112,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.391466+08:00"
+  },
+  {
+    "sequence": 113,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.392180+08:00"
+  },
+  {
+    "sequence": 114,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.393618+08:00"
+  },
+  {
+    "sequence": 115,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.394342+08:00"
+  },
+  {
+    "sequence": 116,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.398436+08:00"
+  },
+  {
+    "sequence": 117,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.424024+08:00"
+  },
+  {
+    "sequence": 118,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.425576+08:00"
+  },
+  {
+    "sequence": 119,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.433837+08:00"
+  },
+  {
+    "sequence": 120,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.435374+08:00"
+  },
+  {
+    "sequence": 121,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.448045+08:00"
+  },
+  {
+    "sequence": 122,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.449592+08:00"
+  },
+  {
+    "sequence": 123,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.450381+08:00"
+  },
+  {
+    "sequence": 124,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.451866+08:00"
+  },
+  {
+    "sequence": 125,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.452650+08:00"
+  },
+  {
+    "sequence": 126,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.454110+08:00"
+  },
+  {
+    "sequence": 127,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.454867+08:00"
+  },
+  {
+    "sequence": 128,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.456355+08:00"
+  },
+  {
+    "sequence": 129,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.457116+08:00"
+  },
+  {
+    "sequence": 130,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.458581+08:00"
+  },
+  {
+    "sequence": 131,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.459345+08:00"
+  },
+  {
+    "sequence": 132,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.460832+08:00"
+  },
+  {
+    "sequence": 133,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.473598+08:00"
+  },
+  {
+    "sequence": 134,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.475159+08:00"
+  },
+  {
+    "sequence": 135,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.487662+08:00"
+  },
+  {
+    "sequence": 136,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.489241+08:00"
+  },
+  {
+    "sequence": 137,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.490028+08:00"
+  },
+  {
+    "sequence": 138,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.491540+08:00"
+  },
+  {
+    "sequence": 139,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.504390+08:00"
+  },
+  {
+    "sequence": 140,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.505956+08:00"
+  },
+  {
+    "sequence": 141,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.506780+08:00"
+  },
+  {
+    "sequence": 142,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.508282+08:00"
+  },
+  {
+    "sequence": 143,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.509098+08:00"
+  },
+  {
+    "sequence": 144,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.510590+08:00"
+  },
+  {
+    "sequence": 145,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.511402+08:00"
+  },
+  {
+    "sequence": 146,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.512986+08:00"
+  },
+  {
+    "sequence": 147,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.513787+08:00"
+  },
+  {
+    "sequence": 148,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.515291+08:00"
+  },
+  {
+    "sequence": 149,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.516104+08:00"
+  },
+  {
+    "sequence": 150,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.517627+08:00"
+  },
+  {
+    "sequence": 151,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.518429+08:00"
+  },
+  {
+    "sequence": 152,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.519930+08:00"
+  },
+  {
+    "sequence": 153,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.520744+08:00"
+  },
+  {
+    "sequence": 154,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.522269+08:00"
+  },
+  {
+    "sequence": 155,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.523077+08:00"
+  },
+  {
+    "sequence": 156,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.524601+08:00"
+  },
+  {
+    "sequence": 157,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.525426+08:00"
+  },
+  {
+    "sequence": 158,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.526936+08:00"
+  },
+  {
+    "sequence": 159,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.527754+08:00"
+  },
+  {
+    "sequence": 160,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.529310+08:00"
+  },
+  {
+    "sequence": 161,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.530131+08:00"
+  },
+  {
+    "sequence": 162,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.531728+08:00"
+  },
+  {
+    "sequence": 163,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.532565+08:00"
+  },
+  {
+    "sequence": 164,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.534107+08:00"
+  },
+  {
+    "sequence": 165,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.534942+08:00"
+  },
+  {
+    "sequence": 166,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.536489+08:00"
+  },
+  {
+    "sequence": 167,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.537325+08:00"
+  },
+  {
+    "sequence": 168,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.538880+08:00"
+  },
+  {
+    "sequence": 169,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.539721+08:00"
+  },
+  {
+    "sequence": 170,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.541301+08:00"
+  },
+  {
+    "sequence": 171,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.542143+08:00"
+  },
+  {
+    "sequence": 172,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.543689+08:00"
+  },
+  {
+    "sequence": 173,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.544556+08:00"
+  },
+  {
+    "sequence": 174,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.546115+08:00"
+  },
+  {
+    "sequence": 175,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.546981+08:00"
+  },
+  {
+    "sequence": 176,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.548551+08:00"
+  },
+  {
+    "sequence": 177,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.549421+08:00"
+  },
+  {
+    "sequence": 178,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.550977+08:00"
+  },
+  {
+    "sequence": 179,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.551845+08:00"
+  },
+  {
+    "sequence": 180,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.553427+08:00"
+  },
+  {
+    "sequence": 181,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.554296+08:00"
+  },
+  {
+    "sequence": 182,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.555849+08:00"
+  },
+  {
+    "sequence": 183,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.556741+08:00"
+  },
+  {
+    "sequence": 184,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.558376+08:00"
+  },
+  {
+    "sequence": 185,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.559268+08:00"
+  },
+  {
+    "sequence": 186,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.560868+08:00"
+  },
+  {
+    "sequence": 187,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.561757+08:00"
+  },
+  {
+    "sequence": 188,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.563326+08:00"
+  },
+  {
+    "sequence": 189,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.564221+08:00"
+  },
+  {
+    "sequence": 190,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.565800+08:00"
+  },
+  {
+    "sequence": 191,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.566683+08:00"
+  },
+  {
+    "sequence": 192,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.568261+08:00"
+  },
+  {
+    "sequence": 193,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.569172+08:00"
+  },
+  {
+    "sequence": 194,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.570746+08:00"
+  },
+  {
+    "sequence": 195,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.571637+08:00"
+  },
+  {
+    "sequence": 196,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.573253+08:00"
+  },
+  {
+    "sequence": 197,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.574165+08:00"
+  },
+  {
+    "sequence": 198,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.575740+08:00"
+  },
+  {
+    "sequence": 199,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.576661+08:00"
+  },
+  {
+    "sequence": 200,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.578279+08:00"
+  },
+  {
+    "sequence": 201,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.579190+08:00"
+  },
+  {
+    "sequence": 202,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.580803+08:00"
+  },
+  {
+    "sequence": 203,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.581716+08:00"
+  },
+  {
+    "sequence": 204,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.583337+08:00"
+  },
+  {
+    "sequence": 205,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.584271+08:00"
+  },
+  {
+    "sequence": 206,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.585894+08:00"
+  },
+  {
+    "sequence": 207,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.586869+08:00"
+  },
+  {
+    "sequence": 208,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.588543+08:00"
+  },
+  {
+    "sequence": 209,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.589483+08:00"
+  },
+  {
+    "sequence": 210,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.591131+08:00"
+  },
+  {
+    "sequence": 211,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.592063+08:00"
+  },
+  {
+    "sequence": 212,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.593718+08:00"
+  },
+  {
+    "sequence": 213,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.594652+08:00"
+  },
+  {
+    "sequence": 214,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.600741+08:00"
+  },
+  {
+    "sequence": 215,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.625115+08:00"
+  },
+  {
+    "sequence": 216,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.626830+08:00"
+  },
+  {
+    "sequence": 217,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.639797+08:00"
+  },
+  {
+    "sequence": 218,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.641527+08:00"
+  },
+  {
+    "sequence": 219,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.649944+08:00"
+  },
+  {
+    "sequence": 220,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.651666+08:00"
+  },
+  {
+    "sequence": 221,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.660121+08:00"
+  },
+  {
+    "sequence": 222,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.661859+08:00"
+  },
+  {
+    "sequence": 223,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.674939+08:00"
+  },
+  {
+    "sequence": 224,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.676692+08:00"
+  },
+  {
+    "sequence": 225,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.689677+08:00"
+  },
+  {
+    "sequence": 226,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.691433+08:00"
+  },
+  {
+    "sequence": 227,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.699881+08:00"
+  },
+  {
+    "sequence": 228,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.701659+08:00"
+  },
+  {
+    "sequence": 229,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.710128+08:00"
+  },
+  {
+    "sequence": 230,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.711868+08:00"
+  },
+  {
+    "sequence": 231,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.724961+08:00"
+  },
+  {
+    "sequence": 232,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.726722+08:00"
+  },
+  {
+    "sequence": 233,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.739748+08:00"
+  },
+  {
+    "sequence": 234,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.741546+08:00"
+  },
+  {
+    "sequence": 235,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.749981+08:00"
+  },
+  {
+    "sequence": 236,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.751750+08:00"
+  },
+  {
+    "sequence": 237,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.760280+08:00"
+  },
+  {
+    "sequence": 238,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.762043+08:00"
+  },
+  {
+    "sequence": 239,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.774927+08:00"
+  },
+  {
+    "sequence": 240,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.776716+08:00"
+  },
+  {
+    "sequence": 241,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.789577+08:00"
+  },
+  {
+    "sequence": 242,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.791392+08:00"
+  },
+  {
+    "sequence": 243,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.799880+08:00"
+  },
+  {
+    "sequence": 244,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.801702+08:00"
+  },
+  {
+    "sequence": 245,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.810307+08:00"
+  },
+  {
+    "sequence": 246,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.812095+08:00"
+  },
+  {
+    "sequence": 247,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.813151+08:00"
+  },
+  {
+    "sequence": 248,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.814878+08:00"
+  },
+  {
+    "sequence": 249,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.815894+08:00"
+  },
+  {
+    "sequence": 250,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.817684+08:00"
+  },
+  {
+    "sequence": 251,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.818741+08:00"
+  },
+  {
+    "sequence": 252,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.820494+08:00"
+  },
+  {
+    "sequence": 253,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.821514+08:00"
+  },
+  {
+    "sequence": 254,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.823251+08:00"
+  },
+  {
+    "sequence": 255,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.824275+08:00"
+  },
+  {
+    "sequence": 256,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.826006+08:00"
+  },
+  {
+    "sequence": 257,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.827029+08:00"
+  },
+  {
+    "sequence": 258,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.828764+08:00"
+  },
+  {
+    "sequence": 259,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.829788+08:00"
+  },
+  {
+    "sequence": 260,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.831589+08:00"
+  },
+  {
+    "sequence": 261,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.832636+08:00"
+  },
+  {
+    "sequence": 262,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.834380+08:00"
+  },
+  {
+    "sequence": 263,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.835411+08:00"
+  },
+  {
+    "sequence": 264,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.837179+08:00"
+  },
+  {
+    "sequence": 265,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.838220+08:00"
+  },
+  {
+    "sequence": 266,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.839957+08:00"
+  },
+  {
+    "sequence": 267,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.841032+08:00"
+  },
+  {
+    "sequence": 268,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.842867+08:00"
+  },
+  {
+    "sequence": 269,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.843927+08:00"
+  },
+  {
+    "sequence": 270,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.845739+08:00"
+  },
+  {
+    "sequence": 271,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.846822+08:00"
+  },
+  {
+    "sequence": 272,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.848590+08:00"
+  },
+  {
+    "sequence": 273,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.849656+08:00"
+  },
+  {
+    "sequence": 274,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.851426+08:00"
+  },
+  {
+    "sequence": 275,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.852520+08:00"
+  },
+  {
+    "sequence": 276,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.854310+08:00"
+  },
+  {
+    "sequence": 277,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.855368+08:00"
+  },
+  {
+    "sequence": 278,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.857161+08:00"
+  },
+  {
+    "sequence": 279,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.858228+08:00"
+  },
+  {
+    "sequence": 280,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.860003+08:00"
+  },
+  {
+    "sequence": 281,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.861101+08:00"
+  },
+  {
+    "sequence": 282,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.862884+08:00"
+  },
+  {
+    "sequence": 283,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.863956+08:00"
+  },
+  {
+    "sequence": 284,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.865777+08:00"
+  },
+  {
+    "sequence": 285,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.866856+08:00"
+  },
+  {
+    "sequence": 286,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.868682+08:00"
+  },
+  {
+    "sequence": 287,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.869780+08:00"
+  },
+  {
+    "sequence": 288,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.871579+08:00"
+  },
+  {
+    "sequence": 289,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.872697+08:00"
+  },
+  {
+    "sequence": 290,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.874567+08:00"
+  },
+  {
+    "sequence": 291,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.875655+08:00"
+  },
+  {
+    "sequence": 292,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.877464+08:00"
+  },
+  {
+    "sequence": 293,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.878576+08:00"
+  },
+  {
+    "sequence": 294,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.880398+08:00"
+  },
+  {
+    "sequence": 295,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.881514+08:00"
+  },
+  {
+    "sequence": 296,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.883332+08:00"
+  },
+  {
+    "sequence": 297,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.884487+08:00"
+  },
+  {
+    "sequence": 298,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.886312+08:00"
+  },
+  {
+    "sequence": 299,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.887417+08:00"
+  },
+  {
+    "sequence": 300,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.889267+08:00"
+  },
+  {
+    "sequence": 301,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.890387+08:00"
+  },
+  {
+    "sequence": 302,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.892221+08:00"
+  },
+  {
+    "sequence": 303,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.893386+08:00"
+  },
+  {
+    "sequence": 304,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.895212+08:00"
+  },
+  {
+    "sequence": 305,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.896360+08:00"
+  },
+  {
+    "sequence": 306,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.898191+08:00"
+  },
+  {
+    "sequence": 307,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.899340+08:00"
+  },
+  {
+    "sequence": 308,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.901233+08:00"
+  },
+  {
+    "sequence": 309,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.902363+08:00"
+  },
+  {
+    "sequence": 310,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.904200+08:00"
+  },
+  {
+    "sequence": 311,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.905342+08:00"
+  },
+  {
+    "sequence": 312,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.907176+08:00"
+  },
+  {
+    "sequence": 313,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.908313+08:00"
+  },
+  {
+    "sequence": 314,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.910286+08:00"
+  },
+  {
+    "sequence": 315,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.911438+08:00"
+  },
+  {
+    "sequence": 316,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.913310+08:00"
+  },
+  {
+    "sequence": 317,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.914458+08:00"
+  },
+  {
+    "sequence": 318,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.916314+08:00"
+  },
+  {
+    "sequence": 319,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.917465+08:00"
+  },
+  {
+    "sequence": 320,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.919318+08:00"
+  },
+  {
+    "sequence": 321,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.920476+08:00"
+  },
+  {
+    "sequence": 322,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.922350+08:00"
+  },
+  {
+    "sequence": 323,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.923498+08:00"
+  },
+  {
+    "sequence": 324,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.925393+08:00"
+  },
+  {
+    "sequence": 325,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.926548+08:00"
+  },
+  {
+    "sequence": 326,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.928421+08:00"
+  },
+  {
+    "sequence": 327,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.929585+08:00"
+  },
+  {
+    "sequence": 328,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.931468+08:00"
+  },
+  {
+    "sequence": 329,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.932641+08:00"
+  },
+  {
+    "sequence": 330,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.934526+08:00"
+  },
+  {
+    "sequence": 331,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.935702+08:00"
+  },
+  {
+    "sequence": 332,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.937616+08:00"
+  },
+  {
+    "sequence": 333,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.938794+08:00"
+  },
+  {
+    "sequence": 334,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.940705+08:00"
+  },
+  {
+    "sequence": 335,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.941901+08:00"
+  },
+  {
+    "sequence": 336,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.943859+08:00"
+  },
+  {
+    "sequence": 337,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.945074+08:00"
+  },
+  {
+    "sequence": 338,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.946981+08:00"
+  },
+  {
+    "sequence": 339,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.948179+08:00"
+  },
+  {
+    "sequence": 340,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.950123+08:00"
+  },
+  {
+    "sequence": 341,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.951332+08:00"
+  },
+  {
+    "sequence": 342,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.953256+08:00"
+  },
+  {
+    "sequence": 343,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.966787+08:00"
+  },
+  {
+    "sequence": 344,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.968797+08:00"
+  },
+  {
+    "sequence": 345,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.982117+08:00"
+  },
+  {
+    "sequence": 346,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.984135+08:00"
+  },
+  {
+    "sequence": 347,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:24.992908+08:00"
+  },
+  {
+    "sequence": 348,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:24.994920+08:00"
+  },
+  {
+    "sequence": 349,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.003648+08:00"
+  },
+  {
+    "sequence": 350,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.005687+08:00"
+  },
+  {
+    "sequence": 351,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.019090+08:00"
+  },
+  {
+    "sequence": 352,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.021140+08:00"
+  },
+  {
+    "sequence": 353,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.034496+08:00"
+  },
+  {
+    "sequence": 354,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.036514+08:00"
+  },
+  {
+    "sequence": 355,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.045239+08:00"
+  },
+  {
+    "sequence": 356,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.047263+08:00"
+  },
+  {
+    "sequence": 357,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.055974+08:00"
+  },
+  {
+    "sequence": 358,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.057990+08:00"
+  },
+  {
+    "sequence": 359,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.071333+08:00"
+  },
+  {
+    "sequence": 360,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.073375+08:00"
+  },
+  {
+    "sequence": 361,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.086630+08:00"
+  },
+  {
+    "sequence": 362,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.088674+08:00"
+  },
+  {
+    "sequence": 363,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.097395+08:00"
+  },
+  {
+    "sequence": 364,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.099425+08:00"
+  },
+  {
+    "sequence": 365,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.108136+08:00"
+  },
+  {
+    "sequence": 366,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.110177+08:00"
+  },
+  {
+    "sequence": 367,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.123318+08:00"
+  },
+  {
+    "sequence": 368,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.125381+08:00"
+  },
+  {
+    "sequence": 369,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.138478+08:00"
+  },
+  {
+    "sequence": 370,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.140572+08:00"
+  },
+  {
+    "sequence": 371,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.149359+08:00"
+  },
+  {
+    "sequence": 372,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.151404+08:00"
+  },
+  {
+    "sequence": 373,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.160113+08:00"
+  },
+  {
+    "sequence": 374,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.162166+08:00"
+  },
+  {
+    "sequence": 375,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.163469+08:00"
+  },
+  {
+    "sequence": 376,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.165504+08:00"
+  },
+  {
+    "sequence": 377,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.166777+08:00"
+  },
+  {
+    "sequence": 378,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.168792+08:00"
+  },
+  {
+    "sequence": 379,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.170086+08:00"
+  },
+  {
+    "sequence": 380,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.172077+08:00"
+  },
+  {
+    "sequence": 381,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.173372+08:00"
+  },
+  {
+    "sequence": 382,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.175374+08:00"
+  },
+  {
+    "sequence": 383,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.176664+08:00"
+  },
+  {
+    "sequence": 384,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.178670+08:00"
+  },
+  {
+    "sequence": 385,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.179965+08:00"
+  },
+  {
+    "sequence": 386,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.181980+08:00"
+  },
+  {
+    "sequence": 387,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.183283+08:00"
+  },
+  {
+    "sequence": 388,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.185342+08:00"
+  },
+  {
+    "sequence": 389,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.186641+08:00"
+  },
+  {
+    "sequence": 390,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.188657+08:00"
+  },
+  {
+    "sequence": 391,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.189955+08:00"
+  },
+  {
+    "sequence": 392,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.191974+08:00"
+  },
+  {
+    "sequence": 393,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.193325+08:00"
+  },
+  {
+    "sequence": 394,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.195351+08:00"
+  },
+  {
+    "sequence": 395,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.196690+08:00"
+  },
+  {
+    "sequence": 396,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.198806+08:00"
+  },
+  {
+    "sequence": 397,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.200128+08:00"
+  },
+  {
+    "sequence": 398,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.202160+08:00"
+  },
+  {
+    "sequence": 399,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.203479+08:00"
+  },
+  {
+    "sequence": 400,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.205548+08:00"
+  },
+  {
+    "sequence": 401,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.206863+08:00"
+  },
+  {
+    "sequence": 402,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.208924+08:00"
+  },
+  {
+    "sequence": 403,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.210272+08:00"
+  },
+  {
+    "sequence": 404,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.212308+08:00"
+  },
+  {
+    "sequence": 405,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.213676+08:00"
+  },
+  {
+    "sequence": 406,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.215715+08:00"
+  },
+  {
+    "sequence": 407,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.217085+08:00"
+  },
+  {
+    "sequence": 408,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.219133+08:00"
+  },
+  {
+    "sequence": 409,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.220515+08:00"
+  },
+  {
+    "sequence": 410,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.222584+08:00"
+  },
+  {
+    "sequence": 411,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.223936+08:00"
+  },
+  {
+    "sequence": 412,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.226029+08:00"
+  },
+  {
+    "sequence": 413,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.227369+08:00"
+  },
+  {
+    "sequence": 414,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.229484+08:00"
+  },
+  {
+    "sequence": 415,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.230859+08:00"
+  },
+  {
+    "sequence": 416,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.232959+08:00"
+  },
+  {
+    "sequence": 417,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.234346+08:00"
+  },
+  {
+    "sequence": 418,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.236461+08:00"
+  },
+  {
+    "sequence": 419,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.237920+08:00"
+  },
+  {
+    "sequence": 420,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.240015+08:00"
+  },
+  {
+    "sequence": 421,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.241423+08:00"
+  },
+  {
+    "sequence": 422,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.243504+08:00"
+  },
+  {
+    "sequence": 423,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.244899+08:00"
+  },
+  {
+    "sequence": 424,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.246991+08:00"
+  },
+  {
+    "sequence": 425,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.248395+08:00"
+  },
+  {
+    "sequence": 426,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.250487+08:00"
+  },
+  {
+    "sequence": 427,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.251857+08:00"
+  },
+  {
+    "sequence": 428,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.254022+08:00"
+  },
+  {
+    "sequence": 429,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.255425+08:00"
+  },
+  {
+    "sequence": 430,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.257537+08:00"
+  },
+  {
+    "sequence": 431,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.258967+08:00"
+  },
+  {
+    "sequence": 432,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.261128+08:00"
+  },
+  {
+    "sequence": 433,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.262522+08:00"
+  },
+  {
+    "sequence": 434,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.264722+08:00"
+  },
+  {
+    "sequence": 435,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.266116+08:00"
+  },
+  {
+    "sequence": 436,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.268214+08:00"
+  },
+  {
+    "sequence": 437,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.269634+08:00"
+  },
+  {
+    "sequence": 438,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.271750+08:00"
+  },
+  {
+    "sequence": 439,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.273170+08:00"
+  },
+  {
+    "sequence": 440,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.275310+08:00"
+  },
+  {
+    "sequence": 441,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.276740+08:00"
+  },
+  {
+    "sequence": 442,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.278927+08:00"
+  },
+  {
+    "sequence": 443,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.280368+08:00"
+  },
+  {
+    "sequence": 444,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.282484+08:00"
+  },
+  {
+    "sequence": 445,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.283921+08:00"
+  },
+  {
+    "sequence": 446,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.286081+08:00"
+  },
+  {
+    "sequence": 447,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.287495+08:00"
+  },
+  {
+    "sequence": 448,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.289657+08:00"
+  },
+  {
+    "sequence": 449,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.291097+08:00"
+  },
+  {
+    "sequence": 450,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.293260+08:00"
+  },
+  {
+    "sequence": 451,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.294695+08:00"
+  },
+  {
+    "sequence": 452,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.296861+08:00"
+  },
+  {
+    "sequence": 453,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.298303+08:00"
+  },
+  {
+    "sequence": 454,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.300479+08:00"
+  },
+  {
+    "sequence": 455,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.301904+08:00"
+  },
+  {
+    "sequence": 456,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.304103+08:00"
+  },
+  {
+    "sequence": 457,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.305587+08:00"
+  },
+  {
+    "sequence": 458,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.307745+08:00"
+  },
+  {
+    "sequence": 459,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.309210+08:00"
+  },
+  {
+    "sequence": 460,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.311373+08:00"
+  },
+  {
+    "sequence": 461,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.312840+08:00"
+  },
+  {
+    "sequence": 462,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.315015+08:00"
+  },
+  {
+    "sequence": 463,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.316486+08:00"
+  },
+  {
+    "sequence": 464,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.318682+08:00"
+  },
+  {
+    "sequence": 465,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.320184+08:00"
+  },
+  {
+    "sequence": 466,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.322431+08:00"
+  },
+  {
+    "sequence": 467,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.323906+08:00"
+  },
+  {
+    "sequence": 468,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:05:25.326131+08:00"
+  },
+  {
+    "sequence": 469,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:05:25.327605+08:00"
+  },
+  {
+    "sequence": 470,
+    "step": "linking::linked",
+    "time": "2026-10-22T19:05:25.331598+08:00",
+    "proposals_path": "raw_outputs/events/470_proposals.json",
+    "proposal_count": 231
+  },
+  {
+    "sequence": 471,
+    "step": "filtering::structure_filtering::filtered",
+    "time": "2026-10-22T19:05:25.336813+08:00",
+    "proposals_path": "raw_outputs/events/471_proposals.json",
+    "proposal_count": 231,
+    "kept_ids": [
+      "1810.12443v1/table_01.csv/1.1",
+      "1810.12443v1/table_01.csv/1.2",
+      "1810.12443v1/table_01.csv/1.3",
+      "1810.12443v1/table_01.csv/1.4",
+      "1810.12443v1/table_01.csv/1.5",
+      "1810.12443v1/table_01.csv/1.6",
+      "1810.12443v1/table_01.csv/2.1",
+      "1810.12443v1/table_01.csv/2.2",
+      "1810.12443v1/table_01.csv/2.3",
+      "1810.12443v1/table_01.csv/2.4",
+      "1810.12443v1/table_01.csv/2.5",
+      "1810.12443v1/table_01.csv/2.6",
+      "1810.12443v1/table_01.csv/3.1",
+      "1810.12443v1/table_01.csv/3.2",
+      "1810.12443v1/table_01.csv/3.3",
+      "1810.12443v1/table_01.csv/3.4",
+      "1810.12443v1/table_01.csv/3.5",
+      "1810.12443v1/table_01.csv/3.6",
+      "1810.12443v1/table_01.csv/4.1",
+      "1810.12443v1/table_01.csv/4.2",
+      "1810.12443v1/table_01.csv/4.3",
+      "1810.12443v1/table_01.csv/4.4",
+      "1810.12443v1/table_01.csv/4.5",
+      "1810.12443v1/table_01.csv/4.6",
+      "1810.12443v1/table_01.csv/5.1",
+      "1810.12443v1/table_01.csv/5.2",
+      "1810.12443v1/table_01.csv/5.3",
+      "1810.12443v1/table_01.csv/5.4",
+      "1810.12443v1/table_01.csv/5.5",
+      "1810.12443v1/table_01.csv/5.6",
+      "1810.12443v1/table_01.csv/6.1",
+      "1810.12443v1/table_01.csv/6.2",
+      "1810.12443v1/table_01.csv/6.3",
+      "1810.12443v1/table_01.csv/6.4",
+      "1810.12443v1/table_01.csv/6.5",
+      "1810.12443v1/table_01.csv/6.6",
+      "1810.12443v1/table_01.csv/7.1",
+      "1810.12443v1/table_01.csv/7.2",
+      "1810.12443v1/table_01.csv/7.3",
+      "1810.12443v1/table_01.csv/7.4",
+      "1810.12443v1/table_01.csv/7.5",
+      "1810.12443v1/table_01.csv/7.6",
+      "1810.12443v1/table_01.csv/8.1",
+      "1810.12443v1/table_01.csv/8.2",
+      "1810.12443v1/table_01.csv/8.3",
+      "1810.12443v1/table_01.csv/8.4",
+      "1810.12443v1/table_01.csv/8.5",
+      "1810.12443v1/table_01.csv/8.6",
+      "1810.12443v1/table_01.csv/9.1",
+      "1810.12443v1/table_01.csv/9.2",
+      "1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/9.4",
+      "1810.12443v1/table_01.csv/9.5",
+      "1810.12443v1/table_01.csv/9.6",
+      "1810.12443v1/table_02.csv/1.3",
+      "1810.12443v1/table_02.csv/1.5",
+      "1810.12443v1/table_02.csv/1.6",
+      "1810.12443v1/table_02.csv/2.3",
+      "1810.12443v1/table_02.csv/2.5",
+      "1810.12443v1/table_02.csv/2.6",
+      "1810.12443v1/table_02.csv/3.3",
+      "1810.12443v1/table_02.csv/4.6",
+      "1810.12443v1/table_02.csv/5.1",
+      "1810.12443v1/table_02.csv/5.2",
+      "1810.12443v1/table_02.csv/5.3",
+      "1810.12443v1/table_02.csv/5.4",
+      "1810.12443v1/table_02.csv/6.3",
+      "1810.12443v1/table_02.csv/6.6",
+      "1810.12443v1/table_02.csv/7.1",
+      "1810.12443v1/table_02.csv/7.2",
+      "1810.12443v1/table_02.csv/7.3",
+      "1810.12443v1/table_02.csv/7.5",
+      "1810.12443v1/table_02.csv/7.6",
+      "1810.12443v1/table_02.csv/8.1",
+      "1810.12443v1/table_02.csv/8.2",
+      "1810.12443v1/table_02.csv/8.3",
+      "1810.12443v1/table_02.csv/8.4",
+      "1810.12443v1/table_02.csv/8.5",
+      "1810.12443v1/table_02.csv/8.6",
+      "1810.12443v1/table_02.csv/9.1",
+      "1810.12443v1/table_02.csv/9.2",
+      "1810.12443v1/table_02.csv/9.3",
+      "1810.12443v1/table_02.csv/9.4",
+      "1810.12443v1/table_02.csv/9.5",
+      "1810.12443v1/table_02.csv/9.6",
+      "1810.12443v1/table_02.csv/10.1",
+      "1810.12443v1/table_02.csv/10.2",
+      "1810.12443v1/table_02.csv/10.3",
+      "1810.12443v1/table_02.csv/10.4",
+      "1810.12443v1/table_02.csv/10.5",
+      "1810.12443v1/table_02.csv/10.6",
+      "1810.12443v1/table_02.csv/11.1",
+      "1810.12443v1/table_02.csv/11.2",
+      "1810.12443v1/table_02.csv/11.3",
+      "1810.12443v1/table_02.csv/11.4",
+      "1810.12443v1/table_02.csv/11.5",
+      "1810.12443v1/table_02.csv/11.6",
+      "1810.12443v1/table_02.csv/12.1",
+      "1810.12443v1/table_02.csv/12.2",
+      "1810.12443v1/table_02.csv/12.3",
+      "1810.12443v1/table_02.csv/12.4",
+      "1810.12443v1/table_02.csv/12.5",
+      "1810.12443v1/table_02.csv/12.6",
+      "1810.12443v1/table_03.csv/2.2",
+      "1810.12443v1/table_03.csv/2.3",
+      "1810.12443v1/table_03.csv/2.4",
+      "1810.12443v1/table_03.csv/2.5",
+      "1810.12443v1/table_03.csv/2.6",
+      "1810.12443v1/table_03.csv/2.7",
+      "1810.12443v1/table_03.csv/2.8",
+      "1810.12443v1/table_03.csv/2.9",
+      "1810.12443v1/table_03.csv/2.10",
+      "1810.12443v1/table_03.csv/2.11",
+      "1810.12443v1/table_03.csv/2.12",
+      "1810.12443v1/table_03.csv/2.13",
+      "1810.12443v1/table_03.csv/2.14",
+      "1810.12443v1/table_03.csv/2.15",
+      "1810.12443v1/table_03.csv/2.16",
+      "1810.12443v1/table_03.csv/2.17",
+      "1810.12443v1/table_03.csv/3.2",
+      "1810.12443v1/table_03.csv/3.3",
+      "1810.12443v1/table_03.csv/3.4",
+      "1810.12443v1/table_03.csv/3.5",
+      "1810.12443v1/table_03.csv/3.6",
+      "1810.12443v1/table_03.csv/3.7",
+      "1810.12443v1/table_03.csv/3.8",
+      "1810.12443v1/table_03.csv/3.9",
+      "1810.12443v1/table_03.csv/3.10",
+      "1810.12443v1/table_03.csv/3.11",
+      "1810.12443v1/table_03.csv/3.12",
+      "1810.12443v1/table_03.csv/3.13",
+      "1810.12443v1/table_03.csv/3.14",
+      "1810.12443v1/table_03.csv/3.15",
+      "1810.12443v1/table_03.csv/3.16",
+      "1810.12443v1/table_03.csv/3.17",
+      "1810.12443v1/table_03.csv/4.2",
+      "1810.12443v1/table_03.csv/4.3",
+      "1810.12443v1/table_03.csv/4.4",
+      "1810.12443v1/table_03.csv/4.5",
+      "1810.12443v1/table_03.csv/4.6",
+      "1810.12443v1/table_03.csv/4.7",
+      "1810.12443v1/table_03.csv/4.8",
+      "1810.12443v1/table_03.csv/4.9",
+      "1810.12443v1/table_03.csv/4.10",
+      "1810.12443v1/table_03.csv/4.11",
+      "1810.12443v1/table_03.csv/4.12",
+      "1810.12443v1/table_03.csv/4.13",
+      "1810.12443v1/table_03.csv/4.14",
+      "1810.12443v1/table_03.csv/4.15",
+      "1810.12443v1/table_03.csv/4.16",
+      "1810.12443v1/table_03.csv/4.17",
+      "1810.12443v1/table_03.csv/5.2",
+      "1810.12443v1/table_03.csv/5.3",
+      "1810.12443v1/table_03.csv/5.4",
+      "1810.12443v1/table_03.csv/5.5",
+      "1810.12443v1/table_03.csv/5.6",
+      "1810.12443v1/table_03.csv/5.7",
+      "1810.12443v1/table_03.csv/5.8",
+      "1810.12443v1/table_03.csv/5.9",
+      "1810.12443v1/table_03.csv/5.10",
+      "1810.12443v1/table_03.csv/5.11",
+      "1810.12443v1/table_03.csv/5.12",
+      "1810.12443v1/table_03.csv/5.13",
+      "1810.12443v1/table_03.csv/5.14",
+      "1810.12443v1/table_03.csv/5.15",
+      "1810.12443v1/table_03.csv/5.16",
+      "1810.12443v1/table_03.csv/5.17",
+      "1810.12443v1/table_03.csv/6.2",
+      "1810.12443v1/table_03.csv/6.3",
+      "1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.5",
+      "1810.12443v1/table_03.csv/6.6",
+      "1810.12443v1/table_03.csv/6.7",
+      "1810.12443v1/table_03.csv/6.8",
+      "1810.12443v1/table_03.csv/6.9",
+      "1810.12443v1/table_03.csv/6.10",
+      "1810.12443v1/table_03.csv/6.11",
+      "1810.12443v1/table_03.csv/6.12",
+      "1810.12443v1/table_03.csv/6.13",
+      "1810.12443v1/table_03.csv/6.14",
+      "1810.12443v1/table_03.csv/6.15",
+      "1810.12443v1/table_03.csv/6.16",
+      "1810.12443v1/table_03.csv/6.17",
+      "1810.12443v1/table_03.csv/7.2",
+      "1810.12443v1/table_03.csv/7.3",
+      "1810.12443v1/table_03.csv/7.4",
+      "1810.12443v1/table_03.csv/7.5",
+      "1810.12443v1/table_03.csv/7.6",
+      "1810.12443v1/table_03.csv/7.7",
+      "1810.12443v1/table_03.csv/7.8",
+      "1810.12443v1/table_03.csv/7.9",
+      "1810.12443v1/table_03.csv/7.10",
+      "1810.12443v1/table_03.csv/7.11",
+      "1810.12443v1/table_03.csv/7.12",
+      "1810.12443v1/table_03.csv/7.13",
+      "1810.12443v1/table_03.csv/7.14",
+      "1810.12443v1/table_03.csv/7.15",
+      "1810.12443v1/table_03.csv/7.16",
+      "1810.12443v1/table_03.csv/7.17",
+      "1810.12443v1/table_03.csv/8.2",
+      "1810.12443v1/table_03.csv/8.3",
+      "1810.12443v1/table_03.csv/8.4",
+      "1810.12443v1/table_03.csv/8.5",
+      "1810.12443v1/table_03.csv/8.6",
+      "1810.12443v1/table_03.csv/8.7",
+      "1810.12443v1/table_03.csv/8.8",
+      "1810.12443v1/table_03.csv/8.9",
+      "1810.12443v1/table_03.csv/8.10",
+      "1810.12443v1/table_03.csv/8.11",
+      "1810.12443v1/table_03.csv/8.12",
+      "1810.12443v1/table_03.csv/8.13",
+      "1810.12443v1/table_03.csv/8.14",
+      "1810.12443v1/table_03.csv/8.15",
+      "1810.12443v1/table_03.csv/8.16",
+      "1810.12443v1/table_03.csv/8.17",
+      "1810.12443v1/table_03.csv/9.2",
+      "1810.12443v1/table_03.csv/9.3",
+      "1810.12443v1/table_03.csv/9.4",
+      "1810.12443v1/table_03.csv/9.5",
+      "1810.12443v1/table_03.csv/9.6",
+      "1810.12443v1/table_03.csv/9.7",
+      "1810.12443v1/table_03.csv/9.8",
+      "1810.12443v1/table_03.csv/9.9",
+      "1810.12443v1/table_03.csv/9.10",
+      "1810.12443v1/table_03.csv/9.11",
+      "1810.12443v1/table_03.csv/9.12",
+      "1810.12443v1/table_03.csv/9.13",
+      "1810.12443v1/table_03.csv/9.14",
+      "1810.12443v1/table_03.csv/9.15",
+      "1810.12443v1/table_03.csv/9.16",
+      "1810.12443v1/table_03.csv/9.17"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 472,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:05:25.340779+08:00",
+    "proposals_path": "raw_outputs/events/472_proposals.json",
+    "proposal_count": 231,
+    "kept_ids": [
+      "1810.12443v1/table_01.csv/1.1",
+      "1810.12443v1/table_01.csv/1.2",
+      "1810.12443v1/table_01.csv/1.3",
+      "1810.12443v1/table_01.csv/1.4",
+      "1810.12443v1/table_01.csv/1.5",
+      "1810.12443v1/table_01.csv/1.6",
+      "1810.12443v1/table_01.csv/2.1",
+      "1810.12443v1/table_01.csv/2.2",
+      "1810.12443v1/table_01.csv/2.3",
+      "1810.12443v1/table_01.csv/2.4",
+      "1810.12443v1/table_01.csv/2.5",
+      "1810.12443v1/table_01.csv/2.6",
+      "1810.12443v1/table_01.csv/3.1",
+      "1810.12443v1/table_01.csv/3.2",
+      "1810.12443v1/table_01.csv/3.3",
+      "1810.12443v1/table_01.csv/3.4",
+      "1810.12443v1/table_01.csv/3.5",
+      "1810.12443v1/table_01.csv/3.6",
+      "1810.12443v1/table_01.csv/4.1",
+      "1810.12443v1/table_01.csv/4.2",
+      "1810.12443v1/table_01.csv/4.3",
+      "1810.12443v1/table_01.csv/4.4",
+      "1810.12443v1/table_01.csv/4.5",
+      "1810.12443v1/table_01.csv/4.6",
+      "1810.12443v1/table_01.csv/5.1",
+      "1810.12443v1/table_01.csv/5.2",
+      "1810.12443v1/table_01.csv/5.3",
+      "1810.12443v1/table_01.csv/5.4",
+      "1810.12443v1/table_01.csv/5.5",
+      "1810.12443v1/table_01.csv/5.6",
+      "1810.12443v1/table_01.csv/6.1",
+      "1810.12443v1/table_01.csv/6.2",
+      "1810.12443v1/table_01.csv/6.3",
+      "1810.12443v1/table_01.csv/6.4",
+      "1810.12443v1/table_01.csv/6.5",
+      "1810.12443v1/table_01.csv/6.6",
+      "1810.12443v1/table_01.csv/7.1",
+      "1810.12443v1/table_01.csv/7.2",
+      "1810.12443v1/table_01.csv/7.3",
+      "1810.12443v1/table_01.csv/7.4",
+      "1810.12443v1/table_01.csv/7.5",
+      "1810.12443v1/table_01.csv/7.6",
+      "1810.12443v1/table_01.csv/8.1",
+      "1810.12443v1/table_01.csv/8.2",
+      "1810.12443v1/table_01.csv/8.3",
+      "1810.12443v1/table_01.csv/8.4",
+      "1810.12443v1/table_01.csv/8.5",
+      "1810.12443v1/table_01.csv/8.6",
+      "1810.12443v1/table_01.csv/9.1",
+      "1810.12443v1/table_01.csv/9.2",
+      "1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/9.4",
+      "1810.12443v1/table_01.csv/9.5",
+      "1810.12443v1/table_01.csv/9.6",
+      "1810.12443v1/table_02.csv/1.3",
+      "1810.12443v1/table_02.csv/1.5",
+      "1810.12443v1/table_02.csv/1.6",
+      "1810.12443v1/table_02.csv/2.3",
+      "1810.12443v1/table_02.csv/2.5",
+      "1810.12443v1/table_02.csv/2.6",
+      "1810.12443v1/table_02.csv/3.3",
+      "1810.12443v1/table_02.csv/4.6",
+      "1810.12443v1/table_02.csv/5.1",
+      "1810.12443v1/table_02.csv/5.2",
+      "1810.12443v1/table_02.csv/5.3",
+      "1810.12443v1/table_02.csv/5.4",
+      "1810.12443v1/table_02.csv/6.3",
+      "1810.12443v1/table_02.csv/6.6",
+      "1810.12443v1/table_02.csv/7.1",
+      "1810.12443v1/table_02.csv/7.2",
+      "1810.12443v1/table_02.csv/7.3",
+      "1810.12443v1/table_02.csv/7.5",
+      "1810.12443v1/table_02.csv/7.6",
+      "1810.12443v1/table_02.csv/8.1",
+      "1810.12443v1/table_02.csv/8.2",
+      "1810.12443v1/table_02.csv/8.3",
+      "1810.12443v1/table_02.csv/8.4",
+      "1810.12443v1/table_02.csv/8.5",
+      "1810.12443v1/table_02.csv/8.6",
+      "1810.12443v1/table_02.csv/9.1",
+      "1810.12443v1/table_02.csv/9.2",
+      "1810.12443v1/table_02.csv/9.3",
+      "1810.12443v1/table_02.csv/9.4",
+      "1810.12443v1/table_02.csv/9.5",
+      "1810.12443v1/table_02.csv/9.6",
+      "1810.12443v1/table_02.csv/10.1",
+      "1810.12443v1/table_02.csv/10.2",
+      "1810.12443v1/table_02.csv/10.3",
+      "1810.12443v1/table_02.csv/10.4",
+      "1810.12443v1/table_02.csv/10.5",
+      "1810.12443v1/table_02.csv/10.6",
+      "1810.12443v1/table_02.csv/11.1",
+      "1810.12443v1/table_02.csv/11.2",
+      "1810.12443v1/table_02.csv/11.3",
+      "1810.12443v1/table_02.csv/11.4",
+      "1810.12443v1/table_02.csv/11.5",
+      "1810.12443v1/table_02.csv/11.6",
+      "1810.12443v1/table_02.csv/12.1",
+      "1810.12443v1/table_02.csv/12.2",
+      "1810.12443v1/table_02.csv/12.3",
+      "1810.12443v1/table_02.csv/12.4",
+      "1810.12443v1/table_02.csv/12.5",
+      "1810.12443v1/table_02.csv/12.6",
+      "1810.12443v1/table_03.csv/2.2",
+      "1810.12443v1/table_03.csv/2.3",
+      "1810.12443v1/table_03.csv/2.4",
+      "1810.12443v1/table_03.csv/2.5",
+      "1810.12443v1/table_03.csv/2.6",
+      "1810.12443v1/table_03.csv/2.7",
+      "1810.12443v1/table_03.csv/2.8",
+      "1810.12443v1/table_03.csv/2.9",
+      "1810.12443v1/table_03.csv/2.10",
+      "1810.12443v1/table_03.csv/2.11",
+      "1810.12443v1/table_03.csv/2.12",
+      "1810.12443v1/table_03.csv/2.13",
+      "1810.12443v1/table_03.csv/2.14",
+      "1810.12443v1/table_03.csv/2.15",
+      "1810.12443v1/table_03.csv/2.16",
+      "1810.12443v1/table_03.csv/2.17",
+      "1810.12443v1/table_03.csv/3.2",
+      "1810.12443v1/table_03.csv/3.3",
+      "1810.12443v1/table_03.csv/3.4",
+      "1810.12443v1/table_03.csv/3.5",
+      "1810.12443v1/table_03.csv/3.6",
+      "1810.12443v1/table_03.csv/3.7",
+      "1810.12443v1/table_03.csv/3.8",
+      "1810.12443v1/table_03.csv/3.9",
+      "1810.12443v1/table_03.csv/3.10",
+      "1810.12443v1/table_03.csv/3.11",
+      "1810.12443v1/table_03.csv/3.12",
+      "1810.12443v1/table_03.csv/3.13",
+      "1810.12443v1/table_03.csv/3.14",
+      "1810.12443v1/table_03.csv/3.15",
+      "1810.12443v1/table_03.csv/3.16",
+      "1810.12443v1/table_03.csv/3.17",
+      "1810.12443v1/table_03.csv/4.2",
+      "1810.12443v1/table_03.csv/4.3",
+      "1810.12443v1/table_03.csv/4.4",
+      "1810.12443v1/table_03.csv/4.5",
+      "1810.12443v1/table_03.csv/4.6",
+      "1810.12443v1/table_03.csv/4.7",
+      "1810.12443v1/table_03.csv/4.8",
+      "1810.12443v1/table_03.csv/4.9",
+      "1810.12443v1/table_03.csv/4.10",
+      "1810.12443v1/table_03.csv/4.11",
+      "1810.12443v1/table_03.csv/4.12",
+      "1810.12443v1/table_03.csv/4.13",
+      "1810.12443v1/table_03.csv/4.14",
+      "1810.12443v1/table_03.csv/4.15",
+      "1810.12443v1/table_03.csv/4.16",
+      "1810.12443v1/table_03.csv/4.17",
+      "1810.12443v1/table_03.csv/5.2",
+      "1810.12443v1/table_03.csv/5.3",
+      "1810.12443v1/table_03.csv/5.4",
+      "1810.12443v1/table_03.csv/5.5",
+      "1810.12443v1/table_03.csv/5.6",
+      "1810.12443v1/table_03.csv/5.7",
+      "1810.12443v1/table_03.csv/5.8",
+      "1810.12443v1/table_03.csv/5.9",
+      "1810.12443v1/table_03.csv/5.10",
+      "1810.12443v1/table_03.csv/5.11",
+      "1810.12443v1/table_03.csv/5.12",
+      "1810.12443v1/table_03.csv/5.13",
+      "1810.12443v1/table_03.csv/5.14",
+      "1810.12443v1/table_03.csv/5.15",
+      "1810.12443v1/table_03.csv/5.16",
+      "1810.12443v1/table_03.csv/5.17",
+      "1810.12443v1/table_03.csv/6.2",
+      "1810.12443v1/table_03.csv/6.3",
+      "1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.5",
+      "1810.12443v1/table_03.csv/6.6",
+      "1810.12443v1/table_03.csv/6.7",
+      "1810.12443v1/table_03.csv/6.8",
+      "1810.12443v1/table_03.csv/6.9",
+      "1810.12443v1/table_03.csv/6.10",
+      "1810.12443v1/table_03.csv/6.11",
+      "1810.12443v1/table_03.csv/6.12",
+      "1810.12443v1/table_03.csv/6.13",
+      "1810.12443v1/table_03.csv/6.14",
+      "1810.12443v1/table_03.csv/6.15",
+      "1810.12443v1/table_03.csv/6.16",
+      "1810.12443v1/table_03.csv/6.17",
+      "1810.12443v1/table_03.csv/7.2",
+      "1810.12443v1/table_03.csv/7.3",
+      "1810.12443v1/table_03.csv/7.4",
+      "1810.12443v1/table_03.csv/7.5",
+      "1810.12443v1/table_03.csv/7.6",
+      "1810.12443v1/table_03.csv/7.7",
+      "1810.12443v1/table_03.csv/7.8",
+      "1810.12443v1/table_03.csv/7.9",
+      "1810.12443v1/table_03.csv/7.10",
+      "1810.12443v1/table_03.csv/7.11",
+      "1810.12443v1/table_03.csv/7.12",
+      "1810.12443v1/table_03.csv/7.13",
+      "1810.12443v1/table_03.csv/7.14",
+      "1810.12443v1/table_03.csv/7.15",
+      "1810.12443v1/table_03.csv/7.16",
+      "1810.12443v1/table_03.csv/7.17",
+      "1810.12443v1/table_03.csv/8.2",
+      "1810.12443v1/table_03.csv/8.3",
+      "1810.12443v1/table_03.csv/8.4",
+      "1810.12443v1/table_03.csv/8.5",
+      "1810.12443v1/table_03.csv/8.6",
+      "1810.12443v1/table_03.csv/8.7",
+      "1810.12443v1/table_03.csv/8.8",
+      "1810.12443v1/table_03.csv/8.9",
+      "1810.12443v1/table_03.csv/8.10",
+      "1810.12443v1/table_03.csv/8.11",
+      "1810.12443v1/table_03.csv/8.12",
+      "1810.12443v1/table_03.csv/8.13",
+      "1810.12443v1/table_03.csv/8.14",
+      "1810.12443v1/table_03.csv/8.15",
+      "1810.12443v1/table_03.csv/8.16",
+      "1810.12443v1/table_03.csv/8.17",
+      "1810.12443v1/table_03.csv/9.2",
+      "1810.12443v1/table_03.csv/9.3",
+      "1810.12443v1/table_03.csv/9.4",
+      "1810.12443v1/table_03.csv/9.5",
+      "1810.12443v1/table_03.csv/9.6",
+      "1810.12443v1/table_03.csv/9.7",
+      "1810.12443v1/table_03.csv/9.8",
+      "1810.12443v1/table_03.csv/9.9",
+      "1810.12443v1/table_03.csv/9.10",
+      "1810.12443v1/table_03.csv/9.11",
+      "1810.12443v1/table_03.csv/9.12",
+      "1810.12443v1/table_03.csv/9.13",
+      "1810.12443v1/table_03.csv/9.14",
+      "1810.12443v1/table_03.csv/9.15",
+      "1810.12443v1/table_03.csv/9.16",
+      "1810.12443v1/table_03.csv/9.17"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 473,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:05:25.344020+08:00",
+    "proposals_path": "raw_outputs/events/473_proposals.json",
+    "proposal_count": 231,
+    "kept_ids": [
+      "1810.12443v1/table_01.csv/1.1",
+      "1810.12443v1/table_01.csv/1.2",
+      "1810.12443v1/table_01.csv/1.3",
+      "1810.12443v1/table_01.csv/1.4",
+      "1810.12443v1/table_01.csv/1.5",
+      "1810.12443v1/table_01.csv/1.6",
+      "1810.12443v1/table_01.csv/2.1",
+      "1810.12443v1/table_01.csv/2.2",
+      "1810.12443v1/table_01.csv/2.3",
+      "1810.12443v1/table_01.csv/2.4",
+      "1810.12443v1/table_01.csv/2.5",
+      "1810.12443v1/table_01.csv/2.6",
+      "1810.12443v1/table_01.csv/3.1",
+      "1810.12443v1/table_01.csv/3.2",
+      "1810.12443v1/table_01.csv/3.3",
+      "1810.12443v1/table_01.csv/3.4",
+      "1810.12443v1/table_01.csv/3.5",
+      "1810.12443v1/table_01.csv/3.6",
+      "1810.12443v1/table_01.csv/4.1",
+      "1810.12443v1/table_01.csv/4.2",
+      "1810.12443v1/table_01.csv/4.3",
+      "1810.12443v1/table_01.csv/4.4",
+      "1810.12443v1/table_01.csv/4.5",
+      "1810.12443v1/table_01.csv/4.6",
+      "1810.12443v1/table_01.csv/5.1",
+      "1810.12443v1/table_01.csv/5.2",
+      "1810.12443v1/table_01.csv/5.3",
+      "1810.12443v1/table_01.csv/5.4",
+      "1810.12443v1/table_01.csv/5.5",
+      "1810.12443v1/table_01.csv/5.6",
+      "1810.12443v1/table_01.csv/6.1",
+      "1810.12443v1/table_01.csv/6.2",
+      "1810.12443v1/table_01.csv/6.3",
+      "1810.12443v1/table_01.csv/6.4",
+      "1810.12443v1/table_01.csv/6.5",
+      "1810.12443v1/table_01.csv/6.6",
+      "1810.12443v1/table_01.csv/7.1",
+      "1810.12443v1/table_01.csv/7.2",
+      "1810.12443v1/table_01.csv/7.3",
+      "1810.12443v1/table_01.csv/7.4",
+      "1810.12443v1/table_01.csv/7.5",
+      "1810.12443v1/table_01.csv/7.6",
+      "1810.12443v1/table_01.csv/8.1",
+      "1810.12443v1/table_01.csv/8.2",
+      "1810.12443v1/table_01.csv/8.3",
+      "1810.12443v1/table_01.csv/8.4",
+      "1810.12443v1/table_01.csv/8.5",
+      "1810.12443v1/table_01.csv/8.6",
+      "1810.12443v1/table_01.csv/9.1",
+      "1810.12443v1/table_01.csv/9.2",
+      "1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/9.4",
+      "1810.12443v1/table_01.csv/9.5",
+      "1810.12443v1/table_01.csv/9.6",
+      "1810.12443v1/table_02.csv/1.3",
+      "1810.12443v1/table_02.csv/1.5",
+      "1810.12443v1/table_02.csv/1.6",
+      "1810.12443v1/table_02.csv/2.3",
+      "1810.12443v1/table_02.csv/2.5",
+      "1810.12443v1/table_02.csv/2.6",
+      "1810.12443v1/table_02.csv/3.3",
+      "1810.12443v1/table_02.csv/4.6",
+      "1810.12443v1/table_02.csv/5.1",
+      "1810.12443v1/table_02.csv/5.2",
+      "1810.12443v1/table_02.csv/5.3",
+      "1810.12443v1/table_02.csv/5.4",
+      "1810.12443v1/table_02.csv/6.3",
+      "1810.12443v1/table_02.csv/6.6",
+      "1810.12443v1/table_02.csv/7.1",
+      "1810.12443v1/table_02.csv/7.2",
+      "1810.12443v1/table_02.csv/7.3",
+      "1810.12443v1/table_02.csv/7.5",
+      "1810.12443v1/table_02.csv/7.6",
+      "1810.12443v1/table_02.csv/8.1",
+      "1810.12443v1/table_02.csv/8.2",
+      "1810.12443v1/table_02.csv/8.3",
+      "1810.12443v1/table_02.csv/8.4",
+      "1810.12443v1/table_02.csv/8.5",
+      "1810.12443v1/table_02.csv/8.6",
+      "1810.12443v1/table_02.csv/9.1",
+      "1810.12443v1/table_02.csv/9.2",
+      "1810.12443v1/table_02.csv/9.3",
+      "1810.12443v1/table_02.csv/9.4",
+      "1810.12443v1/table_02.csv/9.5",
+      "1810.12443v1/table_02.csv/9.6",
+      "1810.12443v1/table_02.csv/10.1",
+      "1810.12443v1/table_02.csv/10.2",
+      "1810.12443v1/table_02.csv/10.3",
+      "1810.12443v1/table_02.csv/10.4",
+      "1810.12443v1/table_02.csv/10.5",
+      "1810.12443v1/table_02.csv/10.6",
+      "1810.12443v1/table_02.csv/11.1",
+      "1810.12443v1/table_02.csv/11.2",
+      "1810.12443v1/table_02.csv/11.3",
+      "1810.12443v1/table_02.csv/11.4",
+      "1810.12443v1/table_02.csv/11.5",
+      "1810.12443v1/table_02.csv/11.6",
+      "1810.12443v1/table_02.csv/12.1",
+      "1810.12443v1/table_02.csv/12.2",
+      "1810.12443v1/table_02.csv/12.3",
+      "1810.12443v1/table_02.csv/12.4",
+      "1810.12443v1/table_02.csv/12.5",
+      "1810.12443v1/table_02.csv/12.6",
+      "1810.12443v1/table_03.csv/2.2",
+      "1810.12443v1/table_03.csv/2.3",
+      "1810.12443v1/table_03.csv/2.4",
+      "1810.12443v1/table_03.csv/2.5",
+      "1810.12443v1/table_03.csv/2.6",
+      "1810.12443v1/table_03.csv/2.7",
+      "1810.12443v1/table_03.csv/2.8",
+      "1810.12443v1/table_03.csv/2.9",
+      "1810.12443v1/table_03.csv/2.10",
+      "1810.12443v1/table_03.csv/2.11",
+      "1810.12443v1/table_03.csv/2.12",
+      "1810.12443v1/table_03.csv/2.13",
+      "1810.12443v1/table_03.csv/2.14",
+      "1810.12443v1/table_03.csv/2.15",
+      "1810.12443v1/table_03.csv/2.16",
+      "1810.12443v1/table_03.csv/2.17",
+      "1810.12443v1/table_03.csv/3.2",
+      "1810.12443v1/table_03.csv/3.3",
+      "1810.12443v1/table_03.csv/3.4",
+      "1810.12443v1/table_03.csv/3.5",
+      "1810.12443v1/table_03.csv/3.6",
+      "1810.12443v1/table_03.csv/3.7",
+      "1810.12443v1/table_03.csv/3.8",
+      "1810.12443v1/table_03.csv/3.9",
+      "1810.12443v1/table_03.csv/3.10",
+      "1810.12443v1/table_03.csv/3.11",
+      "1810.12443v1/table_03.csv/3.12",
+      "1810.12443v1/table_03.csv/3.13",
+      "1810.12443v1/table_03.csv/3.14",
+      "1810.12443v1/table_03.csv/3.15",
+      "1810.12443v1/table_03.csv/3.16",
+      "1810.12443v1/table_03.csv/3.17",
+      "1810.12443v1/table_03.csv/4.2",
+      "1810.12443v1/table_03.csv/4.3",
+      "1810.12443v1/table_03.csv/4.4",
+      "1810.12443v1/table_03.csv/4.5",
+      "1810.12443v1/table_03.csv/4.6",
+      "1810.12443v1/table_03.csv/4.7",
+      "1810.12443v1/table_03.csv/4.8",
+      "1810.12443v1/table_03.csv/4.9",
+      "1810.12443v1/table_03.csv/4.10",
+      "1810.12443v1/table_03.csv/4.11",
+      "1810.12443v1/table_03.csv/4.12",
+      "1810.12443v1/table_03.csv/4.13",
+      "1810.12443v1/table_03.csv/4.14",
+      "1810.12443v1/table_03.csv/4.15",
+      "1810.12443v1/table_03.csv/4.16",
+      "1810.12443v1/table_03.csv/4.17",
+      "1810.12443v1/table_03.csv/5.2",
+      "1810.12443v1/table_03.csv/5.3",
+      "1810.12443v1/table_03.csv/5.4",
+      "1810.12443v1/table_03.csv/5.5",
+      "1810.12443v1/table_03.csv/5.6",
+      "1810.12443v1/table_03.csv/5.7",
+      "1810.12443v1/table_03.csv/5.8",
+      "1810.12443v1/table_03.csv/5.9",
+      "1810.12443v1/table_03.csv/5.10",
+      "1810.12443v1/table_03.csv/5.11",
+      "1810.12443v1/table_03.csv/5.12",
+      "1810.12443v1/table_03.csv/5.13",
+      "1810.12443v1/table_03.csv/5.14",
+      "1810.12443v1/table_03.csv/5.15",
+      "1810.12443v1/table_03.csv/5.16",
+      "1810.12443v1/table_03.csv/5.17",
+      "1810.12443v1/table_03.csv/6.2",
+      "1810.12443v1/table_03.csv/6.3",
+      "1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.5",
+      "1810.12443v1/table_03.csv/6.6",
+      "1810.12443v1/table_03.csv/6.7",
+      "1810.12443v1/table_03.csv/6.8",
+      "1810.12443v1/table_03.csv/6.9",
+      "1810.12443v1/table_03.csv/6.10",
+      "1810.12443v1/table_03.csv/6.11",
+      "1810.12443v1/table_03.csv/6.12",
+      "1810.12443v1/table_03.csv/6.13",
+      "1810.12443v1/table_03.csv/6.14",
+      "1810.12443v1/table_03.csv/6.15",
+      "1810.12443v1/table_03.csv/6.16",
+      "1810.12443v1/table_03.csv/6.17",
+      "1810.12443v1/table_03.csv/7.2",
+      "1810.12443v1/table_03.csv/7.3",
+      "1810.12443v1/table_03.csv/7.4",
+      "1810.12443v1/table_03.csv/7.5",
+      "1810.12443v1/table_03.csv/7.6",
+      "1810.12443v1/table_03.csv/7.7",
+      "1810.12443v1/table_03.csv/7.8",
+      "1810.12443v1/table_03.csv/7.9",
+      "1810.12443v1/table_03.csv/7.10",
+      "1810.12443v1/table_03.csv/7.11",
+      "1810.12443v1/table_03.csv/7.12",
+      "1810.12443v1/table_03.csv/7.13",
+      "1810.12443v1/table_03.csv/7.14",
+      "1810.12443v1/table_03.csv/7.15",
+      "1810.12443v1/table_03.csv/7.16",
+      "1810.12443v1/table_03.csv/7.17",
+      "1810.12443v1/table_03.csv/8.2",
+      "1810.12443v1/table_03.csv/8.3",
+      "1810.12443v1/table_03.csv/8.4",
+      "1810.12443v1/table_03.csv/8.5",
+      "1810.12443v1/table_03.csv/8.6",
+      "1810.12443v1/table_03.csv/8.7",
+      "1810.12443v1/table_03.csv/8.8",
+      "1810.12443v1/table_03.csv/8.9",
+      "1810.12443v1/table_03.csv/8.10",
+      "1810.12443v1/table_03.csv/8.11",
+      "1810.12443v1/table_03.csv/8.12",
+      "1810.12443v1/table_03.csv/8.13",
+      "1810.12443v1/table_03.csv/8.14",
+      "1810.12443v1/table_03.csv/8.15",
+      "1810.12443v1/table_03.csv/8.16",
+      "1810.12443v1/table_03.csv/8.17",
+      "1810.12443v1/table_03.csv/9.2",
+      "1810.12443v1/table_03.csv/9.3",
+      "1810.12443v1/table_03.csv/9.4",
+      "1810.12443v1/table_03.csv/9.5",
+      "1810.12443v1/table_03.csv/9.6",
+      "1810.12443v1/table_03.csv/9.7",
+      "1810.12443v1/table_03.csv/9.8",
+      "1810.12443v1/table_03.csv/9.9",
+      "1810.12443v1/table_03.csv/9.10",
+      "1810.12443v1/table_03.csv/9.11",
+      "1810.12443v1/table_03.csv/9.12",
+      "1810.12443v1/table_03.csv/9.13",
+      "1810.12443v1/table_03.csv/9.14",
+      "1810.12443v1/table_03.csv/9.15",
+      "1810.12443v1/table_03.csv/9.16",
+      "1810.12443v1/table_03.csv/9.17"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 474,
+    "step": "filtering::best_result_filtering::filtered",
+    "time": "2026-10-22T19:05:25.351416+08:00",
+    "proposals_path": "raw_outputs/events/474_proposals.json",
+    "proposal_count": 231,
+    "kept_ids": [
+      "1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_03.csv/6.4"
+    ],
+    "removed_reasons": {
+      "1810.12443v1/table_01.csv/1.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/1.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/1.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/2.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/2.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/3.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/3.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/4.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/4.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/5.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/5.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/6.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/6.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/7.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/7.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/8.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/8.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/1.3": "model-competing",
+      "1810.12443v1/table_02.csv/1.5": "model-competing",
+      "1810.12443v1/table_02.csv/1.6": "model-competing",
+      "1810.12443v1/table_02.csv/2.3": "model-competing",
+      "1810.12443v1/table_02.csv/2.5": "model-competing",
+      "1810.12443v1/table_02.csv/2.6": "model-competing",
+      "1810.12443v1/table_02.csv/3.3": "model-competing",
+      "1810.12443v1/table_02.csv/4.6": "model-competing",
+      "1810.12443v1/table_02.csv/5.1": "model-competing",
+      "1810.12443v1/table_02.csv/5.2": "model-competing",
+      "1810.12443v1/table_02.csv/5.3": "model-competing",
+      "1810.12443v1/table_02.csv/5.4": "model-competing",
+      "1810.12443v1/table_02.csv/6.3": "model-competing",
+      "1810.12443v1/table_02.csv/6.6": "model-competing",
+      "1810.12443v1/table_02.csv/7.1": "model-competing",
+      "1810.12443v1/table_02.csv/7.2": "model-competing",
+      "1810.12443v1/table_02.csv/7.3": "model-competing",
+      "1810.12443v1/table_02.csv/7.5": "model-competing",
+      "1810.12443v1/table_02.csv/7.6": "model-competing",
+      "1810.12443v1/table_02.csv/8.1": "model-competing",
+      "1810.12443v1/table_02.csv/8.2": "model-competing",
+      "1810.12443v1/table_02.csv/8.3": "model-competing",
+      "1810.12443v1/table_02.csv/8.4": "model-competing",
+      "1810.12443v1/table_02.csv/8.5": "model-competing",
+      "1810.12443v1/table_02.csv/8.6": "model-competing",
+      "1810.12443v1/table_02.csv/9.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.17": "replaced by 1810.12443v1/table_03.csv/6.4"
+    }
+  },
+  {
+    "sequence": 475,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:05:25.355075+08:00",
+    "proposals_path": "raw_outputs/events/475_proposals.json",
+    "proposal_count": 231,
+    "kept_ids": [
+      "1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_03.csv/6.4"
+    ],
+    "removed_reasons": {
+      "1810.12443v1/table_01.csv/1.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/1.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/1.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/2.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/2.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/3.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/3.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/4.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/4.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/5.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/5.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/6.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/6.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/7.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/7.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/8.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/8.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/1.3": "model-competing",
+      "1810.12443v1/table_02.csv/1.5": "model-competing",
+      "1810.12443v1/table_02.csv/1.6": "model-competing",
+      "1810.12443v1/table_02.csv/2.3": "model-competing",
+      "1810.12443v1/table_02.csv/2.5": "model-competing",
+      "1810.12443v1/table_02.csv/2.6": "model-competing",
+      "1810.12443v1/table_02.csv/3.3": "model-competing",
+      "1810.12443v1/table_02.csv/4.6": "model-competing",
+      "1810.12443v1/table_02.csv/5.1": "model-competing",
+      "1810.12443v1/table_02.csv/5.2": "model-competing",
+      "1810.12443v1/table_02.csv/5.3": "model-competing",
+      "1810.12443v1/table_02.csv/5.4": "model-competing",
+      "1810.12443v1/table_02.csv/6.3": "model-competing",
+      "1810.12443v1/table_02.csv/6.6": "model-competing",
+      "1810.12443v1/table_02.csv/7.1": "model-competing",
+      "1810.12443v1/table_02.csv/7.2": "model-competing",
+      "1810.12443v1/table_02.csv/7.3": "model-competing",
+      "1810.12443v1/table_02.csv/7.5": "model-competing",
+      "1810.12443v1/table_02.csv/7.6": "model-competing",
+      "1810.12443v1/table_02.csv/8.1": "model-competing",
+      "1810.12443v1/table_02.csv/8.2": "model-competing",
+      "1810.12443v1/table_02.csv/8.3": "model-competing",
+      "1810.12443v1/table_02.csv/8.4": "model-competing",
+      "1810.12443v1/table_02.csv/8.5": "model-competing",
+      "1810.12443v1/table_02.csv/8.6": "model-competing",
+      "1810.12443v1/table_02.csv/9.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.17": "replaced by 1810.12443v1/table_03.csv/6.4"
+    }
+  },
+  {
+    "sequence": 476,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:05:25.359613+08:00",
+    "proposals_path": "raw_outputs/events/476_proposals.json",
+    "proposal_count": 2,
+    "kept_ids": [
+      "1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_03.csv/6.4"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 477,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:05:25.364156+08:00",
+    "proposals_path": "raw_outputs/events/477_proposals.json",
+    "proposal_count": 231,
+    "kept_ids": [
+      "1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_03.csv/6.4"
+    ],
+    "removed_reasons": {
+      "1810.12443v1/table_01.csv/1.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/1.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/1.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/1.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/2.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/2.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/2.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/3.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/3.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/3.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/4.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/4.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/4.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/5.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/5.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/5.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/6.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/6.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/6.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/7.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/7.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/7.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/8.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.3": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/8.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/8.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.1": "replaced by 1810.12443v1/table_01.csv/9.3",
+      "1810.12443v1/table_01.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_01.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/1.3": "model-competing",
+      "1810.12443v1/table_02.csv/1.5": "model-competing",
+      "1810.12443v1/table_02.csv/1.6": "model-competing",
+      "1810.12443v1/table_02.csv/2.3": "model-competing",
+      "1810.12443v1/table_02.csv/2.5": "model-competing",
+      "1810.12443v1/table_02.csv/2.6": "model-competing",
+      "1810.12443v1/table_02.csv/3.3": "model-competing",
+      "1810.12443v1/table_02.csv/4.6": "model-competing",
+      "1810.12443v1/table_02.csv/5.1": "model-competing",
+      "1810.12443v1/table_02.csv/5.2": "model-competing",
+      "1810.12443v1/table_02.csv/5.3": "model-competing",
+      "1810.12443v1/table_02.csv/5.4": "model-competing",
+      "1810.12443v1/table_02.csv/6.3": "model-competing",
+      "1810.12443v1/table_02.csv/6.6": "model-competing",
+      "1810.12443v1/table_02.csv/7.1": "model-competing",
+      "1810.12443v1/table_02.csv/7.2": "model-competing",
+      "1810.12443v1/table_02.csv/7.3": "model-competing",
+      "1810.12443v1/table_02.csv/7.5": "model-competing",
+      "1810.12443v1/table_02.csv/7.6": "model-competing",
+      "1810.12443v1/table_02.csv/8.1": "model-competing",
+      "1810.12443v1/table_02.csv/8.2": "model-competing",
+      "1810.12443v1/table_02.csv/8.3": "model-competing",
+      "1810.12443v1/table_02.csv/8.4": "model-competing",
+      "1810.12443v1/table_02.csv/8.5": "model-competing",
+      "1810.12443v1/table_02.csv/8.6": "model-competing",
+      "1810.12443v1/table_02.csv/9.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/10.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/11.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.1": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_02.csv/12.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/2.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/3.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/4.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/5.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/6.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/7.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/8.17": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.2": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.3": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.4": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.5": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.6": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.7": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.8": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.9": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.10": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.11": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.12": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.13": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.14": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.15": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.16": "replaced by 1810.12443v1/table_03.csv/6.4",
+      "1810.12443v1/table_03.csv/9.17": "replaced by 1810.12443v1/table_03.csv/6.4"
+    }
+  }
+]

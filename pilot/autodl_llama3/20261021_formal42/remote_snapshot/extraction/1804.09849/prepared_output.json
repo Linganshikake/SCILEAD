@@ -1,0 +1,91 @@
+{
+  "1804.09849.pdf": {
+    "output": "\n\n[\n{\"Task\": \"WMT'14 En→Fr\", \"Dataset\": \"WMT'14 En→Fr\", \"Metric\": \"BLEU\", \"Result\": \"41.00 ± 0.05\"},\n{\"Task\": \"WMT'14 En→De\", \"Dataset\": \"WMT'14 En→De\", \"Metric\": \"BLEU\", \"Result\": \"28.49 ± 0.05\"},\n{\"Task\": \"WMT'14 En→Fr\", \"Dataset\": \"WMT'14 En→Fr\", \"Metric\": \"BLEU\", \"Result\": \"40.73 ± 0.19\"},\n{\"Task\": \"WMT'14 En→De\", \"Dataset\": \"WMT'14 En→De\", \"Metric\": \"BLEU\", \"Result\": \"27.94 ± 0.18\"},\n{\"Task\": \"WMT'14 En→Fr\", \"Dataset\": \"WMT'14 En→Fr\", \"Metric\": \"BLEU\", \"Result\": \"41.12 ± 0.16\"},\n{\"Task\": \"WMT'14 En→De\", \"Dataset\": \"WMT'14 En→De\", \"Metric\": \"BLEU\", \"Result\": \"28.62 ± 0.06\"},\n{\"Task\": \"WMT'14 En→Fr\", \"Dataset\": \"WMT'14 En→Fr\", \"Metric\": \"BLEU\", \"Result\": \"41.67 ± 0.11\"},\n{\"Task\": \"WMT'14 En→De\", \"Dataset\": \"WMT'14 En→De\", \"Metric\": \"BLEU\", \"Result\": \"28.84 ± 0.06\"}\n]",
+    "source_documents": [
+      {
+        "content": "different architectures to other tasks? And what are the characteristic errors that each architecture makes, e.g., linguistic plausibility? Acknowledgments We would like to thank the entire Google Brain Team and Google Translate Team for their foun- dational contributions to this project. We would also like to thank Noam Shazeer, Ashish Vaswani, Jakob Uszkoreit, Lukasz Kaiser, and the entire Tensor2Tensor development team for their useful inputs and discussions. References",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 9,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "speed and superior model quality. To further stabilize training, we also use adap- tive gradient clipping. We discard a training step completely if an anomaly in the gradient norm value is detected, which is usually an indication of an imminent gradient explosion. More specif- ically, we keep track of a moving average and a moving standard deviation of the log of the gradi- ent norm values, and we abort a step if the norm of the gradient exceeds four standard deviations of the moving average. 4.2 Model Analysis and Comparison In this section, we compare the results of RNMT+ with ConvS2S and Transformer. All models were trained with synchronous training. RNMT+ and ConvS2S were trained with 32 NVIDIA P100 GPUs while the Transformer Base and Big models were trained using 16 GPUs. For RNMT+, we use sentence-level cross- entropy loss. Each training batch contained 4096 sentence pairs (4096 source sequences and 4096 target sequences). For ConvS2S and Transformer models, we use token-level cross-entropy loss. Each training batch contained 65536 source to- kens and 65536 target tokens. For the GNMT baselines on both tasks, we cite the largest BLEU score reported in (Wu et al., 2016) without rein- forcement learning. Table 1 shows our results on the WMT’14 En→Fr task. Both the Transformer Big model and RNMT+ outperform GNMT and ConvS2S by about 2 BLEU points. RNMT+ is slightly better than the Transformer Big model in terms of its mean BLEU score. RNMT+ also yields a much lower standard deviation, and hence we observed much less ﬂuctuation in the training curve. It takes approximately 3 days for the Transformer",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 5,
+          "start_index": 1808,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "and how much can be attributed to the associated training and inference techniques. In some cases, these new techniques may be broadly applicable to other architectures and thus constitute a major, though implicit, contribution of an architecture pa- per. Clearly, they need to be considered in order to ensure a fair comparison across different model architectures. In this paper, we therefore take a step back and look at which techniques and methods contribute signiﬁcantly to the success of recent architectures, namely ConvS2S and Transformer, and explore applying these methods to other architectures, in- cluding RNMT models. In doing so, we come up with an enhanced version of RNMT, referred to as RNMT+, that signiﬁcantly outperforms all in- dividual architectures in our setup. We further in- troduce new architectures built with different com- ponents borrowed from RNMT+, ConvS2S and Transformer. In order to ensure a fair setting for comparison, all architectures were implemented in the same framework, use the same pre-processed data and apply no further post-processing as this may confound bare model performance. Our contributions are three-fold: We quickly note two prior works that pro- vided empirical solutions to the difﬁculty of train- ing NMT architectures (speciﬁcally RNMT). In (Britz et al., 2017) the authors systematically ex- plore which elements of NMT architectures have a signiﬁcant impact on translation quality. In (Denkowski and Neubig, 2017) the authors recom- mend three speciﬁc techniques for strengthening NMT systems and empirically demonstrated how incorporating those techniques improves the relia- bility of the experimental results. 2 Background In this section, we brieﬂy discuss the commmonly used NMT architectures. 2.1 RNN-based NMT Models - RNMT RNMT models are composed of an encoder RNN and a decoder RNN, coupled with an attention network. The encoder summarizes the input se- quence into a set of vectors while the decoder con- ditions on the",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 2,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "A Supplemental Material A.1 ConvS2S For the WMT’14 En→De task, both the encoder and decoder have 15 layers, with 512 hidden units in the ﬁrst ten layers, 768 units in the subsequent three layers and 2048 units in the ﬁnal two lay- ers. The ﬁrst 13 layers use kernel width 3 and the ﬁnal two layers use kernel width 1. For the WMT’14 En→Fr task, both the encoder and de- coder have 14 layers, with 512 hidden units in the ﬁrst ﬁve layers, 768 units in the subsequent four layers, 1024 units in the next three layers, 2048 units and 4096 units in the ﬁnal two layers. The ﬁrst 12 layers use kernel width 3 and the ﬁnal two layers use kernel width 1. We train the ConvS2S models with synchronous training using 32 GPUs. A.2 Transformer Both the encoder and the decoder have 6 Trans- former layers. Transformer base model has model dimension 512, hidden dimension 2048 and 8 at- tention heads. The Transformer Big model uses model dimension 1024, hidden dimension 8192 and 16 attention heads. We group the dropout in Transformer models into four types: input dropout - dropout applied to the sum of token embeddings and position encodings, residual dropout - dropout applied to the output of each sublayer before added to the sublayer input, relu dropout - dropout applied to the inner layer output after ReLU ac- tivation in each feed-forward sub-layer, attention dropout - dropout applied to attention weight in each attention sub-layer. All Transformer models use the following learning rate schedule: where t is the current step, p is the number of warmup steps, dmodel is the model dimension and r0 is a constant to adjust the magnitude of the learning rate. On WMT’14 En→De, the Transformer Base model employs all four types of dropout with dropout probs = 0.1. We use r0 = 2.0 and p = 8000 in the learning rate schedule. For the Trans- former Big model, only residual dropout and input dropout are applied, both with dropout probs = 0.3. r0 = 3.0 and p = 40000 are used in the learn- ing rate",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 11,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Results on WMT14 En→Fr. The num- bers before and after ’±’ are the mean and stan- dard deviation of test BLEU score over an evalua- tion window.\nModel GNMT ConvS2S 7 Trans. Base Trans. Big 8 RNMT+ Test BLEU 38.95 39.49 ± 0.11 39.43 ± 0.17 40.73 ± 0.19 41.00 ± 0.05 Epochs - 62.2 20.7 8.3 8.5 Training Time - 438h 90h 120h 120h",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Results on WMT14 En→De.\nModel GNMT ConvS2S Trans. Base Trans. Big RNMT+ Test BLEU 24.67 25.01 ±0.17 27.26 ± 0.15 27.94 ± 0.18 28.49 ± 0.05 Epochs - 38 38 26.9 24.6 Training Time - 20h 17h 48h 40h",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Performance comparison. Examples/s are normalized by the number of GPUs used in the training job. FLOPs are computed assuming that source and target sequence length are both 50.\nModel ConvS2S Trans. Base Trans. Big RNMT+ Examples/s FLOPs 15.7B 6.2B 31.2B 28.1B 80 160 50 30 Params 263.4M 93.3M 375.4M 378.9M",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: Ablation results of RNMT+ and the Transformer Big model on WMT’14 En → Fr. We report average BLEU scores on the test set. An as- terisk ’*’ indicates an unstable training run (train- ing halts due to non-ﬁnite elements).\nModel Baseline - Label Smoothing - Multi-head Attention - Layer Norm. - Sync. Training RNMT+ Trans. Big 41.00 40.33 40.44 * 39.68 40.73 40.49 39.83 * *",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Results for encoder-decoder hybrids.\nEncoder Decoder Trans. Big Trans. Big RNMT+ RNMT+ RNMT+ Trans. Big Trans. Big RNMT+ En→Fr Test BLEU 40.73 ± 0.19 41.00 ± 0.05 41.12 ± 0.16 39.92 ± 0.21",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Results for hybrids with cascaded en- coder and multi-column encoder.\nModel Trans. Big RNMT+ Cascaded MultiCol En→Fr BLEU En→De BLEU 27.94 ± 0.18 40.73 ± 0.19 28.49 ± 0.05 41.00 ± 0.05 28.62 ± 0.06 41.67 ± 0.11 28.84 ± 0.06 41.66 ± 0.11",
+        "metadata": {
+          "filename": "1804.09849.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

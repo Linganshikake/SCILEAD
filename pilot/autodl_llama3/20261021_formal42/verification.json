@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "protected_files_unchanged": 351,
+  "original_critical_files": 214,
+  "diagnostic_files_unchanged": 137,
+  "new_extraction_requests": 38,
+  "reused_extraction_requests": 4,
+  "generated_papers": 42,
+  "format_valid_papers": 40,
+  "failed_format_papers": [
+    "2105.03654.pdf",
+    "1901.10430.pdf"
+  ],
+  "all_original_responses_preserved": true,
+  "all_valid_arrays_verbatim": true,
+  "no_pdf_embedding_retrieval_rerun": true,
+  "paid_api_calls": 0,
+  "remote_verification": {
+    "status": "PASS",
+    "official_main_replays": [
+      {
+        "stage": "fully",
+        "identical_official_output": true,
+        "identical_prompts": 566,
+        "new_model_calls": 0
+      },
+      {
+        "stage": "partial",
+        "identical_official_output": true,
+        "identical_prompts": 470,
+        "new_model_calls": 0
+      },
+      {
+        "stage": "leaderboard",
+        "identical_official_output": true,
+        "identical_prompts": 175,
+        "new_model_calls": 0
+      }
+    ],
+    "frozen_source_adapter_gold_evidence_files": 69,
+    "versions_unchanged": {
+      "torch": "2.2.0+cu118",
+      "transformers": "4.40.2",
+      "bitsandbytes": "0.43.1",
+      "langchain": "0.1.17",
+      "langchain-community": "0.0.36",
+      "tokenizers": "0.19.1",
+      "accelerate": "0.29.3"
+    },
+    "pip_check": "No broken requirements found.",
+    "gpu_after": "0 MiB, 81153 MiB",
+    "new_generation_calls_in_replay": 0
+  },
+  "cs_actual_output_consistency": {
+    "status": "PASS",
+    "model_revision": "e83179d7a66e8aed1b3015e98bb5ae234ed89598",
+    "code_revision": "8079a782f9671d3696b5ab189781480fcca58d25",
+    "device": "cpu",
+    "dtype": "float32",
+    "compared_existing_cpu_outputs": [
+      {
+        "field": "Task",
+        "original": "Named Entity Recognition",
+        "selected": "Named Entity Recognition (NER)",
+        "prior_score": 0.9120997786521912,
+        "actual_score": 0.9120995402336121,
+        "absolute_delta": 2.384185791015625e-07
+      },
+      {
+        "field": "Dataset",
+        "original": "ON5E",
+        "selected": "BC5CDR",
+        "prior_score": 0.6158419847488403,
+        "actual_score": 0.6158420443534851,
+        "absolute_delta": 5.960464477539063e-08
+      },
+      {
+        "field": "Metric",
+        "original": "F1 score",
+        "selected": "F1",
+        "prior_score": 0.8164787888526917,
+        "actual_score": 0.8164786696434021,
+        "absolute_delta": 1.1920928955078125e-07
+      }
+    ],
+    "seconds": 9.797970965504646
+  },
+  "official_fixed42_evaluations_checked": [
+    "gpt41_fully_cs",
+    "gpt41_fully_llm",
+    "gpt41_partially_stage1",
+    "gpt41_partially_stage2",
+    "llama3_fully_cs",
+    "llama3_fully_llm",
+    "llama3_partially_stage1",
+    "llama3_partially_stage2"
+  ],
+  "no_automatic_generation_retry": true,
+  "original_gold_prompt_source_unchanged": true,
+  "full_dependency_freeze_verification": {
+    "status": "PASS",
+    "full_dependency_freeze_unchanged": true,
+    "packages": 122,
+    "baseline_freeze_sha256": "f0756a574c6b537d77a9e77c2f641dc9c3428a0f6cade140d122c8192785f018",
+    "actual_freeze_sha256": "f0756a574c6b537d77a9e77c2f641dc9c3428a0f6cade140d122c8192785f018",
+    "python": "3.10.8 (main, Nov 24 2022, 14:13:03) [GCC 11.2.0]",
+    "executable": "/root/autodl-tmp/scilead/envs/llama/bin/python"
+  },
+  "all_42_pipeline_prefix_removals_verified": true,
+  "remote_artifact_transfer_sha256_matches": 6962
+}

@@ -1,0 +1,40 @@
+{
+  "experiment": "AxCell Extraction + GPT-4.1 Fully Normalization",
+  "model": "gpt-4.1-2025-04-14",
+  "base_url": "https://9527.codes/v1",
+  "temperature": 0,
+  "seed": 0,
+  "stream": false,
+  "max_retries": 0,
+  "client_output_limit": "OMITTED",
+  "omitted_fields": [
+    "max_tokens",
+    "max_completion_tokens",
+    "max_output_tokens",
+    "response_format",
+    "tools"
+  ],
+  "is_few_shot": false,
+  "model_type_compatibility_branch": "gpt4-turbo-128k",
+  "python_hash_seed": 0,
+  "timeout_seconds": {
+    "connect": 20,
+    "read": 180,
+    "write": 30,
+    "pool": 20
+  },
+  "candidate_counts": {
+    "Task": 23,
+    "Dataset": 71,
+    "Metric": 26
+  },
+  "official_source_commit": "8bf74b0a830feb7035c6166dce3394dc344ae532",
+  "gold_sha256": "603dd077ae174e4beefc24a9a73b7436e1e3cb6c9aaee042adc4d4aa5ea75aaf",
+  "prompts_file_sha256": "72983f27f184aa565afcf676e7bef32dc782c9d3d055c949a790c0d594152629",
+  "system_prompt_sha256": "f7c9e48393191c058e4b75f281b05e94cc9008dcac3f7ddbfc376b6ea4716a3d",
+  "candidate_serialization_sha256": "4b2c97e18853a4c436dd800fa21acf8b9266087668d12c46b6dc9cfc99bed1dc",
+  "official_cache": false,
+  "checkpoint_reuse": "same AxCell paper, record index, field, source input hash and complete identical payload only; never reuse other experiments or deduplicate equal field names",
+  "response_handling": "exact response string membership; outside set maps to null; no strip/quote removal/manual mapping; non-stop finish or HTTP failure is incomplete and never auto-retried",
+  "authorization": "P4_PREPARATION_ONLY_ZERO_PAID_CALLS"
+}

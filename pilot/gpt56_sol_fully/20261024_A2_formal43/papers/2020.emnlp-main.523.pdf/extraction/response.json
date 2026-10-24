@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231758264896848438268d9d6NhzJH4lx",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792778306,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Entity typing\",\"Dataset\":\"Open Entity\",\"Metric\":\"Test Precision\",\"Result\":\"79.9\"},{\"Task\":\"Entity typing\",\"Dataset\":\"Open Entity\",\"Metric\":\"Test Recall\",\"Result\":\"76.6\"},{\"Task\":\"Entity typing\",\"Dataset\":\"Open Entity\",\"Metric\":\"Test F1\",\"Result\":\"78.2\"},{\"Task\":\"Relation classification\",\"Dataset\":\"TACRED\",\"Metric\":\"Test Precision\",\"Result\":\"70.4\"},{\"Task\":\"Relation classification\",\"Dataset\":\"TACRED\",\"Metric\":\"Test Recall\",\"Result\":\"75.1\"},{\"Task\":\"Relation classification\",\"Dataset\":\"TACRED\",\"Metric\":\"Test F1\",\"Result\":\"72.7\"},{\"Task\":\"Named entity recognition\",\"Dataset\":\"CoNLL-2003\",\"Metric\":\"Test F1\",\"Result\":\"94.3\"},{\"Task\":\"Cloze-style question answering\",\"Dataset\":\"ReCoRD\",\"Metric\":\"Development Exact Match\",\"Result\":\"90.8\"},{\"Task\":\"Cloze-style question answering\",\"Dataset\":\"ReCoRD\",\"Metric\":\"Development F1\",\"Result\":\"91.4\"},{\"Task\":\"Cloze-style question answering\",\"Dataset\":\"ReCoRD\",\"Metric\":\"Test Exact Match\",\"Result\":\"90.6\"},{\"Task\":\"Cloze-style question answering\",\"Dataset\":\"ReCoRD\",\"Metric\":\"Test F1\",\"Result\":\"91.2\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"Development Exact Match\",\"Result\":\"89.8\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"Development F1\",\"Result\":\"95.0\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"Test Exact Match\",\"Result\":\"90.2\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"Test F1\",\"Result\":\"95.4\"}]",
+        "reasoning_content": "**Parsing tables and metrics**\n\nI need to parse the tables for the proposed LUKE results. Each dataset must be distinguished between training and testing, especially with any malformed ordering. For instance, the first table has specific results for LUKE—P79.9, R76.6, F178.2. The second table appears to have P75.1 and R72.7. \n\nI need to inspect formats closely for rows that include BERT, C-GCN, and ERNIE, among others. I’ll need to reconstruct and clarify each value accurately, especially regarding their development and test metrics.\n\n**Checking LUKE values**\n\nIt looks like I need to clarify the LUKE values from the ACL paper, specifically for the ReCoRD dataset. The known results show that for development, it's 90.8 for EM and 91.4 for F1; while for testing, it appears to be around 90.6 for EM and 91.2 for F1. I'm thinking the extraction process may have shifted some column values. I should confirm the table structure is correct, likely with columns representing Dev EM, F1, and Test EM, F1."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3495,
+    "completion_tokens": 1165,
+    "total_tokens": 4660,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 4660,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 3495,
+        "output_tokens": 1165,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 3492,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 778
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3492,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 3495,
+    "output_tokens": 1165,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

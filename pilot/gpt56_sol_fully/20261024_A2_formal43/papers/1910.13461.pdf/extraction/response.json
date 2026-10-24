@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231804091211659258268d9d6R2yMV6Ut",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792778649,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"Exact Match (EM)\",\"Result\":\"88.8\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"F1\",\"Result\":\"94.6\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 2.0\",\"Metric\":\"Exact Match (EM)\",\"Result\":\"86.1\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD 2.0\",\"Metric\":\"F1\",\"Result\":\"89.2\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"MNLI matched\",\"Metric\":\"Accuracy\",\"Result\":\"89.9\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"MNLI mismatched\",\"Metric\":\"Accuracy\",\"Result\":\"90.1\"},{\"Task\":\"Sentiment classification\",\"Dataset\":\"SST-2\",\"Metric\":\"Accuracy\",\"Result\":\"96.6\"},{\"Task\":\"Paraphrase detection\",\"Dataset\":\"QQP\",\"Metric\":\"Accuracy\",\"Result\":\"92.5\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"QNLI\",\"Metric\":\"Accuracy\",\"Result\":\"94.9\"},{\"Task\":\"Semantic textual similarity\",\"Dataset\":\"STS-B\",\"Metric\":\"Correlation\",\"Result\":\"91.2\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"RTE\",\"Metric\":\"Accuracy\",\"Result\":\"87.0\"},{\"Task\":\"Paraphrase detection\",\"Dataset\":\"MRPC\",\"Metric\":\"Accuracy\",\"Result\":\"90.4\"},{\"Task\":\"Linguistic acceptability classification\",\"Dataset\":\"CoLA\",\"Metric\":\"Matthews correlation\",\"Result\":\"62.8\"},{\"Task\":\"Text summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-1\",\"Result\":\"44.16\"},{\"Task\":\"Text summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-2\",\"Result\":\"21.28\"},{\"Task\":\"Text summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-L\",\"Result\":\"40.90\"},{\"Task\":\"Abstractive text summarization\",\"Dataset\":\"XSum\",\"Metric\":\"ROUGE-1\",\"Result\":\"45.14\"},{\"Task\":\"Abstractive text summarization\",\"Dataset\":\"XSum\",\"Metric\":\"ROUGE-2\",\"Result\":\"22.27\"},{\"Task\":\"Abstractive text summarization\",\"Dataset\":\"XSum\",\"Metric\":\"ROUGE-L\",\"Result\":\"37.25\"},{\"Task\":\"Conversational response generation\",\"Dataset\":\"ConvAI2\",\"Metric\":\"Validation F1\",\"Result\":\"20.72\"},{\"Task\":\"Conversational response generation\",\"Dataset\":\"ConvAI2\",\"Metric\":\"Validation perplexity\",\"Result\":\"11.85\"},{\"Task\":\"Long-form abstractive question answering\",\"Dataset\":\"ELI5\",\"Metric\":\"ROUGE-1\",\"Result\":\"30.6\"},{\"Task\":\"Long-form abstractive question answering\",\"Dataset\":\"ELI5\",\"Metric\":\"ROUGE-2\",\"Result\":\"6.2\"},{\"Task\":\"Long-form abstractive question answering\",\"Dataset\":\"ELI5\",\"Metric\":\"ROUGE-L\",\"Result\":\"24.3\"},{\"Task\":\"Machine translation\",\"Dataset\":\"WMT16 Romanian-English (RO-EN)\",\"Metric\":\"BLEU\",\"Result\":\"37.96\"}]",
+        "reasoning_content": "**Extracting method data**\n\nI need to focus on extracting the best proposed methods, likely using large-scale tables. I should have tuples for each metric or dataset, especially the BART results. For Table 1, I'm considering including only the best results obtained by the proposed methods, including the best BART variant per dataset and metric. However, I need to be careful of duplicating large model data. My main task involves final results in Tables 2-6, particularly noting the tricky parsing for dataset columns in Table 2.\n\n**Analyzing GLUE table data**\n\nThe standard GLUE table in the BART paper likely includes columns for MNLI, SST, QQP, QNLI, STS-B, MRPC, RTE, and CoLA. I want to confirm the known BART results: MNLI at 89.9/90.1, SST at 96.6, QQP at 92.5, QNLI at 94.9, STS-B at 91.2, and MRPC at 90.4. The sequence of values looks like it includes Pearson for STS-B and F1 for MRPC, with RTE accuracy at 90.4 and CoLA Matthews score at 62.8."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3329,
+    "completion_tokens": 2199,
+    "total_tokens": 5528,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 5528,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 3329,
+        "output_tokens": 2199,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 3326,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 1552
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3326,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 3329,
+    "output_tokens": 2199,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

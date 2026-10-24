@@ -1,0 +1,57 @@
+{
+  "name": "AxCell stage3 controlled resume; original extraction unchanged",
+  "axcell_commit": "f4648d8fee1aa8482d007a38828da9dc06630f0e",
+  "scilead_commit": "8bf74b0a830feb7035c6166dce3394dc344ae532",
+  "official_entrypoint": "ResultsExtractor(models)(paper,in_place=True)",
+  "single_adapter_sha256": "074537f9041a8acff837c2a320c5f097c4b41e782a9d63bd3dd8ff36815ae27b",
+  "thresholds": [
+    0.8,
+    0.85
+  ],
+  "use_crf": false,
+  "cpu": true,
+  "serial": true,
+  "es_policy": "Independent empty initial ES index per paper, same as verified single-paper setup; original paper_limit=30,corpus_limit=10 unchanged. Author corpus not established.",
+  "es_image": "docker.elastic.co/elasticsearch/elasticsearch-oss@sha256:a0115e92049eae8a83d89f119c23b69720f2e94af7bf97d170b7316eb0a6ff5b",
+  "worker_memory_hard_gib": 18,
+  "worker_memory_early_stop_gib": 14,
+  "es_memory_hard_gib": 3,
+  "es_memory_early_stop_gib": 2.4,
+  "start_mem_available_min_gib": 6,
+  "run_mem_available_stop_gib": 4,
+  "disk_reserve_gib": 20,
+  "sampling_seconds": 2,
+  "stop_grace_seconds": 2,
+  "wall_time_limit_seconds": 3600,
+  "no_progress_memory_growth": "LOG_ONLY: sparse stage events and normal allocations do not stop work; absolute thresholds remain",
+  "new_oom_stops_batch": true,
+  "preexisting_kernel_oom_count": 1,
+  "max_attempts_per_new_paper": 1,
+  "new_extraction_count": 34,
+  "runnable_count": 37,
+  "excluded_parse_failed": [
+    "1905.03197.pdf",
+    "2203.16804.pdf"
+  ],
+  "author36_membership": "UNVERIFIED",
+  "api_calls_authorized": 0,
+  "normalization_authorized": false,
+  "evaluation_authorized": false,
+  "queue_sha256": "44d1307677942bd8c9e1a84a39855dab409bd1b6d1e44d44cccb4f2c88ae7306",
+  "remote_before_sha256": "c716b25023d55935014a3af0107b23f427f345956c7bc34d166ddd60b09eb3e4",
+  "scripts": {
+    "controller.py": "3d8ada43ce4c61fb1f5beb3d2d5ca675e6f738abbde8599d01786d46c36de9c5",
+    "worker.py": "2821aa13ef8935185b9300310e143126be32b1a0046581138aab871867c81db7",
+    "policy.py": "0523023079ab6ccfbfe49f37204a92a58ecf689f1cdb2ab65d47fce5d0073c5e",
+    "test_policy.py": "097a8d8a29cad7f93ee73bd49301910c10f48d7187497e2db3cf6a7a048dafc1"
+  },
+  "reused_papers": [
+    "1911.10390.pdf",
+    "2001.04063.pdf",
+    "1511.08308.pdf"
+  ],
+  "authorized_retry": "1912.08777.pdf",
+  "new_unstarted": 33,
+  "prior_attempts_preserved": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_stage3",
+  "cpu_accounting": "cgroup cpu.stat usage_usec sampled"
+}

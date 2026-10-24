@@ -1,0 +1,41 @@
+{
+  "stage": 0,
+  "state": "P0_AWAITING_USER_CONFIRMATION",
+  "allowed_current_actions": [
+    "read-only audits",
+    "new local stage-0 reports"
+  ],
+  "phase1_authorized": false,
+  "batch_parse_authorized": false,
+  "batch_extraction_authorized": false,
+  "paid_api_authorized": false,
+  "next_stage_if_P0_confirmed": "stage 1: existing single-paper regression only; no new model generation",
+  "gates": [
+    {
+      "id": "P0",
+      "requires_explicit_user_confirmation": true,
+      "authorizes_only_next_stage": true
+    },
+    {
+      "id": "P1",
+      "requires_explicit_user_confirmation": true,
+      "authorizes_only_next_stage": true
+    },
+    {
+      "id": "P2",
+      "requires_explicit_user_confirmation": true,
+      "authorizes_only_next_stage": true
+    },
+    {
+      "id": "P3",
+      "requires_explicit_user_confirmation": true,
+      "authorizes_only_next_stage": true
+    },
+    {
+      "id": "P4",
+      "requires_explicit_user_confirmation": true,
+      "authorizes_only_next_stage": true
+    }
+  ],
+  "unknown_author36_scope_requires_user_decision": true
+}

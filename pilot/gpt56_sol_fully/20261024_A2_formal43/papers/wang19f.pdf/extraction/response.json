@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231810426191120888268d9d624zeaoOM",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792779042,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Neural language modeling\",\"Dataset\":\"Penn Treebank (PTB)\",\"Metric\":\"Validation perplexity\",\"Result\":\"46.63\"},{\"Task\":\"Neural language modeling\",\"Dataset\":\"Penn Treebank (PTB)\",\"Metric\":\"Test perplexity\",\"Result\":\"46.01\"},{\"Task\":\"Neural language modeling\",\"Dataset\":\"WikiText-2 (WT2)\",\"Metric\":\"Validation perplexity\",\"Result\":\"40.27\"},{\"Task\":\"Neural language modeling\",\"Dataset\":\"WikiText-2 (WT2)\",\"Metric\":\"Test perplexity\",\"Result\":\"38.65\"},{\"Task\":\"Neural language modeling\",\"Dataset\":\"WikiText-103 (WT103)\",\"Metric\":\"Validation perplexity\",\"Result\":\"27.2\"},{\"Task\":\"Neural language modeling\",\"Dataset\":\"WikiText-103 (WT103)\",\"Metric\":\"Test perplexity\",\"Result\":\"28.0\"},{\"Task\":\"English-to-German neural machine translation\",\"Dataset\":\"WMT2014 En-De\",\"Metric\":\"BLEU\",\"Result\":\"29.52\"},{\"Task\":\"German-to-English neural machine translation\",\"Dataset\":\"IWSLT2014 De-En\",\"Metric\":\"BLEU\",\"Result\":\"35.18\"}]",
+        "reasoning_content": "**Extracting performance metrics**\n\nI need to extract the best proposed metrics for each task and dataset. It seems there might be some validation or testing components as separate tuples. The PTB table isn’t clearly labeled, but I think the first table before Table 2 is probably PTB. I see indications that the best validation and test results are 46.63 and 46.01 respectively for PTB. For WT2, the best results are 40.27 for validation and 38.65 for testing. I should clarify the dataset names and metrics in JSON format."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2812,
+    "completion_tokens": 432,
+    "total_tokens": 3244,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 3244,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 2812,
+        "output_tokens": 432,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 2809,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 185
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 2809,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 2812,
+    "output_tokens": 432,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

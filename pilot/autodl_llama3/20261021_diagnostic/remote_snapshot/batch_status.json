@@ -1,0 +1,96 @@
+{
+  "status": "DIAGNOSTIC_COMPLETE_FORMAL_BLOCKED",
+  "formal_started": false,
+  "paid_api_calls": 0,
+  "papers": [
+    {
+      "paper_id": "D18-1105.pdf",
+      "generation_status": "COMPLETE",
+      "parse_status": "COMPLETE",
+      "normalization_status": "BLOCKED",
+      "evaluation_status": "BLOCKED",
+      "exit_code": 0,
+      "wall_seconds": 76.60607481747866,
+      "usage": {
+        "response_sha256": "6f3c074e2b84cfa188784c7df871565c03e01745ddeeadeae38705fa6d744439",
+        "seconds": 71.09323383122683,
+        "actual_generation": {
+          "input_tokens": 1460,
+          "output_tokens": 62,
+          "generation_seconds": 8.032761380076408,
+          "peak_allocated_bytes": 49011828736,
+          "peak_reserved_bytes": 49815748608,
+          "finish_reason": "eos",
+          "last_token_id": 128009
+        },
+        "input_tokens_tokenizer_precheck": 1460,
+        "process_peak_rss_bytes": 6154964992
+      },
+      "original_adapter_validation": {
+        "valid": true,
+        "records": 2
+      }
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "generation_status": "COMPLETE",
+      "parse_status": "FAILED",
+      "normalization_status": "BLOCKED",
+      "evaluation_status": "BLOCKED",
+      "exit_code": 1,
+      "wall_seconds": 105.83210664987564,
+      "usage": {
+        "response_sha256": "9388fa5376b184caa2d82204b2d5fd788c9783412b304c8b711f78a7082859fd",
+        "seconds": 100.16512225568295,
+        "actual_generation": {
+          "input_tokens": 4038,
+          "output_tokens": 482,
+          "generation_seconds": 53.55202788859606,
+          "peak_allocated_bytes": 52113553920,
+          "peak_reserved_bytes": 53175386112,
+          "finish_reason": "eos",
+          "last_token_id": 128009
+        },
+        "input_tokens_tokenizer_precheck": 4038,
+        "process_peak_rss_bytes": 6812078080
+      },
+      "original_adapter_validation": {
+        "valid": false,
+        "records": null,
+        "reason": "JSON_PARSE_FAILED"
+      }
+    },
+    {
+      "paper_id": "1511.08308.pdf",
+      "generation_status": "COMPLETE",
+      "parse_status": "FAILED",
+      "normalization_status": "BLOCKED",
+      "evaluation_status": "BLOCKED",
+      "exit_code": 1,
+      "wall_seconds": 117.37329137325287,
+      "usage": {
+        "response_sha256": "5cfef133699ca11e3b6f59aee5a43201163abcc9d6b9b4c3422f3c605dbfdeff",
+        "seconds": 111.32921479642391,
+        "actual_generation": {
+          "input_tokens": 4661,
+          "output_tokens": 445,
+          "generation_seconds": 51.50663536041975,
+          "peak_allocated_bytes": 52855478784,
+          "peak_reserved_bytes": 54387539968,
+          "finish_reason": "eos",
+          "last_token_id": 128009
+        },
+        "input_tokens_tokenizer_precheck": 4661,
+        "process_peak_rss_bytes": 6153207808
+      },
+      "original_adapter_validation": {
+        "valid": false,
+        "records": null,
+        "reason": "JSON_PARSE_FAILED"
+      }
+    }
+  ],
+  "seconds": 299.90236835181713,
+  "actual_generation_calls": 3,
+  "final_gpu": "0 MiB, 81153 MiB"
+}

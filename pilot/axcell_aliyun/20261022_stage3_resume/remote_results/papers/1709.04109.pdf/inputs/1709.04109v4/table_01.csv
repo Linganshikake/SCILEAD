@@ -1,0 +1,12 @@
+<bold>x</bold>,word-level input,<italic>xi</italic>,<italic>i</italic>-th word
+<bold>c</bold>,character-level input,"<italic>ci</italic>,<italic>j</italic>",<italic>j</italic>-th char in <italic>xi</italic>
+"<italic>ci</italic>,_",space after <italic>xi</italic>,"<italic>c</italic>0,_",space before <italic>x</italic>1
+<bold>y</bold>,label sequence,<italic>yi</italic>,label of <italic>xi</italic>
+<bold>f</bold><italic>i</italic>,"output of forward character-level LSTM at <italic>ci</italic>,_","output of forward character-level LSTM at <italic>ci</italic>,_","output of forward character-level LSTM at <italic>ci</italic>,_"
+<bold>r</bold><italic>i</italic>,"output of backward character-level LSTM at <italic>ci</italic>,_","output of backward character-level LSTM at <italic>ci</italic>,_","output of backward character-level LSTM at <italic>ci</italic>,_"
+<bold>fL</bold><italic>i</italic>,output of forward-to-LM highway unit,output of forward-to-LM highway unit,output of forward-to-LM highway unit
+<bold>rL</bold><italic>i</italic>,output of backward-to-LM highway unit,output of backward-to-LM highway unit,output of backward-to-LM highway unit
+<bold>fN</bold><italic>i</italic>,output of forward-to-SL highway unit,output of forward-to-SL highway unit,output of forward-to-SL highway unit
+<bold>rN</bold><italic>i</italic>,output of backward-to-SL highway unit,output of backward-to-SL highway unit,output of backward-to-SL highway unit
+<bold>v</bold><italic>i</italic>,input of word-level bi-LSTM at <italic>xi</italic>,input of word-level bi-LSTM at <italic>xi</italic>,input of word-level bi-LSTM at <italic>xi</italic>
+<bold>z</bold><italic>i</italic>,output of word-level bi-LSTM at <italic>xi</italic>,output of word-level bi-LSTM at <italic>xi</italic>,output of word-level bi-LSTM at <italic>xi</italic>

@@ -1,0 +1,259 @@
+{
+  "Id": "dfa08b7a93280c97d29f411d27742028c407b948c7bd3f5c6a00e22b85404b75",
+  "Created": "2026-10-22T11:00:30.784232156Z",
+  "Path": "elasticsearch",
+  "Args": [
+    "-Ehttp.port=9200",
+    "-Etransport.host=localhost",
+    "-Ehttp.host=0.0.0.0",
+    "-Ebootstrap.system_call_filter=false",
+    "-Ehttp.cors.enabled=true",
+    "-Ehttp.cors.allow-origin=*",
+    "-Ehttp.cors.allow-headers=*",
+    "-Ehttp.cors.allow-credentials=true"
+  ],
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 101702,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-22T11:00:30.817507983Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "Image": "sha256:a0115e92049eae8a83d89f119c23b69720f2e94af7bf97d170b7316eb0a6ff5b",
+  "ResolvConfPath": "/var/lib/docker/containers/dfa08b7a93280c97d29f411d27742028c407b948c7bd3f5c6a00e22b85404b75/resolv.conf",
+  "HostnamePath": "/var/lib/docker/containers/dfa08b7a93280c97d29f411d27742028c407b948c7bd3f5c6a00e22b85404b75/hostname",
+  "HostsPath": "/var/lib/docker/containers/dfa08b7a93280c97d29f411d27742028c407b948c7bd3f5c6a00e22b85404b75/hosts",
+  "LogPath": "/var/lib/docker/containers/dfa08b7a93280c97d29f411d27742028c407b948c7bd3f5c6a00e22b85404b75/dfa08b7a93280c97d29f411d27742028c407b948c7bd3f5c6a00e22b85404b75-json.log",
+  "Name": "/axcell-stage3-es-3c6358fbba37454887a487c4557ee31a",
+  "RestartCount": 0,
+  "Driver": "overlayfs",
+  "Platform": "linux",
+  "MountLabel": "",
+  "ProcessLabel": "",
+  "AppArmorProfile": "docker-default",
+  "ExecIDs": null,
+  "HostConfig": {
+    "Binds": null,
+    "ContainerIDFile": "",
+    "LogConfig": {
+      "Type": "json-file",
+      "Config": {
+        "max-file": "3",
+        "max-size": "20m"
+      }
+    },
+    "NetworkMode": "bridge",
+    "PortBindings": {
+      "9200/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "9200"
+        }
+      ]
+    },
+    "RestartPolicy": {
+      "Name": "no",
+      "MaximumRetryCount": 0
+    },
+    "AutoRemove": false,
+    "VolumeDriver": "",
+    "VolumesFrom": null,
+    "ConsoleSize": [
+      0,
+      0
+    ],
+    "CapAdd": null,
+    "CapDrop": null,
+    "CgroupnsMode": "private",
+    "Dns": null,
+    "DnsOptions": [],
+    "DnsSearch": [],
+    "ExtraHosts": null,
+    "GroupAdd": null,
+    "IpcMode": "private",
+    "Cgroup": "",
+    "Links": null,
+    "OomScoreAdj": 0,
+    "PidMode": "",
+    "Privileged": false,
+    "PublishAllPorts": false,
+    "ReadonlyRootfs": false,
+    "SecurityOpt": null,
+    "UTSMode": "",
+    "UsernsMode": "",
+    "ShmSize": 67108864,
+    "Runtime": "runc",
+    "Isolation": "",
+    "CpuShares": 0,
+    "Memory": 3221225472,
+    "NanoCpus": 2000000000,
+    "CgroupParent": "",
+    "BlkioWeight": 0,
+    "BlkioWeightDevice": [],
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "BlkioDeviceReadIOps": [],
+    "BlkioDeviceWriteIOps": [],
+    "CpuPeriod": 0,
+    "CpuQuota": 0,
+    "CpuRealtimePeriod": 0,
+    "CpuRealtimeRuntime": 0,
+    "CpusetCpus": "",
+    "CpusetMems": "",
+    "Devices": [],
+    "DeviceCgroupRules": null,
+    "DeviceRequests": null,
+    "MemoryReservation": 0,
+    "MemorySwap": 3221225472,
+    "MemorySwappiness": null,
+    "OomKillDisable": null,
+    "PidsLimit": null,
+    "Ulimits": null,
+    "CpuCount": 0,
+    "CpuPercent": 0,
+    "IOMaximumIOps": 0,
+    "IOMaximumBandwidth": 0,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/root/scilead/axcell/runs/20261022_stage3_resume/papers/1702.02098.pdf/es_data",
+        "Target": "/usr/share/elasticsearch/data"
+      }
+    ],
+    "MaskedPaths": [
+      "/proc/acpi",
+      "/proc/asound",
+      "/proc/interrupts",
+      "/proc/kcore",
+      "/proc/keys",
+      "/proc/latency_stats",
+      "/proc/sched_debug",
+      "/proc/scsi",
+      "/proc/timer_list",
+      "/proc/timer_stats",
+      "/sys/devices/virtual/powercap",
+      "/sys/firmware"
+    ],
+    "ReadonlyPaths": [
+      "/proc/bus",
+      "/proc/fs",
+      "/proc/irq",
+      "/proc/sys",
+      "/proc/sysrq-trigger"
+    ]
+  },
+  "Storage": {
+    "RootFS": {
+      "Snapshot": {
+        "Name": "overlayfs"
+      }
+    }
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/root/scilead/axcell/runs/20261022_stage3_resume/papers/1702.02098.pdf/es_data",
+      "Destination": "/usr/share/elasticsearch/data",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    }
+  ],
+  "Config": {
+    "Hostname": "dfa08b7a9328",
+    "Domainname": "",
+    "User": "elasticsearch",
+    "AttachStdin": false,
+    "AttachStdout": false,
+    "AttachStderr": false,
+    "ExposedPorts": {
+      "9200/tcp": {},
+      "9300/tcp": {}
+    },
+    "Tty": false,
+    "OpenStdin": false,
+    "StdinOnce": false,
+    "Env": [
+      "ES_JAVA_OPTS=-Xms1g -Xmx1g",
+      "PATH=/usr/share/elasticsearch/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "ELASTIC_CONTAINER=true",
+      "JAVA_HOME=/opt/jdk-12"
+    ],
+    "Cmd": [
+      "-Ehttp.port=9200",
+      "-Etransport.host=localhost",
+      "-Ehttp.host=0.0.0.0",
+      "-Ebootstrap.system_call_filter=false",
+      "-Ehttp.cors.enabled=true",
+      "-Ehttp.cors.allow-origin=*",
+      "-Ehttp.cors.allow-headers=*",
+      "-Ehttp.cors.allow-credentials=true"
+    ],
+    "Image": "sha256:a0115e92049eae8a83d89f119c23b69720f2e94af7bf97d170b7316eb0a6ff5b",
+    "Volumes": null,
+    "WorkingDir": "/usr/share/elasticsearch",
+    "Entrypoint": [
+      "elasticsearch"
+    ],
+    "Labels": {
+      "license": "Apache-2.0",
+      "org.label-schema.build-date": "20190305",
+      "org.label-schema.license": "GPLv2",
+      "org.label-schema.name": "elasticsearch",
+      "org.label-schema.schema-version": "1.0",
+      "org.label-schema.url": "https://www.elastic.co/products/elasticsearch",
+      "org.label-schema.vcs-url": "https://github.com/elastic/elasticsearch",
+      "org.label-schema.vendor": "Elastic",
+      "org.label-schema.version": "6.7.1",
+      "scilead.attempt": "3c6358fbba37454887a487c4557ee31a",
+      "scilead.task": "axcell-stage3-resume-20261022"
+    }
+  },
+  "NetworkSettings": {
+    "SandboxID": "86afc8f3df0308512a46eb96c967e675e1437d1f87dcbf4edba2fc8085ac3baf",
+    "SandboxKey": "/var/run/docker/netns/86afc8f3df03",
+    "Ports": {
+      "9200/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "9200"
+        }
+      ],
+      "9300/tcp": null
+    },
+    "Networks": {
+      "bridge": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": null,
+        "DriverOpts": null,
+        "GwPriority": 0,
+        "NetworkID": "1eca94b99cf825b7ed985f840a818d4c6cc34147f0cd118c7b88cdce9446be2a",
+        "EndpointID": "c7daf83e9e2e412e78a9c5dd1d9d84e40d1ca1e5f6f4e2ed062df8e9e1bb0f13",
+        "Gateway": "172.17.0.1",
+        "IPAddress": "172.17.0.2",
+        "MacAddress": "46:a7:f5:e8:d6:fb",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "DNSNames": null
+      }
+    }
+  },
+  "ImageManifestDescriptor": {
+    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+    "digest": "sha256:a0115e92049eae8a83d89f119c23b69720f2e94af7bf97d170b7316eb0a6ff5b",
+    "size": 1790,
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  }
+}

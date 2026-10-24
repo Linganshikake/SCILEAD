@@ -1,10 +1,14 @@
-# SCILEAD：GPT-4.1 实验复现记录
+# SCILEAD：实验复现与结果归档
+
+**最新结果入口（2026-10-24）：[完整实验指标与报告汇总](results/README.md)**。包含各实验 T/D/M/R IIM、TDM/TDMR 的 P/R/F1，以及排行榜 PC、RC、RBO、已有 LR/AO；[JSON](results/metrics_summary.json) 与 [CSV](results/tuple_metrics.csv) 可下载。
+
+本次新增 Llama-3 70B 正式42篇及V2恢复、AxCell + GPT-4.1 的37篇完整流程、GPT-5.6 Sol Fully LLM 的43篇恢复版。Llama-2及未完成的共同16篇标准化任务暂不发布。不同论文范围和生成配置必须结合报告阅读，不能把全部结果当作同范围排名。
 
 本仓库保存 EMNLP 2024 论文 [Efficient Performance Tracking: Leveraging Large Language Models for Automated Construction of Scientific Leaderboards](https://aclanthology.org/2024.emnlp-main.453/) 的本地复现实验代码、配置、模型输出和评价记录。
 
 上游作者仓库：[UKPLab/emnlp2024-leaderboard-generation](https://github.com/UKPLab/emnlp2024-leaderboard-generation)。本项目保留上游 commit `8bf74b0a830feb7035c6166dce3394dc344ae532` 的源码，独立实验编排和接口适配位于 `pilot/` 中。
 
-这里的模型是 **`gpt-4.1-2025-04-14`**，不是原论文的 GPT-4 Turbo。实验记录包含接口、输出 Token 配置和运行历史差异，不能把本仓库结果直接称为原论文报告的分数。
+GPT-4.1 系列使用 **`gpt-4.1-2025-04-14`**，不是原论文的 GPT-4 Turbo。新增实验分别使用原版 Llama-3 70B、本地 AxCell 抽取与 GPT-4.1 标准化、服务商标识 `gpt-5.6-sol`。各实验记录包含接口、输出 Token 配置和运行历史差异，不能把本仓库结果直接称为原论文报告的分数。
 
 ## 实验入口
 
@@ -18,6 +22,9 @@
 | Few-shot Extraction + Zero-shot Normalization | [full43_fewshot/report.md](pilot/full43_fewshot/report.md) |
 | 作者完整 Few-shot Prompt 分支 | [full43_fewshot_both_prompts/report.md](pilot/full43_fewshot_both_prompts/report.md) |
 | threshold=2 数据审计与准备，正式实验受阻 | [threshold2_preparation/report.md](pilot/threshold2_preparation/report.md) |
+| Llama-3 70B，V2格式恢复后的四组设置 | [V1/V2指标对照](pilot/autodl_llama3/20261021_format_followup/format_v2/comparison_v1_v2.md) · [总报告](pilot/autodl_llama3/20261021_format_followup/reports/run_report.md) |
+| AxCell Extraction + GPT-4.1 Fully Normalization | [P5完整报告](pilot/axcell_aliyun/20261022_stage5/final_axcell_report.md) |
+| GPT-5.6 Sol Fully LLM，43篇Result类型恢复版 | [完整报告](pilot/gpt56_sol_fully/20261024_A2_result_type_recovery/report.md) |
 
 统一无客户端输出上限的 Fully Zero-shot Baseline 覆盖 **43 篇论文、295 条 Gold TDMR**，产生 284 条原始预测；官方逐篇 Macro P/R 对应的 TDMR F1 为 **0.421578**。完整指标、严格数值辅助指标和逐篇错误分析以相应目录的 JSON 与报告为准。F1 由聚合后的 P/R 计算，与逐篇 F1 的算术平均不同。
 
@@ -35,6 +42,8 @@ constraints-*.txt               依赖约束
 scilead-*-freeze.txt            实际安装版本
 PUBLICATION.md                  本次 GitHub 上传范围与完整性说明
 publication_manifest.json       已发布本地文件的相对路径、大小与 SHA256
+results/                        最新完整指标汇总、CSV、JSON与报告索引
+publications/20261024/           本次增量归档清单及核验
 ```
 
 ## 复现环境与阅读顺序

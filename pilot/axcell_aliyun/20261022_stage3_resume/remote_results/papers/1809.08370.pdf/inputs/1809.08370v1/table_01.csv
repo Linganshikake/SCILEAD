@@ -1,0 +1,25 @@
+,,,,,,,,
+2*Method,CCG,Chunk,NER,FGN,POS,Dep. Parse,Dep. Parse,Translate
+,Acc.,F1,F1,F1,Acc.,UAS,LAS,BLEU
+,,,,,,,,
+Shortcut LSTM Wu et al. (<ref id='bib-bib83'>2017</ref>),95.1,,,,97.53,,,
+ID-CNN-CRF Strubell et al. (<ref id='bib-bib73'>2017</ref>),,,90.7,86.8,,,,
+JMT† Hashimoto et al. (<ref id='bib-bib18'>2017</ref>),,95.8,,,97.55,94.7,92.9,
+TagLM* Peters et al. (<ref id='bib-bib58'>2017</ref>),,96.4,91.9,,,,,
+ELMo* Peters et al. (<ref id='bib-bib59'>2018</ref>),,,92.2,,,,,
+,,,,,,,,
+Biaffine Dozat and Manning (<ref id='bib-bib15'>2017</ref>),,,,,,95.7,94.1,
+Stack Pointer Ma et al. (<ref id='bib-bib46'>2018</ref>),,,,,,95.9,94.2,
+,,,,,,,,
+Stanford Luong and Manning (<ref id='bib-bib42'>2015</ref>),,,,,,,,23.3
+Google Luong et al. (<ref id='bib-bib40'>2017</ref>),,,,,,,,26.1
+,,,,,,,,
+Supervised,94.9,95.1,91.2,87.5,97.60,95.1,93.3,28.9
+Virtual Adversarial Training*,95.1,95.1,91.8,87.9,97.64,95.4,93.7,–
+Word Dropout*,95.2,95.8,92.1,88.1,97.66,95.6,93.8,29.3
+ELMo (our implementation)*,95.8,96.5,92.2,88.5,97.72,96.2,94.4,29.3
+ELMo + Multi-task*†,95.9,96.8,92.3,88.4,<bold>97.79</bold>,96.4,94.8,–
+CVT*,95.7,96.6,92.3,88.7,97.70,95.9,94.1,<bold>29.6</bold>
+CVT + Multi-task*†,96.0,96.9,92.4,88.4,97.76,96.4,94.8,–
+CVT + Multi-task + Large*†,<bold>96.1</bold>,<bold>97.0</bold>,<bold>92.6</bold>,<bold>88.8</bold>,97.74,<bold>96.6</bold>,<bold>95.0</bold>,–
+,,,,,,,,

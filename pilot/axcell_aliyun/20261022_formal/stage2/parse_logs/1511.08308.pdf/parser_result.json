@@ -1,0 +1,209 @@
+{
+  "paper_id": "1511.08308.pdf",
+  "title": "Named Entity Recognition with Bidirectional LSTM-CNNs",
+  "fragment_count": 154,
+  "table_count": 11,
+  "tables": [
+    {
+      "name": "table_01.csv",
+      "caption": "Table 1: Number of entries for each category in the SENNA lexicon and our DBpedia lexicon.",
+      "rows": 6,
+      "columns": 3
+    },
+    {
+      "name": "table_02.csv",
+      "caption": "Table 2: Dataset sizes in number of tokens (entities)",
+      "rows": 5,
+      "columns": 4
+    },
+    {
+      "name": "table_03.csv",
+      "caption": "Figure 4: Example of how lexicon features are applied. The B, I, E, markings indicate that the token matches the Begin, Inside, and End token of an entry in the lexicon. S indicates that the token matches a single-token entry.",
+      "rows": 5,
+      "columns": 12
+    },
+    {
+      "name": "table_04.csv",
+      "caption": "Table 3: Hyper-parameter search space and final values used for all experiments",
+      "rows": 10,
+      "columns": 5
+    },
+    {
+      "name": "table_05.csv",
+      "caption": "Table 4: Development set F1 score performance of the best hyper-parameter settings in each optimization round.",
+      "rows": 3,
+      "columns": 3
+    },
+    {
+      "name": "table_06.csv",
+      "caption": "Table 5: Results of our models, with various feature sets, compared to other published results. The three sections are, in order, our models, published neural network models, and published non-neural network models. For the features, emb = Collobert word embeddings, caps = capitalization feature, lex = lexicon features from both SENNA and DBpedia lexicons. For F1 scores, standard deviations are in parentheses.",
+      "rows": 17,
+      "columns": 7
+    },
+    {
+      "name": "table_07.csv",
+      "caption": "Table 6: F1 score results of BLSTM and BLSTM-CNN models with various additional features; emb = Collobert word embeddings, char = character type feature, caps = capitalization feature, lex = lexicon features. Note that starred results are repeated for ease of comparison.",
+      "rows": 9,
+      "columns": 7
+    },
+    {
+      "name": "table_08.csv",
+      "caption": "Table 7: F1 scores when the Collobert word vectors are replaced. We tried 50- and 300-dimensional random vectors (Random 50d, Random 300d); GloVe’s released vectors trained on 6 billion words (GloVe 6B 50d, GloVe 6B 300d); Google’s released 300-dimensional vectors trained on 100 billion words from Google News (Google 100B 300d); and 50-dimensional GloVe and word2vec skip-gram vectors that we trained on Wikipedia and Reuters RCV-1 (Our GloVe 50d, Our Skip-gram 50d).",
+      "rows": 9,
+      "columns": 3
+    },
+    {
+      "name": "table_09.csv",
+      "caption": "Table 8: F1 score results with various dropout values. Models were trained using only the training set for each dataset. All other experiments use dropout = 0.68 for CoNLL-2003 and dropout = 0.63 for OntoNotes 5.0.",
+      "rows": 11,
+      "columns": 5
+    },
+    {
+      "name": "table_10.csv",
+      "caption": "Table 9: Comparison of lexicon and matching/encoding methods over the BLSTM-CNN model employing random embeddings and no other features. When using both lexicons, the best combination of matching and encoding is Exact-BIOES for SENNA and Partial-BIOES for DBpedia. Note that the SENNA lexicon already contains “partial entries” so exact matching in that case is really just a more primitive form of partial matching.",
+      "rows": 10,
+      "columns": 5
+    },
+    {
+      "name": "table_11.csv",
+      "caption": "Table 10: Per genre F1 scores on OntoNotes. BC = broadcast conversation, BN = broadcast news, MZ = magazine, NW = newswire, TC = telephone conversation, WB = blogs and newsgroups",
+      "rows": 8,
+      "columns": 7
+    }
+  ],
+  "html_bytes": 306747,
+  "input_sha256": "e0483008622131070662aafc040258a8fe97f50d7039cea85c6f690473625aea",
+  "configuration_sha256": "cef0a7b210d8c00ac4a173609538366ba06383f40aee5a9774d8aa8960f49aa4",
+  "artifacts": [
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_01.csv",
+      "bytes": 590,
+      "sha256": "64262a97bea62a4645879db662af2594b22405f9147ce5405f97e8397a07cec0"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_02.csv",
+      "bytes": 649,
+      "sha256": "ad1418cadec17976f3a88887ead22f962ebef8a365107cb26716ac68e6ca9b38"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_03.csv",
+      "bytes": 1045,
+      "sha256": "71814370f84d39c327dfe3182eafc533309dbd6e399fbb1568d48ac622e92897"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_04.csv",
+      "bytes": 1353,
+      "sha256": "a896e690b54a67a64b6773b92a758ea578368f5c0519fb85d278dfedd9b6a34b"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_05.csv",
+      "bytes": 335,
+      "sha256": "f7e5ce8e87057bcae046e755e2b8252571b6c667c13582e51b32444e17e5ef4c"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_06.csv",
+      "bytes": 3134,
+      "sha256": "3b4c117c4df0b6696a61824503c44944bf43fc27da9a75a187d4dbe400134abd"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_07.csv",
+      "bytes": 1750,
+      "sha256": "de3e785977a317d6f8fded2b97239e3ddf7615d3a938b962d47840e5c4f8db59"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_08.csv",
+      "bytes": 828,
+      "sha256": "d501771548be10c27cc11fc25173bae6c25a57877648f096e75b56184f931c5a"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_09.csv",
+      "bytes": 1422,
+      "sha256": "8885d76e6e5f2d8cd9d7afe9e2a84e080dbe9348a51b283da18fe02784007efa"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_10.csv",
+      "bytes": 1584,
+      "sha256": "529eba801ec2c30ed28fd880d717fc6f49a772551b1e7501d0c6aeea9b85c223"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/layout_11.csv",
+      "bytes": 1555,
+      "sha256": "241b19fbd2fcc8289f481371f9f75bb66917e2a7f9b44d1091f3416012454b33"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/metadata.json",
+      "bytes": 3604,
+      "sha256": "87628e18153af757fb40d027860460ed3d610831a350999b1dcd7fbec88682e0"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_01.csv",
+      "bytes": 210,
+      "sha256": "bbbe408e99487d33aa0d033cf249b2facd366590b0a2f496eab778056ce93853"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_02.csv",
+      "bytes": 238,
+      "sha256": "1a66e47816bf5089eef11c143b53808b2c1238409b550ab94b259bed162bdc8e"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_03.csv",
+      "bytes": 174,
+      "sha256": "40c40005b71359ded47abc5fec79357343b540b5a4f7cb7c3e373895a0390ea6"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_04.csv",
+      "bytes": 750,
+      "sha256": "30f5b3d0758bd899a3b2676e00f2a38f100aebf2da0333b0c8023cc404d75ba1"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_05.csv",
+      "bytes": 164,
+      "sha256": "28057ab811aa86000572ab45b284b669ff1bf6954defe0993b2f7dea660754a0"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_06.csv",
+      "bytes": 1217,
+      "sha256": "69b54197a3fde37e74fea0098be42b8d2e5e2f6f603813f6df77c2cb9f5b95e7"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_07.csv",
+      "bytes": 989,
+      "sha256": "aca1b0350f9d113c2951de127cca853e16514a53e2c80ed4397bfbcd15d78c85"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_08.csv",
+      "bytes": 471,
+      "sha256": "a4a86171686d5ccfaeaf0662da3580e0931c2fbcd53d7cb6e286e367c3c9a29b"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_09.csv",
+      "bytes": 803,
+      "sha256": "8f1fbba6f99bf5d273a8de9e846da96550f16b288b532dbfb067aa8b9727659a"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_10.csv",
+      "bytes": 641,
+      "sha256": "05996f770d25c5afbc497a6a797e3d851fe6d968b8481fe65c79c10b6aacff14"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/table_11.csv",
+      "bytes": 644,
+      "sha256": "17bdb285714a0c461556550900471033ae7f5f1ea6a248414f63fcf525dc2dd2"
+    },
+    {
+      "path": "/root/scilead/axcell/data/papers/1511.08308v5/text.json",
+      "bytes": 66605,
+      "sha256": "39005ac2755113f397c8b90a9707f7d7284c11dcf02a0ff7b306cb2da3cb4344"
+    },
+    {
+      "path": "/root/scilead/axcell/data/htmls/1511.08308v5/index.html",
+      "bytes": 306747,
+      "sha256": "5a772ba027236cdc4965b69b51fc2ccf9fe3b9617b3e59e1f5ea08d6630968aa"
+    }
+  ],
+  "official_status": "success",
+  "reused_from": "/root/scilead/axcell/runs/20261022_single_paper",
+  "seconds": 0,
+  "parsed_paper_path": "/root/scilead/axcell/data/papers/1511.08308v5",
+  "html_path": "/root/scilead/axcell/data/htmls/1511.08308v5/index.html"
+}

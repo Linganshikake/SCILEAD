@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231817085084461478268d9d6fsaJ3epE",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792779428,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Extractive single-document news summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-1 F1\",\"Result\":\"43.85\"},{\"Task\":\"Extractive single-document news summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-2 F1\",\"Result\":\"20.34\"},{\"Task\":\"Extractive single-document news summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-L F1\",\"Result\":\"39.90\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-1 F1\",\"Result\":\"42.13\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-2 F1\",\"Result\":\"19.60\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-L F1\",\"Result\":\"39.18\"},{\"Task\":\"Extractive single-document news summarization\",\"Dataset\":\"NYT50\",\"Metric\":\"ROUGE-1 Recall\",\"Result\":\"46.66\"},{\"Task\":\"Extractive single-document news summarization\",\"Dataset\":\"NYT50\",\"Metric\":\"ROUGE-2 Recall\",\"Result\":\"26.35\"},{\"Task\":\"Extractive single-document news summarization\",\"Dataset\":\"NYT50\",\"Metric\":\"ROUGE-L Recall\",\"Result\":\"42.62\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"NYT50\",\"Metric\":\"ROUGE-1 Recall\",\"Result\":\"49.02\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"NYT50\",\"Metric\":\"ROUGE-2 Recall\",\"Result\":\"31.02\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"NYT50\",\"Metric\":\"ROUGE-L Recall\",\"Result\":\"45.55\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"XSum\",\"Metric\":\"ROUGE-1 F1\",\"Result\":\"38.81\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"XSum\",\"Metric\":\"ROUGE-2 F1\",\"Result\":\"16.50\"},{\"Task\":\"Abstractive single-document news summarization\",\"Dataset\":\"XSum\",\"Metric\":\"ROUGE-L F1\",\"Result\":\"31.27\"}]",
+        "reasoning_content": "**Evaluating summarization methods**\n\nI’m thinking about identifying the best proposed methods for tasks, datasets, and metrics. I might want to summarize tasks separately for extractive and abstractive approaches since they require different tuples. For each dataset, I’ll evaluate the maximum metrics from proposed methods.\n\nFor example, I see clear results for BERTSUM models, and overall, the large extractive model seems to perform best. I’ll also need to consider evaluation metrics and ensure clarity for alternate tasks like QA and ranking in my summaries.\n\n**Clarifying table data**\n\nLet's parse the data I have for extractive models like LEAD, NEUSUM, SUMO, Transformer, and BERTSUM. It looks like there are scores for CNN/DM and NYT, but the formatting seems off; perhaps these are QA scores for extractive summaries?\n\nI noticed BERTSUM's score of 37.8 for CNN is lower than the others. I think I need to reconstruct the table categories more clearly. The lines might be muddled, and it could involve some human evaluation. It's a bit confusing, but I'll work on making it clearer!\n\n**Evaluating BERTSUM Metrics**\n\nI’m thinking about including QA/ranking evaluation for BERTSUM, but the table provides separate non-ROUGE metrics. These are evaluation metrics, but it’s unclear if they yield the \"best results,\" since higher ranks might indicate GOLD. I’m parsing proposed BERTSUM values under an abstractive approach. For extractive sections, I might consider columns like CNN/DM QA Rank and NYT QA Rank to provide more clarity on the evaluation metrics. It seems there’s a lot here to unpack!"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3673,
+    "completion_tokens": 1778,
+    "total_tokens": 5451,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 5451,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 3673,
+        "output_tokens": 1778,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 3670,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 1303
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3670,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 3673,
+    "output_tokens": 1778,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

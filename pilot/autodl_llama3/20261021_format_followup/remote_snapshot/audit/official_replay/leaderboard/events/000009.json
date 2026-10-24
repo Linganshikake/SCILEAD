@@ -1,0 +1,66 @@
+{
+  "context": {
+    "paper_id": "D18-1279.pdf",
+    "record_index": 2,
+    "field": "TDM",
+    "source_row": {
+      "Task": "Part-of-Speech (POS) Tagging",
+      "Dataset": "WSJ",
+      "Metric": "F1",
+      "Result": "97.49±0.04"
+    },
+    "partial_row": {},
+    "candidate_state": {
+      "leaderboards": {
+        "order": [
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)"
+        ],
+        "serialized": "{'(Named Entity Recognition (NER), CoNLL-2003 - English, F1)', '(Intent Detection and Slot Filling, ATIS, F1)', '(Summarization, XSum, ROGUE-2)', '(Word Sense Induction, SemEval 2013 Task 13, AVG)', '(Text Chunking, CoNLL-2000, F1)', '(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)', '(Summarization, Gigaword, ROGUE-L)', '(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))', '(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)', '(Summarization, CNN/DailyMail, ROGUE-1)', '(Summarization, CNN/DailyMail, ROGUE-L)', '(Summarization, CNN/DailyMail, ROGUE-2)', '(Intent Detection and Slot Filling, SNIPS, F1)', '(Summarization, XSum, ROGUE-1)', '(Summarization, Gigaword, ROGUE-2)', '(Machine Translation, IWSLT’14 EN-DE, BLEU)', '(Named Entity Recognition (NER), WNUT-17 - English, F1)', '(Summarization, Gigaword, ROGUE-1)', '(Intent Detection and Slot Filling, SNIPS, Accuracy)', '(Machine Translation, WMT’14 EN-DE, BLEU)', '(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)', '(Summarization, XSum, ROGUE-L)', '(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))', '(Named Entity Recognition (NER), Ontonotes v5 - English, F1)', '(Intent Detection and Slot Filling, ATIS, Accuracy)', '(Named Entity Recognition (NER), WNUT-16 - English, F1)', '(Machine Translation, WMT’14 EN-FR, BLEU)'}"
+      }
+    },
+    "author_module": "leaderboard_llm_normalization.py"
+  },
+  "request": {
+    "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou will be given a list of tuples. Then, an input tuple will be provided. If the input tuple matches one of the items in the list, your answer will be the matched item in the list. Else, output the tuple without changing it. Only output answer, DO NOT make any other explanation.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nItem list: {(Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, F1), (Summarization, XSum, ROGUE-2), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Summarization, Gigaword, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, CNN/DailyMail, ROGUE-1), (Summarization, CNN/DailyMail, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-2), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Summarization, Gigaword, ROGUE-1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Machine Translation, WMT’14 EN-DE, BLEU), (Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Summarization, XSum, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Machine Translation, WMT’14 EN-FR, BLEU)}\n\nInput: (Part-of-Speech (POS) Tagging, WSJ, F1)\n\nAnswer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>",
+    "prompt_sha256": "51437ad39f49fbcca069a6708c1ea2ca1e0351b9cc2f9fbb1cfcb306a84e9c81",
+    "max_new_tokens": 100,
+    "seed": 0,
+    "model_type": "llama-3-instruct-70b",
+    "model_path": "/root/autodl-tmp/scilead/models/llama3",
+    "model_revision": "50fd307e57011801c7833c87efa1984ddf2db42f",
+    "do_sample": false,
+    "output_wrapper_sha256": "6716e012f55d006674dc320b4204015024a5f776fdaefbfe6c55fbbff3136d7c"
+  },
+  "origin": "OFFLINE_REPLAY",
+  "old_call_directory": "/root/autodl-tmp/scilead/runs/llama3/20261021_formal42/normalization/partially/stage2/calls/000009",
+  "mismatch": [],
+  "raw_answer": "\n\n(Part-of-Speech (POS) Tagging, WSJ, F1)",
+  "official_answer_after_slice": "(Part-of-Speech (POS) Tagging, WSJ, F1)",
+  "event_index": 9
+}

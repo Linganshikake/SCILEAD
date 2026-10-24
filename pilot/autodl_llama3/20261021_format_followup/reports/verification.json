@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "protected_local_files_unchanged": 7525,
+  "original40_extraction_and_all4_normalization_results_unchanged": true,
+  "parser_frozen_before_scoring": true,
+  "parser_tests": 19,
+  "reuse_contract_tests": 6,
+  "v2_extraction_calls": 0,
+  "diagnostic_extraction_calls": 1,
+  "source_prompt_quantization_model_request_unchanged_except_diagnostic_budget": true,
+  "reuse_verified": {
+    "fully_llm": {
+      "REUSED_EXACT": 566,
+      "NEW_GENERATION": 13
+    },
+    "partially_stage1": {
+      "REUSED_EXACT": 470,
+      "NEW_GENERATION": 13
+    },
+    "partially_stage2": {
+      "REUSED_EXACT": 175,
+      "NEW_GENERATION": 3
+    }
+  },
+  "mask_unchanged": true,
+  "fixed_scope": {
+    "papers": 42,
+    "gold": 259,
+    "leaderboards": 27,
+    "entries": 131
+  },
+  "remote": {
+    "status": "PASS",
+    "protected_remote_files_unchanged": 7267,
+    "dependency_freeze_unchanged": true,
+    "pip_check": "No broken requirements found.",
+    "gpu_after": "0 MiB, 0 %",
+    "paid_api_calls": 0,
+    "no_shutdown": true
+  },
+  "transfer": {
+    "status": "PASS",
+    "files": 3518,
+    "archive_sha256": "c29929b08f20d9d7f8f653818b9a183d8382f8a938f01414f70a3452af2f49ea"
+  },
+  "privacy": {
+    "status": "PASS",
+    "text_files_checked": 4414,
+    "recognized_token_or_bearer_patterns_absent": true,
+    "no_env_files_in_artifact_tree": true,
+    "credentials_used_only_by_pinned_authentication_client": true,
+    "credential_configs_not_read_for_scan": true,
+    "limitation": "Pattern scan plus provenance; not a claim that arbitrary password-like text is mathematically impossible."
+  },
+  "review": "Self-review of parser, exact-position reuse, stage dependencies and evaluation; no independent subagent tool used."
+}

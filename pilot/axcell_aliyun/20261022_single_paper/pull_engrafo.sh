@@ -1,0 +1,4 @@
+set -euo pipefail
+docker pull arxivvanity/engrafo@sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e
+docker image inspect arxivvanity/engrafo@sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e --format '{{json .RepoDigests}}'
+docker tag arxivvanity/engrafo@sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e arxivvanity/engrafo:b3db888fefa118eacf4f13566204b68ce100b3a6

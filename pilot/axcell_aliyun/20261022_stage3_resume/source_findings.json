@@ -1,0 +1,198 @@
+[
+  {
+    "paper_id": "1511.08308.pdf",
+    "category": "METRIC_CELL_BINDING",
+    "status": "已核实：列为Recall，原预测为F1",
+    "prediction": {
+      "dataset": "CoNLL 2003 (English)",
+      "metric": "F1",
+      "task": "Named Entity Recognition",
+      "model": "BLSTM-CNN + emb + lex",
+      "score": 91.85
+    },
+    "source": "1511.08308v5/table_06.csv/6.2",
+    "table_first_rows": [
+      [
+        "<bold>Model</bold>",
+        "<bold>CoNLL-2003</bold>",
+        "<bold>CoNLL-2003</bold>",
+        "<bold>CoNLL-2003</bold>",
+        "<bold>OntoNotes 5.0</bold>",
+        "<bold>OntoNotes 5.0</bold>",
+        "<bold>OntoNotes 5.0</bold>"
+      ],
+      [
+        "<bold>Model</bold>",
+        "<bold>Prec.</bold>",
+        "<bold>Recall</bold>",
+        "<bold>F1</bold>",
+        "<bold>Prec.</bold>",
+        "<bold>Recall</bold>",
+        "<bold>F1</bold>"
+      ],
+      [
+        "FFNN + emb + caps + lex",
+        "89.54",
+        "89.80",
+        "89.67 (± 0.24)",
+        "74.28",
+        "73.61",
+        "73.94 (± 0.43)"
+      ]
+    ],
+    "raw_source_row": [
+      "BLSTM-CNN + emb + lex",
+      "91.39",
+      "<bold>91.85</bold>",
+      "<bold>91.62</bold> (± 0.33)",
+      "<bold>86.04</bold>",
+      "<bold>86.53</bold>",
+      "<bold>86.28</bold> (± 0.26)"
+    ]
+  },
+  {
+    "paper_id": "1511.08308.pdf",
+    "category": "COUNT_AS_SCORE",
+    "status": "已核实：Test set size (# entities)，4,696为实体数",
+    "prediction": {
+      "dataset": "Ontonotes v5 (English)",
+      "metric": "F1",
+      "task": "Named Entity Recognition",
+      "model": "Test set size (# entities)",
+      "score": 4696.0
+    },
+    "source": "1511.08308v5/table_11.csv/2.4",
+    "table_first_rows": [
+      [
+        "<bold>Model</bold>",
+        "<bold>BC</bold>",
+        "<bold>BN</bold>",
+        "<bold>MZ</bold>",
+        "<bold>NW</bold>",
+        "<bold>TC</bold>",
+        "<bold>WB</bold>"
+      ],
+      [
+        "Test set size (# tokens)",
+        "32,576",
+        "23,557",
+        "18,260",
+        "51,667",
+        "11,015",
+        "19,348"
+      ],
+      [
+        "Test set size (# entities)",
+        "1,697",
+        "2,184",
+        "1,163",
+        "4,696",
+        "380",
+        "1,137"
+      ]
+    ],
+    "raw_source_row": [
+      "Test set size (# entities)",
+      "1,697",
+      "2,184",
+      "1,163",
+      "4,696",
+      "380",
+      "1,137"
+    ]
+  },
+  {
+    "paper_id": "1603.01354.pdf",
+    "category": "DIMENSION_AS_SCORE",
+    "status": "已核实：原表列为Dimension，Word2Vec的300是向量维度；同一行NER列为84.91。原预测F1=300.0完整保留",
+    "prediction": {
+      "dataset": "Code-Switching English-Spanish NER",
+      "metric": "F1",
+      "task": "Named Entity Recognition",
+      "model": "Word2Vec",
+      "score": 300.0
+    },
+    "source": "1603.01354v5/table_06.csv/3.1",
+    "table_first_rows": [
+      [
+        "<bold>Embedding</bold>",
+        "Dimension",
+        "POS",
+        "NER"
+      ],
+      [
+        "Random",
+        "100",
+        "97.13",
+        "80.76"
+      ],
+      [
+        "Senna",
+        "50",
+        "97.44",
+        "90.28"
+      ]
+    ],
+    "raw_source_row": [
+      "Word2Vec",
+      "300",
+      "97.40",
+      "84.91"
+    ]
+  },
+  {
+    "paper_id": "2020.findings-emnlp.378.pdf",
+    "category": "DATASET_COLUMN_BINDING_CANDIDATE",
+    "status": "来源列头为RE，原预测数据集为ontontoes chinese v5；数值96.62与单元格一致，数据集绑定需结合正文复核，不作人工修正",
+    "prediction": {
+      "dataset": "ontontoes chinese v5",
+      "metric": "F1",
+      "task": "Named Entity Recognition",
+      "model": "Ours Ours",
+      "score": 96.62
+    },
+    "source": "2010.15466v1/table_05.csv/14.6",
+    "table_first_rows": [
+      [
+        "<bold>English</bold>",
+        "<bold>English</bold>",
+        "<bold>English</bold>",
+        "<bold>English</bold>",
+        "<bold>Chinese</bold>",
+        "<bold>Chinese</bold>",
+        "<bold>Chinese</bold>",
+        "<bold>Chinese</bold>"
+      ],
+      [
+        "<bold>Model</bold>",
+        "<bold>ON5e</bold>",
+        "<bold>WN16</bold>",
+        "<bold>WN17</bold>",
+        "<bold>Model</bold>",
+        "<bold>ON4c</bold>",
+        "<bold>RE</bold>",
+        "<bold>WE</bold>"
+      ],
+      [
+        "DBLP:journals/tacl/ChiuN16",
+        "86.12",
+        "-",
+        "-",
+        "DBLP:conf/acl/ZhangY18",
+        "73.88",
+        "-",
+        "58.79"
+      ]
+    ],
+    "raw_source_row": [
+      "<bold>Ours</bold>",
+      "<bold>90.32</bold>",
+      "<bold>55.14</bold>",
+      "<bold>50.68</bold>",
+      "<bold>Ours</bold>",
+      "<bold>81.18</bold>",
+      "<bold>96.62</bold>",
+      "<bold>69.78</bold>"
+    ]
+  }
+]

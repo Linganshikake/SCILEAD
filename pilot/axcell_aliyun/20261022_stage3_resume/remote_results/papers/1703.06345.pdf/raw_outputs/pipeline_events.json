@@ -1,0 +1,1074 @@
+[
+  {
+    "sequence": 0,
+    "step": "type_prediction::predict",
+    "time": "2026-10-22T19:05:42.916251+08:00"
+  },
+  {
+    "sequence": 1,
+    "step": "type_prediction::multiclass_predicted",
+    "time": "2026-10-22T19:05:43.039482+08:00"
+  },
+  {
+    "sequence": 2,
+    "step": "type_prediction::predicted",
+    "time": "2026-10-22T19:05:43.040096+08:00",
+    "tables": [
+      {
+        "table": "table_01.csv",
+        "prediction": "IRRELEVANT"
+      },
+      {
+        "table": "table_02.csv",
+        "prediction": "ABLATION"
+      },
+      {
+        "table": "table_03.csv",
+        "prediction": "SOTA"
+      }
+    ]
+  },
+  {
+    "sequence": 3,
+    "step": "structure_prediction::label_tables",
+    "time": "2026-10-22T19:05:44.781626+08:00"
+  },
+  {
+    "sequence": 4,
+    "step": "structure_prediction::evidences_split",
+    "time": "2026-10-22T19:05:44.799068+08:00"
+  },
+  {
+    "sequence": 5,
+    "step": "structure_prediction::annotations",
+    "time": "2026-10-22T19:06:13.801289+08:00"
+  },
+  {
+    "sequence": 6,
+    "step": "structure_prediction::tables_labeled",
+    "time": "2026-10-22T19:06:13.814899+08:00"
+  },
+  {
+    "sequence": 7,
+    "step": "linking::call",
+    "time": "2026-10-22T19:06:13.815224+08:00"
+  },
+  {
+    "sequence": 8,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:13.846368+08:00"
+  },
+  {
+    "sequence": 9,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.534754+08:00"
+  },
+  {
+    "sequence": 10,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.536798+08:00"
+  },
+  {
+    "sequence": 11,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.551530+08:00"
+  },
+  {
+    "sequence": 12,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.552880+08:00"
+  },
+  {
+    "sequence": 13,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.567135+08:00"
+  },
+  {
+    "sequence": 14,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.568446+08:00"
+  },
+  {
+    "sequence": 15,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.581357+08:00"
+  },
+  {
+    "sequence": 16,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.582642+08:00"
+  },
+  {
+    "sequence": 17,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.595443+08:00"
+  },
+  {
+    "sequence": 18,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.596756+08:00"
+  },
+  {
+    "sequence": 19,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.609654+08:00"
+  },
+  {
+    "sequence": 20,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.610955+08:00"
+  },
+  {
+    "sequence": 21,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.624201+08:00"
+  },
+  {
+    "sequence": 22,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.625512+08:00"
+  },
+  {
+    "sequence": 23,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.638789+08:00"
+  },
+  {
+    "sequence": 24,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.640095+08:00"
+  },
+  {
+    "sequence": 25,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.653348+08:00"
+  },
+  {
+    "sequence": 26,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.654657+08:00"
+  },
+  {
+    "sequence": 27,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.662911+08:00"
+  },
+  {
+    "sequence": 28,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.664354+08:00"
+  },
+  {
+    "sequence": 29,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.672604+08:00"
+  },
+  {
+    "sequence": 30,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.673906+08:00"
+  },
+  {
+    "sequence": 31,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.682148+08:00"
+  },
+  {
+    "sequence": 32,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.683477+08:00"
+  },
+  {
+    "sequence": 33,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.696479+08:00"
+  },
+  {
+    "sequence": 34,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.697812+08:00"
+  },
+  {
+    "sequence": 35,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.710911+08:00"
+  },
+  {
+    "sequence": 36,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.712259+08:00"
+  },
+  {
+    "sequence": 37,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.725398+08:00"
+  },
+  {
+    "sequence": 38,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.726741+08:00"
+  },
+  {
+    "sequence": 39,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.739756+08:00"
+  },
+  {
+    "sequence": 40,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.741125+08:00"
+  },
+  {
+    "sequence": 41,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.754240+08:00"
+  },
+  {
+    "sequence": 42,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.755596+08:00"
+  },
+  {
+    "sequence": 43,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.768724+08:00"
+  },
+  {
+    "sequence": 44,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.770098+08:00"
+  },
+  {
+    "sequence": 45,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.782933+08:00"
+  },
+  {
+    "sequence": 46,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.784318+08:00"
+  },
+  {
+    "sequence": 47,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.797304+08:00"
+  },
+  {
+    "sequence": 48,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.798664+08:00"
+  },
+  {
+    "sequence": 49,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.811535+08:00"
+  },
+  {
+    "sequence": 50,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.812933+08:00"
+  },
+  {
+    "sequence": 51,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.821243+08:00"
+  },
+  {
+    "sequence": 52,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.822612+08:00"
+  },
+  {
+    "sequence": 53,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.830933+08:00"
+  },
+  {
+    "sequence": 54,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.832314+08:00"
+  },
+  {
+    "sequence": 55,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.840627+08:00"
+  },
+  {
+    "sequence": 56,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.841997+08:00"
+  },
+  {
+    "sequence": 57,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.850302+08:00"
+  },
+  {
+    "sequence": 58,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.851682+08:00"
+  },
+  {
+    "sequence": 59,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.860101+08:00"
+  },
+  {
+    "sequence": 60,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.861543+08:00"
+  },
+  {
+    "sequence": 61,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.869888+08:00"
+  },
+  {
+    "sequence": 62,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.871302+08:00"
+  },
+  {
+    "sequence": 63,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.879640+08:00"
+  },
+  {
+    "sequence": 64,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.881086+08:00"
+  },
+  {
+    "sequence": 65,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.889430+08:00"
+  },
+  {
+    "sequence": 66,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.890868+08:00"
+  },
+  {
+    "sequence": 67,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.899210+08:00"
+  },
+  {
+    "sequence": 68,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.900657+08:00"
+  },
+  {
+    "sequence": 69,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.908920+08:00"
+  },
+  {
+    "sequence": 70,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.910348+08:00"
+  },
+  {
+    "sequence": 71,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.918755+08:00"
+  },
+  {
+    "sequence": 72,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.920189+08:00"
+  },
+  {
+    "sequence": 73,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.928544+08:00"
+  },
+  {
+    "sequence": 74,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.929976+08:00"
+  },
+  {
+    "sequence": 75,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.943180+08:00"
+  },
+  {
+    "sequence": 76,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.944654+08:00"
+  },
+  {
+    "sequence": 77,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.957793+08:00"
+  },
+  {
+    "sequence": 78,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.959247+08:00"
+  },
+  {
+    "sequence": 79,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:15.972366+08:00"
+  },
+  {
+    "sequence": 80,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:15.976217+08:00"
+  },
+  {
+    "sequence": 81,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.002621+08:00"
+  },
+  {
+    "sequence": 82,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.004086+08:00"
+  },
+  {
+    "sequence": 83,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.016522+08:00"
+  },
+  {
+    "sequence": 84,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.017972+08:00"
+  },
+  {
+    "sequence": 85,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.030464+08:00"
+  },
+  {
+    "sequence": 86,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.031926+08:00"
+  },
+  {
+    "sequence": 87,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.032644+08:00"
+  },
+  {
+    "sequence": 88,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.034030+08:00"
+  },
+  {
+    "sequence": 89,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.034723+08:00"
+  },
+  {
+    "sequence": 90,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.036102+08:00"
+  },
+  {
+    "sequence": 91,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.036786+08:00"
+  },
+  {
+    "sequence": 92,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.038170+08:00"
+  },
+  {
+    "sequence": 93,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.038846+08:00"
+  },
+  {
+    "sequence": 94,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.040226+08:00"
+  },
+  {
+    "sequence": 95,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.040923+08:00"
+  },
+  {
+    "sequence": 96,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.042304+08:00"
+  },
+  {
+    "sequence": 97,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.042982+08:00"
+  },
+  {
+    "sequence": 98,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.044386+08:00"
+  },
+  {
+    "sequence": 99,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.056764+08:00"
+  },
+  {
+    "sequence": 100,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.058262+08:00"
+  },
+  {
+    "sequence": 101,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.070556+08:00"
+  },
+  {
+    "sequence": 102,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.072047+08:00"
+  },
+  {
+    "sequence": 103,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.072794+08:00"
+  },
+  {
+    "sequence": 104,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.074238+08:00"
+  },
+  {
+    "sequence": 105,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.074950+08:00"
+  },
+  {
+    "sequence": 106,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.076393+08:00"
+  },
+  {
+    "sequence": 107,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.077112+08:00"
+  },
+  {
+    "sequence": 108,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.078525+08:00"
+  },
+  {
+    "sequence": 109,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.079247+08:00"
+  },
+  {
+    "sequence": 110,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.080674+08:00"
+  },
+  {
+    "sequence": 111,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.081400+08:00"
+  },
+  {
+    "sequence": 112,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.082805+08:00"
+  },
+  {
+    "sequence": 113,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.083533+08:00"
+  },
+  {
+    "sequence": 114,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.084972+08:00"
+  },
+  {
+    "sequence": 115,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.085697+08:00"
+  },
+  {
+    "sequence": 116,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.087110+08:00"
+  },
+  {
+    "sequence": 117,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.087827+08:00"
+  },
+  {
+    "sequence": 118,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.089268+08:00"
+  },
+  {
+    "sequence": 119,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.089994+08:00"
+  },
+  {
+    "sequence": 120,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.091428+08:00"
+  },
+  {
+    "sequence": 121,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.092161+08:00"
+  },
+  {
+    "sequence": 122,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.093618+08:00"
+  },
+  {
+    "sequence": 123,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.094426+08:00"
+  },
+  {
+    "sequence": 124,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.095853+08:00"
+  },
+  {
+    "sequence": 125,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.096618+08:00"
+  },
+  {
+    "sequence": 126,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.098069+08:00"
+  },
+  {
+    "sequence": 127,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.098811+08:00"
+  },
+  {
+    "sequence": 128,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.100268+08:00"
+  },
+  {
+    "sequence": 129,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.101031+08:00"
+  },
+  {
+    "sequence": 130,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.102475+08:00"
+  },
+  {
+    "sequence": 131,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.103234+08:00"
+  },
+  {
+    "sequence": 132,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:06:16.104732+08:00"
+  },
+  {
+    "sequence": 133,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:06:16.105502+08:00"
+  },
+  {
+    "sequence": 134,
+    "step": "linking::linked",
+    "time": "2026-10-22T19:06:16.108396+08:00",
+    "proposals_path": "raw_outputs/events/134_proposals.json",
+    "proposal_count": 63
+  },
+  {
+    "sequence": 135,
+    "step": "filtering::structure_filtering::filtered",
+    "time": "2026-10-22T19:06:16.112541+08:00",
+    "proposals_path": "raw_outputs/events/135_proposals.json",
+    "proposal_count": 63,
+    "kept_ids": [
+      "1703.06345v1/table_03.csv/1.1",
+      "1703.06345v1/table_03.csv/1.2",
+      "1703.06345v1/table_03.csv/1.5",
+      "1703.06345v1/table_03.csv/2.2",
+      "1703.06345v1/table_03.csv/3.2",
+      "1703.06345v1/table_03.csv/4.1",
+      "1703.06345v1/table_03.csv/4.2",
+      "1703.06345v1/table_03.csv/4.5",
+      "1703.06345v1/table_03.csv/5.2",
+      "1703.06345v1/table_03.csv/5.3",
+      "1703.06345v1/table_03.csv/5.4",
+      "1703.06345v1/table_03.csv/6.5",
+      "1703.06345v1/table_03.csv/7.2",
+      "1703.06345v1/table_03.csv/7.3",
+      "1703.06345v1/table_03.csv/7.4",
+      "1703.06345v1/table_03.csv/8.2",
+      "1703.06345v1/table_03.csv/8.5",
+      "1703.06345v1/table_03.csv/9.1",
+      "1703.06345v1/table_03.csv/9.2",
+      "1703.06345v1/table_03.csv/9.3",
+      "1703.06345v1/table_03.csv/9.4",
+      "1703.06345v1/table_03.csv/9.5",
+      "1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.2",
+      "1703.06345v1/table_03.csv/10.3",
+      "1703.06345v1/table_03.csv/10.4",
+      "1703.06345v1/table_03.csv/10.5"
+    ],
+    "removed_reasons": {
+      "1703.06345v1/table_02.csv/1.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.6": "empty-model-type"
+    }
+  },
+  {
+    "sequence": 136,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:06:16.115622+08:00",
+    "proposals_path": "raw_outputs/events/136_proposals.json",
+    "proposal_count": 27,
+    "kept_ids": [
+      "1703.06345v1/table_03.csv/1.1",
+      "1703.06345v1/table_03.csv/1.2",
+      "1703.06345v1/table_03.csv/1.5",
+      "1703.06345v1/table_03.csv/2.2",
+      "1703.06345v1/table_03.csv/3.2",
+      "1703.06345v1/table_03.csv/4.1",
+      "1703.06345v1/table_03.csv/4.2",
+      "1703.06345v1/table_03.csv/4.5",
+      "1703.06345v1/table_03.csv/5.2",
+      "1703.06345v1/table_03.csv/5.3",
+      "1703.06345v1/table_03.csv/6.5",
+      "1703.06345v1/table_03.csv/7.2",
+      "1703.06345v1/table_03.csv/7.3",
+      "1703.06345v1/table_03.csv/8.2",
+      "1703.06345v1/table_03.csv/8.5",
+      "1703.06345v1/table_03.csv/9.1",
+      "1703.06345v1/table_03.csv/9.2",
+      "1703.06345v1/table_03.csv/9.3",
+      "1703.06345v1/table_03.csv/9.5",
+      "1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.2",
+      "1703.06345v1/table_03.csv/10.3",
+      "1703.06345v1/table_03.csv/10.5"
+    ],
+    "removed_reasons": {
+      "1703.06345v1/table_03.csv/5.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/7.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/9.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/10.4": "confidence 0.79 < 0.8"
+    }
+  },
+  {
+    "sequence": 137,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:06:16.118911+08:00",
+    "proposals_path": "raw_outputs/events/137_proposals.json",
+    "proposal_count": 63,
+    "kept_ids": [
+      "1703.06345v1/table_03.csv/1.1",
+      "1703.06345v1/table_03.csv/1.2",
+      "1703.06345v1/table_03.csv/1.5",
+      "1703.06345v1/table_03.csv/2.2",
+      "1703.06345v1/table_03.csv/3.2",
+      "1703.06345v1/table_03.csv/4.1",
+      "1703.06345v1/table_03.csv/4.2",
+      "1703.06345v1/table_03.csv/4.5",
+      "1703.06345v1/table_03.csv/5.2",
+      "1703.06345v1/table_03.csv/5.3",
+      "1703.06345v1/table_03.csv/6.5",
+      "1703.06345v1/table_03.csv/7.2",
+      "1703.06345v1/table_03.csv/7.3",
+      "1703.06345v1/table_03.csv/8.2",
+      "1703.06345v1/table_03.csv/8.5",
+      "1703.06345v1/table_03.csv/9.1",
+      "1703.06345v1/table_03.csv/9.2",
+      "1703.06345v1/table_03.csv/9.3",
+      "1703.06345v1/table_03.csv/9.5",
+      "1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.2",
+      "1703.06345v1/table_03.csv/10.3",
+      "1703.06345v1/table_03.csv/10.5"
+    ],
+    "removed_reasons": {
+      "1703.06345v1/table_02.csv/1.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.6": "empty-model-type",
+      "1703.06345v1/table_03.csv/5.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/7.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/9.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/10.4": "confidence 0.79 < 0.8"
+    }
+  },
+  {
+    "sequence": 138,
+    "step": "filtering::best_result_filtering::filtered",
+    "time": "2026-10-22T19:06:16.125028+08:00",
+    "proposals_path": "raw_outputs/events/138_proposals.json",
+    "proposal_count": 23,
+    "kept_ids": [
+      "1703.06345v1/table_03.csv/9.5",
+      "1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.3"
+    ],
+    "removed_reasons": {
+      "1703.06345v1/table_03.csv/1.1": "model-competing",
+      "1703.06345v1/table_03.csv/1.2": "model-competing",
+      "1703.06345v1/table_03.csv/1.5": "model-competing",
+      "1703.06345v1/table_03.csv/2.2": "model-competing",
+      "1703.06345v1/table_03.csv/3.2": "model-competing",
+      "1703.06345v1/table_03.csv/4.1": "model-competing",
+      "1703.06345v1/table_03.csv/4.2": "model-competing",
+      "1703.06345v1/table_03.csv/4.5": "model-competing",
+      "1703.06345v1/table_03.csv/5.2": "model-competing",
+      "1703.06345v1/table_03.csv/5.3": "model-competing",
+      "1703.06345v1/table_03.csv/6.5": "model-competing",
+      "1703.06345v1/table_03.csv/7.2": "model-competing",
+      "1703.06345v1/table_03.csv/7.3": "model-competing",
+      "1703.06345v1/table_03.csv/8.2": "model-competing",
+      "1703.06345v1/table_03.csv/8.5": "model-competing",
+      "1703.06345v1/table_03.csv/9.1": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/9.2": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/9.3": "replaced by 1703.06345v1/table_03.csv/10.3",
+      "1703.06345v1/table_03.csv/10.2": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.5": "replaced by 1703.06345v1/table_03.csv/9.5"
+    }
+  },
+  {
+    "sequence": 139,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:06:16.128404+08:00",
+    "proposals_path": "raw_outputs/events/139_proposals.json",
+    "proposal_count": 63,
+    "kept_ids": [
+      "1703.06345v1/table_03.csv/9.5",
+      "1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.3"
+    ],
+    "removed_reasons": {
+      "1703.06345v1/table_02.csv/1.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.6": "empty-model-type",
+      "1703.06345v1/table_03.csv/1.1": "model-competing",
+      "1703.06345v1/table_03.csv/1.2": "model-competing",
+      "1703.06345v1/table_03.csv/1.5": "model-competing",
+      "1703.06345v1/table_03.csv/2.2": "model-competing",
+      "1703.06345v1/table_03.csv/3.2": "model-competing",
+      "1703.06345v1/table_03.csv/4.1": "model-competing",
+      "1703.06345v1/table_03.csv/4.2": "model-competing",
+      "1703.06345v1/table_03.csv/4.5": "model-competing",
+      "1703.06345v1/table_03.csv/5.2": "model-competing",
+      "1703.06345v1/table_03.csv/5.3": "model-competing",
+      "1703.06345v1/table_03.csv/5.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/6.5": "model-competing",
+      "1703.06345v1/table_03.csv/7.2": "model-competing",
+      "1703.06345v1/table_03.csv/7.3": "model-competing",
+      "1703.06345v1/table_03.csv/7.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/8.2": "model-competing",
+      "1703.06345v1/table_03.csv/8.5": "model-competing",
+      "1703.06345v1/table_03.csv/9.1": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/9.2": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/9.3": "replaced by 1703.06345v1/table_03.csv/10.3",
+      "1703.06345v1/table_03.csv/9.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/10.2": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/10.5": "replaced by 1703.06345v1/table_03.csv/9.5"
+    }
+  },
+  {
+    "sequence": 140,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:06:16.131655+08:00",
+    "proposals_path": "raw_outputs/events/140_proposals.json",
+    "proposal_count": 3,
+    "kept_ids": [
+      "1703.06345v1/table_03.csv/9.5",
+      "1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.3"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 141,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:06:16.134974+08:00",
+    "proposals_path": "raw_outputs/events/141_proposals.json",
+    "proposal_count": 63,
+    "kept_ids": [
+      "1703.06345v1/table_03.csv/9.5",
+      "1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.3"
+    ],
+    "removed_reasons": {
+      "1703.06345v1/table_02.csv/1.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/1.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/2.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/3.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/4.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/5.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/6.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/7.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/8.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/9.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/10.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/11.6": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.4": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.5": "empty-model-type",
+      "1703.06345v1/table_02.csv/12.6": "empty-model-type",
+      "1703.06345v1/table_03.csv/1.1": "model-competing",
+      "1703.06345v1/table_03.csv/1.2": "model-competing",
+      "1703.06345v1/table_03.csv/1.5": "model-competing",
+      "1703.06345v1/table_03.csv/2.2": "model-competing",
+      "1703.06345v1/table_03.csv/3.2": "model-competing",
+      "1703.06345v1/table_03.csv/4.1": "model-competing",
+      "1703.06345v1/table_03.csv/4.2": "model-competing",
+      "1703.06345v1/table_03.csv/4.5": "model-competing",
+      "1703.06345v1/table_03.csv/5.2": "model-competing",
+      "1703.06345v1/table_03.csv/5.3": "model-competing",
+      "1703.06345v1/table_03.csv/5.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/6.5": "model-competing",
+      "1703.06345v1/table_03.csv/7.2": "model-competing",
+      "1703.06345v1/table_03.csv/7.3": "model-competing",
+      "1703.06345v1/table_03.csv/7.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/8.2": "model-competing",
+      "1703.06345v1/table_03.csv/8.5": "model-competing",
+      "1703.06345v1/table_03.csv/9.1": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/9.2": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/9.3": "replaced by 1703.06345v1/table_03.csv/10.3",
+      "1703.06345v1/table_03.csv/9.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/10.2": "replaced by 1703.06345v1/table_03.csv/10.1",
+      "1703.06345v1/table_03.csv/10.4": "confidence 0.79 < 0.8",
+      "1703.06345v1/table_03.csv/10.5": "replaced by 1703.06345v1/table_03.csv/9.5"
+    }
+  }
+]

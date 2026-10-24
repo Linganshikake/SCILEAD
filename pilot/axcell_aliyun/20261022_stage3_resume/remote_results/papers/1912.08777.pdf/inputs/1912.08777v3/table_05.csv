@@ -1,0 +1,42 @@
+<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>,<bold>Pre-training (default unless otherwise specified in section <ref id='S6'>6</ref>)</bold>
+Model,Learning rate,Label smoothing,Num of steps,Batch size,Objective,Corpus,Max input tokens,Max target tokens
+PEGASUSBASE,0.1,0.0,500k,256,Ind-Orig,c4,512,256
+PEGASUSLARGE,0.1,0.0,500k,8192,Ind-Orig,c4 or HugeNews,512,256
+"<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>","<bold>Fine-tuning of PEGASUSBASE in Figure <ref id='S6-F3'>3</ref>, <ref id='S6-F4'>4</ref>, <ref id='S6-F5'>5</ref>, <ref id='A2-F1'>B.1</ref> and Table <ref id='S6-T1'>1</ref></bold>"
+Dataset,Learning rate,Label smoothing,Num of steps,Batch size,Beam size,Beam alpha,Max input tokens,Max target tokens
+XSum,5e-4,0.1,50k,256,1,-,512,64
+CNN/DailyMail,5e-4,0.1,50k,256,1,-,512,128
+NEWSROOM,5e-4,0.1,50k,256,1,-,512,128
+Multi-News,5e-4,0.1,50k,256,1,-,512,256
+WikiHow,5e-4,0.1,50k,256,1,-,512,256
+Reddit TIFU,5e-4,0.1,50k,256,1,-,512,128
+BIGPATENT,0.01,0.1,300k,256,1,-,512,256
+arXiv,5e-4,0.1,50k,256,1,-,512,256
+PubMed,5e-4,0.1,50k,256,1,-,512,256
+Gigaword,5e-4,0.1,50k,256,1,-,128,32
+AESLC,5e-4,0.1,50k,256,1,-,512,32
+BillSum,5e-4,0.1,50k,256,1,-,512,256
+TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>,TransformerBASE<bold> in Table <ref id='S6-T1'>1</ref></bold>
+Dataset,Learning rate,Label smoothing,Num of steps,Batch size,Beam size,Beam alpha,Max input tokens,Max target tokens
+BIGPATENT,0.01,0.1,300k,256,1,-,512,256
+AESLC,5e-4,0.1,300k,256,1,-,512,32
+Others,5e-3,0.1,300k,256,1,-,Same as PEGASUSBASE,Same as PEGASUSBASE
+<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Table <ref id='S6-T1'>1</ref> and <ref id='S6-T2'>2</ref></bold>
+Dataset,Learning rate,Label smoothing,Num of steps,Batch size,Beam size,Beam alpha,Max input tokens,Max target tokens
+XSum(C4),1e-4,0.1,130k,256,8,0.8,512,64
+XSum(HugeNews),1e-4,0.1,80k,256,8,0.8,512,64
+CNN/DailyMail(C4),5e-5,0.1,220k,256,8,0.8,1024,128
+CNN/DailyMail(HugeNews),5e-5,0.1,170k,256,8,0.9,1024,128
+NEWSROOM,4e-4,0.1,104k,256,8,0.8,512,128
+Multi-News,5e-5,0.1,80k,256,8,0.9,1024,256
+WikiHow,8e-4,0.1,50k,256,8,0.6,512,256
+Reddit TIFU,1e-4,0.1,12k,256,8,0.6,512,128
+BIGPATENT,5e-3,0.1,300k,256,8,0.7,1024,256
+arXiv,8e-4,0.1,74k,256,8,0.8,1024,256
+PubMed,2e-4,0.1,100k,256,8,0.8,1024,256
+Gigaword,8e-4,0.1,90k,256,8,0.6,128,32
+AESLC,2e-4,0.1,16k,256,8,0.6,512,32
+BillSum,2e-4,0.1,100k,256,8,0.8,1024,256
+<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>,<bold>Fine-tuning of PEGASUSLARGE in Figure <ref id='S6-F6'>6</ref></bold>
+Dataset,Learning rate,Label smoothing,Num of steps,Batch size,Beam size,Beam alpha,Max input tokens,Max target tokens
+all,5e-4,0.1,2k,256,1,-,Same as PEGASUSBASE,Same as PEGASUSBASE

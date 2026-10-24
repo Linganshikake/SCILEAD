@@ -1,0 +1,30 @@
+,,,,,,,,
+2*Method,CCG,Chunking,NER,FGN,POS,Dependency Parsing,Dependency Parsing,Translation
+,Acc.,F1,F1,F1,Acc.,UAS,LAS,BLEU
+,,,,,,,,
+LSTM-CNN-CRF Ma and Hovy (<ref id='bib-bib44'>2016</ref>),,,91.21,,97.55,,,
+LSTM-CNN Chiu and Nichols (<ref id='bib-bib7'>2016</ref>),,,91.62 ± 0.33,86.28 ± 0.26,,,,
+ID-CNN-CRF Strubell et al. (<ref id='bib-bib73'>2017</ref>),,,90.65 ± 0.15,86.84 ± 0.19,,,,
+Tri-Trained LSTM Lewis et al. (<ref id='bib-bib36'>2016</ref>),94.7,,,,,,,
+Shortcut LSTM Wu et al. (<ref id='bib-bib83'>2017</ref>),95.08,,,,97.53,,,
+JMT* Hashimoto et al. (<ref id='bib-bib18'>2017</ref>),,95.77,,,97.55,94.67,92.90,
+LM-LSTM-CNN-CRF Liu et al. (<ref id='bib-bib39'>2017</ref>),,95.96 ± 0.08,91.71 ± 0.10,,97.53 ± 0.03,,,
+TagLM† Peters et al. (<ref id='bib-bib58'>2017</ref>),,96.37 ± 0.05,91.93 ± 0.19,,,,,
+ELMo† Peters et al. (<ref id='bib-bib59'>2018</ref>),,,92.22 ± 0.10,,,,,
+,,,,,,,,
+NPM Ma and Hovy (<ref id='bib-bib45'>2017</ref>),,,,,,94.9,93.0,
+Deep Biaffine Dozat and Manning (<ref id='bib-bib15'>2017</ref>),,,,,,95.74,94.08,
+Stack Pointer Ma et al. (<ref id='bib-bib46'>2018</ref>),,,,,,95.87,94.19,
+,,,,,,,,
+Stanford Luong and Manning (<ref id='bib-bib42'>2015</ref>),,,,,,,,23.3
+Google Luong et al. (<ref id='bib-bib40'>2017</ref>),,,,,,,,26.1
+,,,,,,,,
+Supervised,94.94 ± 0.02,95.10 ± 0.06,91.16 ± 0.09,87.48 ± 0.08,97.60 ± 0.02,95.08 ± 0.03,93.27 ± 0.03,28.88 ± 0.12
+Virtual Adversarial Training*,95.07 ± 0.04,95.06 ± 0.06,91.75 ± 0.10,87.91 ± 0.11,97.64 ± 0.03,95.44 ± 0.06,93.72 ± 0.07,–
+Word Dropout*,95.20 ± 0.04,95.79 ± 0.08,92.14 ± 0.11,88.06 ± 0.09,97.66 ± 0.01,95.56 ± 0.05,93.80 ± 0.08,29.33 ± 0.10
+ELMo*,95.79 ± 0.04,96.50 ± 0.03,92.24 ± 0.09,88.49 ± 0.12,97.72 ± 0.01,96.22 ± 0.05,94.44 ± 0.06,29.34 ± 0.11
+ELMo + Multi-task*†,95.91 ± 0.05,96.83 ± 0.03,92.32 ± 0.12,88.37 ± 0.16,<bold>97.79 ± 0.03</bold>,96.40 ± 0.04,94.79 ± 0.05,–
+CVT*,95.65 ± 0.04,96.58 ± 0.04,92.34 ± 0.06,88.68 ± 0.14,97.70 ± 0.03,95.86 ± 0.03,94.06 ± 0.02,<bold>29.58 ± 0.07</bold>
+CVT + Multi-Task*†,95.97 ± 0.04,96.85 ± 0.05,92.42 ± 0.08,88.42 ± 0.13,97.76 ± 0.02,96.44 ± 0.04,94.83 ± 0.06,–
+CVT + Multi-Task + Large*†,<bold>96.05 ± 0.03</bold>,<bold>96.98 ± 0.05</bold>,<bold>92.61 ± 0.09</bold>,<bold>88.81 ± 0.09</bold>,97.74 ± 0.02,<bold>96.61 ± 0.04</bold>,<bold>95.02 ± 0.04</bold>,–
+,,,,,,,,

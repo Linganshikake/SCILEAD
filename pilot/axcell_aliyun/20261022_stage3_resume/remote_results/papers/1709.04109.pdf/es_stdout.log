@@ -1,0 +1,42 @@
+[2026-10-22T11:08:02,318][INFO ][o.e.e.NodeEnvironment    ] [buGKv8_] using [1] data paths, mounts [[/usr/share/elasticsearch/data (/dev/nvme0n1p3)]], net usable_space [55.7gb], net total_space [78.3gb], types [ext4]
+[2026-10-22T11:08:02,320][INFO ][o.e.e.NodeEnvironment    ] [buGKv8_] heap size [989.8mb], compressed ordinary object pointers [true]
+[2026-10-22T11:08:02,321][INFO ][o.e.n.Node               ] [buGKv8_] node name derived from node ID [buGKv8_jS4mivOt0Ltlv6Q]; set [node.name] to override
+[2026-10-22T11:08:02,321][INFO ][o.e.n.Node               ] [buGKv8_] version[6.7.1], pid[1], build[oss/docker/2f32220/2019-04-02T15:59:27.961366Z], OS[Linux/5.15.0-191-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/12/12+33]
+[2026-10-22T11:08:02,321][INFO ][o.e.n.Node               ] [buGKv8_] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/tmp/elasticsearch-2038378150048631304, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Djava.locale.providers=COMPAT, -XX:UseAVX=2, -Xms1g, -Xmx1g, -Des.path.home=/usr/share/elasticsearch, -Des.path.conf=/usr/share/elasticsearch/config, -Des.distribution.flavor=oss, -Des.distribution.type=docker]
+[2026-10-22T11:08:02,998][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [aggs-matrix-stats]
+[2026-10-22T11:08:02,998][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [analysis-common]
+[2026-10-22T11:08:02,998][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [ingest-common]
+[2026-10-22T11:08:02,998][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [ingest-geoip]
+[2026-10-22T11:08:02,998][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [ingest-user-agent]
+[2026-10-22T11:08:02,998][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [lang-expression]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [lang-mustache]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [lang-painless]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [mapper-extras]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [parent-join]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [percolator]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [rank-eval]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [reindex]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [repository-url]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [transport-netty4]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] loaded module [tribe]
+[2026-10-22T11:08:02,999][INFO ][o.e.p.PluginsService     ] [buGKv8_] no plugins loaded
+[2026-10-22T11:08:05,807][INFO ][o.e.d.DiscoveryModule    ] [buGKv8_] using discovery type [zen] and host providers [settings]
+[2026-10-22T11:08:06,207][INFO ][o.e.n.Node               ] [buGKv8_] initialized
+[2026-10-22T11:08:06,207][INFO ][o.e.n.Node               ] [buGKv8_] starting ...
+[2026-10-22T11:08:06,330][INFO ][o.e.t.TransportService   ] [buGKv8_] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2026-10-22T11:08:06,392][WARN ][o.e.b.BootstrapChecks    ] [buGKv8_] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2026-10-22T11:08:09,419][INFO ][o.e.c.s.MasterService    ] [buGKv8_] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {buGKv8_}{buGKv8_jS4mivOt0Ltlv6Q}{69mpV6b6ToK6kp0D-MRe3w}{localhost}{127.0.0.1:9300}
+[2026-10-22T11:08:09,421][INFO ][o.e.c.s.ClusterApplierService] [buGKv8_] new_master {buGKv8_}{buGKv8_jS4mivOt0Ltlv6Q}{69mpV6b6ToK6kp0D-MRe3w}{localhost}{127.0.0.1:9300}, reason: apply cluster state (from master [master {buGKv8_}{buGKv8_jS4mivOt0Ltlv6Q}{69mpV6b6ToK6kp0D-MRe3w}{localhost}{127.0.0.1:9300} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2026-10-22T11:08:09,429][INFO ][o.e.h.n.Netty4HttpServerTransport] [buGKv8_] publish_address {172.17.0.2:9200}, bound_addresses {[::]:9200}
+[2026-10-22T11:08:09,429][INFO ][o.e.n.Node               ] [buGKv8_] started
+[2026-10-22T11:08:09,434][INFO ][o.e.g.GatewayService     ] [buGKv8_] recovered [0] indices into cluster_state
+[2026-10-22T11:08:16,478][WARN ][o.e.d.c.m.MetaDataCreateIndexService] [buGKv8_] the default number of shards will change from [5] to [1] in 7.0.0; if you wish to continue using the default of [5] shards, you must manage this on the create index request or with an index template
+[2026-10-22T11:08:16,502][INFO ][o.e.c.m.MetaDataCreateIndexService] [buGKv8_] [paper-fragments] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2026-10-22T11:08:16,792][INFO ][o.e.c.m.MetaDataMappingService] [buGKv8_] [paper-fragments/5AM6GhmnROyEnSOFQk8Weg] create_mapping [_doc]
+[2026-10-22T11:08:17,215][WARN ][o.e.d.c.m.MetaDataCreateIndexService] [buGKv8_] the default number of shards will change from [5] to [1] in 7.0.0; if you wish to continue using the default of [5] shards, you must manage this on the create index request or with an index template
+[2026-10-22T11:08:17,217][INFO ][o.e.c.m.MetaDataCreateIndexService] [buGKv8_] [papers] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2026-10-22T11:08:17,315][INFO ][o.e.c.m.MetaDataMappingService] [buGKv8_] [papers/b4D_8HCHToufFTpywK3O7g] create_mapping [_doc]
+[2026-10-22T11:09:35,758][INFO ][o.e.n.Node               ] [buGKv8_] stopping ...
+[2026-10-22T11:09:35,830][INFO ][o.e.n.Node               ] [buGKv8_] stopped
+[2026-10-22T11:09:35,830][INFO ][o.e.n.Node               ] [buGKv8_] closing ...
+[2026-10-22T11:09:35,833][INFO ][o.e.n.Node               ] [buGKv8_] closed

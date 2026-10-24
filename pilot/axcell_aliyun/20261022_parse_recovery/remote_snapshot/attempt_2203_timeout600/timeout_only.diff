@@ -1,0 +1,11 @@
+--- original/latex2html.sh
++++ RECOVERY_TIMEOUT_600/latex2html.sh
+@@ -29,7 +29,7 @@
+ MAINTEX=$(python3 /files/guess_main.py "$SOURCE_DIR")
+ [ ! -f "$MAINTEX" ] && exit 1
+ 
+-timeout -s KILL 300 engrafo "$MAINTEX" /files/output
++timeout -s KILL 600 engrafo "$MAINTEX" /files/output
+ 
+ [ ! -f /files/output/index.html ] && exit 117
+ cp /files/output/index.html "$OUTPUT_DIR/$OUTNAME"

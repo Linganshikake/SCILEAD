@@ -1,0 +1,19 @@
+{
+  "revision": 2,
+  "base_configuration_sha256": "cef0a7b210d8c00ac4a173609538366ba06383f40aee5a9774d8aa8960f49aa4",
+  "scientific_method_unchanged": true,
+  "parse_one_sha256_unchanged": true,
+  "scripts": {
+    "parse_one.py": "f6a52b77c07b355295c25a230865542c863d8067c9abc2282cbe69d8b57f49c2",
+    "policy.py": "1557dd80fa96b9063ab8dcc2e5f0d98547667a6f0b4465f8882e726fbcc5df45",
+    "monitor.py": "8fd0dc814b5b272f65ef3fd1c91125276120c99ec7d812eabd3142f1d2d49fb5",
+    "batch_parse.py": "9a0e08ea81ca7f17e5a87b25b5ec6652d1923b40fa970665aa0fe081d98d905e"
+  },
+  "fixes": [
+    "Protect child launch and owner write with cleanup finally",
+    "Stop producer group before task containers",
+    "Cleanup failure overrides paper timeout",
+    "Recover complete interrupted stage and unattempted resource-blocked state only"
+  ],
+  "automatic_retry_failed_papers": false
+}

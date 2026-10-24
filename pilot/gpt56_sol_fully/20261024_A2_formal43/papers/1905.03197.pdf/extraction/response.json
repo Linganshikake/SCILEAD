@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231759259144794548268d9d69wwwUlNr",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792778366,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Abstractive summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-1\",\"Result\":\"43.33\"},{\"Task\":\"Abstractive summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-2\",\"Result\":\"20.21\"},{\"Task\":\"Abstractive summarization\",\"Dataset\":\"CNN/DailyMail\",\"Metric\":\"ROUGE-L\",\"Result\":\"40.51\"},{\"Task\":\"Abstractive summarization (10K training examples)\",\"Dataset\":\"Gigaword\",\"Metric\":\"ROUGE-1\",\"Result\":\"32.96\"},{\"Task\":\"Abstractive summarization (10K training examples)\",\"Dataset\":\"Gigaword\",\"Metric\":\"ROUGE-2\",\"Result\":\"14.68\"},{\"Task\":\"Abstractive summarization (10K training examples)\",\"Dataset\":\"Gigaword\",\"Metric\":\"ROUGE-L\",\"Result\":\"30.56\"},{\"Task\":\"Abstractive summarization (full training set)\",\"Dataset\":\"Gigaword\",\"Metric\":\"ROUGE-1\",\"Result\":\"38.45\"},{\"Task\":\"Abstractive summarization (full training set)\",\"Dataset\":\"Gigaword\",\"Metric\":\"ROUGE-2\",\"Result\":\"19.45\"},{\"Task\":\"Abstractive summarization (full training set)\",\"Dataset\":\"Gigaword\",\"Metric\":\"ROUGE-L\",\"Result\":\"35.75\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD development set\",\"Metric\":\"Exact Match\",\"Result\":\"80.5\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"SQuAD development set\",\"Metric\":\"F1\",\"Result\":\"83.4\"},{\"Task\":\"Extractive question answering\",\"Dataset\":\"CoQA development set\",\"Metric\":\"F1\",\"Result\":\"84.9\"},{\"Task\":\"Generative question answering\",\"Dataset\":\"CoQA development set\",\"Metric\":\"F1\",\"Result\":\"82.5\"},{\"Task\":\"Answer-aware question generation (original split)\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"BLEU-4\",\"Result\":\"22.12\"},{\"Task\":\"Answer-aware question generation (original split)\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"METEOR\",\"Result\":\"25.06\"},{\"Task\":\"Answer-aware question generation (original split)\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"ROUGE-L\",\"Result\":\"51.07\"},{\"Task\":\"Answer-aware question generation (reversed development-test split)\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"BLEU-4\",\"Result\":\"25.61\"},{\"Task\":\"Answer-aware question generation (reversed development-test split)\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"METEOR\",\"Result\":\"23.75\"},{\"Task\":\"Answer-aware question generation (reversed development-test split)\",\"Dataset\":\"SQuAD 1.1\",\"Metric\":\"ROUGE-L\",\"Result\":\"52.04\"},{\"Task\":\"Response generation\",\"Dataset\":\"DSTC7\",\"Metric\":\"NIST-4\",\"Result\":\"1.83\"},{\"Task\":\"Response generation\",\"Dataset\":\"DSTC7\",\"Metric\":\"BLEU-4\",\"Result\":\"4.39\"},{\"Task\":\"Response generation\",\"Dataset\":\"DSTC7\",\"Metric\":\"METEOR\",\"Result\":\"8.27\"},{\"Task\":\"Response generation\",\"Dataset\":\"DSTC7\",\"Metric\":\"Entropy-4\",\"Result\":\"9.195\"},{\"Task\":\"Response generation\",\"Dataset\":\"DSTC7\",\"Metric\":\"Div-1\",\"Result\":\"0.120\"},{\"Task\":\"Response generation\",\"Dataset\":\"DSTC7\",\"Metric\":\"Div-2\",\"Result\":\"0.391\"},{\"Task\":\"Response generation\",\"Dataset\":\"DSTC7\",\"Metric\":\"Average length\",\"Result\":\"14.807\"},{\"Task\":\"Acceptability classification\",\"Dataset\":\"CoLA\",\"Metric\":\"Matthews correlation coefficient\",\"Result\":\"61.1\"},{\"Task\":\"Sentiment classification\",\"Dataset\":\"SST-2\",\"Metric\":\"Accuracy\",\"Result\":\"94.5\"},{\"Task\":\"Paraphrase classification\",\"Dataset\":\"MRPC\",\"Metric\":\"F1\",\"Result\":\"90.0\"},{\"Task\":\"Semantic textual similarity\",\"Dataset\":\"STS-B\",\"Metric\":\"Spearman correlation\",\"Result\":\"87.7\"},{\"Task\":\"Paraphrase classification\",\"Dataset\":\"QQP\",\"Metric\":\"F1\",\"Result\":\"71.7\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"MNLI matched\",\"Metric\":\"Accuracy\",\"Result\":\"87.0\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"MNLI mismatched\",\"Metric\":\"Accuracy\",\"Result\":\"85.9\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"QNLI\",\"Metric\":\"Accuracy\",\"Result\":\"92.7\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"RTE\",\"Metric\":\"Accuracy\",\"Result\":\"70.9\"},{\"Task\":\"Natural language inference\",\"Dataset\":\"WNLI\",\"Metric\":\"Accuracy\",\"Result\":\"65.1\"},{\"Task\":\"Diagnostic natural language inference\",\"Dataset\":\"AX\",\"Metric\":\"Accuracy\",\"Result\":\"38.4\"},{\"Task\":\"General language understanding\",\"Dataset\":\"GLUE\",\"Metric\":\"Aggregate score\",\"Result\":\"80.8\"}]",
+        "reasoning_content": "**Extracting summarization metrics**\n\nI need to extract the best proposed result tuples and parse the associated tables for various datasets. The summarization metrics for CNN/DM and UNILM are 43.33, 20.21, and 40.51. I notice that the Gigaword table includes the 10K values in Table 3. For question answering, the metrics from SQuAD and CoQA need to be compiled, including EM and F1 scores. Additionally, I’ll ensure to format Table 8 properly, considering the necessary distinctions for each dataset split.\n\n**Checking table metrics**\n\nI’m noticing the metrics: NIST 1.83, BLEU 4.39, METEOR 8.07, and entropy 9.195. I need to check if the table headers are aligned correctly. It seems like the best system row shows NIST at 2.523 and BLEU at 2.669, but the METEOR value is missing? The UNILM row has several figures: 1.83, 4.39, 8.07, and also 8.27, along with a few additional metrics. Wait, there are eight figures after UNILM but only seven headers? That needs to be resolved."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3248,
+    "completion_tokens": 2054,
+    "total_tokens": 5302,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 5302,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 3248,
+        "output_tokens": 2054,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 3245,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 1029
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3245,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 3248,
+    "output_tokens": 2054,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "1703.06345.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Text Chunking",
+        "Dataset": "CoNLL-2000",
+        "Metric": "F1",
+        "Result": "91.2"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2003 - English",
+        "Metric": "BERTScore",
+        "Result": "91.21"
+      },
+      {
+        "Task": "Part-of-Speech (POS) Tagging",
+        "Dataset": "QQP",
+        "Metric": "Accuracy",
+        "Result": "95.41"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2002 - Spanish",
+        "Metric": "BERTScore",
+        "Result": "85.77"
+      },
+      {
+        "Task": "Part-of-Speech (POS) Tagging",
+        "Dataset": "Gigaword",
+        "Metric": "Accuracy",
+        "Result": "92.62"
+      },
+      {
+        "Task": "Part-of-Speech (POS) Tagging",
+        "Dataset": "Weibo - Chinese",
+        "Metric": "Accuracy",
+        "Result": "83.65"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "t, with the training instances being Xs and Xt. Let Ws and Wt denote the set of model parameters for the source and target tasks respectively. The model parameters are divided into two sets, task speciﬁc parameters and shared parameters, i.e.,",
+        "metadata": {
+          "filename": "1703.06345.pdf",
+          "page_number": 4,
+          "start_index": 3600,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "learning architectures. Now we compare our approach with state-of-the-art systems on these datasets. We use publicly available pretrained word embeddings as initialization. On the English datasets, fol- lowing previous works that are based on neural networks (Collobert et al., 2011; Huang et al., 2015; Chiu & Nichols, 2015; Ma & Hovy, 2016), we experiment with both the 50-dimensional SENNA embeddings (Collobert et al., 2011) and the 100-dimensional GloVe embeddings (Pennington et al., 2014) and use the development set to choose the embeddings for different tasks and settings. For Spanish and Dutch, we use the 64-dimensional Polyglot embeddings (Al-Rfou et al., 2013). We set the hidden state dimensions to be 300 for the word-level GRU. The initial learning rate for AdaGrad is ﬁxed at 0.01. We use the development set to tune the other hyperparameters of our model. Our results are reported in Table 3. Since there are no standard data splits on the Genia and Twit- ter corpora, we do not include these datasets into our comparison. The results for CoNLL 2000 chunking, CoNLL 2003 NER, and PTB POS tagging are obtained by transfer learning between the three tasks, i.e., transferring from two tasks to the other. The results for Spanish and Dutch NER are obtained with transfer learning between the NER datasets in three languages (English, Spanish, and Dutch). From Table 3, we can draw two conclusions. First, our transfer learning approach achieves new state-of-the-art results on all the considered benchmark datasets except PTB POS tag- ging, which indicates that transfer learning can still improve the performance even on datasets with",
+        "metadata": {
+          "filename": "1703.06345.pdf",
+          "page_number": 8,
+          "start_index": 1799,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Published as a conference paper at ICLR 2017 (b) Transfer from CoNLL 2003 NER to Genia. (c) Transfer from Spanish NER to Genia. (d) Transfer from PTB to Twitter POS tag- ging. tag-_(e) (f) Transfer from CoNLL 2003 NER to PTB POS tagging. (h) Transfer from PTB POS tagging to CoNLL 2003 NER. The statistics of the datasets are described in Table 1. We construct the POS tagging dataset with the instructions described in Toutanova et al. (2003). Note that as a standard practice, the POS tags are extracted from the parsed trees. For the CoNLL 2003 English NER dataset, we follow previous works (Collobert et al., 2011) to append one-hot gazetteer features to the input of the CRF layer for fair comparison. Since there is no standard training/dev/test data split for the Genia and Twitter corpora, we randomly sample 10% for test, 10% for development, and 80% for training. We follow previous work (Barrett & Weber-Jahnke, 2014) to map Genia POS tags to PTB POS tags.",
+        "metadata": {
+          "filename": "1703.06345.pdf",
+          "page_number": 6,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 2: Improvements with transfer learning under multiple low-resource settings (%). “Dom”, “app”, and “ling” denote cross-domain, cross-application, and cross-lingual transfer settings respectively. The numbers following the slashes are labeling rates (chosen such that the number of labeled examples are of the same scale). We evaluate our transfer learning approach on the above datasets. We ﬁx the hyperparameters for all the results reported in this section: we set the character embedding dimension at 25, the word embedding dimension at 50 for English and 64 for Spanish, the dimension of hidden states of the character-level GRUs at 80, the dimension of hidden states of the word-level GRUs at 300, and the initial learning rate at 0.01. Except for the Twitter datasets, these datasets are fairly large. To simulate a low-resource setting, we also use random subsets of the data. We vary the labeling rate of the target task at 0.001, 0.01, 0.1 and 1.0. Given a labeling rate r, we randomly sample a ratio r of the sentences from the training set and discard the rest of the training data—e.g., a labeling rate of 0.001 results in around 900 training tokens on PTB POS tagging (Cf. Table 1). The results on transfer learning are plotted in Figure 2, where we compare the results with and without transfer learning under various labeling rates. The numbers in the y-axes are accuracies for POS tagging, and chunk-level F1 scores for chunking and NER. The numbers are shown in Table 2. We can see that our transfer learning approach consistently improved over the non-transfer results. We also observe that the improvement by transfer learning is more substantial when the labeling rate is lower. For cross-domain transfer, we obtained substantial improvement on the Genia and Twitter corpora by transferring the knowledge from PTB POS tagging and CoNLL 2003 NER. For example, as shown in Figure 2(a), we can obtain an tagging accuracy of 83%+ with zero labels and 92% with only 0.001 labels",
+        "metadata": {
+          "filename": "1703.06345.pdf",
+          "page_number": 7,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Dataset statistics.\nBenchmark Task Language # Training Tokens # Dev Tokens # Test Tokens PTB 2003 CoNLL 2000 Chunking CoNLL 2003 NER CoNLL 2002 NER CoNLL 2002 NER Genia Twitter Twitter POS Tagging English English English Dutch Spanish POS Tagging English POS Tagging English English NER 912,344 211,727 204,567 202,931 207,484 400,658 12,196 36,936 131,768 - 51,578 37,761 51,645 50,525 1,362 4,612 129,654 47,377 46,666 68,994 52,098 49,761 1,627 4,921",
+        "metadata": {
+          "filename": "1703.06345.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Improvements with transfer learning under multiple low-resource settings (%). “Dom”, “app”, and “ling” denote cross-domain, cross-application, and cross-lingual transfer settings respectively. The numbers following the slashes are labeling rates (chosen such that the number of labeled examples are of the same scale).\nSource Target Model Setting Transfer No Transfer Delta PTB Twitter/0.1 CoNLL03 Twitter/0.1 PTB PTB CoNLL03 Spanish CoNLL03 T-A T-A CoNLL03/0.01 T-B CoNLL00/0.01 T-B PTB/0.001 T-B CoNLL03/0.01 T-C T-C Spanish/0.01 dom dom app app app ling ling 83.65 43.24 74.92 86.73 87.47 72.61 60.43 74.80 34.65 68.64 83.49 84.16 68.64 59.84 8.85 8.59 6.28 3.24 3.31 3.97 0.59 PTB Genia/0.001 CoNLL03 Genia/0.001 Genia/0.001 Spanish Genia/0.001 PTB Genia/0.001 PTB T-A T-B T-C T-B T-C dom dom&app dom&app&ling dom dom 92.62 87.47 84.39 89.77 84.65 83.26 83.26 83.26 83.26 83.26 9.36 4.21 1.13 6.51 1.39",
+        "metadata": {
+          "filename": "1703.06345.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Comparison with state-of-the-art results (%).\nCollobert et al. (2011) Passos et al. (2014) Luo et al. (2015) Huang et al. (2015) Gillick et al. (2015) Ling et al. (2015) Lample et al. (2016) Ma & Hovy (2016) Ours w/o transfer Ours w/ transfer 94.32 – – 94.46 – – – – 94.66 95.41 89.59 90.90 91.2 90.10 86.50 – 90.94 91.21 91.20 91.26 – – – – 82.95 – 85.75 – 84.69 85.77 – – – – 82.84 – 81.74 – 85.00 85.19 97.29 – – 97.55 – 97.78 – 97.55 97.55 97.55",
+        "metadata": {
+          "filename": "1703.06345.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

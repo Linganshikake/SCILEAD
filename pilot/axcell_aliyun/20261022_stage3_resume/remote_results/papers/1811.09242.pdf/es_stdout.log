@@ -1,0 +1,42 @@
+[2026-10-22T11:15:37,220][INFO ][o.e.e.NodeEnvironment    ] [MBXIlls] using [1] data paths, mounts [[/usr/share/elasticsearch/data (/dev/nvme0n1p3)]], net usable_space [55.7gb], net total_space [78.3gb], types [ext4]
+[2026-10-22T11:15:37,222][INFO ][o.e.e.NodeEnvironment    ] [MBXIlls] heap size [989.8mb], compressed ordinary object pointers [true]
+[2026-10-22T11:15:37,223][INFO ][o.e.n.Node               ] [MBXIlls] node name derived from node ID [MBXIllswQCOMUid0VoXd2g]; set [node.name] to override
+[2026-10-22T11:15:37,223][INFO ][o.e.n.Node               ] [MBXIlls] version[6.7.1], pid[1], build[oss/docker/2f32220/2019-04-02T15:59:27.961366Z], OS[Linux/5.15.0-191-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/12/12+33]
+[2026-10-22T11:15:37,223][INFO ][o.e.n.Node               ] [MBXIlls] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/tmp/elasticsearch-11559502057666705849, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Djava.locale.providers=COMPAT, -XX:UseAVX=2, -Xms1g, -Xmx1g, -Des.path.home=/usr/share/elasticsearch, -Des.path.conf=/usr/share/elasticsearch/config, -Des.distribution.flavor=oss, -Des.distribution.type=docker]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [aggs-matrix-stats]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [analysis-common]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [ingest-common]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [ingest-geoip]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [ingest-user-agent]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [lang-expression]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [lang-mustache]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [lang-painless]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [mapper-extras]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [parent-join]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [percolator]
+[2026-10-22T11:15:37,912][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [rank-eval]
+[2026-10-22T11:15:37,913][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [reindex]
+[2026-10-22T11:15:37,913][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [repository-url]
+[2026-10-22T11:15:37,913][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [transport-netty4]
+[2026-10-22T11:15:37,913][INFO ][o.e.p.PluginsService     ] [MBXIlls] loaded module [tribe]
+[2026-10-22T11:15:37,913][INFO ][o.e.p.PluginsService     ] [MBXIlls] no plugins loaded
+[2026-10-22T11:15:40,725][INFO ][o.e.d.DiscoveryModule    ] [MBXIlls] using discovery type [zen] and host providers [settings]
+[2026-10-22T11:15:41,127][INFO ][o.e.n.Node               ] [MBXIlls] initialized
+[2026-10-22T11:15:41,127][INFO ][o.e.n.Node               ] [MBXIlls] starting ...
+[2026-10-22T11:15:41,306][INFO ][o.e.t.TransportService   ] [MBXIlls] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2026-10-22T11:15:41,312][WARN ][o.e.b.BootstrapChecks    ] [MBXIlls] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2026-10-22T11:15:44,338][INFO ][o.e.c.s.MasterService    ] [MBXIlls] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {MBXIlls}{MBXIllswQCOMUid0VoXd2g}{Ih1vDsWYQRet2QE7r1-MHQ}{localhost}{127.0.0.1:9300}
+[2026-10-22T11:15:44,340][INFO ][o.e.c.s.ClusterApplierService] [MBXIlls] new_master {MBXIlls}{MBXIllswQCOMUid0VoXd2g}{Ih1vDsWYQRet2QE7r1-MHQ}{localhost}{127.0.0.1:9300}, reason: apply cluster state (from master [master {MBXIlls}{MBXIllswQCOMUid0VoXd2g}{Ih1vDsWYQRet2QE7r1-MHQ}{localhost}{127.0.0.1:9300} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2026-10-22T11:15:44,346][INFO ][o.e.h.n.Netty4HttpServerTransport] [MBXIlls] publish_address {172.17.0.2:9200}, bound_addresses {[::]:9200}
+[2026-10-22T11:15:44,347][INFO ][o.e.n.Node               ] [MBXIlls] started
+[2026-10-22T11:15:44,353][INFO ][o.e.g.GatewayService     ] [MBXIlls] recovered [0] indices into cluster_state
+[2026-10-22T11:15:51,357][WARN ][o.e.d.c.m.MetaDataCreateIndexService] [MBXIlls] the default number of shards will change from [5] to [1] in 7.0.0; if you wish to continue using the default of [5] shards, you must manage this on the create index request or with an index template
+[2026-10-22T11:15:51,392][INFO ][o.e.c.m.MetaDataCreateIndexService] [MBXIlls] [paper-fragments] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2026-10-22T11:15:51,661][INFO ][o.e.c.m.MetaDataMappingService] [MBXIlls] [paper-fragments/oAozhPeqRDu_vXRt4Hm4Lg] create_mapping [_doc]
+[2026-10-22T11:15:52,033][WARN ][o.e.d.c.m.MetaDataCreateIndexService] [MBXIlls] the default number of shards will change from [5] to [1] in 7.0.0; if you wish to continue using the default of [5] shards, you must manage this on the create index request or with an index template
+[2026-10-22T11:15:52,036][INFO ][o.e.c.m.MetaDataCreateIndexService] [MBXIlls] [papers] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2026-10-22T11:15:52,124][INFO ][o.e.c.m.MetaDataMappingService] [MBXIlls] [papers/1BCfu_4HS7WXsSywI6YBcg] create_mapping [_doc]
+[2026-10-22T11:16:48,318][INFO ][o.e.n.Node               ] [MBXIlls] stopping ...
+[2026-10-22T11:16:48,386][INFO ][o.e.n.Node               ] [MBXIlls] stopped
+[2026-10-22T11:16:48,386][INFO ][o.e.n.Node               ] [MBXIlls] closing ...
+[2026-10-22T11:16:48,389][INFO ][o.e.n.Node               ] [MBXIlls] closed

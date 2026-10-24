@@ -1,0 +1,49 @@
+{
+  "image": "arxivvanity/engrafo:b3db888fefa118eacf4f13566204b68ce100b3a6",
+  "digest": "sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e",
+  "command": [
+    "/files/latex2html.sh",
+    "index.html"
+  ],
+  "memory_bytes": 21474836480,
+  "cpus": 6,
+  "network_disabled": true,
+  "remove": true,
+  "mounts": [
+    {
+      "host": "/root/scilead/axcell/envs/axcell-original/lib/python3.7/site-packages/axcell/scripts/latex2html.sh",
+      "target": {
+        "bind": "/files/latex2html.sh",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/root/scilead/axcell/envs/axcell-original/lib/python3.7/site-packages/axcell/scripts/guess_main.py",
+      "target": {
+        "bind": "/files/guess_main.py",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/root/scilead/axcell/envs/axcell-original/lib/python3.7/site-packages/axcell/scripts/patches",
+      "target": {
+        "bind": "/files/patches",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/root/scilead/axcell/runs/20261022_formal/stage2/parsed/unpacked_sources/2105.03654v3",
+      "target": {
+        "bind": "/files/ro-source",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/tmp/tmpmlklh3ic",
+      "target": {
+        "bind": "/files/htmls",
+        "mode": "rw"
+      }
+    }
+  ]
+}

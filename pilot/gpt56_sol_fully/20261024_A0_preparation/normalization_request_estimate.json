@@ -1,0 +1,19 @@
+{
+  "target_model": "gpt-5.6-sol",
+  "exact_new_count": null,
+  "historical_reference_records": 284,
+  "historical_reference_calls": 542,
+  "historical_input_tokens": 173352,
+  "historical_output_tokens": 2021,
+  "reference_total_requests": 585,
+  "reference_extraction_requests": 43,
+  "if_284_records_all_fields_unmatched": {
+    "normalization": 852,
+    "combined": 895
+  },
+  "rule": "Exact match skips; otherwise one call per Task/Dataset/Metric per record; no duplicate-value cache; Result not mapped.",
+  "general_bound": "0 <= normalization_calls <= 3 * actual_new_valid_records",
+  "reusable_model_predictions": 0,
+  "reusable_inputs": "43 cached evidence sets and official templates; no new retrieval",
+  "fee_scenarios": "Omitted per latest user instruction; no fee approval requested; A0 model API prohibition remains."
+}

@@ -1,0 +1,1969 @@
+{
+  "utc_time": "2026-10-22T09:00:03.625440+00:00",
+  "root": "/root/scilead/axcell",
+  "os_release": "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.5 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+  "cpu_count": 8,
+  "nproc": {
+    "exit_code": 0,
+    "stdout": "8\n",
+    "stderr": ""
+  },
+  "cgroup": {
+    "/sys/fs/cgroup/memory.max": null,
+    "/sys/fs/cgroup/memory.current": null,
+    "/sys/fs/cgroup/memory.swap.max": null,
+    "/sys/fs/cgroup/cpu.max": null
+  },
+  "cgroup_membership": "0::/user.slice/user-0.slice/session-227.scope\n",
+  "memory_samples": [
+    {
+      "utc_time": "2026-10-22T08:59:59.534540+00:00",
+      "memory": {
+        "MemTotal": 32952143872,
+        "MemAvailable": 31076491264,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "CommitLimit": 16476069888,
+        "Committed_AS": 2288746496
+      }
+    },
+    {
+      "utc_time": "2026-10-22T09:00:01.536354+00:00",
+      "memory": {
+        "MemTotal": 32952143872,
+        "MemAvailable": 31065378816,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "CommitLimit": 16476069888,
+        "Committed_AS": 2297339904
+      }
+    },
+    {
+      "utc_time": "2026-10-22T09:00:03.538568+00:00",
+      "memory": {
+        "MemTotal": 32952143872,
+        "MemAvailable": 31064907776,
+        "SwapTotal": 0,
+        "SwapFree": 0,
+        "CommitLimit": 16476069888,
+        "Committed_AS": 2293145600
+      }
+    }
+  ],
+  "disk": {
+    "exit_code": 0,
+    "stdout": "Filesystem     Type   1B-blocks        Used   Available Use% Mounted on\n/dev/nvme0n1p3 ext4 84151820288 20468551680 60029587456  26% /\n",
+    "stderr": ""
+  },
+  "inodes": {
+    "exit_code": 0,
+    "stdout": "Filesystem      Inodes  IUsed   IFree IUse% Mounted on\n/dev/nvme0n1p3 5224464 451686 4772778    9% /\n",
+    "stderr": ""
+  },
+  "disk_free_bytes": 60029587456,
+  "mount": {
+    "exit_code": 0,
+    "stdout": "TARGET SOURCE         FSTYPE OPTIONS\n/      /dev/nvme0n1p3 ext4   rw,relatime\n",
+    "stderr": ""
+  },
+  "docker_active": {
+    "exit_code": 0,
+    "stdout": "active\n",
+    "stderr": ""
+  },
+  "docker_version": {
+    "exit_code": 0,
+    "stdout": "{\"Platform\":{\"Name\":\"Docker Engine - Community\"},\"Version\":\"29.9.2\",\"ApiVersion\":\"1.56\",\"MinAPIVersion\":\"1.40\",\"Os\":\"linux\",\"Arch\":\"amd64\",\"Components\":[{\"Name\":\"Engine\",\"Version\":\"29.9.2\",\"Details\":{\"ApiVersion\":\"1.56\",\"Arch\":\"amd64\",\"BuildTime\":\"Tue Oct 20 19:40:48 2026\",\"Experimental\":\"false\",\"GitCommit\":\"0367cbe\",\"GoVersion\":\"go1.26.10\",\"KernelVersion\":\"5.15.0-191-generic\",\"MinAPIVersion\":\"1.40\",\"Module\":\"github.com/moby/moby/v2\",\"ModuleVersion\":\"v2.0.0+unknown\",\"Os\":\"linux\"}},{\"Name\":\"containerd\",\"Version\":\"v2.4.2\",\"Details\":{\"GitCommit\":\"b7a25261e029d68978bbf290df0a62fc819b3c51\"}},{\"Name\":\"runc\",\"Version\":\"1.5.2\",\"Details\":{\"GitCommit\":\"v1.5.2-0-g29dd3dc2\"}},{\"Name\":\"docker-init\",\"Version\":\"0.19.0\",\"Details\":{\"GitCommit\":\"de40ad0\"}}],\"GitCommit\":\"0367cbe\",\"GoVersion\":\"go1.26.10\",\"KernelVersion\":\"5.15.0-191-generic\",\"BuildTime\":\"2026-10-20T19:40:48.000000000+00:00\"}\n",
+    "stderr": ""
+  },
+  "images": [
+    {
+      "reference": "arxivvanity/engrafo:b3db888fefa118eacf4f13566204b68ce100b3a6",
+      "id": "sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e",
+      "digests": [
+        "arxivvanity/engrafo@sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e"
+      ],
+      "size": 11587839085
+    },
+    {
+      "reference": "docker.elastic.co/elasticsearch/elasticsearch-oss:6.7.1",
+      "id": "sha256:a0115e92049eae8a83d89f119c23b69720f2e94af7bf97d170b7316eb0a6ff5b",
+      "digests": [
+        "docker.elastic.co/elasticsearch/elasticsearch-oss@sha256:a0115e92049eae8a83d89f119c23b69720f2e94af7bf97d170b7316eb0a6ff5b"
+      ],
+      "size": 1064589841
+    }
+  ],
+  "owned_containers": [
+    {
+      "id": "74bc0b3f3305",
+      "name": "/axcell-single-es",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 143,
+        "Error": "",
+        "StartedAt": "2026-10-22T07:51:18.787697635Z",
+        "FinishedAt": "2026-10-22T07:55:30.363982463Z"
+      },
+      "memory_limit": 3221225472,
+      "memory_swap_limit": 3221225472,
+      "nano_cpus": 2000000000,
+      "port_bindings": {
+        "9200/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "9200"
+          }
+        ]
+      },
+      "image": "docker.elastic.co/elasticsearch/elasticsearch-oss:6.7.1"
+    }
+  ],
+  "running_containers": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "elasticsearch_port_open": false,
+  "elasticsearch_readiness": "STOPPED_NOT_PROBED_BY_START",
+  "task_tmux": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "no server running on /tmp/tmux-0/default\n"
+  },
+  "top_rss": {
+    "exit_code": 0,
+    "stdout": "  37296   37270 node            486936\n   8625       1 fwupd           171196\n  37270   37266 node            114720\n   7862       1 dockerd         109836\n  37307   37270 node            93316\n   1605       1 AliYunDunMonito 81396\n  37320   37270 node            71920\n   7395       1 containerd      65608\n   8590       1 AliSecCheck     51276\n  36318       1 snapd           35788\n   8463       1 hbrclient       30204\n  21461       1 systemd-journal 28244\n    471       1 multipathd      27104\n   1099       1 tuned           26364\n   1419       1 AliYunDun       24376\n   1251       1 unattended-upgr 21716\n  37214   37163 code-994fd12f8d 21020\n   1055       1 networkd-dispat 20124\n   1033       1 aliyun-service. 19788\n   2022       1 packagekitd     19160\n  74437   74387 python3         17660\n      1       0 systemd         13440\n   1101       1 udisksd         12996\n  37101   19614 sshd            12048\n  21446       1 systemd-resolve 11824\n  74387   19614 sshd            11724\n  74486   19614 sshd            11296\n  74384   19614 sshd            10176\n   8254       1 AliHips         10052\n   8878       1 systemd          9884\n  74485   19614 sshd             8900\n  19614       1 sshd             8732\n  21440       1 systemd-network  8272\n   1161       1 AliYunDunUpdate  7696\n   1086       1 systemd-logind   7300\n   1058       1 polkitd          6784\n  74537   74485 sshd             6700\n  74386   74384 sshd             6556\n   8879    8878 (sd-pam)         6416\n  23293       1 systemd-udevd    5960\n  74536   74486 sftp-server      5808\n  34362       1 rsyslogd         5208\n   1040       1 dbus-daemon      4996\n   8555       1 updater          4700\n  74574   74437 ps               3628\n   1114       1 chronyd          3524\n   1039       1 cron             3104\n   1123    1114 chronyd          2756\n  37163   37101 sh               1932\n   1103       1 atd              1340\n  37381   37214 sh               1136\n   1184       1 agetty           1084\n   1194       1 agetty           1084\n  37266   37214 sh               1080\n  74308   37163 sleep            1076\n      2       0 kthreadd            0\n      3       2 rcu_gp              0\n      4       2 rcu_par_gp          0\n      5       2 slub_flushwq        0\n      6       2 netns               0\n      8       2 kworker/0:0H-ev     0\n     10       2 mm_percpu_wq        0\n     11       2 rcu_tasks_rude_     0\n     12       2 rcu_tasks_trace     0\n     13       2 ksoftirqd/0         0\n     14       2 rcu_sched           0\n     15       2 migration/0         0\n     16       2 idle_inject/0       0\n     18       2 cpuhp/0             0\n     19       2 cpuhp/1             0\n     20       2 idle_inject/1       0\n     21       2 migration/1         0\n     22       2 ksoftirqd/1         0\n     24       2 kworker/1:0H-ev     0\n     25       2 cpuhp/2             0\n     26       2 idle_inject/2       0\n     27       2 migration/2         0\n     28       2 ksoftirqd/2         0\n     30       2 kworker/2:0H-ev     0\n     31       2 cpuhp/3             0\n     32       2 idle_inject/3       0\n     33       2 migration/3         0\n     34       2 ksoftirqd/3         0\n     36       2 kworker/3:0H-ev     0\n     37       2 cpuhp/4             0\n     38       2 idle_inject/4       0\n     39       2 migration/4         0\n     40       2 ksoftirqd/4         0\n     42       2 kworker/4:0H-ev     0\n     43       2 cpuhp/5             0\n     44       2 idle_inject/5       0\n     45       2 migration/5         0\n     46       2 ksoftirqd/5         0\n     48       2 kworker/5:0H-ev     0\n     49       2 cpuhp/6             0\n     50       2 idle_inject/6       0\n     51       2 migration/6         0\n     52       2 ksoftirqd/6         0\n     54       2 kworker/6:0H-ev     0\n     55       2 cpuhp/7             0\n     56       2 idle_inject/7       0\n     57       2 migration/7         0\n     58       2 ksoftirqd/7         0\n     60       2 kworker/7:0H-ev     0\n     61       2 kdevtmpfs           0\n     62       2 inet_frag_wq        0\n     63       2 kauditd             0\n     64       2 khungtaskd          0\n     65       2 oom_reaper          0\n     66       2 writeback           0\n     67       2 kcompactd0          0\n     68       2 ksmd                0\n     69       2 khugepaged          0\n    116       2 kintegrityd         0\n    117       2 kblockd             0\n    118       2 blkcg_punt_bio      0\n    120       2 tpm_dev_wq          0\n    121       2 ata_sff             0\n    122       2 md                  0\n    123       2 edac-poller         0\n    124       2 devfreq_wq          0\n    126       2 watchdogd           0\n    129       2 kworker/3:1H-kb     0\n    131       2 kswapd0             0\n    132       2 ecryptfs-kthrea     0\n    134       2 kthrotld            0\n    138       2 acpi_thermal_pm     0\n    140       2 vfio-irqfd-clea     0\n    141       2 mld                 0\n    142       2 kworker/6:1H-kb     0\n    143       2 ipv6_addrconf       0\n    152       2 kstrp               0\n    155       2 zswap-shrink        0\n    156       2 kworker/u17:0       0\n    163       2 charger_manager     0\n    186       2 kworker/7:1H-kb     0\n    221       2 kworker/2:1H-kb     0\n    222       2 nvme-wq             0\n    224       2 nvme-reset-wq       0\n    225       2 nvme-delete-wq      0\n    226       2 cryptd              0\n    227       2 kworker/0:1H-kb     0\n    228       2 kworker/4:1H-kb     0\n    256       2 kworker/5:1H-kb     0\n    260       2 kworker/1:1H-kb     0\n    314       2 raid5wq             0\n    361       2 jbd2/nvme0n1p3-     0\n    362       2 ext4-rsv-conver     0\n    465       2 kaluad              0\n    468       2 kmpath_rdacd        0\n    469       2 kmpathd             0\n    470       2 kmpath_handlerd     0\n  48317       2 kworker/5:1-eve     0\n  51299       2 kworker/2:2-ine     0\n  52307       2 kworker/7:2-eve     0\n  52769       2 kworker/u16:4-e     0\n  55735       2 kworker/4:0-eve     0\n  56620       2 kworker/3:1-eve     0\n  57359       2 kworker/u16:5-f     0\n  58576       2 kworker/u16:0-f     0\n  58907       2 kworker/u16:2-e     0\n  59116       2 kworker/u16:7-e     0\n  59117       2 kworker/0:0-eve     0\n  59433       2 kworker/2:1-eve     0\n  59453       2 kworker/u16:8-f     0\n  59649       2 kworker/6:0-cgr     0\n  59669       2 kworker/u16:9-f     0\n  63425       2 kworker/0:1-cgr     0\n  63439       2 kworker/u16:1-f     0\n  63440       2 kworker/1:1-eve     0\n  63680       2 kworker/7:1-eve     0\n  63839       2 kworker/4:1-cgr     0\n  64214       2 kworker/6:1-mm_     0\n  64234       2 kworker/u16:3-f     0\n  64235       2 kworker/2:0-eve     0\n  64480       2 kworker/u16:6-e     0\n  64481       2 kworker/5:0-eve     0\n  66746       2 kworker/1:0-eve     0\n  67307       2 kworker/u16:10-     0\n  67547       2 kworker/3:2-eve     0\n  69429       2 kworker/0:2-eve     0\n  69450       2 kworker/2:3         0\n  69957       2 kworker/4:2-eve     0\n  69977       2 kworker/7:0-eve     0\n  70939       2 kworker/4:3-eve     0\n  71325       2 kworker/5:2-eve     0\n  71345       2 kworker/6:2-cgr     0\n  71626       2 kworker/u16:11      0\n  73909       2 kworker/1:2-cgr     0\n",
+    "stderr": ""
+  },
+  "pip_check": {
+    "exit_code": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  "packages": {
+    "python": "3.7.1 | packaged by conda-forge | (default, Mar 13 2019, 12:57:14) \n[GCC 7.3.0]",
+    "prefix": "/root/scilead/axcell/envs/axcell-original",
+    "packages": {
+      "certifi": "2024.8.30",
+      "pytz": "2024.2",
+      "regex": "2019.11.1",
+      "setuptools": "59.8.0",
+      "cryptography": "38.0.2",
+      "attrs": "24.2.0",
+      "packaging": "23.2",
+      "pyopenssl": "23.2.0",
+      "pip": "21.0.1",
+      "pillow": "8.0.1",
+      "nvidia-ml-py3": "7.352.0",
+      "ipython": "7.5.0",
+      "thinc": "7.3.0",
+      "elasticsearch-dsl": "6.3.1",
+      "elasticsearch": "6.3.1",
+      "tornado": "6.2",
+      "importlib-resources": "6.0.0",
+      "traitlets": "5.9.0",
+      "psutil": "5.6.7",
+      "pyyaml": "5.4.1",
+      "decorator": "5.1.1",
+      "chardet": "5.0.0",
+      "tqdm": "4.67.1",
+      "importlib-metadata": "4.11.4",
+      "pexpect": "4.9.0",
+      "rsa": "4.7.2",
+      "typing-extensions": "4.7.1",
+      "beautifulsoup4": "4.7.1",
+      "conllu": "4.5.3",
+      "lxml": "4.3.4",
+      "docker": "4.1.0",
+      "zipp": "3.15.0",
+      "idna": "3.10",
+      "charset-normalizer": "3.4.0",
+      "matplotlib": "3.3.2",
+      "jsonschema": "3.2.0",
+      "pyparsing": "3.1.4",
+      "preshed": "3.0.8",
+      "requests": "2.31.0",
+      "pycparser": "2.21",
+      "pygments": "2.17.2",
+      "python-dateutil": "2.9.0",
+      "numexpr": "2.8.6",
+      "pybind11": "2.6.1",
+      "soupsieve": "2.3.2.post1",
+      "en-core-web-sm": "2.2.5",
+      "spacy": "2.2.3",
+      "nmslib": "2.1.1",
+      "prompt-toolkit": "2.0.10",
+      "cymem": "2.0.7",
+      "backports.functools-lru-cache": "2.0.0",
+      "botocore": "1.33.13",
+      "awscli": "1.31.13",
+      "urllib3": "1.26.20",
+      "docker-compose": "1.25.5",
+      "numpy": "1.18.1",
+      "six": "1.16.0",
+      "cffi": "1.14.4",
+      "pysocks": "1.7.1",
+      "scipy": "1.7.0",
+      "texttable": "1.7.0",
+      "cached-property": "1.5.2",
+      "asn1crypto": "1.5.1",
+      "kiwisolver": "1.4.4",
+      "appdirs": "1.4.4",
+      "pyahocorasick": "1.4.0",
+      "bottleneck": "1.4.0",
+      "pkgutil-resolve-name": "1.3.10",
+      "torch": "1.3.1+cpu",
+      "fastai": "1.0.55",
+      "unidecode": "1.0.23",
+      "murmurhash": "1.0.9",
+      "brotli": "1.0.9",
+      "srsly": "1.0.5",
+      "jmespath": "1.0.1",
+      "html5lib": "1.0.1",
+      "catalogue": "1.0.0",
+      "axcell": "1.0.0",
+      "websocket-client": "0.59.0",
+      "numba": "0.48.0",
+      "olefile": "0.47",
+      "wheel": "0.42.0",
+      "llvmlite": "0.31.0",
+      "pandas": "0.25.3",
+      "scikit-learn": "0.21.3",
+      "pyrsistent": "0.18.1",
+      "jedi": "0.17.2",
+      "docutils": "0.16",
+      "joblib": "0.13.2",
+      "statsmodels": "0.12.2",
+      "cycler": "0.11.0",
+      "wasabi": "0.10.1",
+      "plac": "0.9.6",
+      "seaborn": "0.9.0",
+      "s3transfer": "0.8.2",
+      "pickleshare": "0.7.5",
+      "parso": "0.7.1",
+      "ptyprocess": "0.7.0",
+      "docopt": "0.6.2",
+      "patsy": "0.5.6",
+      "pyasn1": "0.5.1",
+      "webencodings": "0.5.1",
+      "python-magic": "0.4.15",
+      "colorama": "0.4.4",
+      "torchvision": "0.4.2+cpu",
+      "dockerpty": "0.4.1",
+      "blis": "0.4.1",
+      "docker-pycreds": "0.4.0",
+      "pysbd": "0.3.4",
+      "wcwidth": "0.2.10",
+      "en-core-sci-sm": "0.2.4",
+      "scispacy": "0.2.4",
+      "backcall": "0.2.0",
+      "sentencepiece": "0.1.83",
+      "fastprogress": "0.1.21",
+      "fire": "0.1.3"
+    }
+  },
+  "package_diff_from_single_paper": {},
+  "original_assets": [
+    {
+      "path": "source/axcell/.gitignore",
+      "expected_sha256": "bc4afaa7e8d9de55a3ccb3090a1d8bdc4dab05cf4acdab984a3e4597873b936d",
+      "actual_sha256": "bc4afaa7e8d9de55a3ccb3090a1d8bdc4dab05cf4acdab984a3e4597873b936d",
+      "expected_bytes": 1189,
+      "actual_bytes": 1189,
+      "match": true
+    },
+    {
+      "path": "source/axcell/LICENSE",
+      "expected_sha256": "283ea6cc2997a1a70da0049e09adf9317bb60ca1b51279b65196b83a69e1996b",
+      "actual_sha256": "283ea6cc2997a1a70da0049e09adf9317bb60ca1b51279b65196b83a69e1996b",
+      "expected_bytes": 11323,
+      "actual_bytes": 11323,
+      "match": true
+    },
+    {
+      "path": "source/axcell/MANIFEST.in",
+      "expected_sha256": "bc9588dc629b34e05c6d007144b86e6bfad79efdc3e93b643b936b1752a6c1ca",
+      "actual_sha256": "bc9588dc629b34e05c6d007144b86e6bfad79efdc3e93b643b936b1752a6c1ca",
+      "expected_bytes": 58,
+      "actual_bytes": 58,
+      "match": true
+    },
+    {
+      "path": "source/axcell/README.md",
+      "expected_sha256": "9e080ce10695f71d7e210a5a9a475d9530451d81b11c7b7185be4aa32766c672",
+      "actual_sha256": "9e080ce10695f71d7e210a5a9a475d9530451d81b11c7b7185be4aa32766c672",
+      "expected_bytes": 3747,
+      "actual_bytes": 3747,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/__init__.py",
+      "expected_sha256": "abd958631a924167364e195bbb05e8df4d3da379953b9a4fda83a537cc284a22",
+      "actual_sha256": "abd958631a924167364e195bbb05e8df4d3da379953b9a4fda83a537cc284a22",
+      "expected_bytes": 73,
+      "actual_bytes": 73,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/config.py",
+      "expected_sha256": "c822100b3c028c639dbb01132e931ab0c2144bf4e00d22a4435f0f3f8e0c8ca7",
+      "actual_sha256": "c822100b3c028c639dbb01132e931ab0c2144bf4e00d22a4435f0f3f8e0c8ca7",
+      "expected_bytes": 956,
+      "actual_bytes": 956,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/__init__.py",
+      "expected_sha256": "8e05d461cbb384ed26965d3ad7ebf0ed7539be65595df9f526a705eca9cead90",
+      "actual_sha256": "8e05d461cbb384ed26965d3ad7ebf0ed7539be65595df9f526a705eca9cead90",
+      "expected_bytes": 300,
+      "actual_bytes": 300,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/db.py",
+      "expected_sha256": "c389adfeb5b04e7cd08ef867d51f7429018460a47b93e9e25919cacb66076dc8",
+      "actual_sha256": "c389adfeb5b04e7cd08ef867d51f7429018460a47b93e9e25919cacb66076dc8",
+      "expected_bytes": 101,
+      "actual_bytes": 101,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/doc_utils.py",
+      "expected_sha256": "24e0622750f96d131f702b76ec4410e40a99944f732d11c73f30108df7b0135f",
+      "actual_sha256": "24e0622750f96d131f702b76ec4410e40a99944f732d11c73f30108df7b0135f",
+      "expected_bytes": 10173,
+      "actual_bytes": 10173,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/elastic.py",
+      "expected_sha256": "739b933cb9eae24a7c181b1e4ec144a0985f291861b3deea3da3d9aac6bb1b3f",
+      "actual_sha256": "739b933cb9eae24a7c181b1e4ec144a0985f291861b3deea3da3d9aac6bb1b3f",
+      "expected_bytes": 14427,
+      "actual_bytes": 14427,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/extract_tables.py",
+      "expected_sha256": "0cd5812147baa545a58e51890f5d049bedb09866ca20f0cf95c4c452348b33ea",
+      "actual_sha256": "0cd5812147baa545a58e51890f5d049bedb09866ca20f0cf95c4c452348b33ea",
+      "expected_bytes": 12278,
+      "actual_bytes": 12278,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/json.py",
+      "expected_sha256": "5f1a35007d400395598b9378d651017e01e484b40652662996d239d82b482875",
+      "actual_sha256": "5f1a35007d400395598b9378d651017e01e484b40652662996d239d82b482875",
+      "expected_bytes": 5054,
+      "actual_bytes": 5054,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/paper_collection.py",
+      "expected_sha256": "2a05879ca7d9284c996872ef1aed17cff129e854db03258b0b5c0d642fe02a8f",
+      "actual_sha256": "2a05879ca7d9284c996872ef1aed17cff129e854db03258b0b5c0d642fe02a8f",
+      "expected_bytes": 6058,
+      "actual_bytes": 6058,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/references.py",
+      "expected_sha256": "929eb5b7f93760db0e36fc07e6c8b3b77620a685de023731afef358accd7faaf",
+      "actual_sha256": "929eb5b7f93760db0e36fc07e6c8b3b77620a685de023731afef358accd7faaf",
+      "expected_bytes": 13519,
+      "actual_bytes": 13519,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/structure.py",
+      "expected_sha256": "3cb124a5f2ec0ecf2e7663fd469d865dadf0402920453b53a5af153a31620e28",
+      "actual_sha256": "3cb124a5f2ec0ecf2e7663fd469d865dadf0402920453b53a5af153a31620e28",
+      "expected_bytes": 7984,
+      "actual_bytes": 7984,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/data/table.py",
+      "expected_sha256": "7a9813f5b1485cea027021cdbaa77696d83cea26aa1c7e8ca7b2289d5bf0de12",
+      "actual_sha256": "7a9813f5b1485cea027021cdbaa77696d83cea26aa1c7e8ca7b2289d5bf0de12",
+      "expected_bytes": 13271,
+      "actual_bytes": 13271,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/errors.py",
+      "expected_sha256": "94adb8bb8f7032897c6b0f6ab1e7275615c9ef77b4b4c7ffa573362f3d56b314",
+      "actual_sha256": "94adb8bb8f7032897c6b0f6ab1e7275615c9ef77b4b4c7ffa573362f3d56b314",
+      "expected_bytes": 213,
+      "actual_bytes": 213,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/__init__.py",
+      "expected_sha256": "309032976fcfbc735b105b9f70bc1157d871ae061a1efb35e0de669bcd7a7462",
+      "actual_sha256": "309032976fcfbc735b105b9f70bc1157d871ae061a1efb35e0de669bcd7a7462",
+      "expected_bytes": 184,
+      "actual_bytes": 184,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/cache.py",
+      "expected_sha256": "3c53e623e9793ee6f0a952c77a852ee4c39278e38ab7de3a3cbbc65afa0206ce",
+      "actual_sha256": "3c53e623e9793ee6f0a952c77a852ee4c39278e38ab7de3a3cbbc65afa0206ce",
+      "expected_bytes": 1340,
+      "actual_bytes": 1340,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/datasets.py",
+      "expected_sha256": "60f5ff7e4c5f9c555ecf9def65e34c53303c6749587b38528f7e5acaad9bb5c5",
+      "actual_sha256": "60f5ff7e4c5f9c555ecf9def65e34c53303c6749587b38528f7e5acaad9bb5c5",
+      "expected_bytes": 220,
+      "actual_bytes": 220,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/evaluate.py",
+      "expected_sha256": "c97e4457bc988b1509092de8aa51ac2d6cf4e4ad8378fd7bff3b21d6e76150ed",
+      "actual_sha256": "c97e4457bc988b1509092de8aa51ac2d6cf4e4ad8378fd7bff3b21d6e76150ed",
+      "expected_bytes": 3354,
+      "actual_bytes": 3354,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/explainers.py",
+      "expected_sha256": "1a4d0883e106341e385f27992eafc327cff6d22cd8709b694bd2d5e8d02de506",
+      "actual_sha256": "1a4d0883e106341e385f27992eafc327cff6d22cd8709b694bd2d5e8d02de506",
+      "expected_bytes": 9394,
+      "actual_bytes": 9394,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/interpret.py",
+      "expected_sha256": "5fec5700c6162081f8cf023a27e18479784ee1eafd3b1aafec3fe29fa1e83980",
+      "actual_sha256": "5fec5700c6162081f8cf023a27e18479784ee1eafd3b1aafec3fe29fa1e83980",
+      "expected_bytes": 2845,
+      "actual_bytes": 2845,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/jupyter.py",
+      "expected_sha256": "a87aa65d62d1d46f472cc488e7ae36a343ee4a108176ba64f79d6db95e2a030a",
+      "actual_sha256": "a87aa65d62d1d46f472cc488e7ae36a343ee4a108176ba64f79d6db95e2a030a",
+      "expected_bytes": 1731,
+      "actual_bytes": 1731,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/latex_converter.py",
+      "expected_sha256": "6edd86bfe6d4eedcd1ca912cf09da5dfd74c71a8aae517171be3923470b7a71d",
+      "actual_sha256": "6edd86bfe6d4eedcd1ca912cf09da5dfd74c71a8aae517171be3923470b7a71d",
+      "expected_bytes": 3385,
+      "actual_bytes": 3385,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/optimize.py",
+      "expected_sha256": "3706849ff6a56fe9bc28440c91f81d8cf891934e12f27202bd4aa78a6e280427",
+      "actual_sha256": "3706849ff6a56fe9bc28440c91f81d8cf891934e12f27202bd4aa78a6e280427",
+      "expected_bytes": 11037,
+      "actual_bytes": 11037,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/paper_extractor.py",
+      "expected_sha256": "7884471dec1107a9897a34be5ba5116841a54ba55a3917d1e0fd4b9483ea91fb",
+      "actual_sha256": "7884471dec1107a9897a34be5ba5116841a54ba55a3917d1e0fd4b9483ea91fb",
+      "expected_bytes": 1964,
+      "actual_bytes": 1964,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/precompute_evidences.py",
+      "expected_sha256": "dae5a44a63b35c8f3d7151f8ea0037a85fdec5f6c92cc74fb09066746c2db1f6",
+      "actual_sha256": "dae5a44a63b35c8f3d7151f8ea0037a85fdec5f6c92cc74fb09066746c2db1f6",
+      "expected_bytes": 1891,
+      "actual_bytes": 1891,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/reannotate.py",
+      "expected_sha256": "6babb0dbbe0ba68879dd1b1bb9cca689c785243eec3737b73c0595ad051c0084",
+      "actual_sha256": "6babb0dbbe0ba68879dd1b1bb9cca689c785243eec3737b73c0595ad051c0084",
+      "expected_bytes": 1571,
+      "actual_bytes": 1571,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/results_extractor.py",
+      "expected_sha256": "6f123aed43461ad7c474b9305b6231641a45c54b878fdf82316802b5c52d83a2",
+      "actual_sha256": "6f123aed43461ad7c474b9305b6231641a45c54b878fdf82316802b5c52d83a2",
+      "expected_bytes": 2386,
+      "actual_bytes": 2386,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/table_style.py",
+      "expected_sha256": "08af5762aa0ec7845b30af5bfe4fd34b34b38735a9965a2d65595587c41770c8",
+      "actual_sha256": "08af5762aa0ec7845b30af5bfe4fd34b34b38735a9965a2d65595587c41770c8",
+      "expected_bytes": 3747,
+      "actual_bytes": 3747,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/training.py",
+      "expected_sha256": "61c3ed20bd2df8de92c14c4ef4aa1645f60d0d1ae64314f24c625c85f489cc0b",
+      "actual_sha256": "61c3ed20bd2df8de92c14c4ef4aa1645f60d0d1ae64314f24c625c85f489cc0b",
+      "expected_bytes": 474,
+      "actual_bytes": 474,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/helpers/unpack.py",
+      "expected_sha256": "99799a4bea9cf7543dd2b09dbed2aecdb2fe18ecfbad41af3fce4fccfcf595f1",
+      "actual_sha256": "99799a4bea9cf7543dd2b09dbed2aecdb2fe18ecfbad41af3fce4fccfcf595f1",
+      "expected_bytes": 1590,
+      "actual_bytes": 1590,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/loggers.py",
+      "expected_sha256": "ccca01e33747744a8b983a55f5bc6efd5b9846d6d0b595d2287e9fe0a569101d",
+      "actual_sha256": "ccca01e33747744a8b983a55f5bc6efd5b9846d6d0b595d2287e9fe0a569101d",
+      "expected_bytes": 7747,
+      "actual_bytes": 7747,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/mocks/__init__.py",
+      "expected_sha256": "03846a73d8df1d1547e86c7c975cb1bbbbfdf8861a30fd6ab2bb3f957c285f08",
+      "actual_sha256": "03846a73d8df1d1547e86c7c975cb1bbbbfdf8861a30fd6ab2bb3f957c285f08",
+      "expected_bytes": 72,
+      "actual_bytes": 72,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/mocks/latex_converter.py",
+      "expected_sha256": "c5d5c4b025ef4b48905324b73025ba50e4a5006fe63b60071c79d5fed7c26ed4",
+      "actual_sha256": "c5d5c4b025ef4b48905324b73025ba50e4a5006fe63b60071c79d5fed7c26ed4",
+      "expected_bytes": 268,
+      "actual_bytes": 268,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/__init__.py",
+      "expected_sha256": "03846a73d8df1d1547e86c7c975cb1bbbbfdf8861a30fd6ab2bb3f957c285f08",
+      "actual_sha256": "03846a73d8df1d1547e86c7c975cb1bbbbfdf8861a30fd6ab2bb3f957c285f08",
+      "expected_bytes": 72,
+      "actual_bytes": 72,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/__init__.py",
+      "expected_sha256": "0499ebcfb05440a0c60d5160ddc002984cbbfbf59e845dabc592ac19999cb70b",
+      "actual_sha256": "0499ebcfb05440a0c60d5160ddc002984cbbfbf59e845dabc592ac19999cb70b",
+      "expected_bytes": 459,
+      "actual_bytes": 459,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/acronym_extractor.py",
+      "expected_sha256": "0ee4b809fb5023e6fd2601f625a9aa639e9932807a9e959fda20e07ede9f3b97",
+      "actual_sha256": "0ee4b809fb5023e6fd2601f625a9aa639e9932807a9e959fda20e07ede9f3b97",
+      "expected_bytes": 873,
+      "actual_bytes": 873,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/bm25_naive.py",
+      "expected_sha256": "aafbd9c9e5e8960788e15078eec7ff73cdbf8a32c49740ff2c26220556174948",
+      "actual_sha256": "aafbd9c9e5e8960788e15078eec7ff73cdbf8a32c49740ff2c26220556174948",
+      "expected_bytes": 14396,
+      "actual_bytes": 14396,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/context_search.py",
+      "expected_sha256": "44df4f13a52f6ab23eadde700418d7b5bc3ffbd6c81ca44cdbc90cd30390a3e4",
+      "actual_sha256": "44df4f13a52f6ab23eadde700418d7b5bc3ffbd6c81ca44cdbc90cd30390a3e4",
+      "expected_bytes": 20809,
+      "actual_bytes": 20809,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/execution.py",
+      "expected_sha256": "aeda2d1decce35b510cfb6f1613b237b27a128dd31149b2c3e55308acf69e3f5",
+      "actual_sha256": "aeda2d1decce35b510cfb6f1613b237b27a128dd31149b2c3e55308acf69e3f5",
+      "expected_bytes": 4027,
+      "actual_bytes": 4027,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/extractors.py",
+      "expected_sha256": "9acc91e95e0763f706e0a569c9ca57df000079322bf4a47e14dc34036ccb5dfc",
+      "actual_sha256": "9acc91e95e0763f706e0a569c9ca57df000079322bf4a47e14dc34036ccb5dfc",
+      "expected_bytes": 6912,
+      "actual_bytes": 6912,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/format.py",
+      "expected_sha256": "19da142aeac8e2355ec1465957876cdf64b2a97b3f0f4c866fe379089b74265e",
+      "actual_sha256": "19da142aeac8e2355ec1465957876cdf64b2a97b3f0f4c866fe379089b74265e",
+      "expected_bytes": 1599,
+      "actual_bytes": 1599,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/linker.py",
+      "expected_sha256": "198fb574774c57c1197250946e3bb79a09eb84224c35d3bacf388c2dfe2a52fa",
+      "actual_sha256": "198fb574774c57c1197250946e3bb79a09eb84224c35d3bacf388c2dfe2a52fa",
+      "expected_bytes": 1074,
+      "actual_bytes": 1074,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/manual_dicts.py",
+      "expected_sha256": "0642c68fb322427b4587e41b30cc90140c91d745cbf7e9796c87f8d4cf5b993b",
+      "actual_sha256": "0642c68fb322427b4587e41b30cc90140c91d745cbf7e9796c87f8d4cf5b993b",
+      "expected_bytes": 9596,
+      "actual_bytes": 9596,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/metrics.py",
+      "expected_sha256": "064a106f4792f252b665c658610701423e1bcd89adef3a7619c13c1b0371a634",
+      "actual_sha256": "064a106f4792f252b665c658610701423e1bcd89adef3a7619c13c1b0371a634",
+      "expected_bytes": 6204,
+      "actual_bytes": 6204,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/probs.py",
+      "expected_sha256": "cfc543f2db1f028fa3c6396cdea8517438707bcf5780e69537b96f237893b8f0",
+      "actual_sha256": "cfc543f2db1f028fa3c6396cdea8517438707bcf5780e69537b96f237893b8f0",
+      "expected_bytes": 1469,
+      "actual_bytes": 1469,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/proposals_filters.py",
+      "expected_sha256": "768eeb8acc556d2b8f435e932690e3615c263b86dacac7caf3faf9191af4f8bf",
+      "actual_sha256": "768eeb8acc556d2b8f435e932690e3615c263b86dacac7caf3faf9191af4f8bf",
+      "expected_bytes": 4857,
+      "actual_bytes": 4857,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/taxonomy.py",
+      "expected_sha256": "909dd730cb6f89612c6946f98f643611773adbdf1624d67949789b90d6afc441",
+      "actual_sha256": "909dd730cb6f89612c6946f98f643611773adbdf1624d67949789b90d6afc441",
+      "expected_bytes": 2707,
+      "actual_bytes": 2707,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/linking/utils.py",
+      "expected_sha256": "e964df2e313a383bf7e14edf6f6ab1cbee3a3188603779af9b94373ac578341b",
+      "actual_sha256": "e964df2e313a383bf7e14edf6f6ab1cbee3a3188603779af9b94373ac578341b",
+      "expected_bytes": 1451,
+      "actual_bytes": 1451,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/__init__.py",
+      "expected_sha256": "d9b49e663bea0cd3c68b83477a0050f6a1dc48c46d2bf839b2ea4c6758c9f5d9",
+      "actual_sha256": "d9b49e663bea0cd3c68b83477a0050f6a1dc48c46d2bf839b2ea4c6758c9f5d9",
+      "expected_bytes": 2139,
+      "actual_bytes": 2139,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/experiment.py",
+      "expected_sha256": "99b94d074ca8e5cda48c9ea2a8a37ce139ea976f7ba1eae7f7892a74ca0437f4",
+      "actual_sha256": "99b94d074ca8e5cda48c9ea2a8a37ce139ea976f7ba1eae7f7892a74ca0437f4",
+      "expected_bytes": 15805,
+      "actual_bytes": 15805,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/nbsvm.py",
+      "expected_sha256": "c4519bdf9d21733fbdbe00cb66f6652bf75ebb3448e5bfa2bcf8813d7d412884",
+      "actual_sha256": "c4519bdf9d21733fbdbe00cb66f6652bf75ebb3448e5bfa2bcf8813d7d412884",
+      "expected_bytes": 10135,
+      "actual_bytes": 10135,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/structure_predictor.py",
+      "expected_sha256": "596eba11ea1ff4f61c78448cf2df002614e3010ada5bdf74780b2c13a2627ba5",
+      "actual_sha256": "596eba11ea1ff4f61c78448cf2df002614e3010ada5bdf74780b2c13a2627ba5",
+      "expected_bytes": 10117,
+      "actual_bytes": 10117,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/transfo_experiment.py",
+      "expected_sha256": "bae91e83f92c03ba051087fe8621a7333faf2fc231fff49e5ac8e75b87f5a2e2",
+      "actual_sha256": "bae91e83f92c03ba051087fe8621a7333faf2fc231fff49e5ac8e75b87f5a2e2",
+      "expected_bytes": 31622,
+      "actual_bytes": 31622,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/type_predictor.py",
+      "expected_sha256": "3e26bb0a4eca609380ab2bbcdb109d8862459e03c1dafd24a31f0516bb0980f5",
+      "actual_sha256": "3e26bb0a4eca609380ab2bbcdb109d8862459e03c1dafd24a31f0516bb0980f5",
+      "expected_bytes": 1825,
+      "actual_bytes": 1825,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/ulmfit.py",
+      "expected_sha256": "9925212e9d36d30ecce5ee840f87aa8c6c40145cc75f9959c60c18448e27ab4a",
+      "actual_sha256": "9925212e9d36d30ecce5ee840f87aa8c6c40145cc75f9959c60c18448e27ab4a",
+      "expected_bytes": 1136,
+      "actual_bytes": 1136,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/models/structure/ulmfit_experiment.py",
+      "expected_sha256": "86b0937a9e529ae75804c056be294337060cd327f4b565803808212be24ed362",
+      "actual_sha256": "86b0937a9e529ae75804c056be294337060cd327f4b565803808212be24ed362",
+      "expected_bytes": 12020,
+      "actual_bytes": 12020,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/pipeline_logger.py",
+      "expected_sha256": "79dfe104994ca92359266b4b43434b1a635f0177c3bc80955cde2185de1b8f6a",
+      "actual_sha256": "79dfe104994ca92359266b4b43434b1a635f0177c3bc80955cde2185de1b8f6a",
+      "expected_bytes": 954,
+      "actual_bytes": 954,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/scripts/guess_main.py",
+      "expected_sha256": "ce94205b3db9f408d7b1b53a91c9176fd29ed0f7e63a1f685dc05f5c1773ad71",
+      "actual_sha256": "ce94205b3db9f408d7b1b53a91c9176fd29ed0f7e63a1f685dc05f5c1773ad71",
+      "expected_bytes": 1774,
+      "actual_bytes": 1774,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/scripts/latex2html.sh",
+      "expected_sha256": "8bb3d0d638ab9b43ec566991f27234ddf316ef59d2b9815793b75c6ba6ba00b7",
+      "actual_sha256": "8bb3d0d638ab9b43ec566991f27234ddf316ef59d2b9815793b75c6ba6ba00b7",
+      "expected_bytes": 1056,
+      "actual_bytes": 1056,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/scripts/patches/1171.patch",
+      "expected_sha256": "967125103f52746347cd09ac6446602540d3b4e575b7bd1a75af4201428c30c4",
+      "actual_sha256": "967125103f52746347cd09ac6446602540d3b4e575b7bd1a75af4201428c30c4",
+      "expected_bytes": 8822,
+      "actual_bytes": 8822,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/scripts/patches/1173.patch",
+      "expected_sha256": "4314c8bbbb088cfab2dfa1f6d4d85b03686d86861d40ac9af1d26e33de850a68",
+      "actual_sha256": "4314c8bbbb088cfab2dfa1f6d4d85b03686d86861d40ac9af1d26e33de850a68",
+      "expected_bytes": 3411,
+      "actual_bytes": 3411,
+      "match": true
+    },
+    {
+      "path": "source/axcell/axcell/scripts/patches/1177.patch",
+      "expected_sha256": "68b2b63a5322205eb4329310386bdf6f934106dc6ac6e8f27cd9b8f2d9eb4fc7",
+      "actual_sha256": "68b2b63a5322205eb4329310386bdf6f934106dc6ac6e8f27cd9b8f2d9eb4fc7",
+      "expected_bytes": 1231,
+      "actual_bytes": 1231,
+      "match": true
+    },
+    {
+      "path": "source/axcell/docker-compose.yml",
+      "expected_sha256": "ccfd9467abdd21bfc0855f941ce4650e1f9088eac9b232306cecdb1a2289c2d7",
+      "actual_sha256": "ccfd9467abdd21bfc0855f941ce4650e1f9088eac9b232306cecdb1a2289c2d7",
+      "expected_bytes": 508,
+      "actual_bytes": 508,
+      "match": true
+    },
+    {
+      "path": "source/axcell/environment.yml",
+      "expected_sha256": "eed74c1d864fcc479b9f092a2aa693730bf7d27d75d6fdbcad38c439eb068f67",
+      "actual_sha256": "eed74c1d864fcc479b9f092a2aa693730bf7d27d75d6fdbcad38c439eb068f67",
+      "expected_bytes": 963,
+      "actual_bytes": 963,
+      "match": true
+    },
+    {
+      "path": "source/axcell/notebooks/datasets.ipynb",
+      "expected_sha256": "3b52381050da10cfe7af35c033538a9cad06bf007b878542d9c529c7572d86f9",
+      "actual_sha256": "3b52381050da10cfe7af35c033538a9cad06bf007b878542d9c529c7572d86f9",
+      "expected_bytes": 8571,
+      "actual_bytes": 8571,
+      "match": true
+    },
+    {
+      "path": "source/axcell/notebooks/evaluation.ipynb",
+      "expected_sha256": "5e672bdd68c2426164b420f56dcc3c4101a5f31b7f479b7cd436184422caf9d8",
+      "actual_sha256": "5e672bdd68c2426164b420f56dcc3c4101a5f31b7f479b7cd436184422caf9d8",
+      "expected_bytes": 12233,
+      "actual_bytes": 12233,
+      "match": true
+    },
+    {
+      "path": "source/axcell/notebooks/extraction.ipynb",
+      "expected_sha256": "4970e7e14f92e1e15e51cf44c3182bd4a7bc6601775448cf51b0d26b2145f405",
+      "actual_sha256": "4970e7e14f92e1e15e51cf44c3182bd4a7bc6601775448cf51b0d26b2145f405",
+      "expected_bytes": 30008,
+      "actual_bytes": 30008,
+      "match": true
+    },
+    {
+      "path": "source/axcell/notebooks/results-extraction.ipynb",
+      "expected_sha256": "7e482578066ac7e1d5e9939ad408eaf6ddf2b85991c67dff3b80040573e15d89",
+      "actual_sha256": "7e482578066ac7e1d5e9939ad408eaf6ddf2b85991c67dff3b80040573e15d89",
+      "expected_bytes": 13153,
+      "actual_bytes": 13153,
+      "match": true
+    },
+    {
+      "path": "source/axcell/notebooks/training/lm.ipynb",
+      "expected_sha256": "0e3215bb135e4fe70021a284e9fb0fc1a2999461b280593762265d639b4b2fe9",
+      "actual_sha256": "0e3215bb135e4fe70021a284e9fb0fc1a2999461b280593762265d639b4b2fe9",
+      "expected_bytes": 12634,
+      "actual_bytes": 12634,
+      "match": true
+    },
+    {
+      "path": "source/axcell/notebooks/training/table-segmentation.ipynb",
+      "expected_sha256": "b781a75d720d60b287b4bb83c2fbdbaa342a6d36922255270e9c87af1ca723f2",
+      "actual_sha256": "b781a75d720d60b287b4bb83c2fbdbaa342a6d36922255270e9c87af1ca723f2",
+      "expected_bytes": 100148,
+      "actual_bytes": 100148,
+      "match": true
+    },
+    {
+      "path": "source/axcell/notebooks/training/table-type-classifier.ipynb",
+      "expected_sha256": "1f0c722ad41cca78e86c3389ea43a1b9b1e1bc8b2652ae5ef3f8286809517097",
+      "actual_sha256": "1f0c722ad41cca78e86c3389ea43a1b9b1e1bc8b2652ae5ef3f8286809517097",
+      "expected_bytes": 71780,
+      "actual_bytes": 71780,
+      "match": true
+    },
+    {
+      "path": "source/axcell/pytest.ini",
+      "expected_sha256": "2977832f3dec211e0a6133bb32118fcbf6e7d5f44ceb8f08ee5dedc69a39f004",
+      "actual_sha256": "2977832f3dec211e0a6133bb32118fcbf6e7d5f44ceb8f08ee5dedc69a39f004",
+      "expected_bytes": 57,
+      "actual_bytes": 57,
+      "match": true
+    },
+    {
+      "path": "source/axcell/scripts/download_arxiv_s3_papers.sh",
+      "expected_sha256": "ce091cc394ad8a6d14c84e47fb353db5206071c033df77ddf2487f2898762a13",
+      "actual_sha256": "ce091cc394ad8a6d14c84e47fb353db5206071c033df77ddf2487f2898762a13",
+      "expected_bytes": 1204,
+      "actual_bytes": 1204,
+      "match": true
+    },
+    {
+      "path": "source/axcell/scripts/pull_docker_images.sh",
+      "expected_sha256": "94fc1c9e301f7a13be3e6b797fb3812902506f7fcbe88847333aa00afc069934",
+      "actual_sha256": "94fc1c9e301f7a13be3e6b797fb3812902506f7fcbe88847333aa00afc069934",
+      "expected_bytes": 159,
+      "actual_bytes": 159,
+      "match": true
+    },
+    {
+      "path": "source/axcell/setup.py",
+      "expected_sha256": "e41f199cf75c3fcccd04b934f8807477117a427fd5074c7a37003a7dd5e4af93",
+      "actual_sha256": "e41f199cf75c3fcccd04b934f8807477117a427fd5074c7a37003a7dd5e4af93",
+      "expected_bytes": 1660,
+      "actual_bytes": 1660,
+      "match": true
+    },
+    {
+      "path": "source/axcell/test/.gitignore",
+      "expected_sha256": "c5049c183f87267ff36ee98b52517e1f78670639f3a060baa89d4093a555f59b",
+      "actual_sha256": "c5049c183f87267ff36ee98b52517e1f78670639f3a060baa89d4093a555f59b",
+      "expected_bytes": 6,
+      "actual_bytes": 6,
+      "match": true
+    },
+    {
+      "path": "source/axcell/tests/data/main.tex",
+      "expected_sha256": "3bf88504b647f9ccc3db8c6ce86884a74985af52b60a3876f9389d3f35fde0bf",
+      "actual_sha256": "3bf88504b647f9ccc3db8c6ce86884a74985af52b60a3876f9389d3f35fde0bf",
+      "expected_bytes": 1201,
+      "actual_bytes": 1201,
+      "match": true
+    },
+    {
+      "path": "source/axcell/tests/test_extraction.py",
+      "expected_sha256": "47e03299dd0f1be03479c9f470a33b0e8d2d75b64c37e17f6f3dd176b8547c52",
+      "actual_sha256": "47e03299dd0f1be03479c9f470a33b0e8d2d75b64c37e17f6f3dd176b8547c52",
+      "expected_bytes": 1267,
+      "actual_bytes": 1267,
+      "match": true
+    },
+    {
+      "path": "source/axcell/tests/test_metric_ranges.py",
+      "expected_sha256": "2041e3292a368ea601af9f4841668f17b6021f9eaac3f3de2ac91573b47859cf",
+      "actual_sha256": "2041e3292a368ea601af9f4841668f17b6021f9eaac3f3de2ac91573b47859cf",
+      "expected_bytes": 1364,
+      "actual_bytes": 1364,
+      "match": true
+    },
+    {
+      "path": "data/sources/1511.08308v5",
+      "expected_sha256": "e0483008622131070662aafc040258a8fe97f50d7039cea85c6f690473625aea",
+      "actual_sha256": "e0483008622131070662aafc040258a8fe97f50d7039cea85c6f690473625aea",
+      "expected_bytes": 96377,
+      "actual_bytes": 96377,
+      "match": true
+    },
+    {
+      "path": "envs/bootstrap/micromamba",
+      "expected_sha256": "366cd9cd8be14df1ab8ed50352a82111082a36686b2d389fdb79a92c3fafb3e3",
+      "actual_sha256": "366cd9cd8be14df1ab8ed50352a82111082a36686b2d389fdb79a92c3fafb3e3",
+      "expected_bytes": 18292808,
+      "actual_bytes": 18292808,
+      "match": true
+    },
+    {
+      "path": "models/abbreviations.json",
+      "expected_sha256": "b093d592ae661a94cec473ba827a169612b27cb6d1257954c8269616b55052dd",
+      "actual_sha256": "b093d592ae661a94cec473ba827a169612b27cb6d1257954c8269616b55052dd",
+      "expected_bytes": 15153710,
+      "actual_bytes": 15153710,
+      "match": true
+    },
+    {
+      "path": "models/spm.vocab",
+      "expected_sha256": "ac96f17f8f51e51dfe40f25469593edf101d54ef41fa43e36abe858997b7a9de",
+      "actual_sha256": "ac96f17f8f51e51dfe40f25469593edf101d54ef41fa43e36abe858997b7a9de",
+      "expected_bytes": 550939,
+      "actual_bytes": 550939,
+      "match": true
+    },
+    {
+      "path": "models/table-type-classifier.pth",
+      "expected_sha256": "1027da7b545d8469ac68174a334a7f26b73d6f73784bed0cd517de69eb92b5ed",
+      "actual_sha256": "1027da7b545d8469ac68174a334a7f26b73d6f73784bed0cd517de69eb92b5ed",
+      "expected_bytes": 130446989,
+      "actual_bytes": 130446989,
+      "match": true
+    },
+    {
+      "path": "models/metrics.json",
+      "expected_sha256": "5958c9408293e377d39ad4cbc79327274cabac7d53392b8b8aed94d460ab89d9",
+      "actual_sha256": "5958c9408293e377d39ad4cbc79327274cabac7d53392b8b8aed94d460ab89d9",
+      "expected_bytes": 295042,
+      "actual_bytes": 295042,
+      "match": true
+    },
+    {
+      "path": "models/table-structure-classifier.pth",
+      "expected_sha256": "797a258f11c4b3da69ef22a83625dd013aaaaf099546b96543b61f1f01e0e2d3",
+      "actual_sha256": "797a258f11c4b3da69ef22a83625dd013aaaaf099546b96543b61f1f01e0e2d3",
+      "expected_bytes": 174953256,
+      "actual_bytes": 174953256,
+      "match": true
+    },
+    {
+      "path": "models/taxonomy.json",
+      "expected_sha256": "c24e41985b1af9930ba13a1f3952518b7f354291a8048c5693b6b81e5b4a7607",
+      "actual_sha256": "c24e41985b1af9930ba13a1f3952518b7f354291a8048c5693b6b81e5b4a7607",
+      "expected_bytes": 295223,
+      "actual_bytes": 295223,
+      "match": true
+    },
+    {
+      "path": "models/spm.model",
+      "expected_sha256": "ca3a65fc4a44057bdd8f9adf9aa446db31d8a6473a3fb6771f133aa88537d280",
+      "actual_sha256": "ca3a65fc4a44057bdd8f9adf9aa446db31d8a6473a3fb6771f133aa88537d280",
+      "expected_bytes": 762266,
+      "actual_bytes": 762266,
+      "match": true
+    }
+  ],
+  "original_assets_match": true,
+  "single_paper_script_and_parsed_checks": [
+    {
+      "path": "scripts/download_wheelhouse.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/final_audit.py",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/fix_declared_constraints.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/fix_docker_transport.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/install_conda.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/install_pip.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/launch_pip_relay.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/launch_validation.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/monitor.py",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/monitor_orphan_test.py",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/pull_elasticsearch.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/pull_engrafo.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/restart_es_for_console_fix.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/resume_public_scispacy.py",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/run_single.py",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/run_stage.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/solve_environment.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/start_elasticsearch.sh",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/test_adapter_guards.py",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/validate_conversion.py",
+      "sha256_match": true
+    },
+    {
+      "path": "scripts/validate_environment.py",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_01.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_02.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_03.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_04.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_05.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_06.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_07.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_08.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_09.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_10.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/layout_11.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/metadata.json",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_01.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_02.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_03.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_04.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_05.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_06.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_07.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_08.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_09.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_10.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/table_11.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "data/papers/1511.08308v5/text.json",
+      "sha256_match": true
+    },
+    {
+      "path": "data/htmls/1511.08308v5/index.html",
+      "sha256_match": true
+    }
+  ],
+  "single_paper_script_and_parsed_match": true,
+  "single_paper_run_checks": [
+    {
+      "path": "attempts/console_progress_compat/extraction_result.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/progress_display_adapter.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/366_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/367_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/368_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/369_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/370_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/371_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/372_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/events/373_proposals.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/pipeline_events.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/provenance.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/records.csv",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/records.json",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/raw_outputs/records.pkl",
+      "sha256_match": true
+    },
+    {
+      "path": "attempts/console_progress_compat/scilead_compatible_outputs/output.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conda-explicit.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_dry_run.log",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_dry_run_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_dry_run_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_dry_run_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_install.log",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_install_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_install_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_install_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_plan_review.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_python_packages_before_pip.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conda_solve_plan.json",
+      "sha256_match": true
+    },
+    {
+      "path": "config.json",
+      "sha256_match": true
+    },
+    {
+      "path": "constraints-consistency-fix.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "constraints-http-fix.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "constraints-preserve-conda.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion.log",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_attempt.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_container_config.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_environment_validation.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_result.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_validation.log",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_validation_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_validation_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_validation_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "conversion_validation_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "cpu_wheel_artifacts.json",
+      "sha256_match": true
+    },
+    {
+      "path": "declared_constraints_fix_diff.json",
+      "sha256_match": true
+    },
+    {
+      "path": "dependency_freeze.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "dependency_pin_verification.json",
+      "sha256_match": true
+    },
+    {
+      "path": "dependency_pin_verification_before_name_normalization.json",
+      "sha256_match": true
+    },
+    {
+      "path": "docker_transport_compatibility.json",
+      "sha256_match": true
+    },
+    {
+      "path": "docker_transport_fix.log",
+      "sha256_match": true
+    },
+    {
+      "path": "docker_transport_fix_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "docker_transport_fix_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "docker_transport_fix_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "docker_transport_fix_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_container_id.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_pull.log",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_pull_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_pull_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_pull_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_restart_check.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_restart_console_fix.log",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_restart_console_fix_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_restart_console_fix_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_restart_console_fix_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_restart_console_fix_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_service.log",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_start.log",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_start_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_start_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_start_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_start_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "elasticsearch_version.json",
+      "sha256_match": true
+    },
+    {
+      "path": "empty_progress_compatibility_test.json",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull.log",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull_resume1.log",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull_resume1_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull_resume1_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "engrafo_pull_resume1_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "environment_validation.json",
+      "sha256_match": true
+    },
+    {
+      "path": "environment_validation.log",
+      "sha256_match": true
+    },
+    {
+      "path": "environment_validation_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "environment_validation_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "environment_validation_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "environment_validation_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "extract_error.json",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction.log",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_console_fix.log",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_console_fix_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_console_fix_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_console_fix_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_console_fix_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "extraction_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "final_python_packages.json",
+      "sha256_match": true
+    },
+    {
+      "path": "http_compatibility_package_diff.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_orphan_after_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_orphan_after_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_orphan_after_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_orphan_after_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_orphan_before_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_orphan_before_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_orphan_before_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_smoke_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_smoke_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_smoke_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_timeout_test_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_timeout_test_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "monitor_timeout_test_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "output_validation.json",
+      "sha256_match": true
+    },
+    {
+      "path": "packages_before_consistency_fix.json",
+      "sha256_match": true
+    },
+    {
+      "path": "parsed_artifacts.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_check.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_check_before_consistency_fix.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_check_final.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_consistency_fix.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_consistency_fix_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_consistency_fix_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_consistency_fix_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_consistency_fix_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install.stop",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_compatible.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_compatible_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_compatible_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_compatible_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_compatible_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_final.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_final.stop",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_final_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_final_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_final_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_final_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_local.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_local.stop",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_local_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_local_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_local_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_local_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_official.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_official_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_official_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_official_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_relay.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_relay.stop",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_relay_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_relay_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_relay_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_tunnel.log",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_tunnel.stop",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_tunnel_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_tunnel_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_tunnel_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_install_tunnel_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pip_local_artifact_verification.json",
+      "sha256_match": true
+    },
+    {
+      "path": "progress.md",
+      "sha256_match": true
+    },
+    {
+      "path": "public_artifact_transfer_verification.json",
+      "sha256_match": true
+    },
+    {
+      "path": "public_nlp_artifacts.json",
+      "sha256_match": true
+    },
+    {
+      "path": "pypi_package_artifacts.json",
+      "sha256_match": true
+    },
+    {
+      "path": "python_packages_after_http_fix.json",
+      "sha256_match": true
+    },
+    {
+      "path": "remote_models_verification.json",
+      "sha256_match": true
+    },
+    {
+      "path": "requirements-pip-cpu-compatible-local.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "requirements-pip-cpu-local-compatible.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "requirements-pip-cpu-local-complete.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "requirements-pip-cpu-relay.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "requirements-pip-cpu.txt",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_artifact_verification.json",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_range_plan.json",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_resume.log",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_resume_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_resume_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_resume_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_resume_linux_status.json",
+      "sha256_match": true
+    },
+    {
+      "path": "scispacy_resume_origin.json",
+      "sha256_match": true
+    },
+    {
+      "path": "task_artifact_hashes.json",
+      "sha256_match": true
+    },
+    {
+      "path": "verification.json",
+      "sha256_match": true
+    },
+    {
+      "path": "wheelhouse_resolve.log",
+      "sha256_match": true
+    },
+    {
+      "path": "wheelhouse_resolve.stop",
+      "sha256_match": true
+    },
+    {
+      "path": "wheelhouse_resolve_cleanup.json",
+      "sha256_match": true
+    },
+    {
+      "path": "wheelhouse_resolve_linux_owner.json",
+      "sha256_match": true
+    },
+    {
+      "path": "wheelhouse_resolve_linux_resources.jsonl",
+      "sha256_match": true
+    },
+    {
+      "path": "wheelhouse_resolve_linux_status.json",
+      "sha256_match": true
+    }
+  ],
+  "single_paper_run_unchanged": true,
+  "source_files_on_server": [
+    "1511.08308v5"
+  ],
+  "read_only": true,
+  "containers_started": 0,
+  "model_loads": 0,
+  "api_calls": 0
+}

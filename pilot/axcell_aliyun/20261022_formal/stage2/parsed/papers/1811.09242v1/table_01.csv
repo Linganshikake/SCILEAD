@@ -1,0 +1,18 @@
+<italic>D</italic>,# of documents
+<italic>L</italic>,# of local context words
+<italic>M</italic>,# of global context words
+<italic>S</italic>,# of senses
+<italic>T</italic>,# of topics
+<italic>V</italic>,vocabulary size
+<italic>wt</italic>,target word
+"<italic>wl</italic>,<italic>wm</italic>",word in local/global context
+"<italic>sl</italic>,<italic>sm</italic>",sense in local/global context
+"<italic>tl</italic>,<italic>tm</italic>",topic in local/global context
+<italic>x</italic>,sense/topic switch
+"<italic>θs</italic>,<italic>θt</italic>,<italic>θx</italic>",multinomial distribution over senses/topics/switches
+"<italic>θs</italic>|<italic>t</italic>,<italic>θt</italic>|<italic>s</italic>",multinomial distribution over senses/topics given topics/senses
+<italic>θst</italic>,multinomial distribution over sense & topic pairs
+"<italic>ϕ</italic>(<italic>s</italic>),<italic>ϕ</italic>(<italic>t</italic>)",multinomial distribution over words
+<italic>α</italic>,"Dirichlet prior over <italic>θ</italic>s, except <italic>θx</italic>"
+<italic>β</italic>,Dirichlet prior over <italic>ϕ</italic>s
+<italic>γ</italic>,Dirichlet prior over <italic>θx</italic>

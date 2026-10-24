@@ -1,0 +1,14 @@
+Model,Param,BLEU,Sent/sec
+Vaswani et al. (<ref id='bib-bib59'>2017</ref>),213M,26.4,-
+"Self-attention baseline (k=inf, H=16)",210M,26.9 ± 0.1,52.1 ± 0.1
+"Self-attention baseline (k=3,7,15,31x3, H=16)",210M,26.9 ± 0.3,54.9 ± 0.2
+CNN (k=3),208M,25.9 ± 0.2,68.1 ± 0.3
+"CNN Depthwise (k=3, H=1024)",195M,26.1 ± 0.2,67.1 ± 1.0
+"+ Increasing kernel (k=3,7,15,31x4, H=1024)",195M,26.4 ± 0.2,63.3 ± 0.1
++ DropConnect (H=1024),195M,26.5 ± 0.2,63.3 ± 0.1
++ Weight sharing (H=16),195M,26.5 ± 0.1,63.7 ± 0.4
++ Softmax-normalized weights [LightConv] (H=16),195M,26.6 ± 0.2,63.6 ± 0.1
++ Dynamic weights [DynamicConv] (H=16),200M,26.9 ± 0.2,62.6 ± 0.4
+Note: DynamicConv(H=16) w/o softmax-normalization,200M,diverges,
+AAN decoder + self-attn encoder,260M,26.8 ± 0.1,59.5 ± 0.1
+AAN decoder + AAN encoder,310M,22.5 ± 0.1,59.2 ± 2.1

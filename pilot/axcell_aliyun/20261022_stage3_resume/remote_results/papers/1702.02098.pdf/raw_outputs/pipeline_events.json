@@ -1,0 +1,799 @@
+[
+  {
+    "sequence": 0,
+    "step": "type_prediction::predict",
+    "time": "2026-10-22T19:00:46.283321+08:00"
+  },
+  {
+    "sequence": 1,
+    "step": "type_prediction::multiclass_predicted",
+    "time": "2026-10-22T19:00:46.500796+08:00"
+  },
+  {
+    "sequence": 2,
+    "step": "type_prediction::predicted",
+    "time": "2026-10-22T19:00:46.501400+08:00",
+    "tables": [
+      {
+        "table": "table_01.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_02.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_03.csv",
+        "prediction": "ABLATION"
+      },
+      {
+        "table": "table_04.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_05.csv",
+        "prediction": "ABLATION"
+      },
+      {
+        "table": "table_06.csv",
+        "prediction": "ABLATION"
+      },
+      {
+        "table": "table_07.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_08.csv",
+        "prediction": "IRRELEVANT"
+      }
+    ]
+  },
+  {
+    "sequence": 3,
+    "step": "structure_prediction::label_tables",
+    "time": "2026-10-22T19:00:49.310509+08:00"
+  },
+  {
+    "sequence": 4,
+    "step": "structure_prediction::evidences_split",
+    "time": "2026-10-22T19:00:49.329452+08:00"
+  },
+  {
+    "sequence": 5,
+    "step": "structure_prediction::annotations",
+    "time": "2026-10-22T19:01:24.808086+08:00"
+  },
+  {
+    "sequence": 6,
+    "step": "structure_prediction::tables_labeled",
+    "time": "2026-10-22T19:01:24.826566+08:00"
+  },
+  {
+    "sequence": 7,
+    "step": "linking::call",
+    "time": "2026-10-22T19:01:24.826910+08:00"
+  },
+  {
+    "sequence": 8,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:24.875088+08:00"
+  },
+  {
+    "sequence": 9,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.594385+08:00"
+  },
+  {
+    "sequence": 10,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.596395+08:00"
+  },
+  {
+    "sequence": 11,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.597047+08:00"
+  },
+  {
+    "sequence": 12,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.598309+08:00"
+  },
+  {
+    "sequence": 13,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.598875+08:00"
+  },
+  {
+    "sequence": 14,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.600230+08:00"
+  },
+  {
+    "sequence": 15,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.600813+08:00"
+  },
+  {
+    "sequence": 16,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.602089+08:00"
+  },
+  {
+    "sequence": 17,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.602657+08:00"
+  },
+  {
+    "sequence": 18,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.603858+08:00"
+  },
+  {
+    "sequence": 19,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.604463+08:00"
+  },
+  {
+    "sequence": 20,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.605684+08:00"
+  },
+  {
+    "sequence": 21,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.606256+08:00"
+  },
+  {
+    "sequence": 22,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.607459+08:00"
+  },
+  {
+    "sequence": 23,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.608028+08:00"
+  },
+  {
+    "sequence": 24,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.609273+08:00"
+  },
+  {
+    "sequence": 25,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.609844+08:00"
+  },
+  {
+    "sequence": 26,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.611077+08:00"
+  },
+  {
+    "sequence": 27,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.611647+08:00"
+  },
+  {
+    "sequence": 28,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.613013+08:00"
+  },
+  {
+    "sequence": 29,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.613615+08:00"
+  },
+  {
+    "sequence": 30,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.614874+08:00"
+  },
+  {
+    "sequence": 31,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.615473+08:00"
+  },
+  {
+    "sequence": 32,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.620045+08:00"
+  },
+  {
+    "sequence": 33,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.646060+08:00"
+  },
+  {
+    "sequence": 34,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.647441+08:00"
+  },
+  {
+    "sequence": 35,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.648089+08:00"
+  },
+  {
+    "sequence": 36,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.649413+08:00"
+  },
+  {
+    "sequence": 37,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.650041+08:00"
+  },
+  {
+    "sequence": 38,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.651331+08:00"
+  },
+  {
+    "sequence": 39,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.651949+08:00"
+  },
+  {
+    "sequence": 40,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.653259+08:00"
+  },
+  {
+    "sequence": 41,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.653884+08:00"
+  },
+  {
+    "sequence": 42,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.655172+08:00"
+  },
+  {
+    "sequence": 43,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.655789+08:00"
+  },
+  {
+    "sequence": 44,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.657091+08:00"
+  },
+  {
+    "sequence": 45,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.657729+08:00"
+  },
+  {
+    "sequence": 46,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.659012+08:00"
+  },
+  {
+    "sequence": 47,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.659642+08:00"
+  },
+  {
+    "sequence": 48,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.660941+08:00"
+  },
+  {
+    "sequence": 49,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.661585+08:00"
+  },
+  {
+    "sequence": 50,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.662883+08:00"
+  },
+  {
+    "sequence": 51,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.663526+08:00"
+  },
+  {
+    "sequence": 52,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.666565+08:00"
+  },
+  {
+    "sequence": 53,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.688451+08:00"
+  },
+  {
+    "sequence": 54,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.689870+08:00"
+  },
+  {
+    "sequence": 55,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.690565+08:00"
+  },
+  {
+    "sequence": 56,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.691899+08:00"
+  },
+  {
+    "sequence": 57,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.692614+08:00"
+  },
+  {
+    "sequence": 58,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.693981+08:00"
+  },
+  {
+    "sequence": 59,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.694678+08:00"
+  },
+  {
+    "sequence": 60,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.695996+08:00"
+  },
+  {
+    "sequence": 61,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.696690+08:00"
+  },
+  {
+    "sequence": 62,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.698082+08:00"
+  },
+  {
+    "sequence": 63,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.698760+08:00"
+  },
+  {
+    "sequence": 64,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.700128+08:00"
+  },
+  {
+    "sequence": 65,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.700827+08:00"
+  },
+  {
+    "sequence": 66,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.703884+08:00"
+  },
+  {
+    "sequence": 67,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.724674+08:00"
+  },
+  {
+    "sequence": 68,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.726130+08:00"
+  },
+  {
+    "sequence": 69,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.726844+08:00"
+  },
+  {
+    "sequence": 70,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.728218+08:00"
+  },
+  {
+    "sequence": 71,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.728953+08:00"
+  },
+  {
+    "sequence": 72,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.733612+08:00"
+  },
+  {
+    "sequence": 73,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.756609+08:00"
+  },
+  {
+    "sequence": 74,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.758053+08:00"
+  },
+  {
+    "sequence": 75,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.758809+08:00"
+  },
+  {
+    "sequence": 76,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.760190+08:00"
+  },
+  {
+    "sequence": 77,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.760934+08:00"
+  },
+  {
+    "sequence": 78,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.762307+08:00"
+  },
+  {
+    "sequence": 79,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.763038+08:00"
+  },
+  {
+    "sequence": 80,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.764439+08:00"
+  },
+  {
+    "sequence": 81,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.765166+08:00"
+  },
+  {
+    "sequence": 82,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.766527+08:00"
+  },
+  {
+    "sequence": 83,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.767258+08:00"
+  },
+  {
+    "sequence": 84,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.768641+08:00"
+  },
+  {
+    "sequence": 85,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.769388+08:00"
+  },
+  {
+    "sequence": 86,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.770764+08:00"
+  },
+  {
+    "sequence": 87,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.771496+08:00"
+  },
+  {
+    "sequence": 88,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.772876+08:00"
+  },
+  {
+    "sequence": 89,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.773614+08:00"
+  },
+  {
+    "sequence": 90,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:01:26.775017+08:00"
+  },
+  {
+    "sequence": 91,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:01:26.775753+08:00"
+  },
+  {
+    "sequence": 92,
+    "step": "linking::linked",
+    "time": "2026-10-22T19:01:26.779149+08:00",
+    "proposals_path": "raw_outputs/events/092_proposals.json",
+    "proposal_count": 42
+  },
+  {
+    "sequence": 93,
+    "step": "filtering::structure_filtering::filtered",
+    "time": "2026-10-22T19:01:26.783121+08:00",
+    "proposals_path": "raw_outputs/events/093_proposals.json",
+    "proposal_count": 42,
+    "kept_ids": [
+      "1702.02098v3/table_01.csv/1.1",
+      "1702.02098v3/table_01.csv/2.1",
+      "1702.02098v3/table_01.csv/3.1",
+      "1702.02098v3/table_01.csv/4.1",
+      "1702.02098v3/table_01.csv/5.1",
+      "1702.02098v3/table_01.csv/6.1",
+      "1702.02098v3/table_01.csv/7.1",
+      "1702.02098v3/table_01.csv/8.1",
+      "1702.02098v3/table_01.csv/9.1",
+      "1702.02098v3/table_01.csv/10.1",
+      "1702.02098v3/table_01.csv/11.1",
+      "1702.02098v3/table_01.csv/12.1",
+      "1702.02098v3/table_03.csv/1.1",
+      "1702.02098v3/table_03.csv/1.2",
+      "1702.02098v3/table_03.csv/2.1",
+      "1702.02098v3/table_03.csv/2.2",
+      "1702.02098v3/table_03.csv/3.1",
+      "1702.02098v3/table_03.csv/3.2",
+      "1702.02098v3/table_03.csv/4.1",
+      "1702.02098v3/table_03.csv/4.2",
+      "1702.02098v3/table_03.csv/5.1",
+      "1702.02098v3/table_03.csv/5.2",
+      "1702.02098v3/table_04.csv/1.1",
+      "1702.02098v3/table_04.csv/2.1",
+      "1702.02098v3/table_04.csv/3.1",
+      "1702.02098v3/table_04.csv/4.1",
+      "1702.02098v3/table_04.csv/5.1",
+      "1702.02098v3/table_04.csv/6.1",
+      "1702.02098v3/table_04.csv/7.1",
+      "1702.02098v3/table_05.csv/1.1",
+      "1702.02098v3/table_05.csv/2.1",
+      "1702.02098v3/table_05.csv/3.1",
+      "1702.02098v3/table_07.csv/1.1",
+      "1702.02098v3/table_07.csv/2.1",
+      "1702.02098v3/table_07.csv/3.1",
+      "1702.02098v3/table_07.csv/4.1",
+      "1702.02098v3/table_07.csv/5.1",
+      "1702.02098v3/table_07.csv/6.1",
+      "1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/8.1",
+      "1702.02098v3/table_07.csv/9.1",
+      "1702.02098v3/table_07.csv/10.1"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 94,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:01:26.786124+08:00",
+    "proposals_path": "raw_outputs/events/094_proposals.json",
+    "proposal_count": 42,
+    "kept_ids": [
+      "1702.02098v3/table_07.csv/1.1",
+      "1702.02098v3/table_07.csv/2.1",
+      "1702.02098v3/table_07.csv/3.1",
+      "1702.02098v3/table_07.csv/4.1",
+      "1702.02098v3/table_07.csv/5.1",
+      "1702.02098v3/table_07.csv/6.1",
+      "1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/8.1",
+      "1702.02098v3/table_07.csv/9.1",
+      "1702.02098v3/table_07.csv/10.1"
+    ],
+    "removed_reasons": {
+      "1702.02098v3/table_01.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/8.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/9.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/10.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/11.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/12.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/3.1": "confidence 0.79 < 0.8"
+    }
+  },
+  {
+    "sequence": 95,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:01:26.788309+08:00",
+    "proposals_path": "raw_outputs/events/095_proposals.json",
+    "proposal_count": 42,
+    "kept_ids": [
+      "1702.02098v3/table_07.csv/1.1",
+      "1702.02098v3/table_07.csv/2.1",
+      "1702.02098v3/table_07.csv/3.1",
+      "1702.02098v3/table_07.csv/4.1",
+      "1702.02098v3/table_07.csv/5.1",
+      "1702.02098v3/table_07.csv/6.1",
+      "1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/8.1",
+      "1702.02098v3/table_07.csv/9.1",
+      "1702.02098v3/table_07.csv/10.1"
+    ],
+    "removed_reasons": {
+      "1702.02098v3/table_01.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/8.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/9.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/10.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/11.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/12.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/3.1": "confidence 0.79 < 0.8"
+    }
+  },
+  {
+    "sequence": 96,
+    "step": "filtering::best_result_filtering::filtered",
+    "time": "2026-10-22T19:01:26.793619+08:00",
+    "proposals_path": "raw_outputs/events/096_proposals.json",
+    "proposal_count": 10,
+    "kept_ids": [
+      "1702.02098v3/table_07.csv/7.1"
+    ],
+    "removed_reasons": {
+      "1702.02098v3/table_07.csv/1.1": "model-competing",
+      "1702.02098v3/table_07.csv/2.1": "model-competing",
+      "1702.02098v3/table_07.csv/3.1": "model-competing",
+      "1702.02098v3/table_07.csv/4.1": "model-competing",
+      "1702.02098v3/table_07.csv/5.1": "model-competing",
+      "1702.02098v3/table_07.csv/6.1": "model-competing",
+      "1702.02098v3/table_07.csv/8.1": "replaced by 1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/9.1": "replaced by 1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/10.1": "replaced by 1702.02098v3/table_07.csv/7.1"
+    }
+  },
+  {
+    "sequence": 97,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:01:26.796890+08:00",
+    "proposals_path": "raw_outputs/events/097_proposals.json",
+    "proposal_count": 42,
+    "kept_ids": [
+      "1702.02098v3/table_07.csv/7.1"
+    ],
+    "removed_reasons": {
+      "1702.02098v3/table_01.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/8.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/9.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/10.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/11.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/12.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_07.csv/1.1": "model-competing",
+      "1702.02098v3/table_07.csv/2.1": "model-competing",
+      "1702.02098v3/table_07.csv/3.1": "model-competing",
+      "1702.02098v3/table_07.csv/4.1": "model-competing",
+      "1702.02098v3/table_07.csv/5.1": "model-competing",
+      "1702.02098v3/table_07.csv/6.1": "model-competing",
+      "1702.02098v3/table_07.csv/8.1": "replaced by 1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/9.1": "replaced by 1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/10.1": "replaced by 1702.02098v3/table_07.csv/7.1"
+    }
+  },
+  {
+    "sequence": 98,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:01:26.800052+08:00",
+    "proposals_path": "raw_outputs/events/098_proposals.json",
+    "proposal_count": 1,
+    "kept_ids": [
+      "1702.02098v3/table_07.csv/7.1"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 99,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:01:26.803300+08:00",
+    "proposals_path": "raw_outputs/events/099_proposals.json",
+    "proposal_count": 42,
+    "kept_ids": [
+      "1702.02098v3/table_07.csv/7.1"
+    ],
+    "removed_reasons": {
+      "1702.02098v3/table_01.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/8.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/9.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/10.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/11.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_01.csv/12.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/1.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/4.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/5.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/6.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_04.csv/7.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/1.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/2.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_05.csv/3.1": "confidence 0.79 < 0.8",
+      "1702.02098v3/table_07.csv/1.1": "model-competing",
+      "1702.02098v3/table_07.csv/2.1": "model-competing",
+      "1702.02098v3/table_07.csv/3.1": "model-competing",
+      "1702.02098v3/table_07.csv/4.1": "model-competing",
+      "1702.02098v3/table_07.csv/5.1": "model-competing",
+      "1702.02098v3/table_07.csv/6.1": "model-competing",
+      "1702.02098v3/table_07.csv/8.1": "replaced by 1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/9.1": "replaced by 1702.02098v3/table_07.csv/7.1",
+      "1702.02098v3/table_07.csv/10.1": "replaced by 1702.02098v3/table_07.csv/7.1"
+    }
+  }
+]

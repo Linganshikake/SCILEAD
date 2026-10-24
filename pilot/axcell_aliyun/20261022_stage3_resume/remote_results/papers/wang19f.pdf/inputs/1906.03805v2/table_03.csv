@@ -1,0 +1,10 @@
+Method,Valid,Test
+LSTM (grave2016efficient),-,48.7
+Temporal CNN (bai2018convolutional),-,45.2
+GCNN (dauphin2016language),-,37.2
+LSTM + Hebbian (rae2018fast),34.1,34.3
+4 layer QRNN (merity2018analysis),32.0,33.0
+<bold>4 layer QRNN + Ours</bold>,<bold>30.6</bold>,<bold>31.6</bold>
++ post process (rae2018fast),+ post process (rae2018fast),+ post process (rae2018fast)
+LSTM + Hebbian + Cache + MbPA (rae2018fast),29.0,29.2
+<bold>4 layer QRNN + Ours + dynamic evaluation</bold>,<bold>27.2</bold>,<bold>28.0</bold>

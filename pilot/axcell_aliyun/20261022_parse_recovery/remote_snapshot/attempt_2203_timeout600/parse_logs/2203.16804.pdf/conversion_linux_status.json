@@ -1,0 +1,34 @@
+{
+  "stage": "conversion",
+  "exit_code": -15,
+  "stop_reason": "TASK_CONTAINER_NEAR_MEMORY_LIMIT",
+  "seconds": 511.05,
+  "peak_sampled_owned_process_group_rss_bytes": 151576576,
+  "rusage_maxrss_bytes": 140140544,
+  "rusage_note": "max child RSS, not simultaneous tree sum",
+  "min_ecs_available_bytes": 9817210880,
+  "swap_growth_bytes": 0,
+  "cleanup": {
+    "process_group": {
+      "forced_kill": false,
+      "remaining_live_members": []
+    },
+    "containers": {
+      "events": [
+        {
+          "id": "c31b0592c630",
+          "stop_exit_code": 0
+        }
+      ],
+      "remaining_running_task_containers": []
+    }
+  },
+  "containers": {
+    "/axcell-recovery-convert-2203": {
+      "limit_bytes": 21474836480,
+      "peak_sampled_memory_bytes": 21180358656,
+      "peak_cgroup_memory_bytes": null,
+      "peak_swap_bytes": 0
+    }
+  }
+}

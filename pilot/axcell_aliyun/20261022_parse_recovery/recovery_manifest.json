@@ -1,0 +1,286 @@
+{
+  "label": "RECOVERY",
+  "date": "2026-10-22",
+  "local_directory": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery",
+  "remote_directory": "/root/scilead/axcell/runs/20261022_parse_recovery",
+  "remote_directory_reason": "/data absent; reuse verified persistent ext4 root disk",
+  "formal_directory": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal",
+  "axcell_commit": "f4648d8fee1aa8482d007a38828da9dc06630f0e",
+  "image": {
+    "reference": "arxivvanity/engrafo:b3db888fefa118eacf4f13566204b68ce100b3a6",
+    "id": "sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e",
+    "digests": [
+      "arxivvanity/engrafo@sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e"
+    ],
+    "size": 11587839085
+  },
+  "model_loads": 0,
+  "API_calls": 0,
+  "normalization": false,
+  "rows": [
+    {
+      "paper_id": "1905.03197.pdf",
+      "label": "RECOVERY",
+      "status": "BLOCKED_COMPATIBILITY",
+      "root_cause_confirmed": "FIRST_FATAL_DEPENDENCY_CHAIN_CONFIRMED",
+      "recovery_attempt_count": 0,
+      "attempt_method": "READ_ONLY_DIAGNOSIS_ONLY",
+      "configuration_difference": "NONE_APPLIED",
+      "success": false,
+      "fragment_count": null,
+      "table_count": null,
+      "seconds": null,
+      "peak_container_bytes": null,
+      "output_path": "diagnosis/1905.03197.pdf",
+      "reason": "tikzmark requires expl3 primitives unsupported by fixed LaTeXML; no safe entrypoint/file-layout fix"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "label": "RECOVERY_TIMEOUT_600",
+      "status": "FAILED_RESOURCE_LIMIT_OOM",
+      "root_cause_confirmed": "POSTPROCESS_CPU_MEMORY_GROWTH_CONFIRMED_SPECIFIC_TRIGGER_UNRESOLVED",
+      "recovery_attempt_count": 1,
+      "attempt_method": "ONE_TIMEOUT_ONLY_DIAGNOSTIC",
+      "configuration_difference": "latex2html.sh timeout 300 -> 600 only; read-only monitoring added",
+      "success": false,
+      "fragment_count": null,
+      "table_count": null,
+      "seconds": 511.08605768100097,
+      "peak_container_bytes": 21474836480,
+      "output_path": "remote_snapshot/attempt_2203_timeout600",
+      "reason": "TASK_CONTAINER_NEAR_MEMORY_LIMIT followed by MEMCG_OOM during cleanup"
+    }
+  ],
+  "inputs": [
+    {
+      "paper_id": "1905.03197.pdf",
+      "tex_version": "1905.03197v3",
+      "sha256": "e311e8c4771d30343e4c44a2f3d80298cc852b28204494ec9e1c4deb4a85e5b5",
+      "bytes": 123619,
+      "local_source": "E:\\SCILEAD\\axcell\\data\\tex\\1905.03197v3",
+      "remote_source": "/root/scilead/axcell/runs/20261022_formal/stage2/parsed/sources/1905.03197v3",
+      "reuse_original_single": false,
+      "gold_tdmr_count": 26,
+      "author36_membership": "UNVERIFIED"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "tex_version": "2203.16804v1",
+      "sha256": "d07c85f24381886c4dc390a1148b8717e3e4edffc1ef9cc3f24462397ece1dde",
+      "bytes": 6204866,
+      "local_source": "E:\\SCILEAD\\axcell\\data\\tex\\2203.16804v1",
+      "remote_source": "/root/scilead/axcell/runs/20261022_formal/stage2/parsed/sources/2203.16804v1",
+      "reuse_original_single": false,
+      "gold_tdmr_count": 9,
+      "author36_membership": "UNVERIFIED"
+    }
+  ],
+  "read_only_input_audit": "input_audit_remote.json",
+  "first_failure_records": [
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\attempt.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\attempt.json",
+      "sha256": "d7bfc206e4d89205c7b6de55b4f0fe34e32b56492eeb72b9d448923792c05cee"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\container_config.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\container_config.json",
+      "sha256": "a77c24cd49e74ba1d52be2db05d05c75fafe1ad7c9fe3e32c581d512a839c618"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\container_exit.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\container_exit.json",
+      "sha256": "a819cbdbbe5a0e347303b4796e400d9e73f0ed8543835dd8a0a18f592cc9aeb6"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\container_stderr.log",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\container_stderr.log",
+      "sha256": "93466fdfead9d06304cd6da80a9b7095d7803621240e88fa65f46e48d90b0fcd"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\conversion_cleanup.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\conversion_cleanup.json",
+      "sha256": "6a03a1169de5b3fbc8791015113f0ede59571beec3edc84ad2b0740d2f4bea87"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\conversion_linux_owner.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\conversion_linux_owner.json",
+      "sha256": "82b2bdff7a815264decd7c9fae62a2295116d4af7c1c9076a000156faefa3cec"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\conversion_linux_resources.jsonl",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\conversion_linux_resources.jsonl",
+      "sha256": "6e39ecb890c07bf7147ff185040a06e925e04e8b7d2f2a58ec5a894ec9c5def5"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\conversion_linux_status.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\conversion_linux_status.json",
+      "sha256": "fd4a29c0ada8caffba68f00207ba6ba732423a7788db1f707e5dc0062e2dd617"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\parser_result.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\parser_result.json",
+      "sha256": "12270767f912ffda2485b8a955a77af1c09fef34e05768289bf4306cd333b37e"
+    },
+    {
+      "paper_id": "1905.03197.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\1905.03197.pdf\\process.log",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\1905.03197.pdf\\original_failure_logs\\process.log",
+      "sha256": "38e7d83dac46a057aa59fabf12477c349711d6cb59bd3085449afe7421398f76"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\attempt.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\attempt.json",
+      "sha256": "6e0376d60f2732759ec5ff0d31b4c7e759c1fd7b07c0fdc28108eb4a343da9de"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\container_config.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\container_config.json",
+      "sha256": "a4c9e4ff684b54e1bb3c5333f685d9a5f5dd9c3dbaf464439bc00417cb614007"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\container_exit.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\container_exit.json",
+      "sha256": "a819cbdbbe5a0e347303b4796e400d9e73f0ed8543835dd8a0a18f592cc9aeb6"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\container_stderr.log",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\container_stderr.log",
+      "sha256": "4e9017544679f9d8582163c015be2d3067f73bae02bae6412b9d0b7a229094cd"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\conversion_cleanup.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\conversion_cleanup.json",
+      "sha256": "6a03a1169de5b3fbc8791015113f0ede59571beec3edc84ad2b0740d2f4bea87"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\conversion_linux_owner.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\conversion_linux_owner.json",
+      "sha256": "acaa83cf70c9c98b79671a4777542881a4940a801c2cf51f1fcac6b9051d9c19"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\conversion_linux_resources.jsonl",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\conversion_linux_resources.jsonl",
+      "sha256": "d003f4a0701a2171faadd9d6481ed25fe87b8d5e2a761559a456caef3b49c425"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\conversion_linux_status.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\conversion_linux_status.json",
+      "sha256": "22520236adcd6af05ea7bc5dd3e6b260a04347f87bbf84910b7e94dc661f10ad"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\parser_result.json",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\parser_result.json",
+      "sha256": "0d188a546e2008e4642d88d47b5bb158b6b914cbc06dbd4c30ec9a434ee4a2c4"
+    },
+    {
+      "paper_id": "2203.16804.pdf",
+      "path": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_formal\\stage2\\parse_logs\\2203.16804.pdf\\process.log",
+      "copy": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_parse_recovery\\diagnosis\\2203.16804.pdf\\original_failure_logs\\process.log",
+      "sha256": "614a8d0dc14f9395dc61266abc5c15bd130eabf54c7c4d538136fec9063fdceb"
+    }
+  ],
+  "attempt_configuration": {
+    "axcell_commit": "f4648d8fee1aa8482d007a38828da9dc06630f0e",
+    "image": {
+      "reference": "arxivvanity/engrafo:b3db888fefa118eacf4f13566204b68ce100b3a6",
+      "id": "sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e",
+      "digests": [
+        "arxivvanity/engrafo@sha256:1ca3ffa0951005b11e56adba9ecef2aac2c03765a89fc1dbf1f1d31de72ee07e"
+      ],
+      "size": 11587839085
+    },
+    "workers": 1,
+    "container_memory_gib": 20,
+    "container_cpus": 6,
+    "network_disabled": true,
+    "threads": 6,
+    "start_min_ram_gib": 6,
+    "disk_reserve_gib": 20,
+    "stop_low_ram_gib": 2,
+    "sustained_seconds": 15,
+    "recovery_label": "RECOVERY_TIMEOUT_600",
+    "official_converter_timeout_seconds": 300,
+    "recovery_converter_timeout_seconds": 600,
+    "outer_safety_watchdog_seconds": 660,
+    "attempt_limit": 1,
+    "automatic_retries": 0,
+    "api_calls": 0,
+    "model_loads": 0,
+    "source_archive_unchanged": true,
+    "scientific_difference": "latex2html.sh timeout 300 -> 600 only",
+    "observability_difference": "read-only process CPU, cgroup, file descriptor positions and intermediate snapshots",
+    "configuration_sha256": "065bdc64d62473e8bcb4424e04b13fbf4f99419d0998d09a0cbb820577dada9a"
+  },
+  "scripts": {
+    "policy.py": "1557dd80fa96b9063ab8dcc2e5f0d98547667a6f0b4465f8882e726fbcc5df45",
+    "driver.py": "f3af1a9bf25b5b8bc544c4a5ce0c6601abdeee88d4e9d244ef43c8bda8c7965d",
+    "monitor.py": "3695f95c5fe7e1e9c1cd5f328ed2ff0e043341e030fc31d77944b6d9326462dd",
+    "parse_one.py": "d86ba5334d9ad4dbfda80ef2c1a7ff4f44d7afc698352ad1033cdd859ca9054a",
+    "observe.py": "d2320627767e29045c8d2a9bd135553e46a4237fd4122f23f10e04cce06ddbf5",
+    "converter_scripts/latex2html.sh": "8272aef6631476e07f0cdadfdc057d92cc70deb749d603edaf084d1c858171e2",
+    "converter_scripts/guess_main.py": "ce94205b3db9f408d7b1b53a91c9176fd29ed0f7e63a1f685dc05f5c1773ad71",
+    "converter_scripts/patches/1177.patch": "68b2b63a5322205eb4329310386bdf6f934106dc6ac6e8f27cd9b8f2d9eb4fc7",
+    "converter_scripts/patches/1173.patch": "4314c8bbbb088cfab2dfa1f6d4d85b03686d86861d40ac9af1d26e33de850a68",
+    "converter_scripts/patches/1171.patch": "967125103f52746347cd09ac6446602540d3b4e575b7bd1a75af4201428c30c4"
+  },
+  "resources": {
+    "samples": 166,
+    "sample_interval_seconds": 3,
+    "elapsed_seconds_including_cleanup": 511.08605768100097,
+    "last_sample_seconds": 502.64644218099966,
+    "peak_sampled_container_bytes": 21180358656,
+    "kernel_confirmed_container_memory_bytes": 21474836480,
+    "peak_sampled_perl_rss_bytes": 21092114432,
+    "kernel_perl_rss_bytes": 21404082176,
+    "peak_sampled_wrapper_tree_rss_bytes": 151576576,
+    "container_cpu_seconds_last_sample": 501.702065,
+    "min_sampled_host_available_bytes": 9817210880,
+    "oom_count_delta": 1,
+    "oom_scope": "CONSTRAINT_MEMCG task container c31b0592c630, perl PID75933, during cleanup at 17:33:38 +0800",
+    "swap_growth_bytes": 0,
+    "monitor_stop_reason": "TASK_CONTAINER_NEAR_MEMORY_LIMIT",
+    "final_failure": "RESOURCE_LIMIT_OOM_DURING_CLEANUP",
+    "outer_exit_code": 125,
+    "child_exit_code": -15,
+    "wrapper_forced_kill": false,
+    "kernel_killed_perl": true,
+    "disk_free_bytes_after": 59935551488,
+    "memory_peak_precision": "Periodic samples missed cleanup-window peak; kernel log proves 20 GiB cgroup usage and OOM. Raw monitor record preserved."
+  },
+  "source_structure_counts": {
+    "1905.03197.pdf": {
+      "main": "unified.tex",
+      "table_float_count": 10,
+      "tabular_begin_count": 14
+    },
+    "2203.16804.pdf": {
+      "main": "acl.tex",
+      "table_float_count": 13,
+      "tabular_begin_count": 13
+    }
+  },
+  "source_count_note": "Static TeX markers, not successful parsed output counts.",
+  "compatibility_proposal_executed": false,
+  "formal_manifest_updated": false,
+  "stage3_started": false,
+  "author36_membership": "UNVERIFIED; no scope change"
+}

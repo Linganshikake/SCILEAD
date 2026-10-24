@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231802313758452828268d9d6tSBw1ijS",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792778551,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Named Entity Recognition\",\"Dataset\":\"CoNLL-2003\",\"Metric\":\"F1\",\"Result\":\"90.65 ± 0.15\"},{\"Task\":\"Named Entity Recognition\",\"Dataset\":\"OntoNotes 5.0\",\"Metric\":\"F1\",\"Result\":\"86.84 ± 0.19\"}]",
+        "reasoning_content": "**Evaluating NER task results**\n\nI need to identify the best results for the NER task using different datasets. It looks like for the CoNLL dataset, the ID-CNN architecture offers a top result of 90.65. Then there's the OntoNotes with a proposed Bi-LSTM-CRF method. The best performance comparison shows ID-CNN-CRF at 86.84 versus ID-CNN at 85.76. However, speed metrics aren't clearly related here, and it seems F1 is the main metric to focus on, possibly in JSON format."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2735,
+    "completion_tokens": 213,
+    "total_tokens": 2948,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 2948,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 2735,
+        "output_tokens": 213,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 2732,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 141
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 2732,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 2735,
+    "output_tokens": 213,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

@@ -1,0 +1,686 @@
+[
+  {
+    "sequence": 0,
+    "step": "type_prediction::predict",
+    "time": "2026-10-22T19:21:00.748137+08:00"
+  },
+  {
+    "sequence": 1,
+    "step": "type_prediction::multiclass_predicted",
+    "time": "2026-10-22T19:21:00.852306+08:00"
+  },
+  {
+    "sequence": 2,
+    "step": "type_prediction::predicted",
+    "time": "2026-10-22T19:21:00.853017+08:00",
+    "tables": [
+      {
+        "table": "table_01.csv",
+        "prediction": "IRRELEVANT"
+      },
+      {
+        "table": "table_02.csv",
+        "prediction": "SOTA"
+      },
+      {
+        "table": "table_03.csv",
+        "prediction": "ABLATION"
+      }
+    ]
+  },
+  {
+    "sequence": 3,
+    "step": "structure_prediction::label_tables",
+    "time": "2026-10-22T19:21:02.275380+08:00"
+  },
+  {
+    "sequence": 4,
+    "step": "structure_prediction::evidences_split",
+    "time": "2026-10-22T19:21:02.289233+08:00"
+  },
+  {
+    "sequence": 5,
+    "step": "structure_prediction::annotations",
+    "time": "2026-10-22T19:21:14.543664+08:00"
+  },
+  {
+    "sequence": 6,
+    "step": "structure_prediction::tables_labeled",
+    "time": "2026-10-22T19:21:14.551925+08:00"
+  },
+  {
+    "sequence": 7,
+    "step": "linking::call",
+    "time": "2026-10-22T19:21:14.552262+08:00"
+  },
+  {
+    "sequence": 8,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:14.581883+08:00"
+  },
+  {
+    "sequence": 9,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.274986+08:00"
+  },
+  {
+    "sequence": 10,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.276995+08:00"
+  },
+  {
+    "sequence": 11,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.286148+08:00"
+  },
+  {
+    "sequence": 12,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.287563+08:00"
+  },
+  {
+    "sequence": 13,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.295445+08:00"
+  },
+  {
+    "sequence": 14,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.296814+08:00"
+  },
+  {
+    "sequence": 15,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.297357+08:00"
+  },
+  {
+    "sequence": 16,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.298628+08:00"
+  },
+  {
+    "sequence": 17,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.299155+08:00"
+  },
+  {
+    "sequence": 18,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.300443+08:00"
+  },
+  {
+    "sequence": 19,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.300965+08:00"
+  },
+  {
+    "sequence": 20,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.302233+08:00"
+  },
+  {
+    "sequence": 21,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.302751+08:00"
+  },
+  {
+    "sequence": 22,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.303996+08:00"
+  },
+  {
+    "sequence": 23,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.304548+08:00"
+  },
+  {
+    "sequence": 24,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.305802+08:00"
+  },
+  {
+    "sequence": 25,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.306346+08:00"
+  },
+  {
+    "sequence": 26,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.307610+08:00"
+  },
+  {
+    "sequence": 27,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.308141+08:00"
+  },
+  {
+    "sequence": 28,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.309475+08:00"
+  },
+  {
+    "sequence": 29,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.310011+08:00"
+  },
+  {
+    "sequence": 30,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.311289+08:00"
+  },
+  {
+    "sequence": 31,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.311826+08:00"
+  },
+  {
+    "sequence": 32,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.313138+08:00"
+  },
+  {
+    "sequence": 33,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.313686+08:00"
+  },
+  {
+    "sequence": 34,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.315040+08:00"
+  },
+  {
+    "sequence": 35,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.315585+08:00"
+  },
+  {
+    "sequence": 36,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.316885+08:00"
+  },
+  {
+    "sequence": 37,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.317449+08:00"
+  },
+  {
+    "sequence": 38,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.318729+08:00"
+  },
+  {
+    "sequence": 39,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.319296+08:00"
+  },
+  {
+    "sequence": 40,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.320611+08:00"
+  },
+  {
+    "sequence": 41,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.321178+08:00"
+  },
+  {
+    "sequence": 42,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.322641+08:00"
+  },
+  {
+    "sequence": 43,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.323210+08:00"
+  },
+  {
+    "sequence": 44,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.324558+08:00"
+  },
+  {
+    "sequence": 45,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.325135+08:00"
+  },
+  {
+    "sequence": 46,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.326423+08:00"
+  },
+  {
+    "sequence": 47,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.326997+08:00"
+  },
+  {
+    "sequence": 48,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.328296+08:00"
+  },
+  {
+    "sequence": 49,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.328887+08:00"
+  },
+  {
+    "sequence": 50,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.330198+08:00"
+  },
+  {
+    "sequence": 51,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.330774+08:00"
+  },
+  {
+    "sequence": 52,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.334160+08:00"
+  },
+  {
+    "sequence": 53,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.354647+08:00"
+  },
+  {
+    "sequence": 54,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.356079+08:00"
+  },
+  {
+    "sequence": 55,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.368514+08:00"
+  },
+  {
+    "sequence": 56,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.369937+08:00"
+  },
+  {
+    "sequence": 57,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.377770+08:00"
+  },
+  {
+    "sequence": 58,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.379204+08:00"
+  },
+  {
+    "sequence": 59,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.379835+08:00"
+  },
+  {
+    "sequence": 60,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.381224+08:00"
+  },
+  {
+    "sequence": 61,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.381843+08:00"
+  },
+  {
+    "sequence": 62,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.383214+08:00"
+  },
+  {
+    "sequence": 63,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.383827+08:00"
+  },
+  {
+    "sequence": 64,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.385235+08:00"
+  },
+  {
+    "sequence": 65,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.385858+08:00"
+  },
+  {
+    "sequence": 66,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.387228+08:00"
+  },
+  {
+    "sequence": 67,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.387849+08:00"
+  },
+  {
+    "sequence": 68,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.389236+08:00"
+  },
+  {
+    "sequence": 69,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.389873+08:00"
+  },
+  {
+    "sequence": 70,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.391252+08:00"
+  },
+  {
+    "sequence": 71,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.391881+08:00"
+  },
+  {
+    "sequence": 72,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.393281+08:00"
+  },
+  {
+    "sequence": 73,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.393925+08:00"
+  },
+  {
+    "sequence": 74,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.395313+08:00"
+  },
+  {
+    "sequence": 75,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.395949+08:00"
+  },
+  {
+    "sequence": 76,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.397338+08:00"
+  },
+  {
+    "sequence": 77,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.397975+08:00"
+  },
+  {
+    "sequence": 78,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.399356+08:00"
+  },
+  {
+    "sequence": 79,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.400001+08:00"
+  },
+  {
+    "sequence": 80,
+    "step": "linking::taxonomy_linking::call",
+    "time": "2026-10-22T19:21:16.401467+08:00"
+  },
+  {
+    "sequence": 81,
+    "step": "linking::taxonomy_linking::topk",
+    "time": "2026-10-22T19:21:16.402125+08:00"
+  },
+  {
+    "sequence": 82,
+    "step": "linking::linked",
+    "time": "2026-10-22T19:21:16.404900+08:00",
+    "proposals_path": "raw_outputs/events/082_proposals.json",
+    "proposal_count": 37
+  },
+  {
+    "sequence": 83,
+    "step": "filtering::structure_filtering::filtered",
+    "time": "2026-10-22T19:21:16.408869+08:00",
+    "proposals_path": "raw_outputs/events/083_proposals.json",
+    "proposal_count": 37,
+    "kept_ids": [
+      "1810.09154v3/table_02.csv/2.2",
+      "1810.09154v3/table_02.csv/2.3",
+      "1810.09154v3/table_02.csv/2.4",
+      "1810.09154v3/table_02.csv/3.2",
+      "1810.09154v3/table_02.csv/3.3",
+      "1810.09154v3/table_02.csv/3.4",
+      "1810.09154v3/table_02.csv/4.2",
+      "1810.09154v3/table_02.csv/4.3",
+      "1810.09154v3/table_02.csv/4.4",
+      "1810.09154v3/table_02.csv/5.2",
+      "1810.09154v3/table_02.csv/5.3",
+      "1810.09154v3/table_02.csv/6.2",
+      "1810.09154v3/table_02.csv/6.3",
+      "1810.09154v3/table_02.csv/7.2",
+      "1810.09154v3/table_02.csv/7.4",
+      "1810.09154v3/table_02.csv/8.2",
+      "1810.09154v3/table_02.csv/8.3",
+      "1810.09154v3/table_02.csv/8.4",
+      "1810.09154v3/table_02.csv/9.2",
+      "1810.09154v3/table_02.csv/9.3",
+      "1810.09154v3/table_02.csv/9.4",
+      "1810.09154v3/table_02.csv/10.2",
+      "1810.09154v3/table_03.csv/2.1",
+      "1810.09154v3/table_03.csv/2.2",
+      "1810.09154v3/table_03.csv/2.3",
+      "1810.09154v3/table_03.csv/3.1",
+      "1810.09154v3/table_03.csv/3.2",
+      "1810.09154v3/table_03.csv/3.3",
+      "1810.09154v3/table_03.csv/4.1",
+      "1810.09154v3/table_03.csv/4.2",
+      "1810.09154v3/table_03.csv/4.3",
+      "1810.09154v3/table_03.csv/5.1",
+      "1810.09154v3/table_03.csv/5.2",
+      "1810.09154v3/table_03.csv/5.3",
+      "1810.09154v3/table_03.csv/6.1",
+      "1810.09154v3/table_03.csv/6.2",
+      "1810.09154v3/table_03.csv/6.3"
+    ],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 84,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:21:16.411653+08:00",
+    "proposals_path": "raw_outputs/events/084_proposals.json",
+    "proposal_count": 37,
+    "kept_ids": [],
+    "removed_reasons": {
+      "1810.09154v3/table_02.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/10.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.3": "confidence 0.79 < 0.8"
+    }
+  },
+  {
+    "sequence": 85,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:21:16.413753+08:00",
+    "proposals_path": "raw_outputs/events/085_proposals.json",
+    "proposal_count": 37,
+    "kept_ids": [],
+    "removed_reasons": {
+      "1810.09154v3/table_02.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/10.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.3": "confidence 0.79 < 0.8"
+    }
+  },
+  {
+    "sequence": 86,
+    "step": "filtering::best_result_filtering::filtered",
+    "time": "2026-10-22T19:21:16.417662+08:00",
+    "proposals_path": "raw_outputs/events/086_proposals.json",
+    "proposal_count": 0,
+    "kept_ids": [],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 87,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:21:16.420386+08:00",
+    "proposals_path": "raw_outputs/events/087_proposals.json",
+    "proposal_count": 37,
+    "kept_ids": [],
+    "removed_reasons": {
+      "1810.09154v3/table_02.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/10.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.3": "confidence 0.79 < 0.8"
+    }
+  },
+  {
+    "sequence": 88,
+    "step": "filtering::confidence_filtering::filtered",
+    "time": "2026-10-22T19:21:16.423205+08:00",
+    "proposals_path": "raw_outputs/events/088_proposals.json",
+    "proposal_count": 0,
+    "kept_ids": [],
+    "removed_reasons": {}
+  },
+  {
+    "sequence": 89,
+    "step": "filtering::compound_filtering::filtered",
+    "time": "2026-10-22T19:21:16.425871+08:00",
+    "proposals_path": "raw_outputs/events/089_proposals.json",
+    "proposal_count": 37,
+    "kept_ids": [],
+    "removed_reasons": {
+      "1810.09154v3/table_02.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/2.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/3.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/4.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/6.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/7.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/8.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/9.4": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_02.csv/10.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/2.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/3.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/4.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/5.3": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.1": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.2": "confidence 0.79 < 0.8",
+      "1810.09154v3/table_03.csv/6.3": "confidence 0.79 < 0.8"
+    }
+  }
+]

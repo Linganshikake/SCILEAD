@@ -1,5 +1,15 @@
 # GitHub 上传范围与完整性
 
+## 2026-10-24 增量归档
+
+新增 Llama-3 70B 正式42篇、V2格式恢复及其历史诊断，AxCell阶段0至最终37篇评价的完整追溯记录，以及 GPT-5.6 Sol A0/A1/A2与43篇Result类型恢复版。新增结果从本地冻结文件逐字节复制，原实验文件不改。Llama-2和未完成的共同16篇GPT-4.1标准化任务不在本次发布范围。
+
+本次指标入口：[results/README.md](results/README.md)，机器可读文件为 [metrics_summary.json](results/metrics_summary.json) 和 [tuple_metrics.csv](results/tuple_metrics.csv)。新增文件清单、排除范围、SHA256及核验见 [publications/20261024/](publications/20261024/)。历史 `publication_manifest.json` 不重写，仍仅对应下方2026-10-16归档。
+
+模型权重、环境、PDF/TeX原始资源、缓存、下载归档和认证文件未上传。保留历史失败日志与诊断，不能把它们混入当前主结果；复用关系以各阶段manifest为准。本次只发布，不调用模型、不重算实验指标。
+
+## 2026-10-16 初次归档
+
 归档日期：2026-10-16。目标：[Linganshikake/SCILEAD](https://github.com/Linganshikake/SCILEAD)。
 
 ## 已包含

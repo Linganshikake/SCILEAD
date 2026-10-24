@@ -1,0 +1,21 @@
+"Model (batch size = 1, beam size = 1)",Param,BLEU,Sent/sec,Tok/sec
+"NAT (+ FT) (Gu et al., <ref id='bib-bib20'>2018</ref>)",-,17.7,25.6,-
+"NAT (+ FT + NPD=10) (Gu et al., <ref id='bib-bib20'>2018</ref>)",-,18.7,12.7,-
+"NAT (+ FT + NPD=100) (Gu et al., <ref id='bib-bib20'>2018</ref>)",-,19.2,3.9,-
+"LT, Improved Semhash (Kaiser et al., <ref id='bib-bib28'>2018</ref>)",-,19.8,9.5,-
+"IR <italic>idec</italic>=1 (Lee et al., <ref id='bib-bib32'>2018</ref>)",-,13.9,-,511.4
+"IR <italic>idec</italic>=2 (Lee et al., <ref id='bib-bib32'>2018</ref>)",-,17.0,-,393.6
+"IR <italic>idec</italic>=5 (Lee et al., <ref id='bib-bib32'>2018</ref>)",-,20.3,-,139.7
+"IR <italic>idec</italic>=10 (Lee et al., <ref id='bib-bib32'>2018</ref>)",-,21.6,-,90.4
+"IR Adaptive (Lee et al., <ref id='bib-bib32'>2018</ref>)",-,21.5,-,107.2
+"NART w/ hints (Li et al., <ref id='bib-bib33'>2019</ref>)",-,21.1,38.5,-
+"NART w/ hints (<italic>B</italic>=4, 9 candidates) (Li et al., <ref id='bib-bib33'>2019</ref>)",-,25.2,22.7,-
+"ENAT Embedding Mapping (Guo et al., <ref id='bib-bib21'>2019</ref>)",-,20.7,41.7,-
+"ENAT Embedding Mapping (rescoring 9 candidates) (Guo et al., <ref id='bib-bib21'>2019</ref>)",-,24.3,20.4,-
+"Autoregressive (Gu et al., <ref id='bib-bib20'>2018</ref>)",-,22.7,2.5,-
+"Autoregressive (Lee et al., <ref id='bib-bib32'>2018</ref>)",-,23.8,-,54.0
+"Transformer (Li et al., <ref id='bib-bib33'>2019</ref>)",-,27.3,1.3,-
+"Transformer (Guo et al., <ref id='bib-bib21'>2019</ref>)",-,27.4,1.6,-
+DynamicConv (1-decoder layer (k=31)),124M,26.1,15.2,423.0
+"DynamicConv (3-decoder layers (k=3,7,15))",153M,27.7,7.2,202.3
+"DynamicConv (6-decoder layers (k=3,7,15,31,31,31))",200M,28.5,3.9,110.9

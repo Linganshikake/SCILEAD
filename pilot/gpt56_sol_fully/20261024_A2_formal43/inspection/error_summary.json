@@ -1,0 +1,118 @@
+{
+  "gold_diagnosis_counts_completed_subset": {
+    "STRICT_TDMR_MATCH": 155,
+    "RESULT_PRESENT_TDM_MISMATCH": 6,
+    "RESULT_PRESENT_WITH_NULL": 2,
+    "RESULT_NOT_STRICTLY_FOUND": 119
+  },
+  "normalization_null_fields": 11,
+  "format_failure_papers": [
+    {
+      "paper_id": "1812.09471.pdf",
+      "reason": "INVALID_FIELD_TYPES",
+      "json_parseable": true,
+      "record_count": 6,
+      "non_string_fields": [
+        {
+          "record": 0,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 0.918
+        },
+        {
+          "record": 1,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 0.973
+        },
+        {
+          "record": 2,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 0.809
+        },
+        {
+          "record": 3,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 0.952
+        },
+        {
+          "record": 4,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 0.95
+        },
+        {
+          "record": 5,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 0.834
+        }
+      ],
+      "normalization_attempts": 0,
+      "no_conversion_or_regeneration": true
+    },
+    {
+      "paper_id": "2002.03184.pdf",
+      "reason": "INVALID_FIELD_TYPES",
+      "json_parseable": true,
+      "record_count": 7,
+      "non_string_fields": [
+        {
+          "record": 0,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 29.6
+        },
+        {
+          "record": 1,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 43.2
+        },
+        {
+          "record": 2,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 35.5
+        },
+        {
+          "record": 3,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 40.59
+        },
+        {
+          "record": 4,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 18.97
+        },
+        {
+          "record": 5,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 36.81
+        },
+        {
+          "record": 6,
+          "field": "Result",
+          "type": "float",
+          "raw_value": 23.3
+        }
+      ],
+      "normalization_attempts": 0,
+      "no_conversion_or_regeneration": true
+    }
+  ],
+  "warning": "Result mismatch categories are auxiliary: not proof of baseline contamination without original table inspection; no prediction correction",
+  "strict_parser_warning": "RESULT_NOT_STRICTLY_FOUND includes percent and uncertainty representations; do not label every case as omission or incorrect extraction.",
+  "representation_audit_counts": {
+    "SIMPLE_NUMERIC_TDM_MATCH": 155,
+    "CENTRAL_VALUE_PRESENT_WITH_NULL_OR_TDM_MISMATCH": 12,
+    "SAME_TDM_DIFFERENT_OR_UNINTERPRETABLE_VALUE": 65,
+    "DECORATED_RESULT_SAME_CENTRAL_VALUE_AND_TDM": 45,
+    "NO_MATCHING_TDM_OR_CENTRAL_VALUE": 5
+  }
+}

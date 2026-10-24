@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231823092504008468268d9d6SnuMThjY",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792779789,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Dialogue act classification\",\"Dataset\":\"SWDA\",\"Metric\":\"Accuracy\",\"Result\":\"82.3%\"},{\"Task\":\"Dialogue act classification\",\"Dataset\":\"MRDA\",\"Metric\":\"Accuracy\",\"Result\":\"92.2%\"},{\"Task\":\"Dialogue act classification\",\"Dataset\":\"DyDA\",\"Metric\":\"Accuracy\",\"Result\":\"88.1%\"}]",
+        "reasoning_content": "**Extracting classification data**\n\nI need to extract the best proposed accuracy for each dataset related to dialogue act classification. I see numbers for DAH LDAutt SWDA at 82.3, MRDA at 92.2, and DyDA at 88.1. It’s essential to ensure that the table alignment is correct because it looks a bit odd. The prose mentions SWDA at 82.3 while MRDA is above 90, around 91.4, equaling 92.2. I’ll also organize this into JSON tuples."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2698,
+    "completion_tokens": 167,
+    "total_tokens": 2865,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 2865,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 2698,
+        "output_tokens": 167,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 2695,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 92
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 2695,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 2698,
+    "output_tokens": 167,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

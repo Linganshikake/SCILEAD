@@ -1,0 +1,8 @@
+Layer Type,Complexity per Layer,Sequential,Maximum Path Length
+,,Operations,
+Recurrent (DBLP:journals/corr/SutskeverVL14),<italic>O</italic>(<italic>n</italic>⋅<italic>d</italic>2),<italic>O</italic>(<italic>n</italic>),<italic>O</italic>(<italic>n</italic>)
+Convolutional (DBLP:journals/corr/KalchbrennerESO16; gehring2017convolutional),<italic>O</italic>(<italic>k</italic>⋅<italic>n</italic>⋅<italic>d</italic>2),<italic>O</italic>(1),<italic>O</italic>(log<italic>k</italic>(<italic>n</italic>)) or <italic>O</italic>(<italic>n</italic>/<italic>k</italic>)
+Self-Attention (vaswani2017attention),<italic>O</italic>(<italic>n</italic>2⋅<italic>d</italic>),<italic>O</italic>(1),<italic>O</italic>(1)
+Dynamic Convolutions (wu2019pay),<italic>O</italic>(<italic>k</italic>⋅<italic>n</italic>⋅<italic>d</italic>),<italic>O</italic>(1),<italic>O</italic>(<italic>n</italic>/<italic>k</italic>)
+Reformer (kitaev2020reformer),<italic>O</italic>(<italic>n</italic>⋅log(<italic>n</italic>)⋅<italic>d</italic>),<italic>O</italic>(log(<italic>n</italic>)),<italic>O</italic>(<italic>n</italic>/<italic>nbuckets</italic>)
+TaLK Convolutions (Ours),<italic>O</italic>(<italic>n</italic>⋅<italic>d</italic>),<italic>O</italic>(log(<italic>n</italic>)),<italic>O</italic>(<italic>n</italic>/(<italic>l</italic>max+<italic>r</italic>max+1))

@@ -1,0 +1,75 @@
+{
+  "1909.02188.pdf": {
+    "output": "[{\"Task\":\"Slot filling\",\"Dataset\":\"SNIPS\",\"Metric\":\"F1 score\",\"Result\":\"97.0\"},{\"Task\":\"Intent detection\",\"Dataset\":\"SNIPS\",\"Metric\":\"Accuracy\",\"Result\":\"99.0\"},{\"Task\":\"Sentence-level semantic frame parsing\",\"Dataset\":\"SNIPS\",\"Metric\":\"Overall accuracy\",\"Result\":\"92.9\"},{\"Task\":\"Slot filling\",\"Dataset\":\"ATIS\",\"Metric\":\"F1 score\",\"Result\":\"96.1\"},{\"Task\":\"Intent detection\",\"Dataset\":\"ATIS\",\"Metric\":\"Accuracy\",\"Result\":\"97.5\"},{\"Task\":\"Sentence-level semantic frame parsing\",\"Dataset\":\"ATIS\",\"Metric\":\"Overall accuracy\",\"Result\":\"88.6\"}]",
+    "source_documents": [
+      {
+        "content": "ﬁlling. In addition, we perform the token-level intent detection to improve the intent detection performance and further ease the error propaga- tion. Experiments on two datasets show the effec- tiveness of the proposed models and achieve the state-of-the-art performance. Besides, we explore and analyze the effect of incorporating strong pre- trained BERT model in SLU tasks. With BERT, the result reaches a new state-of-the-art level. Acknowledgments We thank the anonymous reviewers for their help- ful comments and suggestions. This work was supported by the National Natural Science Foun- dation of China (NSFC) via grant 61976072, 61632011 and 61772153. References",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 9,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "sig- niﬁcantly outperforms all the baselines by a large margin and achieves the state-of-the-art perfor- mance. In the SNIPS dataset, compared with the best prior joint work Bi-Model, we achieve 0.7% improvement on Slot (F1) score, 0.8% improve- ment on Intent (Acc) and 3.1% improvement on Overall (Acc). In the ATIS dataset, we achieve 0.4% improvement on Slot (F1) score, 0.5% im- provement on Intent (Acc) and 0.8% improvement on Overall (Acc). This indicates the effective- ness of our Stack-Propagation framework. Espe- cially, our framework gains the largest improve- ments on sentence-level semantic frame accuracy, 2All experiments are conducted on the publicly datasets provided by Goo et al. (2018), Self-Attentive Model and Bi- Model don’t have the reported result on the same datasets or they did different preprocessing. For directly comparison, we re-implemented the models and obtained the results on the ATIS and SNIPS datasets preprocessed by Goo et al. (2018). Because all baselines and our model don’t apply CRF layer, we just report the best performance of SF-ID Network with- out CRF. It’s noticing that our model does outperform SF-ID Network with CRF layer.",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 5,
+          "start_index": 1791,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "4 Experiments 4.1 Experimental Settings To evaluate the efﬁciency of our proposed model, we conduct experiments on two bench- mark datasets. One is the publicly ATIS dataset (Hemphill et al., 1990) containing audio record- ings of ﬂight reservations, and the other is the custom-intent-engines collected by Snips (SNIPS 1 Both datasets dataset) (Coucke et al., 2018). used in our paper follows the same format and par- tition as in Goo et al. (2018). The dimensionalities of the word embedding is 256 for ATIS dataset and 512 for SNIPS dataset. The self-attentive encoder hidden units are set as 256. L2 regularization is used on our model is 1 × 10−6 and dropout ra- tio is adopted is 0.4 for reducing overﬁt. We use Adam (Kingma and Ba, 2014) to optimize the pa- rameters in our model and adopted the suggested hyper-parameters for optimization. For all the ex- periments, we select the model which works the best on the dev set, and then evaluate it on the test set. 4.2 Baselines We compare our model with the existing baselines including: 1https://github.com/snipsco/ nlu-benchmark/tree/master/ 2017-06-custom-intent-engines For the Joint Seq, Attention BiRNN, Slot-gated Atten, CAPSULE-NLU and SF-ID Network, we adopt the reported results from Goo et al. (2018); Zhang et al. (2019); E et al. (2019). For the Self- Attentive Model, Bi-Model, we re-implemented the models and obtained the results on the same datasets.2 4.3 Overall Results Following Goo et al. (2018), we evaluate the SLU performance of slot ﬁlling using F1 score and the performance of intent prediction using accuracy, and sentence-level semantic frame parsing using overall accuracy. Table 2 shows the experiment re- sults of the proposed models on SNIPS and ATIS datasets. From the table, we can see that our model sig- niﬁcantly outperforms all the baselines by a large margin and achieves the state-of-the-art perfor- mance. In the SNIPS dataset, compared with the best prior joint work Bi-Model, we achieve 0.7%",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "which demonstrates the signiﬁcance and effectiveness of incorporating token-level intent information. The main reason for this can be that incorporating the token-level intent information can retain useful features for each token and ease the error propa- gation. Results are shown in the without self-attention row of Table 3. We can observe the self-attention mechanism can further improve the SLU perfor- mance. We attribute this to the fact that self- attention mechanism can capture the contextual information for each token. Without the self- attention mechanism, it will harm the intent de- tection and have bad inﬂuence on slot ﬁlling task by joint learning. the self- attention mechanism, our framework still per- forms the state-of-the-art Bi-model model (Li et al., 2018), which again demonstrates the effec- tiveness and robustness of our other framework components. 4.5 Effect of BERT Finally, we also conduct experiments to use pre- trained model, BERT (Devlin et al., 2018), to boost SLU performance. In this section, we re- place the self-attentive encoder by BERT base model with the ﬁne-tuning approach and keep other components as same with our framework. Table 4 gives the results of BERT model on ATIS and SNIPS datasets. From the table, the BERT model performs remarkably well on both two datasets and achieves a new state-of-the-art performance, which indicates the effectiveness of a strong pre-trained model in SLU tasks. We at- tribute this to the fact that pre-trained models can provide rich semantic features, which can help to improve the performance on SLU tasks. In addi- tion, our model + BERT outperforms the BERT SLU (Chen et al., 2019) which apply BERT for",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 7,
+          "start_index": 1801,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Sentence Gold Slots Gold Intent watch O action B-movie name WatchMovie movie I-movie name",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 1,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Slot ﬁlling and intent detection results on two datasets. The numbers with * indicate that the improvement of our model over all baselines is statistically signiﬁcant with p < 0.05 under t-test.\nModel Joint Seq (Hakkani-T¨ur et al., 2016) Attention BiRNN (Liu and Lane, 2016) Slot-Gated Full Atten (Goo et al., 2018) Slot-Gated Intent Atten (Goo et al., 2018) Self-Attentive Model (Li et al., 2018) Bi-Model (Wang et al., 2018) CAPSULE-NLU (Zhang et al., 2019) SF-ID Network (E et al., 2019) Our model Oracle (Intent) Slot (F1) 87.3 87.8 88.8 88.3 90.0 93.5 91.8 90.5 94.2* 96.1 SNIPS Intent (Acc) Overall (Acc) Slot (F1) 96.9 96.7 97.0 96.8 97.5 97.2 97.3 97.0 98.0* - 73.2 74.1 75.5 74.6 81.0 83.8 80.9 78.4 86.9* - 94.3 94.2 94.8 95.2 95.1 95.5 95.2 95.6 95.9* 96.0 ATIS Intent (Acc) Overall (Acc) 92.6 91.1 93.6 94.1 96.8 96.4 95.0 96.6 96.9* - 80.7 78.9 82.2 82.6 82.2 85.7 83.4 86.0 86.5* -",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: The SLU performance on baseline models compared with our Stack-Propagation model on two datasets.\nModel gate-mechanism pipelined model sentence intent augmented lstm+last-hidden lstm+token-level without self-attention Our model Slot (F1) 92.2 90.8 93.7 - - 94.1 94.2 SNIPS Intent (Acc) Overall (Acc) Slot (F1) 97.6 97.6 97.5 97.1 97.5 97.8 98.0 82.4 81.8 86.1 - - 86.6 86.9 95.3 95.1 95.5 - - 95.6 95.9 ATIS Intent (Acc) Overall (Acc) 96.2 96.1 96.7 95.2 96.0 96.6 96.9 83.4 82.3 85.8 - - 86.2 86.5",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4 gives the results of BERT model on ATIS and SNIPS datasets. From the table, the BERT model performs remarkably well on both two datasets and achieves a new state-of-the-art performance, which indicates the effectiveness of a strong pre-trained model in SLU tasks. We at- tribute this to the fact that pre-trained models can provide rich semantic features, which can help to improve the performance on SLU tasks. In addi- tion, our model + BERT outperforms the BERT SLU (Chen et al., 2019) which apply BERT for\nModel Our model Intent detection (BERT) Slot ﬁlling (BERT) BERT SLU (Chen et al., 2019) Our model + BERT Slot (F1) 94.2 - 95.8 97.0 97.0 SNIPS Intent (Acc) Overall (Acc) Slot (F1) 98.0 97.8 - 98.6 99.0 86.9 - - 92.8 92.9 95.9 - 95.6 96.1 96.1 ATIS Intent (Acc) Overall (Acc) 96.9 96.5 - 97.5 97.5 86.5 - - 88.2 88.6",
+        "metadata": {
+          "filename": "1909.02188.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

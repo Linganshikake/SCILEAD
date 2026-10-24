@@ -1,0 +1,829 @@
+{
+  "date": "2026-10-24",
+  "scale": "0..1 (official duplicate behavior retained)",
+  "F1": "2PR/(P+R) from official per-paper macro P/R",
+  "experiments": [
+    {
+      "name": "GPT-4.1 Fully LLM Zero-shot",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.9604651162790697,
+          "Recall": 0.973421926910299,
+          "F1": 0.9669001170581255
+        },
+        "Dataset": {
+          "Precision": 0.8200996677740865,
+          "Recall": 0.7822236928598078,
+          "F1": 0.8007140211518396
+        },
+        "Metric": {
+          "Precision": 0.8710963455149501,
+          "Recall": 0.8360700023490722,
+          "F1": 0.8532238519722299
+        },
+        "Result": {
+          "Precision": 0.6901599046947884,
+          "Recall": 0.7180752193542891,
+          "F1": 0.7038408806738071
+        },
+        "TDM": {
+          "Precision": 0.6396143907771815,
+          "Recall": 0.5869649213835261,
+          "F1": 0.6121596979113421
+        },
+        "TDMR": {
+          "Precision": 0.41184184033021226,
+          "Recall": 0.4317863919026709,
+          "F1": 0.4215783575665092
+        }
+      },
+      "leaderboard": {
+        "LR": 0.8148148148148148,
+        "nonempty": 0.7407407407407407,
+        "PC": 0.4871252204585538,
+        "RC": 0.317989417989418,
+        "RBO": 0.24765432098765428,
+        "AO": 0.4625
+      },
+      "report": "pilot/full43_uncapped/report.md",
+      "metric_sources": [
+        "pilot/full43_uncapped/evaluation/metrics_with_f1.json",
+        "pilot/leaderboard_eval_full43_uncapped/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "",
+      "metric_source_sha256": {
+        "pilot/full43_uncapped/evaluation/metrics_with_f1.json": "32899780aa086dc69cb0b18d4f6867583e040090166b1c996eddd426f08ce2dd",
+        "pilot/leaderboard_eval_full43_uncapped/paper_metrics/leaderboard_metrics.json": "be0063aa70a051ccc1f40bb483ef235c97a8f9f0278cfadda17233599faeb715"
+      }
+    },
+    {
+      "name": "GPT-4.1 Fully CS",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.9720930232558139,
+          "Recall": 0.973421926910299,
+          "F1": 0.9727570212225187
+        },
+        "Dataset": {
+          "Precision": 0.8922480620155038,
+          "Recall": 0.8641250051817767,
+          "F1": 0.8779613803153076
+        },
+        "Metric": {
+          "Precision": 0.8731635289774826,
+          "Recall": 0.8452078928823118,
+          "F1": 0.8589583102703122
+        },
+        "Result": {
+          "Precision": 0.6901599046947884,
+          "Recall": 0.7180752193542891,
+          "F1": 0.7038408806738071
+        },
+        "TDM": {
+          "Precision": 0.7320874861572537,
+          "Recall": 0.6951258947770577,
+          "F1": 0.7131280797507742
+        },
+        "TDMR": {
+          "Precision": 0.5325875029363402,
+          "Recall": 0.5530174734825897,
+          "F1": 0.5426102526792368
+        }
+      },
+      "leaderboard": {
+        "LR": 0.9259259259259259,
+        "nonempty": 0.8888888888888888,
+        "PC": 0.6315696649029982,
+        "RC": 0.41190476190476194,
+        "RBO": 0.3034202535212636,
+        "AO": 0.5222122378182985
+      },
+      "report": "pilot/full43_cs/report.md",
+      "metric_sources": [
+        "pilot/full43_cs/evaluation/metrics_with_f1.json",
+        "pilot/full43_cs/leaderboard_evaluation/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "",
+      "metric_source_sha256": {
+        "pilot/full43_cs/evaluation/metrics_with_f1.json": "818f686f8c30a8cc184dc11ec21867fd611238b7f3697f81744271e6735f0f79",
+        "pilot/full43_cs/leaderboard_evaluation/paper_metrics/leaderboard_metrics.json": "575a048c254376c75f84413c37b7a524a1af1f2729dab73d5951d10a1789a81e"
+      }
+    },
+    {
+      "name": "GPT-4.1 Partially stage1",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.2681616832779623,
+          "Recall": 0.3135843484680694,
+          "F1": 0.28909971756036545
+        },
+        "Dataset": {
+          "Precision": 0.47967884828349944,
+          "Recall": 0.48506389870958955,
+          "F1": 0.4823563442215477
+        },
+        "Metric": {
+          "Precision": 0.8668327796234774,
+          "Recall": 0.82056612638008,
+          "F1": 0.8430651622022739
+        },
+        "Result": {
+          "Precision": 0.6901599046947884,
+          "Recall": 0.7180752193542891,
+          "F1": 0.7038408806738071
+        },
+        "TDM": {
+          "Precision": 0.11399040236249537,
+          "Recall": 0.10791885117466513,
+          "F1": 0.11087156638863023
+        },
+        "TDMR": {
+          "Precision": 0.0860280546327058,
+          "Recall": 0.09223879479693434,
+          "F1": 0.08902523496021629
+        }
+      },
+      "leaderboard": {},
+      "report": "pilot/full43_partially/report.md",
+      "metric_sources": [
+        "pilot/full43_partially/evaluation/stage1/metrics_with_f1.json"
+      ],
+      "notes": "Partially 的 Masked10 指标另见原报告；元组指标为全43篇。",
+      "metric_source_sha256": {
+        "pilot/full43_partially/evaluation/stage1/metrics_with_f1.json": "730bd11ee6717941217908fb1e6c72b14ec61f694c869698ba19f047c3325938"
+      }
+    },
+    {
+      "name": "GPT-4.1 Partially stage2",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.35227021040974527,
+          "Recall": 0.4860649686231081,
+          "F1": 0.40849105000509195
+        },
+        "Dataset": {
+          "Precision": 0.5761904761904763,
+          "Recall": 0.5835135111126903,
+          "F1": 0.579828872734065
+        },
+        "Metric": {
+          "Precision": 0.8668327796234774,
+          "Recall": 0.82056612638008,
+          "F1": 0.8430651622022739
+        },
+        "Result": {
+          "Precision": 0.6901599046947884,
+          "Recall": 0.7180752193542891,
+          "F1": 0.7038408806738071
+        },
+        "TDM": {
+          "Precision": 0.2209772140004698,
+          "Recall": 0.21804335199684033,
+          "F1": 0.21950047987447024
+        },
+        "TDMR": {
+          "Precision": 0.16279992617201922,
+          "Recall": 0.1765235023374558,
+          "F1": 0.16938419651363157
+        }
+      },
+      "leaderboard": {
+        "LR": 0.48148148148148145,
+        "nonempty": 0.4074074074074074,
+        "PC": 0.13328924162257497,
+        "RC": 0.08606701940035272,
+        "RBO": 0.11053497942386831,
+        "AO": 0.15580246913580248
+      },
+      "report": "pilot/full43_partially/report.md",
+      "metric_sources": [
+        "pilot/full43_partially/evaluation/stage2/metrics_with_f1.json",
+        "pilot/full43_partially/leaderboard_evaluation/all27/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "Partially 的 Masked10 指标另见原报告；元组指标为全43篇。",
+      "metric_source_sha256": {
+        "pilot/full43_partially/evaluation/stage2/metrics_with_f1.json": "9a6e8bbaf86abc52fd76ea60d377a3e4bcf907db0715fde59900004a6dfca8f2",
+        "pilot/full43_partially/leaderboard_evaluation/all27/paper_metrics/leaderboard_metrics.json": "d0a12ec676fb827a69a4c97d5d874d51868d0f55f887e51ecd48d191f3f9084c"
+      }
+    },
+    {
+      "name": "GPT-4.1 Cold Start order_default",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.2617386489479513,
+          "Recall": 0.3204134366925065,
+          "F1": 0.28811914306689285
+        },
+        "Dataset": {
+          "Precision": 0.39263565891472874,
+          "Recall": 0.3901995576243182,
+          "F1": 0.3914138178233531
+        },
+        "Metric": {
+          "Precision": 0.5068106312292359,
+          "Recall": 0.5078928823114869,
+          "F1": 0.5073511796227566
+        },
+        "Result": {
+          "Precision": 0.6901599046947884,
+          "Recall": 0.7180752193542891,
+          "F1": 0.7038408806738071
+        },
+        "TDM": {
+          "Precision": 0.11119416758951642,
+          "Recall": 0.10676361106593664,
+          "F1": 0.10893385805784085
+        },
+        "TDMR": {
+          "Precision": 0.09043004798818752,
+          "Recall": 0.0854457816085723,
+          "F1": 0.08786728851789577
+        }
+      },
+      "leaderboard": {
+        "LR": 0.4444444444444444,
+        "nonempty": 0.4444444444444444,
+        "PC": 0.10903880070546736,
+        "RC": 0.08002645502645502,
+        "RBO": 0.10185185185185185,
+        "AO": 0.1388888888888889
+      },
+      "report": "pilot/full43_cold_start/report.md",
+      "metric_sources": [
+        "pilot/full43_cold_start/order_default/evaluation/stage2/metrics_with_f1.json",
+        "pilot/full43_cold_start/order_default/evaluation/all27/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "Cold Start主指标是排行榜；本表IIM/ETM仅为辅助诊断，不冒充论文主结果。",
+      "metric_source_sha256": {
+        "pilot/full43_cold_start/order_default/evaluation/stage2/metrics_with_f1.json": "dca7ecd8dd825c8380884d29feb3fdbe61d2df234dcfeb4e336ad7c8a3de1345",
+        "pilot/full43_cold_start/order_default/evaluation/all27/paper_metrics/leaderboard_metrics.json": "c8fa07ffe88398e80258cf855a5b2ec9834a53f393400849da5f7ca97988daf2"
+      }
+    },
+    {
+      "name": "GPT-4.1 Cold Start order_0",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.26057585825027685,
+          "Recall": 0.3262273901808786,
+          "F1": 0.2897290783866665
+        },
+        "Dataset": {
+          "Precision": 0.3904208194905868,
+          "Recall": 0.3878739762289693,
+          "F1": 0.3891432307943969
+        },
+        "Metric": {
+          "Precision": 0.5057535487768046,
+          "Recall": 0.4960065774019261,
+          "F1": 0.5008326448260008
+        },
+        "Result": {
+          "Precision": 0.6901599046947884,
+          "Recall": 0.7180752193542891,
+          "F1": 0.7038408806738071
+        },
+        "TDM": {
+          "Precision": 0.0930047988187523,
+          "Recall": 0.08767622558320232,
+          "F1": 0.09026193811490325
+        },
+        "TDMR": {
+          "Precision": 0.0722406792174234,
+          "Recall": 0.06635839612583799,
+          "F1": 0.06917471268891037
+        }
+      },
+      "leaderboard": {
+        "LR": 0.2962962962962963,
+        "nonempty": 0.2962962962962963,
+        "PC": 0.07557319223985891,
+        "RC": 0.043915343915343914,
+        "RBO": 0.0817283950617284,
+        "AO": 0.11876543209876543
+      },
+      "report": "pilot/full43_cold_start/report.md",
+      "metric_sources": [
+        "pilot/full43_cold_start/order_0/evaluation/stage2/metrics_with_f1.json",
+        "pilot/full43_cold_start/order_0/evaluation/all27/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "Cold Start主指标是排行榜；本表IIM/ETM仅为辅助诊断，不冒充论文主结果。",
+      "metric_source_sha256": {
+        "pilot/full43_cold_start/order_0/evaluation/stage2/metrics_with_f1.json": "79a78be35fa3a76af8c07a04ddc69d12ce23cc5b1be56857723ea4621faa8ff7",
+        "pilot/full43_cold_start/order_0/evaluation/all27/paper_metrics/leaderboard_metrics.json": "79befb6141702eb7b74c120c7012df3454f9796db9844f0e67f22a43994fc3b2"
+      }
+    },
+    {
+      "name": "GPT-4.1 Cold Start order_42",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.26500553709856034,
+          "Recall": 0.3378552971576227,
+          "F1": 0.29702883119059165
+        },
+        "Dataset": {
+          "Precision": 0.4078073089700997,
+          "Recall": 0.4018274646010624,
+          "F1": 0.40479530365634475
+        },
+        "Metric": {
+          "Precision": 0.5192137320044296,
+          "Recall": 0.535799859055673,
+          "F1": 0.5273764182472888
+        },
+        "Result": {
+          "Precision": 0.6901599046947885,
+          "Recall": 0.718075219354289,
+          "F1": 0.7038408806738071
+        },
+        "TDM": {
+          "Precision": 0.13688630490956072,
+          "Recall": 0.12748242713358993,
+          "F1": 0.13201711304021488
+        },
+        "TDMR": {
+          "Precision": 0.12069029162052418,
+          "Recall": 0.11294754341265971,
+          "F1": 0.11669062033860732
+        }
+      },
+      "leaderboard": {
+        "LR": 0.4444444444444444,
+        "nonempty": 0.4444444444444444,
+        "PC": 0.12786596119929453,
+        "RC": 0.11860670194003528,
+        "RBO": 0.07896090534979423,
+        "AO": 0.08307613168724279
+      },
+      "report": "pilot/full43_cold_start/report.md",
+      "metric_sources": [
+        "pilot/full43_cold_start/order_42/evaluation/stage2/metrics_with_f1.json",
+        "pilot/full43_cold_start/order_42/evaluation/all27/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "Cold Start主指标是排行榜；本表IIM/ETM仅为辅助诊断，不冒充论文主结果。",
+      "metric_source_sha256": {
+        "pilot/full43_cold_start/order_42/evaluation/stage2/metrics_with_f1.json": "6cc9a89b8a1aff19461b6f593041dd8d75cadbfaf554e9650af9aa120b32cbb2",
+        "pilot/full43_cold_start/order_42/evaluation/all27/paper_metrics/leaderboard_metrics.json": "9e885af200c22f0d85597397950ad1ebdf3897ffcb6404c00039ba541cf75ea1"
+      }
+    },
+    {
+      "name": "GPT-4.1 Few-shot Extraction + Zero-shot Norm",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.9558139534883722,
+          "Recall": 0.9641934293097084,
+          "F1": 0.959985406152934
+        },
+        "Dataset": {
+          "Precision": 0.752297895902547,
+          "Recall": 0.727977226831536,
+          "F1": 0.7399377691341729
+        },
+        "Metric": {
+          "Precision": 0.8052325581395349,
+          "Recall": 0.7315950199671128,
+          "F1": 0.7666496070769777
+        },
+        "Result": {
+          "Precision": 0.7245582848524025,
+          "Recall": 0.7281697759604735,
+          "F1": 0.7263595413116185
+        },
+        "TDM": {
+          "Precision": 0.5119336652344905,
+          "Recall": 0.47296843982890485,
+          "F1": 0.49168027095700995
+        },
+        "TDMR": {
+          "Precision": 0.32886749213698596,
+          "Recall": 0.333639642011735,
+          "F1": 0.3312363797768559
+        }
+      },
+      "leaderboard": {
+        "LR": 0.7407407407407407,
+        "nonempty": 0.7407407407407407,
+        "PC": 0.42367724867724865,
+        "RC": 0.2826278659611993,
+        "RBO": 0.3405144032921811,
+        "AO": 0.4215020576131688
+      },
+      "report": "pilot/full43_fewshot/report.md",
+      "metric_sources": [
+        "pilot/full43_fewshot/evaluation/metrics_with_f1.json",
+        "pilot/full43_fewshot/leaderboard/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "",
+      "metric_source_sha256": {
+        "pilot/full43_fewshot/evaluation/metrics_with_f1.json": "0b197c370f7d1f743399f65fbf30681012a1f8a009267ac13c14794b822f2d01",
+        "pilot/full43_fewshot/leaderboard/paper_metrics/leaderboard_metrics.json": "dc2e2732fe78dc9eb0483c0e221004ea066c935bfb1f2d86d54a035607715049"
+      }
+    },
+    {
+      "name": "GPT-4.1 作者完整 Few-shot 分支",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.9583056478405315,
+          "Recall": 0.9608711701734958,
+          "F1": 0.9595866942341018
+        },
+        "Dataset": {
+          "Precision": 0.8938676633444076,
+          "Recall": 0.8802965900948118,
+          "F1": 0.8870302222725471
+        },
+        "Metric": {
+          "Precision": 0.9239840263096076,
+          "Recall": 0.8828987549917783,
+          "F1": 0.902974287987275
+        },
+        "Result": {
+          "Precision": 0.7245582848524025,
+          "Recall": 0.7281697759604735,
+          "F1": 0.7263595413116185
+        },
+        "TDM": {
+          "Precision": 0.7846746517953325,
+          "Recall": 0.743762232599442,
+          "F1": 0.7636708808091645
+        },
+        "TDMR": {
+          "Precision": 0.5551164711561429,
+          "Recall": 0.5594821328542259,
+          "F1": 0.5572907522896215
+        }
+      },
+      "leaderboard": {
+        "LR": 1.0,
+        "nonempty": 1.0,
+        "PC": 0.7531305114638448,
+        "RC": 0.55,
+        "RBO": 0.49651780465272527,
+        "AO": 0.6723881376967797
+      },
+      "report": "pilot/full43_fewshot_both_prompts/report.md",
+      "metric_sources": [
+        "pilot/full43_fewshot_both_prompts/evaluation/metrics_with_f1.json",
+        "pilot/full43_fewshot_both_prompts/leaderboard_evaluation/paper_metrics/leaderboard_metrics.json"
+      ],
+      "notes": "",
+      "metric_source_sha256": {
+        "pilot/full43_fewshot_both_prompts/evaluation/metrics_with_f1.json": "1deb3307038623d883770a34aa2bd7e85cbc9cacf48df740c239cff362f78da3",
+        "pilot/full43_fewshot_both_prompts/leaderboard_evaluation/paper_metrics/leaderboard_metrics.json": "443179d43db22744f397696c268ccf6328b5a483281988e94189ab53bb84d138"
+      }
+    },
+    {
+      "name": "Llama-3 70B V2 fully_llm",
+      "papers": 42,
+      "gold": 259,
+      "metrics": {
+        "Task": {
+          "Precision": 0.8582766439909297,
+          "Recall": 0.8973922902494331,
+          "F1": 0.877398726146362
+        },
+        "Dataset": {
+          "Precision": 0.8461451247165532,
+          "Recall": 0.7952550717256599,
+          "F1": 0.8199111993593209
+        },
+        "Metric": {
+          "Precision": 0.8942460317460318,
+          "Recall": 0.8327441077441078,
+          "F1": 0.8623999602336005
+        },
+        "Result": {
+          "Precision": 0.38936301793444655,
+          "Recall": 0.4901085686799973,
+          "F1": 0.43396547272523717
+        },
+        "TDM": {
+          "Precision": 0.7057539682539683,
+          "Recall": 0.6551090576090577,
+          "F1": 0.6794891304413265
+        },
+        "TDMR": {
+          "Precision": 0.24365079365079362,
+          "Recall": 0.33028052635195493,
+          "F1": 0.28042767337621616
+        }
+      },
+      "leaderboard": {
+        "PC": 0.7112874779541447,
+        "RC": 0.22204585537918875,
+        "RBO": 0.18131459583119033,
+        "LR": 0.9259259259259259,
+        "nonempty": 0.9259259259259259,
+        "AO": 0.5623049275827052
+      },
+      "report": "pilot/autodl_llama3/20261021_format_followup/format_v2/comparison_v1_v2.md",
+      "metric_sources": [
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_llm/metrics_with_f1.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_llm/leaderboard_official.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_llm/leaderboard_supplementary.json"
+      ],
+      "notes": "固定42篇分母，41篇格式有效，1篇截断空预测；27榜/131榜内Gold。2048诊断不混入V2。",
+      "metric_source_sha256": {
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_llm/metrics_with_f1.json": "cedd955eca05377c2bf7959e610c2ff411c182d7e726b4d6f27c7aa39645b3e6",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_llm/leaderboard_official.json": "cb1fb672ec0e8e5cdbd769ca4b3e6b1b3dafe3e976948495e90b5851887689ab",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_llm/leaderboard_supplementary.json": "8ab69b4dc828bd76f4badf7de338d36a4887ca2a23c0c0c73ae1c9c213125312"
+      }
+    },
+    {
+      "name": "Llama-3 70B V2 fully_cs",
+      "papers": 42,
+      "gold": 259,
+      "metrics": {
+        "Task": {
+          "Precision": 0.8465419501133786,
+          "Recall": 0.8784958427815569,
+          "F1": 0.8622229460454376
+        },
+        "Dataset": {
+          "Precision": 0.796315192743764,
+          "Recall": 0.7592431669637553,
+          "F1": 0.777337430083699
+        },
+        "Metric": {
+          "Precision": 0.8511904761904762,
+          "Recall": 0.793807118807119,
+          "F1": 0.8214979298639148
+        },
+        "Result": {
+          "Precision": 0.38936301793444655,
+          "Recall": 0.4901085686799973,
+          "F1": 0.43396547272523717
+        },
+        "TDM": {
+          "Precision": 0.6084975870690157,
+          "Recall": 0.568026233026233,
+          "F1": 0.5875658210819443
+        },
+        "TDMR": {
+          "Precision": 0.22708333333333333,
+          "Recall": 0.2960874046588333,
+          "F1": 0.25703469221533615
+        }
+      },
+      "leaderboard": {
+        "PC": 0.6037918871252205,
+        "RC": 0.1986772486772487,
+        "RBO": 0.17747672735046474,
+        "LR": 0.8148148148148148,
+        "nonempty": 0.8148148148148148,
+        "AO": 0.4655947279432127
+      },
+      "report": "pilot/autodl_llama3/20261021_format_followup/format_v2/comparison_v1_v2.md",
+      "metric_sources": [
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_cs/metrics_with_f1.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_cs/leaderboard_official.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_cs/leaderboard_supplementary.json"
+      ],
+      "notes": "固定42篇分母，41篇格式有效，1篇截断空预测；27榜/131榜内Gold。2048诊断不混入V2。",
+      "metric_source_sha256": {
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_cs/metrics_with_f1.json": "74d557cc495a3f58b6bd6a508252819c0855987bc04d636fcaf3444e3500df47",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_cs/leaderboard_official.json": "f6aa9515c281eb96b9a543029114abee449e3413c490e9a895ca80a0609d93a2",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/fully_cs/leaderboard_supplementary.json": "f56f417d870c7af267f8d542e72c16964be21bc88327b9ab7270fd59a5046a0d"
+      }
+    },
+    {
+      "name": "Llama-3 70B V2 partially_stage1",
+      "papers": 42,
+      "gold": 259,
+      "metrics": {
+        "Task": {
+          "Precision": 0.5505102040816326,
+          "Recall": 0.5401549508692366,
+          "F1": 0.5452834188181666
+        },
+        "Dataset": {
+          "Precision": 0.5412698412698413,
+          "Recall": 0.5114437441643324,
+          "F1": 0.5259342675018449
+        },
+        "Metric": {
+          "Precision": 0.8942460317460318,
+          "Recall": 0.8327441077441078,
+          "F1": 0.8623999602336005
+        },
+        "Result": {
+          "Precision": 0.38936301793444655,
+          "Recall": 0.4901085686799973,
+          "F1": 0.43396547272523717
+        },
+        "TDM": {
+          "Precision": 0.36632653061224485,
+          "Recall": 0.3153579357150786,
+          "F1": 0.33893680785759056
+        },
+        "TDMR": {
+          "Precision": 0.10192743764172335,
+          "Recall": 0.1175718065003779,
+          "F1": 0.10919211154762669
+        }
+      },
+      "leaderboard": {
+        "PC": 0.3716931216931218,
+        "RC": 0.09135802469135801,
+        "RBO": 0.0791358024691358,
+        "LR": 0.5925925925925926,
+        "nonempty": 0.5925925925925926,
+        "AO": 0.2756172839506173
+      },
+      "report": "pilot/autodl_llama3/20261021_format_followup/format_v2/comparison_v1_v2.md",
+      "metric_sources": [
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage1/metrics_with_f1.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage1/leaderboard_official.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage1/leaderboard_supplementary.json"
+      ],
+      "notes": "固定42篇分母，41篇格式有效，1篇截断空预测；27榜/131榜内Gold。2048诊断不混入V2。",
+      "metric_source_sha256": {
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage1/metrics_with_f1.json": "3c0f8576c799e9f6940ea4bf7c39dcc9e286fa9cc486829df6302859d9f8762f",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage1/leaderboard_official.json": "2e2debdbbdbd987f6d1de746efc4c94d5a8588fd2a7ddbde522c6bc5a633167c",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage1/leaderboard_supplementary.json": "19048c396cbf57a8f3cbebf62644cca332712a4bce3e2f736288da9e3ba2442c"
+      }
+    },
+    {
+      "name": "Llama-3 70B V2 partially_stage2",
+      "papers": 42,
+      "gold": 259,
+      "metrics": {
+        "Task": {
+          "Precision": 0.7860544217687074,
+          "Recall": 0.8590325018896446,
+          "F1": 0.8209247631143707
+        },
+        "Dataset": {
+          "Precision": 0.7496031746031747,
+          "Recall": 0.7187669764875648,
+          "F1": 0.733861291003196
+        },
+        "Metric": {
+          "Precision": 0.9378968253968254,
+          "Recall": 0.8684583934583936,
+          "F1": 0.9018429616850896
+        },
+        "Result": {
+          "Precision": 0.38936301793444655,
+          "Recall": 0.4901085686799973,
+          "F1": 0.43396547272523717
+        },
+        "TDM": {
+          "Precision": 0.6451814058956916,
+          "Recall": 0.5504409082980511,
+          "F1": 0.5940575629315177
+        },
+        "TDMR": {
+          "Precision": 0.1975907029478458,
+          "Recall": 0.270529959458531,
+          "F1": 0.22837789121754093
+        }
+      },
+      "leaderboard": {
+        "PC": 0.6211640211640214,
+        "RC": 0.14003527336860672,
+        "RBO": 0.09776479319408612,
+        "LR": 0.8888888888888888,
+        "nonempty": 0.8888888888888888,
+        "AO": 0.4389649501265662
+      },
+      "report": "pilot/autodl_llama3/20261021_format_followup/format_v2/comparison_v1_v2.md",
+      "metric_sources": [
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage2/metrics_with_f1.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage2/leaderboard_official.json",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage2/leaderboard_supplementary.json"
+      ],
+      "notes": "固定42篇分母，41篇格式有效，1篇截断空预测；27榜/131榜内Gold。2048诊断不混入V2。",
+      "metric_source_sha256": {
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage2/metrics_with_f1.json": "1618ea1d46357d922f3f0417bb0340b7ab307b793aac6a01c525e9b3b61ee218",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage2/leaderboard_official.json": "b1a72d91d25ab1e662f35d58f93a5b0cecf547ca722e43dc0f80e1547aeb8f3e",
+        "pilot/autodl_llama3/20261021_format_followup/format_v2/evaluation/partially_stage2/leaderboard_supplementary.json": "05fbcd39ff25a26af5564523114f7f813bd2efccbb0897e3fd9b57eb4742d417"
+      }
+    },
+    {
+      "name": "AxCell + GPT-4.1 Fully LLM",
+      "papers": 37,
+      "gold": 248,
+      "metrics": {
+        "Task": {
+          "Precision": 0.6711711711711711,
+          "Recall": 0.5671385671385671,
+          "F1": 0.614784887086983
+        },
+        "Dataset": {
+          "Precision": 0.5405405405405406,
+          "Recall": 0.2752281502281502,
+          "F1": 0.3647405809509827
+        },
+        "Metric": {
+          "Precision": 0.5936936936936937,
+          "Recall": 0.4451951951951952,
+          "F1": 0.5088312767168093
+        },
+        "Result": {
+          "Precision": 0.41621621621621624,
+          "Recall": 0.16319039819039824,
+          "F1": 0.23445534920993755
+        },
+        "TDM": {
+          "Precision": 0.3396396396396396,
+          "Recall": 0.15917163917163918,
+          "F1": 0.21675932548253313
+        },
+        "TDMR": {
+          "Precision": 0.16846846846846847,
+          "Recall": 0.07762840762840763,
+          "F1": 0.10628285210459701
+        }
+      },
+      "leaderboard": {
+        "PC": 0.14708193041526374,
+        "RC": 0.07738496071829405,
+        "RBO": 0.06772633744855966,
+        "LR": 0.2962962962962963,
+        "nonempty": 0.2962962962962963,
+        "AO": 0.09684156378600822
+      },
+      "report": "pilot/axcell_aliyun/20261022_stage5/final_axcell_report.md",
+      "metric_sources": [
+        "pilot/axcell_aliyun/20261022_stage5/metrics.json"
+      ],
+      "notes": "28篇非空、9篇有效空预测；另2篇解析失败。作者36篇成员未核实，非严格同范围比较；27榜/119榜内Gold。",
+      "metric_source_sha256": {
+        "pilot/axcell_aliyun/20261022_stage5/metrics.json": "ebcad86d6c91fe1a9d60b690814615cde5db774ff808897270d609db4f798736"
+      }
+    },
+    {
+      "name": "GPT-5.6 Sol Fully LLM（Result类型恢复版）",
+      "papers": 43,
+      "gold": 295,
+      "metrics": {
+        "Task": {
+          "Precision": 0.9819121447028424,
+          "Recall": 0.9857881136950903,
+          "F1": 0.9838463117639773
+        },
+        "Dataset": {
+          "Precision": 0.9742310243336235,
+          "Recall": 0.9771380010778096,
+          "F1": 0.9756823474274731
+        },
+        "Metric": {
+          "Precision": 0.9663003663003663,
+          "Recall": 0.9767441860465116,
+          "F1": 0.9714942085280629
+        },
+        "Result": {
+          "Precision": 0.7774714711373218,
+          "Recall": 0.8366904413416041,
+          "F1": 0.8059946691684621
+        },
+        "TDM": {
+          "Precision": 0.955268037228743,
+          "Recall": 0.9622984767170814,
+          "F1": 0.9587703690029148
+        },
+        "TDMR": {
+          "Precision": 0.7510818713450292,
+          "Recall": 0.8106168250354298,
+          "F1": 0.779714554801744
+        }
+      },
+      "leaderboard": {
+        "PC": 0.9873015873015873,
+        "RC": 0.8196649029982362,
+        "RBO": 0.7831065855073791,
+        "LR": null,
+        "nonempty": 1.0,
+        "AO": null
+      },
+      "report": "pilot/gpt56_sol_fully/20261024_A2_result_type_recovery/report.md",
+      "metric_sources": [
+        "pilot/gpt56_sol_fully/20261024_A2_result_type_recovery/evaluation/metrics_with_f1.json",
+        "pilot/gpt56_sol_fully/20261024_A2_result_type_recovery/leaderboard/eval_results.json"
+      ],
+      "notes": "335条预测。无损Result类型恢复；LR/AO未单独计算。模型名来自服务商请求/响应，不据此认证底层模型身份。",
+      "metric_source_sha256": {
+        "pilot/gpt56_sol_fully/20261024_A2_result_type_recovery/evaluation/metrics_with_f1.json": "51f3822cf3a632345502259904cc73b3275455a53528f0cfc2d0f0b1b8a3a616",
+        "pilot/gpt56_sol_fully/20261024_A2_result_type_recovery/leaderboard/eval_results.json": "9cf6ce0cf10dccf21f1df0618104feace6102396c18f46b5bff94c206ae1fe2e"
+      }
+    }
+  ]
+}

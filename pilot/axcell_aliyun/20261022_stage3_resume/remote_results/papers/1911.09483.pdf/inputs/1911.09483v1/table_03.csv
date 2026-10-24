@@ -1,0 +1,13 @@
+Model,BLEU
+MUSE,36.3
+MUSE-simple (without DepthConv),35.8
+substitute DepthConv with Convolution (k=3),35.2
+substitute DepthConv with Convolution (k=5),35.0
+substitute DepthConv with Convolution (k=7),34.5
+DepthConv without shared projection,34.9
+DepthConv single kernel (k=3),36.2
+DepthConv single kernel (k=7),36.2
+DepthConv single kernel (k=15),36.0
+DepthConv single kernel (k=31),35.8
+"DepthConv single kernel (grow kernels among layers:3,7,15,31)",35.9
+"DepthConv dynamically selected kernel (k=3,15)",36.3

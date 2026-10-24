@@ -1,0 +1,184 @@
+{
+  "uses_gold_answers": false,
+  "source": "Saved original parsed tables and returned original predictions",
+  "records": [
+    {
+      "prediction": {
+        "dataset": "CoNLL 2003 (English)",
+        "metric": "F1",
+        "task": "Named Entity Recognition",
+        "model": "BLSTM-CNN + emb + lex",
+        "score": 91.85
+      },
+      "cell_ext_id": "1511.08308v5/table_06.csv/6.2",
+      "row_index_zero_based": 6,
+      "column_index_zero_based": 2,
+      "caption": "Table 5: Results of our models, with various feature sets, compared to other published results. The three sections are, in order, our models, published neural network models, and published non-neural network models. For the features, emb = Collobert word embeddings, caps = capitalization feature, lex = lexicon features from both SENNA and DBpedia lexicons. For F1 scores, standard deviations are in parentheses.",
+      "source_raw_value": "<bold>91.85</bold>",
+      "source_value": "91.85",
+      "source_row": [
+        "BLSTM-CNN + emb + lex",
+        "91.39",
+        "91.85",
+        "91.62 (+- 0.33)",
+        "86.04",
+        "86.53",
+        "86.28 (+- 0.26)"
+      ],
+      "first_two_rows": [
+        [
+          "Model",
+          "CoNLL-2003",
+          "CoNLL-2003",
+          "CoNLL-2003",
+          "OntoNotes 5.0",
+          "OntoNotes 5.0",
+          "OntoNotes 5.0"
+        ],
+        [
+          "Model",
+          "Prec.",
+          "Recall",
+          "F1",
+          "Prec.",
+          "Recall",
+          "F1"
+        ]
+      ]
+    },
+    {
+      "prediction": {
+        "dataset": "Ontonotes v5 (English)",
+        "metric": "F1",
+        "task": "Named Entity Recognition",
+        "model": "Test set size (# entities)",
+        "score": 4696.0
+      },
+      "cell_ext_id": "1511.08308v5/table_11.csv/2.4",
+      "row_index_zero_based": 2,
+      "column_index_zero_based": 4,
+      "caption": "Table 10: Per genre F1 scores on OntoNotes. BC = broadcast conversation, BN = broadcast news, MZ = magazine, NW = newswire, TC = telephone conversation, WB = blogs and newsgroups",
+      "source_raw_value": "4,696",
+      "source_value": "4,696",
+      "source_row": [
+        "Test set size (# entities)",
+        "1,697",
+        "2,184",
+        "1,163",
+        "4,696",
+        "380",
+        "1,137"
+      ],
+      "first_two_rows": [
+        [
+          "Model",
+          "BC",
+          "BN",
+          "MZ",
+          "NW",
+          "TC",
+          "WB"
+        ],
+        [
+          "Test set size (# tokens)",
+          "32,576",
+          "23,557",
+          "18,260",
+          "51,667",
+          "11,015",
+          "19,348"
+        ]
+      ]
+    }
+  ],
+  "table_type_predictions": [
+    {
+      "table": "table_01.csv",
+      "prediction": "IRRELEVANT"
+    },
+    {
+      "table": "table_02.csv",
+      "prediction": "IRRELEVANT"
+    },
+    {
+      "table": "table_03.csv",
+      "prediction": "IRRELEVANT"
+    },
+    {
+      "table": "table_04.csv",
+      "prediction": "IRRELEVANT"
+    },
+    {
+      "table": "table_05.csv",
+      "prediction": "ABLATION"
+    },
+    {
+      "table": "table_06.csv",
+      "prediction": "SOTA"
+    },
+    {
+      "table": "table_07.csv",
+      "prediction": "ABLATION"
+    },
+    {
+      "table": "table_08.csv",
+      "prediction": "IRRELEVANT"
+    },
+    {
+      "table": "table_09.csv",
+      "prediction": "ABLATION"
+    },
+    {
+      "table": "table_10.csv",
+      "prediction": "ABLATION"
+    },
+    {
+      "table": "table_11.csv",
+      "prediction": "SOTA"
+    }
+  ],
+  "filter_counts": [
+    {
+      "sequence": 367,
+      "step": "filtering::structure_filtering::filtered",
+      "input_count": 179,
+      "kept_count": 128
+    },
+    {
+      "sequence": 368,
+      "step": "filtering::confidence_filtering::filtered",
+      "input_count": 128,
+      "kept_count": 121
+    },
+    {
+      "sequence": 369,
+      "step": "filtering::compound_filtering::filtered",
+      "input_count": 179,
+      "kept_count": 121
+    },
+    {
+      "sequence": 370,
+      "step": "filtering::best_result_filtering::filtered",
+      "input_count": 121,
+      "kept_count": 2
+    },
+    {
+      "sequence": 371,
+      "step": "filtering::compound_filtering::filtered",
+      "input_count": 179,
+      "kept_count": 2
+    },
+    {
+      "sequence": 372,
+      "step": "filtering::confidence_filtering::filtered",
+      "input_count": 2,
+      "kept_count": 2
+    },
+    {
+      "sequence": 373,
+      "step": "filtering::compound_filtering::filtered",
+      "input_count": 179,
+      "kept_count": 2
+    }
+  ]
+}

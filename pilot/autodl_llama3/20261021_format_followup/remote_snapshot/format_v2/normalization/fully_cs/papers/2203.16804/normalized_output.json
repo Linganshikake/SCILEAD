@@ -1,0 +1,226 @@
+{
+  "2203.16804.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Summarization",
+        "Dataset": "QNLI",
+        "Metric": "ROGUE-1",
+        "Result": "44.29"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "QNLI",
+        "Metric": "ROGUE-2",
+        "Result": "21.17"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "QNLI",
+        "Metric": "BLEU",
+        "Result": "41.09"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "ROGUE-1",
+        "Result": "47.21"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "ROGUE-2",
+        "Result": "24.56"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "BLEU",
+        "Result": "39.25"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "New York Times (NYT)",
+        "Metric": "ROGUE-1",
+        "Result": "55.78"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "New York Times (NYT)",
+        "Metric": "ROGUE-2",
+        "Result": "36.61"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "New York Times (NYT)",
+        "Metric": "BLEU",
+        "Result": "52.6"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "QNLI",
+        "Metric": "BERTScore",
+        "Result": "27.38"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "QNLI",
+        "Metric": "Labeled Attachment Score",
+        "Result": "0.4865"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "QNLI",
+        "Metric": "TER",
+        "Result": "0.4097"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "TER",
+        "Result": "0.2369"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "A Datasets Statistics Table 12: Datasets Statistics. B Implementation Details We use diverse beam search (Vijayakumar et al., 2018) to generate 16 candidates for each data sam- ple. On CNNDM and XSum, we use the pre-trained BART12 and PEGASUS13 models from the Trans- formers (Wolf et al., 2020) library as the base ab- stractive models for candidate summary generation and model ﬁnetuning respectively. On NYT, we ﬁrst ﬁne-tuned a BART model14 with MLE train- ing as the base abstractive model, since our data pre-processing is sightly different from the previ- ous work and there are no available pre-trained checkpoints. We use 4 NVIDIA RTX 3090 GPUs for the model training, and the average running time for one epoch is around 20 hours. We use the Adam optimizer (Kingma and Ba, 2015) with learning rate scheduling for the model training: where warmup denotes the warmup steps, which is set to 10000, step is the number of updating steps, lr is the learning rate. We set the length penalty factor α in the scoring function (Eq. 9) to the same value as used in the original beam search. We search the value of the margin λ in the contrastive loss (Eq. 8) within the range [1 × 10−5, 1], and decide the value based on the model performance on the validation set. We also performed extensive search for the coefﬁcient γ in Eq. 10. The speciﬁc hyper-parameter setting is reported in Tab. 13. We use the standard ROUGE (Lin, 2004) Perl package15 for evaluation. The command line pa- rameters are ‘-c 95 -r 1000 -n 2 -m’. Before the 12The checkpoint is “facebook/bart-large-cnn”, containing around 400M parameters. 13The checkpoint is “google/pegasus-xsum\"\" containing around 568M parameters. 14The checkpoint is “facebook/bart-large”. 15https://github.com/summanlp/evaluation/tree/master/ ROUGE-RELEASE-1.5.5 ROUGE evaluation, the reference summaries and system outputs are lower-cased and tokenized.16 C Details of Few-shot Fine-tuning On CNNDM, we randomly select 100 examples from the training set",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 14,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "ROUGE evaluation, the reference summaries and system outputs are lower-cased and tokenized.16 C Details of Few-shot Fine-tuning On CNNDM, we randomly select 100 examples from the training set for ﬁne-tuning. On XSum, we found that at least 1000 examples are needed for the model to achieve better performance compared to the baseline model. All experiments are repeated three times. We randomly select 1000 examples from the original validation set for hyper-parameter selection. We use the Adam optimizer with the learning rate set to 1 × 10−6. The model is trained for 15 epochs on CNNDM and 10 epochs on XSum. is used for //nlp.stanford.edu/nlp/javadoc/javanlp/edu/stanford/nlp/ process/PTBTokenizer.html",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 14,
+          "start_index": 1808,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "we use a model-based semantic similarity metric, BERTScore (Zhang* et al., 2020),7 as the evalua- tion metric M in Eq.7 to compare the performance of different candidate summaries. Then, we trained another version of BRIO-Mul based on the order of candidate summaries calculated by BERTScore. The results in Tab. 6 show that (1) Our model can signiﬁcantly improve the model performance when either ROUGE or BERTScore is used as the target evaluation metric for ordering candidate sum- maries. This suggests that it is possible to use our method to optimize any speciﬁc target met- ric, making our method an alternative to reinforce- ment learning or minimum risk training. (2) Our model that is trained on one evaluation metric (e.g. BERTScore) also achieves improvement on another metric (e.g. ROUGE) compared with the baseline model, which indicates that the improvement made by our model is not from exploiting the potential weaknesses of individual metrics. Besides, this re- sult also demonstrates a non-trivial degree of agree- ment between ROUGE and BERTScore. Novel n-grams We compare the ratio of novel n-grams in reference, BRIO-Mul’s, and BART’s summaries. As Tab. 7 shows, our model is more “abstractive” compared to BART, although refer- ence summaries still contain more novel n-grams. This is likely due to the fact that our model is op- timized at the sequence-level, allowing more free- dom for paraphrasing and compression. We further investigate the relation of the “ab- stractiveness\" and model performance by com- 7https://github.com/Tiiiger/bert_score. We use its default version for English texts. paring our model (BRIO-Mul) with the baseline model (BART) on different buckets of test exam- ples grouped by the “novelty\" of the reference sum- maries,8 i.e., where D and S∗ are the source document and ref- erence summary respectively, GD and GS∗ are the sets of bigrams in D and S∗, 1 is the indicator func- tion. The results in Fig. 3 show that when novelty is higher, (1)",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 7,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "and comprehend. In Proceedings of the 28th Inter- national Conference on Neural Information Process- ing Systems - Volume 1, NIPS’15, page 1693–1701, Cambridge, MA, USA. MIT Press.",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 11,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Accuracy of different abstractive summarization systems w.r.t ranking the quality of candidate summaries on CNNDM dataset. Acc. stands for the frequency of the model assigning higher probabilities to better candidate summaries. The candidate summaries are generated by a pre-trained model (BART), and we select the best and the worst candidates (w.r.t. ROUGE scores) for each of the samples. High and Low repre- sent the average performance of the best and worst candidates respectively. R-1/2/L are the ROUGE-1/2/L scores. The origi- nal BART only achieves 54.80% accuracy.\nSystem R-1 R-2 R-L Acc.(%) High Low 53.99 33.48 29.85 10.85 51.12 30.45 100.00 0.00 BART Ours 44.88 50.10 21.68 26.29 41.92 47.19 54.80 79.63",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 1,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Results on CNNDM, XSum and NYT. On NYT we only reported our own results due to different data pre-processing. †: signiﬁcantly better than the baseline model (p < 0.01). *: results reported in the original papers. ‡: results from our own evaluation script. R-1/2/L are the ROUGE-1/2/L F1 scores.\nSystem R-1 R-2 R-L CNNDM BART* PEGASUS* GSum* ConSum* SeqCo* GOLD-p* GOLD-s* SimCLS* BART‡ 44.16 44.17 45.94 44.53 45.02 45.40 44.82 46.67 44.29 21.28 21.47 22.32 21.54 21.80 22.01 22.09 22.15 21.17 40.90 41.11 42.48 41.57 41.75 42.25 41.81 43.54 41.09 BRIO-Ctr BRIO-Mul 47.28† 47.78† 22.93† 23.55† 44.15† 44.57† XSum BART* PEGASUS* GSum* ConSum* SeqCo* GOLD-p* GOLD-s* SimCLS* PEGASUS‡ 45.14 47.21 45.40 47.34 45.65 45.75 45.85 47.61 47.46 22.27 24.56 21.89 24.67 22.41 22.26 22.58 24.57 24.69 37.25 39.25 36.67 39.40 37.04 37.30 37.65 39.44 39.53 BRIO-Ctr BRIO-Mul 48.13† 49.07† 25.13† 25.59† 39.84† 40.40† NYT BART‡ 55.78 36.61 52.60 BRIO-Ctr BRIO-Mul 55.98 57.75† 36.54 38.64† 52.51 54.54†",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Model performance with different γ coefﬁcients weighting the contrastive loss (Eq. 10) on CNNDM. BRIO- Ctr is trained with the contrastive loss only, which no longer preserves its generation ability. We report its performance when it is used as an evaluation model to select from candidate summaries. R-1/2/L are the ROUGE-1/2/L F1 scores.\nCoefﬁcient (γ) R-1 R-2 R-L 0 (BART) 0.1 1 2 5 10 100 1000 +∞ (BRIO-Ctr) 44.29 45.08 46.01 46.36 46.91 47.22 47.78 46.83 47.28 21.17 21.63 22.22 22.79 23.03 23.31 23.55 22.17 22.93 41.09 41.71 42.68 43.07 43.63 43.94 44.57 43.68 44.15",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Figure 2: Loop of candidate generation and model ﬁnetuning.\nSystem R-1 R-2 R-L BART BRIO-Mul 44.29 47.78 21.17 23.55 41.09 44.57 BRIO-Loop 48.01† 23.80† 44.67†",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Results on CNNDM with different beam widths (the number of beams) used in beam search. The default beam width is 4. R-1/2 are the ROUGE-1/2 F1 scores.\nBeams BART BRIO-Mul R-1 R-2 R-1 R-2 4 10 20 50 100 44.29 43.83 43.53 43.06 42.79 21.17 20.76 20.49 20.05 19.76 47.78 47.98 48.07 48.18 48.23 23.55 23.81 23.92 24.01 24.09",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Results on CNNDM using different evaluation metrics as M in Eq.7. BRIO-Mul (R) is trained with candidate sum- maries ordered by ROUGE scores, while BRIO-Mul (B) is trained with candidate summaries ordered by BERTScore. R- 1/2/L are ROUGE-1/2/L F1 scores. BS denotes BERTScore.\nSystem R-1 R-2 R-L BS BART BRIO-Mul (R) BRIO-Mul (B) 44.29 47.78 47.53 21.17 23.55 23.22 41.09 44.57 44.37 27.38 32.11 32.59",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 7: Ratio of novel n-grams of different models on CNNDM. Novel n-grams are those that appear in the summaries but not in the source documents.\nSystem Unigram Bigram Reference .1110 .4865 BART BRIO-Mul .0101 .0262 .0924 .2381",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Figure 3: Performance comparison (BART v.s. BRIO-Mul) w.r.t. reference summary novelty. The x-axis represents differ- ent buckets of test examples grouped by reference summary novelty (Eq. 11). Larger x-coordinates correspond to exam- ples of which the reference summaries have higher novelty. The left ﬁgure shows the performance improvement of our model compared with the baseline model, while the right one shows model performance.\nOwn PEGASUS BART .0470 .1205 BRIO-Mul .1839† .2768†",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 9: Expected Calibration Error (ECE), accuracy (Acc) and conﬁdence (Conf) on the test set of CNNDM and XSum.\nDataset System ECE Acc Conf CNNDM BART BRIO-Mul .4097 .2719 .3711 .4271 .7365 .6652 XSum PEGASUS BRIO-Mul .2369 .1423 .4688 .4744 .6990 .5881",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 10: Case Study on CNNDM. BRIO-Mul learns to ignore the noise pattern (“click here\") while BART cannot.\nSystem Summary Reference chelsea forward tammy abraham nets ﬁrst-half double for chelsea. dominic solanke adds a third late on as chelsea look set to win trophy. manchester city struggle without injured star thierry ambrose. read: mourinho warns his young chelsea players he can not play them all. click here to read our match report from man city ’s academy stadium. BART tammy abraham scored twice in the ﬁrst half to give chelsea the lead. isaac buckley-ricketts levelled the game for manchester city. dominic solanke scored late on to put a gloss on the scoreline. click here to read sportsmail’s player ratings from the youth cup ﬁnal. BRIO-Mul chelsea beat manchester city 3-1 in the youth cup ﬁnal at the etihad stadium. tammy abraham scored twice in the ﬁrst half to give chelsea the lead. dominic solanke scored late on to seal the win for the home side. Reference alejandro valverde won ahead of julian alaphilippe and michael albasini. chris froome ﬁnished 123rd after a crash during the ﬁnal 12 kilometres. team sky’s sports director gabriel rasch praised froome for ﬁnishing. rasch said froome was ‘banged up’ but expects to ride tour de romandie. BART movistar rider alejandro valverde won ﬂeche wallonne on wednesday. team sky’s chris froome fell in the ﬁnal 12km but ﬁnished the race. philippe gilbert pulled out of the race after a bad crash 50km from the end. click here for more cycling news. BRIO-Mul alejandro valverde defended his ﬂeche wallonne title in belgium on wednesday. movistar rider ﬁnished ahead of julian alaphilippe and michael albasini. team sky’s chris froome fell in the ﬁnal 12km of the race but ﬁnished in 123rd. froome was involved in a crash but ﬁnished the race despite being ‘banged up’ Reference manuel pellegrini won the premier league and capital one cup last season. city currently sit fourth in the league table - 12 points behind chelsea. pellegrini’s contract expires at the end of the 2015-16 season. city players have been impressed with vieira’s work with the youth team. pep guardiola is city’s ﬁrst-choice to succeed pellegrini at the etihad. BART manuel pellegrini’s future at manchester city is under scrutiny. patrick vieira is highly-respected among the city players. city’s ﬁrst-choice managerial option is bayern munich boss pep guardiola. click here for all the latest manchester city news. click here for more premier league news. BRIO-Mul manchester city players have backed patrick vieira to replace manuel pellegrini as manager of the club. the frenchman is highly-respected among the players at the etihad stadium. pellegrini’s future at the club is under scrutiny after a disappointing season. city’s ﬁrst-choice manager is current bayern munich boss pep guardiola.",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 11: Few-shot Fine-tuning. BRIO-Few is trained on only 100/1000 training examples on CNNDM and XSum respec- tively. R-1/2/L are ROUGE-1/2/L F1 scores.\nDataset System R-1 R-2 R-L CNNDM 44.29 BRIO-Few 45.81 BART 21.17 21.91 41.09 42.61 XSum PEGASUS 47.46 BRIO-Few 47.95 24.69 24.89 39.53 39.71",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 12: Datasets Statistics.\nDatasets # Examples Avg. Words Train Valid Test Doc. Sum. CNNDM 287K 203K XSum 44K NYT 13K 11K 5.5K 11K 11K 6.4K 791.6 429.2 1320.2 55.6 23.3 123.4",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 13: Hyper-parameter Setting.\nDatasets λ (Eq. 8) α (Eq. 9) γ (Eq. 10) CNNDM 0.001 XSum NYT 0.1 0.001 2.0 0.6 2.0 100 100 100",
+        "metadata": {
+          "filename": "2203.16804.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

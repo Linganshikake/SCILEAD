@@ -1,0 +1,23 @@
+Collecting requests==2.31.0
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+Collecting urllib3==1.26.20
+  Downloading urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+Requirement already satisfied: certifi>=2017.4.17 in ./scilead/axcell/envs/axcell-original/lib/python3.7/site-packages (from requests==2.31.0) (2024.8.30)
+Requirement already satisfied: idna<4,>=2.5 in ./scilead/axcell/envs/axcell-original/lib/python3.7/site-packages (from requests==2.31.0) (3.10)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./scilead/axcell/envs/axcell-original/lib/python3.7/site-packages (from requests==2.31.0) (3.4.0)
+Installing collected packages: urllib3, requests
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.2.1
+    Uninstalling urllib3-2.2.1:
+      Successfully uninstalled urllib3-2.2.1
+  Attempting uninstall: requests
+    Found existing installation: requests 2.32.2
+    Uninstalling requests-2.32.2:
+      Successfully uninstalled requests-2.32.2
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+docker-compose 1.25.5 requires jsonschema<4,>=2.5.1, but you have jsonschema 4.17.3 which is incompatible.
+docker-compose 1.25.5 requires PyYAML<6,>=3.10, but you have pyyaml 6.0 which is incompatible.
+docker-compose 1.25.5 requires websocket-client<1,>=0.32.0, but you have websocket-client 1.6.1 which is incompatible.
+Successfully installed requests-2.31.0 urllib3-1.26.20
+{"requests": "2.31.0", "urllib3": "1.26.20", "docker_sdk": "4.1.0", "server": "29.9.2", "server_api": "1.56", "negotiated_api": "1.56", "containers_property_is_stable": false, "no_containers_started": true, "rationale": "Compatibility-only transitive HTTP pins and explicit Docker API negotiation; no original environment.yml pins changed."}
+{"stage": "docker_transport_fix", "exit_code": 0, "stop_reason": null, "seconds": 63.24, "peak_sampled_owned_process_group_rss_bytes": 50827264, "rusage_maxrss_bytes": 49856512, "rusage_note": "max child RSS, not simultaneous tree sum", "min_ecs_available_bytes": 30987231232, "swap_growth_bytes": 0, "cleanup": {"process_group": {"remaining_live_members": []}}, "containers": {}}

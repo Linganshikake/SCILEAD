@@ -1,0 +1,43 @@
+/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/langchain/__init__.py:29: UserWarning: Importing HuggingFacePipeline from langchain root module is no longer supported. Please use langchain_community.llms.huggingface_pipeline.HuggingFacePipeline instead.
+  warnings.warn(
+/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Could not locate the config.py inside dangvantuan/bilingual_impl.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/transformers/utils/hub.py", line 398, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1221, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1325, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1817, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.utils._errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/scilead/runs/llama3/20261021_format_followup/scripts/cs_runner.py", line 25, in <module>
+    if __name__=='__main__':main()
+  File "/root/autodl-tmp/scilead/runs/llama3/20261021_format_followup/scripts/cs_runner.py", line 24, in main
+    m.save(m.OUT/'reuse.json',{'unchanged_papers_reused':reused,'new_papers':[p for p in raw if p not in reused]});m.main()
+  File "/root/autodl-tmp/scilead/runs/llama3/20261021_formal42/scripts/run_cs.py", line 29, in main
+    rev=ref['model']['code_revision'];encoder=SentenceTransformer(str(ROOT/'models/bilingual-embedding-large'),device='cpu',trust_remote_code=True,local_files_only=True,model_kwargs={'torch_dtype':torch.float32,'code_revision':rev},config_kwargs={'code_revision':rev},tokenizer_kwargs={'code_revision':rev})
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/sentence_transformers/SentenceTransformer.py", line 287, in __init__
+    modules = self._load_sbert_model(
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/sentence_transformers/SentenceTransformer.py", line 1487, in _load_sbert_model
+    module = Transformer(model_name_or_path, cache_dir=cache_folder, **kwargs)
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/sentence_transformers/models/Transformer.py", line 53, in __init__
+    config = AutoConfig.from_pretrained(model_name_or_path, **config_args, cache_dir=cache_dir)
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 937, in from_pretrained
+    config_class = get_class_from_dynamic_module(
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 489, in get_class_from_dynamic_module
+    final_module = get_cached_module_file(
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 294, in get_cached_module_file
+    resolved_module_file = cached_file(
+  File "/root/autodl-tmp/scilead/envs/llama/lib/python3.10/site-packages/transformers/utils/hub.py", line 441, in cached_file
+    raise EnvironmentError(
+OSError: We couldn't connect to 'https://huggingface.co' to load this file, couldn't find it in the cached files and it looks like dangvantuan/bilingual_impl is not the path to a directory containing a file named config.py.
+Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.

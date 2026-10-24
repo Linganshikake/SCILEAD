@@ -1,0 +1,11 @@
+{
+  "model_type": "llama-3-instruct-70b",
+  "model_path": "/root/autodl-tmp/scilead/models/llama3",
+  "is_few_shot": false,
+  "system_prompt": "You will be given several parts of a research paper as input. Please extract different tuples including the name of the task addressed in the paper, utilized datasets and evaluation metrics and corresponding results. Extract these tuples for only the best results obtained by proposed methods of the paper not baselines. Please use json format for each different tuple. Example format: [{{\"Task\": \"Task name\", \"Dataset\": \"Dataset name\", \"Metric\": \"Metric name\", \"Result\": \"Result score\"}}]. Your answer will immediately start with the json object satisfying the given template and contain nothing else.",
+  "query_prompt": "Main task, datasets and evaluation metrics.",
+  "max_new_tokens": 1024,
+  "seed": 0,
+  "model_revision": "50fd307e57011801c7833c87efa1984ddf2db42f",
+  "is_preprocessed_doc": true
+}

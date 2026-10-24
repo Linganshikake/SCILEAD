@@ -1,0 +1,99 @@
+{
+  "experiment": "AxCell Extraction + GPT-4.1 Fully Normalization",
+  "execution_phase": "single-paper CPU validation; paid normalization disabled",
+  "run_id": "20261022_single_paper",
+  "host": "123.56.138.148",
+  "remote_root": "/root/scilead/axcell",
+  "local_report_root": "D:\\C++\\SCILEAD\\pilot\\axcell_aliyun\\20261022_single_paper",
+  "paper_id": "1511.08308.pdf",
+  "tex_version": "1511.08308v5",
+  "axcell_revision": "f4648d8fee1aa8482d007a38828da9dc06630f0e",
+  "original_environment": "source/axcell/environment.yml",
+  "source_and_model_changes_allowed": false,
+  "auto_batch": false,
+  "paid_api_authorized": false,
+  "future_normalization_model": "gpt-4.1-2025-04-14",
+  "resource_start_min_available_gib": 6,
+  "resource_stop_available_gib": 2,
+  "resource_stop_sustained_seconds": 15,
+  "minimum_disk_working_reserve_gib": 20,
+  "dependency_dry_run_timeout_seconds": 900,
+  "stage_timeout_policy": "bounded per stage; preserve partial artifacts and stop only owned process/container",
+  "source_tex_count_available_locally": 39,
+  "author_36_membership": "UNVERIFIED",
+  "windows_wsl_docker_started": false,
+  "setup_log": "progress.md",
+  "image_download_initial_timeout_seconds": 1200,
+  "image_download_one_resume_timeout_seconds": 5400,
+  "image_download_timeout_adjustment_reason": "Measured ~1 MiB/s transfer of the fixed 4.04 GB compressed image; extend download window once after the original monitor has safely stopped, reuse retained verified layers, do not change image or run simultaneous pulls.",
+  "status": "SINGLE_PAPER_EXTRACTION_COMPLETE_STOPPED",
+  "python_prefix": "/root/scilead/axcell/envs/axcell-original",
+  "actual_environment": {
+    "python": "3.7.1 | packaged by conda-forge | (default, Mar 13 2019, 12:57:14) \n[GCC 7.3.0]",
+    "executable": "/root/scilead/axcell/envs/axcell-original/bin/python",
+    "torch": "1.3.1+cpu",
+    "cuda_available": false,
+    "numpy": "1.18.1",
+    "pandas": "0.25.3",
+    "fastai": "1.0.55",
+    "spacy": "2.2.3",
+    "docker_sdk": "4.1.0",
+    "docker_server": "29.9.2",
+    "docker_api": "1.56",
+    "PaperExtractor_import": true,
+    "ResultsExtractor_import": true,
+    "model_weights_loaded": false
+  },
+  "method_entry_points": [
+    "PaperExtractor(data_dir)(selected_source)",
+    "ResultsExtractor(models_dir)(paper, in_place=True)"
+  ],
+  "original_filters": {
+    "table_type_threshold": 0.5,
+    "confidence_first": 0.8,
+    "best_result_context": "paper",
+    "confidence_final": 0.85
+  },
+  "runtime_adapters": [
+    "Docker SDK version=auto negotiation",
+    "Apply task container guards to stable container collection",
+    "Skip only zero-total console progress-bar rendering"
+  ],
+  "new_paid_api_calls": 0,
+  "normalization": "NOT_EXECUTED",
+  "evaluation": "NOT_EXECUTED",
+  "successful_inference_passes": 1,
+  "model_initialization_attempts": 2,
+  "successful_result_attempt": "console_progress_compat",
+  "source_documents_note": "AxCell uses original table/cell provenance; this output does not claim PDF Retriever evidence",
+  "package_changes": {
+    "colorama": {
+      "before": "0.4.6",
+      "after": "0.4.4"
+    },
+    "jsonschema": {
+      "before": "4.17.3",
+      "after": "3.2.0"
+    },
+    "prompt-toolkit": {
+      "before": "3.0.48",
+      "after": "2.0.10"
+    },
+    "pyyaml": {
+      "before": "6.0",
+      "after": "5.4.1"
+    },
+    "requests": {
+      "before": "2.32.2",
+      "after": "2.31.0"
+    },
+    "urllib3": {
+      "before": "2.2.1",
+      "after": "1.26.20"
+    },
+    "websocket-client": {
+      "before": "1.6.1",
+      "after": "0.59.0"
+    }
+  }
+}

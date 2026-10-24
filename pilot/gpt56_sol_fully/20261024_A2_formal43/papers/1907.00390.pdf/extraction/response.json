@@ -1,0 +1,78 @@
+{
+  "id": "chatcmpl-202610231816404326139438268d9d6fpoLSOhZ",
+  "model": "gpt-5.6-sol",
+  "object": "chat.completion",
+  "created": 1792779400,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\":\"Slot Filling\",\"Dataset\":\"ATIS\",\"Metric\":\"F1-score\",\"Result\":\"95.80\"},{\"Task\":\"Intent Detection\",\"Dataset\":\"ATIS\",\"Metric\":\"Accuracy\",\"Result\":\"97.76\"},{\"Task\":\"Joint Spoken Language Understanding\",\"Dataset\":\"ATIS\",\"Metric\":\"Sentence-level Semantic Frame Accuracy\",\"Result\":\"86.90\"},{\"Task\":\"Slot Filling\",\"Dataset\":\"Snips\",\"Metric\":\"F1-score\",\"Result\":\"92.23\"},{\"Task\":\"Intent Detection\",\"Dataset\":\"Snips\",\"Metric\":\"Accuracy\",\"Result\":\"97.43\"},{\"Task\":\"Joint Spoken Language Understanding\",\"Dataset\":\"Snips\",\"Metric\":\"Sentence-level Semantic Frame Accuracy\",\"Result\":\"80.57\"}]",
+        "reasoning_content": "**Evaluating task metrics**\n\nI need to extract the best proposals for each task, dataset, and metric. There's some weird alignment in the table, and I should map it out. The main tasks might include slot filling, intent detection, and joint SLU sentence semantic frame. For example, in the ATIS dataset, I see the best results are 95.80 for ID-first CRF in slot, 97.76 in intent, and 86.90 for sentence. Meanwhile, for Snips, it's 92.23 in slot."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2080,
+    "completion_tokens": 253,
+    "total_tokens": 2333,
+    "billing_usage": {
+      "source": "oai_responses",
+      "semantic": "openai",
+      "openai_usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 2333,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "completion_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 0
+        },
+        "input_tokens": 2080,
+        "output_tokens": 253,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 2077,
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0
+        },
+        "output_tokens_details": {
+          "text_tokens": 0,
+          "audio_tokens": 0,
+          "image_tokens": 0,
+          "reasoning_tokens": 108
+        },
+        "claude_cache_creation_5_m_tokens": 0,
+        "claude_cache_creation_1_h_tokens": 0
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 2077,
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "input_tokens": 2080,
+    "output_tokens": 253,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  }
+}

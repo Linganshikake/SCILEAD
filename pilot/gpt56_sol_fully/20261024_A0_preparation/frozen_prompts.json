@@ -1,0 +1,5 @@
+{
+  "tdm-extraction-system-prompt": "You will be given several parts of a research paper as input. Please extract different tuples including the name of the task addressed in the paper, utilized datasets and evaluation metrics and corresponding results. Extract these tuples for only the best results obtained by proposed methods of the paper not baselines. Please use json format for each different tuple. Example format: [{{\"Task\": \"Task name\", \"Dataset\": \"Dataset name\", \"Metric\": \"Metric name\", \"Result\": \"Result score\"}}]. Your answer will immediately start with the json object satisfying the given template and contain nothing else.",
+  "normalization-system-prompt": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None.",
+  "query": "Main task, datasets and evaluation metrics."
+}

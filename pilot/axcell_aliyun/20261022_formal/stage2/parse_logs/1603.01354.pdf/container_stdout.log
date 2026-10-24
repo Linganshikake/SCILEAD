@@ -1,0 +1,38 @@
+index.html
+can't find file to patch at input line 19
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|From d715def1f4ddd18336e5e49b54baf0efd9acfb94 Mon Sep 17 00:00:00 2001
+|From: Deyan Ginev <d.ginev@jacobs-university.de>
+|Date: Sun, 21 Jul 2019 16:14:17 -0400
+|Subject: [PATCH] neurips binding and reliably preload main article
+| dependencies for bibliography post-processing
+|
+|---
+| MANIFEST                              |  1 +
+| lib/LaTeXML/Package/neurips.sty.ltxml | 34 +++++++++++++++++++++++++++
+| lib/LaTeXML/Post.pm                   | 22 +++++++++--------
+| lib/LaTeXML/Post/MakeBibliography.pm  | 11 +++++----
+| 4 files changed, 53 insertions(+), 15 deletions(-)
+| create mode 100644 lib/LaTeXML/Package/neurips.sty.ltxml
+|
+|diff --git a/MANIFEST b/MANIFEST
+|index f944d07aa..69b5bdd51 100644
+|--- a/MANIFEST
+|+++ b/MANIFEST
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+patching file Package/neurips.sty.ltxml
+patching file Post.pm
+patching file Post/MakeBibliography.pm
+patching file Package/hyperref.sty.ltxml
+patching file Package/url.sty.ltxml
+patching file Package/icml_support.sty.ltxml
+Rendering tex file /files/source/lstm-cnn-crf.tex to /files/output
+Adding bibliography links...
+Rendering math...
+💃  Document successfully rendered to /files/output/index.html

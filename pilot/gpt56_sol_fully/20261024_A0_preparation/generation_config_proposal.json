@@ -1,0 +1,137 @@
+{
+  "document_type": "A0_PROPOSAL_NOT_EXECUTED",
+  "model_api_calls_authorized": 0,
+  "ready_to_execute": false,
+  "model": {
+    "value": "gpt-5.6-sol",
+    "source": "user + https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+    "status": "OFFICIAL_ID_PROVIDER_MAPPING_UNVERIFIED"
+  },
+  "provider": {
+    "value": "9527.codes",
+    "source": "user + designated local config",
+    "status": "PROVIDER_UNVERIFIED"
+  },
+  "api_type": {
+    "value": "Chat Completions",
+    "source": "proposal: minimal change to original GPT message roles; historical provider route",
+    "status": "PROPOSED"
+  },
+  "api_base_url": {
+    "value": "https://9527.codes/v1",
+    "source": "proposal derived from configured root https://9527.codes and historical adapter",
+    "status": "PROPOSED"
+  },
+  "request_path": {
+    "value": "/v1/chat/completions",
+    "source": "historical GPT-4.1 adapter; https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+    "status": "PROPOSED"
+  },
+  "reasoning_effort": {
+    "value": "medium",
+    "source": "https://developers.openai.com/api/docs/models/gpt-5.6-sol documents default; fixed for both stages",
+    "status": "PROPOSED"
+  },
+  "reasoning_mode": {
+    "value": "standard",
+    "source": "default documented in https://developers.openai.com/api/docs/guides/reasoning; no pro mode; Chat request omits unsupported mode field",
+    "status": "PROPOSED"
+  },
+  "extraction_output_budget": {
+    "value": {
+      "field": "max_completion_tokens",
+      "tokens": 32768
+    },
+    "source": "proposal: historical visible max996, general reasoning guide initial reserve>=25000; https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create",
+    "status": "PROPOSED"
+  },
+  "normalization_output_budget": {
+    "value": {
+      "field": "max_completion_tokens",
+      "tokens": 32768
+    },
+    "source": "proposal: historical visible max11 does not bound hidden reasoning; same initial reserve policy",
+    "status": "PROPOSED"
+  },
+  "temperature": {
+    "value": "OMIT",
+    "source": "model-specific medium compatibility not confirmed; do not inherit GPT-4.1",
+    "status": "PROPOSED"
+  },
+  "seed": {
+    "value": "OMIT",
+    "source": "generic Chat documentation is not model-specific determinism support",
+    "status": "PROPOSED"
+  },
+  "do_sample": {
+    "value": "OMIT",
+    "source": "not a field in proposed OpenAI-compatible request",
+    "status": "PROPOSED"
+  },
+  "stream": {
+    "value": false,
+    "source": "historical single-response logging protocol",
+    "status": "PROPOSED"
+  },
+  "structured_output": {
+    "value": "Plain text; omit response_format and schema enforcement",
+    "source": "proposal: preserve original Prompt-only baseline; support exists officially but adds generation constraints",
+    "status": "PROPOSED"
+  },
+  "tools": {
+    "value": "OMIT",
+    "source": "user prohibits agent tools; no web/file/code/shell/model fallback",
+    "status": "PROPOSED"
+  },
+  "history": {
+    "value": "Independent requests; omit previous_response_id/conversation/replayed reasoning",
+    "source": "original per-paper/per-field method; no cross-paper context",
+    "status": "PROPOSED"
+  },
+  "timeout_seconds": {
+    "value": {
+      "connect": 20,
+      "read": 600,
+      "write": 30,
+      "pool": 20
+    },
+    "source": "connect/write/pool from existing transport; read600 proposed for reasoning; no trial performed",
+    "status": "PROPOSED"
+  },
+  "automatic_retries": {
+    "value": 0,
+    "source": "user constraints and unknown-billing failure history",
+    "status": "PROPOSED"
+  },
+  "recovery": {
+    "value": "Persist attempt before send; never resend unknown/failed status without explicit bounded recovery authorization; retain all successes",
+    "source": "existing checkpoint protocol",
+    "status": "PROPOSED"
+  },
+  "termination_validation": {
+    "value": "HTTP200, expected model mapping, stop, nonempty complete JSON and four fields for Extraction; exact candidate membership for Normalization",
+    "source": "official task + existing validation",
+    "status": "PROPOSED"
+  },
+  "responses_alternative_documentation_only": {
+    "api": "/v1/responses",
+    "input": "same system/user text as input items",
+    "reasoning": {
+      "effort": "medium",
+      "mode": "standard"
+    },
+    "max_output_tokens": 32768,
+    "truncation": "disabled",
+    "store": false,
+    "status_check": "completed; incomplete_details must be absent; reject budget exhaustion",
+    "source": "https://developers.openai.com/api/reference/resources/responses/methods/create",
+    "auto_fallback": false,
+    "provider_supported": null
+  },
+  "fee_approval": {
+    "value": "NOT_REQUIRED_BY_USER; no fee report; record actual tokens if future execution authorized",
+    "source": "latest user instruction; does not override A0 no-model-API rule",
+    "status": "PROPOSED"
+  },
+  "next_stage_gate": "User accepts A0 and separately authorizes A1; confirm provider alias/parameter routing and freeze proposal before any call"
+}

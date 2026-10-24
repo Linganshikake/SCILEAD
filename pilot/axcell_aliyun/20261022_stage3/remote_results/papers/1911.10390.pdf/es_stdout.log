@@ -1,0 +1,42 @@
+[2026-10-22T10:03:36,225][INFO ][o.e.e.NodeEnvironment    ] [6LGQL0j] using [1] data paths, mounts [[/usr/share/elasticsearch/data (/dev/nvme0n1p3)]], net usable_space [55.8gb], net total_space [78.3gb], types [ext4]
+[2026-10-22T10:03:36,226][INFO ][o.e.e.NodeEnvironment    ] [6LGQL0j] heap size [989.8mb], compressed ordinary object pointers [true]
+[2026-10-22T10:03:36,227][INFO ][o.e.n.Node               ] [6LGQL0j] node name derived from node ID [6LGQL0j0TMKflE29KszuAw]; set [node.name] to override
+[2026-10-22T10:03:36,227][INFO ][o.e.n.Node               ] [6LGQL0j] version[6.7.1], pid[1], build[oss/docker/2f32220/2019-04-02T15:59:27.961366Z], OS[Linux/5.15.0-191-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/12/12+33]
+[2026-10-22T10:03:36,227][INFO ][o.e.n.Node               ] [6LGQL0j] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/tmp/elasticsearch-898201971218555514, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Djava.locale.providers=COMPAT, -XX:UseAVX=2, -Xms1g, -Xmx1g, -Des.path.home=/usr/share/elasticsearch, -Des.path.conf=/usr/share/elasticsearch/config, -Des.distribution.flavor=oss, -Des.distribution.type=docker]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [aggs-matrix-stats]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [analysis-common]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [ingest-common]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [ingest-geoip]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [ingest-user-agent]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [lang-expression]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [lang-mustache]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [lang-painless]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [mapper-extras]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [parent-join]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [percolator]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [rank-eval]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [reindex]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [repository-url]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [transport-netty4]
+[2026-10-22T10:03:36,900][INFO ][o.e.p.PluginsService     ] [6LGQL0j] loaded module [tribe]
+[2026-10-22T10:03:36,901][INFO ][o.e.p.PluginsService     ] [6LGQL0j] no plugins loaded
+[2026-10-22T10:03:39,734][INFO ][o.e.d.DiscoveryModule    ] [6LGQL0j] using discovery type [zen] and host providers [settings]
+[2026-10-22T10:03:40,124][INFO ][o.e.n.Node               ] [6LGQL0j] initialized
+[2026-10-22T10:03:40,124][INFO ][o.e.n.Node               ] [6LGQL0j] starting ...
+[2026-10-22T10:03:40,293][INFO ][o.e.t.TransportService   ] [6LGQL0j] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2026-10-22T10:03:40,299][WARN ][o.e.b.BootstrapChecks    ] [6LGQL0j] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2026-10-22T10:03:43,324][INFO ][o.e.c.s.MasterService    ] [6LGQL0j] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {6LGQL0j}{6LGQL0j0TMKflE29KszuAw}{t_61n0-4SHSZF7OPMUL9Cw}{localhost}{127.0.0.1:9300}
+[2026-10-22T10:03:43,326][INFO ][o.e.c.s.ClusterApplierService] [6LGQL0j] new_master {6LGQL0j}{6LGQL0j0TMKflE29KszuAw}{t_61n0-4SHSZF7OPMUL9Cw}{localhost}{127.0.0.1:9300}, reason: apply cluster state (from master [master {6LGQL0j}{6LGQL0j0TMKflE29KszuAw}{t_61n0-4SHSZF7OPMUL9Cw}{localhost}{127.0.0.1:9300} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2026-10-22T10:03:43,333][INFO ][o.e.h.n.Netty4HttpServerTransport] [6LGQL0j] publish_address {172.17.0.2:9200}, bound_addresses {[::]:9200}
+[2026-10-22T10:03:43,333][INFO ][o.e.n.Node               ] [6LGQL0j] started
+[2026-10-22T10:03:43,338][INFO ][o.e.g.GatewayService     ] [6LGQL0j] recovered [0] indices into cluster_state
+[2026-10-22T10:03:50,892][WARN ][o.e.d.c.m.MetaDataCreateIndexService] [6LGQL0j] the default number of shards will change from [5] to [1] in 7.0.0; if you wish to continue using the default of [5] shards, you must manage this on the create index request or with an index template
+[2026-10-22T10:03:50,921][INFO ][o.e.c.m.MetaDataCreateIndexService] [6LGQL0j] [paper-fragments] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2026-10-22T10:03:51,197][INFO ][o.e.c.m.MetaDataMappingService] [6LGQL0j] [paper-fragments/5QdUWdGZSBmFp2dy9znRwQ] create_mapping [_doc]
+[2026-10-22T10:03:51,665][WARN ][o.e.d.c.m.MetaDataCreateIndexService] [6LGQL0j] the default number of shards will change from [5] to [1] in 7.0.0; if you wish to continue using the default of [5] shards, you must manage this on the create index request or with an index template
+[2026-10-22T10:03:51,668][INFO ][o.e.c.m.MetaDataCreateIndexService] [6LGQL0j] [papers] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2026-10-22T10:03:51,757][INFO ][o.e.c.m.MetaDataMappingService] [6LGQL0j] [papers/NKbeNhd2SIme49AsV9nMrQ] create_mapping [_doc]
+[2026-10-22T10:04:31,101][INFO ][o.e.n.Node               ] [6LGQL0j] stopping ...
+[2026-10-22T10:04:31,176][INFO ][o.e.n.Node               ] [6LGQL0j] stopped
+[2026-10-22T10:04:31,176][INFO ][o.e.n.Node               ] [6LGQL0j] closing ...
+[2026-10-22T10:04:31,179][INFO ][o.e.n.Node               ] [6LGQL0j] closed

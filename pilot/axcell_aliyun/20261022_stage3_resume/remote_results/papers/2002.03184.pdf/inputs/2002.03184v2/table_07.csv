@@ -1,0 +1,8 @@
+Model,Param,BLEU
+"TaLK Convolution (<italic>ali</italic>,<italic>ari</italic>=1x7, <italic>H</italic>=1)",42M,diverges
++ Output Normalization,42M,35.70 ± 0.1
+"+ Increasing Max Offsets (<italic>ali</italic>,<italic>ari</italic>=1,3,7,15x4)",42M,36.23 ± 0.1
++ Offsets Dropout (<italic>p</italic>=0.1),42M,36.37 ± 0.05
++ Fully-headed Kernels (<italic>H</italic>=512),47M,36.51 ± 0.07
++ Multi-headed Kernels (<italic>H</italic>=4),42M,<bold>36.65</bold> ± 0.05
+Replacing Swish with ReLU,42M,36.21 ± 0.05

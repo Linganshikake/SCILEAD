@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-22T11:39:45.314340+00:00",
+  "stage": "P4_AWAITING_APPROVAL",
+  "model": "gpt-4.1-2025-04-14",
+  "processed_papers": 37,
+  "nonempty_papers": 28,
+  "valid_empty_papers": 9,
+  "upstream_parse_failed_papers": 2,
+  "raw_records": 65,
+  "planned_requests": 123,
+  "requests_by_field": {
+    "Task": 50,
+    "Dataset": 45,
+    "Metric": 28
+  },
+  "exact_match_fields_skipped": 72,
+  "verified_cache_hits": 0,
+  "new_requests_on_approval": 123,
+  "actual_api_requests": 0,
+  "unique_payloads": 40,
+  "repeated_occurrences_not_deduplicated": 83,
+  "estimated_prompt_tokens": 41714,
+  "max_single_prompt_tokens": 535,
+  "encoding": "o200k_base",
+  "token_estimate_formula": "3 reply overhead + sum(3 message overhead + tokens(role) + tokens(content)); same as frozen scilead_api.py, actual provider usage may differ",
+  "historical_reference_calls": 542,
+  "cost_scenarios": {
+    "historical_mean": {
+      "input_tokens": 41714,
+      "output_tokens": 474,
+      "total_tokens": 42188,
+      "openai_reference_usd": 0.08722
+    },
+    "historical_per_field_p95": {
+      "input_tokens": 41714,
+      "output_tokens": 1001,
+      "total_tokens": 42715,
+      "openai_reference_usd": 0.091436
+    },
+    "planning_128_tokens_each_NOT_A_CAP": {
+      "input_tokens": 41714,
+      "output_tokens": 15744,
+      "total_tokens": 57458,
+      "openai_reference_usd": 0.20938
+    }
+  },
+  "serial_time_estimate_seconds": {
+    "mean_seconds": 276.5827581715752,
+    "p50_seconds": 238.973,
+    "p95_seconds": 498.435
+  },
+  "pricing": {
+    "checked_utc": "2026-10-22T11:39:45.314340+00:00",
+    "source": "https://developers.openai.com/api/docs/models/gpt-4.1",
+    "input_usd_per_million": 2,
+    "output_usd_per_million": 8,
+    "cached_input_discount_assumed": false,
+    "provider": "https://9527.codes",
+    "provider_price": "UNVERIFIED",
+    "actual_provider_cost": null,
+    "caveat": "OpenAI public reference only, not a provider quote; no fixed cost ceiling because no output token cap is transmitted"
+  },
+  "scope": {
+    "author36": "UNVERIFIED",
+    "completed37_gold": 248,
+    "available_tex39_gold": 283,
+    "complete_scilead43_gold": 295
+  },
+  "ready_for_paid_execution": false,
+  "technical_request_preparation_ready": true,
+  "blockers": [
+    "P4 explicit paid-call approval required",
+    "37-paper independent scope vs unknown author36 requires acceptance",
+    "Provider price/billing not independently verified"
+  ]
+}

@@ -1,0 +1,17 @@
+,
+Parameter,Value
+,
+Word Embeddings Initializiation,300d GloVe 6B
+Character Embedding Size,50
+Character CNN Filter Widths,"[2, 3, 4]"
+Character CNN Num Filters,300 (100 per filter width)
+Encoder LSTM sizes,"1024 for the first layer, 512 for the second one"
+"Encoder LSTM sizes, “Large” model","4096 for the first layer, 2048 for the second one"
+LSTM projection layer size,512
+Hidden layer sizes,512
+Dropout,"0.5 for labeled examples, 0.8 for unlabeled examples"
+EMA coefficient,0.998
+Learning rate,0.5/(1+0.005<italic>t</italic>0.5) (<italic>t</italic> is number of SGD updates so far)
+Momentum,0.9
+Batch size,64 sentences
+,

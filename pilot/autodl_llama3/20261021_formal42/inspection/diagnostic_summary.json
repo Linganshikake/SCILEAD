@@ -1,0 +1,74 @@
+{
+  "fully_llm": {
+    "gold_row_categories": {
+      "RESULT_NOT_PRESENT_AS_STRICT_NUMBER": 186,
+      "STRICT_TDMR_MATCH": 32,
+      "EXTRACTION_FORMAT_FAILED": 15,
+      "VALUE_PRESENT_NAMES_OR_BINDING_UNRESOLVED": 11,
+      "VALUE_PRESENT_WITH_NORMALIZATION_NULL": 15
+    },
+    "prediction_numeric_values_absent_from_gold": 152,
+    "duplicate_extracted_record_groups": 3,
+    "repeated_normalized_tdm_candidates": 75,
+    "official_scores_over_one": [
+      {
+        "paper_id": "1511.08308.pdf",
+        "metric": "TDMR",
+        "component": "Recall",
+        "value": 1.5
+      }
+    ]
+  },
+  "fully_cs": {
+    "gold_row_categories": {
+      "RESULT_NOT_PRESENT_AS_STRICT_NUMBER": 186,
+      "STRICT_TDMR_MATCH": 28,
+      "EXTRACTION_FORMAT_FAILED": 15,
+      "VALUE_PRESENT_NAMES_OR_BINDING_UNRESOLVED": 30
+    },
+    "prediction_numeric_values_absent_from_gold": 152,
+    "duplicate_extracted_record_groups": 3,
+    "repeated_normalized_tdm_candidates": 62,
+    "official_scores_over_one": [
+      {
+        "paper_id": "1511.08308.pdf",
+        "metric": "TDMR",
+        "component": "Recall",
+        "value": 1.5
+      }
+    ]
+  },
+  "partially_stage1": {
+    "gold_row_categories": {
+      "RESULT_NOT_PRESENT_AS_STRICT_NUMBER": 186,
+      "VALUE_PRESENT_NAMES_OR_BINDING_UNRESOLVED": 38,
+      "EXTRACTION_FORMAT_FAILED": 15,
+      "VALUE_PRESENT_WITH_NORMALIZATION_NULL": 7,
+      "STRICT_TDMR_MATCH": 13
+    },
+    "prediction_numeric_values_absent_from_gold": 152,
+    "duplicate_extracted_record_groups": 3,
+    "repeated_normalized_tdm_candidates": 72,
+    "official_scores_over_one": []
+  },
+  "partially_stage2": {
+    "gold_row_categories": {
+      "RESULT_NOT_PRESENT_AS_STRICT_NUMBER": 186,
+      "STRICT_TDMR_MATCH": 25,
+      "EXTRACTION_FORMAT_FAILED": 15,
+      "VALUE_PRESENT_NAMES_OR_BINDING_UNRESOLVED": 26,
+      "VALUE_PRESENT_WITH_NORMALIZATION_NULL": 7
+    },
+    "prediction_numeric_values_absent_from_gold": 152,
+    "duplicate_extracted_record_groups": 3,
+    "repeated_normalized_tdm_candidates": 85,
+    "official_scores_over_one": [
+      {
+        "paper_id": "1511.08308.pdf",
+        "metric": "TDMR",
+        "component": "Recall",
+        "value": 1.5
+      }
+    ]
+  }
+}

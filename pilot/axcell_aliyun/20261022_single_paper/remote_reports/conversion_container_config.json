@@ -1,0 +1,49 @@
+{
+  "image": "arxivvanity/engrafo:b3db888fefa118eacf4f13566204b68ce100b3a6",
+  "command": [
+    "/files/latex2html.sh",
+    "index.html"
+  ],
+  "name": "axcell-single-convert",
+  "memory_bytes": 21474836480,
+  "cpus": 6,
+  "network_disabled": true,
+  "mounts": [
+    {
+      "host": "/root/scilead/axcell/source/axcell/axcell/scripts/latex2html.sh",
+      "target": {
+        "bind": "/files/latex2html.sh",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/root/scilead/axcell/source/axcell/axcell/scripts/guess_main.py",
+      "target": {
+        "bind": "/files/guess_main.py",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/root/scilead/axcell/source/axcell/axcell/scripts/patches",
+      "target": {
+        "bind": "/files/patches",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/root/scilead/axcell/data/unpacked_sources/1511.08308v5",
+      "target": {
+        "bind": "/files/ro-source",
+        "mode": "ro"
+      }
+    },
+    {
+      "host": "/root/scilead/axcell/cache/tmp/tmpiasubkx8",
+      "target": {
+        "bind": "/files/htmls",
+        "mode": "rw"
+      }
+    }
+  ],
+  "remove": true
+}

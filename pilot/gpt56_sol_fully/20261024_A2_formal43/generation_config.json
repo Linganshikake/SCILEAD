@@ -1,0 +1,43 @@
+{
+  "model": "gpt-5.6-sol",
+  "extraction": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 32768,
+    "stream": false
+  },
+  "normalization": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 32768,
+    "stream": false
+  },
+  "api": "Chat Completions",
+  "base_url": "https://9527.codes/v1",
+  "path": "/chat/completions",
+  "message_source": "Exact frozen official system/user messages",
+  "candidate_sets_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_fully\\20261024_A0_preparation\\candidate_sets.json",
+  "candidate_sets_sha256": "39b0834d70a48db407d6bd14b041915f6d274ebb2eb1a4e32fcf079eabdc47da",
+  "normalization_acceptance": "Raw exact candidate string accepted; otherwise null; Result unchanged string; repeated inputs remain independent calls",
+  "timeout_seconds": {
+    "connect": 20,
+    "read": 600,
+    "write": 30,
+    "pool": 20
+  },
+  "automatic_retries": 0,
+  "stream": false,
+  "omitted_fields": [
+    "temperature",
+    "seed",
+    "do_sample",
+    "tools",
+    "response_format",
+    "previous_response_id"
+  ],
+  "input_truncation": false,
+  "transport": "Direct TLS verified, no environment proxy, no redirects",
+  "observed_support": "All A1 requests accepted these exact fields; upstream enforcement not independently confirmed",
+  "frozen_from_A1_request": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_fully\\20261024_A1_single_paper\\extraction\\request.json",
+  "execution_authorized": false
+}

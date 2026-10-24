@@ -1,0 +1,6 @@
+Method,<italic>n</italic>=10,<italic>n</italic>=10,<italic>n</italic>=100,<italic>n</italic>=100,"<italic>n</italic>=1,000","<italic>n</italic>=1,000","<italic>n</italic>=10,000","<italic>n</italic>=10,000"
+Method,iter/sec,Mem. ↓,iter/sec,Mem. ↓,iter/sec,Mem. ↓,iter/sec,Mem. ↓
+Self-Attention,4576,1x,3437,1x,102,1x,OOM,1x
+DynamicConv (<italic>k</italic>=3),3739,1x,3308,0.99x,443,2.8x,45,25.4x
+DynamicConv (<italic>k</italic>=31),4535,0.97x,3860,1x,325,2.7x,29,20.2x
+TaLK Convolution,<bold>9686</bold>,<bold>1.1x</bold>,<bold>6126</bold>,<bold>1.1x</bold>,<bold>898</bold>,<bold>3.1x</bold>,<bold>92</bold>,<bold>26.4x</bold>

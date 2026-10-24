@@ -1,0 +1,11 @@
+{"range": [5754880, 9517474], "bytes": 655360, "attempt": 1, "error_type": "TimeoutError"}
+{"range": [9517475, 13280069], "bytes": 3762595, "attempt": 1, "status": "COMPLETE"}
+{"range": [13280070, 17042663], "bytes": 3762594, "attempt": 1, "status": "COMPLETE"}
+{"range": [5754880, 9517474], "bytes": 3762595, "attempt": 2, "status": "COMPLETE"}
+Traceback (most recent call last):
+  File "/root/scilead/axcell/scripts/resume_public_scispacy.py", line 56, in <module>
+    if __name__=='__main__':main()
+  File "/root/scilead/axcell/scripts/resume_public_scispacy.py", line 52, in main
+    meta=email.message_from_bytes(tf.extractfile(member).read());assert meta['Name']=='en-core-sci-sm' and meta['Version']=='0.2.4'
+AssertionError
+{"stage": "scispacy_resume", "exit_code": 1, "stop_reason": null, "seconds": 439.59, "peak_sampled_owned_process_group_rss_bytes": 22765568, "rusage_maxrss_bytes": 32395264, "rusage_note": "max child RSS, not simultaneous tree sum", "min_ecs_available_bytes": 30623088640, "swap_growth_bytes": 0, "cleanup": {"process_group": {"remaining_live_members": []}}, "containers": {}}

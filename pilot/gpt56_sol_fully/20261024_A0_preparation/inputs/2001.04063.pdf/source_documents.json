@@ -1,0 +1,86 @@
+[
+  {
+    "content": "pointer; SemQG (Zhang and Bansal, 2019) which introduces two semantics-enhanced rewards for Seq2Seq model training. Besides, we also com- pare our model with UniLM (Dong et al., 2019), which is the previous state-of-the-art on this task. The results, according to the references provided by Du et al. (2017) is shown in Table 3. The same model and inference hyper-parameters are used for the two different data split with swapped dev and test set. It can be seen that ProphetNet outperforms all previous methods with signiﬁcant improvement. 3.4 Large-scale Pre-training 3.3 Fine-tuning on Question Generation The answer-aware question generation task (Zhou et al., 2017) aims to generate a question that asks towards the given answer span based on a given text passage or document. We conduct experiments on Recent works show that the pre-trained model’s performance on the downstream task can be im- proved when using larger scaled pre-training cor- pora (Lewis et al., 2019; Raffel et al., 2019). We",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 6,
+      "start_index": 1795,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "Table 1: Results on the CNN/DailyMail test set. this task to further evaluate the ProphetNet model. Following Du et al. (2017), we split the SQuAD 1.1 (Rajpurkar et al., 2016) dataset into training, de- velopment and test sets. We also report the results on the data split as did in Zhao et al. (2018), which reverses the development set and test set. Table 2: Results on Gigaword test set. R is short for ROUGE. implements the standard Seq2Seq model with at- tention mechanism; Re3Sum (Cao et al., 2018) which employs an extended Seq2Seq model to generate summaries based on the retrieved can- didate summaries. And two pre-training based strong baselines: MASS (Song et al., 2019), and UniLM (Dong et al., 2019). The results are pre- sented in Table 2. It can be observed that Prophet- Net outperforms previous models on all metrics. Table 3: Results on SQuAD 1.1 test set (with reference of Du et al. (2017) tokenized). B4 is short for BLEU- 4, MTR is short for METEOR, and R-L is short for ROUGE-L. The same model is used to evaluate on the two different data splits. The question generation task is typically formu- lated as a Seq2Seq problem. The input passage and the answer are packed as “answer [SEP] input passage” as input, and the question is used as the target output sequence. We ﬁne-tune the Prophet- Net model 10 epochs in the training set and report the results of the two kinds of data splits as men- tioned above. The ﬁrst 512 tokens of the passage are fed to the model. The peak learning rate is 1 × 10−5 and the batch size is set to 28. We compare ProphetNet against the following models: CorefNQG (Du and Cardie, 2018) which employs a feature-rich encoder based on Seq2Seq model; MP-GSN (Zhao et al., 2018) which incor- porates a gated self-attention encoder with max- out pointer; SemQG (Zhang and Bansal, 2019) which introduces two semantics-enhanced rewards for Seq2Seq model training. Besides, we also com- pare our model with UniLM (Dong et al., 2019), which is the",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 6,
+      "start_index": 0,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "References",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 9,
+      "start_index": 0,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "attenuation coefﬁcient γ is set to 0.5. The pre-trained models are then ﬁne-tuned on CNN/DailyMail. We report the F1 scores of ROUGE-1, ROUGE-2 and ROUGE-L. The re- sults are shown in Table 6. We can see that the performance of ProphetNetbase-3gram and ProphetNetbase-2gram is comparable. Both of them perform better than MASSbase and ProphetNetbase- 1gram. Considering the computational and time cost, we use ProphetNetbase-2gram in other experi- ments due to its training speed is 15% faster than ProphetNetbase-3gram. Table 6: n-gram comparison results on CNN/DailyMail test set 4 Related Work Unsupervised pre-training has been successfully ap- plied to various natural language processing tasks. GPT (Radford et al., 2018) takes plain text as pre- training data to predict the next tokens with left- ward tokens. It is based on the left-to-right lan- guage model and can be used to generate stories and continue to write for a given text. BERT (De- vlin et al., 2018) and SpanBERT (Joshi et al., 2019) use a Bi-directional language model to recover masked tokens/spans for a given sentence. Bi- directional information ﬂow can be used to recover the masked positions, but no left-to-right language model dependency is learned. As a result, BERT and SpanBERT bring signiﬁcant improvement for NLU tasks but are not suitable for generation tasks. XLNet (Yang et al., 2019) predicts the tokens with given positions and some tokens with their posi- tions in the sentence in an AR manner. Although it uses AR to build a permuted-ordered language model, it is also not suitable for NLG tasks because it brought too much noise for a left-to-right lan- guage model. MASS (Song et al., 2019) pre-trains the sequence-to-sequence model by dropping a con- tinuous token span to corrupt the original text and learns to recover it. T5 (Raffel et al., 2019) investi- gates different model structures and different pre- training tasks, and is pre-trained on a large scale corpus named C4 which is 750GB. BART",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 8,
+      "start_index": 0,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "Table 1: Results on the CNN/DailyMail test set.\nMethod ROUGE-1 ROUGE-2 ROUGE-L LEAD-3 (Nallapati et al., 2017) PTGEN (See et al., 2017) PTGEN+Coverage (See et al., 2017) S2S-ELMo (Edunov et al., 2019) Bottom-Up (Gehrmann et al., 2018) BERTSUMABS (Liu and Lapata, 2019) BERTSUMEXTABS (Liu and Lapata, 2019) MASS (Song et al., 2019) UniLM (Dong et al., 2019) ProphetNet 40.42 36.44 39.53 41.56 41.22 41.72 42.13 42.12 43.33 43.68 17.62 15.66 17.28 18.94 18.68 19.39 19.60 19.50 20.21 20.64 36.67 33.42 36.38 38.47 38.34 38.76 39.18 39.01 40.51 40.72",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Method OpenNMT (Klein et al., 2017) Re3Sum (Cao et al., 2018) MASS (Song et al., 2019) UniLM (Dong et al., 2019) ProphetNet R-1 36.73 37.04 38.73 38.45 39.55 R-2 17.86 19.03 19.71 19.45 20.27 R-L 33.68 34.46 35.96 35.75 36.57",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: Results on SQuAD 1.1 test set (with reference of Du et al. (2017) tokenized). B4 is short for BLEU- 4, MTR is short for METEOR, and R-L is short for ROUGE-L. The same model is used to evaluate on the two different data splits.\nMethod B4 MTR R-L CorefNQG (Du and Cardie, 2018) SemQG (Zhang and Bansal, 2019) UniLM (Dong et al., 2019) ProphetNet MP-GSN (Zhao et al., 2018) SemQG (Zhang and Bansal, 2019) UniLM (Dong et al., 2019) ProphetNet 15.16 18.37 21.63 23.91 16.38 20.76 23.08 25.80 19.12 22.65 25.04 26.60 20.25 24.20 25.57 27.54 - 46.68 51.09 52.26 44.48 48.91 52.03 53.65",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: Results on the CNN/DailyMail and Gigaword test sets of large-scale pre-training models. R is short for ROUGE, and Corpus denotes the size of the pre-training data.\nDataset Method Corpus R-1 R-2 R-L CNN/DailyMail T5 (Raffel et al., 2019) PEGASUSLARGE (C4) (Zhang et al., 2019) PEGASUSLARGE (HugeNews) (Zhang et al., 2019) BART (Lewis et al., 2019) ProphetNet 43.52 750GB 750GB 43.90 3800GB 44.17 44.16 160GB 44.20 160GB 21.55 21.20 21.47 21.28 21.17 40.69 40.76 41.11 40.90 41.30 Gigaword PEGASUSLARGE (C4) (Zhang et al., 2019) PEGASUSLARGE (HugeNews) (Zhang et al., 2019) ProphetNet 750GB 38.75 3800GB 39.12 39.51 160GB 19.96 19.86 20.42 36.14 36.24 36.69",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Results on CNN/DailyMail dev set without pre-training\nSetting R-1 R-2 R-L Transformer (Raffel et al., 2019) ProphetNetw/o pre-train 39.19 40.66 17.60 18.05 36.69 37.79",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 6: n-gram comparison results on CNN/DailyMail test set\nSetting R-1 R-2 R-L MASSbase 42.12 ProphetNetbase-1gram 42.21 ProphetNetbase-2gram 42.52 ProphetNetbase-3gram 42.61 19.50 19.54 19.78 19.83 39.01 39.06 39.59 39.67",
+    "metadata": {
+      "filename": "2001.04063.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  }
+]

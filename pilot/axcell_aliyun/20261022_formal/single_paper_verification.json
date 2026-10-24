@@ -1,0 +1,151 @@
+{
+  "status": "P1_REGRESSION_PASSED_AWAITING_CONFIRMATION",
+  "stage": 1,
+  "utc_completed": "2026-10-22T08:30:01.862229+00:00",
+  "paper_id": "1511.08308.pdf",
+  "source_version": "1511.08308v5",
+  "source_selection": "Reuse previously selected availability-based single paper; no new selection",
+  "original_result_sha256": "c7ae025fb281d86eb97d241aafc2b7257763dfad38248bf9fa54362ca8b5005b",
+  "saved_artifact_validation": {
+    "status": "PASSED",
+    "paper_id": "1511.08308.pdf",
+    "source_version": "1511.08308v5",
+    "entry_point": "Existing scripts/run_single.py collection() -> original PaperCollection.from_files(jobs=1)",
+    "parsed_content_equal": true,
+    "fragment_count": 154,
+    "table_count": 11,
+    "raw_records": [
+      {
+        "dataset": "CoNLL 2003 (English)",
+        "metric": "F1",
+        "task": "Named Entity Recognition",
+        "model": "BLSTM-CNN + emb + lex",
+        "score": 91.85
+      },
+      {
+        "dataset": "Ontonotes v5 (English)",
+        "metric": "F1",
+        "task": "Named Entity Recognition",
+        "model": "Test set size (# entities)",
+        "score": 4696.0
+      }
+    ],
+    "csv_pickle_json_equal": true,
+    "scilead_wrapper_and_id_equal": true,
+    "pipeline_events": 374,
+    "provenance": [
+      {
+        "output_index": 0,
+        "cell_ext_id": "1511.08308v5/table_06.csv/6.2"
+      },
+      {
+        "output_index": 1,
+        "cell_ext_id": "1511.08308v5/table_11.csv/2.4"
+      }
+    ],
+    "final_filter_provenance_matches": true,
+    "known_errors_preserved": [
+      "Recall 91.85 labeled F1",
+      "Test-set entity count 4696 labeled F1"
+    ],
+    "network_connections_blocked_in_child": true,
+    "torch_load_blocked_in_child": true,
+    "model_generations": 0,
+    "paid_api_calls": 0,
+    "elapsed_seconds": 0.938405717999558,
+    "child_max_rss_bytes": 199356416
+  },
+  "measurements": {
+    "runtime_seconds": 28.22127086599903,
+    "artifact_read_seconds": 0.938405717999558,
+    "artifact_reader_max_rss_bytes": 199356416,
+    "es_sampled_cgroup_peak_bytes": 1354690560,
+    "es_sampled_process_tree_peak_rss_bytes": 1371033600,
+    "es_kernel_memory_peak_available": false,
+    "host_min_available_bytes": 29722140672,
+    "host_after_available_bytes": 31062519808,
+    "disk_free_before_bytes": 60301606912,
+    "disk_free_after_bytes": 60301041664,
+    "isolated_es_data_apparent_bytes": 16595,
+    "system_wide_vmstat_deltas": {
+      "pswpin": 0,
+      "pswpout": 0,
+      "oom_kill": 0,
+      "pgmajfault": 0
+    },
+    "no_swap_configured_or_used": true,
+    "phases": [
+      {
+        "phase": "saved_artifact_read",
+        "seconds": 2.0109016289989086,
+        "exit_code": 0
+      },
+      {
+        "phase": "service_startup",
+        "seconds": 10.385113440999703,
+        "exit_code": 0
+      },
+      {
+        "phase": "service_ready",
+        "seconds": 15.183333421000498,
+        "exit_code": 0
+      },
+      {
+        "phase": "service_shutdown",
+        "seconds": 0.5650839730005828,
+        "exit_code": 0
+      }
+    ],
+    "sample_count": 15
+  },
+  "protection": {
+    "remote_source_input_model_assets_checked": 91,
+    "remote_script_and_parsed_artifacts_checked": 46,
+    "remote_prior_run_reports_checked": 192,
+    "local_protected_files_checked": 353,
+    "p0_delivery_files_checked": 28,
+    "all_checked_files_unchanged": true,
+    "original_es_container_state_unchanged": true,
+    "original_es_index_not_mounted_or_started": true,
+    "full_historical_weight_rehash_claimed": false
+  },
+  "configuration": {
+    "axcell_commit": "f4648d8fee1aa8482d007a38828da9dc06630f0e",
+    "scilead_commit": "8bf74b0a830feb7035c6166dce3394dc344ae532",
+    "docker_images_unchanged": true,
+    "dependency_diff": {},
+    "pip_check": "No broken requirements found.",
+    "filters": {
+      "table_type_threshold": 0.5,
+      "confidence_first": 0.8,
+      "best_result_context": "paper",
+      "confidence_final": 0.85
+    },
+    "model_taxonomy_abbreviation_hashes_match": true,
+    "source_and_input_files_unchanged": true,
+    "original_progress_display_adapter_unchanged": true
+  },
+  "service": {
+    "version": "6.7.1",
+    "health": "green",
+    "started_new_isolated_container": true,
+    "container_name": "/axcell-formal-p1-es",
+    "normal_stop": true,
+    "docker_stop_exit_code": 0,
+    "container_exit_code": 143,
+    "oom": false,
+    "old_data_reused": false,
+    "old_data_not_touched_by_probe": true,
+    "no_running_containers_after": true
+  },
+  "new_conversions": 0,
+  "new_extractions": 0,
+  "new_model_weight_loads": 0,
+  "paid_api_calls": 0,
+  "new_cloud_resources": 0,
+  "system_configuration_changes": false,
+  "author_36_membership": "UNVERIFIED",
+  "batch_parse_started": false,
+  "batch_extraction_started": false,
+  "next_gate": "P1: user confirmation required before stage2"
+}
