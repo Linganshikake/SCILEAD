@@ -1,0 +1,13 @@
+--- D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\test_original_cold_start.py
++++ D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028\variants\test_original_cold_start.py
+@@ -1,8 +1,9 @@
+ """Exercise unchanged original cold-start mains with synthetic answers only."""
+ import types
++import tempfile
+ import variant_runtime as v
+ from variant_runtime import *
+-RUN=TOP=Path(__file__).resolve().parent/'reproducibility'/'cold_start'
++RUN=TOP=Path(tempfile.mkdtemp(prefix='cold_start_',dir=Path(__file__).resolve().parent/'reproducibility'))
+ (RUN/'reproducibility').mkdir(parents=True,exist_ok=True)
+ v.RUN_ID='cold_test'
+ from variant_runtime import run_original,SimulatedInterruption

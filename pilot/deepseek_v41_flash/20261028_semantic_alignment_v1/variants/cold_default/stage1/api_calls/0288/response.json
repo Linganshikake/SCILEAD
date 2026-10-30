@@ -1,0 +1,32 @@
+{
+  "id": "f644151f-b673-4909-8dc6-3e91f2a261c7",
+  "object": "chat.completion",
+  "created": 1793197103,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-1 Recall",
+        "reasoning_content": "We need answer only selected item or unchanged. Need decide match ROUGE-1 Recall against list. List has ROUGE-1, ROUGE-1 F1, etc. \"ROUGE-1 Recall\" is metric variant recall, not exact existing? Need preserve metric definition. Candidate ROUGE-1 is general ROUGE-1 perhaps could encompass recall, but semantic matching says preserve meaningful metric definition. There is no ROUGE-1 Recall. Match ambiguous? ROUGE-1 could denote score not recall. Should output original unchanged. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 477,
+    "completion_tokens": 128,
+    "total_tokens": 605,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 221
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

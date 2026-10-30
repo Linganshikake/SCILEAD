@@ -1,0 +1,32 @@
+{
+  "id": "467e63b8-c26a-4b26-8769-64dbf392535f",
+  "object": "chat.completion",
+  "created": 1793196804,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2002 - Spanish",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine semantic match. Input \"CoNLL 2002 Spanish NER\". Candidate list has \"CoNLL-2002 - Spanish\" and maybe \"CoNLL-2002- Dutch\", \"CoNLL-2003\", etc. Input likely refers CoNLL 2002 Spanish NER dataset. Candidate \"CoNLL-2002 - Spanish\" is semantically same, spelling/punctuation differences. Need output exact candidate. Ensure exact string: \"CoNLL-2002 - Spanish\". No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 778,
+    "completion_tokens": 127,
+    "total_tokens": 905,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 118
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 138
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

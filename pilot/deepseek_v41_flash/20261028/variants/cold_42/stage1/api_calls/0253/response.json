@@ -1,0 +1,32 @@
+{
+  "id": "21c3e519-3eb3-4e3e-a23e-615fc011317c",
+  "object": "chat.completion",
+  "created": 1793194490,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer match item if input matches one. Need map input entity \"Spoken Language Understanding (joint slot filling and intent detection)\" to list item. List contains \"Joint Slot Filling and Intent Detection\" and \"Slot Filling and Intent Detection\". Which matches? Input entity is Spoken Language Understanding (joint slot filling and intent detection). It is not exact one, but semantically matches one item? Instruction: If input entity matches one of items, answer matched item. Else output entity unchanged. Need decide. It says matches one of items. \"Spoken Language Understanding (joint slot filling and intent detection)\" clearly refers to Joint Slot Filling and Intent Detection, perhaps exact normalized. Need output matched item \"Joint Slot Filling and Intent Detection\" or \"Slot Filling and Intent Detection\". There are two similar. Which is best? List has 'Joint Slot Filling and Intent Detection' exactly with joint. Input parenthetical says joint slot filling and intent detection. So match that. Answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 343,
+    "completion_tokens": 210,
+    "total_tokens": 553,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 202
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 215
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

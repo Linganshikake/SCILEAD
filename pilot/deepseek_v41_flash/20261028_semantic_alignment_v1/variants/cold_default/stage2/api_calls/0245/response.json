@@ -1,0 +1,32 @@
+{
+  "id": "36f9b3a0-7986-44ed-a884-022025a7a9b2",
+  "object": "chat.completion",
+  "created": 1793197584,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NEWSROOM, ROUGE-1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, NEWSROOM, ROUGE-1). List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE variants. No NEWSROOM. Task abstractive summarization matches Summarization, but dataset NEWSROOM not in list. No candidate. Return original tuple verbatim: (Abstractive Summarization, NEWSROOM, ROUGE-1). Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 119,
+    "total_tokens": 892,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

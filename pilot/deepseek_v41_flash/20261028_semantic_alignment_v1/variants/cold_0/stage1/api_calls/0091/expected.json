@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1812.09471.pdf",
+  "record": 6,
+  "field": "Metric",
+  "original": "Overall (Acc)",
+  "candidate_serialized": "{'MCC', 'Spearman correlation', 'Slot (F1)', 'Intent (Acc)', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'AVG', 'Score', 'BLEU-4', 'ROUGE-L', 'F1', 'V-M', 'F-NMI', 'F-S', 'Accuracy', 'EM', 'Sentence accuracy', 'F-BC'}",
+  "candidate_sha256": "3edb7bcd3a1ff85fe741badd001bcba2c260ca26a6121af3e0db6308920367f7",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'MCC', 'Spearman correlation', 'Slot (F1)', 'Intent (Acc)', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'AVG', 'Score', 'BLEU-4', 'ROUGE-L', 'F1', 'V-M', 'F-NMI', 'F-S', 'Accuracy', 'EM', 'Sentence accuracy', 'F-BC'}\n\nInput: Overall (Acc)\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "bccf9ce80156061ccdfb789451f5407934541f05666342073a618d5fa2c4b280"
+}

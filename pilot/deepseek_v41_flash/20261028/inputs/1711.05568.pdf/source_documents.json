@@ -1,0 +1,94 @@
+[
+  {
+    "content": "REFERENCES [1] Miltiadis Allamanis, Hao Peng, and Charles Sutton. 2016. A convolutional at- tention network for extreme summarization of source code. In International Conference on Machine Learning. 2091–2100. [2] Jeremy Ang, Yang Liu, and Elizabeth Shriberg. 2005. Automatic Dialog Act [3] Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2014. Neural Machine Translation by Jointly Learning to Align and Translate. Computer Science (2014). [4] Phil Blunsom and Nal Kalchbrenner. 2013. Recurrent Convolutional Neural Networks for Discourse Compositionality. In Proceedings of the 2013 Workshop on Continuous Vector Space Models and their Compositionality. Proceedings of the 2013 Workshop on Continuous Vector Space Models and their Compositionality. [5] Kristy Elizabeth Boyer, Eunyoung Ha, Michael D Wallis, Robert Phillips, Mladen A Vouk, and James C Lester. 2009. Discovering Tutorial Dialogue Strategies with Hidden Markov Models.. In AIED. 141–148. [7] Kyunghyun Cho, Bart van Merriënboer, Dzmitry Bahdanau, and Yoshua Ben- gio. 2014. On the Properties of Neural Machine Translation: Encoder–Decoder Approaches. Syntax, Semantics and Structure in Statistical Translation (2014), 103. [8] Bhuwan Dhingra, Hanxiao Liu, Zhilin Yang, William W Cohen, and Ruslan Salakhutdinov. [n. d.]. Gated-Attention Readers for Text Comprehension. ([n. d.]). [11] Jeroen Geertzen, Volha Petukhova, and Harry Bunt. 2007. A multidimensional approach to utterance segmentation and dialogue act classification. In Proceedings of the 8th SIGdial Workshop on Discourse and Dialogue, Antwerp. 140–149. [12] Sergio Grau, Emilio Sanchis, Maria Jose Castro, and David Vilar. 2004. Dia- logue act classification using a Bayesian approach. In 9th Conference Speech and Computer. [13] Karl Moritz Hermann, Tomas Kocisky, Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom. 2015. Teaching machines to read and comprehend. In Advances in Neural Information Processing Systems. 1693–1701. [14]",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 10,
+      "start_index": 0,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "proportion Table 4: |C | is the number of Dialogue Act classes, |V | is the vocabulary size. Training, Validation and Testing indicate the number of conversations (number of utterances) in the respective splits. who had been charged with talking informally about one of several, self-selected general interest topics. For each ut- terance, together with a variety of automatic and semiau- tomatic tools, the tag set distinguishes 42 mutually exclu- sive utterance types via DAMSL taxonomy. The top five frequent DA types include STATEMENT, BACKCHANNEL / ACKNOWLEDGE, OPINION, ABANDONED / UNINTER- PRETABLE, AGREEMENT / ACCEPT. We list the top five percentages of utterance type in the overall corpus in table2. • MRDA: The ICSI Meeting Recorder Dialogue Act Corpus consists of hand-annotated dialog act, adjacency pair, and hotspot labels for the 75 meetings in the ICSI meeting cor- pus. The MRDA scheme provides several class-maps and corresponding scripts for grouping related tags together into smaller number of DAs. In this work we use the most widely used class-map that groups all tags into 5 DAs, i.e., Disrup- tion (D) indicates the current Dialogue Act is interrupted. BackChannel (B) are utterances which are not made directly by a speaker as a response and do not function in a way that elicits a response either. FloorGrabber (F) are dialogue acts for grabbing or maintaining the floor. Question (Q) is for eliciting listener feedback. And finally, unless an utterance is completely indecipherable or else can be further described by a general tag, then its default status is Statement (S). We respectively list the percentage of the five general dialogue acts in table 3. From the table 2 and table 3, we can see the datasets are highly imbalanced in terms of label distributions. The dialogue act type STATEMENT occupies the largest proportion in both two datasets. Following the second place is the BACKCHANNEL act type which somewhat reflect the speaker’s speech style. We present",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 6,
+      "start_index": 0,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom. 2015. Teaching machines to read and comprehend. In Advances in Neural Information Processing Systems. 1693–1701. [14] Ryuichiro Higashinaka, Kenji Imamura, Toyomi Meguro, Chiaki Miyazaki, No- zomi Kobayashi, Hiroaki Sugiyama, Toru Hirano, Toshiro Makino, and Yoshihiro Matsuo. 2014. Towards an open-domain conversational system fully based on natural language processing.. In COLING. 928–939. [32] Xuezhe Ma and Eduard Hovy. [n. d.]. End-to-end Sequence Labeling via Bi- [38] Nitish Srivastava, Geoffrey E Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan Salakhutdinov. 2014. Dropout: a simple way to prevent neural networks from overfitting. Journal of machine learning research 15, 1 (2014), 1929–1958. [39] Andreas Stolcke, Klaus Ries, Noah Coccaro, Elizabeth Shriberg, Rebecca Bates, Daniel Jurafsky, Paul Taylor, Rachel Martin, Carol Van Ess-Dykema, and Marie Meteer. 2006. Dialogue act modeling for automatic tagging and recognition of conversational speech. Dialogue 26, 3 (2006).",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 10,
+      "start_index": 1807,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "in training process: λ > 0 is a hyper-parameter to trade-off the training loss and regu- larization. By using SGD optimization with the diagonal variant of AdaGrad, at time step t, the parameter Θ is updated as follows: where ρ is the initial learning rate and дt is the sub-gradient at time t. Notice that one of our contributions is to apply CRF structural attention as the final layer of deep models. The whole model can Algorithm 1 Viterbi algorithm for CRF-ASN Input: The observation space O = {03, 02, ...,0nN } The state space S = {5}, 5,...,5K} The observation sequence Y = (yi, y2, .... yT) The probabilities [] = (7, 72, ...,7K) Output: ity of observing oj from state si 3: for each state i ∈ {1, 2, ..., K } do 4: 5: 6: end for 7: for each observation i = 2, 3, ...,T do for each state j ∈ {1, 2, ..., K } do 8: T1[j, i] ← max(T1[k, i − 1] · Ak j · Bjyi ) T2[j, i] ← arдmax(T1[k, i − 1] · Ak j · Bjyi ) 17: 18: end for 19: return X be trained in an end-to-end manner. Here we consider the standard Viterbi algorithm for computing the distribution p(z1, ..., zn |u, y; θ ). The main procedure is summarized in Algorithm 1. For testing, we adopt Viterbi algorithm to obtain the optimal sequence by using dynamic programming techniques. The testing procedure can be written as: 3 EXPERIMENTS In this section, we conduct several experiments on two public DA datasets SwDA and MRDA, and show the effectiveness of our ap- proach CRF-ASN for dialogue act recognition. 3.1 Data Preparation We evaluate the performance of our method on two benchmark DA datasets: Switchboard Dialogue Act Corpus (SwDA) and The ICSI Meeting Recorder Dialogue Act Corpus (MRDA). These two datasets have been widely used to conduct the dialogue act recognition or the dialogue act classification tasks by several prior studies.",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 5,
+      "start_index": 1798,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "Table 1: A snippet of a conversation sample. Each utterance has related dialogue act label.\nSpeaker Utterance DA Label A B A B A B A B A B Hi, long time no see. Hi, how are you? What are you doing these days? I’m busying writing my paper. I heard that the deadline is coming. Yeah. You need to make a push. Sure, that’s why I am so busy now. I can’t bother you for too long, goodbye. See you later.",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 1,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Tag Example \"I am working on my projects trying to graduate.\" \"Uh-huh.\" \"Yeah.\" \"All right.\" \"Ok...\" \"Well...\" \"I think it’s great.\" / \"I don’t believe it can work.\" \"So, -\" \"Are yo-\" \"Maybe-\" \"That’s exactly it.\" \"I can’t agree more.\" 36% 19% 13% 6% 5%",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: Top five percentages of utterance type in the SWDA corpus\nTag Disruption BackChannel FloorGrabber Question Statement Example \"yeah | he == .\" \"yeah | it’s uh == \" \"okay,\" \"right,\" \"oh,\" \"yes,\" \"yeah,\" \"let’s see,\" \"well,\" \"I mean,\" \"but..\" Y/N, WH, Or \"Beijing is the capital of China\" proportion 14.73% 10.20% 12.40% 7.20% 55.46%",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: |C | is the number of Dialogue Act classes, |V | is the vocabulary size. Training, Validation and Testing indicate the number of conversations (number of utterances) in the respective splits.\nDataset SwDA MRDA |C | 42 5 |V | 19K 10K Training 1003(173K) 51(76K) Validation 112(22K) 11(15K) Testing 19(4K) 11(15K)",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 6,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Comparing Accuracy of our method (CRF-ASN) with other methods in the literature on SwDA dataset.\nModel Human annotator Accuracy(%) 84.0 Ours (CRF-ASN) Bi-LSTM-CRF DRLM-Conditional LSTM-Softmax RCNN CNN CRF HMM SVM 81.3 79.2 77.0 75.8 73.9 73.1 71.7 71.0 70.6",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 6: Comparing Accuracy of our method (CRF-ASN) with other methods in the literature on the MRDA dataset.\nModel Ours (CRF-ASN) Bi-LSTM-CRF LSTM-Softmax CNN CRF SVM Accuracy(%) 91.7 90.9 86.8 84.6 83.9 82.0",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 7: Component ablations on SwDA dataset\nModel Full CRF-ASN Simple CRF Simple SVM Simple Word Embedding Simple Context state Simple Memory Network Simple Utterance Embedding Accuracy(%) 81.3 79.5 77.8 78.7 79.1 78.3 79.0",
+    "metadata": {
+      "filename": "1711.05568.pdf",
+      "page_number": 8,
+      "type": "Table"
+    }
+  }
+]

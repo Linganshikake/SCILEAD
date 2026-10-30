@@ -1,0 +1,32 @@
+{
+  "id": "1cb10d4c-3648-4971-a19d-6ae6ffe71ca7",
+  "object": "chat.completion",
+  "created": 1793281500,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer match input \"ROUGE-L F1\" to item list. List has 'ROGUE-L' (typo ROGUE-L) and F1 separately. Input \"ROUGE-L F1\" likely refers ROUGE-L F1 metric. Need match one item. List has 'ROGUE-L' spelled with G not U? It is ROGUE-L. Input uses ROUGE-L (standard). Could be match to 'ROGUE-L'? We need only matched item. Since item list has 'ROGUE-L' and F1. Input \"ROUGE-L F1\" combines metric and F1. Is there item 'ROGUE-L'? It might be typo intended ROUGE-L. Answer should be 'ROGUE-L'. But check exact matching? If none matches say None. The instruction: match input with one of items. Input: ROUGE-L F1. None exact. But likely they expect ROGUE-L? Need infer. Since list includes 'ROGUE-L', 'ROGUE-1', 'ROGUE-2', 'ROGUE-L'. The input \"ROUGE-L F1\" is ROUGE-L F1, which is a metric variant. The listed item is 'ROGUE-L' (misspelled). Could be considered match to 'ROGUE-L'. Answer only matched item. I will output 'ROGUE-L'. Ensure exact string with quotes? They said answer consist of matched item. Use ROGUE-L."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 260,
+    "completion_tokens": 331,
+    "total_tokens": 591,
+    "prompt_tokens_details": {
+      "cached_tokens": 126
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 326
+    },
+    "prompt_cache_hit_tokens": 126,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

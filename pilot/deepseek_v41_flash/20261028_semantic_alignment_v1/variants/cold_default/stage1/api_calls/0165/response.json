@@ -1,0 +1,32 @@
+{
+  "id": "d2be9e31-02b3-4fed-bb95-32daa3c564e1",
+  "object": "chat.completion",
+  "created": 1793196868,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "PubMed",
+        "reasoning_content": "We need answer only selected or unchanged. Input PubMed not in list? Need see if semantic match to BC5CDR? PubMed is corpus? BC5CDR is dataset based on PubMed articles? But list candidates include BC5CDR, NCBI-disease. Input entity PubMed. Need determine if matches one item. Semantic matching: Match by meaning and entity identity, not literal. PubMed is a database, not BC5CDR dataset. Could be candidate? None named PubMed. Maybe \"BC5CDR\" created from PubMed? But distinct entity. Should output PubMed unchanged. Need exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 596,
+    "completion_tokens": 123,
+    "total_tokens": 719,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 212
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

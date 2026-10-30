@@ -1,0 +1,32 @@
+{
+  "id": "2c7ff965-6e37-4044-bfd5-fb44681e97f6",
+  "object": "chat.completion",
+  "created": 1793196655,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1-score",
+        "reasoning_content": "We need answer. Need semantic match input F1 against list. Candidates include F1-score, Slot filling F1-score, ROUGE-L F1, ROUGE-1 F1, ROUGE-2 F1. Input \"F1\" ambiguous abbreviation/metric. It could match F1-score generically. Need compare. \"F1\" is acronym for F1-score. But there are multiple F1 variants. The instructions: If one candidate clear semantic match, output candidate exactly. If ambiguous, output original unchanged. \"F1\" could match \"F1-score\" as generic, but list also has specific F1s. Is \"F1-score\" the standard metric. Does \"F1\" semantically match \"F1-score\"? Yes likely. However \"Slot filling F1-score\" and ROUGE F1 are more specific; input lacks task, so not match them. Generic \"F1\" = F1-score. Output \"F1-score\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 387,
+    "completion_tokens": 204,
+    "total_tokens": 591,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 200
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "040f7cf1-6e7e-4d53-ba3b-2531dcf4f38e",
+  "object": "chat.completion",
+  "created": 1793194253,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CNN-DailyMail",
+        "reasoning_content": "We need answer match item list. Input CNN-DailyMail. Need see exact item 'CNN/DailyMail'. Different hyphen vs slash/case? The instruction: If input entity matches one of items, output matched item. Else output entity unchanged. \"CNN-DailyMail\" does not exactly match \"CNN/DailyMail\" (hyphen vs slash). No other. So output input unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 337,
+    "completion_tokens": 89,
+    "total_tokens": 426,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 337
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "967e3a3b-896b-4bcd-94db-069155520cdd",
+  "object": "chat.completion",
+  "created": 1793197498,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2002- Dutch, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input: (Named Entity Recognition, CoNLL-2002- Dutch, F1). List has NER variants: Ontonotes v5 English, CoNLL-2003 English, WNUT-17 English, WNUT-16 English. No CoNLL-2002 Dutch. Do not match different dataset identity/language. Return original verbatim. Need output tuple exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 111,
+    "total_tokens": 885,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

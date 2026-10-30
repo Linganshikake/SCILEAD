@@ -1,0 +1,32 @@
+{
+  "id": "6b657578-301a-47ba-918e-ef8edd699648",
+  "object": "chat.completion",
+  "created": 1793193175,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 - English",
+        "reasoning_content": "We need answer match item list. Input CoNLL-2003. There are CoNLL-2003 - English, CoNLL-2003 - German. Input lacks language. Need determine if matches? \"CoNLL-2003\" not exact item. Could be none or infer English default? The instructions: match input with one of items. Only matched item. If none matches, say None. Since input \"CoNLL-2003\" not an exact item, but list has variants. Need decide. It might be shorthand for CoNLL-2003 - English likely. However strict matching? They want one of list. Given list includes \"CoNLL-2003 - English\" and \"CoNLL-2003 - German\"; input CoNLL-2003 ambiguous. Usually benchmark datasets tasks: NER CoNLL-2003 English. The list has both. If input lacks language, probably intended English? Let's see item list includes CoNLL-2002 Spanish, CoNLL-2002 Dutch, CoNLL-2003 English/German, WNUT etc. Input CoNLL-2003 likely maps to English (common). The answer should be \"CoNLL-2003 - English\". Need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 273,
+    "total_tokens": 830,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 264
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

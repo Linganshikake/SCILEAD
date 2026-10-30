@@ -1,0 +1,32 @@
+{
+  "id": "2f1a8a86-99d8-4469-80c6-53ae26a73eb3",
+  "object": "chat.completion",
+  "created": 1793194675,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CBS SciTech News, Accuracy)",
+        "reasoning_content": "We need answer tuple if match else unchanged. Input (Named Entity Recognition, CBS SciTech News, Accuracy). Check list items: NER entries with Ontonotes, CoNLL, WNUT-17, WNUT-16, all F1. No CBS. So output unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 551,
+    "completion_tokens": 78,
+    "total_tokens": 629,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 167
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "fcd1da81-9897-43d5-a40c-3c8f4a223b11",
+  "object": "chat.completion",
+  "created": 1793198242,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extreme Summarization, XSum, Human judgment score)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input: (Extreme Summarization, XSum, Human judgment score). Need compare list. Candidates with XSum: Summarization, XSum, ROGUE-2; XSum ROGUE-L; XSum ROGUE-1. Task \"Extreme Summarization\" is actually XSum full name? Dataset XSum. Metric Human judgment score. None match metrics ROGUE variants. Could \"Human judgment score\" be semantic to ROGUE? No, different metric. So no match, return original tuple verbatim. Need only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 139,
+    "total_tokens": 909,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 125
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

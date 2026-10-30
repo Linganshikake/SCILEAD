@@ -1,0 +1,31 @@
+D:\miniconda3\envs\scilead\Lib\site-packages\langchain\__init__.py:29: UserWarning: Importing HuggingFacePipeline from langchain root module is no longer supported. Please use langchain_community.llms.huggingface_pipeline.HuggingFacePipeline instead.
+  warnings.warn(
+D:\miniconda3\envs\scilead\Lib\site-packages\langchain\_api\module_import.py:87: LangChainDeprecationWarning: Importing get_openai_callback from D:\miniconda3\envs\scilead\Lib\site-packages\langchain\callbacks\__init__.py is deprecated. Please replace the import with the following:
+from langchain_community.callbacks.manager import get_openai_callback
+  warnings.warn(
+  0%|          | 0/1 [00:00<?, ?it/s]  0%|          | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028_semantic_alignment_v1\variants\offline_entry.py", line 15, in <module>
+    runpy.run_path(sys.argv[0], run_name='__main__')
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028_semantic_alignment_v1\variants\test_original_cold_start.py", line 44, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028_semantic_alignment_v1\variants\test_original_cold_start.py", line 25, in main
+    observer,t=run_original(s1,'stage1',args(test/'continuous'),test/'continuous',mock=lambda e:responses[e['original']])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028_semantic_alignment_v1\variants\variant_runtime.py", line 152, in run_original
+    sys.settrace(observer.trace);module.main(args)
+                                 ^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\emnlp2024-leaderboard-generation\tdm_llm_masked_normalization.py", line 114, in main
+    answer = llm.invoke(prompt.prompt_template.invoke({'items': str(labels_dict[key]), 'input': tdm[key]})).content
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028_semantic_alignment_v1\variants\variant_runtime.py", line 126, in invoke
+    messages=wire(prompt.to_messages());expected=self.observer.expected(messages)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\full43_cold_start\engine.py", line 39, in expected
+    assert messages[0]=={'role':'system','content':prompts[key]} and len(messages)==2 and messages[1]['role']=='user'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

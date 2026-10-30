@@ -1,0 +1,32 @@
+{
+  "id": "0201d956-be36-47cb-9b5e-324858875715",
+  "object": "chat.completion",
+  "created": 1793194700,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English→French, METEOR)",
+        "reasoning_content": "We need answer. Need determine if input tuple matches any item. Need exact matching? Item list contains (Machine Translation, WMT’14 EN-FR, BLEU). Input (Machine Translation, WMT'14 English→French, METEOR). Different language representation and metric, not match. Output tuple unchanged. Need only answer. Preserve input exactly? \"output the tuple without changing it.\" So output (Machine Translation, WMT'14 English→French, METEOR). Ensure apostrophe maybe same. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 127,
+    "total_tokens": 682,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

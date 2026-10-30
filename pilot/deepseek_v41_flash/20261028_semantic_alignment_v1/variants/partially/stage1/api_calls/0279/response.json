@@ -1,0 +1,32 @@
+{
+  "id": "42cb2ec1-49d6-44ed-a4ea-8146dd98972c",
+  "object": "chat.completion",
+  "created": 1793197256,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match input ROUGE-1 to item. List has 'ROGUE-1' (typo) not ROUGE-1. Need determine if matches? They ask match input with one item. Input ROUGE-1, item list includes ROGUE-1. Likely intended typo, but exact match? Need output matched item in list. Since ROUGE-1 is standard metric, list has ROGUE-1 misspelled. Could be expected to match despite typo. Need only matched item. I'd answer ROGUE-1. But consider none if strict. The task likely expects matching to closest item in list; they intentionally have misspelling? Item list has ROGUE-1, ROGUE-2, ROGUE-L instead of ROUGE. Input ROUGE-1. Match to ROGUE-1. Output exactly as in list: ROGUE-1."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 205,
+    "total_tokens": 464,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "785fc60d-4586-46b0-a3f4-ec6555206a9a",
+  "object": "chat.completion",
+  "created": 1793194222,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent (Acc)",
+        "reasoning_content": "We need answer: input entity \"Intent (Acc)\" matches one of items? List has 'Intent accuracy'. Does \"Intent (Acc)\" match? Need determine if matches exactly? The instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. \"Intent (Acc)\" not exactly equal to any. Could be semantic? We should not make explanation. So output \"Intent (Acc)\" unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 203,
+    "completion_tokens": 97,
+    "total_tokens": 300,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 203
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

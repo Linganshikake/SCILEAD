@@ -1,0 +1,32 @@
+{
+  "id": "caa23199-b6b6-4b0f-a56e-d1c1668c583a",
+  "object": "chat.completion",
+  "created": 1793192759,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy",
+        "reasoning_content": "We need answer only matched item. Need determine if \"Matched accuracy\" matches Accuracy? Input: Matched accuracy. Item list includes Overall-Accuracy, Accuracy, Sent-Accuracy, Exact Match (EM), etc. \"Matched accuracy\" likely a metric? Need match with one item. Could be \"Accuracy\" perhaps. Need only item. Let's ensure no \"Matched accuracy\" in list. None exact. It might be synonym for Accuracy? The instruction: match input with one of items. If none matches, say None. \"Matched accuracy\" may be a variant of Accuracy. But item \"Accuracy\" is generic. Need decide. In evaluation metric list, \"Matched accuracy\" maybe metric in NLP? It's not in list, but \"Accuracy\" matches conceptually. The expected answer likely \"Accuracy\". Need output only item. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "completion_tokens": 177,
+    "total_tokens": 434,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 175
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

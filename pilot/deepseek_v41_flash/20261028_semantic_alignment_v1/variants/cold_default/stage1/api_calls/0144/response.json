@@ -1,0 +1,32 @@
+{
+  "id": "6b5be9bd-1090-4cd2-830a-0433e8d8b448",
+  "object": "chat.completion",
+  "created": 1793196818,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Dev F1",
+        "reasoning_content": "We need answer. Need determine match. Input \"Dev F1\". Candidates include F1, Entity-level F1 score. \"Dev F1\" likely development set F1 metric? Need semantic matching preserve split dataset identity. Candidate F1 generic. \"Dev F1\" has split dev, so distinct? The instructions: preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because names similar. If ambiguous or no candidate output original unchanged. So \"Dev F1\" does not match F1 because split dev specified, not in list. Output Dev F1."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 129,
+    "total_tokens": 518,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 125
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

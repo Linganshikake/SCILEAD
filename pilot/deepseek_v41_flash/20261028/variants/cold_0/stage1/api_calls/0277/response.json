@@ -1,0 +1,32 @@
+{
+  "id": "5daeb284-162e-4be7-bd59-377b6aa03f9c",
+  "object": "chat.completion",
+  "created": 1793194516,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Part-of-Speech Tagging",
+        "reasoning_content": "We need answer. Need match input POS tagging to item list. List has Part-of-Speech Tagging. POS tagging synonymous? Need decide if matches one of items. The instruction: if input entity matches one of items in list, answer matched item. Else output entity unchanged. \"POS tagging\" is abbreviation for Part-of-Speech Tagging. Does it \"match\"? It likely should map to Part-of-Speech Tagging. Need output exactly matched item. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 103,
+    "total_tokens": 485,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 382
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

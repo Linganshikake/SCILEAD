@@ -1,0 +1,32 @@
+{
+  "id": "25033ba2-f7dc-4098-a1be-6c5aa7c0f8e1",
+  "object": "chat.completion",
+  "created": 1793193753,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 - English",
+        "reasoning_content": "We need answer only matched item. Need match input CoNLL-2003. Item list contains 'CoNLL-2003 - English', 'CoNLL-2003 - German'. Input ambiguous but likely match? We need match input with one item. \"CoNLL-2003\" matches substrings of both, but exact no. Need determine intended maybe task dataset name with languages. Input is CoNLL-2003, could be English? In list has English and German. Which one? If matching one of items, perhaps CoNLL-2003 - English is canonical default. Need output exactly matched item. Since list has two with prefix. The \"matched item\" if input \"CoNLL-2003\" maybe should pick \"CoNLL-2003 - English\" as common. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 181,
+    "total_tokens": 738,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 172
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "c66d4e01-37c9-4247-94a8-6742a937160b",
+  "object": "chat.completion",
+  "created": 1793197573,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, BillSum, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among list. Input Summarization BillSum ROUGE-2 F1. List has many summarization but datasets Gigaword, CNN/DailyMail, XSum. BillSum not present. Metric ROUGE-2 corresponds ROGUE-2 typo in list perhaps, but dataset BillSum absent. No match. Output original verbatim: (Summarization, BillSum, ROUGE-2 F1). Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 117,
+    "total_tokens": 889,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

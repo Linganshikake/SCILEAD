@@ -1,0 +1,32 @@
+{
+  "id": "8e2f8047-a636-45be-a1eb-5ebc1b4f8acf",
+  "object": "chat.completion",
+  "created": 1793196653,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-1",
+        "reasoning_content": "We need answer only. Need determine if ROUGE-1 matches any item: Accuracy, F1, AVG, V-M, F-NMI, F-S, F-BC. ROUGE-1 is metric, not F1? ROUGE-1 might be based on overlap F-measure, but not one of candidates. Need output unchanged ROUGE-1. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 331,
+    "completion_tokens": 90,
+    "total_tokens": 421,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 203
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "50dd5807-0555-49e6-87ba-b4660585be53",
+  "object": "chat.completion",
+  "created": 1793194299,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2000",
+        "reasoning_content": "We need answer. Need match input entity to list item. Input \"CoNLL 2000\" likely matches \"CoNLL-2000\" or \"CoNLL-2000 Chunking\"? Need exact? Instructions: If input entity matches one of items in list, answer matched item. \"CoNLL 2000\" vs \"CoNLL-2000\" (hyphen vs space). Is that considered match? Need infer. They might expect normalized matching? We should output matched item in list. List has 'CoNLL-2000 Chunking' and 'CoNLL-2000'. Input \"CoNLL 2000\" is likely alias for CoNLL-2000 (the task/dataset). Among list, exact string no. But likely match to \"CoNLL-2000\". Need only entity. Could answer CoNLL-2000. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 666,
+    "completion_tokens": 197,
+    "total_tokens": 863,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 190
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 282
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

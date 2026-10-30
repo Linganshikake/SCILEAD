@@ -1,0 +1,32 @@
+{
+  "id": "09fb2ed3-aa6f-424f-8ae4-47fa1ec15516",
+  "object": "chat.completion",
+  "created": 1793197013,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2002 Spanish NER",
+        "reasoning_content": "We need answer only selected item or unchanged. Need match input \"CoNLL-2002 Spanish\" to list. Candidate \"CoNLL 2002 Spanish NER\". Semantic match? It denotes CoNLL-2002 Spanish NER dataset. Input lacks NER, but clearly Spanish CoNLL 2002. Need output candidate exactly as written: 'CoNLL 2002 Spanish NER'. Check if any ambiguity? There is CoNLL 2002 Dutch NER, CoNLL-2002 maybe general. Input Spanish distinguishes. So match. Output no quotes? Instruction says output selected item or unchanged input, without quotes. So CoNLL 2002 Spanish NER."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 786,
+    "completion_tokens": 155,
+    "total_tokens": 941,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 145
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 530
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

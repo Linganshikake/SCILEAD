@@ -1,0 +1,32 @@
+{
+  "id": "e0671c91-d949-48be-8b97-2e9b8cbda26e",
+  "object": "chat.completion",
+  "created": 1793197672,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, NYT, ROUGE-L). Need match listed tuples. Candidates summarization datasets: Gigaword, CNN/DailyMail, XSum. NYT not listed. Task abstractive summarization could match Summarization but dataset NYT not among. No candidate. Return original tuple verbatim. Need preserve spelling: (Abstractive Summarization, NYT, ROUGE-L). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 114,
+    "total_tokens": 885,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

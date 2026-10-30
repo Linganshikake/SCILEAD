@@ -1,0 +1,32 @@
+{
+  "id": "ea1b4498-a885-4142-aa7c-5c2c19805e27",
+  "object": "chat.completion",
+  "created": 1793194805,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English-French",
+        "reasoning_content": "We need answer. Need determine if input matches item exactly? List contains variants. Input \"WMT'14 English-French\". Need if matches one item. Items: 'WMT’14 EN-FR' with curly apostrophe and EN-FR. Input uses straight apostrophe and English-French, not exact. Rule: If input entity matches one of items, answer matched item. Else output entity unchanged. Need output input without changing. Need be careful matching might be semantic? Instruction \"matches one of the items\" likely exact string. There is WMT’14 EN-FR, but not exact. Also WMT En-Fr (newstest2014). Input WMT'14 English-French differs. Output as given. Ensure apostrophe straight. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 167,
+    "total_tokens": 1041,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 159
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 234
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

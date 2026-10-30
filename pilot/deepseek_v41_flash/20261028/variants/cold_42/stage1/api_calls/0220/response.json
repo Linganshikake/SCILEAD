@@ -1,0 +1,32 @@
+{
+  "id": "e54383b8-aa7a-4963-9029-9560b0554acb",
+  "object": "chat.completion",
+  "created": 1793194433,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT2014 De→En",
+        "reasoning_content": "We need answer matched item if exact? List has 'IWSLT2014 De→En'. Input 'IWSLT 2014 De-En'. Need determine if matches one item. It probably denotes same but exact match? Instruction: \"If the input entity matches one of the items in the list, answer matched item. Else output entity without changing.\" Matching may be semantic? We need identify if input corresponds to item. Item list includes 'IWSLT2014 De→En'. Input has spaces and hyphen vs arrow. Likely intended match? Need decide. The task likely entity linking: normalize? They ask if input entity matches one of items. Input \"IWSLT 2014 De-En\" seems same as \"IWSLT2014 De→En\" (De-En = German-English, arrow). We should output matched item exactly: IWSLT2014 De→En. Need no explanation. Ensure exact string. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 681,
+    "completion_tokens": 204,
+    "total_tokens": 885,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 195
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 681
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

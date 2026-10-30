@@ -1,0 +1,32 @@
+{
+  "id": "26eb49d1-34f1-44a2-becc-3a7178213fe2",
+  "object": "chat.completion",
+  "created": 1793197372,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Multi-News, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, Multi-News, ROUGE-1 F1). List has no Multi-News. Summarization datasets Gigaword, CNN/DailyMail, XSum. Multi-News distinct dataset. No match. Return original input verbatim. Ensure output tuple exactly as input: (Summarization, Multi-News, ROUGE-1 F1). Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 108,
+    "total_tokens": 881,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

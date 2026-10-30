@@ -1,0 +1,32 @@
+{
+  "id": "d5f5f6e4-7164-4445-9897-513ae6998a13",
+  "object": "chat.completion",
+  "created": 1793194385,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent (Acc)",
+        "reasoning_content": "We need answer only. Need match? Input \"Intent (Acc)\" not in list. List has \"Intent accuracy\". Need if matches one of items? It says if input entity matches one item, answer matched item; else output entity unchanged. \"Intent (Acc)\" not exact match to Intent accuracy. Need output entity without changing. So \"Intent (Acc)\". Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 297,
+    "completion_tokens": 82,
+    "total_tokens": 379,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 297
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

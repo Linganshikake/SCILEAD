@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_42",
+  "paper": "1812.09471.pdf",
+  "record": 6,
+  "field": "Task",
+  "original": "Joint slot filling and intent detection",
+  "candidate_serialized": "{'Language Modeling', 'Combinatory Categorial Grammar (CCG) supertagging', 'Relation classification', 'Extractive single-document news summarization', 'Text summarization', 'Dependency parsing', 'Sentiment classification', 'Chunking', 'Fine-grained named entity recognition (FGN)', 'Dialogue act classification', 'Slot Filling', 'Answer-aware question generation', 'Extractive question answering', 'Joint Spoken Language Understanding', 'Machine Translation (English-to-French)', 'Machine translation', 'Intent Detection', 'Abstractive single-document news summarization', 'Cloze-style question answering', 'Machine Translation (English-to-German)', 'English-to-Vietnamese machine translation', 'Entity typing', 'Part-of-Speech Tagging', 'Named Entity Recognition (German)', 'Word Sense Induction', 'Linguistic acceptability classification', 'Paraphrase detection', 'Named entity recognition', 'Conversational response generation', 'Long-form abstractive question answering', 'Natural language inference', 'Semantic textual similarity'}",
+  "candidate_sha256": "a862b4d28c26e89998d765f91669a7690babf7360c7cd0a09752cc628c14e878",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Language Modeling', 'Combinatory Categorial Grammar (CCG) supertagging', 'Relation classification', 'Extractive single-document news summarization', 'Text summarization', 'Dependency parsing', 'Sentiment classification', 'Chunking', 'Fine-grained named entity recognition (FGN)', 'Dialogue act classification', 'Slot Filling', 'Answer-aware question generation', 'Extractive question answering', 'Joint Spoken Language Understanding', 'Machine Translation (English-to-French)', 'Machine translation', 'Intent Detection', 'Abstractive single-document news summarization', 'Cloze-style question answering', 'Machine Translation (English-to-German)', 'English-to-Vietnamese machine translation', 'Entity typing', 'Part-of-Speech Tagging', 'Named Entity Recognition (German)', 'Word Sense Induction', 'Linguistic acceptability classification', 'Paraphrase detection', 'Named entity recognition', 'Conversational response generation', 'Long-form abstractive question answering', 'Natural language inference', 'Semantic textual similarity'}\n\nInput: Joint slot filling and intent detection\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "391a2b7ddb1fe84778b4d56e303e81c21335a6dc8e0f776c712411f0e5faa875"
+}

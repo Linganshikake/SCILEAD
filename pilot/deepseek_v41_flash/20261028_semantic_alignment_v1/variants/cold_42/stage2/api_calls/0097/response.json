@@ -1,0 +1,32 @@
+{
+  "id": "4bc957e6-fdcb-48a1-ba61-7d89988b4f74",
+  "object": "chat.completion",
+  "created": 1793197353,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, BillSum, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (Summarization, BillSum, ROUGE-1 F1). Listed summarization datasets: Gigaword, CNN/DailyMail, XSum. BillSum not present. Metric ROUGE-1 F1 differs ROGUE-1? Also dataset no match. Output original verbatim. Need exact tuple format with parentheses."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 100,
+    "total_tokens": 872,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

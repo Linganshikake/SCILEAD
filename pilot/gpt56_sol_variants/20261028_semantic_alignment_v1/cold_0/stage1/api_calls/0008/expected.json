@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1811.09242.pdf",
+  "record": 5,
+  "field": "Metric",
+  "original": "Fuzzy B-Cubed F-score (F-BC)",
+  "candidate_serialized": "{'V-measure', 'Geometric mean (AVG)', 'F-score', 'Sense-number error δ(#S)'}",
+  "candidate_sha256": "57213d7073c3c73566737fb807535c27f575ed5b89cb932442b04be5a4c4b5c7",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'V-measure', 'Geometric mean (AVG)', 'F-score', 'Sense-number error δ(#S)'}\n\nInput: Fuzzy B-Cubed F-score (F-BC)\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "6d6ed1fca50845c804d71aa277fe380f7b2e506c6de2814ec52ba55bec6efe72"
+}

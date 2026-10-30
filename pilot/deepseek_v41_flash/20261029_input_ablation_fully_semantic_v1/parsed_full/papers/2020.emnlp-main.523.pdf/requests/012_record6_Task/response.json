@@ -1,0 +1,32 @@
+{
+  "id": "84c43bb4-7b65-4eee-ad1b-fc64ac432c49",
+  "object": "chat.completion",
+  "created": 1793286256,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Question Answering",
+        "reasoning_content": "We need answer only matched item. Input Extractive Question Answering. Candidates include Question Answering. Is extractive QA a specific task variant; candidate Question Answering is broader but denotes underlying task? Requirement: more specific wording may match existing standard task when both denote same underlying task. Preserve meaningful differences dataset identity etc. Extractive QA is subtype of QA. Candidate \"Question Answering\" clear semantic match? Need decide. It says match by meaning/entity identity. Extractive QA vs QA: Is it same task? It may be a variant, but candidate list has no Extractive QA. The instruction says for task names, a more specific wording may match existing standard task when both denote same underlying task. Extractive QA denotes QA task, specifically extractive. I'd match Question Answering. Output exactly candidate."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 442,
+    "completion_tokens": 170,
+    "total_tokens": 612,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 166
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 186
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

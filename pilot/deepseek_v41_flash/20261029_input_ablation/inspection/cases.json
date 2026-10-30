@@ -1,0 +1,479 @@
+{
+  "D19_1367": {
+    "paper_id": "D19-1367.pdf",
+    "page": 4,
+    "table_text": "Model best published BiLSTM-CRF (Lample et al., 2016) BiLSTM-CRF+ELMo (Peters et al., 2018) BERT Base (Devlin et al., 2018) BERT Large (Devlin et al., 2018) BiLSTM-CRF+PCE (Akbik et al., 2019) Random RNNs w/o pre-trained LM DARTS w/o pre-trained LM I-DARTS (n = 2) w/o pre-trained LM I-DARTS (n = 1) w/o pre-trained LM Random RNNs DARTS I-DARTS (n = 2) I-DARTS (n = 1)",
+    "table_html": "<table><thead><th>Model</th><th></th></thead><tr><td colspan=\"2\">best published</td></tr><tr><td>BiLSTM-CRF (Lample et al., 2016)</td><td>90.94</td></tr><tr><td>BiLSTM-CRF+ELMo (Peters et al., 2018)</td><td>| 92.22</td></tr><tr><td>BERT Base (Devlin et al., 2018)</td><td>92.40</td></tr><tr><td>BERT Large (Devlin et al., 2018)</td><td>92.80</td></tr><tr><td>BiLSTM-CRF+PCE (Akbik et al., 2019)</td><td>93.18</td></tr><tr><td>Random RNNs w/o pre-trained LM</td><td>90.64</td></tr><tr><td>DARTS w/o pre-trained LM</td><td>91.05</td></tr><tr><td>I-DARTS (n = 2) w/o pre-trained LM</td><td>90.96</td></tr><tr><td>I-DARTS (n = 1) w/o pre-trained LM</td><td>91.23</td></tr><tr><td>Random RNNs</td><td>92.89</td></tr><tr><td>DARTS</td><td>93.13</td></tr><tr><td>I-DARTS (n = 2)</td><td>93.14</td></tr><tr><td>I-DARTS (n = 1)</td><td>93.47</td></tr></table>",
+    "narrative": "Table 2 shows a comparison of different meth- ods. Our baseline uses RNN cells generated from random initialized whose F1-score varies greatly and is lower than that of the standard LSTMs. I- DARTS signiﬁcantly outperforms Random RNNs and DARTS. The best score is achieved when n = 1. It indicates that the task prefers a sparse net- work. Also, we see that our model works with the advanced pre-trained language models in that we replace the LSTM cell to our cell. The I-DARTS architecture yields a new RNN-based state-of-the- art on this task (93.47 F1-score). In Table 2, We ﬁnd it interesting that Random RNNs are good for NER task. This may result from the design of search space that ﬁt for such tasks substantially. Search space is also a key factor in neural architec- ture search that new efforts should focus on (Xie et al., 2019a).",
+    "rag_contains_93_47": false,
+    "full_parsed_contains_93_47": true,
+    "original_table_caption_in_rag": "Figure 2: Perplexity vs. search epoch number.",
+    "outputs": {
+      "baseline_rag": [
+        {
+          "Task": "Language Modeling",
+          "Dataset": "PTB",
+          "Metric": "Test Perplexity",
+          "Result": "56.0"
+        },
+        {
+          "Task": "Language Modeling",
+          "Dataset": "PTB",
+          "Metric": "Validation Perplexity",
+          "Result": "58.0"
+        },
+        {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003 English",
+          "Metric": "F1 score (averaged over 5 runs)",
+          "Result": "N/A"
+        }
+      ],
+      "parsed_full": [
+        {
+          "Task": "Language Modeling",
+          "Dataset": "PTB",
+          "Metric": "Test Perplexity",
+          "Result": "56.0"
+        },
+        {
+          "Task": "Language Modeling",
+          "Dataset": "PTB",
+          "Metric": "Validation Perplexity",
+          "Result": "58.0"
+        },
+        {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003 English",
+          "Metric": "F1 score",
+          "Result": "93.47"
+        }
+      ],
+      "page_images": [
+        {
+          "Task": "Language Modeling",
+          "Dataset": "PTB",
+          "Metric": "Perplexity",
+          "Result": "56.0"
+        },
+        {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003 English NER",
+          "Metric": "F1",
+          "Result": "93.47"
+        }
+      ]
+    }
+  },
+  "XSum_identical_normalization_request": {
+    "paper_id": "1808.08745.pdf",
+    "identical_request_sha256": "77adcc14611f8cf18dda2af60c35612cb22b0e77458ad23767bc8259d550de8d",
+    "results": {
+      "parsed_full": {
+        "record": 0,
+        "field": "Metric",
+        "input": "ROUGE-1 F1",
+        "raw_answer": "ROGUE-1",
+        "accepted": "ROGUE-1",
+        "reason": "EXACT_CANDIDATE"
+      },
+      "page_images": {
+        "record": 0,
+        "field": "Metric",
+        "input": "ROUGE-1 F1",
+        "raw_answer": "'ROGUE-1'",
+        "accepted": null,
+        "reason": "OUTSIDE_CANDIDATES"
+      }
+    },
+    "original_predictions_unchanged": true
+  },
+  "LUKE_dev_test_and_metric_omission": {
+    "paper_id": "2020.emnlp-main.523.pdf",
+    "gold": [
+      {
+        "Task": "Entity Typing",
+        "Dataset": "Open Entity",
+        "Metric": "Precision",
+        "Result": 79.9
+      },
+      {
+        "Task": "Entity Typing",
+        "Dataset": "Open Entity",
+        "Metric": "Recall",
+        "Result": 76.6
+      },
+      {
+        "Task": "Entity Typing",
+        "Dataset": "Open Entity",
+        "Metric": "F1",
+        "Result": 78.2
+      },
+      {
+        "Task": "Relation Classification",
+        "Dataset": "TACRED",
+        "Metric": "Precision",
+        "Result": 70.4
+      },
+      {
+        "Task": "Relation Classification",
+        "Dataset": "TACRED",
+        "Metric": "Recall",
+        "Result": 75.1
+      },
+      {
+        "Task": "Relation Classification",
+        "Dataset": "TACRED",
+        "Metric": "F1",
+        "Result": 72.7
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2003 - English",
+        "Metric": "F1",
+        "Result": 94.3
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "ReCoRD",
+        "Metric": "Exact Match (EM)",
+        "Result": 90.6
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "ReCoRD",
+        "Metric": "F1",
+        "Result": 91.2
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "Exact Match (EM)",
+        "Result": 90.2
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "F1",
+        "Result": 95.4
+      }
+    ],
+    "raw_outputs": {
+      "baseline_rag": [
+        {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "F1",
+          "Result": "78.2"
+        },
+        {
+          "Task": "Relation classification",
+          "Dataset": "TACRED",
+          "Metric": "F1",
+          "Result": "72.7"
+        },
+        {
+          "Task": "Named entity recognition",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F1",
+          "Result": "94.3"
+        },
+        {
+          "Task": "Cloze-style question answering",
+          "Dataset": "ReCoRD",
+          "Metric": "EM",
+          "Result": "90.6"
+        },
+        {
+          "Task": "Cloze-style question answering",
+          "Dataset": "ReCoRD",
+          "Metric": "F1",
+          "Result": "91.2"
+        },
+        {
+          "Task": "Extractive question answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "EM",
+          "Result": "90.2"
+        },
+        {
+          "Task": "Extractive question answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "F1",
+          "Result": "95.4"
+        }
+      ],
+      "parsed_full": [
+        {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "Micro-F1",
+          "Result": "78.2"
+        },
+        {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "Micro-F1",
+          "Result": "72.7"
+        },
+        {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003",
+          "Metric": "Span F1",
+          "Result": "94.3"
+        },
+        {
+          "Task": "Cloze-style Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "EM (dev)",
+          "Result": "90.8"
+        },
+        {
+          "Task": "Cloze-style Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "F1 (dev)",
+          "Result": "91.4"
+        },
+        {
+          "Task": "Extractive Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "EM (test)",
+          "Result": "90.2"
+        },
+        {
+          "Task": "Extractive Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "F1 (test)",
+          "Result": "95.4"
+        }
+      ],
+      "page_images": [
+        {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "Micro-F1",
+          "Result": "78.2"
+        },
+        {
+          "Task": "Relation classification",
+          "Dataset": "TACRED",
+          "Metric": "Micro-F1",
+          "Result": "72.7"
+        },
+        {
+          "Task": "Named entity recognition",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F1",
+          "Result": "94.3"
+        },
+        {
+          "Task": "Cloze-style question answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Dev EM",
+          "Result": "90.8"
+        },
+        {
+          "Task": "Cloze-style question answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Dev F1",
+          "Result": "91.4"
+        },
+        {
+          "Task": "Cloze-style question answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Test EM",
+          "Result": "90.6"
+        },
+        {
+          "Task": "Cloze-style question answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Test F1",
+          "Result": "91.2"
+        },
+        {
+          "Task": "Extractive question answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Dev EM",
+          "Result": "89.8"
+        },
+        {
+          "Task": "Extractive question answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Dev F1",
+          "Result": "95.0"
+        },
+        {
+          "Task": "Extractive question answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Test EM",
+          "Result": "90.2"
+        },
+        {
+          "Task": "Extractive question answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Test F1",
+          "Result": "95.4"
+        }
+      ]
+    },
+    "normalized_outputs": {
+      "baseline_rag": [
+        {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "F1",
+          "Result": "78.2"
+        },
+        {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "F1",
+          "Result": "72.7"
+        },
+        {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 - English",
+          "Metric": "F1",
+          "Result": "94.3"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Exact Match (EM)",
+          "Result": "90.6"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "F1",
+          "Result": "91.2"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Exact Match (EM)",
+          "Result": "90.2"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "F1",
+          "Result": "95.4"
+        }
+      ],
+      "parsed_full": [
+        {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "F1",
+          "Result": "78.2"
+        },
+        {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "F1",
+          "Result": "72.7"
+        },
+        {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 - English",
+          "Metric": "F1",
+          "Result": "94.3"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Exact Match (EM)",
+          "Result": "90.8"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "F1",
+          "Result": "91.4"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Exact Match (EM)",
+          "Result": "90.2"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "F1",
+          "Result": "95.4"
+        }
+      ],
+      "page_images": [
+        {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "F1",
+          "Result": "78.2"
+        },
+        {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "F1",
+          "Result": "72.7"
+        },
+        {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 - English",
+          "Metric": "F1",
+          "Result": "94.3"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Exact Match (EM)",
+          "Result": "90.8"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "F1",
+          "Result": "91.4"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "Exact Match (EM)",
+          "Result": "90.6"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "ReCoRD",
+          "Metric": "F1",
+          "Result": "91.2"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Exact Match (EM)",
+          "Result": "89.8"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "F1",
+          "Result": "95.0"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "Exact Match (EM)",
+          "Result": "90.2"
+        },
+        {
+          "Task": "Question Answering",
+          "Dataset": "SQuAD 1.1",
+          "Metric": "F1",
+          "Result": "95.4"
+        }
+      ]
+    }
+  },
+  "inspection_is_post_generation": true
+}

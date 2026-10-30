@@ -1,0 +1,32 @@
+{
+  "id": "04d1e661-e98c-4e3c-a563-a9acbc61edf5",
+  "object": "chat.completion",
+  "created": 1793194693,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list exactly. List has (Summarization, XSum, ROGUE-2), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1). Input is (Summarization, XSum, ROUGE-2 F1). Not exact match (also ROGUE vs ROUGE and extra F1). So output tuple unchanged. Must only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 115,
+    "total_tokens": 669,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

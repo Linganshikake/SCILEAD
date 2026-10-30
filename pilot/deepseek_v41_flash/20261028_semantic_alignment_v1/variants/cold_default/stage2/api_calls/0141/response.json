@@ -1,0 +1,32 @@
+{
+  "id": "a758f002-0b4f-4754-9783-c44df082568c",
+  "object": "chat.completion",
+  "created": 1793197407,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, BillSum, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, BillSum, ROUGE-L F1). List candidates summarization datasets: Gigaword, CNN/DailyMail, XSum. BillSum distinct dataset not listed. No match. Return original verbatim. Need ensure exact input: (Summarization, BillSum, ROUGE-L F1). Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 96,
+    "total_tokens": 867,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

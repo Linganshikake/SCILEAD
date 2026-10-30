@@ -1,0 +1,32 @@
+{
+  "id": "e203484e-2af5-4ed9-b406-f35238e8bab6",
+  "object": "chat.completion",
+  "created": 1793197225,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, ON4C, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Named Entity Recognition, ON4C, F1). List has NER Ontonotes v5 - English F1. ON4C? Could be OntoNotes 4? Let's parse. ON4C maybe OntoNotes 4? Semantic requirement: do not merge dataset versions. Input ON4C likely OntoNotes 4? Candidate Ontonotes v5 - English is version 5, not match. Other NER datasets CoNLL, WNUT. No exact. So output original tuple. Need only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 137,
+    "total_tokens": 906,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 124
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

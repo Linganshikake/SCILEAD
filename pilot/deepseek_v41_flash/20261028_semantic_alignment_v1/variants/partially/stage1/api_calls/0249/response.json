@@ -1,0 +1,32 @@
+{
+  "id": "f74455fd-320a-4ce7-82c5-89f87c0a5836",
+  "object": "chat.completion",
+  "created": 1793197210,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy",
+        "reasoning_content": "We need answer match input \"Intent (Acc)\" to item list. Need infer likely metric abbreviation. Intent Accuracy maybe \"Accuracy\" or \"Overall-Accuracy\"? Need determine if any exact? List contains Accuracy. \"Intent (Acc)\" probably Intent Accuracy, metric often \"Accuracy\". But could be \"Overall-Accuracy\" for intent? Need only matched item. We need identify item from list that corresponds. Input: Intent (Acc). In NLU evaluation, intent accuracy is \"Accuracy\". The list has 'Accuracy', 'Overall-Accuracy'. \"Intent (Acc)\" likely maps to Accuracy. Need provide matched item only, exact string. Answer: Accuracy. \nFinal only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "completion_tokens": 141,
+    "total_tokens": 398,
+    "prompt_tokens_details": {
+      "cached_tokens": 123
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 139
+    },
+    "prompt_cache_hit_tokens": 123,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

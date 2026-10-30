@@ -1,0 +1,32 @@
+{
+  "id": "3bd9723b-e9b4-4480-9169-b0aee4af509c",
+  "object": "chat.completion",
+  "created": 1793194819,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Spoken Language Understanding (joint slot filling and intent detection), ATIS, Overall Accuracy)",
+        "reasoning_content": "We need answer only. Need check if input matches list. It doesn't exactly: list has Intent Detection and Slot Filling, ATIS, Accuracy; also no \"Spoken Language Understanding...\" or Overall Accuracy. So output tuple unchanged. Need exact format."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 72,
+    "total_tokens": 630,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

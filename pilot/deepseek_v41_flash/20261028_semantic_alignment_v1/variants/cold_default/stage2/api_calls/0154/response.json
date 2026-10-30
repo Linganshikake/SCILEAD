@@ -1,0 +1,32 @@
+{
+  "id": "d4a88efb-73cb-43f2-9d6a-0b7ced808a78",
+  "object": "chat.completion",
+  "created": 1793197424,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input NER, OntoNotes, F1. List has (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Match? Dataset OntoNotes vs Ontonotes v5 - English. Need consider version identity. Input says OntoNotes generic. Candidate specific v5 English. Is it clear semantic match? Requirements: Do not merge different dataset identities, languages, versions, splits. Missing details not guessed if multiple candidates plausible. Only NER Ontonotes candidate one. But input missing version; candidate v5-English. Is that acceptable? Need decide. In benchmark lists, OntoNotes NER commonly refers to OntoNotes 5.0 English. The listed tuple is likely intended match. Return listed verbatim: (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Ensure exact spelling: \"Ontonotes v5 - English\" with lowercase n? List: (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 241,
+    "total_tokens": 1010,
+    "prompt_tokens_details": {
+      "cached_tokens": 635
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 222
+    },
+    "prompt_cache_hit_tokens": 635,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

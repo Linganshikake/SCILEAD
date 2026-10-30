@@ -1,0 +1,32 @@
+{
+  "id": "3cc7aac8-a2ce-4c89-a8fb-b0f6327cdd1f",
+  "object": "chat.completion",
+  "created": 1793197099,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Extractive Summarization",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if \"Extractive Summarization\" matches candidate list. Candidates include Summarization, Extreme Summarization, Abstractive Summarization. Extractive Summarization distinct from abstractive and general summarization? Semantic matching: task name more specific may match existing standard task when both denote same underlying task. But preserve meaningful differences dataset identity etc. Here \"Extractive Summarization\" is a specific type of summarization, not in list. There is \"Summarization\" generic; could match? But list has Abstractive Summarization and Extreme Summarization, not Extractive. Need decide. Since input is specific task, candidate \"Summarization\" broader, not exact; \"Abstractive Summarization\" opposite; \"Extreme Summarization\" distinct. Match remains ambiguous? Likely output original unchanged: Extractive Summarization. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 182,
+    "total_tokens": 658,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 177
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 220
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

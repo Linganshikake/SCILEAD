@@ -1,0 +1,32 @@
+{
+  "id": "67301de4-cb49-4ad5-aec0-a4871b3512d9",
+  "object": "chat.completion",
+  "created": 1793196841,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Dev F1",
+        "reasoning_content": "We need answer only. Need determine if \"Dev F1\" matches candidate. List includes F1 but Dev F1 includes split Dev. Requirement preserve split. No candidate \"Dev F1\". So output original unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 48,
+    "total_tokens": 465,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 161
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

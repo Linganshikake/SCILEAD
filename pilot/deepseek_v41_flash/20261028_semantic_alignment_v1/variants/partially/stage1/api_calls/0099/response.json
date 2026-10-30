@@ -1,0 +1,32 @@
+{
+  "id": "716e680e-d34f-4a47-9447-bb0fa7487ef5",
+  "object": "chat.completion",
+  "created": 1793196777,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer matched item. Input ROUGE-L, list has ROGUE-L (typo) but likely matches? Need determine if exact? They want match with one item. Input ROUGE-L, list contains 'ROGUE-L'. Is that considered matching? It is likely typo in list and intended ROGUE-L corresponds to ROUGE-L? Need answer only matched item. Since none exact due spelling, but semantic metric ROUGE-L represented as ROGUE-L in list (mispelled). Need output matched item from list, likely 'ROGUE-L'. We should not explain. Final only. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 137,
+    "total_tokens": 395,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

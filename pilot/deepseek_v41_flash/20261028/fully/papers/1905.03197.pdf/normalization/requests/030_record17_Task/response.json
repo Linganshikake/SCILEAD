@@ -1,0 +1,32 @@
+{
+  "id": "ed72dd12-56da-41db-8a8d-7c4976d07441",
+  "object": "chat.completion",
+  "created": 1793192418,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "None",
+        "reasoning_content": "We need answer matched item only. GLUE includes tasks like NLI, sentiment, similarity, paraphrase, linguistic acceptability. But list has individual tasks. Input \"GLUE Benchmark\" might match \"Natural Language Inference (NLI)\"? GLUE is benchmark not item exactly. Need match with item? Could be None because no exact GLUE benchmark. But perhaps one item is benchmark category? The list are NLP tasks, GLUE is benchmark suite. No item \"GLUE Benchmark\". Need say None. Ensure only matched item or None."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 248,
+    "completion_tokens": 110,
+    "total_tokens": 358,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 108
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 248
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "bbc54a9d-1f20-48f5-95c2-b3d16330af33",
+  "object": "chat.completion",
+  "created": 1793194436,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WNUT-16",
+        "reasoning_content": "We need answer. Need match item list. Input WNUT 2016. List has WNUT-16 likely matches? Need determine if exact matches one item? Instructions: If input entity matches one of items in list, answer matched item. Else output entity unchanged. \"matches\" maybe semantic? Need output matched item in list. WNUT 2016 corresponds to WNUT-16. Is that considered matches? Usually entity linking/normalization: input could be alias. Need return listed canonical item. WNUT 2016 -> WNUT-16. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 688,
+    "completion_tokens": 128,
+    "total_tokens": 816,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 688
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

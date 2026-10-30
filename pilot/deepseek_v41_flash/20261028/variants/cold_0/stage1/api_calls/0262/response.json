@@ -1,0 +1,32 @@
+{
+  "id": "d3fa8868-4039-418c-a019-3d855956c320",
+  "object": "chat.completion",
+  "created": 1793194492,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT En-Fr newstest2014",
+        "reasoning_content": "We need answer matched item or unchanged. Need determine if input entity matches one list item. List has 'WMT En-Fr (newstest2014)' and 'WMT En-De (newstest2014)' etc. Input \"WMT En-Fr newstest2014\" maybe exact match? List item has parentheses. Does it match? Need if input entity matches one item. \"matches\" likely exact? Need output matched item if exact. There is no exact \"WMT En-Fr newstest2014\". Could consider normalized match? Instruction: If input entity matches one of items. Usually in these tasks, match exact string. Input lacks parentheses. No exact. Output entity unchanged. Need no explanation. \nFinal: WMT En-Fr newstest2014"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 174,
+    "total_tokens": 954,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 163
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 780
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

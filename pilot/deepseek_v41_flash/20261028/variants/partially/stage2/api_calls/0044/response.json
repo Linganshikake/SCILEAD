@@ -1,0 +1,32 @@
+{
+  "id": "201d639e-9d46-40d8-9a9c-c9e1fccfc437",
+  "object": "chat.completion",
+  "created": 1793194930,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(GLUE Benchmark, WNLI, Accuracy)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any in list. List has no GLUE/WNLI. So output tuple unchanged. Ensure exact format."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 44,
+    "total_tokens": 594,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

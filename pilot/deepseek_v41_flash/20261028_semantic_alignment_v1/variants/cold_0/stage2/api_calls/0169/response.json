@@ -1,0 +1,32 @@
+{
+  "id": "d9fc3bd0-156d-4c56-81eb-a5334800fc65",
+  "object": "chat.completion",
+  "created": 1793197437,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input: (Abstractive Summarization, Gigaword, ROUGE-L). List has Summarization, Gigaword, ROGUE-L (misspelled ROGUE-L). Need semantic matching. Task: Abstractive Summarization vs Summarization. Dataset Gigaword same. Metric ROUGE-L vs ROGUE-L likely typo for ROUGE-L. Candidate: (Summarization, Gigaword, ROGUE-L). Is abstractive summarization same underlying benchmark as Summarization? Need decide. There are multiple Gigaword metrics: ROGUE-L, ROGUE-1, ROGUE-2. Input metric ROUGE-L matches ROGUE-L semantically typo. Task \"Abstractive Summarization\" could be specific wording for broader Summarization. Dataset Gigaword compatible. So match to (Summarization, Gigaword, ROGUE-L). Return exactly listed tuple verbatim: (Summarization, Gigaword, ROGUE-L). Need only tuple. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 239,
+    "total_tokens": 1011,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 225
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

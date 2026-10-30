@@ -1,0 +1,32 @@
+{
+  "id": "b432de50-6803-42fb-99b3-398a41a1c797",
+  "object": "chat.completion",
+  "created": 1793197371,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match input ROUGE-1 to item list. List has 'ROGUE-1' (misspelled ROGUE). Need match likely ROGUE-1 due typo. Return only matched item exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 55,
+    "total_tokens": 314,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

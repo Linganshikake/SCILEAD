@@ -1,0 +1,32 @@
+{
+  "id": "91127a3e-ac9b-435f-b8fc-23191c3785b2",
+  "object": "chat.completion",
+  "created": 1793196842,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-L",
+        "reasoning_content": "We need answer. Need match input \"ROUGE-L F1\" against list. There is ROUGE-L and F1 separately. Entity could denote ROUGE-L F1 metric? The list has ROUGE-L, F1. \"ROUGE-L F1\" likely metric combining ROUGE-L F1? Need semantic matching. We must decide matched item or unchanged. Requirements preserve metric definition. \"ROUGE-L F1\" might refer to ROUGE-L F1 score, but list has ROUGE-L, not \"ROUGE-L F1\". It could match ROUGE-L? However adding F1 to ROUGE-L could be redundant since ROUGE-L is based on F1? But not clear. Need output exact candidate if clear semantic match. Candidate \"ROUGE-L\" denotes ROUGE-L metric, often reported as F1. Input \"ROUGE-L F1\" is more specific. Do we map to ROUGE-L? The task names specific wording may match existing standard task when same underlying. But metric definition: ROUGE-L F1 vs ROUGE-L. Usually ROUGE-L score is F-measure. Could be same. But there is also F1 candidate. Could be combination? No candidate \"ROUGE-L F1\". If ambiguous, output unchanged. Since there is a distinct \"ROUGE-L\" and \"F1\", \"ROUGE-L F1\" could be a variant. But standard metric ROUGE-L F1 equals ROUGE-L F-measure. The list likely from metrics; \"ROUGE-L F1\" should match \"ROUGE-L\" as semantic same? Need be cautious. The instruction: \"If one candidate is a clear semantic match, output that candidate exactly as written in item list. If list empty, no candidate matches, or match remains ambiguous, output original input exactly unchanged.\" Is it clear? ROUGE-L F1 probably clear semantic match to ROUGE-L, because ROUGE-L is a metric often computed as F1. However the list includes both ROUGE-L and F1; \"ROUGE-L F1\" could be interpreting as \"ROUGE-L F1-score\" not general F1. Candidate ROUGE-L is the closest exact. I'd output ROUGE-L. But let's consider if \"ROUGE-L F1\" could match \"ROUGE-L\" even though \"F1\" is a suffix denoting the F1 variant. Many datasets list ROUGE-L and ROUGE-L F1 separately? Could be a generation metric \"ROUGE-L F1\" as in ROUGE-Lsum? Hmm.\n\nThe item list has \"ROUGE-1\", \"ROUGE-2\", \"ROUGE-L\", and \"F1\". Input \"ROUGE-L F1\". Since no candidate exactly \"ROUGE-L F1\", and it might be composing ROUGE-L + F1? But entity identity metric: ROUGE-L F1 is a common way to denote ROUGE-L F1 score. Standard metric ROUGE-L is generally F1. The safest under \"do not merge distinct entities merely because names similar\" but here no distinct \"ROUGE-L F1\" candidate. If there is candidate ROUGE-L, it's semantically same underlying metric. I think output ROUGE-L. Need only selected item.\n\nFinal answer: ROUGE-L."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 736,
+    "total_tokens": 1141,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 731
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 149
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

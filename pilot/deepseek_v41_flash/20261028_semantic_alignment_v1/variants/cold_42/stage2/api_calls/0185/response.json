@@ -1,0 +1,32 @@
+{
+  "id": "b9aa58b0-8b05-4c1b-89de-42f84c11289a",
+  "object": "chat.completion",
+  "created": 1793198086,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(GLUE Benchmark, GLUE CoLA, Matthews correlation)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed tuple semantically. List has many tasks but no GLUE/CoLA/Matthews correlation. No candidate. Return original verbatim: (GLUE Benchmark, GLUE CoLA, Matthews correlation). Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 69,
+    "total_tokens": 839,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

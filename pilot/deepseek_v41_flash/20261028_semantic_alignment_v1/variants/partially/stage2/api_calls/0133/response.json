@@ -1,0 +1,32 @@
+{
+  "id": "f15fa979-a8b3-48e1-b4a1-60ab7e0f050a",
+  "object": "chat.completion",
+  "created": 1793197654,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Named Entity Recognition, CoNLL-2003, F1). List has (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Semantic same? Task NER, dataset CoNLL-2003 vs CoNLL-2003 - English. Need determine if same underlying benchmark, not merge versions/languages. CoNLL-2003 English is common NER dataset; input lacks language but candidate specifies English. Is that a clear match? The list also only one CoNLL-2003. Missing details must not be guessed when multiple candidates plausible. But here only one candidate for CoNLL-2003 NER F1. Input CoNLL-2003 likely English. Semantic matching requirements allow abbreviations, aliases. Return listed tuple verbatim: (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Need only tuple.\n\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 219,
+    "total_tokens": 991,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

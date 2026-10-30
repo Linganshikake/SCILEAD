@@ -1,0 +1,32 @@
+{
+  "id": "859e1a3a-5f6c-461e-b2ef-09e1980ff419",
+  "object": "chat.completion",
+  "created": 1793194528,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT’14 EN-FR",
+        "reasoning_content": "We need answer. Need match input entity to item list if matches. Input \"WMT'14 English→French\". List has 'WMT’14 EN-FR' likely intended match? Need determine exact? Instruction: if entity matches one of items. Need matched item. Input uses WMT'14 English→French. List item WMT’14 EN-FR uses curly apostrophe and abbreviation. Is that considered match? Likely task is entity linking normalization: \"WMT’14 EN-FR\" corresponds to WMT14 English-French. Need output matched item exactly from list. Could also no exact, output unchanged. We need infer dataset matching. Item list contains many datasets aliases. Input is descriptive form; match to WMT’14 EN-FR. Need answer exactly 'WMT’14 EN-FR'. Let's ensure quote curly: List: 'WMT’14 EN-FR'. Input ASCII apostrophe after WMT. We output item as listed with curly apostrophe.\n\nNeed no explanation. final only entity."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 221,
+    "total_tokens": 953,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 213
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 220
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

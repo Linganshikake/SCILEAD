@@ -1,0 +1,32 @@
+{
+  "id": "1def2c4e-9279-49f3-83dc-42a6476435a8",
+  "object": "chat.completion",
+  "created": 1793197511,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input Abstractive Summarization, Gigaword, ROGUE-1. Candidates include Summarization Gigaword ROGUE-1. Abstractive summarization is type/paraphrase of summarization maybe same underlying benchmark? Need semantic matching task wording may match broader standard task label if same benchmark and dataset metric compatible. Gigaword is a dataset for abstractive summarization. Metric ROGUE-1 exactly (typo ROGUE likely ROUGE). Listed (Summarization, Gigaword, ROGUE-1). Likely match. Return listed tuple verbatim: (Summarization, Gigaword, ROGUE-1). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 165,
+    "total_tokens": 938,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 150
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

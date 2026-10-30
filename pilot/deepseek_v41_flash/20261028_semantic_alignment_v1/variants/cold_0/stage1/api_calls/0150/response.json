@@ -1,0 +1,32 @@
+{
+  "id": "7ce1ce45-02f3-49a0-af7a-951b08a03816",
+  "object": "chat.completion",
+  "created": 1793196850,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Entity-level F1 score",
+        "reasoning_content": "We need answer only selected or unchanged. Need determine match. Item list has F1, Dev F1, Test F1, Slot (F1), etc. Input \"Entity-level F1 score\". Does it match any? Likely F1? Need semantic matching. \"Entity-level F1 score\" could be specific metric maybe entity-level F1 distinct from general F1? Candidates: F1. Is entity-level F1 score a variant? Need preserve meaningful differences metric definition. Entity-level F1 is a specific F1 metric. List has F1 generic. Could match F1? But requirement: preserve metric definition; do not guess ambiguous abbreviation/missing experimental condition. \"Entity-level F1 score\" includes entity-level specificity. Candidate F1 alone is generic. Not clear equal unless task context all F1 is entity-level? We shouldn't invent. So output original unchanged. Need only that."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 429,
+    "completion_tokens": 189,
+    "total_tokens": 618,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 183
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

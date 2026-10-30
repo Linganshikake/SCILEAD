@@ -1,0 +1,26 @@
+{
+  "persistent_exact_model_embedding_cache_found": false,
+  "search_roots": [
+    "D:\\C++\\SCILEAD\\pilot",
+    "D:\\C++\\SCILEAD\\assets"
+  ],
+  "patterns": [
+    "*.npy",
+    "*.npz",
+    "*.pt",
+    "*.pth",
+    "*.pkl",
+    "*.pickle",
+    "*.safetensors",
+    "*embedding*",
+    "*cache*"
+  ],
+  "findings": [
+    "full43_cs saves only normalized outputs, selected scores and checkpoints; no persisted dense name embeddings",
+    "Existing model.safetensors is weights, not encoded text vectors",
+    "processed_docs.pkl and NLTK pickle files are document/tokenizer caches with no exact bilingual-embedding-large name-vector provenance",
+    "cs_cache_provenance.json and cs_cache_repair.json in local remote snapshots identify config.py/modeling.py code caches only"
+  ],
+  "cache_reuse": false,
+  "no_remote_connection": true
+}

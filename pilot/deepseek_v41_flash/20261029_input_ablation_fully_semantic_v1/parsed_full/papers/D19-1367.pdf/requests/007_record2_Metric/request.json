@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input will be provided. You will match the input with one of the items in the list. Your answer will ONLY consist of the matched item in the list, do not provide further explanations. If none of the items matches, say None.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output None. Do not invent a new canonical name. Output only the selected item or None, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Spearman Correlation', \"Matthew's Correlation Coefficient (MCC)\", 'Perplexity', 'Overall-Accuracy', 'Recall', 'METEOR', 'F-Score (F-S)', 'Sent-Accuracy', 'AVG', 'Exact Match (EM)', 'Unlabeled Attachment Score', 'ROGUE-1', 'Labeled Attachment Score', 'ROGUE-L', 'BLEU-4', 'TER', 'F1', 'ROGUE-2', 'BLEU', 'Fuzzy normalized mutual information (FNMI)', 'Fuzzy B-Cubed (FBC)', 'Precision', 'Accuracy', 'NIST-4', 'BERTScore', 'V-Measure (V-M)'}\n\nInput: F1 score\n\nAnswer: "
+    }
+  ],
+  "thinking": {
+    "type": "enabled"
+  },
+  "reasoning_effort": "high",
+  "stream": false
+}

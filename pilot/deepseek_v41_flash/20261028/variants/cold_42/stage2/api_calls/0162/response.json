@@ -1,0 +1,32 @@
+{
+  "id": "1ca7c1ab-8cb1-4f0d-9a5a-e7029203ced6",
+  "object": "chat.completion",
+  "created": 1793194767,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Dialogue Act Classification, SWDA, Accuracy)",
+        "reasoning_content": "We need answer only. Need check list contains (Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy) vs input (Dialogue Act Classification, SWDA, Accuracy). They are not exact match because SWDA expanded. So output input tuple unchanged? Need careful: list uses \"Switchboard Dialog Act Corpus (SWDA)\" while input uses \"SWDA\". No exact match. Output tuple without changing it. Need format likely (Dialogue Act Classification, SWDA, Accuracy). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 116,
+    "total_tokens": 666,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "a91a1063-984d-4cc9-8118-4408838c867f",
+  "object": "chat.completion",
+  "created": 1793197373,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Multi-News, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match? Input (Summarization, Multi-News, ROUGE-2 F1). Check list candidates summarization datasets: Gigaword, CNN/DailyMail, XSum. Multi-News not listed. Metric ROUGE-2 F1 maybe no. No match. Return original verbatim. Ensure tuple exact: (Summarization, Multi-News, ROUGE-2 F1)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 108,
+    "total_tokens": 881,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

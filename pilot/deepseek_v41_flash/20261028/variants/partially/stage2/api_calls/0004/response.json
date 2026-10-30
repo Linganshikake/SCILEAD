@@ -1,0 +1,32 @@
+{
+  "id": "504e749a-acf2-45bd-8eb6-aebcc52c6386",
+  "object": "chat.completion",
+  "created": 1793194885,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, ON4C, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item. Input: (Named Entity Recognition, ON4C, F1). List has Named Entity Recognition variants: Ontonotes v5 - English, CoNLL-2003 - English, WNUT-17, WNUT-16. No ON4C. Output tuple unchanged. Need exact format maybe \"(Named Entity Recognition, ON4C, F1)\". Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 551,
+    "completion_tokens": 105,
+    "total_tokens": 656,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 167
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "24b2eadd-42f0-4b09-b74e-440a97f512ab",
+  "object": "chat.completion",
+  "created": 1793194498,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT14 En-Fr",
+        "reasoning_content": "We need answer only matched item if exact? Input WMT14 En-Fr. List contains \"WMT'14 English→German\", \"WMT'14 English→French\", \"WMT14 En-De\" etc. Exact match? No exact \"WMT14 En-Fr\". Instruction: If input entity matches one item in list, answer matched item; else output entity unchanged. Need determine matching likely exact string, not semantic normalization. \"WMT14 En-Fr\" not literally in list. Output unchanged. Could there be matched item intended WMT'14 English→French? But says matches one of items. Usually these tasks expect exact match or maybe normalized? Need be careful. The input entity \"WMT14 En-Fr\" is an abbreviation not equal to any listed. Since no exact match, output entity unchanged. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 180,
+    "total_tokens": 960,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 396
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

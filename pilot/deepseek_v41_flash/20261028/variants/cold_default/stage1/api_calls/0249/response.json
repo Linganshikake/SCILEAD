@@ -1,0 +1,32 @@
+{
+  "id": "d2706072-84c4-4f9c-97a9-212bc3298841",
+  "object": "chat.completion",
+  "created": 1793194497,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT14 En-De",
+        "reasoning_content": "We need answer matched item if exact? Input \"WMT14 En-De\". Need compare with items. Items include \"WMT'14 English→German\", \"WMT2014 En→De\". Does not exactly match. Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. \"WMT14 En-De\" no exact match. Output unchanged. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 91,
+    "total_tokens": 863,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

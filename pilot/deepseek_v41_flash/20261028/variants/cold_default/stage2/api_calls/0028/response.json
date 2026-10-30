@@ -1,0 +1,32 @@
+{
+  "id": "d0fbb4b2-0d07-4115-90ac-a1bbe4168fa9",
+  "object": "chat.completion",
+  "created": 1793194603,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need compare input tuple against list. Input: (Abstractive Summarization, Gigaword, ROUGE-L). List has (Summarization, Gigaword, ROGUE-L) and variants. Exact match? No, because Abstractive Summarization vs Summarization, ROUGE-L vs ROGUE-L (spelling). Since no match, output tuple unchanged. Must only output answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 104,
+    "total_tokens": 658,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

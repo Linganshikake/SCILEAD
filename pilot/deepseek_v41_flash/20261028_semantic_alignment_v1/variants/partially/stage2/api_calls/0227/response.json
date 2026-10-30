@@ -1,0 +1,32 @@
+{
+  "id": "d6744a8d-dbe7-46f9-a950-2531c8e7aa02",
+  "object": "chat.completion",
+  "created": 1793197814,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN/DailyMail, BERTScore)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input Abstractive Summarization, CNN/DailyMail, BERTScore. Candidates summarization CNN/DailyMail with ROGUE-L/2/1. Metric differs BERTScore vs ROUGE. Requirement don't merge metric definitions. No match. Return original tuple verbatim. Need exact formatting. (Abstractive Summarization, CNN/DailyMail, BERTScore). No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 106,
+    "total_tokens": 878,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

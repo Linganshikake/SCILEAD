@@ -1,0 +1,32 @@
+{
+  "id": "9db8cded-dbc0-4e6c-9d98-7e57e94da2bb",
+  "object": "chat.completion",
+  "created": 1793197004,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Newsroom",
+        "reasoning_content": "We need answer only selected or unchanged. Need determine if \"Newsroom\" matches any item. List includes CNN/DailyMail, XSum, Gigaword, CBS SciTech News, etc. Newsroom is a dataset? The Newsroom dataset for summarization. Not in list. Maybe \"CBS SciTech News\" no. \"Newsroom\" could be a dataset but absent. Need output unchanged \"Newsroom\". Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 673,
+    "completion_tokens": 93,
+    "total_tokens": 766,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 417
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "f8fcd6e9-9e08-414c-bf24-4043e743af15",
+  "object": "chat.completion",
+  "created": 1793194357,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match. Input \"ROUGE-1 F1\". Item list has 'ROGUE-1' misspelled? Also 'F1'. Need match one item. Input likely combines ROGUE-1 and F1, but list item closest is ROGUE-1? They ask match input with one item. Since \"ROUGE-1 F1\" not exact. Could be \"ROGUE-1\" due typo and F1? Need only matched item. Maybe None? We need determine intended: list contains ROGUE-1 (misspelling ROGUE vs ROUGE). Input says ROUGE-1 F1. Could match ROGUE-1? They might test exact names? The list has 'ROGUE-1' and 'F1'. Input with two metrics. Since one item must match. If none matches, say None. \"ROUGE-1 F1\" is not an item. But maybe they expect \"ROGUE-1\" because ROUGE-1 is typo in list? Let's parse: Item list includes 'ROGUE-1', 'ROGUE-L', 'ROGUE-2' all misspelled \"ROGUE\" instead of \"ROUGE\". Input \"ROUGE-1 F1\" has correct ROUGE-1 and F1. They may want match to 'ROGUE-1'? But input has extra F1. Could be a metric variant \"ROUGE-1 F1\", which is a specific metric. List has 'ROGUE-1' representing ROUGE-1. However, F1 is separate. In evaluation metrics, \"ROUGE-1 F1\" refers to F1 score for ROUGE-1, and item 'ROGUE-1' (misspelled) might denote it. The task: match input with one item. Input: ROUGE-1 F1. The closest item is ROGUE-1. Answer should only matched item. I think should output 'ROGUE-1' exactly as in list. But consider if strict none. The examples likely expect mapping synonyms/typos. Let's answer ROGUE-1. Need only item, no quotes? \"ROGUE-1\". final."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 493,
+    "total_tokens": 754,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 487
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

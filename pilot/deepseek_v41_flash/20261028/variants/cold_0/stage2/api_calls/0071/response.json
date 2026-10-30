@@ -1,0 +1,32 @@
+{
+  "id": "2c5e5281-3498-42e3-9c47-f2f2c5a1bed1",
+  "object": "chat.completion",
+  "created": 1793194631,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN-DailyMail, ROUGE-2)",
+        "reasoning_content": "We need answer only. Need match? Input tuple (Abstractive Summarization, CNN-DailyMail, ROUGE-2). List has (Summarization, CNN/DailyMail, ROGUE-2) but not exact match due names/spelling. Rule: If input matches one list, answer matched; else output tuple unchanged. So output same input. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 96,
+    "total_tokens": 652,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

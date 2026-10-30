@@ -1,0 +1,32 @@
+{
+  "id": "2fdc0d16-f025-40db-9680-aaf27b229014",
+  "object": "chat.completion",
+  "created": 1793197303,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot filling, Movie, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed semantically. Input (Slot filling, Movie, F1). Listed includes Intent Detection and Slot Filling, ATIS/SNIPS with Accuracy/F1. Dataset Movie not ATIS/SNIPS. No match. Return original tuple verbatim: (Slot filling, Movie, F1). Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 85,
+    "total_tokens": 851,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 254
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

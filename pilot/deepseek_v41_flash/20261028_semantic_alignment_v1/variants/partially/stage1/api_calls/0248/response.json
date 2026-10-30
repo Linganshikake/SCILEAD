@@ -1,0 +1,32 @@
+{
+  "id": "7fb46567-f80b-4faf-bbcf-af644e4b0932",
+  "object": "chat.completion",
+  "created": 1793197209,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint intent detection and slot filling",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine semantic match. Input \"Slot Filling and Intent Detection\" vs candidate \"Joint intent detection and slot filling\". Same underlying task with wording order reversed and joint. Match candidate exactly. Output candidate exactly as written item list: Joint intent detection and slot filling (with lowercase intent etc as listed). Ensure no quotes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 493,
+    "completion_tokens": 80,
+    "total_tokens": 573,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 237
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

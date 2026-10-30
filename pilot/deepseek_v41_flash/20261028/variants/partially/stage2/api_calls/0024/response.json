@@ -1,0 +1,32 @@
+{
+  "id": "ca72b6ec-2ef5-4785-b019-5af94865461c",
+  "object": "chat.completion",
+  "created": 1793194909,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only. Need check if exact match in list. Input \"(Abstractive Summarization, CNN/DailyMail, ROGUE-L)\". List has \"(Summarization, CNN/DailyMail, ROGUE-L)\" not Abstractive Summarization. So no match, output input unchanged. Must only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 81,
+    "total_tokens": 636,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

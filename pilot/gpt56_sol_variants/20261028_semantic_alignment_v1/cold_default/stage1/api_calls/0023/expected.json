@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "D18-1279.pdf",
+  "record": 4,
+  "field": "Dataset",
+  "original": "CoNLL-2003 German",
+  "candidate_serialized": "{'WSJ', 'CoNLL-2002 Spanish', 'CoNLL-2000 Chunking', 'ON5E', 'RE', 'ON4C', 'CoNLL-2002 Dutch', 'CoNLL-2003 NER', 'WN16', 'WE', 'WN17'}",
+  "candidate_sha256": "9fa12f96ef0a60b02b3c33ca1c3c28a6cf7d35aa822b7553d9451005bc2976f9",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'WSJ', 'CoNLL-2002 Spanish', 'CoNLL-2000 Chunking', 'ON5E', 'RE', 'ON4C', 'CoNLL-2002 Dutch', 'CoNLL-2003 NER', 'WN16', 'WE', 'WN17'}\n\nInput: CoNLL-2003 German\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "20d9be6c1c2fa1f2760ddb91ac6155c0460960310a48dbf11f70510454f7e637"
+}

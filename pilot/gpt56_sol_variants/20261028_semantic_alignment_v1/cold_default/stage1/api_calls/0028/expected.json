@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "2020.emnlp-main.523.pdf",
+  "record": 1,
+  "field": "Task",
+  "original": "Entity typing",
+  "candidate_serialized": "{'Syntactic chunking', 'Named Entity Recognition (NER)', 'Noun Phrase Chunking', 'Part-of-Speech Tagging'}",
+  "candidate_sha256": "3b36732d8ce945e8c9cf36d2be853339e39a9424661759bbb1a7d9c31e09fa33",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Syntactic chunking', 'Named Entity Recognition (NER)', 'Noun Phrase Chunking', 'Part-of-Speech Tagging'}\n\nInput: Entity typing\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "801125e020a842ad6897ad88e3f702f017b53cfe888138057ee5a5a5557a591e"
+}

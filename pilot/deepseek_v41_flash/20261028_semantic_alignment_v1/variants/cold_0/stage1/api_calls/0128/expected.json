@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1812.10235.pdf",
+  "record": 5,
+  "field": "Dataset",
+  "original": "Food",
+  "candidate_serialized": "{'QQP', 'MRPC', 'ATIS', 'WMT En-De (newstest2014)', 'IWSLT De-En', 'SemEval 2013 Task 13', 'Snips', 'CoNLL00', 'QNLI', 'STS-B', 'IWSLT 2014 De-En', 'CNN/DailyMail', 'GLUE', 'WNUT 2016', 'Multimodal', 'Movie', 'OntoNotes', 'CoQA', 'CoLA', 'SQuAD', 'CoNLL-2003', 'Gigaword', 'SemEval 2010 Task 14', 'SST-2', 'WikiText-103', 'PubMed', 'WMT En-Fr (newstest2014)', 'OntoNotes 5.0', 'WSJ', 'Penn Treebank', 'WNLI', 'SwDA', 'MRDA', 'RTE', 'IWSLT 2015 En-Vi', 'AX', 'MNLI-mm', 'MNLI-m', 'WNUT 2017'}",
+  "candidate_sha256": "3fe188b8ed0076f2f103006e51a20237c21495861ab2b38dc42be475e3e73b3f",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'QQP', 'MRPC', 'ATIS', 'WMT En-De (newstest2014)', 'IWSLT De-En', 'SemEval 2013 Task 13', 'Snips', 'CoNLL00', 'QNLI', 'STS-B', 'IWSLT 2014 De-En', 'CNN/DailyMail', 'GLUE', 'WNUT 2016', 'Multimodal', 'Movie', 'OntoNotes', 'CoQA', 'CoLA', 'SQuAD', 'CoNLL-2003', 'Gigaword', 'SemEval 2010 Task 14', 'SST-2', 'WikiText-103', 'PubMed', 'WMT En-Fr (newstest2014)', 'OntoNotes 5.0', 'WSJ', 'Penn Treebank', 'WNLI', 'SwDA', 'MRDA', 'RTE', 'IWSLT 2015 En-Vi', 'AX', 'MNLI-mm', 'MNLI-m', 'WNUT 2017'}\n\nInput: Food\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "f8eb96bcbadfca69412ab5c07a0ac41983c827f0988197cca7f3237579313839"
+}

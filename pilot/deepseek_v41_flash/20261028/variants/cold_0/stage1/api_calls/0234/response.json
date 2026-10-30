@@ -1,0 +1,32 @@
+{
+  "id": "f4c77696-8871-492b-8a2f-9aa88b914c6d",
+  "object": "chat.completion",
+  "created": 1793194443,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Spoken Language Understanding (joint slot filling and intent detection)",
+        "reasoning_content": "We need answer only matched item if matches else input unchanged. Need determine if input entity matches one list item. \"Spoken Language Understanding (joint slot filling and intent detection)\" likely not exact. Items include \"Joint intent detection and slot filling\" and \"Slot Filling and Intent Detection\". Input has extra Spoken Language Understanding and joint wording. Does it match one of items? Need exact match? If matches semantically? Prompt: If input entity matches one of items in list, answer matched item. Input entity \"Spoken Language Understanding (joint slot filling and intent detection)\" does not exactly match any. Could match \"Joint intent detection and slot filling\" because parenthetical contains concept but order differs and SLU. But \"matches\" likely exact string match. Need output entity unchanged. No explanation. Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 352,
+    "completion_tokens": 176,
+    "total_tokens": 528,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 163
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 224
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

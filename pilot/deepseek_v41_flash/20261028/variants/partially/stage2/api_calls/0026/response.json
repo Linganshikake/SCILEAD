@@ -1,0 +1,32 @@
+{
+  "id": "43fdc2a8-556b-4e93-8603-7868ba485dd1",
+  "object": "chat.completion",
+  "created": 1793194912,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROGUE-2)",
+        "reasoning_content": "We need answer only. Need match exact tuple in list? Input (Abstractive Summarization, Gigaword, ROGUE-2). List has Summarization, Gigaword, ROGUE-2 but not Abstractive Summarization. \"If input tuple matches one item... Else output tuple without changing.\" So output same input. Need exact format. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 91,
+    "total_tokens": 646,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

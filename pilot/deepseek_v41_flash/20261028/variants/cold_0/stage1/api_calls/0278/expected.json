@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1603.01354.pdf",
+  "record": 1,
+  "field": "Dataset",
+  "original": "Wall Street Journal (WSJ) portion of Penn Treebank",
+  "candidate_serialized": "{'QQP', 'DyDA', 'WMT En-De (newstest2014)', 'WMT En-De newstest2014', 'QNLI', 'ELI5', 'TACRED', 'CoNLL-03', 'CNN/DailyMail', 'GLUE MNLI', 'AESLC', 'CoNLL 2003 (Eng)', 'CoNLL 2003 NER', 'CBS SciTech News', 'GLUE QQP', 'CoNLL 2002 Dutch NER', 'WMT En-Fr newstest2014', 'SQuAD 1.1', 'CoNLL03 NER', 'PubMed', 'SwDA', 'IWSLT 2015 En-Vi', 'WNUT 2017', 'WMT14 En-Fr', 'MapTask', 'SemEval 2013 Task 13', 'Snips', 'GLUE QNLI', 'ON4C', 'NYT', 'CoNLL++', 'GLUE', 'Newsroom', 'Movie', 'CoLA', 'GLUE RTE', 'CoNLL-2003 German', 'Gigaword', 'SemEval 2010 Task 14', 'Multi-News', 'WE', 'arXiv', 'Penn Treebank (PTB)', 'WSJ', 'GLUE CoLA', 'Home', 'CoNLL 2002 Spanish NER', 'Arnet', 'ConvAI2', 'MNLI-m', 'ATIS', 'BC5CDR', 'ReCoRD', 'Google Billion Word (valid)', 'IWSLT De-En', 'GLUE SST', 'Penn Treebank converted to Stanford Dependencies version 3.3.0', 'CoNLL00', 'CoNLL-2002 Dutch', 'STS-B', 'WNUT-17', 'CNN-DailyMail', 'CoNLL-2000 Chunking', 'Penn Treebank WSJ', 'RE', 'WMT2014 En→De', 'BIGPATENT', 'Reddit TIFU', 'WNUT 2016', 'Multimodal', 'OntoNotes', 'Annotated English Gigaword', 'SNIPS-NLU', 'CoQA', 'WMT14 En-De', 'SST-2', 'WikiText-103', 'WN16', 'WMT En-Fr (newstest2014)', 'Penn Treebank', 'Open Entity', 'WNLI', 'NCBI-disease', 'Wikitext-2 (WT2)', 'SQuAD', 'MRPC', 'WikiHow', 'WMT Zh-En newstest2017', 'SQuAD 2.0', 'IWSLT 2014 De-En', 'ON5E', 'WMT16 RO-EN', 'SNIPS', 'CoNLL-2000', 'Google Billion Word (test)', 'BillSum', 'MNLI', 'CCGBank', 'CoNLL-2003', 'Wikitext-103 (WT103)', 'E-commerce', 'PTB', 'IWSLT 2015 English-Vietnamese translation dataset (tst2013)', 'MRDA', 'RTE', 'XSum', 'WN17', 'AX', 'MNLI-mm', 'Food'}",
+  "candidate_sha256": "0d5fca2fb10608efdefac326d615d21cda7964968f86321f45c772b56a7751ee",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'QQP', 'DyDA', 'WMT En-De (newstest2014)', 'WMT En-De newstest2014', 'QNLI', 'ELI5', 'TACRED', 'CoNLL-03', 'CNN/DailyMail', 'GLUE MNLI', 'AESLC', 'CoNLL 2003 (Eng)', 'CoNLL 2003 NER', 'CBS SciTech News', 'GLUE QQP', 'CoNLL 2002 Dutch NER', 'WMT En-Fr newstest2014', 'SQuAD 1.1', 'CoNLL03 NER', 'PubMed', 'SwDA', 'IWSLT 2015 En-Vi', 'WNUT 2017', 'WMT14 En-Fr', 'MapTask', 'SemEval 2013 Task 13', 'Snips', 'GLUE QNLI', 'ON4C', 'NYT', 'CoNLL++', 'GLUE', 'Newsroom', 'Movie', 'CoLA', 'GLUE RTE', 'CoNLL-2003 German', 'Gigaword', 'SemEval 2010 Task 14', 'Multi-News', 'WE', 'arXiv', 'Penn Treebank (PTB)', 'WSJ', 'GLUE CoLA', 'Home', 'CoNLL 2002 Spanish NER', 'Arnet', 'ConvAI2', 'MNLI-m', 'ATIS', 'BC5CDR', 'ReCoRD', 'Google Billion Word (valid)', 'IWSLT De-En', 'GLUE SST', 'Penn Treebank converted to Stanford Dependencies version 3.3.0', 'CoNLL00', 'CoNLL-2002 Dutch', 'STS-B', 'WNUT-17', 'CNN-DailyMail', 'CoNLL-2000 Chunking', 'Penn Treebank WSJ', 'RE', 'WMT2014 En→De', 'BIGPATENT', 'Reddit TIFU', 'WNUT 2016', 'Multimodal', 'OntoNotes', 'Annotated English Gigaword', 'SNIPS-NLU', 'CoQA', 'WMT14 En-De', 'SST-2', 'WikiText-103', 'WN16', 'WMT En-Fr (newstest2014)', 'Penn Treebank', 'Open Entity', 'WNLI', 'NCBI-disease', 'Wikitext-2 (WT2)', 'SQuAD', 'MRPC', 'WikiHow', 'WMT Zh-En newstest2017', 'SQuAD 2.0', 'IWSLT 2014 De-En', 'ON5E', 'WMT16 RO-EN', 'SNIPS', 'CoNLL-2000', 'Google Billion Word (test)', 'BillSum', 'MNLI', 'CCGBank', 'CoNLL-2003', 'Wikitext-103 (WT103)', 'E-commerce', 'PTB', 'IWSLT 2015 English-Vietnamese translation dataset (tst2013)', 'MRDA', 'RTE', 'XSum', 'WN17', 'AX', 'MNLI-mm', 'Food'}\n\nInput: Wall Street Journal (WSJ) portion of Penn Treebank\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "ffb959121dd611a33810e8c08b31a121dc33449e649f77ea67c8b4d33ceb4d76"
+}

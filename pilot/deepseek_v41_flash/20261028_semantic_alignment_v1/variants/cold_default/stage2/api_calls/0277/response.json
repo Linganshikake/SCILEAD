@@ -1,0 +1,32 @@
+{
+  "id": "a8c09738-71d7-476e-a370-4f0c748b2e0a",
+  "object": "chat.completion",
+  "created": 1793197632,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, XSum, ROUGE-1). List has (Summarization, XSum, ROGUE-1) and ROGUE-2, ROGUE-L. Need match metric ROUGE-1 vs typo ROGUE-1? They use ROGUE consistently likely typo for ROUGE. Dataset XSum. Task Abstractive Summarization vs Summarization. This is likely same underlying benchmark? Need be careful: \"A more specific task wording may match broader standard task label when they describe same underlying benchmark and Dataset and Metric remain compatible.\" Abstractive Summarization may match Summarization? List only Summarization XSum. Metric ROUGE-1 vs ROGUE-1 (typo). Since all metrics use ROGUE perhaps intended ROUGE. Candidate (Summarization, XSum, ROGUE-1). Return verbatim listed tuple with ROGUE-1. Need output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 224,
+    "total_tokens": 996,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 210
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e4d13887-aaf7-425d-8f90-f3418743d262",
+  "object": "chat.completion",
+  "created": 1793194697,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English→French, sacreBLEU)",
+        "reasoning_content": "We need answer only. Need compare input to list. It uses WMT’14 EN-FR, BLEU. Input is (Machine Translation, WMT'14 English→French, sacreBLEU) different string and metric. Not match exactly. Output tuple unchanged. Need exact input tuple? \"(Machine Translation, WMT'14 English→French, sacreBLEU)\" Note list has curly? We output same input. Ensure apostrophe: WMT'14 English→French."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 119,
+    "total_tokens": 675,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

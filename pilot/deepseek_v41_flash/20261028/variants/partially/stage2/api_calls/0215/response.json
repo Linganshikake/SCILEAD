@@ -1,0 +1,32 @@
+{
+  "id": "496accdd-8b79-45bf-a1f6-1222cefd6245",
+  "object": "chat.completion",
+  "created": 1793195147,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN/DailyMail, ROGUE-1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list exactly. Input: (Abstractive Summarization, CNN/DailyMail, ROGUE-1). List has (Summarization, CNN/DailyMail, ROGUE-1) and others. Not exact because task different \"Abstractive Summarization\" vs \"Summarization\". So output tuple unchanged. Need format exactly tuple. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 99,
+    "total_tokens": 655,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

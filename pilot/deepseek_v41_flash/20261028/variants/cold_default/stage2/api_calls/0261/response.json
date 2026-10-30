@@ -1,0 +1,32 @@
+{
+  "id": "cbdc2694-606b-4e20-b24f-11cc288e9ba9",
+  "object": "chat.completion",
+  "created": 1793194898,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN-DailyMail, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list exactly. List has (Summarization, CNN/DailyMail, ROGUE-L) etc. Input (Abstractive Summarization, CNN-DailyMail, ROUGE-L) does not match exact (task differs, dataset hyphen vs slash, metric spelling ROUGE vs ROGUE). Output tuple unchanged. Ensure exact original."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 98,
+    "total_tokens": 653,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

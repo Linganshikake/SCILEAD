@@ -1,0 +1,32 @@
+{
+  "id": "6a6401bf-2b73-46b9-849f-6e0ec0f966da",
+  "object": "chat.completion",
+  "created": 1793197088,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine if Overall Accuracy matches candidate. List has Accuracy, Matched accuracy, Mismatched accuracy, Sentence accuracy. \"Overall Accuracy\" could be semantic match to Accuracy? Need preserve meaningful differences. It is likely metric Accuracy, but \"Overall\" maybe qualifier. Need decide if clear match. The task names/metrics. \"Overall Accuracy\" often synonymous with Accuracy (not specific subset). Candidate \"Accuracy\" is general. Semantic matching: match by meaning identity. \"Overall Accuracy\" and \"Accuracy\" likely same, unless specific metric overall accuracy vs accuracy. Given list includes \"Accuracy\" and subtypes matched/mismatched/sentence. Overall accuracy likely general accuracy. Need output candidate exactly \"Accuracy\". Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 458,
+    "completion_tokens": 156,
+    "total_tokens": 614,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 154
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 202
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "6b58e3b7-9ab8-4170-87f2-4c2c101f2480",
+  "object": "chat.completion",
+  "created": 1793196832,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural language inference",
+        "reasoning_content": "We need answer. Need match input Natural language inference to list. List has GLUE Benchmark but no NLI. Could \"Linguistic acceptability\" no. Semantic textual similarity no. We must output unchanged if no match. Need only selected or unchanged. \"Natural language inference\" not in list. Is it part of GLUE? GLUE Benchmark includes NLI tasks, but candidate is benchmark, not task. Requirements preserve identity; task name vs benchmark not same. No match. Output original exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 415,
+    "completion_tokens": 105,
+    "total_tokens": 520,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 159
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

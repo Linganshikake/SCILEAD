@@ -1,0 +1,32 @@
+{
+  "id": "d172c294-6e41-42e4-8f3e-acd52e0a0a28",
+  "object": "chat.completion",
+  "created": 1793197802,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Language Modeling, WikiText-103, Perplexity)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed tuple semantically. Input: (Language Modeling, WikiText-103, Perplexity). List has no language modeling, WikiText-103, perplexity. So return original tuple verbatim. Need output only tuple. Ensure exact: (Language Modeling, WikiText-103, Perplexity)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 87,
+    "total_tokens": 857,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

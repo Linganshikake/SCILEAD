@@ -1,0 +1,32 @@
+{
+  "id": "cbbd26bb-817d-4d59-97f0-e9923e5de1b6",
+  "object": "chat.completion",
+  "created": 1793197486,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Question Generation, SQuAD, ROUGE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Question Generation, SQuAD, ROUGE-L). List has no question generation, no SQuAD. So return original tuple verbatim. Need output only that one tuple. Ensure exact: (Question Generation, SQuAD, ROUGE-L)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 80,
+    "total_tokens": 850,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "54e3dd42-87d3-4067-adc7-9267b376c937",
+  "object": "chat.completion",
+  "created": 1793196967,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WSJ",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine semantic match. Input \"Wall Street Journal portion of Penn Treebank\". Candidates include WSJ, Penn Treebank. Which is best? The entity itself denotes WSJ portion of Penn Treebank. Candidate \"WSJ\" likely stands for Wall Street Journal; but \"Wall Street Journal portion of Penn Treebank\" maybe commonly \"WSJ\" dataset? List has both WSJ and Penn Treebank. Need choose matched item exactly as list. The semantic identity: WSJ corpus is the Wall Street Journal portion of Penn Treebank. Input explicitly \"Wall Street Journal portion of Penn Treebank\" equals WSJ in candidate? Candidate WSJ likely denotes Wall Street Journal corpus, which is portion of PTB. But if list contains \"Penn Treebank\", input is more specific than Penn Treebank (whole vs portion). Match by meaning: Could match \"WSJ\" because that is the standard name for the WSJ portion. Need avoid merging whole PTB with WSJ. So answer WSJ. Need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 644,
+    "completion_tokens": 218,
+    "total_tokens": 862,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 215
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

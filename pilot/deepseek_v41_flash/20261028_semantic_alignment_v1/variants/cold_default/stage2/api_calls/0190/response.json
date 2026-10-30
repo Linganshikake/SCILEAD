@@ -1,0 +1,32 @@
+{
+  "id": "b42a264b-9109-4730-b66d-1c50308d83d0",
+  "object": "chat.completion",
+  "created": 1793197482,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Intent detection, ATIS, Accuracy). Candidate list has (Intent Detection and Slot Filling, ATIS, Accuracy). Task wording more specific? Intent detection vs Intent Detection and Slot Filling. Same underlying benchmark? Dataset ATIS metric Accuracy. Candidate exact-ish. Need return entire listed tuple verbatim. Only output tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 91,
+    "total_tokens": 857,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 254
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

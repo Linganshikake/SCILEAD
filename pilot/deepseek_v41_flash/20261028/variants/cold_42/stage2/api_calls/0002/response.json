@@ -1,0 +1,32 @@
+{
+  "id": "368c524f-40fb-48c6-864c-866d9699401c",
+  "object": "chat.completion",
+  "created": 1793194562,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extractive Summarization, CNN/DailyMail, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only tuple. Need check matches item list exactly? Input (Extractive Summarization, CNN/DailyMail, ROUGE-2 F1). List has (Summarization, CNN/DailyMail, ROGUE-2), spelled ROGUE not ROUGE, task Summarization not Extractive. No match. Output input unchanged. Must only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 97,
+    "total_tokens": 655,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

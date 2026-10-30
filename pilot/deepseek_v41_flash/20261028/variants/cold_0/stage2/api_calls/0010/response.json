@@ -1,0 +1,32 @@
+{
+  "id": "d553e79d-6dc2-43a5-b594-d65b6dbcb79f",
+  "object": "chat.completion",
+  "created": 1793194553,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2003, F1 score)",
+        "reasoning_content": "We need answer. Need determine if input tuple matches item. List has (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Input (Named Entity Recognition, CoNLL-2003, F1 score). It doesn't exactly match, due differences. Instruction if input matches one item, answer matched; else output tuple unchanged. Need output exactly input tuple, no explanation. Ensure format."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 103,
+    "total_tokens": 658,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "e28b26a4-7585-4df9-a59b-cefb7ccfde37",
+  "object": "chat.completion",
+  "created": 1793194858,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, arXiv, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any item in list. Item list is set of tuples. Input (Summarization, arXiv, ROUGE-1 F1). None exact: Summarization with Gigaword/CNN/XSum, metrics ROGUE etc. So output unchanged. Ensure exact string. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 84,
+    "total_tokens": 637,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

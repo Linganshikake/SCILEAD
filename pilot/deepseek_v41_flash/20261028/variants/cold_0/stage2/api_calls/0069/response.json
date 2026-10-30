@@ -1,0 +1,32 @@
+{
+  "id": "ea295268-98b0-4eef-a0b2-daa8de193ce1",
+  "object": "chat.completion",
+  "created": 1793194628,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, IWSLT De-En, BLEU)",
+        "reasoning_content": "We need answer only. Need check if input matches any tuple exactly. List contains (Machine Translation, IWSLT’14 EN-DE, BLEU). Input (Machine Translation, IWSLT De-En, BLEU) not exact match. So output unchanged tuple. Need preserve exact. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 84,
+    "total_tokens": 639,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

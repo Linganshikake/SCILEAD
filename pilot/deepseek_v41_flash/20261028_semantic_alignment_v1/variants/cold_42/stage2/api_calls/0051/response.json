@@ -1,0 +1,32 @@
+{
+  "id": "e784d3e0-2e80-437c-80e2-798295622455",
+  "object": "chat.completion",
+  "created": 1793197283,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Linguistic Acceptability, GLUE CoLA, Matthews correlation)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among list. Input task Linguistic Acceptability, dataset GLUE CoLA, metric Matthews correlation. List has none? Need check candidates: no CoLA, no Linguistic Acceptability. So return original tuple verbatim. Must output only tuple. Ensure exact input: (Linguistic Acceptability, GLUE CoLA, Matthews correlation)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 92,
+    "total_tokens": 864,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

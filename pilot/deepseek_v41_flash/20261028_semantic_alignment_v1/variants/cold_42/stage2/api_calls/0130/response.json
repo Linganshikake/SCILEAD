@@ -1,0 +1,32 @@
+{
+  "id": "4c79a02d-1420-46ba-a618-0ec14bd82168",
+  "object": "chat.completion",
+  "created": 1793197409,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, NCBI-disease, Entity-level F1 score)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input NER NCBI-disease Entity-level F1. List has NER datasets: Ontonotes v5 English F1, CoNLL-2003 English F1, WNUT-17 English F1, WNUT-16 English F1. NCBI-disease not present. No match. Return original input tuple verbatim. Need ensure exact output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 105,
+    "total_tokens": 878,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

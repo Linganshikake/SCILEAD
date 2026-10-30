@@ -1,0 +1,32 @@
+{
+  "id": "cd1541a2-a348-420c-8640-44422b704e89",
+  "object": "chat.completion",
+  "created": 1793197268,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Gigaword",
+        "reasoning_content": "We need answer matched item or unchanged. Need determine \"Annotated English Gigaword\" among list. Candidates include Gigaword, Google Billion Word etc. Annotated English Gigaword is a dataset often called Gigaword? The item list has \"Gigaword\". Need semantic match? Input \"Annotated English Gigaword\" denotes dataset Annotated English Gigaword corpus, commonly used for summarization, often referred to as Gigaword. Candidate \"Gigaword\" likely same entity? Need preserve meaningful differences. There is \"BIGPATENT\", \"Google Billion Word\". Annotated English Gigaword vs Gigaword: The list candidate \"Gigaword\" is a shortened form/alias. Should output candidate exactly \"Gigaword\". Need ensure no other \"Annotated English Gigaword\" candidate. Yes.\n\nFinal only selected."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 853,
+    "completion_tokens": 191,
+    "total_tokens": 1044,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 186
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 213
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

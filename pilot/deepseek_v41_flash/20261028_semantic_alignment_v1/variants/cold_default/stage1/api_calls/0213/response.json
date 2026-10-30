@@ -1,0 +1,32 @@
+{
+  "id": "c036961f-12e7-44a7-a7e6-b1d205f3ce69",
+  "object": "chat.completion",
+  "created": 1793196966,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WSJ",
+        "reasoning_content": "We need answer match. Input \"Wall Street Journal portion of Penn Treebank\". Candidates include WSJ, PTB. Semantic identity? WSJ is Wall Street Journal portion of Penn Treebank likely dataset WSJ in list. PTB is Penn Treebank. Which one matches entity? Input describes WSJ portion of PTB. Candidate WSJ likely denotes Wall Street Journal corpus from Penn Treebank. Need output matched item exactly. Could also PTB encompasses. Since input specifically \"Wall Street Journal portion\" = WSJ. Output WSJ."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 673,
+    "completion_tokens": 112,
+    "total_tokens": 785,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 161
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

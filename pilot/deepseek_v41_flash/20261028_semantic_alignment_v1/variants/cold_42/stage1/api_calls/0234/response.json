@@ -1,0 +1,32 @@
+{
+  "id": "c6000eed-4b84-4b8f-86c2-a999f1191128",
+  "object": "chat.completion",
+  "created": 1793196947,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE RTE",
+        "reasoning_content": "We need answer. Need match RTE to item list. There is 'GLUE RTE' candidate. Input RTE likely semantic match? Need decide. The task name RTE is a GLUE task. Candidate GLUE RTE. Since list contains GLUE RTE. The instruction: If input entity matches one item output matched item exactly. Semantic matching, abbreviations. RTE matches GLUE RTE (specific wording may match existing standard task when both denote same underlying task). Output GLUE RTE. Ensure only selected."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 717,
+    "completion_tokens": 113,
+    "total_tokens": 830,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 108
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 205
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

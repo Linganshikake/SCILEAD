@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1511.08308.pdf",
+  "record": 2,
+  "field": "Metric",
+  "original": "F1 score",
+  "candidate_serialized": "{'Sense-number error δ(#S)', 'Geometric mean (AVG)', 'Fuzzy normalized mutual information (F-NMI)', 'Fuzzy B-Cubed F-score (F-BC)', 'V-measure', 'F-score'}",
+  "candidate_sha256": "bd2b14e9f17c2b4c27d52a14dda639374b49db12e37e67631b396317602b2700",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Sense-number error δ(#S)', 'Geometric mean (AVG)', 'Fuzzy normalized mutual information (F-NMI)', 'Fuzzy B-Cubed F-score (F-BC)', 'V-measure', 'F-score'}\n\nInput: F1 score\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "98963bee0e31e18f47bdfb48182d09f5793dc11b23c90e7f9f3e0adba78e5b54"
+}

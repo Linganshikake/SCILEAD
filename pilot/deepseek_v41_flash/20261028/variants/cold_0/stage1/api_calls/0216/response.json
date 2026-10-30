@@ -1,0 +1,32 @@
+{
+  "id": "9a1bab6a-2795-4e4b-9b9a-dafa78ef014f",
+  "object": "chat.completion",
+  "created": 1793194413,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT 2014 De-En",
+        "reasoning_content": "We need answer only. Need match input to item list if matches. Input \"IWSLT2014 De→En\". Check list has \"IWSLT 2014 De-En\" perhaps semantically? Need exact? Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. \"matches\" could mean normalized? Need determine. There is item 'IWSLT 2014 De-En'. Input 'IWSLT2014 De→En' differs spacing/arrow vs hyphen. Likely intended match? Need output matched item exactly from list. We must infer. Items include 'IWSLT De-En', 'IWSLT 2014 De-En'. Input IWSLT2014 De→En is likely alias for IWSLT 2014 De-En. Need answer matched item. Output exact list item 'IWSLT 2014 De-En'. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 662,
+    "completion_tokens": 204,
+    "total_tokens": 866,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 194
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 406
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

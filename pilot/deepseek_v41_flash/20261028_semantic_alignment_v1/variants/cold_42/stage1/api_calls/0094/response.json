@@ -1,0 +1,32 @@
+{
+  "id": "dd5b23df-8f38-4d86-aee1-3608cd4c2ec8",
+  "object": "chat.completion",
+  "created": 1793196724,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-L",
+        "reasoning_content": "We need answer only selected item or unchanged. Input ROUGE-L. Item list has ROUGE-L Recall, ROUGE-L F1 but not plain ROUGE-L. Ambiguous between recall/F1? Also ROUGE-L metric could be generic, but candidates are specific variants. Match remains ambiguous, output original \"ROUGE-L\". Ensure no explanation. \nNeed final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 87,
+    "total_tokens": 505,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 162
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

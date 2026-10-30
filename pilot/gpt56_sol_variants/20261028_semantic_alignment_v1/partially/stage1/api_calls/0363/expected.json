@@ -1,0 +1,19 @@
+{
+  "paper": "1804.09849.pdf",
+  "record": 2,
+  "field": "Task",
+  "original": "Machine Translation (English-to-German)",
+  "candidate_serialized": "{'Language Modeling', 'Answer-aware question generation (reversed development-test split)', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Multimodal Named Entity Recognition', 'Dialogue Generation', 'Dialog act classification', 'Natural Language Inference (NLI)', 'Answer-aware question generation (original split)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Slot filling', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Joint intent detection and slot filling', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent detection', 'Sentiment Analysis', 'Relation Classification', 'General language understanding'}",
+  "candidate_sha256": "faa961fae1b7e6018d14b6c5c7f5418ae3541dba5f02179bbc88c16d20c8a41a",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Language Modeling', 'Answer-aware question generation (reversed development-test split)', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Multimodal Named Entity Recognition', 'Dialogue Generation', 'Dialog act classification', 'Natural Language Inference (NLI)', 'Answer-aware question generation (original split)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Slot filling', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Joint intent detection and slot filling', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent detection', 'Sentiment Analysis', 'Relation Classification', 'General language understanding'}\n\nInput: Machine Translation (English-to-German)\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "ff35f421b49477d78e560762c68afe7016d1daee7e4a677245066885d0d181a8"
+}

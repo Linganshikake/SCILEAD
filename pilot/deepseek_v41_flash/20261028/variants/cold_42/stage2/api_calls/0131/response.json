@@ -1,0 +1,32 @@
+{
+  "id": "41e11e7c-8978-418b-9ba1-8407dc4361ca",
+  "object": "chat.completion",
+  "created": 1793194727,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, E-commerce, Entity-level F1 score)",
+        "reasoning_content": "We need answer only tuple if not matched. Need inspect item list for exact match input tuple. Input (Named Entity Recognition, E-commerce, Entity-level F1 score). List has NER with Ontonotes, CoNLL, WNUT. No E-commerce. Output unchanged tuple. Need exact format likely (Named Entity Recognition, E-commerce, Entity-level F1 score). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 95,
+    "total_tokens": 648,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

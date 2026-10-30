@@ -1,0 +1,32 @@
+{
+  "id": "ad896191-0f67-4908-aee6-37715043407c",
+  "object": "chat.completion",
+  "created": 1793194387,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent detection",
+        "reasoning_content": "We need answer only matched item if input matches one in list else unchanged. Need determine matching. Input \"Intent detection\". List has 'Joint intent detection and slot filling', 'Slot Filling and Intent Detection'. No exact \"Intent detection\". Do we match one? Instruction: if input entity matches one of items in list, answer matched item. \"matches\" likely exact? It may be semantic? Need output entity without changing if not. There's no exact \"Intent detection\"; maybe 'Slot Filling and Intent Detection' contains intent detection but not same. Need not infer. Answer: Intent detection. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 317,
+    "completion_tokens": 128,
+    "total_tokens": 445,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 125
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 189
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

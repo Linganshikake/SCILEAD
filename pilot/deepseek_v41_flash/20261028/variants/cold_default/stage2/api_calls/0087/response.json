@@ -1,0 +1,32 @@
+{
+  "id": "04d6dd6b-6a38-4645-b0a4-1bccb6e304bb",
+  "object": "chat.completion",
+  "created": 1793194668,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Dialog Act Classification, SwDA, Accuracy)",
+        "reasoning_content": "We need answer matched item or unchanged. Need compare input tuple (Dialog Act Classification, SwDA, Accuracy) to list. There is first: (Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy). Input uses \"Dialog Act Classification\" not \"Dialogue\", and \"SwDA\" not full. It does not match exact. Need output tuple without changing: (Dialog Act Classification, SwDA, Accuracy). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 102,
+    "total_tokens": 651,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 165
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

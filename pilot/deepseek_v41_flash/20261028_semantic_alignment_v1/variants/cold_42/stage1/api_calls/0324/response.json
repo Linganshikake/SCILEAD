@@ -1,0 +1,32 @@
+{
+  "id": "923f1b7d-0b98-44fe-afae-6ea8d2fda14d",
+  "object": "chat.completion",
+  "created": 1793197097,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE QQP",
+        "reasoning_content": "We need answer only selected item or unchanged. Input QQP. List has GLUE QQP. Semantic match? QQP acronym could be Quora Question Pairs, within GLUE. Input QQP ambiguous? Candidate \"GLUE QQP\" is clear semantic match? Need preserve meaningful differences dataset identity. QQP alone usually Quora Question Pairs; GLUE QQP is a task within GLUE using QQP. Since list contains GLUE QQP and no plain QQP. Requirement: If input matches one item, output matched item. Abbreviations/acronyms. QQP vs GLUE QQP: Is QQP an abbreviation of GLUE QQP? Not exactly; GLUE QQP is GLUE's QQP task. If input entity QQP might denote same underlying dataset? There is a GLUE QQP. But \"GLUE QQP\" adds benchmark context. For task names, more specific wording may match existing standard task when both denote same underlying task. Here input less specific, candidate more specific. Need decide. They say preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because names similar. QQP is dataset; GLUE QQP is a task in GLUE using QQP. But in list many GLUE tasks: GLUE MNLI, GLUE QQP, etc. Input QQP probably intended to match GLUE QQP? However if no plain QQP, \"QQP\" is the common name. Candidate \"GLUE QQP\" includes QQP, but is it same entity? The task says \"If input entity matches one of the items in the list, your answer will be matched item in list.\" Semantic matching. We need output GLUE QQP likely. Since QQP in GLUE benchmark, unambiguous? There is no other QQP. It's clear semantic match. Output exact candidate: GLUE QQP. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 402,
+    "total_tokens": 1192,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 397
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

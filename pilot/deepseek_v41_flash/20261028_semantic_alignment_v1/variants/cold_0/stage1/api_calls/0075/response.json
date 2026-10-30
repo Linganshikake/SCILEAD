@@ -1,0 +1,32 @@
+{
+  "id": "347c96cb-8a2b-42fd-ae46-c4e7edb58b2a",
+  "object": "chat.completion",
+  "created": 1793196728,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003",
+        "reasoning_content": "We need answer only matched item or unchanged. Need determine if \"CoNLL 2003 (Eng)\" matches \"CoNLL-2003\". Semantic identity: CoNLL 2003 English? Candidate CoNLL-2003 likely same dataset/task, language Eng. Requirement preserve language? \"Do not guess ambiguous abbreviation or missing experimental condition.\" Here input has Eng. Candidate lacks language but CoNLL-2003 standard is English NER? CoNLL 2003 shared task includes English and German? Actually CoNLL-2003 task: language-independent NER, English and German datasets. Candidate \"CoNLL-2003\" could refer to dataset generally, but \"CoNLL 2003 (Eng)\" is specific English. The list has CoNLL-2003 only. Need decide match? The instruction says preserve meaningful differences in dataset identity, language, version, split, metric; do not merge distinct entities merely because names similar. If input specifies Eng and candidate generic, is that clear semantic match? Candidate CoNLL-2003 often English NER benchmark; maybe accepted. But list item exactly \"CoNLL-2003\", input \"CoNLL 2003 (Eng)\" is likely same entity with language qualifier. However if candidate general and input Eng, language difference may be meaningful. But no candidate \"CoNLL-2003 (Eng)\". The matching allows superficial punctuation and wording; \"Eng\" is an explicit language. Candidate likely denotes CoNLL-2003 English. Need output matched candidate exactly: CoNLL-2003.\n\nCheck if any other candidate? none. Answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 465,
+    "completion_tokens": 346,
+    "total_tokens": 811,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 339
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 209
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

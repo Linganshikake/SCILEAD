@@ -1,0 +1,32 @@
+{
+  "id": "8d1095e9-5526-4692-b825-878a6279405d",
+  "object": "chat.completion",
+  "created": 1793194763,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer match input ROUGE-L with item. List has 'ROGUE-L' misspelled likely intended ROUGE-L. Need only matched item exactly as list? The instruction: match input with one items. Answer only matched item in list. Input ROUGE-L, item is 'ROGUE-L' (with G? Actually ROGUE-L). Is it a typo? Need decide if match. They likely expect ROGUE-L despite typo? We need match input with one item. If none exact? ROUGE-L vs ROGUE-L differ by O/U? Let's inspect: Input \"ROUGE-L\" (R O U G E - L) correct metric. List 'ROGUE-L' (R O G U E - L) typo. There is also 'ROGUE-1', 'ROGUE-2', 'ROGUE-L'. They probably intentionally have typo? The input is ROUGE-L, closest is ROGUE-L. Need output matched item from list, likely 'ROGUE-L'. But if strict, none. These tasks usually expect fuzzy matching to the intended metric; list has typo but they expect 'ROGUE-L'. We output exactly item from list: ROGUE-L. Need no explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 279,
+    "total_tokens": 537,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 274
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

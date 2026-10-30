@@ -1,0 +1,32 @@
+{
+  "id": "57dc363c-6b8b-4f4c-b9e1-7344bb233cd3",
+  "object": "chat.completion",
+  "created": 1793194508,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot filling",
+        "reasoning_content": "We need answer match item list. Input \"Slot Filling\". List has 'Slot filling' lowercase f. Also 'Slot Filling and Intent Detection' etc. Need exact? It says matches one of items, answer matched item. \"Slot Filling\" vs \"Slot filling\" case difference. Likely match item 'Slot filling' ignoring case? Need decide. The list contains 'Slot filling'. Input entity Slot Filling. If exact case-sensitive no match, output entity unchanged. Usually these tasks expect normalized matching? Need infer. They say matches one of items. Could consider \"Slot filling\" is match. Answer should be matched item in list: Slot filling (with lowercase f). We need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 377,
+    "completion_tokens": 147,
+    "total_tokens": 524,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 144
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 377
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "83ca0509-8b15-4c96-ac38-ef66e0e63124",
+  "object": "chat.completion",
+  "created": 1793197387,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT2014 De→En",
+        "reasoning_content": "We need answer only selected item or unchanged. Need semantic match. Input IWSLT De-En. Candidates include IWSLT’14 EN-DE, IWSLT2014 De→En. Need identify if De-En matches IWSLT2014 De→En or IWSLT’14 EN-DE? Input \"IWSLT De-En\" language direction De-En. Candidate \"IWSLT2014 De→En\" clearly matches if version 2014? But input lacks 2014. Candidate \"IWSLT’14 EN-DE\" is reverse direction EN-DE, not De-En. There is no generic IWSLT De-En without year. Could match \"IWSLT2014 De→En\" because it denotes same underlying task likely De-En with IWSLT2014, but missing year experimental condition? The instruction: Do not guess ambiguous abbreviation or missing experimental condition. Preserve meaningful differences in version. Input has no year; candidate has 2014. Is \"IWSLT De-En\" an abbreviation/alias for IWSLT2014 De→En? If list contains only one De-En IWSLT candidate, likely match. Need decide.\n\nList candidates:\n- IWSLT’14 EN-DE (version 2014 EN-DE)\n- IWSLT2014 De→En (version 2014 De-En)\n- IWSLT’15 EN-VI\nInput: IWSLT De-En. It matches De-En direction, only IWSLT2014 De→En. Missing year but maybe common task. However instruction says don't guess missing experimental condition. Could be \"IWSLT De-En\" generally, but candidate specific 2014. If it is a standard task name? \"IWSLT De-En\" may refer to IWSLT2014 De→En in some context. The semantic matching likely expects exact candidate if same. We can output IWSLT2014 De→En. Need no explanation.\n\nCheck if there is \"IWSLT’14 EN-DE\" could also be De-En if reversed? No, EN-DE is English to German; input De-En is German to English. Candidate De→En matches. So final."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 853,
+    "completion_tokens": 495,
+    "total_tokens": 1348,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 486
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 213
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

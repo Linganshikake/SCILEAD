@@ -1,0 +1,32 @@
+{
+  "id": "c83aca9a-bfda-4870-b45e-fe237b2edaf1",
+  "object": "chat.completion",
+  "created": 1793194280,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English→French",
+        "reasoning_content": "We need answer according to instruction. Need determine if input matches item in list. List has \"WMT'14 English→French\" with arrow. Input \"WMT'14 English-French\" hyphen not arrow. Need decide match? If matches one of items. Literal? They likely want normalize? Input entity \"WMT'14 English-French\" compared to list item \"WMT'14 English→French\". It's semantically same but not exact. Instruction: if matches one of items, answer matched item. Else output entity unchanged. Need infer matching maybe exact string. The input differs only hyphen vs arrow. Is that considered match? likely the task from entity linking: if entity matches one item, output item; else unchanged. Need perhaps identify WMT'14 English-French as equivalent to WMT'14 English→French, output matched item exactly. Since arrow indicates translation direction, hyphen is common notation. I should output matched item: WMT'14 English→French. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 212,
+    "total_tokens": 584,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 204
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 244
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

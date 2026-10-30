@@ -1,0 +1,32 @@
+{
+  "id": "db3537d6-52d9-43b3-8c39-dde122e9fa69",
+  "object": "chat.completion",
+  "created": 1793197819,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need match input (Abstractive Summarization, XSum, ROGUE-L) to list. There is (Summarization, XSum, ROGUE-L). Task semantic: Abstractive Summarization vs Summarization same underlying benchmark? Dataset XSum, metric ROGUE-L exact (misspelling ROGUE). Likely match. Return listed tuple verbatim: (Summarization, XSum, ROGUE-L). Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 111,
+    "total_tokens": 882,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 98
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

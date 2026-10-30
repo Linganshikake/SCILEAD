@@ -1,0 +1,32 @@
+{
+  "id": "c5c2be3c-21ba-4cbe-baab-9429eb0a2171",
+  "object": "chat.completion",
+  "created": 1793197392,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, BIGPATENT, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, BIGPATENT, ROUGE-L F1). List has summarization Gigaword, CNN/DailyMail, XSum with ROGUE-L etc. No BIGPATENT. So no match, return input verbatim. Need output tuple exactly. Note ROUGE-L F1 spelling. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 96,
+    "total_tokens": 868,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "c32253da-cea4-4f4f-9e93-e49ea46616b0",
+  "object": "chat.completion",
+  "created": 1793196997,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer match input \"ROUGE-L F1\" to item list. Need only matched item. List has 'ROGUE-L' typo and 'F1' separate. Input is ROUGE-L F1, likely matches ROGUE-L? Need determine. They ask match input with one item. Input \"ROUGE-L F1\" is a metric variant? In list, 'ROGUE-L' is likely typo for ROUGE-L. So matched item = ROGUE-L. Need only item exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 260,
+    "completion_tokens": 118,
+    "total_tokens": 378,
+    "prompt_tokens_details": {
+      "cached_tokens": 126
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 113
+    },
+    "prompt_cache_hit_tokens": 126,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

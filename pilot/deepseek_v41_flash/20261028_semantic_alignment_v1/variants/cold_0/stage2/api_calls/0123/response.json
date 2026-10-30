@@ -1,0 +1,32 @@
+{
+  "id": "ee8a7f45-bf1e-4c36-b0f3-ad7c2143c65f",
+  "object": "chat.completion",
+  "created": 1793197367,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Summarization, XSum, ROUGE-1). List has (Summarization, XSum, ROGUE-1), also ROGUE-2, ROGUE-L. ROUGE-1 vs ROGUE-1: ROGUE is typo? Actually ROUGE metric, list misspells ROGUE. Semantic matching should recognize superficial spelling differences. Same dataset XSum, summarization, metric ROUGE-1. Candidate (Summarization, XSum, ROGUE-1) matches. Return verbatim listed tuple. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 147,
+    "total_tokens": 917,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 133
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

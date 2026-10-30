@@ -1,0 +1,32 @@
+{
+  "id": "f08a0dc8-e261-4d4a-9f0c-9be5a4dc359a",
+  "object": "chat.completion",
+  "created": 1793197412,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Dependency Parsing, Penn Treebank converted to Stanford Dependencies version 3.3.0, UAS)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches list. List has no Dependency Parsing except POS tagging Penn Treebank, etc. Need semantic matching: Task Dependency Parsing, Dataset \"Penn Treebank converted to Stanford Dependencies version 3.3.0\", Metric UAS. Candidate none with same task/dataset/metric. POS tagging on Penn Treebank not same. Return original. Need exact input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 782,
+    "completion_tokens": 109,
+    "total_tokens": 891,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 142
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

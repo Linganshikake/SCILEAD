@@ -1,0 +1,32 @@
+{
+  "id": "d91e88c9-ceb5-4492-a713-f5d5071296c0",
+  "object": "chat.completion",
+  "created": 1793194879,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN/DailyMail, ROUGE-2)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any in list exactly. List has Summarization not Abstractive Summarization, and ROGUE vs ROUGE differences. No exact. Output tuple unchanged. Need preserve as given. Use parentheses."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 69,
+    "total_tokens": 625,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "0d255fa3-470c-4691-b67c-9e65ce46c383",
+  "object": "chat.completion",
+  "created": 1793195164,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN-DailyMail, ROGUE-2)",
+        "reasoning_content": "We need answer only. Need match input to item list exactly? Input tuple (Abstractive Summarization, CNN-DailyMail, ROGUE-2). List has (Summarization, CNN/DailyMail, ROGUE-2) etc. \"If input tuple matches one of items in list, answer matched item. Else output tuple unchanged.\" Does it match? Exact no because Abstractive Summarization vs Summarization, CNN-DailyMail vs CNN/DailyMail, ROGUE-2 vs ROGUE-2. Not exact. Output tuple without changing. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 138,
+    "total_tokens": 694,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

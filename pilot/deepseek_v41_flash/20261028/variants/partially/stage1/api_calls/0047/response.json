@@ -1,0 +1,32 @@
+{
+  "id": "0f20da68-5964-4476-9676-f6090527ae35",
+  "object": "chat.completion",
+  "created": 1793194216,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Extractive question answering",
+        "reasoning_content": "We need answer match item list. Input \"Extractive Question Answering\" case difference. Item list has 'Extractive question answering' lower q/a. Need match likely case-insensitive? \"If input entity matches one of items\" Matched item should be exact listed item. Need output matched item. Since only capitalization differs, probably match. Output 'Extractive question answering'. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 85,
+    "total_tokens": 344,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

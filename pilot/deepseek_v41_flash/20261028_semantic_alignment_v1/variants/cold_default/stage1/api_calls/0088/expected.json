@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "2105.03654.pdf",
+  "record": 7,
+  "field": "Dataset",
+  "original": "E-commerce",
+  "candidate_serialized": "{'QQP', 'MRPC', 'MNLI-mm', 'ATIS', 'BC5CDR', 'ReCoRD', 'Snips', 'ON4C', 'CoNLL00', 'CoNLL-2002 Dutch', 'QNLI', 'STS-B', 'TACRED', 'NCBI-disease', 'CoNLL-2002 Spanish', 'CNN/DailyMail', 'CoNLL++', 'ON5E', 'GLUE', 'RE', 'OntoNotes', 'CoQA', 'CoLA', 'CoNLL-2003 German', 'CoNLL-2003', 'SQuAD 1.1', 'CoNLL03 NER', 'Gigaword', 'SST-2', 'WN16', 'WE', 'WSJ', 'Open Entity', 'WNLI', 'RTE', 'WN17', 'AX', 'SQuAD', 'MNLI-m'}",
+  "candidate_sha256": "b98abeb474d49c9cb9e297309cd92dfa05bbe4c05670111fc177bc68b0be5869",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'QQP', 'MRPC', 'MNLI-mm', 'ATIS', 'BC5CDR', 'ReCoRD', 'Snips', 'ON4C', 'CoNLL00', 'CoNLL-2002 Dutch', 'QNLI', 'STS-B', 'TACRED', 'NCBI-disease', 'CoNLL-2002 Spanish', 'CNN/DailyMail', 'CoNLL++', 'ON5E', 'GLUE', 'RE', 'OntoNotes', 'CoQA', 'CoLA', 'CoNLL-2003 German', 'CoNLL-2003', 'SQuAD 1.1', 'CoNLL03 NER', 'Gigaword', 'SST-2', 'WN16', 'WE', 'WSJ', 'Open Entity', 'WNLI', 'RTE', 'WN17', 'AX', 'SQuAD', 'MNLI-m'}\n\nInput: E-commerce\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "8efc57486c01a529ca3aa40fc2b02878348425dda946020696ba6dd27fedcc7a"
+}

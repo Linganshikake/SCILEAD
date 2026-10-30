@@ -1,0 +1,32 @@
+{
+  "id": "b0000965-afcc-435f-9e8b-32f125c6a1d6",
+  "object": "chat.completion",
+  "created": 1793195112,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot filling, Snips, F1)",
+        "reasoning_content": "We need answer only. Need compare input tuple with list. Input (Slot filling, Snips, F1). List has (Intent Detection and Slot Filling, SNIPS, F1) but not exact. Also (Intent Detection and Slot Filling, SNIPS, Accuracy). \"If input tuple matches one of items in list, answer matched item. Else output tuple without changing.\" Exact match? It says matches. Input has Slot filling, Snips, F1; list item has Intent Detection and Slot Filling, SNIPS, F1. Not equal. Output tuple unchanged: (Slot filling, Snips, F1). Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 144,
+    "total_tokens": 693,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 133
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 165
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

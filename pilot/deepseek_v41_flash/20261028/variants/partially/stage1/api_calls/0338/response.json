@@ -1,0 +1,32 @@
+{
+  "id": "539e89ae-cc91-478b-961e-74c9cf45697e",
+  "object": "chat.completion",
+  "created": 1793194844,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item. Input ROUGE-L. List has 'ROGUE-L' (misspelled ROGUE not ROUGE). Need match? The exact string differs by G/U? Input ROUGE-L, item ROGUE-L. They likely intend same? Need determine matching with item list. It says match input with one of items. If none matches say None. But likely typo in list: ROGUE-L means ROUGE-L. We need output matched item as in list? \"answer ONLY consist of matched item in list\". If considering semantic match, item is 'ROGUE-L'. But exact matching none. In such tasks, likely expect identify listed metric despite typo. Need output 'ROGUE-L'. Let's ensure no other ROUGE? List has ROGUE-1, ROGUE-L, ROGUE-2 (misspelling). Input ROUGE-L matches ROGUE-L if typo tolerant. I'll answer ROGUE-L exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 219,
+    "total_tokens": 477,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 214
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

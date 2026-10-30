@@ -1,0 +1,32 @@
+{
+  "id": "aefc8cc2-0986-4cb7-96b4-69af6ec3b8c8",
+  "object": "chat.completion",
+  "created": 1793196718,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OntoNotes",
+        "reasoning_content": "We need answer only selected or unchanged. Need match input OntoNotes to candidate. List has 'Ontonotes v4 - Chinese'. Input \"OntoNotes\" ambiguous? Candidate includes Ontonotes v4 - Chinese, but input lacks language/version. Need semantic matching: preserve meaningful differences dataset identity, language, version, split. \"OntoNotes\" might refer to general OntoNotes, candidate is specifically Chinese v4. Ambiguous / missing experimental condition. So output unchanged: OntoNotes. Need only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 111,
+    "total_tokens": 843,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 476
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "51d40b9f-c1d3-4d79-abef-c1259108001c",
+  "object": "chat.completion",
+  "created": 1793194419,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Annotated English Gigaword",
+        "reasoning_content": "We need answer matched item if input matches one in list. Input \"Annotated English Gigaword\". Need see list: 'Gigaword' exists, but input not exact. We must if matches one item, output matched item. Else output entity unchanged. Exact? No \"Annotated English Gigaword\" not in list. Maybe semantically matches Gigaword? The instruction says matches one of items. Usually exact match. Output entity without changing. Need answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 107,
+    "total_tokens": 864,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 501
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

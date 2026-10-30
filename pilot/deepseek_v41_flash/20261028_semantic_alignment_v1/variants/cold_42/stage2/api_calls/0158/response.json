@@ -1,0 +1,32 @@
+{
+  "id": "77ca8615-0ed3-4692-92da-4ad8ff2a2b43",
+  "object": "chat.completion",
+  "created": 1793197450,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, IWSLT 2015 English-Vietnamese translation dataset (tst2013), BLEU)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any candidate semantically. Input MT dataset IWSLT 2015 English-Vietnamese tst2013, BLEU. Candidates include MT WMT14 EN-DE, IWSLT14 EN-DE, WMT14 EN-FR. No English-Vietnamese, IWSLT 2015. No match. Return original verbatim."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 114,
+    "total_tokens": 898,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 144
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

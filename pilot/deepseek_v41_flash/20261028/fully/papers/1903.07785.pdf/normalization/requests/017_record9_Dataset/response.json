@@ -1,0 +1,32 @@
+{
+  "id": "f8765e58-0e4d-4362-bd01-9247e979cee0",
+  "object": "chat.completion",
+  "created": 1793192793,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 - English",
+        "reasoning_content": "We need answer only matched item. Input CoNLL-2003. List has CoNLL-2003 - English and CoNLL-2003 - German. Ambiguous. Need match? If exact item not present. Could be one of them but input lacks language. We must decide. They likely expect \"CoNLL-2003 - English\" as canonical default? Need see if item list includes both. Input \"CoNLL-2003\" could match neither exactly. The instruction: match input with one of items. If none matches say None. But likely dataset has CoNLL-2003 English, and shorthand. Need infer. Input is base; items have suffixes. In such tasks, expected to identify most similar? Since only output matched item, maybe choose \"CoNLL-2003 - English\" because CoNLL-2003 commonly NER English, and list also German. But ambiguity. However if exact matching required, None. Let's analyze typical benchmark list of datasets/tasks. Input \"CoNLL-2003\" from some mapping? There are entries \"CoNLL-2003 - English\" and \"CoNLL-2003 - German\". The input with no language likely refers to English benchmark (CoNLL-2003 NER English). I'd output \"CoNLL-2003 - English\". Need only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 293,
+    "total_tokens": 850,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 284
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

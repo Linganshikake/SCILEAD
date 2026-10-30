@@ -1,0 +1,32 @@
+{
+  "id": "4a1581e2-2245-4c92-b81f-48b14438607f",
+  "object": "chat.completion",
+  "created": 1793196867,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Abstractive Summarization",
+        "reasoning_content": "We need answer only matched item or unchanged. Need determine if \"Abstractive sentence summarization\" matches \"Abstractive Summarization\". Semantic match: abstractive sentence summarization is a type/subtask? Need preserve meaningful differences dataset identity, language, version, split metric. Task names more specific wording may match existing standard task when same underlying task. Abstractive sentence summarization vs Abstractive Summarization. Is sentence summarization narrower (sentence-level) than general abstractive summarization. Could be same underlying task? The instruction: \"Abstractive sentence summarization\" commonly a task, could match \"Abstractive Summarization\". But preserve meaningful differences. Is \"sentence\" a meaningful distinction? Abstractive summarization includes document summarization. Abstractive sentence summarization is more specific. The list has only Abstractive Summarization. Standard task when more specific wording may match existing standard task if both denote same underlying task. Do they denote same underlying task? Abstractive sentence summarization is a variant/benchmark (e.g., Gigaword) often called abstractive sentence summarization, a form of abstractive summarization. The candidate \"Abstractive Summarization\" is broader. The rules say do not merge distinct entities merely because names similar; preserve meaningful differences in dataset identity etc. Here no dataset. If one candidate clear semantic match output candidate. Is it clear? Ambiguous whether broader task match. Need decide. The input entity likely should map to Abstractive Summarization because it's the only summarization and abstractive. However \"sentence\" could be a meaningful condition? The requirement: \"Do not guess an ambiguous abbreviation or missing experimental condition.\" Missing \"sentence\" in candidate? Input has extra specificity. A more specific wording may match existing standard task when both denote same underlying task. I think they intend match to Abstractive Summarization. Output exactly as list: Abstractive Summarization. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 422,
+    "completion_tokens": 392,
+    "total_tokens": 814,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 387
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "ef253b55-d37b-4ad1-9bdc-cfb98ace4fd3",
+  "object": "chat.completion",
+  "created": 1793197301,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent detection, Movie, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (Intent detection, Movie, Accuracy). Candidates intent detection include ATIS and SNIPS with Accuracy/F1. Dataset Movie not matching. No candidate. Return original tuple verbatim. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 64,
+    "total_tokens": 829,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 253
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

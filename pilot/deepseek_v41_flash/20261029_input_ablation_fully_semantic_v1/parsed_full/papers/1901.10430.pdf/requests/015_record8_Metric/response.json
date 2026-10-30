@@ -1,0 +1,32 @@
+{
+  "id": "93dfcdce-38a1-4878-b4b7-227b136ea169",
+  "object": "chat.completion",
+  "created": 1793286199,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item. Input ROUGE-L vs list has ROGUE-L (misspelled ROGUE). Semantic matching superficial spelling differences, likely match to ROGUE-L exactly as candidate. Need output candidate exactly as written: ROGUE-L. Ensure not ROGUE-1 etc. yes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 450,
+    "completion_tokens": 72,
+    "total_tokens": 522,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 194
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

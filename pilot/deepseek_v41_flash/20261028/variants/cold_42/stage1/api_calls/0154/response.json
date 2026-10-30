@@ -1,0 +1,32 @@
+{
+  "id": "0c66eb34-b9fd-43ce-831c-a00c068c87da",
+  "object": "chat.completion",
+  "created": 1793194338,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Chunking",
+        "reasoning_content": "We need answer. Need match input to list if matches. \"Text Chunking\" not exactly \"Chunking\". Instruction: If input entity matches one of items, output matched item. Else output entity unchanged. Does \"Text Chunking\" match \"Chunking\"? likely semantically? Need determine matching exact? It says matches one of items. Could be \"Text Chunking\" corresponds to \"Chunking\"? We should output matched item \"Chunking\" if considered match. Need no explanation. Since \"Text Chunking\" is synonymous with chunking. However list has \"Chunking\". The expected likely map to \"Chunking\". Output exactly Chunking. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 289,
+    "completion_tokens": 150,
+    "total_tokens": 439,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 146
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 289
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

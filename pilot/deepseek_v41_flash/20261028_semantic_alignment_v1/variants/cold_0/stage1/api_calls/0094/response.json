@@ -1,0 +1,32 @@
+{
+  "id": "3dd5979a-446c-4e37-a1f7-82a6f81c9989",
+  "object": "chat.completion",
+  "created": 1793196763,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "NER German",
+        "reasoning_content": "We need answer. Need determine if \"NER German\" matches item. Item has Named Entity Recognition. Input includes NER German: NER acronym for Named Entity Recognition, German language. Candidate \"Named Entity Recognition\" but input adds German. Requirements preserve language? It says preserve meaningful differences in dataset identity, language, version, split and metric. Do not guess ambiguous missing experimental condition. The item list has generic NER, not German-specific. Is \"NER German\" semantically match Named Entity Recognition? It denotes NER task in German language. A more specific wording may match existing standard task when same underlying task, but preserve language differences. Since candidate generic and input has language condition. Could be considered same task? Need decide. The instruction: \"If input entity matches one of items\" match by meaning and entity identity. \"Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar.\" So NER German is a language-specific variant, candidate Named Entity Recognition generic. Is generic a match? If list has generic Named Entity Recognition, \"NER German\" could match because it is NER. But preserving language differences might mean don't match to generic? Hmm.\n\nThis benchmark likely expects output mapped if synonym/abbrev. Input \"NER German\" probably should match \"Named Entity Recognition\" because NER is acronym, German is qualifier. But strict instructions say preserve language. However item list lacks \"German NER\"; outputing original may be correct if no exact candidate. Need infer intended from tasks. They ask semantic matching, candidate list contains standard tasks. Input \"NER German\" likely from a benchmark dataset task named e.g. \"NER German\" (maybe part of XTREME?). If candidate \"Named Entity Recognition\", can we match? The generic task includes German. They say \"For task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar.\" This explicitly says language differences meaningful. So \"NER German\" differs by language from generic \"Named Entity Recognition\". Does that mean no match? But if standard task candidate is \"Named Entity Recognition\", its identity may not specify language. \"NER German\" is a specific instance of NER in German. Are they distinct entities? The candidate is task type, input is task-language. The instruction says if one candidate is a clear semantic match. Is it clear? Since \"NER German\" is clearly NER but language-specific. Could output candidate \"Named Entity Recognition\" because generic task encompasses it? Yet preserve language says don't merge. If we output candidate, we lose German. If output unchanged, we preserve. The expected might be \"Named Entity Recognition\" because item list has only generic and they want match acronym. Need weigh.\n\nLet's parse examples not given. \"Semantic matching requirements: Match by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases...\" NER is acronym. \"For task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\"\n\nInput \"NER German\" is not ambiguous abbreviation: NER = Named Entity Recognition. It includes German. Does the candidate \"Named Entity Recognition\" denote same underlying task? Underlying task yes, but not same language condition. \"Preserve meaningful differences in language\" suggests don't match to generic if language is meaningful. If list had \"German Named Entity Recognition\" exact would match. Since it doesn't, output original entity. The phrase \"Do not guess ... missing experimental condition\" means if input has condition candidate lacks, don't assume. So likely output \"NER German\".\n\nBut wait, if item list candidate \"Named Entity Recognition\" could be considered a standard task regardless of language, and \"NER German\" is just a language-specific dataset for that task. In task identification, perhaps they want match to task type, not dataset. However instructions explicitly preserve language identity. This is likely designed to prevent merging \"German NER\" with generic NER. So answer unchanged.\n\nNeed output only selected item or unchanged input, no quotes. Thus \"NER German\". Ensure no formatting."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 925,
+    "total_tokens": 1296,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 922
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 243
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

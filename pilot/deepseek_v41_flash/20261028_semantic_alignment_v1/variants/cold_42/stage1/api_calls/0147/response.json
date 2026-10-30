@@ -1,0 +1,32 @@
+{
+  "id": "cb9d8375-efb0-4dc3-a355-88063db9bbf4",
+  "object": "chat.completion",
+  "created": 1793196809,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Google Billion Word (test)",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine if \"Google Billion Word (test)\" matches candidate \"Google Billion Word (valid)\"? Semantic identity includes split. List has only valid. Input test split distinct? Requirement preserve split; do not merge distinct entities. No candidate for test. Output original unchanged. Need exact: Google Billion Word (test)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 570,
+    "completion_tokens": 79,
+    "total_tokens": 649,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 314
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

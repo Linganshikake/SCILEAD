@@ -1,0 +1,32 @@
+{
+  "id": "e1519734-ad24-46a4-9e89-e817e74ec9f0",
+  "object": "chat.completion",
+  "created": 1793194650,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot filling, Food, F1-score)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list exactly? List tuples with task, dataset, metric. Input (Slot filling, Food, F1-score). It doesn't match any item exactly. Need output tuple unchanged. Only answer. Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 66,
+    "total_tokens": 615,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 165
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

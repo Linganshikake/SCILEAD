@@ -1,0 +1,32 @@
+{
+  "id": "025785e7-0257-413f-a6f6-dcacfdc3297a",
+  "object": "chat.completion",
+  "created": 1793194681,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive sentence summarization, Annotated English Gigaword, ROUGE-1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly. Input: (Abstractive sentence summarization, Annotated English Gigaword, ROUGE-1). List has summarization Gigaword ROGUE variants (misspelled ROGUE). None exact: task differs, dataset differs, metric spelling ROUGE vs ROGUE. Output tuple unchanged. Ensure exact formatting. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 560,
+    "completion_tokens": 107,
+    "total_tokens": 667,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 176
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

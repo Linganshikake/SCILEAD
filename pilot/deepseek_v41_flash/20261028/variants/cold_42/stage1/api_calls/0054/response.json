@@ -1,0 +1,32 @@
+{
+  "id": "caee26e6-4a58-4c06-b2f3-8211f0cce2df",
+  "object": "chat.completion",
+  "created": 1793194206,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003",
+        "reasoning_content": "We need answer matched item if input matches one of items. Input CoNLL-2003. List has 'CoNLL-2003 English'. Does \"matches\" mean exact? It says matches one of items. Input CoNLL-2003 not exact to CoNLL-2003 English. Else output entity without changing. So output CoNLL-2003. Need no explanation. Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 181,
+    "completion_tokens": 92,
+    "total_tokens": 273,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 181
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

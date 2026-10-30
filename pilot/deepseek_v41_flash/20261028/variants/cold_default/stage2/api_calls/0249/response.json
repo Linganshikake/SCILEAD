@@ -1,0 +1,32 @@
+{
+  "id": "da2b268c-16c4-48aa-976e-46f4ab79044c",
+  "object": "chat.completion",
+  "created": 1793194880,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN/DailyMail, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need match input tuple to item list. Input (Abstractive Summarization, CNN/DailyMail, ROUGE-L). List has (Summarization, CNN/DailyMail, ROGUE-L) with typo ROGUE-L. Does it \"matches\" one? Input task differs Abstractive Summarization vs Summarization, metric ROUGE vs ROGUE. Probably not exact match, output input unchanged. Need only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 111,
+    "total_tokens": 666,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

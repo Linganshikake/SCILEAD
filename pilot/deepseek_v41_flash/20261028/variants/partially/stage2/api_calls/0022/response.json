@@ -1,0 +1,32 @@
+{
+  "id": "7d9adab2-1cf9-4cfb-aae0-7950eb262af4",
+  "object": "chat.completion",
+  "created": 1793194907,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN/DailyMail, ROGUE-1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches list. List has Summarization not Abstractive Summarization. Input (Abstractive Summarization, CNN/DailyMail, ROGUE-1). There is (Summarization, CNN/DailyMail, ROGUE-1) but not exact. Output tuple unchanged. Need exact formatting likely (Abstractive Summarization, CNN/DailyMail, ROGUE-1). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 108,
+    "total_tokens": 664,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

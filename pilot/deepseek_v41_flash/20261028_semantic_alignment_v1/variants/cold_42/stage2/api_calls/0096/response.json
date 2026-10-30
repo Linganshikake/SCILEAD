@@ -1,0 +1,32 @@
+{
+  "id": "bbc130b6-94a1-4620-aea4-a4d1bf2aee37",
+  "object": "chat.completion",
+  "created": 1793197351,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, AESLC, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input Summarization, AESLC, ROUGE-L F1. List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE variants. AESLC is different dataset (email summarization) not listed. No match. Return original tuple verbatim. Need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 87,
+    "total_tokens": 858,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

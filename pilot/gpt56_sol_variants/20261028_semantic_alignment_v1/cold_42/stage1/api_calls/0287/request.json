@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.6-sol",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ATIS', 'QQP', 'DyDA', 'MRPC', 'WikiHow', 'BC5CDR', 'ReCoRD', 'MapTask', 'SemEval 2013 Task 13', 'NEWSROOM', 'Snips', 'Penn Treebank converted to Stanford Dependencies v3.3.0', 'WMT14 En→De', 'SQuAD 2.0', 'QNLI', 'MNLI mismatched', 'STS-B', 'TACRED', 'ELI5', 'WNUT-17', 'IWSLT 2015 (tst2013 test set)', 'CNN/DailyMail', 'CoNLL++', 'WMT14 En→Fr', 'BIGPATENT', 'WikiText-2 (WT2)', 'Google Billion Word', 'Reddit TIFU', 'NYT50', 'SQuAD 1.1 test set (Zhao et al. reversed split)', 'CoNLL-2000', 'AESLC', 'OntoNotes', 'CBS SciTech News', 'BillSum', 'CoLA', 'WNUT-16', 'CCGBank', 'CoNLL 2002 Dutch NER', 'WMT16 Romanian-English (RO-EN)', 'CoNLL-2003', 'SQuAD 1.1', 'CoNLL-2003 German', 'Gigaword', 'Multi-News', 'SWDA', 'SST-2', 'WMT 2016 English-German (newstest2014)', 'arXiv', 'PubMed', 'WikiText-103 (WT103)', 'E-commerce', 'Penn Treebank (PTB)', 'NCBI Disease', 'WMT 2017 Chinese-English (newstest2017)', 'WSJ', 'IWSLT2014 De-En', 'Open Entity', 'MRDA', 'RTE', 'SQuAD 1.1 test set (Du et al. split)', 'CoNLL 2002 Spanish NER', 'XSum', 'ConvAI2', 'MNLI matched'}\n\nInput: Switchboard Dialogue Act Corpus (SwDA)\n\nAnswer: "
+    }
+  ],
+  "reasoning_effort": "medium",
+  "max_completion_tokens": 32768,
+  "stream": false
+}

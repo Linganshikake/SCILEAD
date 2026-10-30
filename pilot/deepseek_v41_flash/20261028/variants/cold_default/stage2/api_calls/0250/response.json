@@ -1,0 +1,32 @@
+{
+  "id": "7b464510-90f2-4d54-9d78-ed0f43c431cc",
+  "object": "chat.completion",
+  "created": 1793194881,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROUGE-1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list exactly? List has Summarization, Gigaword, ROGUE-1 (misspelled ROGUE). Input (Abstractive Summarization, Gigaword, ROUGE-1) does not match because task differs and metric spelling. Output tuple unchanged. Need only tuple. Ensure exact input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 93,
+    "total_tokens": 648,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

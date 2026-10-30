@@ -1,0 +1,32 @@
+{
+  "id": "838818eb-56b1-4bb9-bbe9-9e5cbdd2c91a",
+  "object": "chat.completion",
+  "created": 1793194455,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot Filling",
+        "reasoning_content": "We need answer matched item. List contains 'Slot Filling' capitalized. Input \"Slot filling\" differs case? Need if matches one item. Probably case-sensitive? \"matches one of items\" maybe exact? It says if input entity matches one of items, answer matched item. \"Slot filling\" vs \"Slot Filling\". There is also 'Slot Filling and Intent Detection'. Need determine matching. Likely case-insensitive semantic match to 'Slot Filling'. Output matched item. So \"Slot Filling\". No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 334,
+    "completion_tokens": 111,
+    "total_tokens": 445,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

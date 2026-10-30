@@ -1,0 +1,32 @@
+{
+  "id": "deea0b45-d694-4023-add2-76e11c331a74",
+  "object": "chat.completion",
+  "created": 1793196942,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "QA accuracy",
+        "reasoning_content": "We need answer. Need determine if \"QA accuracy\" matches any candidate. List includes Accuracy, Accuracy (mismatched), Matched accuracy, Intent accuracy, Sentence accuracy, Entity-level F1 score etc. \"QA accuracy\" is more specific maybe maps to Accuracy? Need semantic matching preserving differences. Is QA accuracy same as Accuracy? Ambiguous. Candidate \"Accuracy\" generic; \"QA accuracy\" likely task metric for question answering accuracy. Could match \"Accuracy\" if standard task metric? But instruction says more specific wording may match existing standard task when denote same underlying task. Preserve meaningful differences in dataset identity, language, version, split, metric definition; do not guess ambiguous. \"QA accuracy\" has QA qualifier. Candidate has \"Accuracy\" but also \"Matched accuracy\", \"Sentence accuracy\". Is \"QA accuracy\" clear semantic match to \"Accuracy\"? Not necessarily, could be exact metric \"accuracy\" for QA benchmark. Since list has Accuracy, perhaps input entity \"QA accuracy\" matches \"Accuracy\" by meaning? Need output selected item or unchanged. Let's parse.\n\nWe are given list of items including metrics. Input \"QA accuracy\". Need if matches one item. The item \"Accuracy\" is general. \"QA accuracy\" may denote accuracy for QA. Is that same as \"Accuracy\"? It includes domain QA not present. The matching requirement: \"Recognize unambiguous abbreviations, acronyms, aliases, paraphrases,...\" \"For task names, a more specific wording may match an existing standard task when both denote same underlying task.\" Here not task name but metric. \"QA accuracy\" is a metric. Candidate \"Accuracy\" is broad. Is it unambiguous? There are multiple accuracy-like metrics: Matched accuracy, Sentence accuracy, Accuracy (mismatched). \"QA accuracy\" could map to \"Accuracy\" (standard QA accuracy). But \"Accuracy\" alone in list probably is metric. I'd lean output \"Accuracy\" if it's clear that QA accuracy = accuracy. But need be careful: maybe \"QA accuracy\" is not in list, so unchanged.\n\nThe problem statement: \"If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it.\" The semantic matching instructions are strict: compare input against candidates; if clear semantic match output exactly. \"QA accuracy\" vs \"Accuracy\": Does adding QA change identity? Could be a different metric named \"QA accuracy\" (accuracy on QA task) but \"Accuracy\" in list may be generic metric. In many evaluation tables, \"QA accuracy\" and \"Accuracy\" might refer to same. However instruction says preserve meaningful differences in dataset identity, language, version, split and metric definition. \"QA accuracy\" includes task context (QA) not in candidate, but candidate generic \"Accuracy\" might not be same if list includes other accuracy metrics. Is it ambiguous? There is \"Matched accuracy\", \"Accuracy (mismatched)\", \"Sentence accuracy\", \"Intent accuracy\". \"QA accuracy\" likely a specific task metric, not generic Accuracy. Since no exact \"QA accuracy\" candidate, and mapping to \"Accuracy\" could erase QA task identity. Should output unchanged.\n\nNeed final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 433,
+    "completion_tokens": 657,
+    "total_tokens": 1090,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 654
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 177
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

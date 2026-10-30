@@ -1,0 +1,1588 @@
+[
+  {
+    "branch": "partially",
+    "stage": "stage1",
+    "categories": {
+      "exact_or_result": 808,
+      "existing_candidate": 464,
+      "original_name_added": 63,
+      "null": 5
+    },
+    "examples": [
+      {
+        "paper": "1905.03197.pdf",
+        "record": 23,
+        "field": "Metric",
+        "original": "Entropy-4",
+        "raw_answer": "None",
+        "normalized": null,
+        "branch": "null"
+      },
+      {
+        "paper": "1905.03197.pdf",
+        "record": 24,
+        "field": "Metric",
+        "original": "Div-1",
+        "raw_answer": "None",
+        "normalized": null,
+        "branch": "null"
+      },
+      {
+        "paper": "1905.03197.pdf",
+        "record": 25,
+        "field": "Metric",
+        "original": "Div-2",
+        "raw_answer": "None",
+        "normalized": null,
+        "branch": "null"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 4,
+        "field": "Metric",
+        "original": "Sense-number error δ(#S)",
+        "raw_answer": "None",
+        "normalized": null,
+        "branch": "null"
+      },
+      {
+        "paper": "1911.10390.pdf",
+        "record": 9,
+        "field": "Metric",
+        "original": "Human informativeness",
+        "raw_answer": "None",
+        "normalized": null,
+        "branch": "null"
+      }
+    ],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  },
+  {
+    "branch": "partially",
+    "stage": "stage2",
+    "categories": {
+      "null_skipped": 5,
+      "exact_tuple": 44,
+      "tuple_mapped": 25,
+      "unmatched_preserved": 261
+    },
+    "examples": [
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "ON5E",
+          "Metric": "F1",
+          "Result": "90.32"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "Ontonotes v5 - English",
+          "Metric": "F1",
+          "Result": "90.32"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WN16",
+          "Metric": "F1",
+          "Result": "55.14"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), WN16, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WN16",
+          "Metric": "F1",
+          "Result": "55.14"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WN17",
+          "Metric": "F1",
+          "Result": "50.68"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), WN17, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WN17",
+          "Metric": "F1",
+          "Result": "50.68"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "ON4C",
+          "Metric": "F1",
+          "Result": "81.18"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), ON4C, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "ON4C",
+          "Metric": "F1",
+          "Result": "81.18"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "RE",
+          "Metric": "F1",
+          "Result": "96.62"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), RE, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "RE",
+          "Metric": "F1",
+          "Result": "96.62"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 6,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WE",
+          "Metric": "F1",
+          "Result": "69.78"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), WE, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WE",
+          "Metric": "F1",
+          "Result": "69.78"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1709.04109.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1",
+          "Result": "91.85"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2003 NER, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1",
+          "Result": "91.85"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1709.04109.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Part-of-Speech (POS) Tagging",
+          "Dataset": "WSJ",
+          "Metric": "Accuracy",
+          "Result": "97.53±0.03"
+        },
+        "raw_answer": "(Part-of-Speech (POS) Tagging, WSJ, Accuracy)",
+        "normalized": {
+          "Task": "Part-of-Speech (POS) Tagging",
+          "Dataset": "WSJ",
+          "Metric": "Accuracy",
+          "Result": "97.53±0.03"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002 - Spanish",
+          "Metric": "F1",
+          "Result": "86.68±0.35"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2002 - Spanish, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002 - Spanish",
+          "Metric": "F1",
+          "Result": "86.68±0.35"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002- Dutch",
+          "Metric": "F1",
+          "Result": "87.81±0.24"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2002- Dutch, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002- Dutch",
+          "Metric": "F1",
+          "Result": "87.81±0.24"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1",
+          "Result": "91.64±0.17"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2003 NER, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1",
+          "Result": "91.64±0.17"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 - German",
+          "Metric": "F1",
+          "Result": "79.43±0.33"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2003 - German, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 - German",
+          "Metric": "F1",
+          "Result": "79.43±0.33"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 6,
+        "original": {
+          "Task": "Part-of-Speech (POS) Tagging",
+          "Dataset": "Penn Treebank (PTB)",
+          "Metric": "F1",
+          "Result": "97.58±0.02"
+        },
+        "raw_answer": "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), F1)",
+        "normalized": {
+          "Task": "Part-of-Speech (POS) Tagging",
+          "Dataset": "Penn Treebank (PTB)",
+          "Metric": "F1",
+          "Result": "97.58±0.02"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "Precision",
+          "Result": "79.9"
+        },
+        "raw_answer": "(Entity Typing, Open Entity, Precision)",
+        "normalized": {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "Precision",
+          "Result": "79.9"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "Recall",
+          "Result": "76.6"
+        },
+        "raw_answer": "(Entity Typing, Open Entity, Recall)",
+        "normalized": {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "Recall",
+          "Result": "76.6"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "F1",
+          "Result": "78.2"
+        },
+        "raw_answer": "(Entity Typing, Open Entity, F1)",
+        "normalized": {
+          "Task": "Entity Typing",
+          "Dataset": "Open Entity",
+          "Metric": "F1",
+          "Result": "78.2"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "Precision",
+          "Result": "70.4"
+        },
+        "raw_answer": "(Relation Classification, TACRED, Precision)",
+        "normalized": {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "Precision",
+          "Result": "70.4"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "Recall",
+          "Result": "75.1"
+        },
+        "raw_answer": "(Relation Classification, TACRED, Recall)",
+        "normalized": {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "Recall",
+          "Result": "75.1"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 6,
+        "original": {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "F1",
+          "Result": "72.7"
+        },
+        "raw_answer": "(Relation Classification, TACRED, F1)",
+        "normalized": {
+          "Task": "Relation Classification",
+          "Dataset": "TACRED",
+          "Metric": "F1",
+          "Result": "72.7"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 7,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F1",
+          "Result": "94.3"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2003, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F1",
+          "Result": "94.3"
+        },
+        "branch": "unmatched_preserved"
+      }
+    ],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  },
+  {
+    "branch": "cold_default",
+    "stage": "stage1",
+    "categories": {
+      "exact_or_result": 962,
+      "existing_candidate": 155,
+      "original_name_added": 223,
+      "null": 0
+    },
+    "examples": [],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  },
+  {
+    "branch": "cold_default",
+    "stage": "stage2",
+    "categories": {
+      "null_skipped": 0,
+      "exact_tuple": 1,
+      "tuple_mapped": 76,
+      "unmatched_preserved": 258
+    },
+    "examples": [
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "ON5E",
+          "Metric": "F1 score",
+          "Result": "90.32"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "Ontonotes v5 - English",
+          "Metric": "F1",
+          "Result": "90.32"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WN16",
+          "Metric": "F1 score",
+          "Result": "55.14"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WNUT-16 - English",
+          "Metric": "F1",
+          "Result": "55.14"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WN17",
+          "Metric": "F1 score",
+          "Result": "50.68"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WNUT-17 - English",
+          "Metric": "F1",
+          "Result": "50.68"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "ON4C",
+          "Metric": "F1 score",
+          "Result": "81.18"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), ON4C, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "ON4C",
+          "Metric": "F1 score",
+          "Result": "81.18"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "RE",
+          "Metric": "F1 score",
+          "Result": "96.62"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), RE, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "RE",
+          "Metric": "F1 score",
+          "Result": "96.62"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 6,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WE",
+          "Metric": "F1 score",
+          "Result": "69.78"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), WE, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "WE",
+          "Metric": "F1 score",
+          "Result": "69.78"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1709.04109.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1 score",
+          "Result": "91.85"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2003 NER, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1 score",
+          "Result": "91.85"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1709.04109.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Part-of-Speech Tagging",
+          "Dataset": "WSJ",
+          "Metric": "Accuracy",
+          "Result": "97.53±0.03"
+        },
+        "raw_answer": "(Part-of-Speech Tagging, WSJ, Accuracy)",
+        "normalized": {
+          "Task": "Part-of-Speech Tagging",
+          "Dataset": "WSJ",
+          "Metric": "Accuracy",
+          "Result": "97.53±0.03"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1709.04109.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Noun Phrase Chunking",
+          "Dataset": "CoNLL-2000 Chunking",
+          "Metric": "F1 score",
+          "Result": "96.13"
+        },
+        "raw_answer": "(Noun Phrase Chunking, CoNLL-2000 Chunking, F1 score)",
+        "normalized": {
+          "Task": "Noun Phrase Chunking",
+          "Dataset": "CoNLL-2000 Chunking",
+          "Metric": "F1 score",
+          "Result": "96.13"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002 Spanish",
+          "Metric": "F1 score",
+          "Result": "86.68±0.35"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2002 Spanish, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002 Spanish",
+          "Metric": "F1 score",
+          "Result": "86.68±0.35"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002 Dutch",
+          "Metric": "F1 score",
+          "Result": "87.81±0.24"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2002 Dutch, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2002 Dutch",
+          "Metric": "F1 score",
+          "Result": "87.81±0.24"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1 score",
+          "Result": "91.64±0.17"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2003 NER, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 NER",
+          "Metric": "F1 score",
+          "Result": "91.64±0.17"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 German",
+          "Metric": "F1 score",
+          "Result": "79.43±0.33"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), CoNLL-2003 German, F1 score)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "CoNLL-2003 German",
+          "Metric": "F1 score",
+          "Result": "79.43±0.33"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Noun Phrase Chunking",
+          "Dataset": "CoNLL-2000 Chunking",
+          "Metric": "F1 score",
+          "Result": "95.29±0.08"
+        },
+        "raw_answer": "(Noun Phrase Chunking, CoNLL-2000 Chunking, F1 score)",
+        "normalized": {
+          "Task": "Noun Phrase Chunking",
+          "Dataset": "CoNLL-2000 Chunking",
+          "Metric": "F1 score",
+          "Result": "95.29±0.08"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "D18-1279.pdf",
+        "record": 6,
+        "original": {
+          "Task": "Part-of-Speech Tagging",
+          "Dataset": "WSJ",
+          "Metric": "F1 score",
+          "Result": "97.58±0.02"
+        },
+        "raw_answer": "(Part-of-Speech Tagging, WSJ, F1 score)",
+        "normalized": {
+          "Task": "Part-of-Speech Tagging",
+          "Dataset": "WSJ",
+          "Metric": "F1 score",
+          "Result": "97.58±0.02"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "Test Precision",
+          "Result": "79.9"
+        },
+        "raw_answer": "(Entity typing, Open Entity, Test Precision)",
+        "normalized": {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "Test Precision",
+          "Result": "79.9"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "Test Recall",
+          "Result": "76.6"
+        },
+        "raw_answer": "(Entity typing, Open Entity, Test Recall)",
+        "normalized": {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "Test Recall",
+          "Result": "76.6"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "Test F1",
+          "Result": "78.2"
+        },
+        "raw_answer": "(Entity typing, Open Entity, Test F1)",
+        "normalized": {
+          "Task": "Entity typing",
+          "Dataset": "Open Entity",
+          "Metric": "Test F1",
+          "Result": "78.2"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Relation classification",
+          "Dataset": "TACRED",
+          "Metric": "Test Precision",
+          "Result": "70.4"
+        },
+        "raw_answer": "(Relation classification, TACRED, Test Precision)",
+        "normalized": {
+          "Task": "Relation classification",
+          "Dataset": "TACRED",
+          "Metric": "Test Precision",
+          "Result": "70.4"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "2020.emnlp-main.523.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Relation classification",
+          "Dataset": "TACRED",
+          "Metric": "Test Recall",
+          "Result": "75.1"
+        },
+        "raw_answer": "(Relation classification, TACRED, Test Recall)",
+        "normalized": {
+          "Task": "Relation classification",
+          "Dataset": "TACRED",
+          "Metric": "Test Recall",
+          "Result": "75.1"
+        },
+        "branch": "unmatched_preserved"
+      }
+    ],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  },
+  {
+    "branch": "cold_0",
+    "stage": "stage1",
+    "categories": {
+      "exact_or_result": 934,
+      "existing_candidate": 198,
+      "original_name_added": 208,
+      "null": 0
+    },
+    "examples": [],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  },
+  {
+    "branch": "cold_0",
+    "stage": "stage2",
+    "categories": {
+      "null_skipped": 0,
+      "exact_tuple": 0,
+      "tuple_mapped": 75,
+      "unmatched_preserved": 260
+    },
+    "examples": [
+      {
+        "paper": "1811.09242.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "F-score",
+          "Result": "62.9"
+        },
+        "raw_answer": "(Word sense induction, SemEval 2010 Task 14, F-score)",
+        "normalized": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "F-score",
+          "Result": "62.9"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "V-measure",
+          "Result": "10.1"
+        },
+        "raw_answer": "(Word sense induction, SemEval 2010 Task 14, V-measure)",
+        "normalized": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "V-measure",
+          "Result": "10.1"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "Geometric mean (AVG)",
+          "Result": "25.20"
+        },
+        "raw_answer": "(Word sense induction, SemEval 2010 Task 14, Geometric mean (AVG))",
+        "normalized": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "Geometric mean (AVG)",
+          "Result": "25.20"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "Sense-number error δ(#S)",
+          "Result": "0.32"
+        },
+        "raw_answer": "(Word sense induction, SemEval 2010 Task 14, Sense-number error δ(#S))",
+        "normalized": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "Sense-number error δ(#S)",
+          "Result": "0.32"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2013 Task 13",
+          "Metric": "F-score",
+          "Result": "62.2"
+        },
+        "raw_answer": "(Word sense induction, SemEval 2013 Task 13, F-score)",
+        "normalized": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2013 Task 13",
+          "Metric": "F-score",
+          "Result": "62.2"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 6,
+        "original": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2013 Task 13",
+          "Metric": "Fuzzy normalized mutual information (F-NMI)",
+          "Result": "9.55"
+        },
+        "raw_answer": "(Word sense induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (F-NMI))",
+        "normalized": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2013 Task 13",
+          "Metric": "Fuzzy normalized mutual information (F-NMI)",
+          "Result": "9.55"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 7,
+        "original": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2013 Task 13",
+          "Metric": "Geometric mean (AVG)",
+          "Result": "24.37"
+        },
+        "raw_answer": "(Word sense induction, SemEval 2013 Task 13, Geometric mean (AVG))",
+        "normalized": {
+          "Task": "Word sense induction",
+          "Dataset": "SemEval 2013 Task 13",
+          "Metric": "Geometric mean (AVG)",
+          "Result": "24.37"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 8,
+        "original": {
+          "Task": "Author name disambiguation",
+          "Dataset": "Arnet",
+          "Metric": "F-score",
+          "Result": "58.8"
+        },
+        "raw_answer": "(Author name disambiguation, Arnet, F-score)",
+        "normalized": {
+          "Task": "Author name disambiguation",
+          "Dataset": "Arnet",
+          "Metric": "F-score",
+          "Result": "58.8"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1811.09242.pdf",
+        "record": 9,
+        "original": {
+          "Task": "Author name disambiguation",
+          "Dataset": "PubMed",
+          "Metric": "F-score",
+          "Result": "46.6"
+        },
+        "raw_answer": "(Author name disambiguation, PubMed, F-score)",
+        "normalized": {
+          "Task": "Author name disambiguation",
+          "Dataset": "PubMed",
+          "Metric": "F-score",
+          "Result": "46.6"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1702.02098.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F-score",
+          "Result": "90.65 ± 0.15"
+        },
+        "raw_answer": "(Named Entity Recognition, CoNLL-2003, F-score)",
+        "normalized": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F-score",
+          "Result": "90.65 ± 0.15"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1702.02098.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "OntoNotes 5.0",
+          "Metric": "F-score",
+          "Result": "86.84 ± 0.19"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "Ontonotes v5 - English",
+          "Metric": "F1",
+          "Result": "86.84 ± 0.19"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1511.08308.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F-score",
+          "Result": "91.62 (±0.33)"
+        },
+        "raw_answer": "(Named Entity Recognition, CoNLL-2003, F-score)",
+        "normalized": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "CoNLL-2003",
+          "Metric": "F-score",
+          "Result": "91.62 (±0.33)"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1511.08308.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "OntoNotes 5.0",
+          "Metric": "F-score",
+          "Result": "86.41 (±0.22)"
+        },
+        "raw_answer": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "Ontonotes v5 - English",
+          "Metric": "F1",
+          "Result": "86.41 (±0.22)"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "N19-1373.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "SwDA",
+          "Metric": "Accuracy",
+          "Result": "82.9%"
+        },
+        "raw_answer": "(Dialogue Act Classification, SwDA, Accuracy)",
+        "normalized": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "SwDA",
+          "Metric": "Accuracy",
+          "Result": "82.9%"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "N19-1373.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "MRDA",
+          "Metric": "Accuracy",
+          "Result": "91.1%"
+        },
+        "raw_answer": "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+        "normalized": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "ICSI Meeting Recorder Dialog Act Corpus (MRDA)",
+          "Metric": "Accuracy",
+          "Result": "91.1%"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1711.05568.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "SwDA",
+          "Metric": "Accuracy",
+          "Result": "81.3%"
+        },
+        "raw_answer": "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+        "normalized": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "Switchboard Dialog Act Corpus (SWDA)",
+          "Metric": "Accuracy",
+          "Result": "81.3%"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1711.05568.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "MRDA",
+          "Metric": "Accuracy",
+          "Result": "91.7%"
+        },
+        "raw_answer": "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+        "normalized": {
+          "Task": "Dialogue Act Classification",
+          "Dataset": "ICSI Meeting Recorder Dialog Act Corpus (MRDA)",
+          "Metric": "Accuracy",
+          "Result": "91.7%"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1905.03197.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Abstractive summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-1",
+          "Result": "43.33"
+        },
+        "raw_answer": "(Abstractive summarization, CNN/DailyMail, ROUGE-1)",
+        "normalized": {
+          "Task": "Abstractive summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-1",
+          "Result": "43.33"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1905.03197.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Abstractive summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-2",
+          "Result": "20.21"
+        },
+        "raw_answer": "(Abstractive summarization, CNN/DailyMail, ROUGE-2)",
+        "normalized": {
+          "Task": "Abstractive summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-2",
+          "Result": "20.21"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1905.03197.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Abstractive summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-L",
+          "Result": "40.51"
+        },
+        "raw_answer": "(Abstractive summarization, CNN/DailyMail, ROUGE-L)",
+        "normalized": {
+          "Task": "Abstractive summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-L",
+          "Result": "40.51"
+        },
+        "branch": "unmatched_preserved"
+      }
+    ],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  },
+  {
+    "branch": "cold_42",
+    "stage": "stage1",
+    "categories": {
+      "exact_or_result": 895,
+      "existing_candidate": 242,
+      "original_name_added": 203,
+      "null": 0
+    },
+    "examples": [],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  },
+  {
+    "branch": "cold_42",
+    "stage": "stage2",
+    "categories": {
+      "null_skipped": 0,
+      "exact_tuple": 3,
+      "tuple_mapped": 86,
+      "unmatched_preserved": 246
+    },
+    "examples": [
+      {
+        "paper": "1908.08345.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-1 F1",
+          "Result": "43.85"
+        },
+        "raw_answer": "(Extractive single-document news summarization, CNN/DailyMail, ROUGE-1 F1)",
+        "normalized": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-1 F1",
+          "Result": "43.85"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-2 F1",
+          "Result": "20.34"
+        },
+        "raw_answer": "(Summarization, CNN/DailyMail, ROGUE-2)",
+        "normalized": {
+          "Task": "Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROGUE-2",
+          "Result": "20.34"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-L F1",
+          "Result": "39.90"
+        },
+        "raw_answer": "(Extractive single-document news summarization, CNN/DailyMail, ROUGE-L F1)",
+        "normalized": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-L F1",
+          "Result": "39.90"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-1 F1",
+          "Result": "42.13"
+        },
+        "raw_answer": "(Summarization, CNN/DailyMail, ROGUE-1)",
+        "normalized": {
+          "Task": "Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROGUE-1",
+          "Result": "42.13"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-2 F1",
+          "Result": "19.60"
+        },
+        "raw_answer": "(Abstractive single-document news summarization, CNN/DailyMail, ROUGE-2 F1)",
+        "normalized": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-2 F1",
+          "Result": "19.60"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 6,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-L F1",
+          "Result": "39.18"
+        },
+        "raw_answer": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "normalized": {
+          "Task": "Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROGUE-L",
+          "Result": "39.18"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 7,
+        "original": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-1 Recall",
+          "Result": "46.66"
+        },
+        "raw_answer": "(Extractive single-document news summarization, NYT50, ROUGE-1 Recall)",
+        "normalized": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-1 Recall",
+          "Result": "46.66"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 8,
+        "original": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-2 Recall",
+          "Result": "26.35"
+        },
+        "raw_answer": "(Extractive single-document news summarization, NYT50, ROUGE-2 Recall)",
+        "normalized": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-2 Recall",
+          "Result": "26.35"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 9,
+        "original": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-L Recall",
+          "Result": "42.62"
+        },
+        "raw_answer": "(Extractive single-document news summarization, NYT50, ROUGE-L Recall)",
+        "normalized": {
+          "Task": "Extractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-L Recall",
+          "Result": "42.62"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 10,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-1 Recall",
+          "Result": "49.02"
+        },
+        "raw_answer": "(Abstractive single-document news summarization, NYT50, ROUGE-1 Recall)",
+        "normalized": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-1 Recall",
+          "Result": "49.02"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 11,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-2 Recall",
+          "Result": "31.02"
+        },
+        "raw_answer": "(Abstractive single-document news summarization, NYT50, ROUGE-2 Recall)",
+        "normalized": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-2 Recall",
+          "Result": "31.02"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 12,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-L Recall",
+          "Result": "45.55"
+        },
+        "raw_answer": "(Abstractive single-document news summarization, NYT50, ROUGE-L Recall)",
+        "normalized": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "NYT50",
+          "Metric": "ROUGE-L Recall",
+          "Result": "45.55"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 13,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "XSum",
+          "Metric": "ROUGE-1 F1",
+          "Result": "38.81"
+        },
+        "raw_answer": "(Summarization, XSum, ROGUE-1)",
+        "normalized": {
+          "Task": "Summarization",
+          "Dataset": "XSum",
+          "Metric": "ROGUE-1",
+          "Result": "38.81"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 14,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "XSum",
+          "Metric": "ROUGE-2 F1",
+          "Result": "16.50"
+        },
+        "raw_answer": "(Summarization, XSum, ROGUE-2)",
+        "normalized": {
+          "Task": "Summarization",
+          "Dataset": "XSum",
+          "Metric": "ROGUE-2",
+          "Result": "16.50"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1908.08345.pdf",
+        "record": 15,
+        "original": {
+          "Task": "Abstractive single-document news summarization",
+          "Dataset": "XSum",
+          "Metric": "ROUGE-L F1",
+          "Result": "31.27"
+        },
+        "raw_answer": "(Summarization, XSum, ROGUE-L)",
+        "normalized": {
+          "Task": "Summarization",
+          "Dataset": "XSum",
+          "Metric": "ROGUE-L",
+          "Result": "31.27"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1907.00390.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Slot Filling",
+          "Dataset": "ATIS",
+          "Metric": "F1-score",
+          "Result": "95.80"
+        },
+        "raw_answer": "(Intent Detection and Slot Filling, ATIS, F1)",
+        "normalized": {
+          "Task": "Intent Detection and Slot Filling",
+          "Dataset": "ATIS",
+          "Metric": "F1",
+          "Result": "95.80"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1907.00390.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Intent Detection",
+          "Dataset": "ATIS",
+          "Metric": "Accuracy",
+          "Result": "97.76"
+        },
+        "raw_answer": "(Intent Detection, ATIS, Accuracy)",
+        "normalized": {
+          "Task": "Intent Detection",
+          "Dataset": "ATIS",
+          "Metric": "Accuracy",
+          "Result": "97.76"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1907.00390.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Joint Spoken Language Understanding",
+          "Dataset": "ATIS",
+          "Metric": "Sentence-level Semantic Frame Accuracy",
+          "Result": "86.90"
+        },
+        "raw_answer": "(Joint Spoken Language Understanding, ATIS, Sentence-level Semantic Frame Accuracy)",
+        "normalized": {
+          "Task": "Joint Spoken Language Understanding",
+          "Dataset": "ATIS",
+          "Metric": "Sentence-level Semantic Frame Accuracy",
+          "Result": "86.90"
+        },
+        "branch": "unmatched_preserved"
+      },
+      {
+        "paper": "1907.00390.pdf",
+        "record": 4,
+        "original": {
+          "Task": "Slot Filling",
+          "Dataset": "Snips",
+          "Metric": "F1-score",
+          "Result": "92.23"
+        },
+        "raw_answer": "(Intent Detection and Slot Filling, SNIPS, F1)",
+        "normalized": {
+          "Task": "Intent Detection and Slot Filling",
+          "Dataset": "SNIPS",
+          "Metric": "F1",
+          "Result": "92.23"
+        },
+        "branch": "tuple_mapped"
+      },
+      {
+        "paper": "1907.00390.pdf",
+        "record": 5,
+        "original": {
+          "Task": "Intent Detection",
+          "Dataset": "Snips",
+          "Metric": "Accuracy",
+          "Result": "97.43"
+        },
+        "raw_answer": "(Intent Detection, Snips, Accuracy)",
+        "normalized": {
+          "Task": "Intent Detection",
+          "Dataset": "Snips",
+          "Metric": "Accuracy",
+          "Result": "97.43"
+        },
+        "branch": "unmatched_preserved"
+      }
+    ],
+    "interpretation": "Branches and string acceptance only; unmatched/added names are not automatically semantic errors."
+  }
+]

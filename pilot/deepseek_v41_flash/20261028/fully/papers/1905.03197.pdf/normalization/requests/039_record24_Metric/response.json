@@ -1,0 +1,32 @@
+{
+  "id": "1dfed2b2-3fc6-4531-95f0-6d1b7af34d2c",
+  "object": "chat.completion",
+  "created": 1793192445,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F-Score (F-S)",
+        "reasoning_content": "We need answer match input \"Score\" with item list. Need only matched item. Is there \"Score\" exact? Items include F-Score (F-S), Exact Match (EM), etc. \"Score\" generic maybe \"F-Score\"? Need infer. Input: Score. Match one item. Could be \"F-Score (F-S)\" because contains Score. But \"Score\" alone not exact. If none matches say None. We need decide based on benchmark? They want match metric name \"Score\" to one of metrics. There is \"F-Score (F-S)\" perhaps. Only item with word Score is F-Score. So answer: F-Score (F-S). Ensure only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 255,
+    "completion_tokens": 154,
+    "total_tokens": 409,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 146
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 255
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

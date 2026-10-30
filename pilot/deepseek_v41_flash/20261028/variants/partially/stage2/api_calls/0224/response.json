@@ -1,0 +1,32 @@
+{
+  "id": "f47922b2-f7f3-48e8-a2da-5976705a2410",
+  "object": "chat.completion",
+  "created": 1793195157,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT En-De (newstest2014), BLEU)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any in list. List has (Machine Translation, WMT’14 EN-DE, BLEU). Input (Machine Translation, WMT En-De (newstest2014), BLEU) not exact match. Output tuple unchanged. Need preserve exactly input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 86,
+    "total_tokens": 644,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

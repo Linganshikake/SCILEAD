@@ -1,0 +1,32 @@
+{
+  "id": "42908de6-b25a-408f-9d55-e271ea315844",
+  "object": "chat.completion",
+  "created": 1793194284,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item. Input ROUGE-L vs list has ROGUE-L (misspelled). Need match likely ROGUE-L because intended. Only matched item in list. Provide \"ROGUE-L\". Ensure only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 56,
+    "total_tokens": 314,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

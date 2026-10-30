@@ -1,0 +1,32 @@
+{
+  "id": "5f786416-7c07-4965-ae9d-13572550b8e2",
+  "object": "chat.completion",
+  "created": 1793197099,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-L",
+        "reasoning_content": "We need answer only selected or unchanged. Need determine semantic match. Input \"ROUGE-L F1\". List has 'ROUGE-L' and 'F1' separate, but input combines ROUGE-L and F1. Need decide if matches existing item. Semantic identity? ROUGE-L F1 could mean F1 score for ROUGE-L, but candidate 'ROUGE-L' is metric, not exactly. Requirement preserve meaningful differences, don't guess ambiguous missing condition. It might be a named metric \"ROUGE-L F1\" not in list. List contains ROUGE-L. A more specific wording may match existing standard task when both denote same underlying task. But this is metric, not task. Input \"ROUGE-L F1\" denotes ROUGE-L's F1 measure? The candidate \"ROUGE-L\" often refers to ROUGE-L F1 score. Could match 'ROUGE-L'. But input adds F1, which is the standard form. Need output selected item exactly as written if clear semantic match. I think \"ROUGE-L F1\" semantically is \"ROUGE-L\" metric (F1 variant). Candidate 'ROUGE-L' likely match. But also candidate 'F1' separate. Which is clear? Input has ROUGE-L modifier. The existing 'ROUGE-L' is the closest, because \"ROUGE-L F1\" denotes ROUGE-L F1 score. Output 'ROUGE-L'. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 321,
+    "total_tokens": 783,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 316
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

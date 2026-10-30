@@ -1,0 +1,32 @@
+{
+  "id": "0e01c9f2-fed3-4f8a-861f-0604f916c770",
+  "object": "chat.completion",
+  "created": 1793194275,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2002 Spanish NER",
+        "reasoning_content": "We need answer only. Need determine if input matches item in list. List has 'CoNLL-2002 Spanish' but input 'CoNLL 2002 Spanish NER'. Does it match one exactly? No. Instructions: If input entity matches one of items in list, answer matched item. Else output entity without changing it. Need output input unchanged: CoNLL 2002 Spanish NER. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 448,
+    "completion_tokens": 98,
+    "total_tokens": 546,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 320
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

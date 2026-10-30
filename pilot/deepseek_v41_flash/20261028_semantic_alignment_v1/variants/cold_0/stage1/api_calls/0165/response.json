@@ -1,0 +1,32 @@
+{
+  "id": "f553d039-cd2e-4b9e-828c-f7a208c3e702",
+  "object": "chat.completion",
+  "created": 1793196873,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "SQuAD 2.0",
+        "reasoning_content": "We need answer only selected or unchanged. Need compare input SQuAD 2.0 against list. Candidates SQuAD, SQuAD 1.1. Semantic matching requirement preserve version, split, metric. SQuAD 2.0 distinct from SQuAD 1.1 and generic SQuAD? The candidate \"SQuAD\" generic may denote dataset family, but input specifically version 2.0. Requirement preserve meaningful differences version. Do not merge distinct entities. Since no exact SQuAD 2.0 candidate, output original unchanged. Need only text."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 585,
+    "completion_tokens": 128,
+    "total_tokens": 713,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 329
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

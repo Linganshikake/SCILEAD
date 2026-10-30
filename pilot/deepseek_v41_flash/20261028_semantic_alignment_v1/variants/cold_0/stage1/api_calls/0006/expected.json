@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1811.09242.pdf",
+  "record": 4,
+  "field": "Dataset",
+  "original": "SemEval 2013 Task 13",
+  "candidate_serialized": "{'SemEval 2010 Task 14'}",
+  "candidate_sha256": "a43435e9c42803c28b8dd4dae8541e8e3b37e952149924e227bfc44e97e24183",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'SemEval 2010 Task 14'}\n\nInput: SemEval 2013 Task 13\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "b5eaf9507aa107798bc63bf4653b5b0a62e1609e179557d5a3405672c991d699"
+}

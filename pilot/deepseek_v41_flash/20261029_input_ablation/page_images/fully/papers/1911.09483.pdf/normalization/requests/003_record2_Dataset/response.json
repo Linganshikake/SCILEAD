@@ -1,0 +1,32 @@
+{
+  "id": "378b8a44-7d80-40d2-8b21-e72db8c3984c",
+  "object": "chat.completion",
+  "created": 1793281556,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT’14 EN-DE",
+        "reasoning_content": "We need answer match item. Need identify IWSLT De-En not exact in list. List has IWSLT’14 EN-DE, IWSLT’15 EN-VI. Input \"IWSLT De-En\" likely corresponds to IWSLT’14 EN-DE? Need only matched item. Need decide if none? In these tasks, match to dataset variant; IWSLT De-En means German-English from IWSLT, list has IWSLT’14 EN-DE (English-German same pair reversed). Likely match. Answer exact item. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 135,
+    "total_tokens": 693,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 126
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

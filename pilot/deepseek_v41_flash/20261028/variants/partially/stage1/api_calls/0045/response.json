@@ -1,0 +1,32 @@
+{
+  "id": "d03e3575-97e3-4020-ae4c-52e6e6aa6ca2",
+  "object": "chat.completion",
+  "created": 1793194213,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "SQuAD",
+        "reasoning_content": "We need answer only matched item if input matches one of items. List contains SQuAD 2.0, SQuAD 1.1 but not \"SQuAD\". So output entity without changing: SQuAD. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 566,
+    "completion_tokens": 55,
+    "total_tokens": 621,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 438
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

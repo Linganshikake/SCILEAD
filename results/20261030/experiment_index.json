@@ -1,0 +1,67 @@
+{
+  "publication_date": "2026-10-30",
+  "experiments": [
+    {
+      "id": "sol_original_variants",
+      "title": "GPT-5.6 Sol：Fully + CS、Partially、Cold Start",
+      "scope": "43篇 / 295 Gold",
+      "directory": "pilot/gpt56_sol_variants/20261024",
+      "report": "pilot/gpt56_sol_variants/20261024/实验结果汇总.md",
+      "metrics": "pilot/gpt56_sol_variants/20261024/metrics_summary.json",
+      "source_report_sha256": "c59f33512e1a12889bf528b5e4d14dfb40d528d975561420ef75ac90462b834e",
+      "source_metrics_sha256": "c6305bbb089d6e846061a2dd252eeea4b8db4b66cbdf90dc0097eda70becaa8a"
+    },
+    {
+      "id": "sol_semantic_v1",
+      "title": "GPT-5.6 Sol：Partially / Cold Start 增强 Prompt",
+      "scope": "43篇 / 295 Gold",
+      "directory": "pilot/gpt56_sol_variants/20261028_semantic_alignment_v1",
+      "report": "pilot/gpt56_sol_variants/20261028_semantic_alignment_v1/report.md",
+      "metrics": "pilot/gpt56_sol_variants/20261028_semantic_alignment_v1/analysis/comparison_final/comparison.json",
+      "source_report_sha256": "0cd727d4963738433e124060394229dc0127212723ef870faf670b3339c7a3a5",
+      "source_metrics_sha256": "056ac5965de72e62945e55b2634197441d549a9f23c353c66ff06c46c0b20e04"
+    },
+    {
+      "id": "deepseek_original",
+      "title": "DeepSeek-V4.1-Flash：Fully LLM / CS、Partially、Cold Start",
+      "scope": "43篇 / 295 Gold",
+      "directory": "pilot/deepseek_v41_flash/20261028",
+      "report": "pilot/deepseek_v41_flash/20261028/report.md",
+      "metrics": "pilot/deepseek_v41_flash/20261028/results_summary.json",
+      "source_report_sha256": "079c17b1405b40f02170b1198b8a47246ef092a4277fbfa8059ccd21b0aad9ae",
+      "source_metrics_sha256": "719000c7602f953268571b1133ed00741873af0539fea5a034109b983deccc73"
+    },
+    {
+      "id": "deepseek_semantic_v1",
+      "title": "DeepSeek：Partially / Cold Start 增强 Prompt",
+      "scope": "43篇 / 295 Gold",
+      "directory": "pilot/deepseek_v41_flash/20261028_semantic_alignment_v1",
+      "report": "pilot/deepseek_v41_flash/20261028_semantic_alignment_v1/report.md",
+      "metrics": "pilot/deepseek_v41_flash/20261028_semantic_alignment_v1/results_summary.json",
+      "source_report_sha256": "60a481a987ff5772442a01969668c5d92a41b777bf7e7bbe9f1076575336a9da",
+      "source_metrics_sha256": "c812def5b834b6c27a2c2fe886f04f3c0f03493b92b32fb245043ed2370747ba"
+    },
+    {
+      "id": "deepseek_input_ablation",
+      "title": "DeepSeek：RAG / 完整解析文本 / 整页图片输入对照",
+      "scope": "同一5篇 / 28 Gold",
+      "directory": "pilot/deepseek_v41_flash/20261029_input_ablation",
+      "report": "pilot/deepseek_v41_flash/20261029_input_ablation/report.md",
+      "metrics": "pilot/deepseek_v41_flash/20261029_input_ablation/evaluation/report.json",
+      "source_report_sha256": "0d2f23d2dcc55354b0dd3a63937a5f2f7ab5960baa3e479e1099fb1cb7f391e9",
+      "source_metrics_sha256": "93190c71b9ec3094bd108925ee9846a36c2add5ca8420ba787eee1e684487b22"
+    },
+    {
+      "id": "deepseek_fully_semantic_v1",
+      "title": "DeepSeek：五篇子集 Fully 增强 Prompt 对照",
+      "scope": "同一5篇 / 28 Gold",
+      "directory": "pilot/deepseek_v41_flash/20261029_input_ablation_fully_semantic_v1",
+      "report": "pilot/deepseek_v41_flash/20261029_input_ablation_fully_semantic_v1/report.md",
+      "metrics": "pilot/deepseek_v41_flash/20261029_input_ablation_fully_semantic_v1/evaluation/comparison.json",
+      "source_report_sha256": "e81dc47c2e247c1d7e6283c29d12f5eedc7689a26f5f1f977a63697145b73078",
+      "source_metrics_sha256": "bc1dba6bbc2b35f579a4690d2dc7cf049649eed57dd35db5eebe102713d21b78"
+    }
+  ],
+  "metrics_recomputed": false,
+  "new_model_requests": 0
+}

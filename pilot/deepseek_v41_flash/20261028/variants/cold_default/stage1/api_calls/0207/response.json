@@ -1,0 +1,32 @@
+{
+  "id": "267f4e0d-5783-40c0-9ca3-66b9e5b38d63",
+  "object": "chat.completion",
+  "created": 1793194390,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1-score",
+        "reasoning_content": "We need answer per instruction. Match input entity \"F1-score\" to items? List has 'F1 score' not F1-score, 'F1', 'Slot filling F1-score', 'Entity-level F1 score'. Exact match? \"F1-score\" not exactly in list. Need output entity unchanged. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 73,
+    "total_tokens": 380,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 179
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

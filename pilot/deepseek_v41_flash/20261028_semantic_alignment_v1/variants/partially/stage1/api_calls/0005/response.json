@@ -1,0 +1,32 @@
+{
+  "id": "7287dd5e-981e-42e8-a8b8-7793de835f8e",
+  "object": "chat.completion",
+  "created": 1793196606,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Ontonotes v4 - Chinese",
+        "reasoning_content": "We need answer. Need determine semantic match. List has ON5E. Input ON4C. Are these ontology versions? Need match by meaning identity, preserve version differences. ON5E vs ON4C not same likely OntoNotes? ON4C maybe OntoNotes 4 Chinese? Wait list includes Ontonotes v4 - Chinese separately. ON5E likely OntoNotes 5 English. ON4C could be OntoNotes 4 Chinese? Since list has \"Ontonotes v4 - Chinese\" which may match ON4C (abbreviation OntoNotes v4 Chinese). Need infer. Input ON4C: common abbreviation? ON4C = OntoNotes 4 Chinese? Candidate \"Ontonotes v4 - Chinese\". Also \"ON5E\" likely OntoNotes 5 English. Since ON4C is analogous: ON + 4 + C = OntoNotes 4 Chinese. There is exact candidate \"Ontonotes v4 - Chinese\". Need output candidate exactly as in item list. Need ensure capitalization: Item list has 'Ontonotes v4 - Chinese' (lowercase n? \"Ontonotes v4 - Chinese\"). Output exactly.\n\nLet's final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 697,
+    "completion_tokens": 259,
+    "total_tokens": 956,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 251
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 185
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

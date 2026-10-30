@@ -1,0 +1,32 @@
+{
+  "id": "6f2a1c45-76cd-465d-a9e9-4744579abbba",
+  "object": "chat.completion",
+  "created": 1793194830,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive sentence summarization, Annotated English Gigaword, ROUGE-1)",
+        "reasoning_content": "We need answer only tuple. Need see if input matches any item. Input: (Abstractive sentence summarization, Annotated English Gigaword, ROUGE-1). List has Summarization, Gigaword, ROGUE-1 etc. No exact match. Need output tuple unchanged. Note spelling ROUGE vs ROGUE; dataset differs. Must only output answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 560,
+    "completion_tokens": 102,
+    "total_tokens": 662,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 176
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

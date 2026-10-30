@@ -1,0 +1,32 @@
+{
+  "id": "274d428a-8313-46ce-a3ad-f016249efd53",
+  "object": "chat.completion",
+  "created": 1793194923,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-2)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list. Input (Abstractive Summarization, NYT, ROUGE-2). List has Summarization entries, but no Abstractive Summarization NYT ROUGE-2. Output tuple unchanged. Need exact maybe \"ROUGE-2\" vs list ROGUE misspell. Since no match output input as is. Only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 100,
+    "total_tokens": 654,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

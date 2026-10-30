@@ -1,0 +1,32 @@
+{
+  "id": "8d78fc0e-4787-40e5-a060-e607db765f3b",
+  "object": "chat.completion",
+  "created": 1793197748,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-2)",
+        "reasoning_content": "We need determine if input tuple semantically matches any listed. Input: (Extractive Summarization, CNN/DailyMail, ROGUE-2). List has Summarization, CNN/DailyMail, ROGUE-2. Extractive Summarization is a type of summarization, same benchmark? Task \"Summarization\" broader standard label, dataset CNN/DailyMail, metric ROGUE-2 exact. Need output matched listed tuple verbatim: (Summarization, CNN/DailyMail, ROGUE-2). Check possible ROGUE typo consistent. Yes. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 136,
+    "total_tokens": 910,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

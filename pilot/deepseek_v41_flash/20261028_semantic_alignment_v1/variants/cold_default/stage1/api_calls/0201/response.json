@@ -1,0 +1,32 @@
+{
+  "id": "b6ccfdd2-f35c-4f75-99bc-4355149f8e56",
+  "object": "chat.completion",
+  "created": 1793196934,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OntoNotes",
+        "reasoning_content": "We need answer only selected item or unchanged. Need match ONTONOTES 5.0 to candidate OntoNotes. Semantic matching: input entity \"ONTONOTES 5.0\" likely matches \"OntoNotes\" since version? Requirement preserve version? \"Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because names similar. Do not guess ambiguous abbreviation or missing experimental condition.\" Input includes version 5.0, candidate OntoNotes lacks version. Is it same underlying entity? OntoNotes 5.0 is a specific version; candidate OntoNotes likely denotes dataset. But requirement preserve version differences. If candidate only OntoNotes and input ONTONOTES 5.0, is version meaningful? Could still match OntoNotes if only candidate and standard version? Need decide. List has OntoNotes only, no version. The instruction: \"If input entity matches one of items... Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar.\" Version difference could be meaningful. But \"ONTONOTES 5.0\" and \"OntoNotes\" may denote same dataset; version 5.0 is the conventional release. However strict says preserve version. If candidate lacks version, are they distinct? For benchmarks, OntoNotes typically means OntoNotes 5.0 in NLP tasks. Likely match OntoNotes. Need output candidate exactly \"OntoNotes\". Let's ensure not \"CoNLL-2003\" etc. Answer OntoNotes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 668,
+    "completion_tokens": 338,
+    "total_tokens": 1006,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 334
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 156
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

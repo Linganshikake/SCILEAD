@@ -1,0 +1,32 @@
+{
+  "id": "da9786fa-45c5-4717-95c4-6f42f7c8a2d0",
+  "object": "chat.completion",
+  "created": 1793196742,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "arXiv",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if arXiv matches any item. List includes papers/datasets? arXiv not present. Could it match \"Open Entity\"? no. Need output arXiv unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 491,
+    "completion_tokens": 45,
+    "total_tokens": 536,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 235
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

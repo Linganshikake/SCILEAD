@@ -1,0 +1,32 @@
+{
+  "id": "830a4ae5-d266-4e2e-b682-f149464dedb1",
+  "object": "chat.completion",
+  "created": 1793194726,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, PubMed, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list. Input: (Summarization, PubMed, ROUGE-2 F1). List has Summarization with Gigaword, CNN/DailyMail, XSum, metrics ROGUE (misspelled) etc. No PubMed. Output tuple unchanged. Need exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 84,
+    "total_tokens": 637,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

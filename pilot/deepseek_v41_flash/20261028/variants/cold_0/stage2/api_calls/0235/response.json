@@ -1,0 +1,32 @@
+{
+  "id": "81dfc176-6d75-42b7-a4a5-a13cb4801f7f",
+  "object": "chat.completion",
+  "created": 1793194850,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Reddit TIFU, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches list. List has many tuples. Input (Summarization, Reddit TIFU, ROUGE-2 F1). Check list: no Reddit TIFU. It has Summarization with Gigaword, CNN/DailyMail, XSum and metrics ROGUE-L, ROGUE-1, ROGUE-2, typo ROGUE. Input uses ROUGE-2 F1. No exact. Output tuple unchanged. Only answer tuple. Need preserve formatting. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 133,
+    "total_tokens": 690,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 114
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

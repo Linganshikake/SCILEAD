@@ -1,0 +1,32 @@
+{
+  "id": "9fbdad69-88cc-40cc-a7ab-e2e080ac8a15",
+  "object": "chat.completion",
+  "created": 1793194781,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT En-Fr (newstest2014)",
+        "reasoning_content": "We need answer matched item if exact? Input \"WMT En-Fr (newstest2014)\" not in list. Need output entity unchanged. Check list has WMT’14 EN-FR, WMT En-De newstest2014, etc. No exact. So output WMT En-Fr (newstest2014). Must only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 857,
+    "completion_tokens": 88,
+    "total_tokens": 945,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 857
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

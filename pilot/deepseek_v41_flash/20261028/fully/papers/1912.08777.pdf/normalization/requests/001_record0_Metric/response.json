@@ -1,0 +1,32 @@
+{
+  "id": "d2652351-790c-4d19-bf62-14135f0b0d2d",
+  "object": "chat.completion",
+  "created": 1793192833,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer only matched item. Input \"ROUGE-1 F1\". Item list has 'ROGUE-1' (misspelled ROGUE) and 'F1'. No exact \"ROUGE-1 F1\". Need match input with one item. It might be ROGUE-1? But input includes F1. Need only matched item in list. The closest item is 'ROGUE-1' (since typo in list) or 'F1'. We need infer. The input is \"ROUGE-1 F1\" likely refers to ROUGE-1 F1 score. Item list has 'ROGUE-1' (typo). Match to 'ROGUE-1'. Only output item exactly as list: ROGUE-1. Check if none? No."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 179,
+    "total_tokens": 440,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "14101d18-e003-45eb-a3a8-0d8bb5a2d769",
+  "object": "chat.completion",
+  "created": 1793194335,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "PoS tagging",
+        "reasoning_content": "We need answer matched item if input matches. List has 'PoS tagging'. Input Part-of-Speech Tagging. Does it match? Need semantic equivalence? The instruction: \"If the input entity matches one of the items in the list, your answer will be the matched item\". Match likely exact or synonymous? Input \"Part-of-Speech Tagging\" matches \"PoS tagging\" (PoS = part-of-speech). So answer should be matched item in list: 'PoS tagging'. Need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 274,
+    "completion_tokens": 109,
+    "total_tokens": 383,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 274
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

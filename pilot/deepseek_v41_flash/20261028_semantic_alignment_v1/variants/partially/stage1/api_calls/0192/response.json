@@ -1,0 +1,32 @@
+{
+  "id": "dd8e0901-d24b-46ba-bcde-6bb4eb2bd688",
+  "object": "chat.completion",
+  "created": 1793197053,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT2014 De→En",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need match IWSLT2014 De→En to candidate. List has IWSLT’14 EN-DE. Input De→En direction reversed. Preserve meaningful differences? Candidate is EN-DE, input De→En = DE-EN. Is that same? Translation language pair direction often distinct. Need not merge distinct dataset identity/version/split. IWSLT’14 EN-DE is English-German. Input IWSLT2014 De→En is German-English. They are reversed; likely different translation direction. Also candidate uses EN-DE. Need output unchanged input entity exactly. Check maybe \"IWSLT2014 De→En\" normalizes to IWSLT’14 EN-DE? Hmm task name. Semantic matching requirements: preserve meaningful differences in dataset identity, language, version, split and metric definition. Direction matters. So no match. Output original input exactly: IWSLT2014 De→En. Ensure no quotes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 782,
+    "completion_tokens": 220,
+    "total_tokens": 1002,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 211
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 142
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

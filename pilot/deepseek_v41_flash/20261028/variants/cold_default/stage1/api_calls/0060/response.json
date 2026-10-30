@@ -1,0 +1,32 @@
+{
+  "id": "794a993e-56e8-4533-987d-3c2c5fb2a1d1",
+  "object": "chat.completion",
+  "created": 1793194209,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "RTE",
+        "reasoning_content": "We need answer only. Need match input entity RTE to item list. Not present? List has RE, MRPC etc but no RTE. So output entity unchanged: RTE. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 279,
+    "completion_tokens": 45,
+    "total_tokens": 324,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 279
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

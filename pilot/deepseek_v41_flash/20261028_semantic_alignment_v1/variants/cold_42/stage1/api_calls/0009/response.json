@@ -1,0 +1,32 @@
+{
+  "id": "610c60d8-2a5d-48aa-93ae-d4ab764569ea",
+  "object": "chat.completion",
+  "created": 1793196607,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-2 Recall",
+        "reasoning_content": "We need answer only selected item or unchanged input. Input ROUGE-2 Recall. Candidates: ROUGE-L F1, ROUGE-1 Recall, ROUGE-1 F1, ROUGE-2 F1. No ROUGE-2 Recall. Different metric definition (recall vs F1). Must preserve difference. Output unchanged exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 337,
+    "completion_tokens": 83,
+    "total_tokens": 420,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 209
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

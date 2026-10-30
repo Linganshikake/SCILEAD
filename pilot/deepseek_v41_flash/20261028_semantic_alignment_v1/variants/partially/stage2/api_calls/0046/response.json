@@ -1,0 +1,32 @@
+{
+  "id": "e7244490-6d80-40fd-9108-4ea6cc709070",
+  "object": "chat.completion",
+  "created": 1793197537,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent Detection and Slot Filling, ATIS, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: (Joint intent detection and slot filling, ATIS, F1). Candidate list has (Intent Detection and Slot Filling, ATIS, F1). Same underlying benchmark, task wording more specific? \"Joint intent detection and slot filling\" matches Intent Detection and Slot Filling. Dataset ATIS, metric F1. So output candidate verbatim: (Intent Detection and Slot Filling, ATIS, F1). Need only tuple no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 117,
+    "total_tokens": 888,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

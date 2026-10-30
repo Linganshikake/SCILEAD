@@ -1,0 +1,32 @@
+{
+  "id": "75d4464a-8b2b-4248-b406-29763901483f",
+  "object": "chat.completion",
+  "created": 1793193073,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 - English",
+        "reasoning_content": "We need answer only matched item or None. Input CoNLL-2003. List has CoNLL-2003 - English and CoNLL-2003 - German. \"CoNLL-2003\" alone not exact item? Need match likely CoNLL-2003 - English? Need infer if list items are dataset names, input CoNLL-2003 may refer English version? The item list includes both English and German. Without language, ambiguous. We need match with one item. The task says match input with one of items. If none matches say None. Since input is \"CoNLL-2003\" not exactly \"CoNLL-2003 - English\" or German. But perhaps should select \"CoNLL-2003 - English\" as canonical? Need decide. Usually these tasks from dataset identification: input might be a short dataset name and list has disambiguated variants. CoNLL-2003 commonly refers to English NER, while German is separate parameter. The list includes \"CoNLL-2003 - English\". I think answer should be that. Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 241,
+    "total_tokens": 798,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 232
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

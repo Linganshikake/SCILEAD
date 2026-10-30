@@ -1,0 +1,32 @@
+{
+  "id": "687ef286-09dc-4bad-8ee3-a7941803d9f8",
+  "object": "chat.completion",
+  "created": 1793193650,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT’14 EN-DE",
+        "reasoning_content": "We need answer match input IWSLT De-En with item list. Need determine if any item matches. List has IWSLT’14 EN-DE, IWSLT’15 EN-VI. Input IWSLT De-En likely IWSLT German-English, not exact. Could match IWSLT’14 EN-DE? Need think. User asks match input with one of items. Input \"IWSLT De-En\" ambiguous. Item \"IWSLT’14 EN-DE\" is English-German direction, while De-En is German-English. There is no IWSLT De-En item. Could it match IWSLT’14 EN-DE despite direction reversed? In datasets, often IWSLT14 De-En is same dataset referred to as EN-DE (reverse). The item list includes IWSLT’14 EN-DE. Likely expected match. Need output only matched item. Could be \"IWSLT’14 EN-DE\". Need exact apostrophe curly. Answer just that."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 231,
+    "total_tokens": 789,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 222
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

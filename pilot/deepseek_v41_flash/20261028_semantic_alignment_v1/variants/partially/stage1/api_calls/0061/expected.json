@@ -1,0 +1,19 @@
+{
+  "paper": "2020.emnlp-main.152.pdf",
+  "record": 1,
+  "field": "Task",
+  "original": "Joint intent detection and slot filling",
+  "candidate_serialized": "{'Language Modeling', 'Abstractive Summarization', 'Extractive Question Answering', 'Text Chunking', 'Question Generation', 'Machine Translation', 'GLUE Benchmark', 'Constituency Parsing', 'Dialogue Generation', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Named Entity Recognition', 'Paraphrase Detection', 'Dependency Parsing', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Generative Question Answering', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Sentiment Analysis', 'Relation Classification'}",
+  "candidate_sha256": "64866673c26ad2938395930dc945d067491133e3bd7f9c64b62904b1232795b4",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Language Modeling', 'Abstractive Summarization', 'Extractive Question Answering', 'Text Chunking', 'Question Generation', 'Machine Translation', 'GLUE Benchmark', 'Constituency Parsing', 'Dialogue Generation', 'Natural Language Inference (NLI)', 'Question Answering', 'Entity Typing', 'Named Entity Recognition', 'Paraphrase Detection', 'Dependency Parsing', 'Summarization', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Generative Question Answering', 'Text Similarity', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Sentiment Analysis', 'Relation Classification'}\n\nInput: Joint intent detection and slot filling\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "ff4884076b5e2d235438453df268e41472ecb8166fb6fd4abdb6b6596729c744"
+}

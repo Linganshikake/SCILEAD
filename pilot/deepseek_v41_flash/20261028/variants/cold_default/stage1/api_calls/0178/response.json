@@ -1,0 +1,32 @@
+{
+  "id": "48accaa3-8ac6-496f-8b71-3863663543e2",
+  "object": "chat.completion",
+  "created": 1793194353,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2000",
+        "reasoning_content": "We need answer matched item if matches list. Input CoNLL-2000. List contains CoNLL-2000 Chunking, CoNLL 2000, maybe CoNLL00. Exact string? It says matches one of items. \"CoNLL-2000\" not exact in list. But maybe need identify matched item? Likely exact match only. List has 'CoNLL-2000 Chunking', 'CoNLL 2000' (space), 'CoNLL00'. Input \"CoNLL-2000\" no exact. Output entity unchanged: CoNLL-2000. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 635,
+    "completion_tokens": 142,
+    "total_tokens": 777,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 135
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 251
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

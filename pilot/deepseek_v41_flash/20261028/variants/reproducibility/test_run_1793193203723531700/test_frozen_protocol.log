@@ -1,0 +1,33 @@
+test_all_empty_branch_completes_without_http (__main__.FrozenProtocol.test_all_empty_branch_completes_without_http) ... D:\miniconda3\envs\scilead\Lib\site-packages\langchain\__init__.py:29: UserWarning: Importing HuggingFacePipeline from langchain root module is no longer supported. Please use langchain_community.llms.huggingface_pipeline.HuggingFacePipeline instead.
+  warnings.warn(
+D:\miniconda3\envs\scilead\Lib\site-packages\langchain\_api\module_import.py:87: LangChainDeprecationWarning: Importing get_openai_callback from D:\miniconda3\envs\scilead\Lib\site-packages\langchain\callbacks\__init__.py is deprecated. Please replace the import with the following:
+from langchain_community.callbacks.manager import get_openai_callback
+  warnings.warn(
+  0%|          | 0/43 [00:00<?, ?it/s]100%|██████████| 43/43 [00:00<00:00, 42962.14it/s]
+{"run": "cold_default", "stage": "stage1", "summary": {"status": "COMPLETE", "papers": 43, "records": 0, "null_fields": {"Task": 0, "Dataset": 0, "Metric": 0}, "events": 0, "api_calls": 0, "seconds_this_attempt": 0.0470000000204891, "output_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\reproducibility\\frozen_protocol_y1vkyyim\\all_empty\\prepared\\cold_default\\stage1\\normalized_output.json", "output_sha256": "bc18ab4837ae005475822a62b0260c3f338bb7d1fa9f0ff3790e0cf079ef5c7c", "label_additions": 0}}
+  0%|          | 0/43 [00:00<?, ?it/s]100%|██████████| 43/43 [00:00<00:00, 320346.49it/s]
+{"run": "cold_default", "stage": "stage2", "summary": {"status": "COMPLETE", "papers": 43, "records": 0, "null_fields": {"Task": 0, "Dataset": 0, "Metric": 0}, "events": 0, "api_calls": 0, "seconds_this_attempt": 0.030999999959021807, "output_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\reproducibility\\frozen_protocol_y1vkyyim\\all_empty\\prepared\\cold_default\\stage2\\leaderboard_normalized_output.json", "output_sha256": "bc18ab4837ae005475822a62b0260c3f338bb7d1fa9f0ff3790e0cf079ef5c7c", "changed_tdms": 0}}
+ok
+test_official_cold_orders_results_and_replay (__main__.FrozenProtocol.test_official_cold_orders_results_and_replay) ...   0%|          | 0/43 [00:00<?, ?it/s]{"run": "cold_default", "stage": "stage1", "call": 1, "paper": "2020.findings-emnlp.378.pdf", "field": "Task", "accepted": true, "total_tokens": 2}
+{"run": "cold_default", "stage": "stage1", "call": 2, "paper": "2020.findings-emnlp.378.pdf", "field": "Dataset", "accepted": true, "total_tokens": 4}
+{"run": "cold_default", "stage": "stage1", "call": 3, "paper": "2020.findings-emnlp.378.pdf", "field": "Metric", "accepted": true, "total_tokens": 6}
+  2%|▏         | 1/43 [00:00<00:07,  5.66it/s]100%|██████████| 43/43 [00:00<00:00, 243.57it/s]
+  0%|          | 0/43 [00:00<?, ?it/s]100%|██████████| 43/43 [00:00<00:00, 555.18it/s]
+  0%|          | 0/43 [00:00<?, ?it/s]{"run": "cold_0", "stage": "stage1", "call": 1, "paper": "2020.findings-emnlp.378.pdf", "field": "Task", "accepted": true, "total_tokens": 2}
+{"run": "cold_0", "stage": "stage1", "call": 2, "paper": "2020.findings-emnlp.378.pdf", "field": "Dataset", "accepted": true, "total_tokens": 4}
+{"run": "cold_0", "stage": "stage1", "call": 3, "paper": "2020.findings-emnlp.378.pdf", "field": "Metric", "accepted": true, "total_tokens": 6}
+ 74%|███████▍  | 32/43 [00:00<00:00, 189.97it/s]100%|██████████| 43/43 [00:00<00:00, 255.27it/s]
+  0%|          | 0/43 [00:00<?, ?it/s]100%|██████████| 43/43 [00:00<00:00, 512.95it/s]
+  0%|          | 0/43 [00:00<?, ?it/s]{"run": "cold_42", "stage": "stage1", "call": 1, "paper": "2020.findings-emnlp.378.pdf", "field": "Task", "accepted": true, "total_tokens": 2}
+{"run": "cold_42", "stage": "stage1", "call": 2, "paper": "2020.findings-emnlp.378.pdf", "field": "Dataset", "accepted": true, "total_tokens": 4}
+{"run": "cold_42", "stage": "stage1", "call": 3, "paper": "2020.findings-emnlp.378.pdf", "field": "Metric", "accepted": true, "total_tokens": 6}
+ 67%|██████▋   | 29/43 [00:00<00:00, 187.44it/s]100%|██████████| 43/43 [00:00<00:00, 275.38it/s]
+  0%|          | 0/43 [00:00<?, ?it/s]100%|██████████| 43/43 [00:00<00:00, 607.50it/s]
+ok
+test_original_masking_matches_frozen_labels_and_file (__main__.FrozenProtocol.test_original_masking_matches_frozen_labels_and_file) ... ok
+test_preparation_dynamic_counts_frozen_copies_and_idempotency (__main__.FrozenProtocol.test_preparation_dynamic_counts_frozen_copies_and_idempotency) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 10.490s
+
+OK

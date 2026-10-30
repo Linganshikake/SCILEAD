@@ -1,0 +1,32 @@
+{
+  "id": "22931dc1-0c9d-463a-a11e-3c5667449b2b",
+  "object": "chat.completion",
+  "created": 1793196655,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-L",
+        "reasoning_content": "We need answer only. Need determine if ROUGE-L matches item list. Items include ROUGE-1, ROUGE-2, not ROUGE-L. ROUGE-L is distinct metric (longest common subsequence) vs ROUGE-1/2. Not match. Output unchanged ROUGE-L."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 344,
+    "completion_tokens": 74,
+    "total_tokens": 418,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 216
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

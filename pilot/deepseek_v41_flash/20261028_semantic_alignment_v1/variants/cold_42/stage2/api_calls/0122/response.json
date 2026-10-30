@@ -1,0 +1,32 @@
+{
+  "id": "0f9b5207-47b7-43fc-a0cc-1caeaca8cd20",
+  "object": "chat.completion",
+  "created": 1793197389,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Summarization, CNN/DailyMail, ROUGE-1). Candidate list has (Summarization, CNN/DailyMail, ROGUE-1) typo ROGUE vs ROUGE. Need match semantically metric same. Return candidate verbatim exact spelling. So (Summarization, CNN/DailyMail, ROGUE-1). Ensure only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 103,
+    "total_tokens": 875,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "5d05c445-1033-418d-89af-f20a322f4c3b",
+  "object": "chat.completion",
+  "created": 1793197504,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+        "reasoning_content": "We need answer only one tuple. Need determine semantic match. Input (Named Entity Recognition, CoNLL-2003, F1). List has (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Does that match? Task same NER, dataset CoNLL-2003 vs CoNLL-2003 - English. Likely same benchmark. Return listed verbatim: (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Need ensure not ambiguous with WNUT etc. Yes. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 140,
+    "total_tokens": 912,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

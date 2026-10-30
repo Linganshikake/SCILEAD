@@ -1,0 +1,32 @@
+{
+  "id": "efc494e3-e291-4079-88db-b678f078fb2d",
+  "object": "chat.completion",
+  "created": 1793197162,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WSJ",
+        "reasoning_content": "We need answer matched candidate. Input \"Wall Street Journal (WSJ) portion of Penn Treebank\". List has WSJ, Penn Treebank, maybe Penn Treebank converted... Candidate WSJ is Wall Street Journal. \"WSJ portion of Penn Treebank\" likely refers to WSJ corpus, which is part of Penn Treebank. In list both WSJ and Penn Treebank. Need determine entity identity. The input explicitly Wall Street Journal (WSJ) portion of Penn Treebank. Could match \"WSJ\" since acronym alias. Or \"Penn Treebank\" but it's a portion, not full. Semantic matching says preserve meaningful differences dataset identity. The entity \"WSJ\" likely denotes Wall Street Journal corpus, often the Wall Street Journal portion of Penn Treebank. Candidate \"WSJ\" exact acronym. Output \"WSJ\". Ensure only selected."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 785,
+    "completion_tokens": 177,
+    "total_tokens": 962,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 174
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 273
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

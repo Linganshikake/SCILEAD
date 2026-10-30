@@ -1,0 +1,32 @@
+{
+  "id": "1786b5cd-c287-4223-82a5-a042b42bece8",
+  "object": "chat.completion",
+  "created": 1793194664,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, BIGPATENT, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any list exactly. Item list includes Summarization BIGPATENT? No. So output tuple unchanged. Note spelling ROGUE vs ROUGE. Input (Summarization, BIGPATENT, ROUGE-2 F1). No match. Output exactly tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 82,
+    "total_tokens": 637,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

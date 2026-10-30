@@ -1,0 +1,32 @@
+{
+  "id": "41a48463-6899-4b26-87cf-625f7e00baef",
+  "object": "chat.completion",
+  "created": 1793197344,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, PubMed, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only tuple. Need match semantic. Input Summarization, PubMed, ROUGE-1 F1. List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE variants. No PubMed. Thus no match return original tuple verbatim. Need consider metric \"ROUGE-1 F1\" vs ROGUE-1 (misspelled) but dataset PubMed absent, so no match. Output original. Ensure exact input: (Summarization, PubMed, ROUGE-1 F1)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 126,
+    "total_tokens": 897,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 111
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

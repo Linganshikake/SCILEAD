@@ -1,0 +1,32 @@
+{
+  "id": "882e9f98-cdd2-46a6-afb8-f0ab9ced5502",
+  "object": "chat.completion",
+  "created": 1793197095,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-2",
+        "reasoning_content": "We need answer only selected item or unchanged. Input \"ROUGE-2 F1\". Candidate list has \"ROUGE-2\" and \"F1\" separately, but input likely metric \"ROUGE-2 F1\" maybe means ROUGE-2 metric? Need semantic matching. Need decide if matches one item. List includes ROUGE-1, ROUGE-2, ROUGE-L, F1. \"ROUGE-2 F1\" is specific ROUGE-2 F1 score, not exactly \"ROUGE-2\" candidate? The instructions: preserve meaningful differences in metric definition; do not merge distinct. \"ROUGE-2 F1\" could denote ROUGE-2 F1 score, while candidate ROUGE-2 often is F1? In many tables, ROUGE-2 is F1. But list has ROUGE-2 and F1. Is \"ROUGE-2 F1\" same as ROUGE-2? Hmm task metric. Need output matched item if clear semantic match. Ambiguous: could combine ROUGE-2 with F1? Candidate \"ROUGE-2\" likely refers to ROUGE-2 recall/F1? Usually ROUGE-2 is F1 measure. But \"ROUGE-2 F1\" adds metric definition, maybe more specific wording may match existing standard task? It says for task names more specific wording may match standard task when same underlying task. But this is metric list. \"ROUGE-2 F1\" likely denotes F1 variant of ROUGE-2, which standard ROUGE-2 score is F1. Thus candidate \"ROUGE-2\" is clear semantic match? Need be cautious: List also has \"F1\", but no \"ROUGE-2 F1\". If exact item not present, output input unchanged if no candidate matches. However semantic matching says match by meaning not literal. \"ROUGE-2 F1\" and \"ROUGE-2\": same? In NLP metrics, ROUGE-2 is by default F1. But if input explicitly says ROUGE-2 F1, it's the F1 score for ROUGE-2. Candidate \"ROUGE-2\" probably means the same. I lean output ROUGE-2. Need no explanation. Let's ensure not combine to \"F1\"? No, ROUGE-2 F1 is not F1 generally.\n\nFinal only selected item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 533,
+    "total_tokens": 996,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 527
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 207
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

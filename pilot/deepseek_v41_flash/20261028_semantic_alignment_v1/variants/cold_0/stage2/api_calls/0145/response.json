@@ -1,0 +1,32 @@
+{
+  "id": "cf298681-b560-499a-8c31-0028aa25968b",
+  "object": "chat.completion",
+  "created": 1793197398,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT En-De (newstest2014), TER)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Machine Translation, WMT En-De (newstest2014), TER). List has Machine Translation WMT’14 EN-DE BLEU, IWSLT EN-DE BLEU. Metric TER vs BLEU differs, so no match. Return original tuple verbatim. Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 94,
+    "total_tokens": 868,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

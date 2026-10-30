@@ -1,0 +1,20 @@
+{
+  "status": "RESOLVED_AFTER_USER_RELEASED_MEMORY",
+  "initial_block_archived_under": "reproducibility/attempts",
+  "successful_preload_memory": {
+    "physical_available_GiB": 6.229393005371094,
+    "commit_available_GiB": 17.39307403564453,
+    "working_set_GiB": 0.27166748046875,
+    "peak_working_set_GiB": 0.2716712951660156,
+    "private_GiB": 0.685028076171875,
+    "peak_private_GiB": 0.6851654052734375
+  },
+  "resource_policy": {
+    "minimum_physical_GiB": 4.5,
+    "minimum_commit_GiB": 7.5,
+    "cs_physical_budget_GiB": 3.5,
+    "cs_commit_budget_GiB": 6.5,
+    "concurrent_parent_api_reserve_GiB": 1.0,
+    "basis": "Conservative operational gate based on prior CPU FP32 peak working set 3.047 GiB and peak private commit 5.459 GiB, safety margins and one parent API process. Not a proven exact OOM boundary."
+  }
+}

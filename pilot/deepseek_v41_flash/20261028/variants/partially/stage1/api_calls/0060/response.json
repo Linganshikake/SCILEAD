@@ -1,0 +1,32 @@
+{
+  "id": "8262dc1e-e62d-4cdd-9af4-38bde28de32e",
+  "object": "chat.completion",
+  "created": 1793194231,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy",
+        "reasoning_content": "We need answer match input \"Intent accuracy\" to item list. Need only matched item. We need decide if any matches. List has Overall-Accuracy, Accuracy, Sent-Accuracy. \"Intent accuracy\" is likely a metric for intent classification, perhaps exact \"Accuracy\"? Need match with item in list. Since \"Intent accuracy\" not exact but semantically matches \"Accuracy\" or maybe Overall-Accuracy? The instruction says match input with one of items. If none matches say None. We need infer intended. \"Intent accuracy\" is a task-specific accuracy metric; item list includes \"Accuracy\". Probably answer \"Accuracy\". Need only matched item. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 256,
+    "completion_tokens": 134,
+    "total_tokens": 390,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

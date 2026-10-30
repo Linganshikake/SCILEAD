@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "2020.emnlp-main.152.pdf",
+  "record": 4,
+  "field": "Metric",
+  "original": "Intent accuracy",
+  "candidate_serialized": "{'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'METEOR', 'ROUGE-L', 'F1', 'EM', 'MCC', 'Spearman correlation', 'AVG', 'Score', 'V-M', 'F-NMI', 'F-S', 'F-BC'}",
+  "candidate_sha256": "a4d01adf8f8da74bba0ef5239ec7d29ed0cbd06ea29ff6495637a4cb82d11a38",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'METEOR', 'ROUGE-L', 'F1', 'EM', 'MCC', 'Spearman correlation', 'AVG', 'Score', 'V-M', 'F-NMI', 'F-S', 'F-BC'}\n\nInput: Intent accuracy\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "25ce604b9d13e8e7dac40005b0869f665283887609494dd827b7af8f109465f7"
+}

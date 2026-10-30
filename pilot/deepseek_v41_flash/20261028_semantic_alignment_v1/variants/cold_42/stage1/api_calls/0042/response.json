@@ -1,0 +1,32 @@
+{
+  "id": "668510ff-c25e-437c-8c5f-3a6ce7224098",
+  "object": "chat.completion",
+  "created": 1793196653,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Entity typing",
+        "reasoning_content": "We need answer only. Need determine if Entity typing matches one item. List includes Named Entity Recognition, Slot Filling, Intent Detection, etc. Entity typing is related but distinct task (fine-grained entity typing) not exactly NER. Semantic match? Entity typing may be considered named entity recognition? Usually entity typing is task of assigning types to entity mentions, related but distinct from NER. Requirement preserve meaningful differences. So no clear match. Output original \"Entity typing\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 344,
+    "completion_tokens": 97,
+    "total_tokens": 441,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 216
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

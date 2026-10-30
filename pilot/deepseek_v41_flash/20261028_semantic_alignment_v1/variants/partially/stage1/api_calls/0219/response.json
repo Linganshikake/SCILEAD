@@ -1,0 +1,32 @@
+{
+  "id": "dd49dd99-c394-40a6-88e7-b8aba8550532",
+  "object": "chat.completion",
+  "created": 1793197162,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer match input to item. Input \"ROUGE-L F1\". Item list has 'ROGUE-L' (misspelled ROGUE) and 'F1'. Need match likely ROGUE-L? The input is ROUGE-L F1, maybe metric combination? We must match with one item. The closest item is 'ROGUE-L' (despite typo in list). Answer only matched item. Could be \"ROGUE-L\". Need exactly item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 260,
+    "completion_tokens": 108,
+    "total_tokens": 368,
+    "prompt_tokens_details": {
+      "cached_tokens": 126
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_cache_hit_tokens": 126,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

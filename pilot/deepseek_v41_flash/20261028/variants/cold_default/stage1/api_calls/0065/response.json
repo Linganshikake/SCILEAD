@@ -1,0 +1,32 @@
+{
+  "id": "a8e0b92f-8233-419b-976d-49d9ea04ad3f",
+  "object": "chat.completion",
+  "created": 1793194215,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OntoNotes",
+        "reasoning_content": "We need answer. Need determine if input OntoNotes matches any item. List has ON4C, ON5E maybe abbreviations? But exact match? \"If input entity matches one of items\" likely exact string. OntoNotes not in list. Output entity unchanged: OntoNotes. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 295,
+    "completion_tokens": 67,
+    "total_tokens": 362,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 295
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

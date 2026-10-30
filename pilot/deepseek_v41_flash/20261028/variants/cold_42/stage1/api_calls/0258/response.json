@@ -1,0 +1,32 @@
+{
+  "id": "52245d35-1f45-4ea3-a5b3-6694e43ac08c",
+  "object": "chat.completion",
+  "created": 1793194498,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer. Need match input entity to item list if matches one item. Input \"Spoken Language Understanding (joint slot filling and intent detection)\" list has \"Joint Slot Filling and Intent Detection\", \"Slot Filling and Intent Detection\". Does it match one? We need infer exact? It says if input entity matches one of items, answer matched item. Input contains parenthetical \"joint slot filling and intent detection\" but full string not identical. Likely intended match to \"Joint Slot Filling and Intent Detection\" (case differences and extra phrase). Need output matched item. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 343,
+    "completion_tokens": 128,
+    "total_tokens": 471,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 215
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

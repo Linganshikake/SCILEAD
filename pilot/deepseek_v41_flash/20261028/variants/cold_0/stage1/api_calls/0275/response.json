@@ -1,0 +1,32 @@
+{
+  "id": "423f74aa-2b77-4141-8387-c02c046989fd",
+  "object": "chat.completion",
+  "created": 1793194514,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "QA accuracy",
+        "reasoning_content": "We need answer only matched item if input matches item. Input \"QA accuracy\" not in list? List contains Accuracy etc but not exact \"QA accuracy\". Output entity unchanged. Need no explanation. Final: QA accuracy."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 385,
+    "completion_tokens": 47,
+    "total_tokens": 432,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

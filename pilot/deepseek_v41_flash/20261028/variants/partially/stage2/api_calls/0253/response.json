@@ -1,0 +1,32 @@
+{
+  "id": "db31b4d8-4e9d-4b76-ad07-acc49b747019",
+  "object": "chat.completion",
+  "created": 1793195199,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Dialogue Act Classification, SwDA, Accuracy)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one item. Item list has (Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy). Input has SwDA not exact. String matching exact? \"If input tuple matches one of items\" likely exact. Need output tuple unchanged. Be careful punctuation. Answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 81,
+    "total_tokens": 631,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

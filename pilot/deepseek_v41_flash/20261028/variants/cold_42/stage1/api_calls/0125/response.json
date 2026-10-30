@@ -1,0 +1,32 @@
+{
+  "id": "9ee6feaa-c66d-48f9-a0ca-99c8ba81e3a6",
+  "object": "chat.completion",
+  "created": 1793194297,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English-German",
+        "reasoning_content": "We need answer. Need match item if matches. Input \"WMT En-De newstest2014\". List has \"WMT'14 English-German\" and \"WMT'14 English→German\". Need determine matches? Exact? The instruction says if input entity matches one of items in list, answer matched item. Likely semantic matching? Need infer benchmark datasets aliases. \"WMT En-De newstest2014\" corresponds to WMT'14 English-German? There are two similar: \"WMT'14 English-German\" and \"WMT'14 English→German\" both in list. Which one to choose? Input says En-De, likely English-German (with hyphen?) Item \"WMT'14 English-German\" uses hyphen. The other arrow could be translation direction. WMT En-De newstest2014 is English-German. The exact item \"WMT'14 English-German\" is likely match. Need output just matched item. Could be WMT'14 English→German because En→De? But input \"En-De\" hyphen. Let's check list includes both: \"WMT'14 English→German\" and \"WMT'14 English-German\". They may represent two datasets? In some paper, dataset names: WMT'14 English-German and WMT'14 English→German. Here input \"WMT En-De newstest2014\" probably refers to WMT'14 English-German (maybe for translation). Need select one. The match should be closest: \"WMT'14 English-German\" exact English-German. Let's answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 382,
+    "completion_tokens": 330,
+    "total_tokens": 712,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 323
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 382
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

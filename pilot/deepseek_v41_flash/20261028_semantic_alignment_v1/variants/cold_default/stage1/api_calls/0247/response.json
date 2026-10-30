@@ -1,0 +1,32 @@
+{
+  "id": "2085f29c-a24d-4156-b671-992d0370a927",
+  "object": "chat.completion",
+  "created": 1793197037,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent detection",
+        "reasoning_content": "We need answer only selected or unchanged. Input Intent detection. Candidates include Joint intent detection and slot filling. Is \"Intent detection\" match to that? Requirement preserve meaningful differences, don't guess missing experimental condition. Intent detection alone is a component, not same as joint intent detection and slot filling. No exact standalone. Could match? List has no \"Intent detection\". Need output unchanged original."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 81,
+    "total_tokens": 543,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

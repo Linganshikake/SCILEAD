@@ -1,0 +1,111 @@
+{
+  "reference": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024",
+  "changed_from_reference": [
+    {
+      "path": "variant_runtime.py",
+      "source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\variant_runtime.py",
+      "source_sha256": "22fcc67fca1e9dd1731cafc8f23ccfe03081bb5f62a56eebfaa013ee15989370",
+      "destination_sha256": "935a7b142bc682b9d23f3ec45c9d811247500d4766073e577b8caa6432ad6cd3",
+      "changes": "Provider import/credentials/endpoint; owned cache paths; mock full-branch testing; zero-event checkpoint metadata only. Alternate root uses installed adapter offline evidence."
+    },
+    {
+      "path": "fully_cs/cs_common.py",
+      "source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\fully_cs\\cs_common.py",
+      "source_sha256": "d0ac0171a2dc5e438321622f4ef316f04f9817e15dfa19897f93b4a90dacd55b",
+      "destination_sha256": "84dc8aa09e4e4c023fccc4cc5e841fd9f49a085b8b1e6df0434d1a882f5cb1ac",
+      "changes": "Owned paths, prepared source/dependency/model hash verification, Windows maxRSS fields."
+    },
+    {
+      "path": "fully_cs/run_cs.py",
+      "source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\fully_cs\\run_cs.py",
+      "source_sha256": "57df4757de29e6bf5947d7e0916f4e1037dc0085ce08969f27cc56222689a576",
+      "destination_sha256": "5a9a1918d0964a322956eb87e0a9c0209b1143a48f79c61ffa2d55bb7a01f22c",
+      "changes": "First-paper branch coverage recorded, not assumed; execution status checkpoint with maxRSS. --output-dir matches parameterized preparation."
+    },
+    {
+      "path": "test_transport.py",
+      "source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\test_transport.py",
+      "source_sha256": "7cfa391cc1086d1a700d80f9ccdb6dbbb30c10de1af0726100790fd91cb16885",
+      "destination_sha256": "5935bb08c6366a23a23930ecc8cd4dd41e7ffd414af4c505080d4f93eae0cd04",
+      "changes": "DeepSeek payload/model and owned test outputs; historical replay cases retained."
+    },
+    {
+      "path": "test_original_partially.py",
+      "source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\test_original_partially.py",
+      "source_sha256": "9c87c2f9dfdbdeb68808784ed3e3168a4bcaad3e5247954fe86288e20388d52f",
+      "destination_sha256": "0681743a29dd82d7b9ef761b647dd17152f5751a5a609353b1cfd8aadd15db61",
+      "changes": "Owned unique test output directory only."
+    },
+    {
+      "path": "test_original_cold_start.py",
+      "source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\test_original_cold_start.py",
+      "source_sha256": "4b7aa8c9de291509f91c81061f8baf6054aa7c8e1a886637f3efe2b853507228",
+      "destination_sha256": "74d805e12407bd518a52dfe2296ee37e9dd8bc44a6211f2f0b46557506d6e2b3",
+      "changes": "Owned unique test output directory only."
+    }
+  ],
+  "unchanged_runtime_functions": [
+    "read",
+    "save",
+    "sha",
+    "digest",
+    "immutable",
+    "labels_state",
+    "wire",
+    "resources",
+    "verify",
+    "durable_request",
+    "load_observer",
+    "run_original"
+  ],
+  "unchanged_transport_methods": [
+    "invoke",
+    "summary"
+  ],
+  "parsed_python_files": [
+    "offline_entry.py",
+    "prepare_variants.py",
+    "runtime_policy.py",
+    "run_offline_tests.py",
+    "test_adapters.py",
+    "test_frozen_protocol.py",
+    "test_original_cold_start.py",
+    "test_original_partially.py",
+    "test_transport.py",
+    "variant_runtime.py",
+    "fully_cs\\cs_common.py",
+    "fully_cs\\run_cs.py"
+  ],
+  "no_installs": true,
+  "no_downloads": true,
+  "no_models_loaded": true,
+  "no_credentials_read": true,
+  "original_observer_paths": [
+    "D:\\C++\\SCILEAD\\pilot\\full43_partially\\engine.py",
+    "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\engine.py"
+  ],
+  "readiness": "WAITING_FOR_COMPLETE_FULLY",
+  "run_commands": "README.md",
+  "offline_evidence": "reproducibility/offline_tests.json",
+  "review": {
+    "reviewer": "Cicero (read-only)",
+    "fixed": "Alternate preparation output directories now supported by both runtime launchers; CS import/path test red to green.",
+    "retained": "Historical unaccepted-response crash window remains fail-closed. HTTP 200 without accepted.json pauses for manual inspection, never automatically resends or promotes. Explicit regression test added.",
+    "deferred_minor_findings": []
+  },
+  "owned_file_sha256": {
+    "offline_entry.py": "76311fab4103c0e9812f483ea3d6629c9f9c302f8044014726994b5ffd60fe1c",
+    "prepare_variants.py": "7b3257156406c69dfe8ccc1e5e9b8dd769618615dc82d67f6ed798d5bb8ea0b7",
+    "runtime_policy.py": "f0e3fdf780e00a55822a869addeb25ffc6d57ddc12985568a5458b1d7fbe4d71",
+    "run_offline_tests.py": "a0abc3d1c2d077def3f00c543134893f212864705b1d5a7ee751a3fdbb05c43a",
+    "test_adapters.py": "8395aeb9f08310d6b10609239fc8a7a2dcd26b577c4c2b3cadb1bc3a41eba899",
+    "test_frozen_protocol.py": "9004b7913558791359abb57d7cc273d7ff7a7ef5d281c72d21b772635704a32c",
+    "test_original_cold_start.py": "74d805e12407bd518a52dfe2296ee37e9dd8bc44a6211f2f0b46557506d6e2b3",
+    "test_original_partially.py": "0681743a29dd82d7b9ef761b647dd17152f5751a5a609353b1cfd8aadd15db61",
+    "test_transport.py": "5935bb08c6366a23a23930ecc8cd4dd41e7ffd414af4c505080d4f93eae0cd04",
+    "variant_runtime.py": "935a7b142bc682b9d23f3ec45c9d811247500d4766073e577b8caa6432ad6cd3",
+    "fully_cs\\cs_common.py": "84dc8aa09e4e4c023fccc4cc5e841fd9f49a085b8b1e6df0434d1a882f5cb1ac",
+    "fully_cs\\run_cs.py": "5a9a1918d0964a322956eb87e0a9c0209b1143a48f79c61ffa2d55bb7a01f22c",
+    "README.md": "9d3e1601fae976a2bf77889cb6a48f077cf8be3b0069aa1d940b8628857a700a"
+  }
+}

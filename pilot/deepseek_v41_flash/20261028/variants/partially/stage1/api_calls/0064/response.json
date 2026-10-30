@@ -1,0 +1,32 @@
+{
+  "id": "41c411a1-3622-41ef-82ad-c4d06549ccc5",
+  "object": "chat.completion",
+  "created": 1793194236,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy",
+        "reasoning_content": "We need answer match input \"Intent accuracy\" to item list. Need only matched item. Items include Accuracy, Overall-Accuracy, Sent-Accuracy. \"Intent accuracy\" likely Accuracy? Need determine if exact item? None? We must match with one item. Intent accuracy is a metric similar to accuracy. Among list, \"Accuracy\" generic. But could be none because no \"Intent-Accuracy\". Need infer. The prompt: list items metrics, input Intent accuracy. Need match to one item. If none matches, say None. Since \"Intent accuracy\" not exactly in list, but conceptually accuracy. In these tasks, they expect matching semantic metric to listed. \"Intent accuracy\" could map to \"Accuracy\". However there is also \"Overall-Accuracy\" and \"Sent-Accuracy\" but intent accuracy is a type of accuracy. The closest is Accuracy. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 256,
+    "completion_tokens": 183,
+    "total_tokens": 439,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 181
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

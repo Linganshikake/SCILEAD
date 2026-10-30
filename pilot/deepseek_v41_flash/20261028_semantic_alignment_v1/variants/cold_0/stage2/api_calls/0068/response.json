@@ -1,0 +1,32 @@
+{
+  "id": "1ca907da-2b8e-4dea-b0c9-30d7d9e3bbad",
+  "object": "chat.completion",
+  "created": 1793197282,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT’14 EN-FR, BLEU)",
+        "reasoning_content": "We need answer tuple only. Need determine semantic match. Input: (Machine Translation, WMT En-Fr (newstest2014), BLEU). Candidate has (Machine Translation, WMT’14 EN-FR, BLEU). WMT En-Fr newstest2014 same as WMT'14 EN-FR. Match. Return exact candidate tuple: (Machine Translation, WMT’14 EN-FR, BLEU). Note apostrophe curly. Final only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 777,
+    "completion_tokens": 120,
+    "total_tokens": 897,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 137
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

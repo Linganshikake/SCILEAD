@@ -1,0 +1,793 @@
+{
+  "event_counts": {
+    "partially_stage1": {
+      "events": 1180,
+      "branches": {
+        "original_name_added": 94,
+        "exact_or_result": 829,
+        "existing_candidate": 251,
+        "null": 6
+      }
+    },
+    "partially_stage2": {
+      "events": 295,
+      "branches": {
+        "tuple_mapped": 9,
+        "unmatched_preserved": 248,
+        "exact_tuple": 32,
+        "null_skipped": 6
+      },
+      "answers_equal_input_tuple": 248
+    },
+    "cold_default_stage1": {
+      "events": 1180,
+      "branches": {
+        "original_name_added": 213,
+        "exact_or_result": 903,
+        "existing_candidate": 64
+      }
+    },
+    "cold_default_stage2": {
+      "events": 295,
+      "branches": {
+        "unmatched_preserved": 280,
+        "tuple_mapped": 12,
+        "exact_tuple": 3
+      },
+      "answers_equal_input_tuple": 280
+    },
+    "cold_0_stage1": {
+      "events": 1180,
+      "branches": {
+        "original_name_added": 212,
+        "exact_or_result": 899,
+        "existing_candidate": 69
+      }
+    },
+    "cold_0_stage2": {
+      "events": 295,
+      "branches": {
+        "unmatched_preserved": 282,
+        "tuple_mapped": 10,
+        "exact_tuple": 3
+      },
+      "answers_equal_input_tuple": 281
+    },
+    "cold_42_stage1": {
+      "events": 1180,
+      "branches": {
+        "original_name_added": 205,
+        "exact_or_result": 883,
+        "existing_candidate": 92
+      }
+    },
+    "cold_42_stage2": {
+      "events": 295,
+      "branches": {
+        "unmatched_preserved": 280,
+        "tuple_mapped": 12,
+        "exact_tuple": 3
+      },
+      "answers_equal_input_tuple": 280
+    }
+  },
+  "examples": [
+    {
+      "branch": "partially",
+      "event": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "ON5E",
+          "Metric": "F1",
+          "Result": "90.32"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "call": 1,
+        "normalized": {
+          "Task": "Named Entity Recognition (NER)",
+          "Dataset": "Ontonotes v5 - English",
+          "Metric": "F1",
+          "Result": "90.32"
+        },
+        "branch": "tuple_mapped",
+        "changed": true,
+        "event": 1
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\partially\\stage2\\api_calls\\0001\\response.json",
+      "response_sha256": "64de8c72c7dbddc50fa1e468b122a42fb2a33eac657a5c79756ba6277f7b33ae",
+      "content": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+      "provider_reasoning_content": "We need answer only. Need determine if input matches item list exactly? List has (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Input (Named Entity Recognition, ON5E, F1) not exact textual match? The task says if input tuple matches one of items, output matched item, else output tuple unchanged. Need assess matching perhaps semantic? Usually these benchmarks ask exact match? Input uses abbreviations: Named Entity Recognition vs Named Entity Recognition (NER); ON5E maybe Ontonotes v5 English abbreviation. Could match intended item. Need output matched item if matches. We need infer from dataset style. They present list of tuples, input tuple with aliases. They expect match by concept to the canonical tuple? In examples, input may be rephrased? Here ON5E likely abbreviation for Ontonotes v5 English. They ask if input tuple matches one item in list. It might be exact match after normalization? Need output matched item in list. I think yes: (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Need output just answer. Ensure exact from list.\n\nFinal only.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "partially",
+      "event": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN16",
+          "Metric": "F1",
+          "Result": "55.14"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Named Entity Recognition, WN16, F1)",
+        "call": 2,
+        "normalized": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN16",
+          "Metric": "F1",
+          "Result": "55.14"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 2
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\partially\\stage2\\api_calls\\0002\\response.json",
+      "response_sha256": "4278dd14d606e3e178b455d43e2163b37fa264298b554eebcb2f35a6366fb0b1",
+      "content": "(Named Entity Recognition, WN16, F1)",
+      "provider_reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly? Input (Named Entity Recognition, WN16, F1) vs list has (Named Entity Recognition (NER), WNUT-16 - English, F1) and WNUT-17 etc. Does not match exactly. Output tuple unchanged: (Named Entity Recognition, WN16, F1). Need only answer.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "partially",
+      "event": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN17",
+          "Metric": "F1",
+          "Result": "50.68"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Named Entity Recognition, WN17, F1)",
+        "call": 3,
+        "normalized": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN17",
+          "Metric": "F1",
+          "Result": "50.68"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 3
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\partially\\stage2\\api_calls\\0003\\response.json",
+      "response_sha256": "470e92e1f824777f450f624ac0514dda6b0b9fcb1335507dc764facbe5773c8e",
+      "content": "(Named Entity Recognition, WN17, F1)",
+      "provider_reasoning_content": "We need answer only. Need match input tuple to list. Input (Named Entity Recognition, WN17, F1). List has (Named Entity Recognition (NER), WNUT-17 - English, F1), not exact. Also others. Need output tuple unchanged. Ensure exact input string: \"(Named Entity Recognition, WN17, F1)\". Only answer.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_default",
+      "event": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "ON5E",
+          "Metric": "F1",
+          "Result": "90.32"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Named Entity Recognition, ON5E, F1)",
+        "call": 1,
+        "normalized": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "ON5E",
+          "Metric": "F1",
+          "Result": "90.32"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 1,
+        "run_id": "cold_default"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_default\\stage2\\api_calls\\0001\\response.json",
+      "response_sha256": "d5cb0706e9ee30b9b7636b88642c10167c412be68f4a0996c873b6f9ec3ab598",
+      "content": "(Named Entity Recognition, ON5E, F1)",
+      "provider_reasoning_content": "We need answer only. Need determine if input tuple matches item exactly. Input (Named Entity Recognition, ON5E, F1). List has (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Not exact. So output tuple unchanged. Format tuple.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_default",
+      "event": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN16",
+          "Metric": "F1",
+          "Result": "55.14"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Named Entity Recognition, WN16, F1)",
+        "call": 2,
+        "normalized": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN16",
+          "Metric": "F1",
+          "Result": "55.14"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 2,
+        "run_id": "cold_default"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_default\\stage2\\api_calls\\0002\\response.json",
+      "response_sha256": "b2bd93136ae08a967a39df4b1044109cffd6084a7159c982c1bb4719f6f09920",
+      "content": "(Named Entity Recognition, WN16, F1)",
+      "provider_reasoning_content": "We need answer only. Need match list. Input tuple (Named Entity Recognition, WN16, F1) likely typo vs (Named Entity Recognition (NER), WNUT-16 - English, F1). Exact match? It says if input tuple matches one item. It doesn't exactly match any due strings. Need output tuple unchanged. Only answer.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_default",
+      "event": {
+        "paper": "2020.findings-emnlp.378.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN17",
+          "Metric": "F1",
+          "Result": "50.68"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Named Entity Recognition, WN17, F1)",
+        "call": 3,
+        "normalized": {
+          "Task": "Named Entity Recognition",
+          "Dataset": "WN17",
+          "Metric": "F1",
+          "Result": "50.68"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 3,
+        "run_id": "cold_default"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_default\\stage2\\api_calls\\0003\\response.json",
+      "response_sha256": "ba6252c2fae4b86c663914f6f8987891038d70bcf40b32314f22c4fb0b3cadaf",
+      "content": "(Named Entity Recognition, WN17, F1)",
+      "provider_reasoning_content": "We need answer only. Need determine if input tuple matches one in list. Input (Named Entity Recognition, WN17, F1). List has (Named Entity Recognition (NER), WNUT-17 - English, F1), also WNUT-16 etc. Exact match? No because task name and dataset differ. Need output tuple unchanged. They wrote Named Entity Recognition without (NER), WN17 abbreviation. Not exact. Output input tuple unchanged. Only answer no explanation. Ensure format.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_0",
+      "event": {
+        "paper": "1811.09242.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Word Sense Induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "F-S",
+          "Result": "62.9"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Word Sense Induction, SemEval 2010 Task 14, F-S)",
+        "call": 1,
+        "normalized": {
+          "Task": "Word Sense Induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "F-S",
+          "Result": "62.9"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 1,
+        "run_id": "cold_0"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_0\\stage2\\api_calls\\0001\\response.json",
+      "response_sha256": "9bde720cf60cfcf76784de4bcd35d8fe2a437dce56bdfbbe6e94f1e11db4fad5",
+      "content": "(Word Sense Induction, SemEval 2010 Task 14, F-S)",
+      "provider_reasoning_content": "We need answer only. Need check input tuple matches list? List has Word Sense Induction, SemEval 2013 Task 13 metrics. Input is SemEval 2010 Task 14, F-S. No match. Output tuple unchanged. Need exact formatting. \n",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_0",
+      "event": {
+        "paper": "1811.09242.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Word Sense Induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "V-M",
+          "Result": "25.20"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Word Sense Induction, SemEval 2010 Task 14, V-M)",
+        "call": 2,
+        "normalized": {
+          "Task": "Word Sense Induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "V-M",
+          "Result": "25.20"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 2,
+        "run_id": "cold_0"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_0\\stage2\\api_calls\\0002\\response.json",
+      "response_sha256": "265bf2c0ac696bd127499338a8e86d937f64ffb3e2d77ef93d33bf6a6c3382c9",
+      "content": "(Word Sense Induction, SemEval 2010 Task 14, V-M)",
+      "provider_reasoning_content": "We need answer exact. Need check input tuple matches item? List has Word Sense Induction SemEval 2013 Task 13 metrics, not 2010 Task14. So output unchanged tuple. Need only answer. Format maybe \"(Word Sense Induction, SemEval 2010 Task 14, V-M)\".",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_0",
+      "event": {
+        "paper": "1811.09242.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Word Sense Induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "AVG",
+          "Result": "10.1"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Word Sense Induction, SemEval 2010 Task 14, AVG)",
+        "call": 3,
+        "normalized": {
+          "Task": "Word Sense Induction",
+          "Dataset": "SemEval 2010 Task 14",
+          "Metric": "AVG",
+          "Result": "10.1"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 3,
+        "run_id": "cold_0"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_0\\stage2\\api_calls\\0003\\response.json",
+      "response_sha256": "c186b2f190872fad33c3ae1e4cdfff1db018ab2d4a03cb645761be998faffde0",
+      "content": "(Word Sense Induction, SemEval 2010 Task 14, AVG)",
+      "provider_reasoning_content": "We need answer only. Need determine if input tuple matches any in list. Input (Word Sense Induction, SemEval 2010 Task 14, AVG). List has Word Sense Induction, SemEval 2013 Task 13, AVG and others. No match. Output tuple unchanged. Need exact format likely parentheses.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_42",
+      "event": {
+        "paper": "1908.08345.pdf",
+        "record": 1,
+        "original": {
+          "Task": "Extractive Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-1 F1",
+          "Result": "43.85"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Extractive Summarization, CNN/DailyMail, ROUGE-1 F1)",
+        "call": 1,
+        "normalized": {
+          "Task": "Extractive Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-1 F1",
+          "Result": "43.85"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 1,
+        "run_id": "cold_42"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_42\\stage2\\api_calls\\0001\\response.json",
+      "response_sha256": "b1bd149451f85e05e36c5b06216c46dc04be631cda6bc1f8cc59935a8865c857",
+      "content": "(Extractive Summarization, CNN/DailyMail, ROUGE-1 F1)",
+      "provider_reasoning_content": "We need answer only. Need determine if input tuple matches one in list. List has (Summarization, CNN/DailyMail, ROGUE-1) and others but input is (Extractive Summarization, CNN/DailyMail, ROUGE-1 F1). Not exact match. Output tuple unchanged. Note spelling ROGUE vs ROUGE. No match. Must output answer only. \n",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_42",
+      "event": {
+        "paper": "1908.08345.pdf",
+        "record": 2,
+        "original": {
+          "Task": "Extractive Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-2 F1",
+          "Result": "20.34"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Extractive Summarization, CNN/DailyMail, ROUGE-2 F1)",
+        "call": 2,
+        "normalized": {
+          "Task": "Extractive Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-2 F1",
+          "Result": "20.34"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 2,
+        "run_id": "cold_42"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_42\\stage2\\api_calls\\0002\\response.json",
+      "response_sha256": "13fc0630d303ae4ff67c43d41b35fa5033772a64e8450a7a0ff9eac74425c770",
+      "content": "(Extractive Summarization, CNN/DailyMail, ROUGE-2 F1)",
+      "provider_reasoning_content": "We need answer only tuple. Need check matches item list exactly? Input (Extractive Summarization, CNN/DailyMail, ROUGE-2 F1). List has (Summarization, CNN/DailyMail, ROGUE-2), spelled ROGUE not ROUGE, task Summarization not Extractive. No match. Output input unchanged. Must only answer.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    },
+    {
+      "branch": "cold_42",
+      "event": {
+        "paper": "1908.08345.pdf",
+        "record": 3,
+        "original": {
+          "Task": "Extractive Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-L F1",
+          "Result": "39.90"
+        },
+        "candidate_order": [
+          "(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy)",
+          "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+          "(Summarization, Gigaword, ROGUE-L)",
+          "(Summarization, CNN/DailyMail, ROGUE-L)",
+          "(Word Sense Induction, SemEval 2013 Task 13, AVG)",
+          "(Machine Translation, WMT’14 EN-DE, BLEU)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI))",
+          "(Machine Translation, IWSLT’14 EN-DE, BLEU)",
+          "(Summarization, Gigaword, ROGUE-1)",
+          "(Summarization, Gigaword, ROGUE-2)",
+          "(Summarization, CNN/DailyMail, ROGUE-2)",
+          "(Text Chunking, CoNLL-2000, F1)",
+          "(Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy)",
+          "(Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy)",
+          "(Summarization, XSum, ROGUE-2)",
+          "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+          "(Intent Detection and Slot Filling, ATIS, Accuracy)",
+          "(Intent Detection and Slot Filling, ATIS, F1)",
+          "(Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC))",
+          "(Named Entity Recognition (NER), WNUT-17 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, F1)",
+          "(Summarization, XSum, ROGUE-L)",
+          "(Summarization, XSum, ROGUE-1)",
+          "(Machine Translation, WMT’14 EN-FR, BLEU)",
+          "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+          "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+          "(Summarization, CNN/DailyMail, ROGUE-1)"
+        ],
+        "candidate_serialized": "{(Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy), (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Summarization, Gigaword, ROGUE-L), (Summarization, CNN/DailyMail, ROGUE-L), (Word Sense Induction, SemEval 2013 Task 13, AVG), (Machine Translation, WMT’14 EN-DE, BLEU), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy normalized mutual information (FNMI)), (Machine Translation, IWSLT’14 EN-DE, BLEU), (Summarization, Gigaword, ROGUE-1), (Summarization, Gigaword, ROGUE-2), (Summarization, CNN/DailyMail, ROGUE-2), (Text Chunking, CoNLL-2000, F1), (Dialogue Act Classification, ICSI Meeting Recorder Dialog Act Corpus (MRDA), Accuracy), (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy), (Summarization, XSum, ROGUE-2), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1), (Word Sense Induction, SemEval 2013 Task 13, Fuzzy B-Cubed (FBC)), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Intent Detection and Slot Filling, SNIPS, F1), (Summarization, XSum, ROGUE-L), (Summarization, XSum, ROGUE-1), (Machine Translation, WMT’14 EN-FR, BLEU), (Named Entity Recognition (NER), WNUT-16 - English, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy), (Summarization, CNN/DailyMail, ROGUE-1)}",
+        "raw_answer": "(Extractive Summarization, CNN/DailyMail, ROUGE-L F1)",
+        "call": 3,
+        "normalized": {
+          "Task": "Extractive Summarization",
+          "Dataset": "CNN/DailyMail",
+          "Metric": "ROUGE-L F1",
+          "Result": "39.90"
+        },
+        "branch": "unmatched_preserved",
+        "changed": false,
+        "event": 3,
+        "run_id": "cold_42"
+      },
+      "response_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\variants\\cold_42\\stage2\\api_calls\\0003\\response.json",
+      "response_sha256": "81439e4574ca532daa2b68ce72aeb29846aee08cd692d8ffd470f8674259b633",
+      "content": "(Extractive Summarization, CNN/DailyMail, ROUGE-L F1)",
+      "provider_reasoning_content": "We need answer only. Need compare exact tuple? Input (Extractive Summarization, CNN/DailyMail, ROUGE-L F1). List has Summarization CNN/DailyMail ROGUE-L etc. Not exact. Need output tuple unchanged. Ensure no explanation.",
+      "note": "原始返回文本，仅作离线行为核查；不用于修改预测。"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "0c6e7e12-7576-4c9d-a794-774ae3837080",
+  "object": "chat.completion",
+  "created": 1793194521,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Penn Treebank WSJ",
+        "reasoning_content": "We need answer match item if exact? Input \"Wall Street Journal (WSJ) portion of Penn Treebank\" not exact list, but list has \"WSJ\", \"Penn Treebank (PTB)\", \"Penn Treebank WSJ\". Need determine if input entity matches one item. Instruction: \"If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it.\" Need infer matching semantic? This is entity linking to dataset names. Input describes WSJ portion of Penn Treebank. Likely matches \"Penn Treebank WSJ\" or \"WSJ\". Need pick exact canonical in list. \"Wall Street Journal (WSJ) portion of Penn Treebank\" = Penn Treebank WSJ (dataset). Item list includes \"Penn Treebank WSJ\". Also \"WSJ\" alone. Which is matched? We need output matched item. Since phrase contains \"Wall Street Journal (WSJ)\" and \"Penn Treebank\", canonical \"Penn Treebank WSJ\" seems best. Check list has \"Penn Treebank (PTB)\" and \"Penn Treebank WSJ\". Input \"Wall Street Journal (WSJ) portion of Penn Treebank\" exactly describes \"Penn Treebank WSJ\" (PTB WSJ). So answer should be \"Penn Treebank WSJ\". Need no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 737,
+    "completion_tokens": 288,
+    "total_tokens": 1025,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 282
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 353
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

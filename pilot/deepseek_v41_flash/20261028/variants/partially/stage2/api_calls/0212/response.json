@@ -1,0 +1,32 @@
+{
+  "id": "58a0f755-588e-4e10-94af-1db07a68c1ae",
+  "object": "chat.completion",
+  "created": 1793195143,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Newsroom, ROGUE-1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list exactly. Item list contains tuples with \"Summarization\" not \"Abstractive Summarization\". Newsroom not present. Output unchanged tuple. Need format like (Abstractive Summarization, Newsroom, ROGUE-1). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 78,
+    "total_tokens": 632,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

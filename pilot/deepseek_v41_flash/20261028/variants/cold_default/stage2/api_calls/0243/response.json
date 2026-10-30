@@ -1,0 +1,32 @@
+{
+  "id": "dbe5da9f-8136-43cc-9752-9d8431c1e32e",
+  "object": "chat.completion",
+  "created": 1793194873,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NEWSROOM, ROUGE-1)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any in list. It is (Abstractive Summarization, NEWSROOM, ROUGE-1). List has summarization entries with ROGUE spelling, domains Gigaword/CNN/XSum, none NEWSROOM, task says Summarization not Abstractive Summarization. No match. Output tuple unchanged. Need exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 95,
+    "total_tokens": 650,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

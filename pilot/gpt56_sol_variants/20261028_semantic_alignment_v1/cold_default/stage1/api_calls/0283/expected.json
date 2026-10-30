@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "1806.03489.pdf",
+  "record": 1,
+  "field": "Dataset",
+  "original": "CoNLL-2003 test set",
+  "candidate_serialized": "{'QQP', 'MRPC', 'ATIS', 'BC5CDR', 'WikiHow', 'ReCoRD', 'NEWSROOM', 'Snips', 'ON4C', 'CoNLL-2002 Dutch', 'SQuAD development set', 'QNLI', 'SQuAD 2.0', 'MNLI mismatched', 'STS-B', 'TACRED', 'ELI5', 'CoNLL-2002 Spanish', 'CoNLL-2000 Chunking', 'CNN/DailyMail', 'CoNLL++', 'ON5E', 'GLUE', 'WMT14 En→Fr', 'RE', 'BIGPATENT', 'WikiText-2 (WT2)', 'Reddit TIFU', 'WNUT 2016', 'CoNLL-2003 NER', 'Multimodal', 'AESLC', 'CBS SciTech News', 'BillSum', 'MNLI', 'WMT2014 En-De', 'CoLA', 'WMT16 Romanian-English (RO-EN)', 'CoNLL-2003 German', 'SQuAD 1.1', 'Gigaword', 'CoNLL-2003', 'ConvAI2', 'SST-2', 'Multi-News', 'WN16', 'WE', 'arXiv', 'E-commerce', 'CoQA development set', 'PubMed', 'WikiText-103 (WT103)', 'OntoNotes 5.0', 'Penn Treebank (PTB)', 'NCBI Disease', 'WSJ', 'IWSLT2014 De-En', 'Open Entity', 'WNLI', 'SwDA', 'MRDA', 'RTE', 'DSTC7', 'XSum', 'WN17', 'AX', 'MNLI matched'}",
+  "candidate_sha256": "08d226e7c07caee7a2496e94e41fc01e4774442b7488eacb9500e7c92e662e3d",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'QQP', 'MRPC', 'ATIS', 'BC5CDR', 'WikiHow', 'ReCoRD', 'NEWSROOM', 'Snips', 'ON4C', 'CoNLL-2002 Dutch', 'SQuAD development set', 'QNLI', 'SQuAD 2.0', 'MNLI mismatched', 'STS-B', 'TACRED', 'ELI5', 'CoNLL-2002 Spanish', 'CoNLL-2000 Chunking', 'CNN/DailyMail', 'CoNLL++', 'ON5E', 'GLUE', 'WMT14 En→Fr', 'RE', 'BIGPATENT', 'WikiText-2 (WT2)', 'Reddit TIFU', 'WNUT 2016', 'CoNLL-2003 NER', 'Multimodal', 'AESLC', 'CBS SciTech News', 'BillSum', 'MNLI', 'WMT2014 En-De', 'CoLA', 'WMT16 Romanian-English (RO-EN)', 'CoNLL-2003 German', 'SQuAD 1.1', 'Gigaword', 'CoNLL-2003', 'ConvAI2', 'SST-2', 'Multi-News', 'WN16', 'WE', 'arXiv', 'E-commerce', 'CoQA development set', 'PubMed', 'WikiText-103 (WT103)', 'OntoNotes 5.0', 'Penn Treebank (PTB)', 'NCBI Disease', 'WSJ', 'IWSLT2014 De-En', 'Open Entity', 'WNLI', 'SwDA', 'MRDA', 'RTE', 'DSTC7', 'XSum', 'WN17', 'AX', 'MNLI matched'}\n\nInput: CoNLL-2003 test set\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "16ef44bc687c5d62f1bccd298d5c8fc12629edf06ade67e28207b07f08c68763"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "4df06676-b9ed-40d9-89dc-de44ac5af525",
+  "object": "chat.completion",
+  "created": 1793198091,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(GLUE Benchmark, GLUE QQP, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (GLUE Benchmark, GLUE QQP, F1). List has no GLUE. So return original. Need output exact tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 56,
+    "total_tokens": 826,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

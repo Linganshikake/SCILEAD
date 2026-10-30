@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\fully_cs\run_cs.py", line 74, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\fully_cs\run_cs.py", line 10, in main
+    import torch
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\torch\__init__.py", line 236, in <module>
+    _load_global_deps()
+  File "D:\miniconda3\envs\scilead\Lib\site-packages\torch\__init__.py", line 168, in _load_global_deps
+    if _running_with_deploy() or platform.system() == 'Windows':
+                                 ^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 926, in system
+    return uname().system
+           ^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 861, in uname
+    release, version, csd, ptype = win32_ver()
+                                   ^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 371, in win32_ver
+    major, minor, build = map(int, _syscmd_ver()[2].split('.'))
+                                   ^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\platform.py", line 284, in _syscmd_ver
+    info = subprocess.check_output(cmd,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 992, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 1359, in _get_handles
+    p2cread = msvcrt.get_osfhandle(self._get_devnull())
+                                   ^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\subprocess.py", line 1137, in _get_devnull
+    self._devnull = os.open(os.devnull, os.O_RDWR)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\fully_cs\cs_common.py", line 43, in guard
+    if writing and not allowed(path):raise RuntimeError('Write outside owned branch prohibited: '+str(path))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Write outside owned branch prohibited: nul

@@ -1,0 +1,32 @@
+{
+  "id": "e5e4039a-c50e-460c-8f0b-d4068c01d7ec",
+  "object": "chat.completion",
+  "created": 1793197343,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint intent detection and slot filling",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine semantic match. Input: \"Spoken Language Understanding (joint slot filling and intent detection)\" Candidate list has \"Joint intent detection and slot filling\". Also \"Slot filling\", \"Intent detection\". The input phrase says joint slot filling and intent detection, which matches candidate \"Joint intent detection and slot filling\" semantically (order reversed). But also prefix Spoken Language Understanding. Task is joint intent detection and slot filling, commonly SLU. Candidate exact semantic match. Need output item exactly as written in list: \"Joint intent detection and slot filling\". No explanation. Ensure no quotes? User says output selected item without quotes, explanation or extra formatting. final."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 512,
+    "completion_tokens": 149,
+    "total_tokens": 661,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

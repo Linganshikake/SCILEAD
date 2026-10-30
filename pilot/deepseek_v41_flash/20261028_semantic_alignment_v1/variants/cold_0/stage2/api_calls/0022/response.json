@@ -1,0 +1,32 @@
+{
+  "id": "748eda77-0558-458d-97f6-6cddfc0799ec",
+  "object": "chat.completion",
+  "created": 1793197217,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Question Generation, SQuAD, BLEU-4)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed semantically. Input (Question Generation, SQuAD, BLEU-4). List has no Question Generation, no SQuAD. So output original tuple verbatim. Need only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 67,
+    "total_tokens": 838,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

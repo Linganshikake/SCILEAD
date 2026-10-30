@@ -1,0 +1,32 @@
+{
+  "id": "dc44a301-98bd-4446-ab80-978c49fdce5e",
+  "object": "chat.completion",
+  "created": 1793194177,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer only matched item or input unchanged. Need determine if input matches item list. List has \"Joint Slot Filling and Intent Detection\". Input \"Joint intent detection and slot filling\". It's same concept but order/case differs. Need decide matching likely semantic? Instructions: \"If input entity matches one of items in list, answer matched item. Else output entity without changing it.\" They likely expect canonical item if match. Exact? The input is rephrased. It matches item semantically \"Joint Slot Filling and Intent Detection\". We should output that exact list item. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 150,
+    "completion_tokens": 128,
+    "total_tokens": 278,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

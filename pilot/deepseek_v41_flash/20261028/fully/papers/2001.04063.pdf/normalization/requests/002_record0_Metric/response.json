@@ -1,0 +1,32 @@
+{
+  "id": "82289edf-b215-45f9-8d1c-7bed10a9ad1c",
+  "object": "chat.completion",
+  "created": 1793193628,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match input ROUGE-1 with list item. List has 'ROGUE-1' likely typo variant. Need matched item exactly as in list. Input ROUGE-1, item ROGUE-1 (with G) is intended match? Need decide. They ask match input with one item; if none matches say None. Is ROUGE-1 same as ROGUE-1? Likely typo in list. We should output matched item in list exactly: ROGUE-1. Since semantic intended. Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 125,
+    "total_tokens": 384,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "5d91fa5c-ff74-46af-a13a-1687bfd86a01",
+  "object": "chat.completion",
+  "created": 1793197237,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Google Billion Word (test)",
+        "reasoning_content": "We need answer matched or unchanged. Need compare input \"Google Billion Word (test)\" to list. Candidates: Google Billion Word, Google Billion Word (valid). Test likely distinct split? Semantic matching preserve split. List has Google Billion Word and Google Billion Word (valid). Input test is not valid. Is there exact candidate \"Google Billion Word\" may be standard task without split; but preserving split, if test is a split variant not listed? Need decide. The instruction: If input matches one item output matched; else unchanged. We must not merge distinct split. Candidate Google Billion Word might denote corpus generally, but input explicitly test split. Does it match general corpus? They say Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because names similar. So split \"test\" differs from unspecified candidate? The item \"Google Billion Word (valid)\" indicates splits are candidates. \"Google Billion Word (test)\" not listed. Could match \"Google Billion Word\" as base entity? But because split matters, likely no unambiguous match; output unchanged. Need only selected or unchanged. Final: Google Billion Word (test)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 844,
+    "completion_tokens": 242,
+    "total_tokens": 1086,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 235
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 460
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

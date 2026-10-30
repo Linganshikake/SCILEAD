@@ -1,0 +1,42 @@
+--- D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\fully_cs\run_cs.py
++++ D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028\variants\fully_cs\run_cs.py
+@@ -1,6 +1,13 @@
+ """Unmodified official CS main with local CPU loading, diagnostic hooks and checkpoints."""
+ import argparse,inspect,time,types
+ from cs_common import *
++
++def configure_output(output_dir):
++    global RUN
++    import cs_common as common
++    root=Path(output_dir).resolve();owned=Path(__file__).resolve().parents[1]
++    if not root.is_relative_to(owned):raise ValueError('Write outside variants prohibited')
++    RUN=root/'fully_cs';common.RUN=RUN
+ def main():
+     setup();assert os.environ.get('PYTHONHASHSEED')=='0';verify();config=read(RUN/'config.json');start=time.monotonic()
+     # Owned-path filesystem and credential guards are installed by setup().
+@@ -63,7 +70,7 @@
+         work=RUN/'work'/('pilot' if not (RUN/'pilot_pass.json').exists() else 'remaining');work.mkdir(exist_ok=True);save(work/'output.json',{p:raw[p] for p in papers})
+         official.main(types.SimpleNamespace(seed=0,gold_tdm_path=config['gold_path'],tdm_output_path=work.as_posix()+'/'))
+         if not (RUN/'pilot_pass.json').exists():
+-            sample=read(RUN/'normalization/papers'/Path(papers[0]).stem/'mapping.json');assert any(x['exact_match'] for x in sample) and any(not x['exact_match'] for x in sample);save(RUN/'pilot_pass.json',{'paper':papers[0],'status':'PASS','original_main_executed':True,'exact_and_cs_branches_tested':True,'top1_scores_and_selections_checked':True});print('PILOT_PASS_CONTINUE_ALL',flush=True)
++            sample=read(RUN/'normalization/papers'/Path(papers[0]).stem/'mapping.json');save(RUN/'pilot_pass.json',{'paper':papers[0],'status':'PASS','original_main_executed':True,'exact_and_cs_branches_tested':any(x['exact_match'] for x in sample) and any(not x['exact_match'] for x in sample),'top1_scores_and_selections_checked':True});print('PILOT_PASS_CONTINUE_ALL',flush=True)
+     output={};audits=[]
+     for paper in raw:
+         assert completed(paper);d=RUN/'normalization/papers'/Path(paper).stem;output.update(read(d/'output.json'));audits+=read(d/'mapping.json')
+@@ -71,4 +78,15 @@
+     with (RUN/'normalization/mapping_audit.jsonl').open('w',encoding='utf-8') as f:
+         for x in audits:f.write(json.dumps(x,ensure_ascii=False)+'\n')
+     verify();save(RUN/'normalization/summary.json',{'status':'COMPLETE','papers':len(output),'records':sum(len(x['normalized_output']) for x in output.values()),'exact_fields':sum(x['exact_match'] for x in audits),'cs_fields':sum(not x['exact_match'] for x in audits),'top1_tie_cases':sum(len(x['top1_tied_corpus_ids'])>1 for x in audits),'seconds':time.monotonic()-start,'memory':memory(),'new_llm_requests':0,'official_main_source_sha256':sha(REPO/'tdm_embedding_normalization.py')});print('ALL_COMPLETE',flush=True)
+-if __name__=='__main__':main()
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--output-dir',type=Path,default=RUN.parent)
++    configure_output(parser.parse_args().output_dir)
++    try:
++        save(RUN/'execution_status.json',{'status':'RUNNING','pid':os.getpid(),'memory':memory(),'execution_order':'CS alone, then API branches'})
++        main()
++    except BaseException as error:
++        save(RUN/'execution_status.json',{'status':'BLOCKED_OR_FAILED','error_type':type(error).__name__,'memory':memory()})
++        raise
++    else:
++        save(RUN/'execution_status.json',{'status':'COMPLETE','memory':memory(),'result':str(RUN/'normalization/embedding_normalized_output.json')})

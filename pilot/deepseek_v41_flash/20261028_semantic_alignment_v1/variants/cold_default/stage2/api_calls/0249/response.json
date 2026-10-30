@@ -1,0 +1,32 @@
+{
+  "id": "8ce4787a-32d1-408e-bce3-fe54c80abc55",
+  "object": "chat.completion",
+  "created": 1793197589,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: (Abstractive Summarization, CNN/DailyMail, ROUGE-1). List has Summarization, CNN/DailyMail, ROGUE-1 etc. Need match metric ROUGE-1 vs ROGUE-1 typo? They use ROGUE consistently likely misspelling of ROUGE. Task Abstractive Summarization matches Summarization? Dataset same CNN/DailyMail, Metric ROUGE-1 matches ROGUE-1. Need return listed tuple verbatim: (Summarization, CNN/DailyMail, ROGUE-1). Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 149,
+    "total_tokens": 923,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 133
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

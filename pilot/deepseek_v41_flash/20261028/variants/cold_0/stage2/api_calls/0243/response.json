@@ -1,0 +1,32 @@
+{
+  "id": "d3ad050c-92ff-41c2-9190-b9c20c061a39",
+  "object": "chat.completion",
+  "created": 1793194863,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, PubMed, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly. Input (Summarization, PubMed, ROUGE-1 F1). List has Summarization with Gigaword, CNN/DailyMail, XSum metrics ROGUE etc. No PubMed. Output tuple unchanged. Need exact formatting."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 78,
+    "total_tokens": 631,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "d3f2efe9-dcc7-48de-b70f-cb2c24b3d55b",
+  "object": "chat.completion",
+  "created": 1793194786,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any in list. Input: (Abstractive Summarization, Gigaword, ROUGE-L). List has (Summarization, Gigaword, ROGUE-L) etc. Exact match? \"Abstractive Summarization\" not \"Summarization\"; \"ROUGE-L\" vs \"ROGUE-L\" (spelling different). No match. Output input unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 104,
+    "total_tokens": 658,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

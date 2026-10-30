@@ -1,0 +1,32 @@
+{
+  "id": "d1e74d53-8c73-41c1-831c-36242fb264ea",
+  "object": "chat.completion",
+  "created": 1793196973,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "LAS",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if LAS matches any candidate. List has UAS, no LAS. LAS is labeled attachment score, distinct from UAS (unlabeled attachment score). Not in list. Output LAS. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 445,
+    "completion_tokens": 55,
+    "total_tokens": 500,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 189
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

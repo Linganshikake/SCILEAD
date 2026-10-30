@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "2105.03654.pdf",
+  "record": 8,
+  "field": "Metric",
+  "original": "Entity-level F1",
+  "candidate_serialized": "{'Test Perplexity', 'Spearman correlation', 'Average length', 'V-measure', 'F-score', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'Aggregate score', 'Geometric mean (AVG)', 'Div-1', 'Fuzzy normalized mutual information (F-NMI)', 'Fuzzy B-Cubed F-score (F-BC)', 'BLEU-4', 'Sense-number error δ(#S)', 'ROUGE-L', 'Matthews correlation coefficient', 'BLEU', 'Accuracy', 'Div-2', 'Entropy-4', 'NIST-4', 'Exact Match', 'Mismatched accuracy', 'Validation Perplexity'}",
+  "candidate_sha256": "b849f67714f2069babdfa13dc5329f12c2333b570d3f5bf2fe1c4af4d5348108",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Test Perplexity', 'Spearman correlation', 'Average length', 'V-measure', 'F-score', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'Aggregate score', 'Geometric mean (AVG)', 'Div-1', 'Fuzzy normalized mutual information (F-NMI)', 'Fuzzy B-Cubed F-score (F-BC)', 'BLEU-4', 'Sense-number error δ(#S)', 'ROUGE-L', 'Matthews correlation coefficient', 'BLEU', 'Accuracy', 'Div-2', 'Entropy-4', 'NIST-4', 'Exact Match', 'Mismatched accuracy', 'Validation Perplexity'}\n\nInput: Entity-level F1\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "f80303d6ecd53ecf293ef4fe17cf02b666b0eb7686c4cceb327425b203107d11"
+}

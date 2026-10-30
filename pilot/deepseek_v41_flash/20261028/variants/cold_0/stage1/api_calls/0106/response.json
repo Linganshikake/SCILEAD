@@ -1,0 +1,32 @@
+{
+  "id": "d0b5c8f6-df5f-4882-b4b9-7e27e6a67f8d",
+  "object": "chat.completion",
+  "created": 1793194265,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent detection",
+        "reasoning_content": "We need answer. Need match input entity \"Intent detection\" to list. List has \"Joint intent detection and slot filling\", \"Slot Filling and Intent Detection\". Exact matches? Input \"Intent detection\" does not exactly match any item (case? no). Instruction: if matches one of items, answer matched item. Else output entity unchanged. So output \"Intent detection\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 202,
+    "completion_tokens": 82,
+    "total_tokens": 284,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 202
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

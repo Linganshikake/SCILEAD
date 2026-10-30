@@ -1,0 +1,32 @@
+{
+  "id": "e44a9e1d-4574-4aa5-bdcc-8971152a40de",
+  "object": "chat.completion",
+  "created": 1793194283,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English→French",
+        "reasoning_content": "We need answer match item if matches. List has \"WMT'14 English→French\" with arrow. Input uses hyphen \"WMT'14 English-French\". Need determine if matches one item. Usually exact? Entity maybe normalized? Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. \"matches\" could semantic? Need output matched item likely \"WMT'14 English→French\". Need be careful. Input \"WMT'14 English-French\" differs arrow vs hyphen. Could be considered same entity. We need output matched item exactly list if matches. I think yes. Final only entity."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 140,
+    "total_tokens": 512,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 244
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

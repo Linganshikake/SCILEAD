@@ -1,0 +1,32 @@
+{
+  "id": "27c486ef-11ee-47cd-8975-2d5a9ce7f357",
+  "object": "chat.completion",
+  "created": 1793197582,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Extractive Summarization, CNN/DailyMail, ROUGE-L F1). List has Summarization, CNN/DailyMail, ROGUE-L etc. Need assess. Task Extractive Summarization vs Summarization: more specific wording may match broader standard task if same underlying benchmark and dataset/metric compatible. CNN/DailyMail, ROGUE-L corresponds ROUGE-L (misspelled ROGUE). Metric input \"ROUGE-L F1\" vs \"ROGUE-L\" likely same? Need decide. Candidate list includes (Summarization, CNN/DailyMail, ROGUE-L). Also ROGUE-1/2. Extractive summarization on CNN/DailyMail with ROUGE-L is standard. It matches. Return exact listed tuple: (Summarization, CNN/DailyMail, ROGUE-L). Need no explanation. Ensure verbatim."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 775,
+    "completion_tokens": 208,
+    "total_tokens": 983,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 193
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 135
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

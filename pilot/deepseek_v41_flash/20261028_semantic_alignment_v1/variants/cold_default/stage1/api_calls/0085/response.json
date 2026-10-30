@@ -1,0 +1,32 @@
+{
+  "id": "b064a670-62f8-4a7b-b43d-d7dc07539311",
+  "object": "chat.completion",
+  "created": 1793196729,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL++",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine if CoNLL++ matches candidate. List includes CoNLL00, CoNLL-2002 Dutch, CoNLL-2002 Spanish, CoNLL-2003 German, CoNLL-2003, CoNLL03 NER. \"CoNLL++\" maybe distinct? Need semantic matching requirements, preserve meaningful differences in dataset identity, version, split, metric. CoNLL++ likely a specific variant? Need decide. Candidates: CoNLL-2003 maybe? But CoNLL++ is not same as CoNLL-2003. It's likely new entity. Since ambiguous? Output unchanged CoNLL++. Need only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 487,
+    "completion_tokens": 152,
+    "total_tokens": 639,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 147
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 231
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

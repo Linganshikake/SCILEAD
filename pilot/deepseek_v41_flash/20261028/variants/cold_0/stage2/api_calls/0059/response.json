@@ -1,0 +1,32 @@
+{
+  "id": "0a3b29be-9b4d-47a8-8799-b3000d2f0d4b",
+  "object": "chat.completion",
+  "created": 1793194616,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot Filling and Intent Detection, ATIS, Overall (Acc))",
+        "reasoning_content": "We need answer only. Need check if input tuple matches item list. Input (Slot Filling and Intent Detection, ATIS, Overall (Acc)) vs list contains (Intent Detection and Slot Filling, ATIS, Accuracy), (Intent Detection and Slot Filling, ATIS, F1). No exact match. Must output tuple unchanged. Ensure exact text."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 89,
+    "total_tokens": 643,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

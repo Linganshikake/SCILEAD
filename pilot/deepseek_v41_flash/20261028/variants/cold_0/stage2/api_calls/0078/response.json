@@ -1,0 +1,32 @@
+{
+  "id": "143d9495-f33a-4a22-8455-9f2fb9912c0e",
+  "object": "chat.completion",
+  "created": 1793194644,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent detection, ATIS, Accuracy)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. Input: (Intent detection, ATIS, Accuracy). List has (Intent Detection and Slot Filling, ATIS, Accuracy), not exact. Also case? \"Intent detection\" vs \"Intent Detection and Slot Filling\". No match. Output tuple unchanged. Need exact formatting. (Intent detection, ATIS, Accuracy)"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 548,
+    "completion_tokens": 87,
+    "total_tokens": 635,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 164
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

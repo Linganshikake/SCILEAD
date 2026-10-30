@@ -1,0 +1,32 @@
+{
+  "id": "370b47b7-4ccd-4bb0-bfef-3b8070d17c49",
+  "object": "chat.completion",
+  "created": 1793197524,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-2)",
+        "reasoning_content": "We need match input (Summarization, CNN/DailyMail, ROUGE-2 F1) to list. List has summarization CNN/DailyMail ROGUE-2 (typo ROGUE). ROGUE-2 likely ROUGE-2. Metric \"ROUGE-2 F1\" denotes same as ROGUE-2? Need semantic matching. Candidate: (Summarization, CNN/DailyMail, ROGUE-2). Input metric ROUGE-2 F1. ROGUE is typo for ROUGE. F1? ROUGE-2 usually F1 measure. Should match. Also candidates CNN/DailyMail ROGUE-L, ROGUE-1. Only ROUGE-2 matches. Return listed tuple verbatim: (Summarization, CNN/DailyMail, ROGUE-2). Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 199,
+    "total_tokens": 973,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 183
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

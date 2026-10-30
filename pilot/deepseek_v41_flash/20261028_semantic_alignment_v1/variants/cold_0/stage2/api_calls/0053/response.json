@@ -1,0 +1,32 @@
+{
+  "id": "caae26b4-a894-4fa3-9e55-b2a06ee8e5da",
+  "object": "chat.completion",
+  "created": 1793197258,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, Multimodal, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input NER, Multimodal, F1. List NER candidates: Ontonotes v5 English F1, CoNLL-2003 English F1, WNUT-17 English F1, WNUT-16 English F1. Dataset Multimodal not same as any. No match. Return original tuple verbatim. Need format as tuple. (Named Entity Recognition, Multimodal, F1). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 118,
+    "total_tokens": 887,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

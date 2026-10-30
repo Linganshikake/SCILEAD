@@ -1,0 +1,32 @@
+{
+  "id": "77340f42-fabb-4f79-9007-13f563042c06",
+  "object": "chat.completion",
+  "created": 1793194277,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match item. List has 'ROGUE-1' misspelled. Input ROUGE-1. Need match likely typo in list 'ROGUE-1'. We should output matched item exactly as list? The instruction answer only matched item in list. \"ROGUE-1\" is item. But input ROUGE-1 matches semantically? There is 'ROGUE-1' which is typo for ROUGE-1. Need decide. Since none exact due misspelling, but likely intended. We output 'ROGUE-1'. No explanations."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 131,
+    "total_tokens": 390,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 125
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

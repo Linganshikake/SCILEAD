@@ -1,0 +1,32 @@
+{
+  "id": "78c63aca-ca8a-4b2f-9d0a-e744f40b00ec",
+  "object": "chat.completion",
+  "created": 1793194202,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MRPC",
+        "reasoning_content": "We need answer only matched item if in list else entity unchanged. MRPC not in list. Output MRPC."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 252,
+    "completion_tokens": 26,
+    "total_tokens": 278,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 23
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 252
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

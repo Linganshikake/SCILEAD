@@ -1,0 +1,32 @@
+{
+  "id": "1403b117-9e4c-462a-a35b-42edeae56baf",
+  "object": "chat.completion",
+  "created": 1793194476,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer only matched item. Need match \"ROUGE-1 F1\" to list. There is 'ROGUE-1' misspelled ROGUE not ROUGE? List has 'ROGUE-1', 'ROGUE-L', 'ROGUE-2'. Input ROUGE-1 F1. It likely refers ROUGE-1 F1 metric. Item list has ROGUE-1 (typo of ROUGE-1). Also has F1. Need choose item. Input specific \"ROUGE-1 F1\" maybe matches ROGUE-1? The item list item is 'ROGUE-1' (misspelled). Since it's the only close. Could answer 'ROGUE-1'. Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 174,
+    "total_tokens": 435,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 168
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

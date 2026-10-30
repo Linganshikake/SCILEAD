@@ -1,0 +1,32 @@
+{
+  "id": "d31808d5-5469-4969-bfd8-02fef66b82fe",
+  "object": "chat.completion",
+  "created": 1793197298,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: Named Entity Recognition, WN16, Entity-level F1 score. Candidates NER WNUT-16 - English, F1 likely match. Need exact listed tuple verbatim: (Named Entity Recognition (NER), WNUT-16 - English, F1). Check dataset WN16 abbreviation WNUT-16. Task NER. Metric Entity-level F1 score = F1 (NER F1). So output candidate verbatim. \nNeed ensure no other candidate? WNUT-17 no. Thus."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 138,
+    "total_tokens": 910,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

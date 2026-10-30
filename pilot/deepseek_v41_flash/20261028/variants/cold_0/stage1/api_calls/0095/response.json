@@ -1,0 +1,32 @@
+{
+  "id": "6be4990e-a4bf-420a-82f1-de752400cb0c",
+  "object": "chat.completion",
+  "created": 1793194251,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT En-Fr (newstest2014)",
+        "reasoning_content": "We need answer exact matched item if input matches one item in list. Input: WMT En-Fr (newstest2014). List has WMT En-De (newstest2014), not En-Fr. So no match, output entity unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 323,
+    "completion_tokens": 71,
+    "total_tokens": 394,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 323
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

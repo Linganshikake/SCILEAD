@@ -1,0 +1,32 @@
+{
+  "id": "d6bc3075-53d7-4667-8924-0a60fb8296f1",
+  "object": "chat.completion",
+  "created": 1793195139,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROGUE-2)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any list. List has (Summarization, Gigaword, ROGUE-2) but input is (Abstractive Summarization, Gigaword, ROGUE-2). Task name differs. So no match, output input unchanged. Need exact tuple. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 83,
+    "total_tokens": 638,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

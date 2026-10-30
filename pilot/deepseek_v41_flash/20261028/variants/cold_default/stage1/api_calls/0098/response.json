@@ -1,0 +1,32 @@
+{
+  "id": "6d3d8f39-9eef-46d7-b221-c974e9574648",
+  "object": "chat.completion",
+  "created": 1793194256,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE CoLA",
+        "reasoning_content": "We need answer matched item if exact? Input entity \"GLUE CoLA\". List contains 'CoLA' and many GLUE variants but not 'GLUE CoLA'. Instruction: if input entity matches one item, answer matched item; else output entity unchanged. It doesn't match exactly any listed. Output \"GLUE CoLA\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 389,
+    "completion_tokens": 77,
+    "total_tokens": 466,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

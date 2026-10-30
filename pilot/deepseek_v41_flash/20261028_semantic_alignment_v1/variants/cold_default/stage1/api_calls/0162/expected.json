@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "1912.08777.pdf",
+  "record": 19,
+  "field": "Dataset",
+  "original": "Reddit TIFU",
+  "candidate_serialized": "{'QQP', 'MRPC', 'MNLI-mm', 'ATIS', 'BC5CDR', 'WikiHow', 'ReCoRD', 'NEWSROOM', 'Snips', 'ON4C', 'CoNLL00', 'CoNLL-2002 Dutch', 'QNLI', 'SQuAD 2.0', 'ELI5', 'STS-B', 'TACRED', 'NCBI-disease', 'CoNLL-2002 Spanish', 'CNN/DailyMail', 'CoNLL++', 'ON5E', 'GLUE', 'RE', 'WMT16 RO-EN', 'GLUE MNLI', 'OntoNotes', 'CBS SciTech News', 'MNLI', 'CoQA', 'CoLA', 'CoNLL-2003 German', 'CoNLL-2003', 'SQuAD 1.1', 'CoNLL03 NER', 'Gigaword', 'SST-2', 'ConvAI2', 'WN16', 'WE', 'Multi-News', 'E-commerce', 'WSJ', 'PTB', 'Open Entity', 'WNLI', 'SwDA', 'MRDA', 'RTE', 'XSum', 'WN17', 'AX', 'SQuAD', 'MNLI-m'}",
+  "candidate_sha256": "4b548f2e93959de5b7d80d61bfc2c4bd60402f9deeb33616058c0b1267ed1e81",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'QQP', 'MRPC', 'MNLI-mm', 'ATIS', 'BC5CDR', 'WikiHow', 'ReCoRD', 'NEWSROOM', 'Snips', 'ON4C', 'CoNLL00', 'CoNLL-2002 Dutch', 'QNLI', 'SQuAD 2.0', 'ELI5', 'STS-B', 'TACRED', 'NCBI-disease', 'CoNLL-2002 Spanish', 'CNN/DailyMail', 'CoNLL++', 'ON5E', 'GLUE', 'RE', 'WMT16 RO-EN', 'GLUE MNLI', 'OntoNotes', 'CBS SciTech News', 'MNLI', 'CoQA', 'CoLA', 'CoNLL-2003 German', 'CoNLL-2003', 'SQuAD 1.1', 'CoNLL03 NER', 'Gigaword', 'SST-2', 'ConvAI2', 'WN16', 'WE', 'Multi-News', 'E-commerce', 'WSJ', 'PTB', 'Open Entity', 'WNLI', 'SwDA', 'MRDA', 'RTE', 'XSum', 'WN17', 'AX', 'SQuAD', 'MNLI-m'}\n\nInput: Reddit TIFU\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "0a54de3841779f43d02aad88f8fa194331a65aa2004c0574f70fa7b521543ade"
+}

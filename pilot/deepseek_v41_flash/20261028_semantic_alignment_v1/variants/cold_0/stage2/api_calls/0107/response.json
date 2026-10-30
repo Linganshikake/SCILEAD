@@ -1,0 +1,32 @@
+{
+  "id": "2e395f52-7109-4243-b51e-b48d3aa90837",
+  "object": "chat.completion",
+  "created": 1793197345,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-2)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: Abstractive Summarization, Gigaword, ROUGE-2. Candidate list has (Summarization, Gigaword, ROGUE-2) typo ROGUE. Also Gigaword ROGUE-1, ROGUE-L, CNN etc. Need determine if \"Abstractive Summarization\" matches \"Summarization\" broader standard task label? Requirements: more specific task wording may match broader standard task label when same underlying benchmark and dataset/metric compatible. Dataset Gigaword, metric ROUGE-2 (candidate typo ROGUE-2). It is likely match to (Summarization, Gigaword, ROGUE-2). Need output exact listed tuple verbatim. Ensure \"ROGUE-2\" typo. Answer only tuple. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 188,
+    "total_tokens": 961,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

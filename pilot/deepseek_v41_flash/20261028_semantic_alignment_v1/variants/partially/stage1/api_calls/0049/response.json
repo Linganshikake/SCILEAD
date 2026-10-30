@@ -1,0 +1,32 @@
+{
+  "id": "b8e2d418-dd20-4ace-ad4a-792904ff4789",
+  "object": "chat.completion",
+  "created": 1793196690,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item from list. Input ROUGE-L. List has 'ROGUE-L' (misspelled) not ROUGE-L. Need match? They likely expect 'ROGUE-L' because item list typo. But instruction match input with one of items. Exact? \"If none matches say None.\" ROUGE-L vs ROGUE-L differ. However semantically same metric with typo in list. Need decide. The answer should ONLY consist of matched item in list. Since list has ROGUE-L (misspelling of ROUGE-L). The intended match is ROGUE-L. We should output 'ROGUE-L'. Ensure only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 149,
+    "total_tokens": 407,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 144
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

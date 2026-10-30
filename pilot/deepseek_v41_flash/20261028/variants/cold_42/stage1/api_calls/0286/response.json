@@ -1,0 +1,32 @@
+{
+  "id": "c0402413-5fd3-4044-8438-e2c1abe83ea0",
+  "object": "chat.completion",
+  "created": 1793194540,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CNNDM",
+        "reasoning_content": "We need answer only. Need match input CNNDM to items? List has CNN/DailyMail, CNN-DailyMail, maybe CNNDM not exact. If no exact match output entity unchanged \"CNNDM\". Need ensure maybe alias? Instruction says if input entity matches one of items. Exact match? CNNDM not listed. Output without changing: CNNDM."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 81,
+    "total_tokens": 823,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 742
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

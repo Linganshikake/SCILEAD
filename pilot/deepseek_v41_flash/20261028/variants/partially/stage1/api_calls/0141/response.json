@@ -1,0 +1,32 @@
+{
+  "id": "e2efd604-63cf-4b20-af52-990d716ea768",
+  "object": "chat.completion",
+  "created": 1793194343,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer only matched item. Need determine input \"ROUGE-2 F1\" matches one item. List has 'ROGUE-2' (misspelled ROGUE not ROUGE), 'F1', 'F-Score'. Input ROUGE-2 F1 likely refers ROUGE-2 F1 metric, but item list has ROGUE-2 (typo) and F1. Need match with one item. The input consists two terms? Need choose one item from list. Could be \"ROGUE-2\" if considering ROUGE-2, or \"F1\". Since input \"ROUGE-2 F1\" perhaps combined metric named ROUGE-2 F1, not in list exactly. But \"ROGUE-2\" in list likely intended ROUGE-2. Need answer matched item exactly as list, likely 'ROGUE-2'. Need no explanation. Final only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 206,
+    "total_tokens": 467,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 200
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

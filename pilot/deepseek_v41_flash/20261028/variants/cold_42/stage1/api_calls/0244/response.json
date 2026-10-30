@@ -1,0 +1,32 @@
+{
+  "id": "73023761-975e-4571-8cae-bd03c2ede086",
+  "object": "chat.completion",
+  "created": 1793194474,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003",
+        "reasoning_content": "We need answer match. Need see list contains many variants but not exact CONLL-2003? List has 'CoNLL-2003', 'CoNLL 2003 English', etc. Input \"CONLL-2003\" case? We need if matches one item. Likely exact? It says matches one of items. Case sensitivity? Could match \"CoNLL-2003\" ignoring case? Need output matched item in list. Input entity CONLL-2003. There is 'CoNLL-2003' which differs case. Usually matching might be case-sensitive? Need infer from prior benchmark tasks? They expect normalize? We should select 'CoNLL-2003' as matched item likely. Need only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 717,
+    "completion_tokens": 160,
+    "total_tokens": 877,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 153
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 461
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

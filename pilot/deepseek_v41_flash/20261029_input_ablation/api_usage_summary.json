@@ -1,0 +1,47 @@
+{
+  "new": {
+    "requests": 111,
+    "extraction_requests": 10,
+    "normalization_requests": 101,
+    "prompt_tokens": 130158,
+    "completion_tokens": 33855,
+    "total_tokens": 164013,
+    "elapsed_seconds": 274.4889999999432,
+    "batch_wall_seconds": 153.840621,
+    "automatic_retries": 0
+  },
+  "by_arm": {
+    "baseline_rag": {
+      "requests": 48,
+      "new_requests": 0,
+      "extraction_requests": 5,
+      "normalization_requests": 43,
+      "prompt_tokens": 31339,
+      "completion_tokens": 29373,
+      "total_tokens": 60712,
+      "elapsed_seconds": 186.2670000002836
+    },
+    "parsed_full": {
+      "requests": 54,
+      "new_requests": 54,
+      "extraction_requests": 5,
+      "normalization_requests": 49,
+      "prompt_tokens": 56307,
+      "completion_tokens": 20488,
+      "total_tokens": 76795,
+      "elapsed_seconds": 149.0510000003269
+    },
+    "page_images": {
+      "requests": 57,
+      "new_requests": 57,
+      "extraction_requests": 5,
+      "normalization_requests": 52,
+      "prompt_tokens": 73851,
+      "completion_tokens": 13367,
+      "total_tokens": 87218,
+      "elapsed_seconds": 125.4379999996163
+    }
+  },
+  "historical_baseline_not_recounted_as_new": true,
+  "time_definition": "elapsed_seconds sums individual HTTP durations; batch wall time covers both concurrently running independent serial arms."
+}

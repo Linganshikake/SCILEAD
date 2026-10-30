@@ -1,0 +1,32 @@
+{
+  "id": "a136af6d-7101-46c0-977b-8d80a697891a",
+  "object": "chat.completion",
+  "created": 1793197029,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WSJ",
+        "reasoning_content": "We need answer match item list. Input \"Penn Treebank WSJ\". Candidates include WSJ, PTB, Penn Treebank converted to Stanford Dependencies version 3.3.0. Need semantic matching by entity identity. \"Penn Treebank WSJ\" likely refers to WSJ portion of Penn Treebank. Candidate WSJ is in list. Also PTB is Penn Treebank. Which matches? Input has Penn Treebank WSJ specifically. Is candidate \"WSJ\" exact identity? It could be Wall Street Journal corpus, often part of PTB. Candidate \"PTB\" = Penn Treebank. Input is \"Penn Treebank WSJ\" maybe the WSJ portion. Need decide if matches WSJ or PTB or unchanged. Requirements: preserve meaningful differences in dataset identity, version, split and metric. \"Penn Treebank WSJ\" probably is WSJ dataset used for parsing, also known as PTB WSJ. Candidate \"WSJ\" alone may denote Wall Street Journal (the portion from Penn Treebank?) In NLP dataset lists, WSJ often means Penn Treebank WSJ. Candidate \"PTB\" means full Penn Treebank. The input explicitly WSJ, so candidate WSJ is clear semantic match. Output \"WSJ\". Need only selected item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 793,
+    "completion_tokens": 263,
+    "total_tokens": 1056,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 260
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 153
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

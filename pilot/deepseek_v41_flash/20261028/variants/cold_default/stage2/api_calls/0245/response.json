@@ -1,0 +1,32 @@
+{
+  "id": "08471238-c803-4067-a73b-490b39294d34",
+  "object": "chat.completion",
+  "created": 1793194875,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Newsroom, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any item. Exact match? Input (Abstractive Summarization, Newsroom, ROUGE-L). List has Summarization tasks, no Abstractive Summarization, no Newsroom, all ROGUE misspelled maybe. No match. Output tuple unchanged. Use exact input string. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 85,
+    "total_tokens": 638,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

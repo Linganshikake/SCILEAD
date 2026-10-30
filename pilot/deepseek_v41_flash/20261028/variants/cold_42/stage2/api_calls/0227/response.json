@@ -1,0 +1,32 @@
+{
+  "id": "3b712341-f669-4475-9038-a5e793a92f7c",
+  "object": "chat.completion",
+  "created": 1793194852,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot Filling, Home, F1-score)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any list item exactly. Input: (Slot Filling, Home, F1-score). List items none with Slot Filling Home. So output tuple unchanged. Ensure exact formatting? \"(Slot Filling, Home, F1-score)\" Only output answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 74,
+    "total_tokens": 624,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

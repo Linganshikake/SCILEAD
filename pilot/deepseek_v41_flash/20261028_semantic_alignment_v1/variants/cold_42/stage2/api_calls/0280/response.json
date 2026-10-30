@@ -1,0 +1,32 @@
+{
+  "id": "1f27b5ad-b8ef-4bc7-9e34-d8e12548c17f",
+  "object": "chat.completion",
+  "created": 1793198222,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT’14 EN-FR, BLEU)",
+        "reasoning_content": "We need answer only tuple. Need match input to listed. Input Machine Translation, WMT'14 English→French, BLEU. Candidate (Machine Translation, WMT’14 EN-FR, BLEU). This is semantic match: WMT'14 English→French = EN-FR, apostrophe punctuation. Return exact listed tuple: (Machine Translation, WMT’14 EN-FR, BLEU). Need exact curly apostrophe? list uses WMT’14. Output tuple only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 121,
+    "total_tokens": 894,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

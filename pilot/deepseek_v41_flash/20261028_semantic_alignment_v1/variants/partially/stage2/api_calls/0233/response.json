@@ -1,0 +1,32 @@
+{
+  "id": "80d4819a-b969-4b27-9656-67b71eaa150b",
+  "object": "chat.completion",
+  "created": 1793197824,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, New York Times (NYT), ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any candidate. Input: (Abstractive Summarization, New York Times (NYT), ROGUE-L). List has summarization datasets Gigaword, CNN/DailyMail, XSum. No NYT. Metric ROGUE-L typo but candidates have ROGUE-L. Dataset NYT not present. No match. Return original tuple verbatim. Need output only tuple. Ensure exact spacing: (Abstractive Summarization, New York Times (NYT), ROGUE-L)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 775,
+    "completion_tokens": 131,
+    "total_tokens": 906,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 135
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

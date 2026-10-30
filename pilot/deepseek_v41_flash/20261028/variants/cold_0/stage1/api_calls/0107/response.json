@@ -1,0 +1,32 @@
+{
+  "id": "2a919ce8-6d00-4e01-927c-f75c543fe3c2",
+  "object": "chat.completion",
+  "created": 1793194266,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot filling",
+        "reasoning_content": "We need answer. Need match input entity \"Slot filling\" to item list if matches. List has 'Slot Filling and Intent Detection' and 'Joint intent detection and slot filling'. Does \"Slot filling\" match one of items exactly? No. The instruction: if input entity matches one of items in list, answer matched item. Else output entity without changing. So output \"Slot filling\" unchanged. Need not explanation. Final."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 206,
+    "completion_tokens": 90,
+    "total_tokens": 296,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

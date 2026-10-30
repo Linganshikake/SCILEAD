@@ -1,0 +1,32 @@
+{
+  "id": "ccfd015c-86fd-4b66-a85d-2dada5c80868",
+  "object": "chat.completion",
+  "created": 1793194746,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2003, F1)",
+        "reasoning_content": "We need answer only. Input tuple (Named Entity Recognition, CoNLL-2003, F1). Need match list. List has (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Not exact because task names differ and CoNLL-2003 vs CoNLL-2003 - English. Instruction: If input tuple matches one of items, answer matched. Else output tuple without changing it. Exact match? likely no exact tuple. Need output input unchanged: (Named Entity Recognition, CoNLL-2003, F1). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 137,
+    "total_tokens": 691,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

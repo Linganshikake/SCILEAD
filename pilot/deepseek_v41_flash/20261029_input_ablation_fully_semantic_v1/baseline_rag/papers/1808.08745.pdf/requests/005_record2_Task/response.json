@@ -1,0 +1,32 @@
+{
+  "id": "1711e8c2-e2b4-415e-99bc-1f9795d5cc15",
+  "object": "chat.completion",
+  "created": 1793286206,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Summarization",
+        "reasoning_content": "We need answer only matched item or None. Input Extreme Summarization. Candidate Summarization likely same underlying task? Extreme summarization is specific variant, but preserving meaningful differences? Task names: more specific wording may match existing standard task when both denote same underlying task. Extreme Summarization is a summarization task, perhaps dataset XSum. Candidate \"Summarization\" is broader. Need determine if clear semantic match. Requirements preserve meaningful differences dataset identity etc. Input lacks dataset, just task \"Extreme Summarization\" could be a task variant. Is it same as Summarization? It denotes summarization, more specific. The instruction says for task names, more specific wording may match existing standard task when both denote same underlying task. Extreme summarization denotes summarization task with extreme summary length. If candidate only Summarization, likely match. Need output exactly \"Summarization\". Check not ambiguous? Could be \"Extreme Summarization\" not in list; list has Summarization. I'll output Summarization."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 202,
+    "total_tokens": 642,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 184
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

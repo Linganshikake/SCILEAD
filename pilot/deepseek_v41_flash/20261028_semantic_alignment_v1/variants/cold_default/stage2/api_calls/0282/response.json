@@ -1,0 +1,32 @@
+{
+  "id": "ced7c515-bcec-4245-8cb2-87b217aee65a",
+  "object": "chat.completion",
+  "created": 1793197639,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches listed. Input: (Abstractive Summarization, NYT, ROUGE-L). List has summarization tasks with datasets Gigaword, CNN/DailyMail, XSum; no NYT. Abstractive summarization could match Summarization? But Dataset NYT not among listed. No match. Output original verbatim. Ensure ROUGE-L as given. tuple formatting."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 103,
+    "total_tokens": 874,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "24bce314-b36e-4b35-8ff5-645dc65373f8",
+  "object": "chat.completion",
+  "created": 1793196984,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Open Entity",
+        "reasoning_content": "We need answer only selected item or unchanged. Need check list if semantic match \"Open Entity\". Candidates: BC5CDR, NCBI-disease maybe Open Entity is dataset? Let's parse. Open Entity is likely a dataset for entity typing? Is it in list? No exact. Could \"Open Entity\" be alias for \"OntoNotes\"? No. Need output unchanged if no match. We must consider if \"Open Entity\" matches any: \"E-commerce\" no. \"Movie\" no. \"PubMed\". Open Entity is a benchmark dataset (entity typing) not listed. So unchanged \"Open Entity\". Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 655,
+    "completion_tokens": 130,
+    "total_tokens": 785,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 143
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

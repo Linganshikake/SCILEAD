@@ -1,0 +1,32 @@
+{
+  "id": "290dc845-53b2-473d-8a51-0608411e956c",
+  "object": "chat.completion",
+  "created": 1793194639,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, NCBI-disease, Entity-level F1 score)",
+        "reasoning_content": "We need answer. Need see if input tuple matches any list item exactly. List item names use (Named Entity Recognition (NER), Ontonotes..., F1) etc. Input (Named Entity Recognition, NCBI-disease, Entity-level F1 score) not exact match. Output unchanged tuple. Need only answer. Ensure formatting as tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 86,
+    "total_tokens": 641,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

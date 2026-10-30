@@ -1,0 +1,32 @@
+{
+  "id": "cb91ab88-4072-4b08-ace9-b70a3d652a23",
+  "object": "chat.completion",
+  "created": 1793196819,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MNLI",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine if MNLI matches candidate. List contains GLUE MNLI, MNLI-m, MNLI-mm. Input \"MNLI\" ambiguous? Need semantic matching. Task name MNLI could refer to Multi-Genre NLI, GLUE MNLI is standard task. But candidates include MNLI-m and MNLI-mm variants and GLUE MNLI. The instruction: preserve meaningful differences in dataset identity, language, version, split metric. Do not guess ambiguous abbreviation or missing experimental condition. Input \"MNLI\" is broad. Candidate \"GLUE MNLI\" might denote same underlying task? But also MNLI-m/mm are splits/versions. Since ambiguous among GLUE MNLI, MNLI-m, MNLI-mm, no unambiguous match. Output original input unchanged. Need answer exactly \"MNLI\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 176,
+    "total_tokens": 947,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

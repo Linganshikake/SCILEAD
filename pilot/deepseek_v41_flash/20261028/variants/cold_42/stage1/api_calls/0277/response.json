@@ -1,0 +1,32 @@
+{
+  "id": "8c5e1f23-69f0-4448-bbba-42c8cd708533",
+  "object": "chat.completion",
+  "created": 1793194529,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "QNLI",
+        "reasoning_content": "We need answer matched item if input matches list. Need check list: has 'GLUE QNLI', not plain QNLI. So output entity unchanged \"QNLI\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 733,
+    "completion_tokens": 45,
+    "total_tokens": 778,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 41
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 349
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "1327bbe9-0ec6-46cd-aaab-492c8cb17a13",
+  "object": "chat.completion",
+  "created": 1793194753,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, OntoNotes, F1 score)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one item exactly? Input: (Named Entity Recognition, OntoNotes, F1 score). List has (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Not exact match due different task name, dataset, metric. So output tuple without changing it. Need output exact input tuple. No explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 93,
+    "total_tokens": 645,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 168
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

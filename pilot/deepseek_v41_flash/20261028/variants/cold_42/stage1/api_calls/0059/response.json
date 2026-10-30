@@ -1,0 +1,32 @@
+{
+  "id": "f309f7bc-6659-447c-94ef-1d60a31927b8",
+  "object": "chat.completion",
+  "created": 1793194213,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "PTB",
+        "reasoning_content": "We need answer only matched item if input matches one item. Need determine if \"Penn Treebank\" matches any item. List includes PTB likely abbreviation for Penn Treebank. Input entity \"Penn Treebank\" matches item 'PTB'? The instruction: If input entity matches one of items in list, answer matched item in list. Else output entity unchanged. Need infer matching semantic? \"Penn Treebank\" matches PTB abbreviation. Likely answer PTB. Need output exactly matched item. Could be 'PTB'. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 194,
+    "completion_tokens": 112,
+    "total_tokens": 306,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 194
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

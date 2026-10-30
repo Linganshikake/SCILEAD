@@ -1,0 +1,32 @@
+{
+  "id": "378fac2e-9673-4ff1-a2d7-e02e2fefb0f9",
+  "object": "chat.completion",
+  "created": 1793197363,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Summarization, XSum, ROUGE-L). List has (Summarization, XSum, ROGUE-L) etc. Note typo ROGUE vs ROUGE. Metric same underlying? They list ROGUE-L likely typo for ROUGE-L. Dataset XSum and task Summarization. Candidate exact except spelling metric. Return listed tuple verbatim: (Summarization, XSum, ROGUE-L). Need output only. \nNeed be careful maybe list has ROGUE-L for XSum. Yes. Final only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 139,
+    "total_tokens": 908,
+    "prompt_tokens_details": {
+      "cached_tokens": 635
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 126
+    },
+    "prompt_cache_hit_tokens": 635,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "30506e91-a23a-46ab-a98d-fd4f1d106f51",
+  "object": "chat.completion",
+  "created": 1793194560,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1 score (averaged over 5 runs)",
+        "reasoning_content": "We need answer only. Need match input to item list. \"F1 score (averaged over 5 runs)\" not exact item. Must output entity unchanged if no match. Need ensure no normalization? Item list contains \"F1 score\" but input has extra. \"If input entity matches one of the items\" exact? likely exact matching. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 381,
+    "completion_tokens": 85,
+    "total_tokens": 466,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 253
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

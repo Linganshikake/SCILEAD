@@ -1,0 +1,32 @@
+{
+  "id": "49d01755-0f3d-49df-a374-d322785f2024",
+  "object": "chat.completion",
+  "created": 1793198185,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NEWSROOM, ROUGE-2)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, NEWSROOM, ROUGE-2). List has summarization datasets Gigaword, CNN/DailyMail, XSum metrics ROGUE variants. No NEWSROOM. No match. Return input verbatim. Need consider ROGUE typo vs ROUGE? Input uses ROUGE-2, list uses ROGUE-2. Dataset NEWSROOM absent. So no candidate. Output original."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 121,
+    "total_tokens": 894,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

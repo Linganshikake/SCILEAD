@@ -1,0 +1,32 @@
+{
+  "id": "1de2a5b8-c36f-4f77-87c2-f32f0ecfebb0",
+  "object": "chat.completion",
+  "created": 1793196758,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Gigaword",
+        "reasoning_content": "We need answer only selected item or unchanged. Need match Annotated English Gigaword to item list. Candidate Gigaword. Is \"Annotated English Gigaword\" same as Gigaword? It might be a dataset variant? Need semantic matching preserve meaningful differences in dataset identity, version, split metric. \"Annotated English Gigaword\" likely specific dataset/version. Item list has Gigaword generic. Should we match? The instruction: if input entity matches one items, output matched item. Recognize aliases etc. But preserve meaningful differences in dataset identity, language, version split. \"Annotated English Gigaword\" is often another name for Gigaword? Let's assess. Gigaword corpus, English Gigaword, annotated. In summarization datasets, \"Annotated English Gigaword\" maybe a task/dataset. Candidate \"Gigaword\" could denote same underlying. However if version/annotation is meaningful, maybe not merge. Need determine intended. The list includes many dataset names. Input \"Annotated English Gigaword\" likely meant to match \"Gigaword\" because it's a specific variant but no other candidate. Semantic match? \"Annotated English Gigaword\" is a named dataset (Rush et al. 2015) and commonly referred to as Gigaword in summarization. The list item is Gigaword. They probably expect match. Output must be exact candidate: Gigaword.\n\nNeed no explanation. Final: Gigaword."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 512,
+    "completion_tokens": 320,
+    "total_tokens": 832,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 315
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

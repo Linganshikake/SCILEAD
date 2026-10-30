@@ -1,0 +1,32 @@
+{
+  "id": "198e7266-6adb-4d06-ae79-7273b2f04d03",
+  "object": "chat.completion",
+  "created": 1793194920,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, XSum, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list. Input (Abstractive Summarization, XSum, ROUGE-L). List has (Summarization, XSum, ROGUE-L) but first differs and metric spelled ROGUE-L vs ROUGE-L. Not exact match. Need output tuple unchanged. Only answer.\n\nNeed be careful braces list is set. Exact string: (Abstractive Summarization, XSum, ROUGE-L). Output same. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 115,
+    "total_tokens": 668,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

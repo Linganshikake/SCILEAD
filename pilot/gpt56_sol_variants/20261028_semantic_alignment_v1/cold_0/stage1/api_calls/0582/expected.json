@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "2203.16804.pdf",
+  "record": 5,
+  "field": "Metric",
+  "original": "ROUGE-2 F1",
+  "candidate_serialized": "{'Test Perplexity', 'Sentence-level Semantic Frame Accuracy', 'Development Exact Match', 'Question-answering score', 'Spearman correlation', 'ROUGE-2 Recall', 'Average length', 'LAS', 'Test Recall', 'V-measure', 'F-score', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'Test Precision', 'Aggregate score', 'UAS', 'Best-worst scaling', 'Geometric mean (AVG)', 'Mention-level F1 score', 'Human grammaticality', 'Div-1', 'Fuzzy normalized mutual information (F-NMI)', 'Fuzzy B-Cubed F-score (F-BC)', 'BLEU-4', 'TER', 'Sense-number error δ(#S)', 'Human informativeness', 'ROUGE-L', 'Test F1', 'Matthews correlation coefficient', 'BLEU', 'Test Exact Match', 'Test BLEU', 'Accuracy', 'Div-2', 'Human judgment ranking score', 'Entropy-4', 'NIST-4', 'Validation F1', 'BERTScore', 'ROUGE-1 Recall', 'Exact Match', 'Mismatched accuracy', 'Human truthfulness', 'Correlation', 'ROUGE-L Recall', 'Validation Perplexity'}",
+  "candidate_sha256": "1c87b914cd057b9c1e41dd77f37a7de67970d917085f9c48c8c4edfefe9b6f43",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Test Perplexity', 'Sentence-level Semantic Frame Accuracy', 'Development Exact Match', 'Question-answering score', 'Spearman correlation', 'ROUGE-2 Recall', 'Average length', 'LAS', 'Test Recall', 'V-measure', 'F-score', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'Test Precision', 'Aggregate score', 'UAS', 'Best-worst scaling', 'Geometric mean (AVG)', 'Mention-level F1 score', 'Human grammaticality', 'Div-1', 'Fuzzy normalized mutual information (F-NMI)', 'Fuzzy B-Cubed F-score (F-BC)', 'BLEU-4', 'TER', 'Sense-number error δ(#S)', 'Human informativeness', 'ROUGE-L', 'Test F1', 'Matthews correlation coefficient', 'BLEU', 'Test Exact Match', 'Test BLEU', 'Accuracy', 'Div-2', 'Human judgment ranking score', 'Entropy-4', 'NIST-4', 'Validation F1', 'BERTScore', 'ROUGE-1 Recall', 'Exact Match', 'Mismatched accuracy', 'Human truthfulness', 'Correlation', 'ROUGE-L Recall', 'Validation Perplexity'}\n\nInput: ROUGE-2 F1\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "abd9e7db70aa2c174561e12dc41491417f243cf7dbf58180f9ca631a3fef7def"
+}

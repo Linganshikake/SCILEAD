@@ -1,0 +1,32 @@
+{
+  "id": "b94b7340-f94c-4fa1-895a-e71fb385d2ec",
+  "object": "chat.completion",
+  "created": 1793286169,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Summarization",
+        "reasoning_content": "We need answer only matched item. Input Abstractive Summarization. Candidate Summarization likely match? Need preserve meaningful differences? Abstractive is subtype of summarization. Task names more specific wording may match existing standard task when same underlying task. Does \"Summarization\" encompass abstractive summarization? The list has Summarization. It is a specific variant, but likely semantic match to Summarization. Requirement preserve meaningful differences in dataset identity, language, version, split metric; not task variant? For task names more specific may match existing standard when same underlying. Abstractive Summarization is a type of summarization; candidate \"Summarization\" is broader. Match? Usually evaluation asks map input to one item. Since only Summarization available and no \"Abstractive Summarization\", likely output Summarization. Need exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 441,
+    "completion_tokens": 164,
+    "total_tokens": 605,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 161
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 185
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

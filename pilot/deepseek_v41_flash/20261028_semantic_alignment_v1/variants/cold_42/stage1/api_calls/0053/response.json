@@ -1,0 +1,32 @@
+{
+  "id": "711014bd-4602-4e25-b5e8-bb272f1d78b4",
+  "object": "chat.completion",
+  "created": 1793196666,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "EM",
+        "reasoning_content": "We need answer only selected item or unchanged input. Input EM. Need see if matches any item semantically. Items are task/metrics: Test Perplexity, Intent accuracy, Accuracy, Sentence Accuracy, F1-score, ROUGE-1 Recall, ROUGE-2 Recall, ROUGE-L F1, ROUGE-1 F1, ROUGE-L Recall, BLEU, Slot filling F1-score, Validation Perplexity, ROUGE-2 F1. \"EM\" is exact match metric? Typically Exact Match. None listed \"Exact Match\"; ambiguous abbreviation? Could \"EM\" mean \"Accuracy\"? In QA, EM is exact match, not in list. Instructions: do not guess ambiguous abbreviation. Output original input unchanged. Must output EM."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 386,
+    "completion_tokens": 163,
+    "total_tokens": 549,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 161
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

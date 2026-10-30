@@ -1,0 +1,32 @@
+{
+  "id": "8e83a9ee-c151-4f5e-8d18-f6892eeebe8e",
+  "object": "chat.completion",
+  "created": 1793194459,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot Filling",
+        "reasoning_content": "We need answer. Need match input entity to items. Input \"Slot filling\" lower f. List has 'Slot Filling' capital F, also 'Joint Slot Filling and Intent Detection', 'Slot Filling and Intent Detection'. Need exact? \"matches one of items\" likely case-insensitive? We need output matched item in list if matches. Input Slot filling. Match to 'Slot Filling' likely. Output exactly item. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 334,
+    "completion_tokens": 95,
+    "total_tokens": 429,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

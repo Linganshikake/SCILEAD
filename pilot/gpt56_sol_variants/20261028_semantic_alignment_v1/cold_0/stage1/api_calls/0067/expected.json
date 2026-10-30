@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1905.03197.pdf",
+  "record": 30,
+  "field": "Task",
+  "original": "Semantic textual similarity",
+  "candidate_serialized": "{'Generative question answering', 'Dialogue Act Classification', 'Named Entity Recognition', 'Answer-aware question generation (reversed development-test split)', 'Author name disambiguation', 'Paraphrase classification', 'Abstractive summarization (10K training examples)', 'Answer-aware question generation (original split)', 'Response generation', 'Extractive question answering', 'Abstractive summarization', 'Acceptability classification', 'Word sense induction', 'Sentiment classification'}",
+  "candidate_sha256": "45d5e9a4881804dcdf279c714fd95529bc37027d7d25f2435ef5fe9af4e34ccf",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Generative question answering', 'Dialogue Act Classification', 'Named Entity Recognition', 'Answer-aware question generation (reversed development-test split)', 'Author name disambiguation', 'Paraphrase classification', 'Abstractive summarization (10K training examples)', 'Answer-aware question generation (original split)', 'Response generation', 'Extractive question answering', 'Abstractive summarization', 'Acceptability classification', 'Word sense induction', 'Sentiment classification'}\n\nInput: Semantic textual similarity\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "8492f67d52b1e3d9f3f42b210b7a2a09fb9b9ab677b694c48f0f13fcde68af66"
+}

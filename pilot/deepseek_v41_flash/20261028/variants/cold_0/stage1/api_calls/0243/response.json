@@ -1,0 +1,32 @@
+{
+  "id": "a65739bd-b6ce-43ce-a40e-0aa2abeee86b",
+  "object": "chat.completion",
+  "created": 1793194466,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-1 F1",
+        "reasoning_content": "We need answer only matched or unchanged. Input \"ROUGE-1 F1\" not exactly in list? List has ROUGE-1, F1 but not combined. Need output entity unchanged if not match. So \"ROUGE-1 F1\". Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 341,
+    "completion_tokens": 67,
+    "total_tokens": 408,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 213
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

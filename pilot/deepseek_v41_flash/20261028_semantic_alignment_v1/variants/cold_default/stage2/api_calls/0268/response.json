@@ -1,0 +1,32 @@
+{
+  "id": "2dec8f7b-e1ce-432a-bca3-d87cf9ba037a",
+  "object": "chat.completion",
+  "created": 1793197616,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English→French, METEOR)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input: Machine Translation, WMT'14 English→French, METEOR. List has MT WMT’14 EN-FR BLEU. Metric differs METEOR vs BLEU, so no match? Need compare all three fields jointly. Dataset same WMT14 En-Fr. Task same. Metric different. Requirement do not merge metric definitions. If no candidate matches return original verbatim. Output input tuple as given. Need exact original: (Machine Translation, WMT'14 English→French, METEOR). Ensure no explanations."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 141,
+    "total_tokens": 914,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 124
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

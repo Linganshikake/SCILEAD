@@ -1,0 +1,32 @@
+{
+  "id": "bd37808f-331c-4e0b-a0a2-370e51bc976d",
+  "object": "chat.completion",
+  "created": 1793194643,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROUGE-L F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item. Item has (Summarization, CNN/DailyMail, ROGUE-L) note typo ROGUE not ROUGE. Input has ROUGE-L F1, not exact. So output unchanged. Need only answer. Ensure exact input tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 82,
+    "total_tokens": 637,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

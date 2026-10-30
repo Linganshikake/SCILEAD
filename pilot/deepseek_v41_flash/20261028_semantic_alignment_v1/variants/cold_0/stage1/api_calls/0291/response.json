@@ -1,0 +1,32 @@
+{
+  "id": "77e77732-76fd-4724-bb62-4fddb2295331",
+  "object": "chat.completion",
+  "created": 1793197092,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-1",
+        "reasoning_content": "We need answer only selected or unchanged. Input \"ROUGE-1 F1\". Candidate list includes ROUGE-1 and F1 separate, not combined. Need semantic match? Could be task metric ROUGE-1 F1 vs candidate \"ROUGE-1\" maybe denotes ROUGE-1 F1? Need decide. List has ROUGE-1 likely metric. Input \"ROUGE-1 F1\" maybe more specific, but underlying metric ROUGE-1 F1? In summarization, ROUGE-1 usually reports F1. Candidate \"ROUGE-1\" likely same. However requirement preserve metric definition. Does \"ROUGE-1 F1\" match \"ROUGE-1\" exactly semantically? They might denote same task metric; yes ROUGE-1 is typically F1, but adding F1 could specify variant. If list includes F1 as separate, ambiguous? Need not merge distinct? Hmm.\n\nWe need output selected item if clear semantic match. Input is \"ROUGE-1 F1\". Candidate \"ROUGE-1\" is not exactly same because ROUGE-1 can have precision/recall/F1. But standard ROUGE-1 often F1. The instruction: For task names, more specific wording may match existing standard task when both denote same underlying task. Preserve meaningful differences in metric definition. \"ROUGE-1 F1\" specifically metric definition F1, while \"ROUGE-1\" could be ambiguous but commonly F1. Is it clear? I'd lean match to ROUGE-1. But let's examine list: It includes \"ROUGE-1\", \"ROUGE-2\", \"ROUGE-L\", and \"F1\" separate. If input \"ROUGE-1 F1\", could be combination not in list; output unchanged if no candidate. Yet semantic matching says compare input against candidates. \"ROUGE-1 F1\" is essentially ROUGE-1 score (F1). Candidate \"ROUGE-1\" is the closest. We should output \"ROUGE-1\". Need confidence.\n\nMaybe there's candidate \"F1\" and \"ROUGE-1\"; input is concatenation of both, but list item is neither. However they ask if input entity matches one item. Semantic identity. The metric \"ROUGE-1 F1\" is a specific metric, candidate \"ROUGE-1\" is standard abbreviation for ROUGE-1 F1. So yes. Output ROUGE-1 exactly as written."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 463,
+    "completion_tokens": 548,
+    "total_tokens": 1011,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 542
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 207
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

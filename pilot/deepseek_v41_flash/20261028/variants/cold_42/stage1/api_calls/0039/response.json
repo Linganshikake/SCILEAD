@@ -1,0 +1,32 @@
+{
+  "id": "f3501a1d-57b0-4100-a214-1b7c18ce5649",
+  "object": "chat.completion",
+  "created": 1793194187,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer exact match if entity matches item. Input \"Joint intent detection and slot filling\". Item list has 'Joint Slot Filling and Intent Detection'. Need match? It says if input entity matches one of items, answer matched item. Does \"Joint intent detection and slot filling\" match \"Joint Slot Filling and Intent Detection\" semantically? likely yes? Need determine. They are same task but ordering and conjunction. Strict matching? Instruction: matches one of items. Could be fuzzy? Need output matched item in list. Since input entity likely refers to item. Answer: 'Joint Slot Filling and Intent Detection'. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 150,
+    "completion_tokens": 135,
+    "total_tokens": 285,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

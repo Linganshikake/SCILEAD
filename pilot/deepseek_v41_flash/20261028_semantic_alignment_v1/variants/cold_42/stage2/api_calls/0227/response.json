@@ -1,0 +1,32 @@
+{
+  "id": "3d8a2bf4-0c6b-4167-be6c-f5837874fec0",
+  "object": "chat.completion",
+  "created": 1793198148,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot Filling, Home, F1-score)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match? Input (Slot Filling, Home, F1-score). List has Intent Detection and Slot Filling with ATIS/SNIPS, metrics Accuracy/F1. Dataset \"Home\" no candidate. So no match, output original verbatim. Need only tuple. Ensure preserve input exact: (Slot Filling, Home, F1-score)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 91,
+    "total_tokens": 859,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

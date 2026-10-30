@@ -1,0 +1,32 @@
+{
+  "id": "73fbe1cb-33a1-4e7a-9368-12d7924e6306",
+  "object": "chat.completion",
+  "created": 1793194541,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT En-De (newstest2014)",
+        "reasoning_content": "We need answer: if input matches item exactly? Items include \"WMT14 En-De\", \"WMT'14 English-German\", etc, not \"WMT En-De (newstest2014)\". Since no exact match, output entity unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 67,
+    "total_tokens": 821,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 242
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

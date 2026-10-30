@@ -1,0 +1,32 @@
+{
+  "id": "25ecf99d-76dc-4fa6-911b-be46ad2196c4",
+  "object": "chat.completion",
+  "created": 1793197376,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT’14 EN-DE, BLEU)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input Machine Translation, WMT'14 English→German, sacreBLEU. Candidate (Machine Translation, WMT’14 EN-DE, BLEU). Need decide sacreBLEU vs BLEU metric definition. Requirement do not merge metric definitions? sacreBLEU is a standardized implementation of BLEU, often metric labeled BLEU. Is it compatible? Need semantic matching. Dataset WMT'14 English→German vs WMT’14 EN-DE yes abbreviation, arrow. Metric sacreBLEU vs BLEU. Is sacreBLEU equivalent? It measures BLEU and often listed as BLEU. Need likely match to (Machine Translation, WMT’14 EN-DE, BLEU). But \"Do not merge ... metric definitions\". sacreBLEU is metric implementation, same BLEU? Could be considered compatible. Need infer benchmark candidate. There's also IWSLT EN-DE and WMT EN-FR. Input clearly WMT14 English-German. Candidate WMT’14 EN-DE. Metric sacreBLEU is BLEU variant. In many tables metric \"BLEU\" on WMT14 En-De. Should return candidate verbatim. Need exact spelling: (Machine Translation, WMT’14 EN-DE, BLEU). Note curly apostrophe. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 307,
+    "total_tokens": 1081,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 290
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

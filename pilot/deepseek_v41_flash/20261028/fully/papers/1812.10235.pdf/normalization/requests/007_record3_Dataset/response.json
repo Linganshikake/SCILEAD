@@ -1,0 +1,32 @@
+{
+  "id": "a7a6af2c-cc62-4aa4-ac74-4b2b73e6a76c",
+  "object": "chat.completion",
+  "created": 1793193370,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Multi-domain Movie",
+        "reasoning_content": "We need answer matched item only. Input Movie. List has Multi-domain Movie. Exact \"Movie\" none. Could match Multi-domain Movie? The instruction match input with one items. If none matches say None. Input \"Movie\" is substring of Multi-domain Movie, but likely they expect Multi-domain Movie. Need determine. The list includes Multi-domain Home, Food, Movie. Input Movie likely refers to Multi-domain Movie dataset. Answer only matched item. Use \"Multi-domain Movie\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 100,
+    "total_tokens": 652,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 168
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

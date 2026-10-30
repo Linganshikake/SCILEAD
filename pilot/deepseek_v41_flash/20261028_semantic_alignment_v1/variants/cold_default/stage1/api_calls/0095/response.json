@@ -1,0 +1,32 @@
+{
+  "id": "4f56f7d3-0329-4310-ba5d-6ed8a6a03202",
+  "object": "chat.completion",
+  "created": 1793196741,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural Language Inference",
+        "reasoning_content": "We need answer. Need determine if input matches list. Natural Language Inference not explicitly in list, but GLUE Benchmark includes NLI? However item list has GLUE Benchmark. Need semantic matching: input entity \"Natural Language Inference\" is a task, not same as GLUE benchmark (a benchmark suite). Could it match? Requirements: if input matches one item. Task names more specific wording may match existing standard task when same underlying. NLI is not in list. GLUE Benchmark is broader, not identity. No candidate. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 113,
+    "total_tokens": 482,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 241
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

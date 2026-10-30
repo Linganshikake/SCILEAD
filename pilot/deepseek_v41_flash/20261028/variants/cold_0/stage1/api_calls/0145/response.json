@@ -1,0 +1,32 @@
+{
+  "id": "b5c223c1-1ca8-4a17-bd66-2e66213502ca",
+  "object": "chat.completion",
+  "created": 1793194314,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy (matched)",
+        "reasoning_content": "We need answer. Need match input entity to item list. Input \"Accuracy (matched)\" not exact? List has \"Matched accuracy\", \"Accuracy\". Need if matches one item. Input entity likely \"Accuracy (matched)\" not exact item. Since no exact matches? The instruction: If input entity matches one of items, answer matched item. Else output entity without changing. Need decide exact match. \"Accuracy (matched)\" does not equal \"Matched accuracy\" nor \"Accuracy\". So output unchanged. Need only entity no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 283,
+    "completion_tokens": 112,
+    "total_tokens": 395,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 155
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

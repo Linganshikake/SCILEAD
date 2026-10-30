@@ -1,0 +1,32 @@
+{
+  "id": "2acda507-ef88-4842-90ee-b1057c94077e",
+  "object": "chat.completion",
+  "created": 1793194267,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE SST",
+        "reasoning_content": "We need answer. Need determine if input entity matches one item. \"GLUE SST\" not exact? Item list contains GLUE, SST-2. Need if input matches one item exactly? \"GLUE SST\" not in list. Output entity unchanged. Need no explanation. final."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 625,
+    "completion_tokens": 62,
+    "total_tokens": 687,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 625
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

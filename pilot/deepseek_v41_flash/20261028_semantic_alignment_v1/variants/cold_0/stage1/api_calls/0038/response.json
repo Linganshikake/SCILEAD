@@ -1,0 +1,32 @@
+{
+  "id": "acefb2d8-36c8-46a7-95e2-040a99e3be16",
+  "object": "chat.completion",
+  "created": 1793196665,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Generative Question Answering",
+        "reasoning_content": "We need answer. Need determine if Generative Question Answering matches list item semantically. Candidates: Extractive Question Answering, Question Generation, etc. Generative QA is distinct from extractive QA? Input is \"Generative Question Answering\" vs \"Extractive Question Answering\". Different task: generative vs extractive. No exact generative QA candidate. Could it match Question Generation? No, question generation generates questions from context, not answers. So output unchanged input. Must output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 339,
+    "completion_tokens": 102,
+    "total_tokens": 441,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 211
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

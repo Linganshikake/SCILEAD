@@ -1,0 +1,32 @@
+{
+  "id": "1e085228-22ad-44a3-a261-1183b72c3547",
+  "object": "chat.completion",
+  "created": 1793196689,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WNLI",
+        "reasoning_content": "We need answer only. Need determine if WNLI matches any item. List no WNLI. Potential? Items GLUE tasks QQP MRPC QNLI STS-B CoLA SST-2 RTE MNLI etc but WNLI absent. So output WNLI unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 417,
+    "completion_tokens": 62,
+    "total_tokens": 479,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 161
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

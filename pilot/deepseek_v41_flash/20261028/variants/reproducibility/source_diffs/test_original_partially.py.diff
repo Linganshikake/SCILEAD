@@ -1,0 +1,13 @@
+--- D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\test_original_partially.py
++++ D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028\variants\test_original_partially.py
+@@ -1,8 +1,9 @@
+ """Synthetic responses exercise original mains and real replay observer, no API."""
+ import copy,shutil,types
++import tempfile
+ import variant_runtime as v
+ from variant_runtime import *
+-RUN=TOP=Path(__file__).resolve().parent/'reproducibility'/'partially'
++RUN=TOP=Path(tempfile.mkdtemp(prefix='partially_',dir=Path(__file__).resolve().parent/'reproducibility'))
+ (RUN/'reproducibility').mkdir(parents=True,exist_ok=True)
+ v.RUN_ID='partially_test'
+ from variant_runtime import run_original,SimulatedInterruption

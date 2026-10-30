@@ -1,0 +1,32 @@
+{
+  "id": "841b051a-902f-47ac-9093-5934a82497ed",
+  "object": "chat.completion",
+  "created": 1793196623,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Validation Perplexity",
+        "reasoning_content": "We need answer only. Need match input Validation Perplexity against list. Candidate Test Perplexity. Are they same? \"Validation Perplexity\" differs split: validation vs test. Requirements preserve split. No exact semantic match? Test Perplexity is metric on test, Validation Perplexity metric on validation. Distinct split. So output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 368,
+    "completion_tokens": 76,
+    "total_tokens": 444,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 240
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

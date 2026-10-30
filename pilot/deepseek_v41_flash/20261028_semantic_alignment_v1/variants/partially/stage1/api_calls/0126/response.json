@@ -1,0 +1,32 @@
+{
+  "id": "73ed761c-868d-41bd-b227-a63c694fba38",
+  "object": "chat.completion",
+  "created": 1793196816,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Paraphrase Detection",
+        "reasoning_content": "We need answer selected item or unchanged. Input \"Question pair matching\". Candidate list includes \"Paraphrase Detection\", \"Text Similarity\"? Question pair matching is task of determining if two questions are duplicates/paraphrases, often paraphrase detection / semantic equivalence. Need decide if clear semantic match to an existing standard task. \"Question pair matching\" likely Quora Question Pairs task: identify duplicate questions, essentially paraphrase detection. Candidate \"Paraphrase Detection\" semantically matches? Question pair matching = duplicate question detection / paraphrase identification. Is it exact enough? Need preserve meaningful differences? It could be \"Text Similarity\" but paraphrase detection closer. Input asks if matches one item. I'd output \"Paraphrase Detection\" if clear. But maybe entity identity distinct? \"Question pair matching\" is not exactly paraphrase detection? It is a type of paraphrase detection. The instruction: more specific wording may match existing standard task when both denote same underlying task. Question pair matching (QQP) is a paraphrase detection task. I'd match Paraphrase Detection. Answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 479,
+    "completion_tokens": 226,
+    "total_tokens": 705,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 220
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 223
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "6c57e9fb-bc50-4785-adab-c8a4c32142ca",
+  "object": "chat.completion",
+  "created": 1793194340,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Named Entity Recognition",
+        "reasoning_content": "We need answer matched item if matches list. Input \"Named Entity Recognition (NER)\" vs list has \"Named Entity Recognition\". Does not exactly match? Need if input entity matches one of items. There is \"Named Entity Recognition\" but input includes (NER). We need determine match semantics. Likely exact? If input entity matches one of items, answer matched item. \"Named Entity Recognition (NER)\" not equal. But could be same entity? The list has Named Entity Recognition, and NER English/German. The instruction says matches one of the items in list. It could refer semantic match. Need output matched item in list. Since input is Named Entity Recognition (NER), matches \"Named Entity Recognition\" (abbreviation). Output matched item. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 290,
+    "completion_tokens": 159,
+    "total_tokens": 449,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 155
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 162
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

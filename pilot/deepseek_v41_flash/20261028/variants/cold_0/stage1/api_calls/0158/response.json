@@ -1,0 +1,32 @@
+{
+  "id": "1b51a572-44c7-4fd6-a262-203a39a57faa",
+  "object": "chat.completion",
+  "created": 1793194330,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MCC",
+        "reasoning_content": "We need answer matched item if input matches one of list, else unchanged. Input \"Matthews correlation\" likely matches \"MCC\" semantically? Need exact matching? The instruction: If input entity matches one of items in list, answer matched item. \"Matthews correlation\" is expansion of MCC. But does it \"match\"? Need determine. List includes MCC. Input is Matthews correlation. It likely refers to MCC but not exact. The task likely entity normalization: match alias to item. We need output matched item \"MCC\". If no match output entity unchanged. \"Matthews correlation\" should map to MCC. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 294,
+    "completion_tokens": 131,
+    "total_tokens": 425,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

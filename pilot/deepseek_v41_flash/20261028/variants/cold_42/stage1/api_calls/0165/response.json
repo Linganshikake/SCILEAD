@@ -1,0 +1,32 @@
+{
+  "id": "a90717b5-9709-4a40-8b0b-5d824b9e6b25",
+  "object": "chat.completion",
+  "created": 1793194353,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL03 NER",
+        "reasoning_content": "We need answer matched item if matches one of list. Input \"CoNLL03 NER\". List has 'CoNLL 2003 NER', 'CoNLL-03', 'CoNLL-2003', 'CoNLL-2003 English', 'CoNLL-03'. Does CoNLL03 NER exactly match? no because list has CoNLL 2003 NER with space. \"matches one of items\" likely exact match. If no exact, output entity unchanged. Need answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 540,
+    "completion_tokens": 117,
+    "total_tokens": 657,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 284
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

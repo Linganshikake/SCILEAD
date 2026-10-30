@@ -1,0 +1,64 @@
+{
+  "status": "PREPARED",
+  "utc": "2026-10-29T15:00:53.041619+00:00",
+  "experiment": "Fully LLM semantic Prompt comparison on frozen input ablation subset",
+  "papers": 5,
+  "gold_records": 28,
+  "paper_ids": [
+    "D19-1367.pdf",
+    "1901.10430.pdf",
+    "1808.08745.pdf",
+    "2020.emnlp-main.523.pdf",
+    "1911.09483.pdf"
+  ],
+  "model": "deepseek-flash",
+  "generation": {
+    "model": "deepseek-flash",
+    "thinking": {
+      "type": "enabled"
+    },
+    "reasoning_effort": "high",
+    "stream": false
+  },
+  "arms": {
+    "baseline_rag": {
+      "source": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\baseline_rag\\merged\\output.json",
+      "source_sha256": "20128c6da88be46e52e5cd8dd3b97b7cf561a29ec40dd900e0fea9da03e0a5a5",
+      "records": 28,
+      "requests": 43,
+      "candidate_sets_sha256": "39b0834d70a48db407d6bd14b041915f6d274ebb2eb1a4e32fcf079eabdc47da",
+      "previous_output": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\baseline_rag\\merged\\normalized_output.json"
+    },
+    "parsed_full": {
+      "source": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\parsed_full\\fully\\merged\\output.json",
+      "source_sha256": "2afb6d490c30a5049d15ad18d915162d3f389e9470915f654746317d5ab5e641",
+      "records": 28,
+      "requests": 49,
+      "candidate_sets_sha256": "39b0834d70a48db407d6bd14b041915f6d274ebb2eb1a4e32fcf079eabdc47da",
+      "previous_output": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\parsed_full\\fully\\merged\\normalized_output.json"
+    },
+    "page_images": {
+      "source": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\page_images\\fully\\merged\\output.json",
+      "source_sha256": "2101652026f9aaa9e32c94d5158d40f05ecbf83a25b0d671c189ce2ccbcd4a54",
+      "records": 30,
+      "requests": 52,
+      "candidate_sets_sha256": "39b0834d70a48db407d6bd14b041915f6d274ebb2eb1a4e32fcf079eabdc47da",
+      "previous_output": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\page_images\\fully\\merged\\normalized_output.json"
+    }
+  },
+  "normalization_requests": 144,
+  "new_extraction_requests": 0,
+  "new_retrieval": false,
+  "new_pdf_parsing": false,
+  "semantic_cache": false,
+  "automatic_retries": 0,
+  "changed_prompt_key": "normalization-system-prompt",
+  "prompt_sha256": "37b0ce76473f15006911a40a7ebb47189ddd6dd98fc77782221a2f35c3ddd947",
+  "candidate_sizes": {
+    "Task": 23,
+    "Dataset": 71,
+    "Metric": 26
+  },
+  "evaluation": "Same five papers / 28 Gold and induced ten leaderboards / 14 members",
+  "request_pairing": "Only system prompt changes; user message, candidate strings and generation payload verified against each old request"
+}

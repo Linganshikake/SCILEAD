@@ -1,0 +1,32 @@
+{
+  "id": "f40ce956-0df7-48d9-a9f5-3018a71bd5d0",
+  "object": "chat.completion",
+  "created": 1793197002,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Movie",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if \"Movie\" matches any item semantically. List has \"Multimodal\", \"NEWSROOM\", etc. Movie? Could match \"MRPC\"? no. \"MNLI-mm\" no. \"Movie\" maybe \"MRPC\" is Microsoft Research Paraphrase Corpus, not movie. No candidate. Output Movie. Need ensure no hidden dataset \"Movie\" maybe \"Reddit TIFU\" no. So final \"Movie\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 104,
+    "total_tokens": 875,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 515
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

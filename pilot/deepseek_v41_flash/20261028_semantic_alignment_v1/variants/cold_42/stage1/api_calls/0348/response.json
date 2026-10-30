@@ -1,0 +1,32 @@
+{
+  "id": "5847ac2a-7fb1-447e-a292-ff088776f24f",
+  "object": "chat.completion",
+  "created": 1793197138,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT De-En",
+        "reasoning_content": "We need answer match item. Need compare IWSLT De-En to candidates. Candidate \"IWSLT2014 De→En\". Likely semantic match? Need consider task/dataset identity. Input IWSLT De-En, candidate IWSLT2014 De→En. Is ambiguity? There are multiple IWSLT years. Candidate specific 2014. Input lacks year. The instructions: do not guess ambiguous abbreviation or missing experimental condition. IWSLT De-En could be ambiguous across years. Candidate IWSLT2014 De→En is specific. Should we match if only one IWSLT De-En in list? There is also \"IWSLT 2015 English-Vietnamese translation dataset (tst2013)\" but not De-En. The candidate is IWSLT2014 De→En. Input \"IWSLT De-En\" could denote same? Missing year. The requirement says preserve version etc; do not guess ambiguous abbreviation or missing experimental condition. So likely output unchanged \"IWSLT De-En\" due missing year/ambiguous. Need decide. The candidate includes 2014, input doesn't. Is \"IWSLT De-En\" commonly refers to IWSLT 2014 De-En? Maybe in benchmarks, IWSLT14 De-En. But input says IWSLT De-En. Need semantic matching: \"IWSLT De-En\" to \"IWSLT2014 De→En\". That is a possible match if only one candidate and standard. But missing year is meaningful. The instruction explicitly: \"Do not guess an ambiguous abbreviation or missing experimental condition.\" Missing version/year is an experimental condition. So no match, output unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 374,
+    "total_tokens": 1169,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 367
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 155
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

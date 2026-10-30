@@ -1,0 +1,32 @@
+{
+  "id": "d1dde4bc-7fcf-4195-835b-0815577a5088",
+  "object": "chat.completion",
+  "created": 1793196718,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE CoLA",
+        "reasoning_content": "We need answer. Need determine if input matches item. List has GLUE SST, QNLI, MNLI, QQP, RTE but not CoLA. GLUE CoLA is distinct task, not in list. Output unchanged. Must only selected item or unchanged input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 436,
+    "completion_tokens": 62,
+    "total_tokens": 498,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 180
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "d9217eac-410c-4769-b594-47b1d8df99fa",
+  "object": "chat.completion",
+  "created": 1793192991,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer match input \"ROUGE-2 F1\" to item list. Need only matched item. List has 'ROGUE-2' (misspelled ROGUE) and F1. Input is ROUGE-2 F1. It combines metric ROUGE-2 and F1. None exact? Items include 'ROGUE-2' and 'F1' separately. We must match input with one item. Could \"ROGUE-2\" be typo for ROUGE-2? The list has ROGUE-2. Input has ROUGE-2 F1. Since none exact item includes both. Maybe closest item is 'ROGUE-2'? But input also F1. Need determine intended from benchmark metric naming. \"ROUGE-2 F1\" is a metric variant, item list includes ROGUE-2 (typo) and F1. The matched item perhaps 'ROGUE-2'? But input says ROUGE-2 F1, which could correspond to \"ROGUE-2\" (the F1 score of ROUGE-2). In many evaluation tables, \"ROUGE-2\" metric is F1. The list item 'ROGUE-2' likely represents ROUGE-2. So answer 'ROGUE-2'. Ensure exact list string: 'ROGUE-2'. Only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 305,
+    "total_tokens": 566,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 299
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

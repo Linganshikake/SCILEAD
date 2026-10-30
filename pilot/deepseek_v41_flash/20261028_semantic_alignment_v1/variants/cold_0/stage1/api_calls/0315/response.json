@@ -1,0 +1,32 @@
+{
+  "id": "ee232b11-6e14-425f-81f6-bed6b5ac9f5e",
+  "object": "chat.completion",
+  "created": 1793197133,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT Zh-En newstest2017",
+        "reasoning_content": "We need answer only. Need determine if input matches item. List has WMT En-De (newstest2014), WMT En-Fr (newstest2014), WMT16 RO-EN. Input WMT Zh-En newstest2017. No match distinct language/year. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 757,
+    "completion_tokens": 76,
+    "total_tokens": 833,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 245
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

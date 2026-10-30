@@ -1,0 +1,32 @@
+{
+  "id": "91e130c1-4551-4191-bb44-883136b3bd40",
+  "object": "chat.completion",
+  "created": 1793197739,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent Detection and Slot Filling, SNIPS, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Slot filling, Snips, F1). Candidate list includes (Intent Detection and Slot Filling, SNIPS, F1). Same underlying benchmark? Task input \"Slot filling\" vs \"Intent Detection and Slot Filling\", dataset Snips capitalization, metric F1. There is also (Intent Detection and Slot Filling, SNIPS, Accuracy). Metric F1 matches. Should return listed tuple verbatim: (Intent Detection and Slot Filling, SNIPS, F1). Need only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 767,
+    "completion_tokens": 127,
+    "total_tokens": 894,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 255
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

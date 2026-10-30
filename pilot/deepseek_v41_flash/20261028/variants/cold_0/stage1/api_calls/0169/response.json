@@ -1,0 +1,32 @@
+{
+  "id": "f7447952-1f5c-46b3-a71b-f28c95ea521d",
+  "object": "chat.completion",
+  "created": 1793194345,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT14 En-De",
+        "reasoning_content": "We need answer according to instruction. Need match input entity to item list if matches one. Input: WMT'14 English→German. Item list has 'WMT14 En-De', maybe exact semantic match? Need if matches one item. We need choose matched item. The input is likely alias for WMT14 En-De. But rule: \"If the input entity matches one of the items in the list, answer matched item. Else output entity unchanged.\" Need interpret matches as one of items after normalization? The input entity \"WMT'14 English→German\" not exact string. However likely intended matching known dataset alias to item. Need output matched item in list. Could be 'WMT14 En-De'. Need not explain."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 528,
+    "completion_tokens": 155,
+    "total_tokens": 683,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 149
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 144
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

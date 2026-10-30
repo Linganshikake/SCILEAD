@@ -1,0 +1,32 @@
+{
+  "id": "daabcd74-88d3-43c9-9e54-90b9cd135058",
+  "object": "chat.completion",
+  "created": 1793197614,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Reddit TIFU, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input Summarization, Reddit TIFU, ROGUE-L. Listed summarization datasets: Gigaword, CNN/DailyMail, XSum with ROUGE variants (misspelled ROGUE). No Reddit TIFU. Thus no match, return original input tuple verbatim. Need output only tuple. Ensure ROGUE-L as input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 102,
+    "total_tokens": 874,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

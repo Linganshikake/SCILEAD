@@ -1,0 +1,32 @@
+{
+  "id": "6ac5ec85-34e0-4a67-9f30-1be215af71e6",
+  "object": "chat.completion",
+  "created": 1793194247,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-2",
+        "reasoning_content": "We need answer only. Need match item? Input ROUGE-2. List has ROUGE-2 Recall and ROUGE-2 F1 but not exact ROUGE-2. Instruction: if input matches one of items, answer matched. Else output entity without changing. So output ROUGE-2. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 230,
+    "completion_tokens": 77,
+    "total_tokens": 307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 230
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

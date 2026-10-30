@@ -1,0 +1,32 @@
+{
+  "id": "d77e2d30-f7d0-41bb-9f25-700c4a3dfcaa",
+  "object": "chat.completion",
+  "created": 1793197621,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, arXiv, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed tuple semantically. Input (Summarization, arXiv, ROGUE-L). List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE variants. arXiv not present. Need output original tuple unchanged. Ensure exact input: (Summarization, arXiv, ROGUE-L). Note ROGUE vs ROUGE? They use ROGUE consistently, input ROGUE-L. Semantically dataset arXiv distinct, no candidate. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 122,
+    "total_tokens": 890,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "6f1cdf5a-f525-4273-8ecd-90ccab9fc754",
+  "object": "chat.completion",
+  "created": 1793196806,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Paraphrase Detection",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if \"Question pair matching\" matches one candidate semantically. Candidates include Paraphrase Detection, Semantic textual similarity. Question pair matching could be task identifying duplicate questions, akin paraphrase detection? Need be careful: \"Question pair matching\" may denote natural language inference? Let's parse. Item list has \"Paraphrase Detection\", \"Semantic textual similarity\". Question pair matching often \"Quora Question Pairs\" task: determine if two questions are duplicates/paraphrases. It may match Paraphrase Detection. Need output candidate exactly as written. Is it unambiguous? Question pair matching = paraphrase detection between question pairs? But \"Question pair matching\" specifically a task. It could be semantic textual similarity? In benchmark tasks, \"Question Pair Matching\" perhaps an alias of \"Paraphrase Detection\" or \"Semantic textual similarity\". Need decide. Instructions say if unambiguous match. The list has Paraphrase Detection. Question pair matching likely matches Paraphrase Detection (determine if pair of questions are paraphrases). Output Paraphrase Detection. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 418,
+    "completion_tokens": 239,
+    "total_tokens": 657,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 233
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 162
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

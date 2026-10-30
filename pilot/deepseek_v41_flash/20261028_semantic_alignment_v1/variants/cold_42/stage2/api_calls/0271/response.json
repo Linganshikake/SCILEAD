@@ -1,0 +1,32 @@
+{
+  "id": "1d0953e4-7fde-4dbe-b871-dc94026e1f2c",
+  "object": "chat.completion",
+  "created": 1793198210,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input Abstractive Summarization, CNN/DailyMail, ROUGE-L. List has (Summarization, CNN/DailyMail, ROGUE-L). Metric strings ROUGE-L vs ROGUE-L typo likely same. Task Abstractive Summarization vs Summarization broad standard? Underlying benchmark CNN/DailyMail summarization with ROUGE-L likely matches. Need output entire listed tuple verbatim: (Summarization, CNN/DailyMail, ROGUE-L). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 127,
+    "total_tokens": 900,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

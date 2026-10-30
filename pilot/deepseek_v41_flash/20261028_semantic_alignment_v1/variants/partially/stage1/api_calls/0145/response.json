@@ -1,0 +1,32 @@
+{
+  "id": "b0cd5507-6b58-4162-9002-5cdb80677b06",
+  "object": "chat.completion",
+  "created": 1793196860,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item. Need interpret input \"ROUGE-L F1\" likely ROGUE-L? List has 'ROGUE-L' (misspelled ROGUE rather than ROUGE). Input says ROUGE-L F1. Match to item 'ROGUE-L'? Need exact? Item list includes ROGUE-L, not ROUGE-L. Since input has ROUGE-L F1, closest is ROGUE-L due typo? We need match. Also F1 separate, but input combined \"ROUGE-L F1\" refers metric ROUGE-L F1. List only 'ROGUE-L'. Answer only matched item. Need decide if none because exact spelling mismatch? The intended likely ROGUE-L. We should output 'ROGUE-L'. Ensure only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 260,
+    "completion_tokens": 178,
+    "total_tokens": 438,
+    "prompt_tokens_details": {
+      "cached_tokens": 126
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_cache_hit_tokens": 126,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

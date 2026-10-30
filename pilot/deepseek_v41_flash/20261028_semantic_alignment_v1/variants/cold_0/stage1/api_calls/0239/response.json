@@ -1,0 +1,32 @@
+{
+  "id": "1ae7518d-ee65-47c1-bb7e-eb4c53d6bd24",
+  "object": "chat.completion",
+  "created": 1793197003,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "BERTScore",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if BERTScore matches any candidate. List metrics/items. BERTScore not in list; candidates similar? BLEU, sacreBLEU, etc. BERTScore distinct metric. No match. Output original unchanged \"BERTScore\". Ensure no extra."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 69,
+    "total_tokens": 524,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 199
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

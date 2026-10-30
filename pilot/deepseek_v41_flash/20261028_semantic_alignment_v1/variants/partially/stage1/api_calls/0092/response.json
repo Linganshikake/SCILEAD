@@ -1,0 +1,32 @@
+{
+  "id": "ba6fdc79-934f-453d-8398-3f29a4072dc6",
+  "object": "chat.completion",
+  "created": 1793196766,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "QNLI",
+        "reasoning_content": "We need answer only selected item or unchanged. Need match \"GLUE QNLI\" against list. Candidates QNLI, GLUE. Input seems combines GLUE task QNLI? Need decide semantic match. List has 'QNLI' and 'GLUE'. \"GLUE QNLI\" denotes QNLI within GLUE likely matches QNLI? Need output matched item exactly. If specific wording may match existing standard task both same underlying. \"GLUE QNLI\" is a benchmark task? QNLI is a GLUE task, so semantic match QNLI. Output QNLI. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 135,
+    "total_tokens": 901,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 131
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 254
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

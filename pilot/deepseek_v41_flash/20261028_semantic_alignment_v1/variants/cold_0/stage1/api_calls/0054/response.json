@@ -1,0 +1,32 @@
+{
+  "id": "1631d7df-d500-491b-997d-de4584d8fcd2",
+  "object": "chat.completion",
+  "created": 1793196692,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Score",
+        "reasoning_content": "We need answer only. Need match input \"Score\" to item list? Need determine if semantic match. Candidates metrics: Accuracy, F1, EM, MCC, Spearman correlation, BLEU-4, ROUGE variants, METEOR, AVG, V-M, F-NMI, F-S, F-BC. \"Score\" is generic, ambiguous, no clear candidate? Could \"score\" match Accuracy? It's a generic metric, not identity. Need output original unchanged \"Score\". Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 370,
+    "completion_tokens": 110,
+    "total_tokens": 480,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 108
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 242
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

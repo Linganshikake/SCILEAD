@@ -1,0 +1,32 @@
+{
+  "id": "3b306877-efe6-49ce-853e-7e12875fe5ed",
+  "object": "chat.completion",
+  "created": 1793197382,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Named Entity Recognition, CoNLL-2003, F1). Candidate list has (Named Entity Recognition (NER), CoNLL-2003 - English, F1). This is clear same task, dataset with English modifier, metric F1. Need return listed tuple verbatim. Only output tuple. Ensure exact spelling: (Named Entity Recognition (NER), CoNLL-2003 - English, F1)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 118,
+    "total_tokens": 890,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 98
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

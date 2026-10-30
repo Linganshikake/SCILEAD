@@ -1,0 +1,32 @@
+{
+  "id": "25ed6d30-8335-4740-9847-ad6701d9a2a8",
+  "object": "chat.completion",
+  "created": 1793194282,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MNLI",
+        "reasoning_content": "We need answer. Need match if input entity matches one list item exactly? Input MNLI. List has MNLI-mm, MNLI-m but not MNLI. So output unchanged \"MNLI\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 393,
+    "completion_tokens": 47,
+    "total_tokens": 440,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 265
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

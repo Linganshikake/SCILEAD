@@ -1,0 +1,32 @@
+{
+  "id": "9399ae8c-cb62-4933-8375-30068eac77ce",
+  "object": "chat.completion",
+  "created": 1793197750,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Extractive Summarization, CNN/DailyMail, ROGUE-L). List has (Summarization, CNN/DailyMail, ROGUE-L). More specific task wording matches broader standard task label if same underlying benchmark and dataset metric compatible. Extractive Summarization on CNN/DailyMail metric ROGUE-L. The listed Summarization CNN/DailyMail ROGUE-L likely match. Need output entire listed tuple verbatim exact: (Summarization, CNN/DailyMail, ROGUE-L). No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 133,
+    "total_tokens": 906,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 118
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

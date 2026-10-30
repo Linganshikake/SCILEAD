@@ -1,0 +1,32 @@
+{
+  "id": "1e631a0f-c9db-4155-9b9b-f3301a16ff67",
+  "object": "chat.completion",
+  "created": 1793194851,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, XSum, ROUGE-L F1)",
+        "reasoning_content": "We need answer only. Need see if input matches list item. List has (Summarization, XSum, ROGUE-L), etc. Input (Abstractive Summarization, XSum, ROUGE-L F1). Not exact match due task name and metric spelling. So output tuple unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 82,
+    "total_tokens": 637,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

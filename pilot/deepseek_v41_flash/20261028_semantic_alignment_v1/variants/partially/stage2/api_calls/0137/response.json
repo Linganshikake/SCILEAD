@@ -1,0 +1,32 @@
+{
+  "id": "b0551f75-7f93-40dc-9b27-a0c9bb4dbc1c",
+  "object": "chat.completion",
+  "created": 1793197661,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Extreme Summarization, XSum, ROGUE-L). Candidate list includes (Summarization, XSum, ROGUE-L). Extreme Summarization is XSum benchmark task? Need evaluate semantic matching. The task \"Extreme Summarization\" likely same underlying benchmark as Summarization on XSum, metric ROGUE-L (typo for ROUGE-L). Candidate (Summarization, XSum, ROGUE-L) clear semantic match? Need consider task label broader standard label \"Summarization\" vs specific \"Extreme Summarization\" describing same benchmark with XSum and metric. The instructions: more specific task wording may match broader standard task label when same underlying benchmark and dataset/metric compatible. XSum is extreme summarization dataset. So return candidate verbatim. Need output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 187,
+    "total_tokens": 958,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 174
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

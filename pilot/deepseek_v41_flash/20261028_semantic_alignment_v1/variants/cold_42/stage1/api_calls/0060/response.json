@@ -1,0 +1,32 @@
+{
+  "id": "8ca29aa7-5c8e-40f7-87f3-81316314343f",
+  "object": "chat.completion",
+  "created": 1793196679,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "NER German",
+        "reasoning_content": "We need answer. Need decide match. List has NER English and Named Entity Recognition. Input NER German. Semantic matching preserve language identity. NER German distinct from NER English. Is \"Named Entity Recognition\" generic could match? But input specifies German, list has NER English, Named Entity Recognition (no language). Need not merge distinct language. Could \"Named Entity Recognition\" denote task regardless language? Requirements preserve language. Input NER German. Candidate \"Named Entity Recognition\" lacks language; candidate \"NER English\" language differs. The item \"Named Entity Recognition\" could be broad task but NER German is a language-specific version. Is it a clear semantic match to Named Entity Recognition? Hmm entity identity: NER German = Named Entity Recognition for German. The list has generic Named Entity Recognition. In task name matching, more specific wording may match existing standard task when same underlying task. But do not guess missing experimental condition. Preserve language. Since existing standard task \"Named Entity Recognition\" could encompass language? But \"NER English\" indicates they distinguish languages. So German not listed. Output unchanged NER German. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 370,
+    "completion_tokens": 235,
+    "total_tokens": 605,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 232
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 242
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

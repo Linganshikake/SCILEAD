@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "2203.16804.pdf",
+  "record": 3,
+  "field": "Dataset",
+  "original": "CNNDM",
+  "candidate_serialized": "{'QQP', 'DyDA', 'WMT En-De (newstest2014)', 'QNLI', 'ELI5', 'TACRED', 'CNN/DailyMail', 'AESLC', 'CBS SciTech News', 'CoNLL 2002 Dutch NER', 'SQuAD 1.1', 'PubMed', 'SwDA', 'IWSLT 2015 En-Vi', 'WNUT 2017', 'MapTask', 'SemEval 2013 Task 13', 'Snips', 'ON4C', 'NYT', 'CoNLL++', 'GLUE', 'Newsroom', 'Movie', 'CoLA', 'CoNLL-2003 German', 'Gigaword', 'SemEval 2010 Task 14', 'Multi-News', 'WE', 'arXiv', 'WSJ', 'Home', 'CoNLL 2002 Spanish NER', 'ConvAI2', 'MNLI-m', 'ATIS', 'BC5CDR', 'ReCoRD', 'Google Billion Word (valid)', 'IWSLT De-En', 'Penn Treebank converted to Stanford Dependencies version 3.3.0', 'CoNLL00', 'STS-B', 'RE', 'BIGPATENT', 'Reddit TIFU', 'WNUT 2016', 'Multimodal', 'OntoNotes', 'CoQA', 'SST-2', 'WikiText-103', 'WMT En-Fr (newstest2014)', 'OntoNotes 5.0', 'Penn Treebank', 'Open Entity', 'WNLI', 'NCBI-disease', 'Wikitext-2 (WT2)', 'SQuAD', 'MRPC', 'WikiHow', 'WMT Zh-En newstest2017', 'SQuAD 2.0', 'IWSLT 2014 De-En', 'WMT16 RO-EN', 'Google Billion Word (test)', 'BillSum', 'MNLI', 'CCGBank', 'CoNLL-2003', 'E-commerce', 'MRDA', 'RTE', 'XSum', 'AX', 'MNLI-mm', 'Food'}",
+  "candidate_sha256": "953413343c6bfbcbc7b5fb66f8ab6108204edaa6bdce897a51ab4c06b6d3d2cf",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'QQP', 'DyDA', 'WMT En-De (newstest2014)', 'QNLI', 'ELI5', 'TACRED', 'CNN/DailyMail', 'AESLC', 'CBS SciTech News', 'CoNLL 2002 Dutch NER', 'SQuAD 1.1', 'PubMed', 'SwDA', 'IWSLT 2015 En-Vi', 'WNUT 2017', 'MapTask', 'SemEval 2013 Task 13', 'Snips', 'ON4C', 'NYT', 'CoNLL++', 'GLUE', 'Newsroom', 'Movie', 'CoLA', 'CoNLL-2003 German', 'Gigaword', 'SemEval 2010 Task 14', 'Multi-News', 'WE', 'arXiv', 'WSJ', 'Home', 'CoNLL 2002 Spanish NER', 'ConvAI2', 'MNLI-m', 'ATIS', 'BC5CDR', 'ReCoRD', 'Google Billion Word (valid)', 'IWSLT De-En', 'Penn Treebank converted to Stanford Dependencies version 3.3.0', 'CoNLL00', 'STS-B', 'RE', 'BIGPATENT', 'Reddit TIFU', 'WNUT 2016', 'Multimodal', 'OntoNotes', 'CoQA', 'SST-2', 'WikiText-103', 'WMT En-Fr (newstest2014)', 'OntoNotes 5.0', 'Penn Treebank', 'Open Entity', 'WNLI', 'NCBI-disease', 'Wikitext-2 (WT2)', 'SQuAD', 'MRPC', 'WikiHow', 'WMT Zh-En newstest2017', 'SQuAD 2.0', 'IWSLT 2014 De-En', 'WMT16 RO-EN', 'Google Billion Word (test)', 'BillSum', 'MNLI', 'CCGBank', 'CoNLL-2003', 'E-commerce', 'MRDA', 'RTE', 'XSum', 'AX', 'MNLI-mm', 'Food'}\n\nInput: CNNDM\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "73ac3a181e572b1013b4166ce4ce7f8c93b8cd36d19c4d9e49801731c766ab6e"
+}

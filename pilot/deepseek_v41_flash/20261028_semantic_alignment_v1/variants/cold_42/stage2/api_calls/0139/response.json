@@ -1,0 +1,32 @@
+{
+  "id": "9cd713ec-cb27-4f3d-ba63-01780f454dfc",
+  "object": "chat.completion",
+  "created": 1793197423,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-2)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, Gigaword, ROUGE-2). List has Summarization, Gigaword, ROGUE-2 etc. \"Abstractive Summarization\" matches Summarization? Need compare three fields. Dataset Gigaword. Metric ROUGE-2 vs listed ROGUE-2 (misspelling ROGUE). Under semantic matching, metric likely ROUGE-2 = ROGUE-2 superficial spelling. Task Abstractive Summarization vs Summarization broader standard label? Need see if clear. List has (Summarization, Gigaword, ROGUE-2). That likely matches. Need return entire listed tuple verbatim: (Summarization, Gigaword, ROGUE-2). Need be cautious: There is also ROGUE-1 and ROGUE-L. Input specifically 2, so match ROGUE-2. Answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 213,
+    "total_tokens": 986,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 198
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

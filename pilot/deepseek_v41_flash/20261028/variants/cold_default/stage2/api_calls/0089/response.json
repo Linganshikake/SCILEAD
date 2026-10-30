@@ -1,0 +1,32 @@
+{
+  "id": "d80a89de-aad3-4df2-9fed-6c5b78d767c8",
+  "object": "chat.completion",
+  "created": 1793194673,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Chunking, CoNLL 2000, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches list. List has (Text Chunking, CoNLL-2000, F1) not (Chunking, CoNLL 2000, F1). Exact string? Input differs. So output tuple unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 78,
+    "total_tokens": 632,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

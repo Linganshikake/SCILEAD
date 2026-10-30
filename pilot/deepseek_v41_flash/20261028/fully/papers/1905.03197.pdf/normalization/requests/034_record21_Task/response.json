@@ -1,0 +1,32 @@
+{
+  "id": "ae0c78fb-5cc2-47f8-b907-c1493df45029",
+  "object": "chat.completion",
+  "created": 1793192430,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "None",
+        "reasoning_content": "We need answer match item list. GLUE Benchmark is a suite of NLU tasks. None item exactly GLUE. Need choose? It includes various tasks: linguistic acceptability (CoLA), sentiment (SST-2), paraphrase/similarity (MRPC, STS-B, QQP), NLI (MNLI, RTE, QNLI), etc. The input is benchmark, not a task. Need match with one item? The instruction says match input with one item. If none matches, say None. Is \"GLUE Benchmark\" a benchmark for general language understanding, includes multiple tasks. No single item in list equals GLUE Benchmark. Could be \"Natural Language Inference (NLI)\"? But GLUE is not NLI. Need answer None likely.\n\nNeed ONLY matched item. If none, None. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 248,
+    "completion_tokens": 171,
+    "total_tokens": 419,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 169
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 248
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

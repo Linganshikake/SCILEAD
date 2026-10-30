@@ -1,0 +1,32 @@
+{
+  "id": "16613265-725b-4519-8519-55fb2db3533c",
+  "object": "chat.completion",
+  "created": 1793197558,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, arXiv, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input Summarization, arXiv, ROUGE-2 F1. Candidate list has summaries with Gigaword, CNN/DailyMail, XSum and ROGUE variants. No arXiv. So return input verbatim. Need consider ROUGE-2 vs ROGUE-2 typo? Dataset arXiv absent. No match. Output original tuple. Must maintain exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 102,
+    "total_tokens": 873,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

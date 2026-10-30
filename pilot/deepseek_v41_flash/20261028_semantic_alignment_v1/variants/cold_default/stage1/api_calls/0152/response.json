@@ -1,0 +1,32 @@
+{
+  "id": "b0a8d28f-1a9a-4752-8390-10017dca80ca",
+  "object": "chat.completion",
+  "created": 1793196836,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-1",
+        "reasoning_content": "We need answer. Need determine semantic match. Input \"ROUGE-1 F1\". Candidates include ROUGE-1, F1, Entity-level F1 score etc. Is ROUGE-1 F1 distinct? ROUGE-1 metric often reported as F1. Candidate \"ROUGE-1\" likely matches. Need preserve meaningful differences? \"ROUGE-1 F1\" denotes ROUGE-1 F1 score, same underlying metric ROUGE-1 usually F-measure. Candidate ROUGE-1 clear semantic match. Output exactly \"ROUGE-1\". Need only that."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 136,
+    "total_tokens": 542,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

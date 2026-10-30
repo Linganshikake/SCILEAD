@@ -1,0 +1,32 @@
+{
+  "id": "a38e0a0d-49d3-41cf-be7f-7f0470f7c348",
+  "object": "chat.completion",
+  "created": 1793194807,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2003 German, F1 score)",
+        "reasoning_content": "We need answer only. Need match exact tuple? Input tuple differs from list: (Named Entity Recognition (NER), CoNLL-2003 - English, F1) etc. Input: (Named Entity Recognition, CoNLL-2003 German, F1 score). Not exact match due no (NER), German, F1 score. So output tuple unchanged. Need only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 98,
+    "total_tokens": 654,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

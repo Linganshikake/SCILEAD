@@ -1,0 +1,32 @@
+{
+  "id": "2c9014eb-23d3-470e-9dcb-818b6a7ba379",
+  "object": "chat.completion",
+  "created": 1793195188,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROGUE-2)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly. List has Summarization variants, not Abstractive Summarization, NYT. So output input tuple unchanged. Need exact formatting probably \"(Abstractive Summarization, NYT, ROGUE-2)\". Ensure no extra."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 75,
+    "total_tokens": 629,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

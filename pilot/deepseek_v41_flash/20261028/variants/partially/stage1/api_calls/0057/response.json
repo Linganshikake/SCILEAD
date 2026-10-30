@@ -1,0 +1,32 @@
+{
+  "id": "7b912ed8-d052-4557-8046-c7d0c880cb23",
+  "object": "chat.completion",
+  "created": 1793194228,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OntoNotes",
+        "reasoning_content": "We need answer matched item if input matches one item. List has 'Ontonotes v4 - Chinese' but input \"OntoNotes\". Need determine match? Exact? \"If input entity matches one of items in list\" likely exact normalized? OntoNotes not exactly. Maybe there is item \"Ontonotes v4 - Chinese\", not OntoNotes. Output entity unchanged if no match. Need no explanation. Answer: OntoNotes. But consider case? OntoNotes vs Ontonotes v4 - Chinese not match. Return OntoNotes. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 575,
+    "completion_tokens": 119,
+    "total_tokens": 694,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 575
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "3ae92e93-4d4e-480c-a7c5-a650312f5d03",
+  "object": "chat.completion",
+  "created": 1793194269,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural Language Inference (NLI)",
+        "reasoning_content": "We need answer. Need match input entity to item list. Input \"Natural Language Inference\". List has \"Natural Language Inference (NLI)\" likely match despite abbreviation? The instruction: if input entity matches one of items, answer matched item. \"Natural Language Inference\" matches \"Natural Language Inference (NLI)\"? It is not exact but semantically. Need decide. They expect output matched item in list. Since list entry contains full with (NLI), likely answer that. No explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 277,
+    "completion_tokens": 107,
+    "total_tokens": 384,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 149
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

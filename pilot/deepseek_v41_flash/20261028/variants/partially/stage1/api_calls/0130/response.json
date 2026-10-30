@@ -1,0 +1,32 @@
+{
+  "id": "cd2cd564-221e-4d02-b693-79df8c5dbad8",
+  "object": "chat.completion",
+  "created": 1793194324,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural Language Inference (NLI)",
+        "reasoning_content": "We need answer only. Need match input \"Natural language inference\" to item list. Item has 'Natural Language Inference (NLI)'. Does matching mean exact? Input entity lower capitalization and no (NLI). Likely semantic match? Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. Need determine if \"Natural language inference\" matches 'Natural Language Inference (NLI)'? It is same concept but not exact string. \"matches\" could be case-insensitive? They provide input likely a variant. In these tasks, expected to map to canonical item if clearly refers. Output matched item exactly. So answer: Natural Language Inference (NLI). No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 311,
+    "completion_tokens": 152,
+    "total_tokens": 463,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 144
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 183
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

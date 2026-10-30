@@ -1,0 +1,32 @@
+{
+  "id": "e45d6a44-ad6b-4d85-afe4-c8bfcab856d5",
+  "object": "chat.completion",
+  "created": 1793197441,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Question Generation, SQuAD 1.1, ROUGE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among list. Input (Question Generation, SQuAD 1.1, ROUGE-L). List has no Question Generation, no SQuAD. Could match Summarization with SQuAD? no. Metric ROGUE-L vs ROUGE-L typo? But task/dataset no. Must return original verbatim. Need ensure output exactly tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 102,
+    "total_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

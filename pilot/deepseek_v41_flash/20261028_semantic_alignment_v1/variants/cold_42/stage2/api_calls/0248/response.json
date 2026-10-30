@@ -1,0 +1,32 @@
+{
+  "id": "c20768e5-0950-42c9-b929-d2ef49a70e21",
+  "object": "chat.completion",
+  "created": 1793198179,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-2)",
+        "reasoning_content": "We need answer only tuple. Need semantic match input (Abstractive Summarization, Gigaword, ROUGE-2). List has Summarization, Gigaword, ROGUE-2 etc. Task abstractive summarization matches summarization benchmark? Dataset Gigaword same. Metric ROUGE-2 vs ROGUE-2 typo superficial. Clear candidate: (Summarization, Gigaword, ROGUE-2). Need output verbatim."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 111,
+    "total_tokens": 884,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

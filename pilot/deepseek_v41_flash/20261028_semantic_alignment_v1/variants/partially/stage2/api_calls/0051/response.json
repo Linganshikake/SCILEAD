@@ -1,0 +1,32 @@
+{
+  "id": "b2bb81b5-4ed8-499c-89d8-2ba29b3da164",
+  "object": "chat.completion",
+  "created": 1793197549,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+        "reasoning_content": "We need answer only tuple. Need match input (Named Entity Recognition, WN16, F1) to candidates. Candidate WNUT-16 - English, F1 likely WN16 abbreviation. Return exact listed tuple: (Named Entity Recognition (NER), WNUT-16 - English, F1). Need ensure no other. Yes. Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 93,
+    "total_tokens": 862,
+    "prompt_tokens_details": {
+      "cached_tokens": 635
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_cache_hit_tokens": 635,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

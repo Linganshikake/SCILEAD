@@ -1,0 +1,32 @@
+{
+  "id": "63e1ea73-0d1a-4a45-9698-06504324e110",
+  "object": "chat.completion",
+  "created": 1793196792,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer match input ROUGE-2 to list. List has 'ROGUE-2' (misspelled ROGUE). Input ROUGE-2. Need match one item. They likely expect 'ROGUE-2' because closest? Need determine exact match maybe none due typo. Instructions: match input with one items. If none matches say None. Input \"ROUGE-2\", list contains \"ROGUE-2\". It's a typo/transposition, not exact. But likely benchmark expects matching metric, and list typo. Need output ONLY matched item. Need decide. Since \"ROUGE\" is standard, list has \"ROGUE-2\" typo. The input is ROUGE-2, intended item is ROGUE-2. They ask match. I'd output 'ROGUE-2' as matched item. Ensure exactly item from list, no quotes? \"ROGUE-2\". Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 211,
+    "total_tokens": 470,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 205
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

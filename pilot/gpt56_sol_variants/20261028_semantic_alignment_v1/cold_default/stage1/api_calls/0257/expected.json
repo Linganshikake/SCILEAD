@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "wang19f.pdf",
+  "record": 2,
+  "field": "Metric",
+  "original": "Test perplexity",
+  "candidate_serialized": "{'Development Exact Match', 'Chunk-level F1 score', 'Spearman correlation', 'Average length', 'Test Recall', 'ROUGE-1', 'Entity-level F1', 'METEOR', 'ROUGE-2', 'Aggregate score', 'Div-1', 'ROUGE-L F1', 'ROUGE-2 F1', 'BLEU-4', 'ROUGE-L', 'Test F1', 'Matthews correlation coefficient', 'BLEU', 'Test Exact Match', 'ROUGE-1 F1', 'Accuracy', 'Div-2', 'Validation perplexity', 'Entropy-4', 'NIST-4', 'F1 score', 'Exact Match', 'Mismatched accuracy', 'Correlation', 'Test Precision', 'Development F1'}",
+  "candidate_sha256": "c73501addf6f379527839f1d6f39feede1448f9792785de780c11797b07e8478",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Development Exact Match', 'Chunk-level F1 score', 'Spearman correlation', 'Average length', 'Test Recall', 'ROUGE-1', 'Entity-level F1', 'METEOR', 'ROUGE-2', 'Aggregate score', 'Div-1', 'ROUGE-L F1', 'ROUGE-2 F1', 'BLEU-4', 'ROUGE-L', 'Test F1', 'Matthews correlation coefficient', 'BLEU', 'Test Exact Match', 'ROUGE-1 F1', 'Accuracy', 'Div-2', 'Validation perplexity', 'Entropy-4', 'NIST-4', 'F1 score', 'Exact Match', 'Mismatched accuracy', 'Correlation', 'Test Precision', 'Development F1'}\n\nInput: Test perplexity\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "542b7c3e7db0b06fcef5baf5b834de06f98b6394a2e0040db5476042262a3779"
+}

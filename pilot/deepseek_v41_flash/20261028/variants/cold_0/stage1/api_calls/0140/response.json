@@ -1,0 +1,32 @@
+{
+  "id": "ec9f0165-46c4-459e-a00e-84ae3d54348e",
+  "object": "chat.completion",
+  "created": 1793194308,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Abstractive sentence summarization",
+        "reasoning_content": "We need answer only matched or original. Need determine if \"Abstractive sentence summarization\" matches one item. List has \"Abstractive Summarization\" not exact. Instructions: if input entity matches one of items in list, answer matched item. Else output entity unchanged. Does \"matches\" mean exact? likely exact. Abstractive sentence summarization not exact. Output unchanged. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 247,
+    "completion_tokens": 85,
+    "total_tokens": 332,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 247
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

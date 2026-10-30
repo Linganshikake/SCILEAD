@@ -1,0 +1,32 @@
+{
+  "id": "c589bfd0-b032-41d2-83bc-1eb04dc0a04e",
+  "object": "chat.completion",
+  "created": 1793197315,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Natural language inference, MNLI, Matched accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among list. Input: Natural language inference, MNLI, Matched accuracy. List no NLI/MNLI. No match. Return original tuple verbatim. Ensure exact input: (Natural language inference, MNLI, Matched accuracy)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 72,
+    "total_tokens": 841,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

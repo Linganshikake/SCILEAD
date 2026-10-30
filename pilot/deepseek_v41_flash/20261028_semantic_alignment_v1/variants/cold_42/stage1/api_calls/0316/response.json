@@ -1,0 +1,32 @@
+{
+  "id": "e895d85e-0002-4234-8301-9846ff91b655",
+  "object": "chat.completion",
+  "created": 1793197084,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE CoLA",
+        "reasoning_content": "We need answer only matched item or unchanged. Need determine CoLA matches GLUE CoLA? Item list contains 'GLUE CoLA'. Semantic matching task names: CoLA likely Corpus of Linguistic Acceptability, GLUE task CoLA. More specific wording may match existing standard task when same underlying. Input CoLA matches GLUE CoLA. Output exactly 'GLUE CoLA'. Need no quotes? final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 89,
+    "total_tokens": 879,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,5 +1,7 @@
 # SCILEAD：实验复现与结果归档
 
+**最新新增结果（2026-10-30）：[Sol / DeepSeek 全量变体、增强 Prompt 与五篇子集对照](results/20261030/README.md)**。本次6组实验的目录、完整指标与输出索引均在该页。
+
 **最新结果入口（2026-10-24）：[完整实验指标与报告汇总](results/README.md)**。包含各实验 T/D/M/R IIM、TDM/TDMR 的 P/R/F1，以及排行榜 PC、RC、RBO、已有 LR/AO；[JSON](results/metrics_summary.json) 与 [CSV](results/tuple_metrics.csv) 可下载。
 
 本次新增 Llama-3 70B 正式42篇及V2恢复、AxCell + GPT-4.1 的37篇完整流程、GPT-5.6 Sol Fully LLM 的43篇恢复版。Llama-2及未完成的共同16篇标准化任务暂不发布。不同论文范围和生成配置必须结合报告阅读，不能把全部结果当作同范围排名。

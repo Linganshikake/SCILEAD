@@ -1,0 +1,78 @@
+[
+  {
+    "content": "levels can impact the classiﬁcation performance at the higher level. Employing self-attention, which has not previously been applied to this task, en- ables the model to learn richer, more effective ut- terance representations for the task. As future work, we would like to experiment with other attention mechanisms such as multi- head attention (Vaswani et al., 2017), directional self-attention (Shen et al., 2018a), block self- attention (Shen et al., 2018b), or hierarchical at- tention (Yang et al., 2016), since they have been shown to address the limitations of vanilla atten- tion and self-attention by either incorporating in- formation from different representation subspaces at different positions to capture both local and long-range context dependencies, encoding tem- poral order information, or by attending to context dependencies at different levels of granularity. Acknowledgements The authors would like to thank Dimitris Alikanio- tis, Maria Nadejde and Courtney Napoles for their insightful discussions, and the anonymous review- ers for their helpful comments. 3731",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 5,
+      "start_index": 1799,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "Table 2: Number of utterances by dataset. |C| denotes number of classes and |V| is the vocabulary size. we use the train, validation and test splits as de- ﬁned in Lee and Dernoncourt (2016). both statistics shows Table They are highly imbalanced in datasets. class distribution, with the DA terms of and classes Acknowledge/Backchannel in SwDA and Statement in MRDA making up over 50% of the labels in each set. 5 Results 5.1 Dialogue Act Classiﬁcation We compare the classiﬁcation accuracy of our model against several other recent methods (Ta- ble 3).1 Four approaches (Chen et al., 2018; Tran et al., 2017; Ortega and Vu, 2017; Shen and Lee, 2016) use attention in some form to model the con- versations, but none of them have explored self- attention for the task. The last three use CRFs in the ﬁnal layer of sequence labeling. Only one other method (Chen et al., 2018) uses character- level word embeddings. All models and their vari- ants were trained ten times and we report the av- erage test performance. Our model outperforms state-of-the-art methods by 1.6% on SwDA, the primary dataset for this task, and comes within 0.6% on MRDA. It also beats a TF-IDF GloVe baseline (described in Section 5.2) by 16.4% and 12.2%, respectively. The improvements that the model is able to make over the other methods are signiﬁcant, how- ever, the gains on MRDA still fall short of the state-of-the-art by 0.6%. This can mostly be at- tributed to the conversation/context lengths and la- bel noise at the conversation level. Conversations in MRDA (1493 utterances on average) are signiﬁ- cantly longer than in SwDA (271 utterances on av- erage). In spite of having nearly 12% the number 1Contemporaneous to this submission, (Li et al., 2018; Wan et al., 2018; Ravi and Kozareva, 2018) proposed differ- ent approaches for the task. We do not focus on them here per NAACL 2019 guidelines, however note that our system out- performs the ﬁrst two. (Ravi and Kozareva, 2018) bypasses the need for complex",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 4,
+      "start_index": 0,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "References",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 6,
+      "start_index": 0,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "representation learning, and is able to achieve state-of-the-art performance. 3 Model The task of DA classiﬁcation takes a conversa- tion C as input, which is a varying length se- quence of utterances U = {u1, u2, ...uL}. Each utterance ui ∈ U , in turn, is a sequence of vary- ing lengths of words {w1 i }, and has a corresponding target label yi ∈ Y . Hence, each conversation (i.e. a sequence of utterances) is mapped to a corresponding sequence of target labels Y = {y1, y2, ..., yL}, which represents the DAs associated with the corresponding utterances. Figure 1 shows the overall architecture of our model, which involves three main compo- nents: (1) an utterance-level RNN that encodes the information within the utterances at the word and character-level; (2) a context-aware self- attention mechanism that aggregates word repre- sentations into utterance representations; and (3) a conversation-level RNN that operates on the utter- ance encoding output of the attention mechanism, followed by a CRF layer to predict utterance la- bels. We describe them in detail below. 3.1 Utterance-level RNN For each word in an utterance, we combine two different word embeddings: GloVe (Pennington et al., 2014) and pre-trained ELMo representations (Peters et al., 2018) with ﬁne-tuned task-speciﬁc parameters, which have shown superior perfor- mance in a wide range of tasks. The word embed- ding is then concatenated with its CNN-based 50- D character-level embedding (Chiu and Nichols, 2016; Ma and Hovy, 2016) to get the complete word-level representations. The motivation behind incorporating subword-level information is to in- fer the lexical features of utterances and named entities better. 3728",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 2,
+      "start_index": 1805,
+      "type": "Text"
+    }
+  },
+  {
+    "content": "Table 1: A snippet of a conversation sample from the SwDA Corpus. Each utterance has a corresponding di- alogue act label.\nSpeaker Utterance A A Okay. Um, what did you do this weekend? Well, uh, pretty much spent most of my time in the yard. [Throat Clearing] Uh-Huh. What do you have planned for your yard? Well, we’re in the process of, revitalizing it. B B A A B DA label Other Question Statement Non Verbal Backchannel Question Statement",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 1,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 2: Number of utterances by dataset. |C| denotes number of classes and |V| is the vocabulary size.\nDataset MRDA SwDA |C| 5 43 |V| 12k 20k Train Validation Test 15k 78k 5k 193k 16k 23k",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 4,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 3: DA Classiﬁcation Accuracy\nModel TF-IDF GloVe Kalchbrenner and Blunsom (2013) Lee and Dernoncourt (2016) Khanpour et al. (2016) Ji et al. (2016) Shen and Lee (2016) Li and Wu (2016) Ortega and Vu (2017) Tran et al. (2017) Kumar et al. (2018) Chen et al. (2018) Our Method Human Agreement SwDA MRDA 66.5 73.9 73.9 75.8 77.0 72.6 79.4 73.8 74.5 79.2 81.3 82.9 84.0 78.7 - 84.6 86.8 - - - 84.3 - 90.9 91.7 91.1 -",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 4,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 4: methods when integrated with the hierarchical model\nMethod Baseline TF-IDF GloVe Pre-trained on Corpus Skip Thought Vectors Paragraph vectors Joint Learning RNN-Encoder Bi-RNN-LastState Bi-RNN-MaxPool CNN Bi-RNN + Attention + Context Bi-RNN + Self-attention + Context SwDA MRDA 66.5 78.7 72.6 72.5 82.8 82.6 74.8 76.2 77.6 76.9 80.1 81.8 81.1 82.9 85.7 85.4 86.7 84.5 87.7 89.2 88.6 91.1",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 5,
+      "type": "Table"
+    }
+  },
+  {
+    "content": "Table 5: Hyperparameter space and tuned values\nHyperparams Word Embeddings Range of values GloVe 100D GloVe 200D GloVe 300D Final value GloVe 300D + ELMo 1024D Word2vec 300D Word2vec 200D ELMo 1024D GloVe 300D + ELMo 1024D Word2Vec 300D + ELMo 1024D Sentence GRU Size (u) Utterance GRU 20 - 600 Size (k) Learning Rate Dropout Optimizer 20 - 300 0.01 - 2.0 0.1 - 0.8 SGD, RMSProp, Adam 50 100 0.015 0.3 Adam",
+    "metadata": {
+      "filename": "N19-1373.pdf",
+      "page_number": 7,
+      "type": "Table"
+    }
+  }
+]

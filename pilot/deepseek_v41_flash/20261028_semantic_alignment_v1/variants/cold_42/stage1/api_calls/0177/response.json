@@ -1,0 +1,32 @@
+{
+  "id": "e04ddd85-5fef-4efe-aa3d-9ced3a032c6e",
+  "object": "chat.completion",
+  "created": 1793196850,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 English",
+        "reasoning_content": "We need answer matched item. Input CoNLL-2003. Candidate \"CoNLL-2003 English\". Semantic match? It is a dataset, CoNLL-2003 often English NER, candidate specific wording. Need output candidate exactly if clear semantic match. \"CoNLL-2003\" likely matches \"CoNLL-2003 English\" because standard task is English NER and only one CoNLL-2003 candidate. But requirement preserve language identity; input omits language but likely unambiguous? There is also CoNLL 2002 Dutch/Spanish. CoNLL-2003 typically English NER. Candidate \"CoNLL-2003 English\". Match clear. Output \"CoNLL-2003 English\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 649,
+    "completion_tokens": 162,
+    "total_tokens": 811,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 154
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 393
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

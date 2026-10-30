@@ -1,0 +1,32 @@
+{
+  "id": "81b59a6d-f2c4-4275-8a9e-2e2e570c0187",
+  "object": "chat.completion",
+  "created": 1793194879,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROUGE-L)",
+        "reasoning_content": "We need answer. Need match exact? Item list has tuples with \"Summarization, Gigaword, ROGUE-L\" (misspelled ROGUE). Input \"Abstractive Summarization, Gigaword, ROUGE-L\" not exact. Need output input unchanged if no match. Check if any item equals input. No. Output tuple without changing it. Format likely (Abstractive Summarization, Gigaword, ROUGE-L). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 112,
+    "total_tokens": 666,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

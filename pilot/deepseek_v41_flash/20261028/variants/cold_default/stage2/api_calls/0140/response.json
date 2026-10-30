@@ -1,0 +1,32 @@
+{
+  "id": "69566d41-9e44-4cd9-a611-537fc9340ecd",
+  "object": "chat.completion",
+  "created": 1793194734,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, BillSum, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any list item exactly. List contains ROGUE misspelled and metrics. Input (Summarization, BillSum, ROUGE-2 F1). Not in list. Output unchanged. Need exact tuple format. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 72,
+    "total_tokens": 626,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

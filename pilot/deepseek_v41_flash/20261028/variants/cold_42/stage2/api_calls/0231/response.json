@@ -1,0 +1,32 @@
+{
+  "id": "17980c1b-392e-422f-8059-85dd5384eb88",
+  "object": "chat.completion",
+  "created": 1793194857,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2003 German, F1 score)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. Input: (Named Entity Recognition, CoNLL-2003 German, F1 score). List has (Named Entity Recognition (NER), CoNLL-2003 - English, F1), etc. No exact match due names and metric. Output tuple unchanged. Need preserve exact input? \"output the tuple without changing it.\" So `(Named Entity Recognition, CoNLL-2003 German, F1 score)`. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 120,
+    "total_tokens": 676,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

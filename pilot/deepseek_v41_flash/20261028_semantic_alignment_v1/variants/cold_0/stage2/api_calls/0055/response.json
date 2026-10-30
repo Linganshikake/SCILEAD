@@ -1,0 +1,32 @@
+{
+  "id": "60d5dea9-d875-4615-ba7f-3e3589749c9e",
+  "object": "chat.completion",
+  "created": 1793197263,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input: (Joint intent detection and slot filling, Snips, Intent (Acc)). Candidate list has (Intent Detection and Slot Filling, SNIPS, Accuracy) and (Intent Detection and Slot Filling, SNIPS, F1). Input metric \"Intent (Acc)\" likely Intent Accuracy, which corresponds Accuracy. Task same joint intent detection and slot filling. Dataset Snips. So match (Intent Detection and Slot Filling, SNIPS, Accuracy). Output verbatim. Ensure exact: (Intent Detection and Slot Filling, SNIPS, Accuracy)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 136,
+    "total_tokens": 908,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 122
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "4568db78-e44f-4036-92c2-7a7f3b26ada2",
+  "object": "chat.completion",
+  "created": 1793194764,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extreme Summarization, XSum, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly. List has (Summarization, XSum, ROGUE-1) etc. Input (Extreme Summarization, XSum, ROUGE-1 F1) not exactly. Output unchanged tuple. Need preserve exact string. \"ROUGE-1 F1\" note list has ROGUE misspelled. No match. Output (Extreme Summarization, XSum, ROUGE-1 F1). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 123,
+    "total_tokens": 679,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

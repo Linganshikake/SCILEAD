@@ -1,0 +1,32 @@
+{
+  "id": "a447c5fc-88ed-45af-8fd3-eac431e775aa",
+  "object": "chat.completion",
+  "created": 1793196823,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "NCBI-disease",
+        "reasoning_content": "We need answer only selected or unchanged. Input NCBI-disease. Item list includes BC5CDR, which is a dataset often BioCreative V CDR, not NCBI disease. Also PubMed? NCBI-disease is a disease NER dataset. No exact candidate. Could semantic match? Candidates include BC5CDR (chemical-disease relation), WNUT, CoNLL, etc. NCBI-disease not listed. So output NCBI-disease unchanged. Ensure exact input. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 600,
+    "completion_tokens": 106,
+    "total_tokens": 706,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 344
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

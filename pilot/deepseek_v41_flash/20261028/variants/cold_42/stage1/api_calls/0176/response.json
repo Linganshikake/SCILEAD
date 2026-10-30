@@ -1,0 +1,32 @@
+{
+  "id": "b517f94b-e51c-4c68-9877-56360c6a4b3b",
+  "object": "chat.completion",
+  "created": 1793194374,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2003 English",
+        "reasoning_content": "We need answer match if input matches item. Input \"CoNLL 2003 English\" not exactly in list? There is 'CoNLL-2003 English'. Input has space not hyphen. Also list has 'CoNLL 2003 NER', 'CoNLL-2003', 'CoNLL-2003 English'. Exact matching? \"matches one of the items\" likely exact. Input \"CoNLL 2003 English\" differs from 'CoNLL-2003 English'. Do we output entity unchanged. Need not explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 123,
+    "total_tokens": 676,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "dc1408fc-e84c-4248-aa1d-419c6c69ddbd",
+  "object": "chat.completion",
+  "created": 1793197364,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer matched item. Input ROUGE-L vs list has 'ROGUE-L' (typo). Need match? It says match input with one item. Likely intended ROGUE-L. But string differs ROUGE vs ROGUE. Need decide. List contains ROGUE-L, ROGUE-1, ROGUE-2. Input ROUGE-L. Since exact none. But likely typo in list, match ROGUE-L. Need only matched item. Output 'ROGUE-L'. Ensure quotes? Only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 122,
+    "total_tokens": 380,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 117
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

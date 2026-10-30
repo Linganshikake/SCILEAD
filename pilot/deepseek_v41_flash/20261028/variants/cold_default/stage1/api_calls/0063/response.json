@@ -1,0 +1,32 @@
+{
+  "id": "b082ff21-80ef-4421-a7d7-561724bc1c37",
+  "object": "chat.completion",
+  "created": 1793194213,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE",
+        "reasoning_content": "We need answer only. Need determine if GLUE matches item list exactly. Items include task names, not GLUE. So output entity unchanged \"GLUE\". Ensure no explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 290,
+    "completion_tokens": 40,
+    "total_tokens": 330,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 162
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

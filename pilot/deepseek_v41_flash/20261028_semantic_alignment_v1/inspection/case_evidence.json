@@ -1,0 +1,185 @@
+{
+  "examples": [
+    {
+      "branch": "cold_default",
+      "stage": "stage2",
+      "paper": "2020.findings-emnlp.378.pdf",
+      "record": 1,
+      "field": "TDM",
+      "raw_extraction": {
+        "Task": "Named Entity Recognition",
+        "Dataset": "ON5E",
+        "Metric": "F1",
+        "Result": "90.32"
+      },
+      "before": {
+        "Task": "Named Entity Recognition",
+        "Dataset": "ON5E",
+        "Metric": "F1",
+        "Result": "90.32"
+      },
+      "after": {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "Ontonotes v5 - English",
+        "Metric": "F1",
+        "Result": "90.32"
+      },
+      "variant_call": 1,
+      "response": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1\\variants\\cold_default\\stage2\\api_calls\\0001\\response.json",
+        "sha256": "e6e571c20c3dce30bfc466bc5eb1752734e238f18445cbbde5a0665ca24baddd",
+        "content": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)"
+      }
+    },
+    {
+      "branch": "cold_default",
+      "stage": "stage2",
+      "paper": "2020.findings-emnlp.378.pdf",
+      "record": 2,
+      "field": "TDM",
+      "raw_extraction": {
+        "Task": "Named Entity Recognition",
+        "Dataset": "WN16",
+        "Metric": "F1",
+        "Result": "55.14"
+      },
+      "before": {
+        "Task": "Named Entity Recognition",
+        "Dataset": "WN16",
+        "Metric": "F1",
+        "Result": "55.14"
+      },
+      "after": {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "WNUT-16 - English",
+        "Metric": "F1",
+        "Result": "55.14"
+      },
+      "variant_call": 2,
+      "response": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1\\variants\\cold_default\\stage2\\api_calls\\0002\\response.json",
+        "sha256": "911618041ec8f100a055be123513bf0fe7af057e49437fd78dc08a16b501a1d5",
+        "content": "(Named Entity Recognition (NER), WNUT-16 - English, F1)"
+      }
+    },
+    {
+      "branch": "cold_default",
+      "stage": "stage2",
+      "paper": "2020.findings-emnlp.378.pdf",
+      "record": 3,
+      "field": "TDM",
+      "raw_extraction": {
+        "Task": "Named Entity Recognition",
+        "Dataset": "WN17",
+        "Metric": "F1",
+        "Result": "50.68"
+      },
+      "before": {
+        "Task": "Named Entity Recognition",
+        "Dataset": "WN17",
+        "Metric": "F1",
+        "Result": "50.68"
+      },
+      "after": {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "WNUT-17 - English",
+        "Metric": "F1",
+        "Result": "50.68"
+      },
+      "variant_call": 3,
+      "response": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1\\variants\\cold_default\\stage2\\api_calls\\0003\\response.json",
+        "sha256": "357a330a291b4bd685c1b0a478004b95a474f5afadb5556951efdb1cb89da519",
+        "content": "(Named Entity Recognition (NER), WNUT-17 - English, F1)"
+      }
+    },
+    {
+      "branch": "cold_0",
+      "stage": "stage1",
+      "paper": "1811.09242.pdf",
+      "record": 7,
+      "field": "Dataset",
+      "raw_extraction": {
+        "Task": "Name Disambiguation",
+        "Dataset": "Arnet",
+        "Metric": "F1",
+        "Result": "58.8"
+      },
+      "before": "Arnet",
+      "after": "SemEval 2013 Task 13",
+      "variant_call": 10,
+      "response": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1\\variants\\cold_0\\stage1\\api_calls\\0010\\response.json",
+        "sha256": "0498b9249eeac0f41f31b396fcb4c91432ece9be3069d13aaf495f0aaa37eaff",
+        "content": "SemEval 2013 Task 13"
+      }
+    },
+    {
+      "branch": "cold_42",
+      "stage": "stage1",
+      "paper": "C18-1139.pdf",
+      "record": 2,
+      "field": "Dataset",
+      "raw_extraction": {
+        "Task": "NER German",
+        "Dataset": "CoNLL-2003",
+        "Metric": "F1-score",
+        "Result": "88.32±0.20"
+      },
+      "before": "CoNLL-2003",
+      "after": "CoNLL-2003 English",
+      "variant_call": 61,
+      "response": {
+        "path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1\\variants\\cold_42\\stage1\\api_calls\\0061\\response.json",
+        "sha256": "12a50ea5c266e592c17b9b0576ce4a8a5e757804da831d58ac2214f3a59e0fad",
+        "content": "CoNLL-2003 English"
+      }
+    }
+  ],
+  "arnet_source_documents": [
+    {
+      "index_zero_based": 7,
+      "content": "Table 4: Statistics of the number of senses of target words/names in the datasets used in the paper.\nDataset SemEval 2010 SemEval 2013 PubMed Arnet Min Max Mean 7.68 16 3.85 7 10.41 28 14.18 112 2 2 1 1 StdDev 3.35 1.40 7.68 18.02",
+      "metadata": {
+        "filename": "1811.09242.pdf",
+        "page_number": 7,
+        "type": "Table"
+      }
+    },
+    {
+      "index_zero_based": 8,
+      "content": "(a) Arnet Dataset\nModel LDA HC STM AutoSense S = 5 S = 25 S = 50 S = 100 31.5 46.3 52.8 56.2 13.4 46.3 55.0 56.4 9.8 44.4 55.5 57.9 8.2 41.7 55.0 58.8",
+      "metadata": {
+        "filename": "1811.09242.pdf",
+        "page_number": 7,
+        "type": "Table"
+      }
+    }
+  ],
+  "partially_regression": {
+    "paper": "1811.05021.pdf",
+    "record": 2,
+    "before": {
+      "Task": "Dialogue Act Classification",
+      "Dataset": "MapTask",
+      "Metric": "Accuracy",
+      "Result": "68.5"
+    },
+    "after": {
+      "Task": "Dialog Act Classification",
+      "Dataset": "MapTask",
+      "Metric": "Accuracy",
+      "Result": "68.5"
+    }
+  },
+  "source_path": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1\\variants\\inputs\\output.json",
+  "source_sha256": "cd71d67b9a6bc563f564f138451936d11195bd96b70a837acceda3807953ec45",
+  "gold_used_only_after_generation": true,
+  "scope_summary": {
+    "gold_records": 295,
+    "leaderboard_tdm_candidates": 27,
+    "gold_records_with_candidate_tdm": 140,
+    "gold_records_without_candidate_tdm": 155,
+    "purpose": "Offline scope diagnosis only; never model input"
+  }
+}

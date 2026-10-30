@@ -1,0 +1,32 @@
+{
+  "id": "5020b285-db67-4554-994b-7c7369024f84",
+  "object": "chat.completion",
+  "created": 1793194244,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2003 (Eng)",
+        "reasoning_content": "We need answer. Need match input to item list if matches. \"CoNLL-2003 English\" Does it match \"CoNLL 2003 (Eng)\"? Need determine exact? The instruction: if input entity matches one of items in list, answer matched item. Else output entity unchanged. Matching likely exact? Input \"CoNLL-2003 English\" not exact any item. Could be semantic match to CoNLL 2003 (Eng) or CoNLL-2003? Need infer from entity matching eval. Usually these tasks expect canonical mapping if clear. Input has \"CoNLL-2003 English\" likely refers to same dataset as \"CoNLL 2003 (Eng)\" in list. Need output matched item in list. Let's assess options: Items include 'CoNLL 2003 (Eng)' and 'CoNLL-2003'. Input \"CoNLL-2003 English\" exactly not but closest 'CoNLL 2003 (Eng)' because Eng=English, hyphen variation. Since item list has CoNLL-2003 (no English). The matched item probably \"CoNLL 2003 (Eng)\". The user says if matches one of items. Do we need exact string or semantic? \"matches\" could mean entity linking. Given list includes many aliases, input could be alias. Need output matched item. I think 'CoNLL 2003 (Eng)'.\n\nLet's ensure no exact: CoNLL-2003 English vs CoNLL-2003 is prefix with English. CoNLL 2003 (Eng) uses space and parenthetical, canonical variant. Answer only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 355,
+    "total_tokens": 662,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 345
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 179
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

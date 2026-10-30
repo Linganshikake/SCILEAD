@@ -1,0 +1,32 @@
+{
+  "id": "cca4f566-fcc1-49b0-9c07-05d8e31aa0be",
+  "object": "chat.completion",
+  "created": 1793194700,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, NEWSROOM, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only tuple if not match. Need parse input (Summarization, NEWSROOM, ROUGE-1 F1). Check list no exact. There is Summarization with Gigaword/CNN/XSum and ROGUE variants, no NEWSROOM. Output unchanged. Must preserve ROUGE? Input says ROUGE-1 F1. Just output exact input tuple. No explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 102,
+    "total_tokens": 657,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

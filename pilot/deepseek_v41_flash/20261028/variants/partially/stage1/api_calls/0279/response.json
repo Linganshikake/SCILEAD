@@ -1,0 +1,32 @@
+{
+  "id": "191b7be4-d321-47e5-84c1-a9d016a5d96d",
+  "object": "chat.completion",
+  "created": 1793194677,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item. Need match input \"ROUGE-L F1\" to item list. List has ROGUE-L (misspelled) and F1, F-Score. Input likely ROUGE-L F1. There is no exact \"ROUGE-L F1\"; list contains 'ROGUE-L' (typo) and 'F1'. Need match input with one item. They ask match input with one of items. If none matches say None. Could interpret \"ROUGE-L F1\" as metric ROUGE-L F1, which is same as ROGUE-L? The item list has \"ROGUE-L\" typo for ROUGE-L, likely intended. Should output \"ROGUE-L\" exactly from list. Need only matched item. Final."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 260,
+    "completion_tokens": 174,
+    "total_tokens": 434,
+    "prompt_tokens_details": {
+      "cached_tokens": 126
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 169
+    },
+    "prompt_cache_hit_tokens": 126,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

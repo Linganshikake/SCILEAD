@@ -1,0 +1,32 @@
+{
+  "id": "ddf6dd04-1c4d-473a-bad2-c0abec8e0040",
+  "object": "chat.completion",
+  "created": 1793194192,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Named Entity Recognition",
+        "reasoning_content": "We need answer exact matched item or unchanged. Input \"Named entity recognition\" compare list includes \"Named Entity Recognition\" capitalization differs. Matching likely case-insensitive? Need determine. The instruction: if input entity matches one of items in list, answer matched item in list. Else output entity without changing. \"Named entity recognition\" differs capitalization only. Usually matches semantic string? We need output matched item exactly: \"Named Entity Recognition\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 238,
+    "completion_tokens": 94,
+    "total_tokens": 332,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 238
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

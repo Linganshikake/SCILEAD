@@ -1,0 +1,32 @@
+{
+  "id": "5cc9cbba-edd3-44d0-bb9f-cbcfb0d2a844",
+  "object": "chat.completion",
+  "created": 1793193757,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1",
+        "reasoning_content": "We need answer only matched item. Need match \"F1-score\" to item list. List has 'F-Score (F-S)' and 'F1'. F1-score synonym F1. Which one intended? Input F1-score. In list both F-Score (F-S) and F1. Need exact match semantically. F1-score typically metric. The item 'F1' is closest. But F-Score (F-S) could also mean F-score. We need choose one. Since input includes \"F1-score\", item 'F1' likely. Answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "completion_tokens": 123,
+    "total_tokens": 380,
+    "prompt_tokens_details": {
+      "cached_tokens": 123
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 123,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

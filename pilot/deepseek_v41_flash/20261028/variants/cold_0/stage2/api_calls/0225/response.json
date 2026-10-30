@@ -1,0 +1,32 @@
+{
+  "id": "ee27240b-12cf-46fb-a532-df40b7bbab44",
+  "object": "chat.completion",
+  "created": 1793194837,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Multi-News, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list. List has summarization with Gigaword, CNN/DailyMail, XSum and ROGUE variants, not Multi-News, and \"ROUGE-1 F1\" differs. So output unchanged tuple exactly: (Summarization, Multi-News, ROUGE-1 F1)"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 93,
+    "total_tokens": 648,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

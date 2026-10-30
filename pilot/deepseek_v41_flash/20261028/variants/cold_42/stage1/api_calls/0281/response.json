@@ -1,0 +1,32 @@
+{
+  "id": "c2e2e062-b68a-4b10-add4-20c3eda048fe",
+  "object": "chat.completion",
+  "created": 1793194534,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Named Entity Recognition",
+        "reasoning_content": "We need answer. Need determine if input matches one item in list. List contains 'Named Entity Recognition' and 'NER English', 'NER German', 'Fine-Grained NER'. Input \"Named entity recognition\" case differs capitalization. Matching? Need if matches one of items. Likely exact? \"matches one of items\" perhaps case-insensitive? They want matched item. Input is Named entity recognition, list has Named Entity Recognition. Should output matched item exactly from list: Named Entity Recognition. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 346,
+    "completion_tokens": 107,
+    "total_tokens": 453,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 218
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

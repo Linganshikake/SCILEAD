@@ -1,0 +1,32 @@
+{
+  "id": "7741e000-4d2d-47d5-8a2c-3cd9c5208a0e",
+  "object": "chat.completion",
+  "created": 1793194887,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, WE, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any in list exactly? Input (Named Entity Recognition, WE, F1). List has NER with Ontonotes v5 - English, CoNLL-2003 English, WNUT-17 English, WNUT-16 English. No \"WE\". Thus output tuple unchanged. Need format likely (Named Entity Recognition, WE, F1). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 98,
+    "total_tokens": 647,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 165
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

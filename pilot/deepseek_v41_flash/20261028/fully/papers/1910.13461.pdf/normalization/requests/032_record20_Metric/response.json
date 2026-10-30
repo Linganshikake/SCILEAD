@@ -1,0 +1,32 @@
+{
+  "id": "8a27cce6-d7b4-48f6-b368-90d5d8f3f84e",
+  "object": "chat.completion",
+  "created": 1793192660,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "'ROGUE-2'",
+        "reasoning_content": "We need answer match input ROUGE-2 to item list. List has 'ROGUE-2' (misspelled ROGUE vs ROUGE). Need decide if match? Input ROUGE-2, item list includes 'ROGUE-2' likely typo intended same metric? The task says match input with one items. If none matches say None. Need determine exact or semantic? We have item \"ROGUE-2\" which is a misspelling of ROUGE-2 probably. Since list has typo. We should match to 'ROGUE-2' as closest intended. Need output only matched item exactly from list. So 'ROGUE-2'. Ensure only that."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 159,
+    "total_tokens": 418,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 151
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

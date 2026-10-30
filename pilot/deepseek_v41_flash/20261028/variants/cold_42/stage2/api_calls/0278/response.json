@@ -1,0 +1,32 @@
+{
+  "id": "fd12cc85-2f39-4b7b-a18a-df039dba47f3",
+  "object": "chat.completion",
+  "created": 1793194913,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any in list exactly. Input (Abstractive Summarization, NYT, ROUGE-L). Item list has Summarization with datasets Gigaword, CNN/DailyMail, XSum and metrics ROGUE-L etc. No exact match. So output input tuple unchanged. Ensure formatting exact: (Abstractive Summarization, NYT, ROUGE-L)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 100,
+    "total_tokens": 653,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

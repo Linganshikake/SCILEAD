@@ -1,0 +1,32 @@
+{
+  "id": "c6dc250c-237b-446f-a850-a729f31ae563",
+  "object": "chat.completion",
+  "created": 1793197165,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003",
+        "reasoning_content": "We need answer only. Need determine match. Input \"CoNLL 2003 English\" against list. Candidates: CoNLL-2003 German, CoNLL-2003, CoNLL 2002 Dutch NER, Spanish, etc. Semantic match? \"CoNLL 2003 English\" likely refers CoNLL-2003 English NER task, while list has \"CoNLL-2003\" without language. Is \"CoNLL-2003\" standard dataset usually English? CoNLL-2003 is English NER shared task, also German? Actually CoNLL-2003 shared task had English and German NER datasets. List has both \"CoNLL-2003 German\" and \"CoNLL-2003\". So \"CoNLL 2003 English\" likely matches candidate \"CoNLL-2003\" because that denotes English version (generic CoNLL-2003). Need preserve meaningful differences? Since there's German separately, CoNLL-2003 probably English. Match to \"CoNLL-2003\". Need output selected item exactly. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 241,
+    "total_tokens": 1021,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 234
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 268
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

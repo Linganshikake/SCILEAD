@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.6-sol",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Test Perplexity', 'Development Exact Match', 'Spearman correlation', 'Average length', 'LAS', 'Test Recall', 'V-measure', 'F-score', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'Test Precision', 'Aggregate score', 'UAS', 'Geometric mean (AVG)', 'Mention-level F1 score', 'Div-1', 'Fuzzy normalized mutual information (F-NMI)', 'Fuzzy B-Cubed F-score (F-BC)', 'BLEU-4', 'TER', 'Sense-number error δ(#S)', 'ROUGE-L', 'Test F1', 'Matthews correlation coefficient', 'BLEU', 'Test Exact Match', 'Test BLEU', 'Accuracy', 'Div-2', 'Entropy-4', 'NIST-4', 'Validation F1', 'Exact Match', 'Mismatched accuracy', 'Correlation', 'Validation Perplexity'}\n\nInput: ROUGE-2 F1\n\nAnswer: "
+    }
+  ],
+  "reasoning_effort": "medium",
+  "max_completion_tokens": 32768,
+  "stream": false
+}

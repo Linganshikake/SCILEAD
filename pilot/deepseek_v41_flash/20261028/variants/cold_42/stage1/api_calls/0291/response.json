@@ -1,0 +1,32 @@
+{
+  "id": "b0f5af3e-f482-401c-954f-023cc21062cc",
+  "object": "chat.completion",
+  "created": 1793194547,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-2",
+        "reasoning_content": "We need answer. Need determine if input entity matches one item list. \"Rouge-2\" vs list has 'ROUGE-2' case difference. Need exact? \"matches one of items\" likely match case-insensitively? We need output matched item if matches. Input Rouge-2, list item 'ROUGE-2'. Should we treat as match? Usually these tasks require matching entity to metric names, maybe capitalization normalized? Need decide. They ask if input entity matches one of items. \"Rouge-2\" is same as ROUGE-2 ignoring case. Should output list item 'ROUGE-2'. Else output entity unchanged. Since obvious metric. Answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 388,
+    "completion_tokens": 152,
+    "total_tokens": 540,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 146
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

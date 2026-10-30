@@ -1,0 +1,32 @@
+{
+  "id": "cbcad5b3-2796-46c8-9096-545fd36718e6",
+  "object": "chat.completion",
+  "created": 1793194811,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT2014 En→De, BLEU)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one item exactly? Item list has (Machine Translation, WMT’14 EN-DE, BLEU). Input has WMT2014 En→De not exact match. We must output tuple unchanged if no match. Need preserve input formatting exactly? \"output the tuple without changing it.\" So answer: (Machine Translation, WMT2014 En→De, BLEU). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 109,
+    "total_tokens": 664,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

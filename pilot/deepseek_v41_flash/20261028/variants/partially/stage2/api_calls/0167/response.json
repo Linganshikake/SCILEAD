@@ -1,0 +1,32 @@
+{
+  "id": "e86a47e3-5469-409d-8cbd-40036d7a3e42",
+  "object": "chat.completion",
+  "created": 1793195084,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot filling, ATIS, F1)",
+        "reasoning_content": "We need answer. Need determine if input tuple matches list exactly. Input (Slot filling, ATIS, F1). List has (Intent Detection and Slot Filling, ATIS, F1). Not match. Also maybe \"Slot filling\" not present exactly. Must output tuple unchanged. Only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 73,
+    "total_tokens": 622,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 165
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

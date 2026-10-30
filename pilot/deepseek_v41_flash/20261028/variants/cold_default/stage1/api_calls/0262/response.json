@@ -1,0 +1,32 @@
+{
+  "id": "75b192f8-f2b0-4ff0-8d49-e3a274640984",
+  "object": "chat.completion",
+  "created": 1793194541,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WikiText-103",
+        "reasoning_content": "We need answer matched item if matches item in list. Input WikiText-103. List has 'Wikitext-103 (WT103)' capitalization different. Need determine matching? \"If input entity matches one of the items in list\" likely exact match? But entity is WikiText-103, list has Wikitext-103 (WT103). Does not exactly match. Also has Wikitext-2 (WT2). Need output entity unchanged if no match. We should not explain. Need consider case-insensitive? Usually exact string. Input \"WikiText-103\" vs list \"Wikitext-103 (WT103)\" not equal. Output WikiText-103."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 820,
+    "completion_tokens": 143,
+    "total_tokens": 963,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 138
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 564
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

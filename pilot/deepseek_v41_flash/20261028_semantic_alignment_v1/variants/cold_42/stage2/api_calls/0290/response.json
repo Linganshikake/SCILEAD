@@ -1,0 +1,32 @@
+{
+  "id": "865b0a24-63d5-4678-9be5-afff0c2283d8",
+  "object": "chat.completion",
+  "created": 1793198240,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: Extreme Summarization, XSum, ROUGE-L F1. List has Summarization XSum ROGUE-L etc. Need determine match. \"Extreme Summarization\" is XSum task. Metric ROUGE-L F1 likely matches ROGUE-L? Listed uses typo ROGUE-L (instead ROUGE). Candidate: (Summarization, XSum, ROGUE-L). Dataset XSum same. Task Extreme Summarization vs Summarization broader but same underlying benchmark XSum. Metric ROUGE-L F1 vs ROGUE-L. Likely match. Return listed tuple verbatim: (Summarization, XSum, ROGUE-L). Need ensure not ROGUE-? XSum has ROGUE-1, ROGUE-2, ROGUE-L. Input L. Yes. Final only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 200,
+    "total_tokens": 973,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

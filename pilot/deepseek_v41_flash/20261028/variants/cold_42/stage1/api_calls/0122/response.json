@@ -1,0 +1,32 @@
+{
+  "id": "72fc6516-4a79-403f-85a2-4838be661a77",
+  "object": "chat.completion",
+  "created": 1793194290,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English→German",
+        "reasoning_content": "We need answer. Need match item. Input WMT'14 English-German. List has \"WMT'14 English→French\", \"WMT'14 English→German\". Exact? Input uses hyphen not arrow and no spaces. Need determine matches one of items? Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. Does \"WMT'14 English-German\" match \"WMT'14 English→German\"? Probably semantic normalization? It's not exact string. Need be careful. They likely expect matching dataset aliases. Input WMT'14 English-German corresponds to WMT'14 English→German. Answer list item exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 146,
+    "total_tokens": 517,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 138
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 243
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

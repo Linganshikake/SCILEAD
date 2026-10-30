@@ -1,0 +1,32 @@
+{
+  "id": "e2111579-29c4-4dfa-a978-881c53c01c65",
+  "object": "chat.completion",
+  "created": 1793194412,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT2014 En→De",
+        "reasoning_content": "We need answer match if input matches one item. Need determine if WMT2014 En→De matches any list item. List has 'WMT14 En-De', 'WMT En-De (newstest2014)', 'WMT14 En-Fr', etc. Input exactly \"WMT2014 En→De\" not in list. Must output entity unchanged. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 651,
+    "completion_tokens": 87,
+    "total_tokens": 738,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 267
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

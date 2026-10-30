@@ -1,0 +1,32 @@
+{
+  "id": "74d14c07-b2b6-442d-91e5-9e81e3247762",
+  "object": "chat.completion",
+  "created": 1793194626,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Google Billion Word (test)",
+        "reasoning_content": "We need answer matched item if exact in list else unchanged. Input \"Google Billion Word (test)\" not in list. There is \"Google Billion Word (valid)\" and \"Google Billion Word\". Exact no. Output entity unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 53,
+    "total_tokens": 848,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 539
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

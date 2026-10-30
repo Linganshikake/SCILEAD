@@ -1,0 +1,32 @@
+{
+  "id": "aad28a79-385d-4f0f-a056-182c1db38d2a",
+  "object": "chat.completion",
+  "created": 1793194288,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Test F1",
+        "reasoning_content": "We need answer match? Input \"Test F1\" not in list. Need output entity unchanged. But check list has \"F1\", \"F1 score\", \"F1-score\", \"Dev F1\", etc. \"Test F1\" not exact. Output Test F1. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 268,
+    "completion_tokens": 66,
+    "total_tokens": 334,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 140
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

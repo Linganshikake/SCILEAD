@@ -1,0 +1,32 @@
+{
+  "id": "8d54e7ac-aeda-4b75-bfaf-67c9c00df5c9",
+  "object": "chat.completion",
+  "created": 1793196949,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WNLI",
+        "reasoning_content": "We need answer only. Need determine if WNLI matches item list. List has GLUE tasks but no WNLI. Could WNLI be subset? Items include GLUE MNLI, QNLI, RTE, QQP, CoLA, SST? WNLI is GLUE task not listed. No candidate exact/semantic. Output WNLI unchanged. Need only answer. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 718,
+    "completion_tokens": 86,
+    "total_tokens": 804,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

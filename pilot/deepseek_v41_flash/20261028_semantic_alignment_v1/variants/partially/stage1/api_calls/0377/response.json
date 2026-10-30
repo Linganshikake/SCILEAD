@@ -1,0 +1,32 @@
+{
+  "id": "950fe55f-495d-4dab-8b3e-f8f3ee084709",
+  "object": "chat.completion",
+  "created": 1793197435,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "NER English",
+        "reasoning_content": "We need answer only selected item or unchanged. Input \"NER English\". Candidate Named Entity Recognition. NER is clear abbreviation. \"English\" maybe language condition? Entity identity? Candidate has no language. Requirement preserve language/version etc; do not guess missing experimental condition. Input NER English = Named Entity Recognition English. Candidate Named Entity Recognition lacks English. Is it match? Semantic matching task names: more specific wording may match existing standard task when same underlying task. But preserve language identity. There's no candidate \"NER English\". We shouldn't invent. Is \"English\" a meaningful condition? NER is task, English language. Candidate \"Named Entity Recognition\" generic. If input entity is a task with language qualifier, candidate generic might not be same identity? The instructions: if input entity matches one item. Match by meaning and identity. \"NER English\" likely means NER for English. Candidate \"Named Entity Recognition\" is task without language. \"Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar.\" So because language differs (unspecified vs English), ambiguous. Output original input unchanged: \"NER English\". Need only answer. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 504,
+    "completion_tokens": 251,
+    "total_tokens": 755,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 248
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 248
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

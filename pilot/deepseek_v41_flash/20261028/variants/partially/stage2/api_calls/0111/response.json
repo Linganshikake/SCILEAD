@@ -1,0 +1,32 @@
+{
+  "id": "5d8fc4e1-e54a-4a3c-8dd8-5f6dd989d318",
+  "object": "chat.completion",
+  "created": 1793195013,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, BIGPATENT, ROGUE-L)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list. It is (Summarization, BIGPATENT, ROGUE-L). Check list: Summarization pairs: Gigaword ROGUE-L, CNN/DailyMail ROGUE-L, Gigaword ROGUE-1/2, CNN/DailyMail ROGUE-2/1, XSum ROGUE-2/L/1. No BIGPATENT. Output tuple unchanged. Must only output answer. Use exact format. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 120,
+    "total_tokens": 672,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 106
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 168
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

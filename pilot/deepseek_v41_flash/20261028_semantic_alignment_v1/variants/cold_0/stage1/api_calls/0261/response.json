@@ -1,0 +1,32 @@
+{
+  "id": "58b6131f-6917-40a7-9e36-8d4ca70fbfcc",
+  "object": "chat.completion",
+  "created": 1793197040,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2002 Spanish NER",
+        "reasoning_content": "We need answer matched item or unchanged. Need semantic matching. Input \"CoNLL-2002 Spanish\". Candidates include \"CoNLL 2002 Spanish NER\". Is this same underlying task? Likely yes: CoNLL-2002 Spanish NER dataset. Input omits NER but specifies language and CoNLL 2002. Candidate exactly semantic. Need output candidate exactly as written: CoNLL 2002 Spanish NER. Check other candidate \"CoNLL 2002 Dutch NER\" no. So answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 707,
+    "completion_tokens": 122,
+    "total_tokens": 829,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 323
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

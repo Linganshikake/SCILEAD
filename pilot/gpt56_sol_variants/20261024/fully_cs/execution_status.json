@@ -1,0 +1,32 @@
+{
+  "started_epoch": 1792839253.7876651,
+  "scope": "ONLY offline Fully+CS",
+  "stages": [
+    {
+      "name": "normalization",
+      "script": "run_cs.py",
+      "returncode": 0,
+      "seconds": 140.28100000000268
+    },
+    {
+      "name": "tuple_evaluation",
+      "script": "evaluate_cs.py",
+      "returncode": 0,
+      "seconds": 8.561999999990803
+    },
+    {
+      "name": "official_leaderboard",
+      "script": "leaderboard_evaluation/run_official_leaderboard_eval.py",
+      "returncode": 0,
+      "seconds": 8.89100000000326
+    },
+    {
+      "name": "supplementary_leaderboard",
+      "script": "leaderboard_evaluation/evaluate_paper_metrics.py",
+      "returncode": 0,
+      "seconds": 9.10899999999674
+    }
+  ],
+  "status": "EXECUTION_COMPLETE",
+  "ended_epoch": 1792839420.6426163
+}

@@ -1,0 +1,32 @@
+{
+  "id": "06931760-ed66-48f0-ae5f-843eed22b593",
+  "object": "chat.completion",
+  "created": 1793286261,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "None",
+        "reasoning_content": "We need answer only matched item. Need determine if IWSLT 2014 De-En matches IWSLT’14 EN-DE? Direction reversed De-En vs EN-DE. Need preserve meaningful differences? The list has IWSLT’14 EN-DE. Input \"IWSLT 2014 De-En\". This is same task? Translation direction differs: De-En vs EN-DE. Is that a distinct entity? In machine translation datasets, often WMT14 EN-DE vs DE-EN are separate directions. List has WMT’14 EN-DE only. For IWSLT, input is De-En (German to English), candidate is EN-DE (English to German). These are reversed direction, likely distinct. Requirement preserve version/direction? It says preserve meaningful differences in dataset identity, language, version, split, metric. Language direction is meaningful. Do not merge distinct entities merely similar. So no clear match. Output None. Need only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 210,
+    "total_tokens": 963,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 208
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 241
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

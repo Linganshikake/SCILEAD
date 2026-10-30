@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261029_input_ablation_fully_semantic_v1\normalize_fully.py", line 108, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--arm',choices=ARMS,required=True);a=p.parse_args();sys.exit(main(a.arm))
+                                                                                                             ^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261029_input_ablation_fully_semantic_v1\normalize_fully.py", line 101, in main
+    secret_free=all(key.encode() not in p.read_bytes() for p in root.rglob('*') if p.is_file())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261029_input_ablation_fully_semantic_v1\normalize_fully.py", line 101, in <genexpr>
+    secret_free=all(key.encode() not in p.read_bytes() for p in root.rglob('*') if p.is_file())
+                                        ^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\pathlib.py", line 1051, in read_bytes
+    return f.read()
+           ^^^^^^^^
+PermissionError: [Errno 13] Permission denied

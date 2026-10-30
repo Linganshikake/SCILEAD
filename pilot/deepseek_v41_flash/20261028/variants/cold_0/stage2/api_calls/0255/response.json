@@ -1,0 +1,32 @@
+{
+  "id": "7df2e542-a39a-4730-9679-4cb40b900bbf",
+  "object": "chat.completion",
+  "created": 1793194878,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-1 Recall)",
+        "reasoning_content": "We need answer only tuple. Input not in list? Need compare exact. List contains Summarization variants, not Abstractive Summarization, NYT, ROUGE-1 Recall. So output unchanged. Ensure only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 62,
+    "total_tokens": 617,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

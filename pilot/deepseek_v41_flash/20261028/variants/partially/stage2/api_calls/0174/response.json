@@ -1,0 +1,32 @@
+{
+  "id": "ab975840-4ccc-40ad-9c56-158ac61bac5a",
+  "object": "chat.completion",
+  "created": 1793195092,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, IWSLT'14 De-En, BLEU)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. Input: (Machine Translation, IWSLT'14 De-En, BLEU). List has (Machine Translation, IWSLT’14 EN-DE, BLEU) with curly apostrophe and EN-DE, not De-En. Does not match. Need output tuple unchanged. Preserve input exactly: (Machine Translation, IWSLT'14 De-En, BLEU). Only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 121,
+    "total_tokens": 678,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

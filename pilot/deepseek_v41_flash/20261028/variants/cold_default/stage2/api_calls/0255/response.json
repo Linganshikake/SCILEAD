@@ -1,0 +1,32 @@
+{
+  "id": "aac3e05f-5df4-42c9-a459-c566f0a2de62",
+  "object": "chat.completion",
+  "created": 1793194887,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Question Generation, SQuAD 1.1, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. It says if matches output matched else tuple unchanged. Input (Question Generation, SQuAD 1.1, ROUGE-L) not in list (note ROGUE vs ROUGE mismatch). Output tuple unchanged exactly. Need only answer. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 82,
+    "total_tokens": 638,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

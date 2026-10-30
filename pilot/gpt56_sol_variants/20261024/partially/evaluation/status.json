@@ -1,0 +1,91 @@
+{
+  "branch": "partially",
+  "status": "COMPLETE",
+  "stages": {
+    "stage1": {
+      "status": "COMPLETE",
+      "input_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage1\\normalized_output.json",
+      "input_sha256": "054d305c0d0427ec5b52a3ac0ac1dbc8d364273d38863e9cbec205ecc3f9f6ac",
+      "metrics_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\stage1\\metrics_with_f1.json",
+      "metrics_sha256": "6ec26d4aa68ccf0f1470501aa445968609cf838337dc67bfbce737dcf93d6585"
+    },
+    "stage2": {
+      "status": "COMPLETE",
+      "input_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage2\\leaderboard_normalized_output.json",
+      "input_sha256": "8345d0a04bee4a641d95701c94ca168a7abeebec844c0c67caef48380fd7f7fc",
+      "metrics_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\stage2\\metrics_with_f1.json",
+      "metrics_sha256": "87b4c0105f689826ec696289fd7b7e67d233e0650d18f335e73b47cfb9b102e4"
+    }
+  },
+  "leaderboards": {
+    "all27": {
+      "status": "COMPLETE",
+      "helpers": [
+        {
+          "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\leaderboard_evaluation\\run_official_leaderboard_eval.py",
+          "copy": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\all27\\run_official_leaderboard_eval.py",
+          "sha256": "c6f9e9e2bc0fe6ca12415c28e6fc899006c9fdaaa944b6dfe5b607b39d328818"
+        },
+        {
+          "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\leaderboard_evaluation\\evaluate_paper_metrics.py",
+          "copy": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\all27\\evaluate_paper_metrics.py",
+          "sha256": "80673a98ea2764070e8a4f3383122089ad16d4df6cad3068865b1f711fe14576"
+        }
+      ],
+      "formulas_modified": false,
+      "inputs_sha256": {
+        "C:\\Users\\Administrator\\Desktop\\KG\\SCILEAD_DATA\\data\\leaderboards.json": "b32320009c1471442e6c110df52d77c64538373b298b4f47865a912761d62657",
+        "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage2\\leaderboard_normalized_output.json": "8345d0a04bee4a641d95701c94ca168a7abeebec844c0c67caef48380fd7f7fc",
+        "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\merged\\output.json": "574e932c5c0ab589ece41887d5be4ef6393e2c9e983cbeb21c1cfcc535184688"
+      },
+      "gold_path": "C:\\Users\\Administrator\\Desktop\\KG\\SCILEAD_DATA\\data\\leaderboards.json",
+      "prediction_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage2\\leaderboard_normalized_output.json",
+      "metrics_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+      "metrics_sha256": "780b1086a587216328bfc9a68062921d8583df4fc7c033b979e6685c10adafb5",
+      "prediction_sha256": "8345d0a04bee4a641d95701c94ca168a7abeebec844c0c67caef48380fd7f7fc",
+      "target_boards": 27,
+      "scope": "All 43 papers retained; only target Gold board set changes.",
+      "new_api_requests": 0,
+      "display_conventions": {
+        "LR": "LR_exact_tdm_hit",
+        "finite_nonempty_rate": "LR_nonempty_finite_result",
+        "legacy_helper_wording": "Copied verbatim: its LR_primary prose is outdated and '27' wording is not a scope filter."
+      }
+    },
+    "masked10": {
+      "status": "COMPLETE",
+      "helpers": [
+        {
+          "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\leaderboard_evaluation\\run_official_leaderboard_eval.py",
+          "copy": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\masked10\\run_official_leaderboard_eval.py",
+          "sha256": "c6f9e9e2bc0fe6ca12415c28e6fc899006c9fdaaa944b6dfe5b607b39d328818"
+        },
+        {
+          "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\leaderboard_evaluation\\evaluate_paper_metrics.py",
+          "copy": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\masked10\\evaluate_paper_metrics.py",
+          "sha256": "80673a98ea2764070e8a4f3383122089ad16d4df6cad3068865b1f711fe14576"
+        }
+      ],
+      "formulas_modified": false,
+      "inputs_sha256": {
+        "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\masking\\partially_masked_leaderboards.json": "146186f7bf2c1d0c4e87eb201b44ffdb087effe60048f8b7f4372941b306be93",
+        "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage2\\leaderboard_normalized_output.json": "8345d0a04bee4a641d95701c94ca168a7abeebec844c0c67caef48380fd7f7fc",
+        "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\merged\\output.json": "574e932c5c0ab589ece41887d5be4ef6393e2c9e983cbeb21c1cfcc535184688"
+      },
+      "gold_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\masking\\partially_masked_leaderboards.json",
+      "prediction_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage2\\leaderboard_normalized_output.json",
+      "metrics_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+      "metrics_sha256": "8b0ab6df923fb8f269462b3d183194a9031f016ea958623f9d990f93ebb3c584",
+      "prediction_sha256": "8345d0a04bee4a641d95701c94ca168a7abeebec844c0c67caef48380fd7f7fc",
+      "target_boards": 10,
+      "scope": "All 43 papers retained; only target Gold board set changes.",
+      "new_api_requests": 0,
+      "display_conventions": {
+        "LR": "LR_exact_tdm_hit",
+        "finite_nonempty_rate": "LR_nonempty_finite_result",
+        "legacy_helper_wording": "Copied verbatim: its LR_primary prose is outdated and '27' wording is not a scope filter."
+      }
+    }
+  },
+  "missing": []
+}

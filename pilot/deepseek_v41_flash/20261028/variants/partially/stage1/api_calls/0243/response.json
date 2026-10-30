@@ -1,0 +1,32 @@
+{
+  "id": "c5e6e4c0-5558-42b0-b6ab-d9376c4cc947",
+  "object": "chat.completion",
+  "created": 1793194601,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Food",
+        "reasoning_content": "We need answer. Check list items exact match \"Food\". List contains 'Multi-domain Food' but not 'Food'. Must output entity unchanged. \"Food\". Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 756,
+    "completion_tokens": 38,
+    "total_tokens": 794,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 628
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

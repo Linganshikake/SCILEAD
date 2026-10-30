@@ -1,0 +1,32 @@
+{
+  "id": "77f07b60-79ca-41f1-beb2-d651cb353df3",
+  "object": "chat.completion",
+  "created": 1793197378,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English→German, TER)",
+        "reasoning_content": "We need answer exact tuple if match semantic across Task, Dataset, Metric. Input: Machine Translation, WMT'14 English→German, TER. List has Machine Translation WMT’14 EN-DE BLEU. Dataset matches, task matches, metric differs TER vs BLEU. We cannot change metric, no candidate with TER. Must output original tuple verbatim. Need only one tuple. Ensure exact input spelling: (Machine Translation, WMT'14 English→German, TER). Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 118,
+    "total_tokens": 889,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

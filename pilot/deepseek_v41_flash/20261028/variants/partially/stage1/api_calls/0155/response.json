@@ -1,0 +1,32 @@
+{
+  "id": "2d30e2d6-919e-4cd9-9711-603625287a09",
+  "object": "chat.completion",
+  "created": 1793194387,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match input \"ROUGE-1 F1\" to item list. There is 'ROGUE-1' typo and 'F1'. The input likely means ROUGE-1 F1. List has ROGUE-1 (misspelled) not ROUGE-1. Also F1. Need match one item only. Which item matches? The closest item is ROGUE-1? Since input \"ROUGE-1 F1\" could refer to metric ROUGE-1 F1 score. The list contains \"ROGUE-1\" (typo for ROUGE-1) and F1. But matched item must be one list item. Since \"ROUGE-1 F1\" is a combined metric, but list only has ROGUE-1 and F1 separately. We need decide. The instruction: match input with one item in list. Answer only matched item. If none matches say None. Does \"ROUGE-1 F1\" match \"ROGUE-1\"? Not exact spelling, but likely typo. There is no \"ROUGE-1\". There is \"ROGUE-1\" which differs by G. Could be considered match. Also \"F1\" is in list. Input has both. Which one? Usually metrics like \"ROUGE-1 F1\" is a specific metric variant. The list item \"ROGUE-1\" may represent ROUGE-1 (F1 measure implicitly). The list also has F1 separately. But input \"ROUGE-1 F1\" is not exactly any. The closest is ROGUE-1? Or F1? The input's main metric is ROUGE-1 F1. Since list has ROGUE-1 (typo) and F1. I'd match to \"ROGUE-1\" because it's the ROUGE-1 metric, and F1 is its scoring. But the item list includes \"F1\" which could match the \"F1\" part. However input is \"ROUGE-1 F1\" as a whole. The item \"ROGUE-1\" is likely intended. I'll answer \"ROGUE-1\". Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 479,
+    "total_tokens": 740,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 473
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

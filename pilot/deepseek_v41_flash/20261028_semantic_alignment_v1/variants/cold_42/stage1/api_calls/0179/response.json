@@ -1,0 +1,32 @@
+{
+  "id": "cf6e2617-ab21-4386-ade0-2b6cab733f74",
+  "object": "chat.completion",
+  "created": 1793196855,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OntoNotes",
+        "reasoning_content": "We need answer only selected or unchanged. Need match OntoNotes to list? List has no OntoNotes. Could match \"CoNLL++\" no. \"Open Entity\" maybe built on OntoNotes? But entity identity should not infer. OntoNotes not in list. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 646,
+    "completion_tokens": 65,
+    "total_tokens": 711,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 262
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

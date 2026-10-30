@@ -1,0 +1,32 @@
+{
+  "id": "d326c319-2317-49ea-b2f9-b1ceed3852cb",
+  "object": "chat.completion",
+  "created": 1793194358,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2000",
+        "reasoning_content": "We need answer matched item if exact? Input CoNLL00. List has CoNLL-2000, CoNLL-2003, CoNLL03 NER etc. No exact CoNLL00. Instructions: If input entity matches one of items, answer matched item. Else output entity without changing. \"matches\" maybe exact? Need determine if CoNLL00 corresponds to CoNLL-2000? Usually CoNLL00 abbreviation for CoNLL-2000. But prompt says if matches one of items. Could be semantic match? Need likely output matched item. Need not explanation. Input CoNLL00 probably intended match \"CoNLL-2000\". Let's inspect list: 'CoNLL-2000' exists. Input CoNLL00 is common shorthand. We should output matched list item. Could also no exact, but dataset aliases. The task likely entity matching. Need answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 199,
+    "total_tokens": 749,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 192
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 294
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

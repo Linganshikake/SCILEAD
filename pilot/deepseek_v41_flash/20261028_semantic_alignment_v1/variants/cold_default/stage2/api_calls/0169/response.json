@@ -1,0 +1,32 @@
+{
+  "id": "b74ed413-bcfe-45fa-85f9-64f3fa75e3fb",
+  "object": "chat.completion",
+  "created": 1793197451,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "reasoning_content": "We need answer only matched tuple or input. Need semantic matching. Input Named Entity Recognition, OntoNotes, F1. Candidate Named Entity Recognition (NER), Ontonotes v5 - English, F1. Need determine match? Task same, Dataset OntoNotes vs Ontonotes v5 - English. Is it same underlying benchmark? OntoNotes could refer to OntoNotes 5 English often NER. Metric F1. Likely match candidate. Need return entire listed tuple verbatim. Check case \"Ontonotes v5 - English\" exact. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 138,
+    "total_tokens": 907,
+    "prompt_tokens_details": {
+      "cached_tokens": 635
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119
+    },
+    "prompt_cache_hit_tokens": 635,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

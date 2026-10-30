@@ -1,0 +1,32 @@
+{
+  "id": "817e3537-d4aa-4591-8ae6-1acdfbd4e4b6",
+  "object": "chat.completion",
+  "created": 1793194865,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, IWSLT 2014 De-En, BLEU)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. List has (Machine Translation, IWSLT’14 EN-DE, BLEU). Input is (Machine Translation, IWSLT 2014 De-En, BLEU). Not exact match due dataset string/direction. Need output tuple unchanged. Ensure formatting exactly. (Machine Translation, IWSLT 2014 De-En, BLEU) No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 113,
+    "total_tokens": 671,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

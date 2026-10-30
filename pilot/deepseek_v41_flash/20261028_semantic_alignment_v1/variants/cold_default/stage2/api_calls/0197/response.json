@@ -1,0 +1,32 @@
+{
+  "id": "a7a7e2d3-7743-473e-b94d-36dd332e5a2e",
+  "object": "chat.completion",
+  "created": 1793197492,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Slot filling, Home, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any list semantically. Input (Slot filling, Home, F1). Candidates include Intent Detection and Slot Filling, ATIS/SNIPS, metrics Accuracy/F1. Dataset \"Home\" not in list. No match. Return original verbatim. Ensure tuple syntax. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 76,
+    "total_tokens": 842,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 254
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

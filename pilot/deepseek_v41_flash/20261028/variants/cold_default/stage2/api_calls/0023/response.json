@@ -1,0 +1,32 @@
+{
+  "id": "1504e73c-612e-4ab5-ad0c-f4a4d98c4c9d",
+  "object": "chat.completion",
+  "created": 1793194597,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, CNN/DailyMail, ROUGE-1)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. Input (Abstractive Summarization, CNN/DailyMail, ROUGE-1). List has Summarization, CNN/DailyMail, ROGUE-1 (note ROGUE typo not ROUGE). Also Abstractive Summarization not exactly Summarization. No match. Output tuple unchanged. Need only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 97,
+    "total_tokens": 653,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "3dc66d26-cf55-4b98-bb5e-6c53ab8c1870",
+  "object": "chat.completion",
+  "created": 1793194193,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003",
+        "reasoning_content": "We need answer only. Need check if input entity matches one item exactly? List has CoNLL-2003 English, CoNLL-2003 - German, CoNLL03 NER, etc. Input \"CoNLL-2003\" not exact item. So output entity unchanged: CoNLL-2003. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 561,
+    "completion_tokens": 79,
+    "total_tokens": 640,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 433
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

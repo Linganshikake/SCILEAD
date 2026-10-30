@@ -1,0 +1,32 @@
+{
+  "id": "663180fc-e965-4751-aa85-f0cfc432a240",
+  "object": "chat.completion",
+  "created": 1793197500,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT Zh-En newstest2017, BLEU)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among candidates. Input Machine Translation, WMT Zh-En newstest2017, BLEU. Candidates MT: WMT’14 EN-DE BLEU, IWSLT’14 EN-DE BLEU, WMT’14 EN-FR BLEU. Input is WMT Zh-En newstest2017, Chinese-English, different language pair/version, no match. Return original. Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 776,
+    "completion_tokens": 121,
+    "total_tokens": 897,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 136
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

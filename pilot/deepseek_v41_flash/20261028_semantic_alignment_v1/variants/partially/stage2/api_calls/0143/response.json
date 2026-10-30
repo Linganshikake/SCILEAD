@@ -1,0 +1,32 @@
+{
+  "id": "013e9a7e-b6cb-419e-ac54-ffe1cc7d7611",
+  "object": "chat.completion",
+  "created": 1793197670,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Dependency Parsing, Penn Treebank converted to Stanford Dependencies version 3.3.0, Unlabeled Attachment Score)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among list. Input: Dependency Parsing, Penn Treebank converted to Stanford Dependencies version 3.3.0, Unlabeled Attachment Score. Candidates include POS Tagging Penn Treebank Accuracy; no dependency parsing. There is Text Chunking CoNLL. No match. Must return original tuple verbatim. Ensure exact input. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 109,
+    "total_tokens": 893,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 144
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

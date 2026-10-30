@@ -1,0 +1,32 @@
+{
+  "id": "89eec270-d7f2-4a38-91d1-64aa73f0fab5",
+  "object": "chat.completion",
+  "created": 1793194445,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot Filling",
+        "reasoning_content": "We need answer matched item if input matches one item list. Need determine exact matching case? List contains \"Slot Filling\" capitalized F, and \"Slot Filling and Intent Detection\", \"Joint Slot Filling and Intent Detection\". Input \"Slot filling\" lower f. Need match? Usually if matches one item. They may expect exact? Could be case-insensitive? Need infer from tasks. They say if input entity matches one of items, answer matched item in list. Else output entity. \"Slot filling\" differs case only from \"Slot Filling\". In these benchmark entity linking, likely exact string? Need decide. Many item list has case variants: \"Dialogue Act Classification\" and \"Dialog Act Classification\", \"Dialogue act recognition\". Input \"Slot filling\" might be meant to match \"Slot Filling\" case-insensitively. We should output matched list item exactly: Slot Filling. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 334,
+    "completion_tokens": 190,
+    "total_tokens": 524,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 186
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

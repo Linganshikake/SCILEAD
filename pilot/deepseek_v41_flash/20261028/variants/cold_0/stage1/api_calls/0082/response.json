@@ -1,0 +1,32 @@
+{
+  "id": "6bc4e568-20c1-4891-8623-348c4b8f428c",
+  "object": "chat.completion",
+  "created": 1793194234,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2000",
+        "reasoning_content": "We need answer only matched item or unchanged. Need determine if input matches one item exactly. List has CoNLL00 but not CoNLL-2000. Could consider alias? Instruction says matches one of items. Exact match? It says if matches one of items. \"CoNLL-2000\" does not exactly match \"CoNLL00\". Do not change if no match. Output entity unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 289,
+    "completion_tokens": 91,
+    "total_tokens": 380,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 161
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

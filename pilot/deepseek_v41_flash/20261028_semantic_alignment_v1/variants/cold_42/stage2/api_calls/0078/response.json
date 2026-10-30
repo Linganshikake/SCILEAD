@@ -1,0 +1,32 @@
+{
+  "id": "b8b2203d-20e8-4669-bd51-bb3b328da8da",
+  "object": "chat.completion",
+  "created": 1793197325,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Summarization, Gigaword, ROUGE-L F1). Candidates summarization gigaword ROGUE-L, ROGUE-1, ROGUE-2. ROGUE-L likely typo for ROUGE-L. Metric \"ROUGE-L F1\" matches ROGUE-L. Need return exact listed tuple: (Summarization, Gigaword, ROGUE-L). Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 114,
+    "total_tokens": 886,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

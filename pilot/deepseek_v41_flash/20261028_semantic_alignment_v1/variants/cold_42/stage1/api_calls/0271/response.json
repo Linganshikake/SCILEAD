@@ -1,0 +1,32 @@
+{
+  "id": "8c212d83-1b12-43f9-b9c2-fa42ffe594f8",
+  "object": "chat.completion",
+  "created": 1793197007,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Food",
+        "reasoning_content": "We need answer only selected or unchanged. Need match \"Food\" against list. Need determine semantic match. List includes E-commerce, Movie, etc. Food not present. Maybe \"Yelp\"? no. Output Food unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 47,
+    "total_tokens": 821,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 518
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

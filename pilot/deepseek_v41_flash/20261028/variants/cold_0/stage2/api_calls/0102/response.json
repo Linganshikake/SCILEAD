@@ -1,0 +1,32 @@
+{
+  "id": "eee6fc81-ccd3-4c36-8aa5-e7525046b93d",
+  "object": "chat.completion",
+  "created": 1793194671,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, BC5CDR, Entity-level F1 score)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list. Input: (Named Entity Recognition, BC5CDR, Entity-level F1 score). List has NER entries with Ontonotes, CoNLL, WNUT, but no BC5CDR. So output tuple unchanged. Need exact tuple. Use parentheses. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 89,
+    "total_tokens": 644,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,21 @@
+{
+  "phase": "before_torch_import",
+  "actual": {
+    "physical_available_GiB": 5.872734069824219,
+    "commit_available_GiB": 16.868511199951172,
+    "working_set_GiB": 0.024555206298828125,
+    "peak_working_set_GiB": 0.025577545166015625,
+    "max_rss_bytes": 27463680,
+    "max_rss_GiB": 0.025577545166015625,
+    "private_GiB": 0.01753997802734375,
+    "peak_private_GiB": 0.018650054931640625
+  },
+  "policy": {
+    "minimum_physical_GiB": 4.0,
+    "minimum_commit_GiB": 7.5,
+    "cs_physical_budget_GiB": 3.5,
+    "cs_commit_budget_GiB": 6.5,
+    "concurrent_parent_api_reserve_GiB": 1.0,
+    "basis": "User-requested 4 GiB available RAM minimum; retain existing 7.5 GiB commit gate. Run CS alone before API branches."
+  }
+}

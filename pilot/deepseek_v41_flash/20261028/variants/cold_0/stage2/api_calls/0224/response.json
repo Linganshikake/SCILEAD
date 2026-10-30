@@ -1,0 +1,32 @@
+{
+  "id": "1333d293-0c64-4d80-b6c1-a24c84f1e690",
+  "object": "chat.completion",
+  "created": 1793194836,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Newsroom, ROUGE-L F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list. Input: (Summarization, Newsroom, ROUGE-L F1). List has Summarization with Gigaword/CNN/XSum metrics ROGUE-L etc. No Newsroom. No exact match and likely not. Output tuple unchanged exactly as input. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 87,
+    "total_tokens": 640,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

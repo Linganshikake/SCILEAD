@@ -1,0 +1,32 @@
+{
+  "id": "8585bc15-0426-461f-91fa-9aaf5c81a68d",
+  "object": "chat.completion",
+  "created": 1793194251,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE QNLI",
+        "reasoning_content": "We need answer only. Need determine if input entity matches one of items. \"GLUE QNLI\" is not in list. There is QNLI and GLUE, but exact input not match. Output entity unchanged. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 377,
+    "completion_tokens": 56,
+    "total_tokens": 433,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 249
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

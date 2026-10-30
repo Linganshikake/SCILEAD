@@ -1,0 +1,32 @@
+{
+  "id": "b2af33fe-8eaf-4fe4-8c85-205f73ffee70",
+  "object": "chat.completion",
+  "created": 1793194839,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Multi-News, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need determine match? Given list contains many. Input tuple (Summarization, Multi-News, ROUGE-L F1). It doesn't match exactly any item? Need be careful capitalization: list has ROGUE-L typos not ROUGE. Multi-News absent. So output input unchanged. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 87,
+    "total_tokens": 641,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

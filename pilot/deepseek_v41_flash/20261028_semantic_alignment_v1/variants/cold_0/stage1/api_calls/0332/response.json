@@ -1,0 +1,32 @@
+{
+  "id": "c252717b-5be6-4502-8315-f1fad9508b7e",
+  "object": "chat.completion",
+  "created": 1793197155,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy",
+        "reasoning_content": "We need answer only. Need determine if QA accuracy matches item list. Candidates include Accuracy, Sentence accuracy, Matched accuracy, Mismatched accuracy. \"QA accuracy\" is specific task metric; list has \"Accuracy\" generic. Semantic matching? Need decide if matches Accuracy or new entity? Requirement: more specific wording may match existing standard task when same underlying. QA accuracy likely a metric accuracy for question answering. But list includes Accuracy, could be generic. Is \"QA accuracy\" same as \"Accuracy\"? Could be a distinct metric maybe exact match QA accuracy not present. Need preserve meaningful differences? Experimental condition QA? The instruction: If input entity matches one item, output matched. Else unchanged. \"QA accuracy\" semantically could map to \"Accuracy\" but the qualifier QA may identify task, while Accuracy could be general metric. Does \"Accuracy\" denote same underlying task? likely yes as metric name. But there's also Sentence accuracy, Matched accuracy etc. We need see if QA accuracy is common alias for accuracy in QA datasets. The list from some benchmark maybe tasks include Accuracy (e.g., classification), QA accuracy maybe exact match? I need decide.\n\nPotential item \"Accuracy\" is the closest. Could \"QA accuracy\" match \"Accuracy\"? The matching requirements say recognize paraphrases, not reject due wording. More specific wording may match existing standard task when both denote same underlying task. QA accuracy is accuracy in QA. But Accuracy alone is broad, maybe generic metric. The ambiguity: Is \"Accuracy\" candidate a standard metric, and QA accuracy is a more specific instance. They might denote same underlying task? If dataset says QA accuracy metric, list has Accuracy, likely semantic match. However preserve meaningful differences in dataset identity, language, version, split and metric definition. \"QA accuracy\" includes task/task condition, while \"Accuracy\" does not. Could be considered same metric with task specifier. Many benchmarks list \"Accuracy\" as task metric for QA. I'd output Accuracy if match.\n\nNeed output only selected item exactly as item list. \"Accuracy\". Ensure no quotes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 507,
+    "completion_tokens": 421,
+    "total_tokens": 928,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 419
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 251
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

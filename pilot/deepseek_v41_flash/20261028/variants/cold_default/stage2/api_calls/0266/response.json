@@ -1,0 +1,32 @@
+{
+  "id": "eb77a84b-38e8-4e8f-92fe-13ca9000eb82",
+  "object": "chat.completion",
+  "created": 1793194905,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English-French, METEOR)",
+        "reasoning_content": "We need answer only. Need compare input tuple to items. Need exact matching? Input: (Machine Translation, WMT'14 English-French, METEOR). List has (Machine Translation, WMT’14 EN-FR, BLEU) using curly apostrophe and abbreviations. Does it match? No exact. Need output tuple without changing it. Preserve input exactly. Final only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 99,
+    "total_tokens": 654,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

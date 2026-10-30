@@ -1,0 +1,32 @@
+{
+  "id": "1c307c9f-35c5-42cc-8757-6102c32146d2",
+  "object": "chat.completion",
+  "created": 1793194584,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer. Need check if input matches item. List includes \"Joint intent detection and slot filling\" but input \"Slot Filling and Intent Detection\" not exact. Instructions: If input matches one items, answer matched item. Else output entity without changing it. Match likely exact? \"Slot Filling and Intent Detection\" not in list. Output unchanged. Need no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 371,
+    "completion_tokens": 84,
+    "total_tokens": 455,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 243
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

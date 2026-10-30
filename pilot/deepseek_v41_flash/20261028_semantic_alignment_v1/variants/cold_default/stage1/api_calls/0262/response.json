@@ -1,0 +1,32 @@
+{
+  "id": "000146e3-6939-44d6-bcb0-7f9823193041",
+  "object": "chat.completion",
+  "created": 1793197060,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Google Billion Word (test)",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if input matches candidate. Candidate \"Google Billion Word (valid)\" vs input \"Google Billion Word (test)\". Semantic matching requirements preserve dataset split. Test vs valid different split. Not match. Output original unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 764,
+    "completion_tokens": 61,
+    "total_tokens": 825,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 508
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

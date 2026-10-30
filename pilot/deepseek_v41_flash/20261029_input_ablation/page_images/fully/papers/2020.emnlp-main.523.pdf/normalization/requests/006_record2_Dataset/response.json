@@ -1,0 +1,32 @@
+{
+  "id": "260ae339-a0a1-4719-9d10-9501304480e6",
+  "object": "chat.completion",
+  "created": 1793281530,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 - English",
+        "reasoning_content": "We need answer only matched item. Need match input CoNLL-2003 to list. List has \"CoNLL-2003 - English\" and \"CoNLL-2003 - German\". Input \"CoNLL-2003\" ambiguous. Need choose if matches one? We need match with one item. Which one likely? Since dataset named CoNLL-2003 typically English NER. But item list includes both English/German. Input less specific. Could be none? Need infer benchmark task list. Usually CoNLL-2003 refers to English. They ask match input with one of items. \"CoNLL-2003\" matches prefix of both. Need output exact matched item? Could be \"CoNLL-2003 - English\" likely. Need ONLY item. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 174,
+    "total_tokens": 731,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 165
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

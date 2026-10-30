@@ -1,0 +1,32 @@
+{
+  "id": "1a4d435c-6771-43ad-963f-86166a3eaaaf",
+  "object": "chat.completion",
+  "created": 1793194843,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extractive Summarization, CNN/DailyMail, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need compare input tuple to items. Input: (Extractive Summarization, CNN/DailyMail, ROUGE-2 F1). List has Summarization, CNN/DailyMail, ROGUE-2 etc. Not exact match due task and metric naming. So output tuple unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 558,
+    "completion_tokens": 88,
+    "total_tokens": 646,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

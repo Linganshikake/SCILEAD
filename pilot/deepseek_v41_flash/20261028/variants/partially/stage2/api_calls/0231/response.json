@@ -1,0 +1,32 @@
+{
+  "id": "087c3753-5694-46fb-9e35-3a3a1891af7a",
+  "object": "chat.completion",
+  "created": 1793195168,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English-French, TER)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list. Input: (Machine Translation, WMT'14 English-French, TER). List has (Machine Translation, WMT’14 EN-FR, BLEU). Not same dataset string nor metric. Output unchanged. Need preserve exact input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 79,
+    "total_tokens": 632,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

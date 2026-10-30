@@ -1,0 +1,19 @@
+{
+  "phase": "before_torch_import",
+  "actual": {
+    "physical_available_GiB": 6.622173309326172,
+    "commit_available_GiB": 18.601318359375,
+    "working_set_GiB": 0.024158477783203125,
+    "peak_working_set_GiB": 0.02577972412109375,
+    "private_GiB": 0.01691436767578125,
+    "peak_private_GiB": 0.0187225341796875
+  },
+  "policy": {
+    "minimum_physical_GiB": 4.5,
+    "minimum_commit_GiB": 7.5,
+    "cs_physical_budget_GiB": 3.5,
+    "cs_commit_budget_GiB": 6.5,
+    "concurrent_parent_api_reserve_GiB": 1.0,
+    "basis": "Conservative operational gate based on prior CPU FP32 peak working set 3.047 GiB and peak private commit 5.459 GiB, safety margins and one parent API process. Not a proven exact OOM boundary."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "d97c7206-619c-425a-b8b9-27f7649f6f40",
+  "object": "chat.completion",
+  "created": 1793194883,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, WN16, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly? Input (Named Entity Recognition, WN16, F1) vs list has (Named Entity Recognition (NER), WNUT-16 - English, F1) and WNUT-17 etc. Does not match exactly. Output tuple unchanged: (Named Entity Recognition, WN16, F1). Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 551,
+    "completion_tokens": 95,
+    "total_tokens": 646,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 167
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

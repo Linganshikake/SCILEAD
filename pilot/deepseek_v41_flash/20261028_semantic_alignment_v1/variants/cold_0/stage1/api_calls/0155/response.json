@@ -1,0 +1,32 @@
+{
+  "id": "8d78a322-b551-4383-9b0d-9fc2c38101b6",
+  "object": "chat.completion",
+  "created": 1793196857,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "NCBI-disease",
+        "reasoning_content": "We need answer only selected or unchanged. Input NCBI-disease. Check list: BC5CDR, PubMed, etc. NCBI-disease is a named entity recognition dataset. Is it semantically same as BC5CDR? BC5CDR (BioCreative V CDR) uses diseases and chemicals, but includes NCBI Disease? Not exactly. Candidate \"BC5CDR\" is a distinct dataset. No NCBI-disease in list. Could \"NCBI-disease\" match \"BC5CDR\"? No, distinct dataset. \"PubMed\" not. So output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 557,
+    "completion_tokens": 123,
+    "total_tokens": 680,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 301
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

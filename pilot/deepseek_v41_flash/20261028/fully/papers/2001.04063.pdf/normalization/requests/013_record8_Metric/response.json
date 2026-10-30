@@ -1,0 +1,32 @@
+{
+  "id": "93c3fe9c-e386-4e78-8784-6db461b8c9ad",
+  "object": "chat.completion",
+  "created": 1793193640,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer match input ROUGE-L with item list. List has 'ROGUE-L' typo? Input \"ROUGE-L\" vs list \"ROGUE-L\". Need match likely intended item ROGUE-L despite spelling? We need determine if exact match none, or semantic typo. Instruction match input with one items. The list contains 'ROGUE-L' which is likely misspelled ROUGE-L. Should output matched item as in list. Need ONLY item. Since \"ROUGE-L\" standard metric, list has ROGUE-L (typo). Match to \"ROGUE-L\". Output exactly 'ROGUE-L'? Ensure item string."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 149,
+    "total_tokens": 407,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 144
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

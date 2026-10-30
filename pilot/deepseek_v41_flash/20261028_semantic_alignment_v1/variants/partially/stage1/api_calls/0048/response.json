@@ -1,0 +1,32 @@
+{
+  "id": "9a62c185-4a95-4611-98b1-23f0014aee21",
+  "object": "chat.completion",
+  "created": 1793196689,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "SQuAD",
+        "reasoning_content": "We need answer only. Need determine if input SQuAD matches candidate. Candidates SQuAD 1.1 and SQuAD 2.0. Ambiguous abbreviation/missing version. Instructions: Preserve meaningful differences version; do not guess ambiguous abbreviation or missing experimental condition. If list empty no candidate matches or match ambiguous output original unchanged. Input SQuAD ambiguous between 1.1 and 2.0. Output original SQuAD."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 723,
+    "completion_tokens": 96,
+    "total_tokens": 819,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 467
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

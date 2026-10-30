@@ -1,0 +1,32 @@
+{
+  "id": "181ce855-26ef-4fa0-ae1f-492a06c9a641",
+  "object": "chat.completion",
+  "created": 1793194321,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MNLI",
+        "reasoning_content": "We need answer only matched item if matches list else unchanged. Input MNLI. List has GLUE MNLI, MNLI-m, MNLI-mm, but not exact MNLI. Does \"matches one of items\" exact? likely exact match. Output MNLI unchanged. Need no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 684,
+    "completion_tokens": 63,
+    "total_tokens": 747,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "32da94bd-0e25-4b25-92fb-0828be6b76c0",
+  "object": "chat.completion",
+  "created": 1793194381,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer only matched or unchanged. Input \"Slot Filling and Intent Detection\". List has \"Joint intent detection and slot filling\". Does it match? Need exact? Task: if input entity matches one of items in list, answer matched item. Otherwise output entity unchanged. \"Slot Filling and Intent Detection\" is semantically same but not identical. Need determine matching likely exact or normalized? We must not change if not one. There is \"Joint intent detection and slot filling\" but order differs and includes joint. Input not exactly in list. Output unchanged. Need only answer. \nFinal: Slot Filling and Intent Detection. \nNeed ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 313,
+    "completion_tokens": 139,
+    "total_tokens": 452,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 313
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

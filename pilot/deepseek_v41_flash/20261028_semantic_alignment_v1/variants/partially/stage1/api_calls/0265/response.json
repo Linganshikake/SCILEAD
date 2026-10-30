@@ -1,0 +1,32 @@
+{
+  "id": "f77fb9d0-b871-4e29-a888-b75afbb4d32e",
+  "object": "chat.completion",
+  "created": 1793197235,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Google Billion Word (valid)",
+        "reasoning_content": "We need answer matched item or unchanged. Need semantic match. Input \"Google Billion Word (valid)\" likely refers dataset Google Billion Word with split valid. Candidate \"Google Billion Word\". Need decide preserve split? Instructions: preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities. Here input adds (valid), a split. Candidate lacks split. Is it clear match? We must output matched item exactly if input matches one item. But split is meaningful. However item list includes Google Billion Word no split. Input is Google Billion Word (valid), a specific split. Since candidate doesn't specify split, matching to candidate may merge split with unsplit/base. The instructions say preserve meaningful differences in split, so if no candidate with valid, output unchanged. Need output original input. Ensure exact. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 837,
+    "completion_tokens": 175,
+    "total_tokens": 1012,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 168
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 325
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "91643e27-feee-4315-be93-2e7bef00fefa",
+  "object": "chat.completion",
+  "created": 1793194674,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, AESLC, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item exactly. Input (Summarization, AESLC, ROUGE-2 F1). List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE spelling and metrics. No match. Output tuple unchanged exactly. Need be careful ROUGE vs ROGUE. Input uses ROUGE-2 F1. No match. Output answer only. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 107,
+    "total_tokens": 661,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

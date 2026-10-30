@@ -1,0 +1,32 @@
+{
+  "id": "8dd4bd95-363c-4ece-a0bb-250489319db9",
+  "object": "chat.completion",
+  "created": 1793194719,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN-DailyMail, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need match exact? Input tuple (Summarization, CNN-DailyMail, ROUGE-L). List has (Summarization, CNN/DailyMail, ROGUE-L) with slash and ROGUE misspelled? Also others. Does it match one of items? Need determine whether exact string match. Input has CNN-DailyMail hyphen and ROUGE-L correct, list has CNN/DailyMail slash and ROGUE-L. Not exact. So output input unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 122,
+    "total_tokens": 675,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

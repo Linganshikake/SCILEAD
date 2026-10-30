@@ -1,0 +1,32 @@
+{
+  "id": "64e695ad-0d47-4ae0-8d55-71ba76ae5784",
+  "object": "chat.completion",
+  "created": 1793194304,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2002 Spanish NER",
+        "reasoning_content": "We need answer exact match if input matches one item. Need determine if \"CoNLL 2002 Spanish NER\" matches any item in list. List has 'CoNLL-2002 - Spanish', 'CoNLL-2002 Spanish' but not with NER. We must output entity unchanged if no match. Need not explain. Input is \"CoNLL 2002 Spanish NER\" (no hyphen). No exact item. Output same."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 669,
+    "completion_tokens": 105,
+    "total_tokens": 774,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 157
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

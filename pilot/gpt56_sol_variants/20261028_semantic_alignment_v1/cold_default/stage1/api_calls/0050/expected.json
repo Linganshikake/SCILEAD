@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "1905.03197.pdf",
+  "record": 2,
+  "field": "Metric",
+  "original": "ROUGE-2",
+  "candidate_serialized": "{'ROUGE-1', 'Accuracy', 'Test Precision', 'Development Exact Match', 'Test F1', 'Test Recall', 'Test Exact Match', 'F1 score', 'Development F1'}",
+  "candidate_sha256": "107beb7f904a805106cb87917e40308b607657356d2d05e53da631a257a45f67",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ROUGE-1', 'Accuracy', 'Test Precision', 'Development Exact Match', 'Test F1', 'Test Recall', 'Test Exact Match', 'F1 score', 'Development F1'}\n\nInput: ROUGE-2\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "e2200e9f5f6570e31278223352a288e343c59db790763a3e5724a0f219634886"
+}

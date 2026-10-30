@@ -1,0 +1,32 @@
+{
+  "id": "b3c8e289-27be-46c6-8b8b-f9206a8d42a8",
+  "object": "chat.completion",
+  "created": 1793194341,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match input \"ROUGE-1 F1\" with item list. List has 'ROGUE-1' misspelled? They have ROGUE-1, ROGUE-L, ROGUE-2 but no ROUGE-1. Input says ROUGE-1 F1. Need match to item in list. Is 'ROGUE-1' intended? But spelling differs \"ROGUE\" vs \"ROUGE\". Need decide if match the input with one item. The list includes 'ROGUE-1'. Input \"ROUGE-1 F1\" likely refers ROUGE-1 F1 metric, item is 'ROGUE-1' (typo). Answer only matched item. Could be 'ROGUE-1'. Since exact none? The instruction: If none matches, say None. Does typo count? Usually benchmark item lists include typos. We should match ROUGE-1 to ROGUE-1. Answer \"ROGUE-1\". Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 227,
+    "total_tokens": 488,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 221
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "fc62218f-9de8-4c83-bbb4-1cde685204c2",
+  "object": "chat.completion",
+  "created": 1793194452,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent Detection",
+        "reasoning_content": "We need answer match item if matches list. Input \"Intent detection\". List has 'Intent Detection' and maybe 'Slot Filling and Intent Detection', 'Joint Slot Filling and Intent Detection'. Need determine matching. Case? \"Intent detection\" differs case. Usually matching maybe exact? It says matches one of items. Since item list has 'Intent Detection' (capital D), input lower d. Should output matched item in list if matches. Case-insensitive likely? We need be careful. If exact, no match, output entity unchanged \"Intent detection\". But typical benchmark expects normalized match? The instruction: \"If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it.\" \"matches\" maybe exact string? Input: Intent detection. List contains \"Intent Detection\" with capital D. Also contains \"Slot Filling and Intent Detection\" etc. Usually entity linking: if exact match ignoring case? Hmm.\n\nNeed answer only. The intended likely map to 'Intent Detection' because semantically exact and capitalization difference. We should output 'Intent Detection'. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 334,
+    "completion_tokens": 236,
+    "total_tokens": 570,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 233
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "7c2df2c5-c05b-4a47-b8f9-ded112538ae5",
+  "object": "chat.completion",
+  "created": 1793194191,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "SQuAD",
+        "reasoning_content": "We need answer. Need match item list. Input SQuAD. Items include SQuAD 1.1 but not exact SQuAD. Instruction: if input entity matches one of items in list, answer matched item. Else output entity unchanged. Exact match? SQuAD does not exactly equal SQuAD 1.1. So output SQuAD. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 234,
+    "completion_tokens": 83,
+    "total_tokens": 317,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 234
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

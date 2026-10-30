@@ -1,0 +1,19 @@
+{
+  "paper": "1809.08370.pdf",
+  "record": 7,
+  "field": "Task",
+  "original": "Dependency parsing",
+  "candidate_serialized": "{'Language Modeling', 'Answer-aware question generation (reversed development-test split)', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Multimodal Named Entity Recognition', 'Dialogue Generation', 'Dialog act classification', 'Natural Language Inference (NLI)', 'Answer-aware question generation (original split)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Slot filling', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Machine Translation (English-to-German)', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Joint intent detection and slot filling', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent detection', 'Sentiment Analysis', 'Relation Classification', 'General language understanding'}",
+  "candidate_sha256": "95936d0f166f25b06813cf580e3814b053c4339dc38e208e0595ccda133f8770",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Language Modeling', 'Answer-aware question generation (reversed development-test split)', 'Text Chunking', 'Question Generation', 'Machine Translation', 'Constituency Parsing', 'Multimodal Named Entity Recognition', 'Dialogue Generation', 'Dialog act classification', 'Natural Language Inference (NLI)', 'Answer-aware question generation (original split)', 'Question Answering', 'Entity Typing', 'Paraphrase Detection', 'Slot filling', 'Dependency Parsing', 'Named Entity Recognition (NER)', 'Summarization', 'Machine Translation (English-to-German)', 'Response Generation', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Word Sense Induction', 'Text Similarity', 'Joint intent detection and slot filling', 'Linguistic Acceptability', 'Part-of-Speech (POS) Tagging', 'Intent detection', 'Sentiment Analysis', 'Relation Classification', 'General language understanding'}\n\nInput: Dependency parsing\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "862e76f9157139ff8c6ae2860bb8565ec68f094943f23e2179ba9d87c0105858"
+}

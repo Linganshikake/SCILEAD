@@ -1,0 +1,32 @@
+{
+  "id": "46df38bf-acb4-46b8-94fa-49274b4745a0",
+  "object": "chat.completion",
+  "created": 1793196686,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer match input ROUGE-2 with item list. List has 'ROGUE-2' (misspelled ROGUE not ROUGE). Need match? Input ROUGE-2 intended likely corresponds to ROGUE-2 item due typo. Need output matched item exactly as list: ROGUE-2. But careful: list has ROGUE-1, ROGUE-L, ROGUE-2. Input ROUGE-2 not exact due O/U. We should infer match to ROGUE-2. Answer only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 127,
+    "total_tokens": 386,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

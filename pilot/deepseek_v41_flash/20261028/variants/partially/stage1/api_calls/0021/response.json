@@ -1,0 +1,32 @@
+{
+  "id": "ec556328-a9e2-4af7-b689-e264deab8290",
+  "object": "chat.completion",
+  "created": 1793194178,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 - German",
+        "reasoning_content": "We need answer matched item if exact? Input \"CoNLL-2003 German\". Item list has 'CoNLL-2003 - German' (with hyphen spaces). The input entity doesn't exactly match? Need determine \"matches one of the items\" likely semantic? The instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. There is item \"CoNLL-2003 - German\"; input \"CoNLL-2003 German\" missing hyphen/spaces. Does that count match? Probably normalized? Need be careful. We need output matched item exactly from list if matches. They may expect mapping subtle normalization. Items include CoNLL-2002 Spanish and CoNLL-2002 - Spanish both variants. Input \"CoNLL-2003 German\" maybe intended match \"CoNLL-2003 - German\". This is likely a normalization task. We should output matched item from list: CoNLL-2003 - German. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 544,
+    "completion_tokens": 216,
+    "total_tokens": 760,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 207
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 288
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "eab30ebe-fb46-4273-80db-d1af221607a8",
+  "object": "chat.completion",
+  "created": 1793197289,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need match input to listed. Input (Summarization, CNN/DailyMail, ROUGE-L). List has (Summarization, CNN/DailyMail, ROGUE-L). ROGUE likely typo for ROUGE. Same benchmark. Return listed verbatim exact: (Summarization, CNN/DailyMail, ROGUE-L)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 92,
+    "total_tokens": 863,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

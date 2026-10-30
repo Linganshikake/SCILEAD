@@ -1,0 +1,32 @@
+{
+  "id": "1c7c28b0-c98a-4505-97d2-88f4740365d4",
+  "object": "chat.completion",
+  "created": 1793197453,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Newsroom, ROUGE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, Newsroom, ROUGE-L). List summarization datasets: Gigaword, CNN/DailyMail, XSum. Newsroom not present. Metric ROUGE-L variants ROGUE-L (typo). No dataset Newsroom. No match. Return original tuple verbatim. Need output only. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 96,
+    "total_tokens": 867,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

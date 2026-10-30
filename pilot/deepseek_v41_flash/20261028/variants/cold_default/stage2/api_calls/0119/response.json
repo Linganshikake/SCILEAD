@@ -1,0 +1,32 @@
+{
+  "id": "3d8db36f-f59f-43a1-a619-9a24f5c1266b",
+  "object": "chat.completion",
+  "created": 1793194708,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need match exact tuple? Input (Summarization, Gigaword, ROUGE-2 F1). Item list has (Summarization, Gigaword, ROGUE-2) misspelled ROGUE not ROUGE. Does \"matches\" exact? It says if input tuple matches one of items. It doesn't match exact because ROUGE vs ROGUE and F1 extra. Output tuple unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 114,
+    "total_tokens": 669,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

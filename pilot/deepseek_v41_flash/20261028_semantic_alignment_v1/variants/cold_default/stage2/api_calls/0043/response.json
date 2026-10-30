@@ -1,0 +1,32 @@
+{
+  "id": "2c888a7c-3bf1-4290-8129-77961534035b",
+  "object": "chat.completion",
+  "created": 1793197274,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(GLUE Benchmark, QNLI, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed semantically. Input GLUE Benchmark, QNLI, Accuracy. List has no GLUE, QNLI, etc. None match. Return original tuple verbatim. Ensure output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 63,
+    "total_tokens": 831,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

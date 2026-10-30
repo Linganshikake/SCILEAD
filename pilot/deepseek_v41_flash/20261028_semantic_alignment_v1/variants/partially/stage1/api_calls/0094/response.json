@@ -1,0 +1,32 @@
+{
+  "id": "450e3dcd-3deb-4bdd-b6e0-d3c29c10a919",
+  "object": "chat.completion",
+  "created": 1793196770,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "RTE",
+        "reasoning_content": "We need answer only. Need determine match. Input \"GLUE RTE\" vs list contains RTE and GLUE. Need semantic identity? It likely refers to GLUE benchmark's RTE task. Candidate RTE in list. Also GLUE separate. The instruction: if input entity matches one item, output matched item exactly. \"GLUE RTE\" could match RTE because RTE is a GLUE task. Need compare meaningful dataset identity. Item list includes GLUE and RTE. Which matched item? The input is \"GLUE RTE\" could be a task name more specific wording matching existing standard task RTE. We should output \"RTE\" exactly as item list. Check if there is no \"GLUE RTE\" exact. The candidate RTE is clear semantic match. Output only selected item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 171,
+    "total_tokens": 936,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 168
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 253
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

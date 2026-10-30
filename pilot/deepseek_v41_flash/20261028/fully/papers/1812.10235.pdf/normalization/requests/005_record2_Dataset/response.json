@@ -1,0 +1,32 @@
+{
+  "id": "7383bdfb-8d00-403a-96e2-6d6977d427d2",
+  "object": "chat.completion",
+  "created": 1793193368,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Multi-domain Movie",
+        "reasoning_content": "We need answer only matched item. Need infer input \"Movie\" matches item list. There are Multi-domain Movie and Multi-domain Food etc. Also maybe \"Movie\" exactly? Need match input with one item. If none exact maybe semantically? Item list includes 'Multi-domain Movie'. Input Movie. Need determine expected classification. The task likely dataset/task matching: input \"Movie\" corresponds to \"Multi-domain Movie\" because list has multi-domain home/movie/food? We need output matched item exactly. Also there is no standalone Movie. Since \"Movie\" matches \"Multi-domain Movie\" partially? Need only matched item. We should output Multi-domain Movie. Ensure only item. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 141,
+    "total_tokens": 693,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 137
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 168
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

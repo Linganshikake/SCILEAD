@@ -1,0 +1,32 @@
+{
+  "id": "d5677442-3949-4056-b699-0e6d0bfbdce5",
+  "object": "chat.completion",
+  "created": 1793197231,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT2014 De→En",
+        "reasoning_content": "We need answer only matched item or unchanged. Need semantic match. Input: IWSLT'14 De-En. List has \"IWSLT’14 EN-DE\" and \"IWSLT2014 De→En\". Need determine clear match. Input is IWSLT'14 De-En meaning German to English. Candidate \"IWSLT’14 EN-DE\" is English-German direction, opposite. Candidate \"IWSLT2014 De→En\" is German to English, same. Need output exactly as written in list: IWSLT2014 De→En. Check punctuation: yes. Need final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 829,
+    "completion_tokens": 141,
+    "total_tokens": 970,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 189
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

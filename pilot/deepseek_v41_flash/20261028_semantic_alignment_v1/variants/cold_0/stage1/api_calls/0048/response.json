@@ -1,0 +1,32 @@
+{
+  "id": "e0fd718a-a85f-4317-a826-ffdd5e1881ef",
+  "object": "chat.completion",
+  "created": 1793196676,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MNLI-mm",
+        "reasoning_content": "We need answer only. Need determine if MNLI-mm matches MNLI-m? Semantic matching. Need preserve meaningful differences in dataset split. MNLI-m and MNLI-mm are distinct settings? MNLI-m = matched, MNLI-mm = mismatched. Candidate list only MNLI-m. Input MNLI-mm does not match MNLI-m, because meaningful difference matched/mismatched. Output original unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 85,
+    "total_tokens": 488,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 147
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

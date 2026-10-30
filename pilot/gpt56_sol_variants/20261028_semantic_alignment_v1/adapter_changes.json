@@ -1,0 +1,31 @@
+{
+  "source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\variant_runtime.py",
+  "source_sha256": "22fcc67fca1e9dd1731cafc8f23ccfe03081bb5f62a56eebfaa013ee15989370",
+  "exact_replacements": [
+    {
+      "before": "TOP=Path(__file__).resolve().parent",
+      "after": "TOP=Path(__file__).resolve().parent\nPROMPT_PATH=TOP/'prompts_semantic_v1.json'\nfrom runtime_policy import configure_paths\nconfigure_paths()",
+      "count": 1
+    },
+    {
+      "before": "origin=PILOT/('full43_cold_start' if cold else 'full43_partially')/'engine.py'",
+      "after": "origin=(TOP/'cold_observer.py') if cold else PILOT/'full43_partially/engine.py'",
+      "count": 1
+    },
+    {
+      "before": "read(REPO/'prompts.json')",
+      "after": "read(PROMPT_PATH)",
+      "count": 1
+    },
+    {
+      "before": "prompt_file=str(REPO/'prompts.json')",
+      "after": "prompt_file=str(PROMPT_PATH)",
+      "count": 2
+    }
+  ],
+  "transport_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_fully\\20261024_A1_single_paper\\run_trial.py",
+  "transport_sha256": "8cbe1485dcafef86b7cb16645cdcd561a3ecb18f3cf011ffd193abb8561f2f03",
+  "cold_observer_source": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\engine.py",
+  "cold_observer_source_sha256": "09d4f32229085ae9fd0e7f90f03f36011a95a7129620978b92c29dfa8b54f4f1",
+  "observer_change": "prefix before class Transport; only Prompt validation binding replaced"
+}

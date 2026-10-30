@@ -1,0 +1,32 @@
+{
+  "id": "ecefc418-11e7-4772-bfdd-31b406104de9",
+  "object": "chat.completion",
+  "created": 1793194828,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROUGE-L F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any in list. Input (Summarization, XSum, ROUGE-L F1). List has Summarization XSum ROGUE-2, ROGUE-L, ROGUE-1. Note spelling ROGUE not ROUGE and metric maybe ROGUE-L. Input uses ROUGE-L F1 not exact match. If no match output tuple unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 108,
+    "total_tokens": 661,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

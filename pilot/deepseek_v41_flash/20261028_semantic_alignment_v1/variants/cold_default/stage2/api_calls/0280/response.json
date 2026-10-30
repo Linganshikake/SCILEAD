@@ -1,0 +1,32 @@
+{
+  "id": "95ed6d4a-aac6-408c-b22f-d59fff713b93",
+  "object": "chat.completion",
+  "created": 1793197637,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-1)",
+        "reasoning_content": "We need answer only tuple. Need determine match. Input (Abstractive Summarization, NYT, ROUGE-1). List summarization datasets Gigaword, CNN/DailyMail, XSum. NYT not listed. Metric ROUGE-1 matches listed ROGUE-1 but dataset NYT no. No candidate. Return original tuple verbatim. Need consider \"ROUGE-1\" vs ROGUE-1 superficial spelling. But dataset NYT absent. Thus no match. Output original. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 123,
+    "total_tokens": 895,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "817a3c69-168f-4f38-8363-ddbd543cd2f6",
+  "object": "chat.completion",
+  "created": 1793194276,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2002 Dutch NER",
+        "reasoning_content": "We need answer only matched or original. Need determine if input entity matches one item. Input \"CoNLL 2002 Dutch NER\". List has \"CoNLL-2002 Dutch\" but not exact with 2002 space and NER. No exact match. Output entity unchanged. Need no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 75,
+    "total_tokens": 534,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 203
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

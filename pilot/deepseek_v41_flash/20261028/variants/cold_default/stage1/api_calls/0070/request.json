@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'METEOR', 'Intent accuracy', 'ROUGE-L', 'F1', 'EM', 'MCC', 'Spearman correlation', 'Slot filling F1-score', 'Score', 'F1 score'}\n\nInput: Sentence accuracy\n\nAnswer: "
+    }
+  ],
+  "thinking": {
+    "type": "enabled"
+  },
+  "reasoning_effort": "high",
+  "stream": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": "2aacc3d5-2ca5-4590-a3d3-ab6cd44bce95",
+  "object": "chat.completion",
+  "created": 1793197360,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Summarization, XSum, ROUGE-1). List has (Summarization, XSum, ROGUE-1) typo ROGUE vs ROUGE? Also other XSum ROGUE-2, ROGUE-L. Need match metric ROUGE-1 to ROGUE-1 likely superficial spelling. Dataset XSum, task Summary. Return listed verbatim: (Summarization, XSum, ROGUE-1). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 124,
+    "total_tokens": 894,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

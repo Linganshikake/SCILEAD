@@ -1,0 +1,32 @@
+{
+  "id": "bf040bf9-f143-4769-a342-1332e5d26b53",
+  "object": "chat.completion",
+  "created": 1793192482,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "None",
+        "reasoning_content": "We need answer match input \"OntoNotes\" to item list. Items include 'Ontonotes v4 - Chinese', 'Ontonotes v5 - English'. Input \"OntoNotes\" ambiguous, not exact item. We need match if one item? It could refer to OntoNotes generally, but list has two variants. Since none exact? The instruction match input with one of items. If none matches, say None. \"OntoNotes\" is not identical to either variant. But perhaps intended matching? Need only matched item. If generic OntoNotes refers to dataset, both are OntoNotes versions. Which one? No unique. So None."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 137,
+    "total_tokens": 691,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 135
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

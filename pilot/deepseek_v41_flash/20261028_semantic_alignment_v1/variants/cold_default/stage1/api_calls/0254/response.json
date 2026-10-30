@@ -1,0 +1,32 @@
+{
+  "id": "fdb58ab0-fccb-49c5-bbb4-aee3d2d75224",
+  "object": "chat.completion",
+  "created": 1793197047,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Home",
+        "reasoning_content": "We need answer only. Need match input \"Home\" to candidate list? Need determine semantic match. List has many tasks/datasets. \"Home\" might match? There's \"MapTask\", \"SwDA\", \"MRDA\", \"Movie\", \"Food\", \"E-commerce\", \"Multimodal\", \"Reddit TIFU\", etc. Home? Could be \"HOME\" dataset? Not in list. Need output original unchanged if no match. Need not explain. Ensure exact \"Home\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 738,
+    "completion_tokens": 104,
+    "total_tokens": 842,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 226
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

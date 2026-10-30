@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_42",
+  "paper": "C18-1139.pdf",
+  "record": 4,
+  "field": "Task",
+  "original": "Part-of-Speech Tagging",
+  "candidate_serialized": "{'Machine Translation (English-to-French)', 'Intent Detection', 'Language Modeling', 'Abstractive single-document news summarization', 'Named entity recognition', 'Cloze-style question answering', 'Relation classification', 'Extractive single-document news summarization', 'Machine Translation (English-to-German)', 'Slot Filling', 'Entity typing', 'Chunking', 'Extractive question answering', 'Named Entity Recognition (German)', 'Joint Spoken Language Understanding'}",
+  "candidate_sha256": "fc0d2f760dd4ae091eb4ebddffb29cb119cdd364a3d595e2f45e27d10aa0f678",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Machine Translation (English-to-French)', 'Intent Detection', 'Language Modeling', 'Abstractive single-document news summarization', 'Named entity recognition', 'Cloze-style question answering', 'Relation classification', 'Extractive single-document news summarization', 'Machine Translation (English-to-German)', 'Slot Filling', 'Entity typing', 'Chunking', 'Extractive question answering', 'Named Entity Recognition (German)', 'Joint Spoken Language Understanding'}\n\nInput: Part-of-Speech Tagging\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "206da678576fe5ea7827a1a9556a6a1a5e5baeebc022f137ca2effea8e3c265e"
+}

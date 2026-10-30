@@ -1,0 +1,32 @@
+{
+  "id": "cd32d964-2fa4-4e8d-92f6-9671a1353424",
+  "object": "chat.completion",
+  "created": 1793195161,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, IWSLT De-En, BLEU)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches item list exactly. Item list has (Machine Translation, IWSLT’14 EN-DE, BLEU), not IWSLT De-En. So output tuple unchanged. Need exact formatting? \"(Machine Translation, IWSLT De-En, BLEU)\" Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 90,
+    "total_tokens": 645,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

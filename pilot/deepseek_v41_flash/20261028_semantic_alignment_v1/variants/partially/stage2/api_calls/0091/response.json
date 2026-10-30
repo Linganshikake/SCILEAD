@@ -1,0 +1,32 @@
+{
+  "id": "14b780e1-5d63-4234-a2bb-6a82c0944cf0",
+  "object": "chat.completion",
+  "created": 1793197599,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(GLUE Benchmark, GLUE, AVG)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among list for input (GLUE Benchmark, GLUE, AVG). No candidate has GLUE. Need output original tuple verbatim. Ensure exact: (GLUE Benchmark, GLUE, AVG)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 63,
+    "total_tokens": 831,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

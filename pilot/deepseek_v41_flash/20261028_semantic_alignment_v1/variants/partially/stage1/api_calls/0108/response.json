@@ -1,0 +1,32 @@
+{
+  "id": "60b4a860-870b-4695-bb40-5f19b18e948f",
+  "object": "chat.completion",
+  "created": 1793196794,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item. Input ROUGE-L but list has 'ROGUE-L' (misspelled). Need match? The item list explicitly contains 'ROGUE-L', not ROUGE-L. They ask match input with one item. If none matches, say None. Is ROUGE-L considered same as ROGUE-L? It's typo in list. They emphasize match one item. Likely expected 'ROGUE-L' because closest. But if strict exact, none. Need infer benchmark: items include evaluation metrics, input ROUGE-L, list has ROGUE-L likely typo. Answer should be matched item in list, so output ROGUE-L exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 152,
+    "total_tokens": 410,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 147
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

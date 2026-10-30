@@ -1,0 +1,32 @@
+{
+  "id": "cc486ccc-d268-43fa-86bf-c8d2226cde64",
+  "object": "chat.completion",
+  "created": 1793197303,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, BC5CDR, Entity-level F1 score)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match among list. Input NER BC5CDR Entity-level F1. List has NER Ontonotes v5 English F1, CoNLL-2003 English F1, WNUT-17 English F1, WNUT-16 English F1. BC5CDR is biomedical NER dataset distinct. No match. Output original tuple verbatim. Ensure exact input: (Named Entity Recognition, BC5CDR, Entity-level F1 score). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 126,
+    "total_tokens": 899,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

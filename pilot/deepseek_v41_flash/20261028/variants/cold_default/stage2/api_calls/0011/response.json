@@ -1,0 +1,32 @@
+{
+  "id": "cfa22188-d9a0-41b0-bec5-ac1729ea72d3",
+  "object": "chat.completion",
+  "created": 1793194583,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2002 Dutch, F1 score)",
+        "reasoning_content": "We need answer only. Need match input tuple to list? Input: (Named Entity Recognition, CoNLL-2002 Dutch, F1 score). List has Named Entity Recognition variants: (Named Entity Recognition (NER), Ontonotes v5 - English, F1), (Named Entity Recognition (NER), CoNLL-2003 - English, F1), (Named Entity Recognition (NER), WNUT-17 - English, F1), (Named Entity Recognition (NER), WNUT-16 - English, F1). No exact match, also \"Named Entity Recognition\" vs \"Named Entity Recognition (NER)\", \"F1 score\" vs F1. So output tuple unchanged exactly. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 165,
+    "total_tokens": 721,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 147
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "0223254e-d0c9-4f6c-adb1-328c29528285",
+  "object": "chat.completion",
+  "created": 1793196820,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Test F1",
+        "reasoning_content": "We need answer. Need determine if \"Test F1\" matches item. List has F1, Dev F1. Test F1 could be a split-specific F1, not identical? Need semantic matching preserve split identity. List has Dev F1 (dev split). Input Test F1. No Test F1 candidate. F1 generic? Could match F1 by abbreviation? But Test F1 includes split, more specific. Requirements preserve split. Candidate F1 lacks split, Dev F1 mismatch. So no clear exact candidate. Output original input unchanged: Test F1. Need only selected."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 394,
+    "completion_tokens": 124,
+    "total_tokens": 518,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 138
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

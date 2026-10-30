@@ -1,0 +1,32 @@
+{
+  "id": "48ccce70-7542-4002-83b2-b0c09cd72501",
+  "object": "chat.completion",
+  "created": 1793194639,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROUGE-L F1)",
+        "reasoning_content": "We need answer only. Need match input tuple to item list exactly? Input (Summarization, XSum, ROUGE-L F1). List contains (Summarization, XSum, ROGUE-L) etc misspelled ROGUE. No exact match. Need output tuple without changing. So \"(Summarization, XSum, ROUGE-L F1)\" maybe preserving. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 97,
+    "total_tokens": 650,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

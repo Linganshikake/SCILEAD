@@ -1,0 +1,32 @@
+{
+  "id": "05afb66f-ef67-44dc-bcde-94ddd5992c13",
+  "object": "chat.completion",
+  "created": 1793197000,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1",
+        "reasoning_content": "We need answer. Need determine semantic match. Input \"F1 score\" vs candidates includes \"F1\", \"Entity-level F1 score\", etc. \"F1 score\" likely matches \"F1\" semantically? Need output matched item exactly as in list if clear. Candidate \"F1\" denotes same metric F1 score. Also \"Test F1\", \"Dev F1\" specific, not match. Entity-level F1 specific. So output F1."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 97,
+    "total_tokens": 552,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 199
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

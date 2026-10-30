@@ -1,0 +1,32 @@
+{
+  "id": "ecf5d274-dff7-4994-95df-6fc8a7b328f6",
+  "object": "chat.completion",
+  "created": 1793194385,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "SQuAD",
+        "reasoning_content": "We need answer match item if input matches one item. List has SQuAD 1.1, SQuAD 2.0 but not SQuAD exact. Need output entity unchanged if no match. \"SQuAD\" not in list. Output SQuAD. Need only answer. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 564,
+    "completion_tokens": 66,
+    "total_tokens": 630,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 436
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

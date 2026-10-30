@@ -1,0 +1,32 @@
+{
+  "id": "f401b57b-ff79-44c9-ad01-1ad2991804e8",
+  "object": "chat.completion",
+  "created": 1793197304,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent detection, Food, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed semantically. Input (Intent detection, Food, Accuracy). List has Intent Detection and Slot Filling, ATIS Accuracy/F1; SNIPS F1/Accuracy. Dataset \"Food\" none. Could \"Food\" be alias for ATIS? ATIS has restaurant/food domain? Need semantic matching all three. Intent detection task broad matches Intent Detection and Slot Filling? Dataset Food does not match ATIS/SNIPS unambiguously. Could \"Food\" be some dataset? No candidate. Return original tuple verbatim. Need output tuple exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 133,
+    "total_tokens": 898,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 124
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 253
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

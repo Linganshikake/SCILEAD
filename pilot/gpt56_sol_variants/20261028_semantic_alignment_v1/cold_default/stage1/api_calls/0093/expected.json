@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "1905.03197.pdf",
+  "record": 36,
+  "field": "Dataset",
+  "original": "WNLI",
+  "candidate_serialized": "{'QQP', 'MRPC', 'ReCoRD', 'ON4C', 'CoNLL-2002 Dutch', 'SQuAD development set', 'QNLI', 'MNLI mismatched', 'STS-B', 'TACRED', 'CoNLL-2002 Spanish', 'CoNLL-2000 Chunking', 'CNN/DailyMail', 'ON5E', 'RE', 'CoNLL-2003 NER', 'CoLA', 'CoNLL-2003 German', 'SQuAD 1.1', 'Gigaword', 'SST-2', 'WN16', 'WE', 'CoQA development set', 'WSJ', 'Open Entity', 'RTE', 'DSTC7', 'WN17', 'MNLI matched'}",
+  "candidate_sha256": "5784919ba22e4ebd2bce069a32ca42e28f90229f2776efbe724d8bad5bdf61d2",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'QQP', 'MRPC', 'ReCoRD', 'ON4C', 'CoNLL-2002 Dutch', 'SQuAD development set', 'QNLI', 'MNLI mismatched', 'STS-B', 'TACRED', 'CoNLL-2002 Spanish', 'CoNLL-2000 Chunking', 'CNN/DailyMail', 'ON5E', 'RE', 'CoNLL-2003 NER', 'CoLA', 'CoNLL-2003 German', 'SQuAD 1.1', 'Gigaword', 'SST-2', 'WN16', 'WE', 'CoQA development set', 'WSJ', 'Open Entity', 'RTE', 'DSTC7', 'WN17', 'MNLI matched'}\n\nInput: WNLI\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "b2a0f07653714e89bac0c63e9e5b265d27ae898bb4c92119c91e680b5d242907"
+}

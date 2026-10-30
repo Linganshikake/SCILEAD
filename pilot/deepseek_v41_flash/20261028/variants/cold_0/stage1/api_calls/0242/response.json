@@ -1,0 +1,32 @@
+{
+  "id": "7d6a1898-59f2-4d82-8b05-1bf099984ed5",
+  "object": "chat.completion",
+  "created": 1793194464,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Dialog Act Classification",
+        "reasoning_content": "We need answer. Need match list. Input \"Dialog Act Classification\". List has 'Dialogue Act Classification' (different spelling Dialog vs Dialogue) and 'Dialogue act recognition'. Need if matches exactly one of items? It doesn't exactly match due Dialog vs Dialogue. It says if input entity matches one items in list, answer matched. Else output entity without changing. So output \"Dialog Act Classification\". But maybe fuzzy? Need not explanation. Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 357,
+    "completion_tokens": 96,
+    "total_tokens": 453,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 229
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

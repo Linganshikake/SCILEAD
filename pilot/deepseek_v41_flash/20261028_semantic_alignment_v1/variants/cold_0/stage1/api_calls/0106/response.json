@@ -1,0 +1,32 @@
+{
+  "id": "aa610fd4-13e3-4d96-9b91-e5e0e9d11710",
+  "object": "chat.completion",
+  "created": 1793196782,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1",
+        "reasoning_content": "We need answer only selected item or unchanged. Need semantic match. Input \"F1 score (averaged over 5 runs)\" candidates include F1. Task metric? \"F1 score\" matches F1, parenthetical averaged over 5 runs is experimental detail? Requirement: Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because names similar. Here averaged over 5 runs is not metric definition, it's reporting procedure. Likely match F1. Output \"F1\" exactly. Need no explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 409,
+    "completion_tokens": 120,
+    "total_tokens": 529,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 117
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 153
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "29ecf14c-2a2d-4384-aab4-341bee8e0013",
+  "object": "chat.completion",
+  "created": 1793194860,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2003, F1 score)",
+        "reasoning_content": "We need answer only. Need match? Input tuple: (Named Entity Recognition, CoNLL-2003, F1 score). Item list has (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Does it match? It says if input tuple matches one item, answer matched item. Else output tuple unchanged. The input uses \"Named Entity Recognition\" no (NER), \"CoNLL-2003\" no - English, \"F1 score\" vs F1. Not exact match. Need output tuple without changing it. Only output answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 136,
+    "total_tokens": 691,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

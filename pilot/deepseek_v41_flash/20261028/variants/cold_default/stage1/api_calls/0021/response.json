@@ -1,0 +1,32 @@
+{
+  "id": "221529b7-9b52-4791-a40b-2cda9ef66732",
+  "object": "chat.completion",
+  "created": 1793194171,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2000 Chunking",
+        "reasoning_content": "We need answer matched item or unchanged. Item list includes CoNLL00 maybe corresponds? Need exact matching? Input \"CoNLL-2000 Chunking\" not exactly \"CoNLL00\". Instructions: \"If input entity matches one of items in list, answer matched item. Else output entity without changing it.\" No semantic match, exact? It says matches one of items. Probably not exact, so output unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 186,
+    "completion_tokens": 101,
+    "total_tokens": 287,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 186
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

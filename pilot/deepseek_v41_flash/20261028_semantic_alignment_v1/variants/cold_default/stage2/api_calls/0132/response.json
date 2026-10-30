@@ -1,0 +1,32 @@
+{
+  "id": "2b9d8078-008e-48f7-9e72-fec29c99579e",
+  "object": "chat.completion",
+  "created": 1793197396,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, arXiv, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input Summarization, arXiv, ROUGE-L F1. List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE-L etc. No arXiv. So no match, output original tuple verbatim. Must decide exact input: (Summarization, arXiv, ROUGE-L F1). Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 94,
+    "total_tokens": 864,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

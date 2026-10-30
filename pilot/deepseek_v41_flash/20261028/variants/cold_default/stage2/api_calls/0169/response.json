@@ -1,0 +1,32 @@
+{
+  "id": "acd2be2a-867d-48ed-beaf-3317e643523c",
+  "object": "chat.completion",
+  "created": 1793194774,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Fine-Grained NER (FGN), OntoNotes, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list exactly. Input (Fine-Grained NER (FGN), OntoNotes, F1) vs list entries. There is Named Entity Recognition (NER), Ontonotes v5 - English, F1 but not exact. So output tuple unchanged. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 85,
+    "total_tokens": 641,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

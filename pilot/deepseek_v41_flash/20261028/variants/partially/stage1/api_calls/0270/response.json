@@ -1,0 +1,32 @@
+{
+  "id": "e995c2e9-e6ca-403d-8e49-9c70d04bf015",
+  "object": "chat.completion",
+  "created": 1793194656,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer match if exact item? Input \"Joint Slot Filling and Intent Detection\". List has \"Joint intent detection and slot filling\" and \"Slot Filling and Intent Detection\" etc. Need determine if matches one item. The instruction: If input entity matches one of items, answer matched item. Else output entity unchanged. \"matches\" likely exact? Could be semantic? We should not change if no exact match. Input exact string not in list. The closest is \"Joint intent detection and slot filling\" but not exact same order/case. Need output unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 395,
+    "completion_tokens": 127,
+    "total_tokens": 522,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 267
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

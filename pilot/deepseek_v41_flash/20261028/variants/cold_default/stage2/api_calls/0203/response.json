@@ -1,0 +1,32 @@
+{
+  "id": "98a04c4c-432a-4403-9afe-5efe27cc2f35",
+  "object": "chat.completion",
+  "created": 1793194819,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN-DailyMail, ROUGE-1)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. List has (Summarization, CNN/DailyMail, ROGUE-1) using slash and ROGUE spelling. Input (Summarization, CNN-DailyMail, ROUGE-1). Does it match exactly? It differs CNN/DailyMail vs CNN-DailyMail, ROGUE vs ROUGE. The instruction: if input tuple matches one item, answer matched item. Else output tuple unchanged. Exact match required likely. No exact match. Output input tuple unchanged: (Summarization, CNN-DailyMail, ROUGE-1). Ensure only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 146,
+    "total_tokens": 700,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

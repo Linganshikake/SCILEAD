@@ -1,0 +1,32 @@
+{
+  "id": "8ceb61ee-a250-45d0-9b59-a25dbee1232b",
+  "object": "chat.completion",
+  "created": 1793194651,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent detection, Home, Accuracy)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list exactly. Input (Intent detection, Home, Accuracy). List has Intent Detection and Slot Filling, ATIS/SNIPS etc. No Home nor Intent detection lowercase. So output tuple unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 547,
+    "completion_tokens": 61,
+    "total_tokens": 608,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 163
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

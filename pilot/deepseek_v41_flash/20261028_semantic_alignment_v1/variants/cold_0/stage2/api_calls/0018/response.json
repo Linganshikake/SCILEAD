@@ -1,0 +1,32 @@
+{
+  "id": "071a914a-695e-4c53-99f5-134c176aef55",
+  "object": "chat.completion",
+  "created": 1793197210,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, CNN/DailyMail, ROUGE-L). List has (Summarization, CNN/DailyMail, ROGUE-L). Note ROGUE-L likely typo for ROUGE-L. Abstractive Summarization vs Summarization: candidate same dataset metric, task broader but underlying benchmark? Need decide. Requirements: more specific task wording may match broader standard task label when same underlying benchmark and dataset/metric compatible. CNN/DailyMail summarization benchmark usually abstractive. So match listed (Summarization, CNN/DailyMail, ROGUE-L) exact spelling. Need output verbatim. Ensure ROGUE-L typo. Return tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 163,
+    "total_tokens": 936,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 148
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

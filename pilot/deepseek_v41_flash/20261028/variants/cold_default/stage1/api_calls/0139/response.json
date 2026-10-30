@@ -1,0 +1,32 @@
+{
+  "id": "a05a06b3-4783-4628-a8d2-8a7cc7da5a27",
+  "object": "chat.completion",
+  "created": 1793194304,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-2 F1",
+        "reasoning_content": "We need answer match if input entity matches one item. Input \"ROUGE-2 F1\". List has ROUGE-2 and ROUGE-1 F1 but not ROUGE-2 F1. So no exact match, output unchanged. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 234,
+    "completion_tokens": 66,
+    "total_tokens": 300,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 234
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

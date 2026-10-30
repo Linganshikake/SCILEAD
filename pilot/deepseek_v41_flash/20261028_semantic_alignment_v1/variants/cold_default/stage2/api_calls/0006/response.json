@@ -1,0 +1,32 @@
+{
+  "id": "aaa4fe09-44b7-4d6b-b478-ed31e7ee4f06",
+  "object": "chat.completion",
+  "created": 1793197228,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, WE, F1)",
+        "reasoning_content": "We need answer only tuple. Need match input (Named Entity Recognition, WE, F1) against list. Dataset \"WE\" maybe? Need determine semantic match. Candidates NER:\n- Ontonotes v5 - English, F1\n- CoNLL-2003 - English, F1\n- WNUT-17 - English, F1\n- WNUT-16 - English, F1\nDataset \"WE\" ambiguous. Could stand for \"Wikilinks? World Events?\" Not in candidates. Need not guess. Return original. Ensure exact: (Named Entity Recognition, WE, F1). No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 767,
+    "completion_tokens": 141,
+    "total_tokens": 908,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 255
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

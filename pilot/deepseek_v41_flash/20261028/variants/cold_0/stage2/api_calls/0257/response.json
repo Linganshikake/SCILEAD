@@ -1,0 +1,32 @@
+{
+  "id": "dd4a6e81-0c0a-4628-9fd9-27b96c7b1312",
+  "object": "chat.completion",
+  "created": 1793194880,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-L Recall)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any item exactly? List contains various. Input \"(Abstractive Summarization, NYT, ROUGE-L Recall)\" not in list. Output unchanged tuple. Need exact formatting maybe (Abstractive Summarization, NYT, ROUGE-L Recall). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 81,
+    "total_tokens": 635,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

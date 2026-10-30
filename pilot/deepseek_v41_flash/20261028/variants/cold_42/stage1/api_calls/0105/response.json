@@ -1,0 +1,32 @@
+{
+  "id": "f29dbcc0-119c-48b4-8a1b-24cdc3ae742f",
+  "object": "chat.completion",
+  "created": 1793194268,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Annotated English Gigaword",
+        "reasoning_content": "We need answer. Need match item if input matches exactly one? Input \"Annotated English Gigaword\" not exactly in list. List has 'Gigaword'. Need determine matching? Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. \"Annotated English Gigaword\" not same as \"Gigaword\" unless semantic match? Need likely no exact match, output unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 322,
+    "completion_tokens": 104,
+    "total_tokens": 426,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 322
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

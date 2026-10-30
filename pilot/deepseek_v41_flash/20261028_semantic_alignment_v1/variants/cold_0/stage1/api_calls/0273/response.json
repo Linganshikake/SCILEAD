@@ -1,0 +1,32 @@
+{
+  "id": "709b1491-f8c8-4812-a53b-dd8b1c407d3b",
+  "object": "chat.completion",
+  "created": 1793197067,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1",
+        "reasoning_content": "We need answer only. Need match input \"F1 score\" against list. Candidate \"F1\" clear semantic match? \"F1 score\" is metric F1, list has F1. Also Entity-level F1 score, Test F1, Dev F1 are more specific. Input generic \"F1 score\" matches F1. Must output candidate exactly as written: F1. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 459,
+    "completion_tokens": 86,
+    "total_tokens": 545,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 203
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

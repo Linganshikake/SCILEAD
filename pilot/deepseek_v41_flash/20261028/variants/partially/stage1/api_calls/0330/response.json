@@ -1,0 +1,32 @@
+{
+  "id": "fa75d1e5-a4ef-4bd2-8405-a269136f962d",
+  "object": "chat.completion",
+  "created": 1793194829,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer matched item. Input ROUGE-2. List has 'ROGUE-2' misspelled ROGUE vs ROUGE. Need determine match? It says match input with one items. If none matches say None. Input \"ROUGE-2\" exactly not in list (list has ROGUE-2, typo). Could consider intended? We need only matched item. Since item list has 'ROGUE-2' not 'ROUGE-2'. But likely they expect ROGUE-2? Need be strict: \"If none of the items matches, say None.\" It may be typo in list, but matching should semantic? The item list includes ROGUE-1, ROGUE-L, ROGUE-2, likely meant ROUGE (metric), misspelled. Input ROUGE-2 is standard. The intended match is ROGUE-2 due typo. We should output the exact item from list: ROGUE-2. Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 223,
+    "total_tokens": 482,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 217
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

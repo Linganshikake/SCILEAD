@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_42",
+  "paper": "1910.13461.pdf",
+  "record": 13,
+  "field": "Task",
+  "original": "Linguistic acceptability classification",
+  "candidate_serialized": "{'Language Modeling', 'Relation classification', 'Extractive single-document news summarization', 'Sentiment classification', 'Chunking', 'Dialogue act classification', 'Slot Filling', 'Extractive question answering', 'Joint Spoken Language Understanding', 'Machine Translation (English-to-French)', 'Intent Detection', 'Abstractive single-document news summarization', 'Cloze-style question answering', 'Machine Translation (English-to-German)', 'Entity typing', 'Part-of-Speech Tagging', 'Named Entity Recognition (German)', 'Paraphrase detection', 'Named entity recognition', 'Natural language inference', 'Semantic textual similarity'}",
+  "candidate_sha256": "077def60ca3981090f3ce921182064b885978526e6cc1384df9e6750b1d90599",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Language Modeling', 'Relation classification', 'Extractive single-document news summarization', 'Sentiment classification', 'Chunking', 'Dialogue act classification', 'Slot Filling', 'Extractive question answering', 'Joint Spoken Language Understanding', 'Machine Translation (English-to-French)', 'Intent Detection', 'Abstractive single-document news summarization', 'Cloze-style question answering', 'Machine Translation (English-to-German)', 'Entity typing', 'Part-of-Speech Tagging', 'Named Entity Recognition (German)', 'Paraphrase detection', 'Named entity recognition', 'Natural language inference', 'Semantic textual similarity'}\n\nInput: Linguistic acceptability classification\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "f2f6891f5a5671845fa8270d36b135ac0b3528840dfcfcf71340c3415e5b2b6a"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "25c3fd3a-2fb1-4381-911d-1d8cd7312af9",
+  "object": "chat.completion",
+  "created": 1793281535,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1",
+        "reasoning_content": "We need answer match input \"Dev F1\" with item list. Need only matched item. Likely \"F1\" because Dev F1 is a metric variant, item list has F1. Need output exactly item. Could be None if no exact \"Dev F1\". The instruction: match input with one of items. Dev F1 corresponds F1. Answer only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "completion_tokens": 81,
+    "total_tokens": 338,
+    "prompt_tokens_details": {
+      "cached_tokens": 123
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 123,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

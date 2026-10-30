@@ -1,0 +1,32 @@
+{
+  "id": "da0a0699-d705-481c-845c-8cdb7609adcd",
+  "object": "chat.completion",
+  "created": 1793196776,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer match input ROUGE-2 to list item. List has 'ROGUE-2' (misspelled ROGUE not ROUGE). Need determine match? Input ROUGE-2 vs item ROGUE-2 differ one letter. The task says match input with one item. Likely intended item is 'ROGUE-2' typo. We should output matched item exactly as in list: ROGUE-2. Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 107,
+    "total_tokens": 366,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

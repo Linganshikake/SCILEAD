@@ -1,0 +1,32 @@
+{
+  "id": "476e0660-8502-4111-8c38-a0cdea5f963f",
+  "object": "chat.completion",
+  "created": 1793194652,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROUGE-1 F1)",
+        "reasoning_content": "We need answer tuple unchanged if not exact match. Need check item list contains (Summarization, Gigaword, ROGUE-1) spelling ROGUE not ROUGE, and input ROUGE-1 F1. Not match. Output tuple unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 76,
+    "total_tokens": 631,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

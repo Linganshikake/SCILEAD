@@ -1,0 +1,32 @@
+{
+  "id": "7a48a45f-35ad-4f13-b1cf-a25560664a3b",
+  "object": "chat.completion",
+  "created": 1793194774,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, BERTScore)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly. Input (Abstractive Summarization, Gigaword, BERTScore). List has (Summarization, Gigaword, ROGUE-L), etc. No match because task Abstractive Summarization vs Summarization and metric BERTScore. Output unchanged. Need format exactly tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 87,
+    "total_tokens": 640,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

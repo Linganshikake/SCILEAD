@@ -1,0 +1,32 @@
+{
+  "id": "9a066ea1-8fe5-4afe-95ff-e6b49f34fcae",
+  "object": "chat.completion",
+  "created": 1793196683,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer match. Item list has 'ROGUE-L' (misspelled) not ROUGE-L. Input ROUGE-L. Need exact? \"If none matches say None.\" There is ROGUE-L typo likely intended. We need determine match with one item. The list contains ROGUE-L. Input ROUGE-L differs one letter. Generally matching should consider? The item list has typo ROGUE-L, likely same metric. They ask match input with one of items. We must output matched item exactly from list. Since ROUGE-L not exactly listed, but ROGUE-L is closest and likely intended. Need answer only matched item. Output 'ROGUE-L'. Ensure quotes? They said only consist matched item. I'll output ROGUE-L."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 171,
+    "total_tokens": 429,
+    "prompt_tokens_details": {
+      "cached_tokens": 124
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 166
+    },
+    "prompt_cache_hit_tokens": 124,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

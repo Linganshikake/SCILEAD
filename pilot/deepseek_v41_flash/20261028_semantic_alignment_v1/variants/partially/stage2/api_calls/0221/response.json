@@ -1,0 +1,32 @@
+{
+  "id": "a9e4c9d5-6576-4258-90e9-11c062a87a5f",
+  "object": "chat.completion",
+  "created": 1793197806,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT’14 EN-FR, METEOR)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Machine Translation, WMT’14 EN-FR, METEOR). List has (Machine Translation, WMT’14 EN-FR, BLEU). Same task/dataset but metric METEOR vs BLEU. Metrics differ; do not merge. No other WMT EN-FR? only BLEU. So no match, return original. Need output tuple verbatim."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 110,
+    "total_tokens": 883,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

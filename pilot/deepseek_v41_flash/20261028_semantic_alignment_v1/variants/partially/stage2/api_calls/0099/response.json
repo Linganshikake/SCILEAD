@@ -1,0 +1,32 @@
+{
+  "id": "fef2b799-d33a-4853-97bd-f93459cf66fd",
+  "object": "chat.completion",
+  "created": 1793197609,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, WikiHow, ROGUE-2)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input Summarization, WikiHow, ROGUE-2. List has summarization Gigaword/CNN/XSum various rouge. No WikiHow. So no match, return original verbatim. Need exact input tuple. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 74,
+    "total_tokens": 844,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

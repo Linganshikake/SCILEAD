@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_42",
+  "paper": "K19-1036.pdf",
+  "record": 1,
+  "field": "Dataset",
+  "original": "SWDA",
+  "candidate_serialized": "{'ATIS', 'CNN/DailyMail', 'Open Entity', 'WMT14 En→Fr', 'ReCoRD', 'Snips', 'CoNLL-2003', 'SQuAD 1.1', 'CoNLL-2003 German', 'NYT50', 'WMT14 En→De', 'CoNLL-2000', 'XSum', 'TACRED', 'Penn Treebank (PTB)'}",
+  "candidate_sha256": "25e376f5f324123e32eec2d0987e2f628bc169c6864b74bc8220b86a59cafd7d",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ATIS', 'CNN/DailyMail', 'Open Entity', 'WMT14 En→Fr', 'ReCoRD', 'Snips', 'CoNLL-2003', 'SQuAD 1.1', 'CoNLL-2003 German', 'NYT50', 'WMT14 En→De', 'CoNLL-2000', 'XSum', 'TACRED', 'Penn Treebank (PTB)'}\n\nInput: SWDA\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "94f11ef605d05b4b3db7849b6a272de152c4f94093124d17f1c580d5295e1bc6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "fd2bd37b-9a7c-4ede-ae0f-95f803f08c62",
+  "object": "chat.completion",
+  "created": 1793194738,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROUGE-1)",
+        "reasoning_content": "We need answer only. Need match tuple in list exactly. Input (Abstractive Summarization, Gigaword, ROUGE-1). List has Summarization, Gigaword, ROGUE-1 (misspelled ROGUE not ROUGE) and task Summarization not Abstractive Summarization. No exact match. Output tuple unchanged. Need only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 95,
+    "total_tokens": 650,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

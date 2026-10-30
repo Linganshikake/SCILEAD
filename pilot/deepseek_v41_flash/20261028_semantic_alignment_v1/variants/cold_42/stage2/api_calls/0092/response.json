@@ -1,0 +1,32 @@
+{
+  "id": "98ae9012-0eed-4ecc-87f6-da7e428de304",
+  "object": "chat.completion",
+  "created": 1793197345,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, PubMed, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, PubMed, ROUGE-2 F1). Item list has summarization candidates: Gigaword ROGUE-L/1/2, CNN/DailyMail ROGUE variants, XSum variants. No PubMed. Metric \"ROUGE-2 F1\" likely variant but dataset PubMed absent. No candidate matches. Return original input verbatim. Need exact. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 107,
+    "total_tokens": 878,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

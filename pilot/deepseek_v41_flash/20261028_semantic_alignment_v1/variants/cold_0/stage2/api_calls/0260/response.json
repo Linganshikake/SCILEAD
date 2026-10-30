@@ -1,0 +1,32 @@
+{
+  "id": "bf7ac8f6-299a-4071-b589-e2a6d8550a22",
+  "object": "chat.completion",
+  "created": 1793197592,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need match semantic. Input (Abstractive Summarization, XSum, ROUGE-L F1). Candidate list includes (Summarization, XSum, ROGUE-L). Need determine match. Task: Abstractive Summarization vs Summarization. Dataset XSum same. Metric ROUGE-L F1 vs ROGUE-L likely typo. Candidate has ROGUE-L. Does it match? We need semantic matching. Summarization broad, abstractive specific; same underlying benchmark XSum. Metric ROUGE-L vs ROGUE-L: ROGUE typo of ROUGE. \"ROUGE-L F1\" maybe same as ROUGE-L (F1 measure). Candidate (Summarization, XSum, ROGUE-L). Should return listed tuple verbatim if clear semantic match. Need check other XSum candidates: ROGUE-2, ROGUE-1, ROGUE-L. Input metric ROUGE-L F1 maps to ROGUE-L. Yes. Return exact listed tuple: (Summarization, XSum, ROGUE-L). Only output tuple. Ensure exact spelling \"ROGUE-L\" with curly? Candidate: (Summarization, XSum, ROGUE-L). Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 276,
+    "total_tokens": 1049,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 263
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

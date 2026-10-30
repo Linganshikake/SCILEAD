@@ -1,0 +1,32 @@
+{
+  "id": "f89f1936-bada-4cb1-b71f-e17c521fbc5c",
+  "object": "chat.completion",
+  "created": 1793194374,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Part-of-Speech Tagging",
+        "reasoning_content": "We need answer. Need match item list. Input \"Part-of-Speech (POS) Tagging\" vs list has \"Part-of-Speech Tagging\". Is it match? The instruction if input matches one item return matched item else output entity unchanged. Need decide matching semantics. Exact? likely need fuzzy/alias? Input differs by \"(POS) \". Item list contains Part-of-Speech Tagging. We should return matched item in list: \"Part-of-Speech Tagging\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 315,
+    "completion_tokens": 108,
+    "total_tokens": 423,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 187
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

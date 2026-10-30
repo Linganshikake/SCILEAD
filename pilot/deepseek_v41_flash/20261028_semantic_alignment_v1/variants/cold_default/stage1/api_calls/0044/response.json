@@ -1,0 +1,32 @@
+{
+  "id": "9eeae44b-8d6d-4704-b8c5-779fa7e000d2",
+  "object": "chat.completion",
+  "created": 1793196652,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-2",
+        "reasoning_content": "We need answer only. Need determine if ROUGE-2 matches item list candidates. List has ROUGE-1, Accuracy, F1, EM. ROUGE-2 is distinct metric variant not same as ROUGE-1. No match. Output original input exactly ROUGE-2."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 319,
+    "completion_tokens": 70,
+    "total_tokens": 389,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 191
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

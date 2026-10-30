@@ -1,0 +1,32 @@
+{
+  "id": "2e72b403-e7b1-4b81-ab2a-6f2ba2387531",
+  "object": "chat.completion",
+  "created": 1793194188,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-L",
+        "reasoning_content": "We need answer. Need follow instruction: if input matches item list exactly, output matched item. ROUGE-L not in list (ROUGE-1, Accuracy, ROUGE-2, F1, EM, F1 score). Else output entity without changing. So ROUGE-L. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 132,
+    "completion_tokens": 70,
+    "total_tokens": 202,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 132
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

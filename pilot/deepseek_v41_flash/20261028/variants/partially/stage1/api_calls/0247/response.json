@@ -1,0 +1,32 @@
+{
+  "id": "3153b9a0-b62d-44ff-9d82-6f95ff480818",
+  "object": "chat.completion",
+  "created": 1793194606,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT’14 EN-DE",
+        "reasoning_content": "We need answer per instruction. Need match input entity to item if matches one. Input \"WMT En-De newstest2014\". List has 'WMT’14 EN-DE'. Need determine if matches. It likely refers same? But instruction exact matches one of items? \"matches one of the items in list\" could consider semantic? We need output matched item in list if input entity matches one. Input is variant of WMT’14 EN-DE. We should output matched item exactly 'WMT’14 EN-DE'. Need no explanation. Ensure apostrophe curly. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 130,
+    "total_tokens": 900,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 122
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 642
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

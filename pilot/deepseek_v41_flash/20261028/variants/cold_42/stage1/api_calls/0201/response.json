@@ -1,0 +1,32 @@
+{
+  "id": "3d60a73c-2fbf-4050-bd75-93124e0bea44",
+  "object": "chat.completion",
+  "created": 1793194412,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WNLI",
+        "reasoning_content": "We need answer only matched or input unchanged. WNLI not in list? Check list has GLUE MNLI, GLUE QQP, QNLI, RTE, CoLA, SST etc. No WNLI. Output WNLI."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 609,
+    "completion_tokens": 55,
+    "total_tokens": 664,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 225
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

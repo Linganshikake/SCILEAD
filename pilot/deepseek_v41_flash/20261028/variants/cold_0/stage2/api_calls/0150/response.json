@@ -1,0 +1,32 @@
+{
+  "id": "48a73a64-f9ea-419a-b7ec-a813ad3f2686",
+  "object": "chat.completion",
+  "created": 1793194738,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Fine-Grained NER (FGN), OntoNotes, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly. Items are tuples with task, dataset, metric. Input (Fine-Grained NER (FGN), OntoNotes, F1). List contains NER with Ontonotes v5 - English, F1 but not Fine-Grained NER. No exact match. Output tuple unchanged. Need exact formatting. (Fine-Grained NER (FGN), OntoNotes, F1)"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 113,
+    "total_tokens": 669,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

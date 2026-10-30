@@ -1,0 +1,32 @@
+{
+  "id": "08fac367-ce44-400c-842d-08701b56f5b2",
+  "object": "chat.completion",
+  "created": 1793193415,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer only matched item. Input ROUGE-2 but list has \"ROGUE-2\" (misspelled ROGUE). Need match? They ask match input with item. Exact? Input ROUGE-2. List contains ROGUE-2, which likely intended ROUGE-2 but typo. We need decide. They say if none matches say None. Since list has ROGUE-2 not ROUGE-2. But matching semantically likely match to ROGUE-2. They want only matched item. Need output item exactly from list maybe 'ROGUE-2'. Let's consider: The list includes 'ROGUE-1', 'ROGUE-L', 'ROGUE-2'. These are likely typos for ROUGE. Input ROUGE-2 should match ROGUE-2. So answer ROGUE-2. No explanations."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 197,
+    "total_tokens": 456,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 191
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "8ed7876a-b87f-4317-8074-6a463e3ccb02",
+  "object": "chat.completion",
+  "created": 1793196774,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer only matched item. Input ROUGE-1. List has ROGUE-1 (misspelled) not ROUGE-1. We need determine if matches? Exact? The item list contains 'ROGUE-1' (with G? Actually ROGUE-1, likely typo for ROUGE-1). Input ROUGE-1. We must match with one item. Since ROGUE-1 is clearly intended same metric but misspelled. The instruction says match input with one item in list. If none matches say None. Does \"ROUGE-1\" match \"ROGUE-1\"? They differ by transposition? ROUGE vs ROGUE. It may be a typo in list. We should likely map to 'ROGUE-1' because it's intended. Answer only item from list. So output 'ROGUE-1'."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 197,
+    "total_tokens": 456,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 191
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

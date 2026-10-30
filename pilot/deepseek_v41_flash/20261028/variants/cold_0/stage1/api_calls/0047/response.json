@@ -1,0 +1,32 @@
+{
+  "id": "4a8dfc5c-f2ad-4399-892c-fc4cc3917057",
+  "object": "chat.completion",
+  "created": 1793194193,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MNLI-mm",
+        "reasoning_content": "We need answer only. Input MNLI-mm not in list exactly? List has MNLI-m. Need output entity unchanged if no match. Need determine similarity? matches one of items? \"MNLI-mm\" not equal \"MNLI-m\". Output MNLI-mm."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 200,
+    "completion_tokens": 58,
+    "total_tokens": 258,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 200
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

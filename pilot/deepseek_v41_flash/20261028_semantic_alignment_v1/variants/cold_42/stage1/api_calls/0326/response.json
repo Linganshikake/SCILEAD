@@ -1,0 +1,32 @@
+{
+  "id": "3cc22777-558f-4710-a0fa-9af80300c70e",
+  "object": "chat.completion",
+  "created": 1793197102,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE MNLI",
+        "reasoning_content": "We need answer only selected item or unchanged. Need match MNLI. Item list has MNLI-m, MNLI-mm, GLUE MNLI. Input MNLI ambiguous between m/mm? The list does not have plain MNLI. Semantic matching requirement preserve version/split. \"MNLI\" is dataset, could match GLUE MNLI? Need decide. Candidate 'GLUE MNLI' denotes GLUE task MNLI. Input MNLI may match that? But also MNLI-m and MNLI-mm are splits. Ambiguous abbreviation/missing condition. If one clear semantic match? GLUE MNLI is the dataset task; MNLI alone maybe exact standard task in GLUE? The list includes GLUE MNLI, MNLI-m, MNLI-mm. Input \"MNLI\" could denote the task or dataset, but because candidates include variants, ambiguous? They say do not guess ambiguous abbreviation or missing experimental condition. MNLI vs MNLI-m/mm: input not specifying matched/mismatched? However GLUE MNLI is standard task. A more specific wording may match existing standard task when both denote same underlying task. \"MNLI\" likely equals GLUE MNLI (task). But \"GLUE MNLI\" includes benchmark and task. Does input match exactly? Semantically, yes. But existence of MNLI-m/mm means input MNLI could be parent not those. Since there's candidate GLUE MNLI, and input is common name of that task. Should output GLUE MNLI. Need be careful: The item list has \"GLUE MNLI\", input \"MNLI\"; likely expected match to GLUE MNLI. If ambiguity with m/mm, m/mm are variants and not plain. \"MNLI\" is the underlying task, GLUE MNLI candidate. Output GLUE MNLI."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 372,
+    "total_tokens": 1162,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 367
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

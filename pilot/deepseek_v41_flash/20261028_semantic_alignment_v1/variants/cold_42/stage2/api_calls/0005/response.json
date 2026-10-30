@@ -1,0 +1,32 @@
+{
+  "id": "31e5b897-169c-4b93-a1b4-47fa992cea62",
+  "object": "chat.completion",
+  "created": 1793197192,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NYT, ROUGE-2 Recall)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match candidates. Input (Abstractive Summarization, NYT, ROUGE-2 Recall). List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE variants. NYT not present. Task abstractive summarization broader but dataset NYT no candidate. Metric ROUGE-2 Recall maybe candidate summarization with ROGUE-2? But dataset mismatch NYT. No match. Return original tuple verbatim. Need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 123,
+    "total_tokens": 896,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 106
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

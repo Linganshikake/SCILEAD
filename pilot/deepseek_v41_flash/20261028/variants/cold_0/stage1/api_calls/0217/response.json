@@ -1,0 +1,32 @@
+{
+  "id": "7ffba0bf-3986-4399-9884-cdd6fae574e9",
+  "object": "chat.completion",
+  "created": 1793194415,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "SwDA",
+        "reasoning_content": "We need answer only matched item if matches list. Input SWDA. List has 'SwDA' (case different). Should match? \"matches one of items\" likely exact? Need decide. Entity SWDA vs item SwDA. Case-insensitive? Typically tasks matching dataset names perhaps exact string? Input SWDA, list has SwDA. Could consider matched due case-insensitive? Need infer instruction: \"If input entity matches one of the items in list, your answer will be matched item in list. Else output entity without changing it.\" It says matches, not exact. In such entity linking tasks, capitalization may differ. SWDA is acronym, list has SwDA. Likely should output matched item 'SwDA'. Need only answer.\n\n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 655,
+    "completion_tokens": 153,
+    "total_tokens": 808,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 150
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 143
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

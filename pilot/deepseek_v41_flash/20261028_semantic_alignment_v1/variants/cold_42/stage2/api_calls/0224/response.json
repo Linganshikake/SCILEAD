@@ -1,0 +1,32 @@
+{
+  "id": "a5eaa9c7-66b4-4342-8f4b-eb241097fc2c",
+  "object": "chat.completion",
+  "created": 1793198144,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent Detection, Food, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine match. Input (Intent Detection, Food, Accuracy). List has Intent Detection and Slot Filling, ATIS Accuracy/F1, SNIPS F1/Accuracy. Dataset \"Food\" no match. Semantic? Food maybe ATIS? No, ATIS airline travel reservation. No. Return original. Ensure exact. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 81,
+    "total_tokens": 846,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 253
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

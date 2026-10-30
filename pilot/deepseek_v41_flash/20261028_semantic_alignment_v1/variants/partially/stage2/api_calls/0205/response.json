@@ -1,0 +1,32 @@
+{
+  "id": "1b6d0fd4-1cd8-4ab4-be6c-de27b15c90ea",
+  "object": "chat.completion",
+  "created": 1793197781,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Newsroom, BERTScore)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input: (Abstractive Summarization, Newsroom, BERTScore). List has summarization tasks on datasets Gigaword, CNN/DailyMail, XSum, metrics ROGUE variants. No Newsroom, no BERTScore. Task Abstractive Summarization similar to Summarization but dataset Newsroom not present. No match. Return original verbatim. Need exact input tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 106,
+    "total_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

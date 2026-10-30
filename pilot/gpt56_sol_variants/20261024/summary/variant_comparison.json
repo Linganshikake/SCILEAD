@@ -1,0 +1,1903 @@
+{
+  "status": "COMPLETE",
+  "completion_scope": "Four variant evaluations and GPT56 Fully reference; excludes Fully CS and does not certify API replay.",
+  "branches": {
+    "partially": {
+      "status": "COMPLETE",
+      "stages": {
+        "stage1": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.47360294744015674,
+              "Recall": 0.5245478036175711,
+              "F1": 0.4977752821470841
+            },
+            "Dataset IIM": {
+              "Precision": 0.5998590556730091,
+              "Recall": 0.6084741296095606,
+              "F1": 0.6041358811207223
+            },
+            "Metric IIM": {
+              "Precision": 0.9663003663003663,
+              "Recall": 0.9767441860465116,
+              "F1": 0.9714942085280629
+            },
+            "Result IIM": {
+              "Precision": 0.7774714711373218,
+              "Recall": 0.8366904413416041,
+              "F1": 0.8059946691684621
+            },
+            "TDM Exact Match": {
+              "Precision": 0.30930081546360616,
+              "Recall": 0.3104295317086015,
+              "F1": 0.30986414571941345
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.24831303063861204,
+              "Recall": 0.284578444811003,
+              "F1": 0.2652117338744125
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\stage1\\metrics_with_f1.json",
+            "sha256": "6ec26d4aa68ccf0f1470501aa445968609cf838337dc67bfbce737dcf93d6585"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 5
+            },
+            "events": 1340,
+            "api_calls": 532,
+            "seconds_this_attempt": 105.03099999998813,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage1\\normalized_output.json",
+            "output_sha256": "054d305c0d0427ec5b52a3ac0ac1dbc8d364273d38863e9cbec205ecc3f9f6ac",
+            "label_additions": 63
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.4518900757884846,
+            "Recall": 0.516922999481139,
+            "F1": 0.48222382495680755
+          }
+        },
+        "stage2": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.617013800153335,
+              "Recall": 0.7919896640826873,
+              "F1": 0.6936371197394945
+            },
+            "Dataset IIM": {
+              "Precision": 0.7486962649753349,
+              "Recall": 0.7945206412374675,
+              "F1": 0.7709280972045964
+            },
+            "Metric IIM": {
+              "Precision": 0.9663003663003663,
+              "Recall": 0.9767441860465116,
+              "F1": 0.9714942085280629
+            },
+            "Result IIM": {
+              "Precision": 0.7774714711373218,
+              "Recall": 0.8366904413416041,
+              "F1": 0.8059946691684621
+            },
+            "TDM Exact Match": {
+              "Precision": 0.46498556998557,
+              "Recall": 0.4706362500548547,
+              "F1": 0.46779384640296795
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.3807419712070874,
+              "Recall": 0.4202373595396851,
+              "F1": 0.39951592882384984
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\stage2\\metrics_with_f1.json",
+            "sha256": "87b4c0105f689826ec696289fd7b7e67d233e0650d18f335e73b47cfb9b102e4"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 5
+            },
+            "events": 335,
+            "api_calls": 286,
+            "seconds_this_attempt": 560.4060000000027,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\stage2\\leaderboard_normalized_output.json",
+            "output_sha256": "8345d0a04bee4a641d95701c94ca168a7abeebec844c0c67caef48380fd7f7fc",
+            "changed_tdms": 25
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.4518900757884846,
+            "Recall": 0.516922999481139,
+            "F1": 0.48222382495680755
+          }
+        }
+      },
+      "leaderboards": {
+        "all27": {
+          "gold_leaderboards": 27,
+          "nonempty_valid_result_boards": 19,
+          "tdm_hit_boards": 19,
+          "LR_exact_tdm_hit": 0.7037037037037037,
+          "LR_nonempty_finite_result": 0.7037037037037037,
+          "PC_official": 0.4756172839506172,
+          "RC_official": 0.4194444444444445,
+          "RBO_official_value_rankings": 0.35395061728395055,
+          "AO_paper_id_macro_all_gold_boards": 0.4170473251028806,
+          "AO_nonempty_only_DIAGNOSTIC": 0.5926461988304093,
+          "supplementary_joint_paper_result_coverage": 0.4194444444444445
+        },
+        "masked10": {
+          "gold_leaderboards": 10,
+          "nonempty_valid_result_boards": 4,
+          "tdm_hit_boards": 4,
+          "LR_exact_tdm_hit": 0.4,
+          "LR_nonempty_finite_result": 0.4,
+          "PC_official": 0.33999999999999997,
+          "RC_official": 0.29,
+          "RBO_official_value_rankings": 0.3333333333333333,
+          "AO_paper_id_macro_all_gold_boards": 0.36666666666666664,
+          "AO_nonempty_only_DIAGNOSTIC": 0.9166666666666666,
+          "supplementary_joint_paper_result_coverage": 0.29
+        }
+      },
+      "leaderboard_sources": {
+        "all27": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "780b1086a587216328bfc9a68062921d8583df4fc7c033b979e6685c10adafb5"
+        },
+        "masked10": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\partially\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "8b0ab6df923fb8f269462b3d183194a9031f016ea958623f9d990f93ebb3c584"
+        }
+      },
+      "usage": {
+        "stage1": {
+          "prompt_tokens": 176854,
+          "completion_tokens": 9371,
+          "total_tokens": 186225,
+          "attempts": 533,
+          "successful_responses": 532,
+          "failed_or_unknown": 1,
+          "unknown_usage_attempts": 1,
+          "request_seconds": 1056.9209999999584,
+          "mock": false,
+          "automatic_retries": 0,
+          "authorized_additional_attempts": 1,
+          "logical_completed": 532
+        },
+        "stage2": {
+          "prompt_tokens": 151823,
+          "completion_tokens": 7557,
+          "total_tokens": 159380,
+          "attempts": 286,
+          "successful_responses": 286,
+          "failed_or_unknown": 0,
+          "unknown_usage_attempts": 0,
+          "request_seconds": 513.5669999998354,
+          "mock": false,
+          "automatic_retries": 0,
+          "authorized_additional_attempts": 0,
+          "logical_completed": 286
+        }
+      },
+      "normalization_progress": {
+        "stage1": {
+          "status": "COMPLETE",
+          "api_calls": 532
+        },
+        "stage2": {
+          "status": "COMPLETE",
+          "api_calls": 286
+        }
+      },
+      "issues": []
+    },
+    "cold_default": {
+      "status": "COMPLETE",
+      "stages": {
+        "stage1": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.16882613510520486,
+              "Recall": 0.1763565891472868,
+              "F1": 0.1725092205037143
+            },
+            "Dataset IIM": {
+              "Precision": 0.348747564564938,
+              "Recall": 0.36549728771000994,
+              "F1": 0.3569260276443361
+            },
+            "Metric IIM": {
+              "Precision": 0.3127554615926709,
+              "Recall": 0.3310664787408974,
+              "F1": 0.3216505772475642
+            },
+            "Result IIM": {
+              "Precision": 0.7774714711373218,
+              "Recall": 0.8366904413416041,
+              "F1": 0.8059946691684621
+            },
+            "TDM Exact Match": {
+              "Precision": 0.007751937984496124,
+              "Recall": 0.007751937984496124,
+              "F1": 0.007751937984496124
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.007751937984496124,
+              "Recall": 0.007751937984496124,
+              "F1": 0.007751937984496124
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_default\\evaluation\\stage1\\metrics_with_f1.json",
+            "sha256": "95b1bf7d3f104231dc21249f5a12ed1fffe2a720e6eefe5f2493469bb5f2fe4c"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 0
+            },
+            "events": 1340,
+            "api_calls": 378,
+            "seconds_this_attempt": 443.3899999999994,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_default\\stage1\\normalized_output.json",
+            "output_sha256": "39cef0cff0415a2ab2e1e7619ee3e28f452750874a3fc9347f922503eb72f55c",
+            "label_additions": 223
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.4518900757884846,
+            "Recall": 0.516922999481139,
+            "F1": 0.48222382495680755
+          }
+        },
+        "stage2": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.49966777408637886,
+              "Recall": 0.7719638242894057,
+              "F1": 0.606662253832904
+            },
+            "Dataset IIM": {
+              "Precision": 0.6316933009990466,
+              "Recall": 0.6949546520510954,
+              "F1": 0.6618156643433315
+            },
+            "Metric IIM": {
+              "Precision": 0.5155424678680491,
+              "Recall": 0.6690157387831807,
+              "F1": 0.5823369811263279
+            },
+            "Result IIM": {
+              "Precision": 0.7774714711373218,
+              "Recall": 0.8366904413416041,
+              "F1": 0.8059946691684621
+            },
+            "TDM Exact Match": {
+              "Precision": 0.3526174933457676,
+              "Recall": 0.3697014226083994,
+              "F1": 0.3609574276601389
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.27640564589768996,
+              "Recall": 0.29161058579663224,
+              "F1": 0.2838046091651066
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_default\\evaluation\\stage2\\metrics_with_f1.json",
+            "sha256": "1f27e9812d730f1e324521e1aa3a262605cd24259cf58f3aae8a5b5c70ca917a"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 0
+            },
+            "events": 335,
+            "api_calls": 334,
+            "seconds_this_attempt": 636.0,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_default\\stage2\\leaderboard_normalized_output.json",
+            "output_sha256": "9597b6b13389d60284509cecff4ec7a95b1c38f454724ac1bf9128e0429a3000",
+            "changed_tdms": 76
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.4518900757884846,
+            "Recall": 0.516922999481139,
+            "F1": 0.48222382495680755
+          }
+        }
+      },
+      "leaderboards": {
+        "all27": {
+          "gold_leaderboards": 27,
+          "nonempty_valid_result_boards": 24,
+          "tdm_hit_boards": 24,
+          "LR_exact_tdm_hit": 0.8888888888888888,
+          "LR_nonempty_finite_result": 0.8888888888888888,
+          "PC_official": 0.5549823633156966,
+          "RC_official": 0.4432539682539683,
+          "RBO_official_value_rankings": 0.5199897119341563,
+          "AO_paper_id_macro_all_gold_boards": 0.6235699588477366,
+          "AO_nonempty_only_DIAGNOSTIC": 0.7015162037037036,
+          "supplementary_joint_paper_result_coverage": 0.433994708994709
+        },
+        "masked10": {
+          "gold_leaderboards": 10,
+          "nonempty_valid_result_boards": 9,
+          "tdm_hit_boards": 9,
+          "LR_exact_tdm_hit": 0.9,
+          "LR_nonempty_finite_result": 0.9,
+          "PC_official": 0.6092857142857142,
+          "RC_official": 0.49428571428571433,
+          "RBO_official_value_rankings": 0.5166666666666667,
+          "AO_paper_id_macro_all_gold_boards": 0.5888888888888889,
+          "AO_nonempty_only_DIAGNOSTIC": 0.654320987654321,
+          "supplementary_joint_paper_result_coverage": 0.49428571428571433
+        }
+      },
+      "leaderboard_sources": {
+        "all27": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_default\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "c5c1fea6587259b20483aaee39f1349a94bd3eea1374c407e71ac232deba8979"
+        },
+        "masked10": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_default\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "97355be4aa21dafe6d2d6f411b4578ff19e45d7bbd371eaebc2ef78e2d6b9886"
+        }
+      },
+      "usage": {
+        "stage1": {
+          "prompt_tokens": 130026,
+          "completion_tokens": 7424,
+          "total_tokens": 137450,
+          "attempts": 378,
+          "successful_responses": 378,
+          "failed_or_unknown": 0,
+          "unknown_usage_attempts": 0,
+          "request_seconds": 735.2359999999608,
+          "mock": false,
+          "automatic_retries": 0
+        },
+        "stage2": {
+          "prompt_tokens": 177440,
+          "completion_tokens": 11134,
+          "total_tokens": 188574,
+          "attempts": 334,
+          "successful_responses": 334,
+          "failed_or_unknown": 0,
+          "unknown_usage_attempts": 0,
+          "request_seconds": 602.8669999999838,
+          "mock": false,
+          "automatic_retries": 0
+        }
+      },
+      "normalization_progress": {
+        "stage1": {
+          "status": "COMPLETE",
+          "api_calls": 378
+        },
+        "stage2": {
+          "status": "COMPLETE",
+          "api_calls": 334
+        }
+      },
+      "issues": []
+    },
+    "cold_0": {
+      "status": "COMPLETE",
+      "stages": {
+        "stage1": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.2327343199436223,
+              "Recall": 0.22739018087855295,
+              "F1": 0.2300312155256427
+            },
+            "Dataset IIM": {
+              "Precision": 0.3390562602771905,
+              "Recall": 0.3684218824950699,
+              "F1": 0.35312962516008556
+            },
+            "Metric IIM": {
+              "Precision": 0.3073567904963254,
+              "Recall": 0.3186633779657036,
+              "F1": 0.3129079797568753
+            },
+            "Result IIM": {
+              "Precision": 0.777471471137322,
+              "Recall": 0.836690441341604,
+              "F1": 0.8059946691684621
+            },
+            "TDM Exact Match": {
+              "Precision": 0.011627906976744186,
+              "Recall": 0.011627906976744186,
+              "F1": 0.011627906976744184
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.011627906976744186,
+              "Recall": 0.011627906976744186,
+              "F1": 0.011627906976744184
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_0\\evaluation\\stage1\\metrics_with_f1.json",
+            "sha256": "e2d47bdcb20fa92641eb7646a5098ddddcb8769882dcb901bbd80214fbec58f0"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 0
+            },
+            "events": 1340,
+            "api_calls": 406,
+            "seconds_this_attempt": 613.3600000000006,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_0\\stage1\\normalized_output.json",
+            "output_sha256": "2d1e9889f46804ec1bf13c5c048d2f71066171b304b6d4cd10e68ef6f4cbe037",
+            "label_additions": 208
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.4518900757884846,
+            "Recall": 0.516922999481139,
+            "F1": 0.48222382495680755
+          }
+        },
+        "stage2": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.46662136313299113,
+              "Recall": 0.710594315245478,
+              "F1": 0.5633266598540807
+            },
+            "Dataset IIM": {
+              "Precision": 0.5987461827578108,
+              "Recall": 0.667702059682224,
+              "F1": 0.6313468581771734
+            },
+            "Metric IIM": {
+              "Precision": 0.5058634024434299,
+              "Recall": 0.6657387831806437,
+              "F1": 0.5748928947566304
+            },
+            "Result IIM": {
+              "Precision": 0.777471471137322,
+              "Recall": 0.836690441341604,
+              "F1": 0.8059946691684621
+            },
+            "TDM Exact Match": {
+              "Precision": 0.3330963066581182,
+              "Recall": 0.34596643666411103,
+              "F1": 0.33940940925926
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.24860018262711037,
+              "Recall": 0.2616641110827158,
+              "F1": 0.2549649136888881
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_0\\evaluation\\stage2\\metrics_with_f1.json",
+            "sha256": "3e0690e9ab58db2e54b3e5ac188505af7f01c72c92114242b6811abc9b1ffc3e"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 0
+            },
+            "events": 335,
+            "api_calls": 335,
+            "seconds_this_attempt": 695.7039999999979,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_0\\stage2\\leaderboard_normalized_output.json",
+            "output_sha256": "8baef1136fe165a2fab69c9797cd1bfa787a918b6d08dea32faf36c9e12edbd7",
+            "changed_tdms": 75
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.4518900757884846,
+            "Recall": 0.516922999481139,
+            "F1": 0.48222382495680755
+          }
+        }
+      },
+      "leaderboards": {
+        "all27": {
+          "gold_leaderboards": 27,
+          "nonempty_valid_result_boards": 24,
+          "tdm_hit_boards": 24,
+          "LR_exact_tdm_hit": 0.8888888888888888,
+          "LR_nonempty_finite_result": 0.8888888888888888,
+          "PC_official": 0.5494268077601411,
+          "RC_official": 0.41671075837742505,
+          "RBO_official_value_rankings": 0.4795987654320988,
+          "AO_paper_id_macro_all_gold_boards": 0.6038168724279834,
+          "AO_nonempty_only_DIAGNOSTIC": 0.6792939814814813,
+          "supplementary_joint_paper_result_coverage": 0.4074514991181658
+        },
+        "masked10": {
+          "gold_leaderboards": 10,
+          "nonempty_valid_result_boards": 10,
+          "tdm_hit_boards": 10,
+          "LR_exact_tdm_hit": 1.0,
+          "LR_nonempty_finite_result": 1.0,
+          "PC_official": 0.7092857142857143,
+          "RC_official": 0.5542857142857143,
+          "RBO_official_value_rankings": 0.6458333333333333,
+          "AO_paper_id_macro_all_gold_boards": 0.7395833333333334,
+          "AO_nonempty_only_DIAGNOSTIC": 0.7395833333333334,
+          "supplementary_joint_paper_result_coverage": 0.5542857142857143
+        }
+      },
+      "leaderboard_sources": {
+        "all27": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_0\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "b1400d1c3a1a96fd28ecd4a7e371aa33ba538c4644041d51ccbd62ade872ccf4"
+        },
+        "masked10": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_0\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "1161b0d7f05327cbd72bf008c7a417d0fdf0415f2f327a7bbb0275e223680b6c"
+        }
+      },
+      "usage": {
+        "stage1": {
+          "prompt_tokens": 128782,
+          "completion_tokens": 6953,
+          "total_tokens": 135735,
+          "attempts": 407,
+          "successful_responses": 406,
+          "failed_or_unknown": 1,
+          "unknown_usage_attempts": 1,
+          "request_seconds": 904.2049999999435,
+          "mock": false,
+          "automatic_retries": 0,
+          "authorized_additional_attempts": 1,
+          "logical_completed": 406
+        },
+        "stage2": {
+          "prompt_tokens": 177878,
+          "completion_tokens": 11140,
+          "total_tokens": 189018,
+          "attempts": 335,
+          "successful_responses": 335,
+          "failed_or_unknown": 0,
+          "unknown_usage_attempts": 0,
+          "request_seconds": 637.2559999998775,
+          "mock": false,
+          "automatic_retries": 0,
+          "authorized_additional_attempts": 0,
+          "logical_completed": 335
+        }
+      },
+      "normalization_progress": {
+        "stage1": {
+          "status": "COMPLETE",
+          "api_calls": 406
+        },
+        "stage2": {
+          "status": "COMPLETE",
+          "api_calls": 335
+        }
+      },
+      "issues": []
+    },
+    "cold_42": {
+      "status": "COMPLETE",
+      "stages": {
+        "stage1": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.11240310077519379,
+              "Recall": 0.11627906976744184,
+              "F1": 0.11430823807646827
+            },
+            "Dataset IIM": {
+              "Precision": 0.430918107200597,
+              "Recall": 0.4399158923611728,
+              "F1": 0.43537051552680395
+            },
+            "Metric IIM": {
+              "Precision": 0.3402408637873754,
+              "Recall": 0.36225041108762035,
+              "F1": 0.35090085011437566
+            },
+            "Result IIM": {
+              "Precision": 0.777471471137322,
+              "Recall": 0.8366904413416041,
+              "F1": 0.8059946691684623
+            },
+            "TDM Exact Match": {
+              "Precision": 0.020671834625322995,
+              "Recall": 0.023255813953488372,
+              "F1": 0.02188782489740082
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.020671834625322995,
+              "Recall": 0.023255813953488372,
+              "F1": 0.02188782489740082
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_42\\evaluation\\stage1\\metrics_with_f1.json",
+            "sha256": "79df51f8ab77a23fc024447a683c898c001effc3a2d06cbab4f54bd08a4f5cd9"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 0
+            },
+            "events": 1340,
+            "api_calls": 445,
+            "seconds_this_attempt": 878.4839999999967,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_42\\stage1\\normalized_output.json",
+            "output_sha256": "db7165c6241387d53db5147434e2ea97fdd6c67232805ce21334d1658d5a795e",
+            "label_additions": 203
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.45189007578848467,
+            "Recall": 0.516922999481139,
+            "F1": 0.4822238249568076
+          }
+        },
+        "stage2": {
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.4935215946843854,
+              "Recall": 0.704780361757106,
+              "F1": 0.5805286825526232
+            },
+            "Dataset IIM": {
+              "Precision": 0.7504917506114497,
+              "Recall": 0.7917431348860898,
+              "F1": 0.7705657509408046
+            },
+            "Metric IIM": {
+              "Precision": 0.579395767431263,
+              "Recall": 0.7215644820295983,
+              "F1": 0.6427120382654833
+            },
+            "Result IIM": {
+              "Precision": 0.777471471137322,
+              "Recall": 0.8366904413416041,
+              "F1": 0.8059946691684623
+            },
+            "TDM Exact Match": {
+              "Precision": 0.42226263332750474,
+              "Recall": 0.4354974741021252,
+              "F1": 0.4287779499862711
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.35491937207359486,
+              "Recall": 0.36894225929109653,
+              "F1": 0.3617949876750344
+            }
+          },
+          "source": {
+            "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_42\\evaluation\\stage2\\metrics_with_f1.json",
+            "sha256": "23e21e48cf3e55bb331607ff0f20811d4924fc607ac9e066718064a4417c6cb3"
+          },
+          "normalization": {
+            "status": "COMPLETE",
+            "papers": 43,
+            "records": 335,
+            "null_fields": {
+              "Task": 0,
+              "Dataset": 0,
+              "Metric": 0
+            },
+            "events": 335,
+            "api_calls": 332,
+            "seconds_this_attempt": 271.125,
+            "output_path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_42\\stage2\\leaderboard_normalized_output.json",
+            "output_sha256": "e905ea466c812850600bcfa999a74d8d7516c1065ea9f00a348fbdba9ef73de5",
+            "changed_tdms": 86
+          },
+          "strict_result_auxiliary": {
+            "Precision": 0.45189007578848467,
+            "Recall": 0.516922999481139,
+            "F1": 0.4822238249568076
+          }
+        }
+      },
+      "leaderboards": {
+        "all27": {
+          "gold_leaderboards": 27,
+          "nonempty_valid_result_boards": 24,
+          "tdm_hit_boards": 24,
+          "LR_exact_tdm_hit": 0.8888888888888888,
+          "LR_nonempty_finite_result": 0.8888888888888888,
+          "PC_official": 0.614594356261023,
+          "RC_official": 0.5164021164021164,
+          "RBO_official_value_rankings": 0.4730644346300912,
+          "AO_paper_id_macro_all_gold_boards": 0.5620862424145252,
+          "AO_nonempty_only_DIAGNOSTIC": 0.6323470227163409,
+          "supplementary_joint_paper_result_coverage": 0.5071428571428571
+        },
+        "masked10": {
+          "gold_leaderboards": 10,
+          "nonempty_valid_result_boards": 8,
+          "tdm_hit_boards": 8,
+          "LR_exact_tdm_hit": 0.8,
+          "LR_nonempty_finite_result": 0.8,
+          "PC_official": 0.6485714285714286,
+          "RC_official": 0.5942857142857143,
+          "RBO_official_value_rankings": 0.6229961957234684,
+          "AO_paper_id_macro_all_gold_boards": 0.6753272989636626,
+          "AO_nonempty_only_DIAGNOSTIC": 0.8441591237045782,
+          "supplementary_joint_paper_result_coverage": 0.5942857142857143
+        }
+      },
+      "leaderboard_sources": {
+        "all27": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_42\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "e74bbad3cd11a9b8b71941d77735fa6ae87c27a9992eba937af2c1a602404d14"
+        },
+        "masked10": {
+          "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\cold_42\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+          "sha256": "813fba2bfdeeead01440aa4aefab48d3bd976734e77d667166adb0b900c2e2a9"
+        }
+      },
+      "usage": {
+        "stage1": {
+          "prompt_tokens": 144071,
+          "completion_tokens": 8917,
+          "total_tokens": 152988,
+          "attempts": 445,
+          "successful_responses": 445,
+          "failed_or_unknown": 0,
+          "unknown_usage_attempts": 0,
+          "request_seconds": 823.6719999999768,
+          "mock": false,
+          "automatic_retries": 0
+        },
+        "stage2": {
+          "prompt_tokens": 176200,
+          "completion_tokens": 11120,
+          "total_tokens": 187320,
+          "attempts": 334,
+          "successful_responses": 332,
+          "failed_or_unknown": 2,
+          "unknown_usage_attempts": 2,
+          "request_seconds": 831.6880000001402,
+          "mock": false,
+          "automatic_retries": 0,
+          "authorized_additional_attempts": 2,
+          "logical_completed": 332
+        }
+      },
+      "normalization_progress": {
+        "stage1": {
+          "status": "COMPLETE",
+          "api_calls": 445
+        },
+        "stage2": {
+          "status": "COMPLETE",
+          "api_calls": 332
+        }
+      },
+      "issues": []
+    }
+  },
+  "baselines": {
+    "gpt41": {
+      "partially": {
+        "stages": {
+          "stage1": {
+            "Task IIM": {
+              "Precision": 0.2681616832779623,
+              "Recall": 0.3135843484680694,
+              "F1": 0.28909971756036545
+            },
+            "Dataset IIM": {
+              "Precision": 0.47967884828349944,
+              "Recall": 0.48506389870958955,
+              "F1": 0.4823563442215477
+            },
+            "Metric IIM": {
+              "Precision": 0.8668327796234774,
+              "Recall": 0.82056612638008,
+              "F1": 0.8430651622022739
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947884,
+              "Recall": 0.7180752193542891,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.11399040236249537,
+              "Recall": 0.10791885117466513,
+              "F1": 0.11087156638863023
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.0860280546327058,
+              "Recall": 0.09223879479693434,
+              "F1": 0.08902523496021629
+            }
+          },
+          "stage2": {
+            "Task IIM": {
+              "Precision": 0.35227021040974527,
+              "Recall": 0.4860649686231081,
+              "F1": 0.40849105000509195
+            },
+            "Dataset IIM": {
+              "Precision": 0.5761904761904763,
+              "Recall": 0.5835135111126903,
+              "F1": 0.579828872734065
+            },
+            "Metric IIM": {
+              "Precision": 0.8668327796234774,
+              "Recall": 0.82056612638008,
+              "F1": 0.8430651622022739
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947884,
+              "Recall": 0.7180752193542891,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.2209772140004698,
+              "Recall": 0.21804335199684033,
+              "F1": 0.21950047987447024
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.16279992617201922,
+              "Recall": 0.1765235023374558,
+              "F1": 0.16938419651363157
+            }
+          }
+        },
+        "leaderboards": {
+          "all27": {
+            "gold_leaderboards": 27,
+            "nonempty_valid_result_boards": 11,
+            "tdm_hit_boards": 13,
+            "LR_exact_tdm_hit": 0.48148148148148145,
+            "LR_nonempty_finite_result": 0.4074074074074074,
+            "PC_official": 0.13328924162257497,
+            "RC_official": 0.08606701940035272,
+            "RBO_official_value_rankings": 0.11053497942386831,
+            "AO_paper_id_macro_all_gold_boards": 0.15580246913580248,
+            "AO_nonempty_only_DIAGNOSTIC": 0.38242424242424244,
+            "supplementary_joint_paper_result_coverage": 0.08606701940035272
+          },
+          "masked10": {
+            "gold_leaderboards": 10,
+            "nonempty_valid_result_boards": 4,
+            "tdm_hit_boards": 4,
+            "LR_exact_tdm_hit": 0.4,
+            "LR_nonempty_finite_result": 0.4,
+            "PC_official": 0.13904761904761903,
+            "RC_official": 0.11404761904761904,
+            "RBO_official_value_rankings": 0.12066666666666666,
+            "AO_paper_id_macro_all_gold_boards": 0.12066666666666666,
+            "AO_nonempty_only_DIAGNOSTIC": 0.30166666666666664,
+            "supplementary_joint_paper_result_coverage": 0.11404761904761904
+          }
+        }
+      },
+      "cold_default": {
+        "stages": {
+          "stage1": {
+            "Task IIM": {
+              "Precision": 0.22104097452934662,
+              "Recall": 0.25064599483204136,
+              "F1": 0.23491441807078783
+            },
+            "Dataset IIM": {
+              "Precision": 0.32596899224806203,
+              "Recall": 0.32159490646152755,
+              "F1": 0.32376717658371684
+            },
+            "Metric IIM": {
+              "Precision": 0.4936323366555924,
+              "Recall": 0.49083861874559537,
+              "F1": 0.49223151371378565
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947884,
+              "Recall": 0.7180752193542891,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.03677556293835364,
+              "Recall": 0.034515549050432776,
+              "F1": 0.035609733416857886
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.027639350313768917,
+              "Recall": 0.024825626569812617,
+              "F1": 0.026157037714681218
+            }
+          },
+          "stage2": {
+            "Task IIM": {
+              "Precision": 0.2617386489479513,
+              "Recall": 0.3204134366925065,
+              "F1": 0.28811914306689285
+            },
+            "Dataset IIM": {
+              "Precision": 0.39263565891472874,
+              "Recall": 0.3901995576243182,
+              "F1": 0.3914138178233531
+            },
+            "Metric IIM": {
+              "Precision": 0.5068106312292359,
+              "Recall": 0.5078928823114869,
+              "F1": 0.5073511796227566
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947884,
+              "Recall": 0.7180752193542891,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.11119416758951642,
+              "Recall": 0.10676361106593664,
+              "F1": 0.10893385805784085
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.09043004798818752,
+              "Recall": 0.0854457816085723,
+              "F1": 0.08786728851789577
+            }
+          }
+        },
+        "leaderboards": {
+          "all27": {
+            "gold_leaderboards": 27,
+            "nonempty_valid_result_boards": 12,
+            "tdm_hit_boards": 12,
+            "LR_exact_tdm_hit": 0.4444444444444444,
+            "LR_nonempty_finite_result": 0.4444444444444444,
+            "PC_official": 0.10903880070546736,
+            "RC_official": 0.08002645502645502,
+            "RBO_official_value_rankings": 0.10185185185185185,
+            "AO_paper_id_macro_all_gold_boards": 0.1388888888888889,
+            "AO_nonempty_only_DIAGNOSTIC": 0.3125,
+            "supplementary_joint_paper_result_coverage": 0.08002645502645502
+          },
+          "masked10": {
+            "gold_leaderboards": 10,
+            "nonempty_valid_result_boards": 2,
+            "tdm_hit_boards": 2,
+            "LR_exact_tdm_hit": 0.2,
+            "LR_nonempty_finite_result": 0.2,
+            "PC_official": 0.07857142857142857,
+            "RC_official": 0.05357142857142857,
+            "RBO_official_value_rankings": 0.075,
+            "AO_paper_id_macro_all_gold_boards": 0.075,
+            "AO_nonempty_only_DIAGNOSTIC": 0.375,
+            "supplementary_joint_paper_result_coverage": 0.05357142857142857
+          }
+        }
+      },
+      "cold_0": {
+        "stages": {
+          "stage1": {
+            "Task IIM": {
+              "Precision": 0.22685492801771873,
+              "Recall": 0.2739018087855297,
+              "F1": 0.24816830428535228
+            },
+            "Dataset IIM": {
+              "Precision": 0.3351605758582502,
+              "Recall": 0.3339980072367213,
+              "F1": 0.33457828164801356
+            },
+            "Metric IIM": {
+              "Precision": 0.5029346622369878,
+              "Recall": 0.49083861874559537,
+              "F1": 0.4968130249740777
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947884,
+              "Recall": 0.7180752193542891,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.036775562938353636,
+              "Recall": 0.034515549050432776,
+              "F1": 0.035609733416857886
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.027639350313768917,
+              "Recall": 0.024825626569812617,
+              "F1": 0.026157037714681218
+            }
+          },
+          "stage2": {
+            "Task IIM": {
+              "Precision": 0.26057585825027685,
+              "Recall": 0.3262273901808786,
+              "F1": 0.2897290783866665
+            },
+            "Dataset IIM": {
+              "Precision": 0.3904208194905868,
+              "Recall": 0.3878739762289693,
+              "F1": 0.3891432307943969
+            },
+            "Metric IIM": {
+              "Precision": 0.5057535487768046,
+              "Recall": 0.4960065774019261,
+              "F1": 0.5008326448260008
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947884,
+              "Recall": 0.7180752193542891,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.0930047988187523,
+              "Recall": 0.08767622558320232,
+              "F1": 0.09026193811490325
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.0722406792174234,
+              "Recall": 0.06635839612583799,
+              "F1": 0.06917471268891037
+            }
+          }
+        },
+        "leaderboards": {
+          "all27": {
+            "gold_leaderboards": 27,
+            "nonempty_valid_result_boards": 8,
+            "tdm_hit_boards": 8,
+            "LR_exact_tdm_hit": 0.2962962962962963,
+            "LR_nonempty_finite_result": 0.2962962962962963,
+            "PC_official": 0.07557319223985891,
+            "RC_official": 0.043915343915343914,
+            "RBO_official_value_rankings": 0.0817283950617284,
+            "AO_paper_id_macro_all_gold_boards": 0.11876543209876543,
+            "AO_nonempty_only_DIAGNOSTIC": 0.4008333333333333,
+            "supplementary_joint_paper_result_coverage": 0.043915343915343914
+          },
+          "masked10": {
+            "gold_leaderboards": 10,
+            "nonempty_valid_result_boards": 2,
+            "tdm_hit_boards": 2,
+            "LR_exact_tdm_hit": 0.2,
+            "LR_nonempty_finite_result": 0.2,
+            "PC_official": 0.08571428571428572,
+            "RC_official": 0.05357142857142857,
+            "RBO_official_value_rankings": 0.12066666666666666,
+            "AO_paper_id_macro_all_gold_boards": 0.12066666666666666,
+            "AO_nonempty_only_DIAGNOSTIC": 0.6033333333333333,
+            "supplementary_joint_paper_result_coverage": 0.05357142857142857
+          }
+        }
+      },
+      "cold_42": {
+        "stages": {
+          "stage1": {
+            "Task IIM": {
+              "Precision": 0.217718715393134,
+              "Recall": 0.24677002583979324,
+              "F1": 0.23133586782215698
+            },
+            "Dataset IIM": {
+              "Precision": 0.3178848283499447,
+              "Recall": 0.3138429684770314,
+              "F1": 0.3158509682944444
+            },
+            "Metric IIM": {
+              "Precision": 0.48975636766334424,
+              "Recall": 0.4908386187455955,
+              "F1": 0.4902968959816504
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947885,
+              "Recall": 0.718075219354289,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.030961609449981543,
+              "Recall": 0.027732603313998662,
+              "F1": 0.029258286035526458
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.027639350313768917,
+              "Recall": 0.024825626569812617,
+              "F1": 0.026157037714681218
+            }
+          },
+          "stage2": {
+            "Task IIM": {
+              "Precision": 0.26500553709856034,
+              "Recall": 0.3378552971576227,
+              "F1": 0.29702883119059165
+            },
+            "Dataset IIM": {
+              "Precision": 0.4078073089700997,
+              "Recall": 0.4018274646010624,
+              "F1": 0.40479530365634475
+            },
+            "Metric IIM": {
+              "Precision": 0.5192137320044296,
+              "Recall": 0.535799859055673,
+              "F1": 0.5273764182472888
+            },
+            "Result IIM": {
+              "Precision": 0.6901599046947885,
+              "Recall": 0.718075219354289,
+              "F1": 0.7038408806738071
+            },
+            "TDM Exact Match": {
+              "Precision": 0.13688630490956072,
+              "Recall": 0.12748242713358993,
+              "F1": 0.13201711304021488
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.12069029162052418,
+              "Recall": 0.11294754341265971,
+              "F1": 0.11669062033860732
+            }
+          }
+        },
+        "leaderboards": {
+          "all27": {
+            "gold_leaderboards": 27,
+            "nonempty_valid_result_boards": 12,
+            "tdm_hit_boards": 12,
+            "LR_exact_tdm_hit": 0.4444444444444444,
+            "LR_nonempty_finite_result": 0.4444444444444444,
+            "PC_official": 0.12786596119929453,
+            "RC_official": 0.11860670194003528,
+            "RBO_official_value_rankings": 0.07896090534979423,
+            "AO_paper_id_macro_all_gold_boards": 0.08307613168724279,
+            "AO_nonempty_only_DIAGNOSTIC": 0.18692129629629628,
+            "supplementary_joint_paper_result_coverage": 0.11860670194003528
+          },
+          "masked10": {
+            "gold_leaderboards": 10,
+            "nonempty_valid_result_boards": 5,
+            "tdm_hit_boards": 5,
+            "LR_exact_tdm_hit": 0.5,
+            "LR_nonempty_finite_result": 0.5,
+            "PC_official": 0.19023809523809523,
+            "RC_official": 0.16523809523809524,
+            "RBO_official_value_rankings": 0.11319444444444442,
+            "AO_paper_id_macro_all_gold_boards": 0.12430555555555553,
+            "AO_nonempty_only_DIAGNOSTIC": 0.24861111111111106,
+            "supplementary_joint_paper_result_coverage": 0.16523809523809524
+          }
+        }
+      }
+    },
+    "gpt56_fully": {
+      "tdm": {
+        "Task IIM": {
+          "Precision": 0.9819121447028424,
+          "Recall": 0.9857881136950903,
+          "F1": 0.9838463117639773
+        },
+        "Dataset IIM": {
+          "Precision": 0.9742310243336235,
+          "Recall": 0.9771380010778096,
+          "F1": 0.9756823474274731
+        },
+        "Metric IIM": {
+          "Precision": 0.9663003663003663,
+          "Recall": 0.9767441860465116,
+          "F1": 0.9714942085280629
+        },
+        "Result IIM": {
+          "Precision": 0.7774714711373218,
+          "Recall": 0.8366904413416041,
+          "F1": 0.8059946691684621
+        },
+        "TDM Exact Match": {
+          "Precision": 0.955268037228743,
+          "Recall": 0.9622984767170814,
+          "F1": 0.9587703690029148
+        },
+        "TDMR Exact Match": {
+          "Precision": 0.7510818713450292,
+          "Recall": 0.8106168250354298,
+          "F1": 0.779714554801744
+        }
+      },
+      "leaderboards": {
+        "all27": {
+          "gold_leaderboards": 27,
+          "nonempty_valid_result_boards": 27,
+          "tdm_hit_boards": 27,
+          "LR_exact_tdm_hit": 1.0,
+          "LR_nonempty_finite_result": 1.0,
+          "PC_official": 0.9873015873015873,
+          "RC_official": 0.8196649029982362,
+          "RBO_official_value_rankings": 0.7831065855073791,
+          "AO_paper_id_macro_all_gold_boards": 0.947806214704363,
+          "AO_nonempty_only_DIAGNOSTIC": 0.947806214704363,
+          "supplementary_joint_paper_result_coverage": 0.8029982363315696
+        },
+        "masked10": {
+          "gold_leaderboards": 10,
+          "nonempty_valid_result_boards": 10,
+          "tdm_hit_boards": 10,
+          "LR_exact_tdm_hit": 1.0,
+          "LR_nonempty_finite_result": 1.0,
+          "PC_official": 0.9657142857142856,
+          "RC_official": 0.7964285714285715,
+          "RBO_official_value_rankings": 0.840328823953824,
+          "AO_paper_id_macro_all_gold_boards": 0.9775490019240021,
+          "AO_nonempty_only_DIAGNOSTIC": 0.9775490019240021,
+          "supplementary_joint_paper_result_coverage": 0.7964285714285715
+        }
+      }
+    },
+    "sources": [
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_partially\\evaluation\\stage1\\metrics_with_f1.json",
+        "sha256": "730bd11ee6717941217908fb1e6c72b14ec61f694c869698ba19f047c3325938"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_partially\\evaluation\\stage2\\metrics_with_f1.json",
+        "sha256": "9a6e8bbaf86abc52fd76ea60d377a3e4bcf907db0715fde59900004a6dfca8f2"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_partially\\leaderboard_evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "d0a12ec676fb827a69a4c97d5d874d51868d0f55f887e51ecd48d191f3f9084c"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_partially\\leaderboard_evaluation\\masked_subset\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "873f88f96a443f04dfc222ce62c4bea6819c303090859440b9b9d2e350124e2b"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_default\\evaluation\\stage1\\metrics_with_f1.json",
+        "sha256": "364c5d09a43f39f0e6267cc630d70c632946150c28237969ffa6f7e98f825ffe"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_default\\evaluation\\stage2\\metrics_with_f1.json",
+        "sha256": "dca7ecd8dd825c8380884d29feb3fdbe61d2df234dcfeb4e336ad7c8a3de1345"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_default\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "c8fa07ffe88398e80258cf855a5b2ec9834a53f393400849da5f7ca97988daf2"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_default\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "812e88d3136a73457ab0b05ff7f61fe7d0ec25c47c84ad264122388b4ae20c4c"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_0\\evaluation\\stage1\\metrics_with_f1.json",
+        "sha256": "97f6e68d83df372f9010aecb67fc4c9612a0572ad04d98bbfe7675b1c114b713"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_0\\evaluation\\stage2\\metrics_with_f1.json",
+        "sha256": "79a78be35fa3a76af8c07a04ddc69d12ce23cc5b1be56857723ea4621faa8ff7"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_0\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "79befb6141702eb7b74c120c7012df3454f9796db9844f0e67f22a43994fc3b2"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_0\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "5679e04a5e9f9a62e4d24cdbbd3d054fcf2eb4a880637f0cb42f165cc432e7c2"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_42\\evaluation\\stage1\\metrics_with_f1.json",
+        "sha256": "4968b811cace740d8945f5688da533a57fc4e41b7587dfe2c8d0f0e61e894396"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_42\\evaluation\\stage2\\metrics_with_f1.json",
+        "sha256": "6cc9a89b8a1aff19461b6f593041dd8d75cadbfaf554e9650af9aa120b32cbb2"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_42\\evaluation\\all27\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "9e885af200c22f0d85597397950ad1ebdf3897ffcb6404c00039ba541cf75ea1"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\full43_cold_start\\order_42\\evaluation\\masked10\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "def60853a4865fe7471cc8ee66777fa0877fdee596d4a05bf2a4430e9b8a9e70"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_fully\\20261024_A2_result_type_recovery\\evaluation\\eval_results.json",
+        "sha256": "9a4ad2355a1cd71a3e5aeb52213c4a9ea05b58c50261785712d983b9c3578e53"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\evaluation_references\\gpt56_fully\\all27\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "3c7a908af2b5f90314b097fe4f80111f5e920f145ab45dd9139de55256e8c86f"
+      },
+      {
+        "path": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024\\evaluation_references\\gpt56_fully\\masked10\\paper_metrics\\leaderboard_metrics.json",
+        "sha256": "6a4a108ebd069b837c2fb829400daf88fafd63aa51c473dc9f8dd80846b40581"
+      }
+    ],
+    "issues": []
+  },
+  "cold_statistics": {
+    "status": "COMPLETE",
+    "n": 3,
+    "main_ddof": 1,
+    "additional_ddof": 0,
+    "author_ddof": "Unconfirmed",
+    "aggregation": "Per-run macro metrics, then mean and SD across three independent runs; no prediction pooling.",
+    "stages": {
+      "stage1": {
+        "Task IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.16882613510520486,
+              "cold_0": 0.2327343199436223,
+              "cold_42": 0.11240310077519379
+            },
+            "mean": 0.17132118527467366,
+            "sample_std_ddof1": 0.06020439795522598,
+            "population_std_ddof0": 0.049156685087254195
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.1763565891472868,
+              "cold_0": 0.22739018087855295,
+              "cold_42": 0.11627906976744184
+            },
+            "mean": 0.17334194659776053,
+            "sample_std_ddof1": 0.05561686619508942,
+            "population_std_ddof0": 0.04541098109020534
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.1725092205037143,
+              "cold_0": 0.2300312155256427,
+              "cold_42": 0.11430823807646827
+            },
+            "mean": 0.17228289136860842,
+            "sample_std_ddof1": 0.057861820711792175,
+            "population_std_ddof0": 0.047243978777431396
+          }
+        },
+        "Dataset IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.348747564564938,
+              "cold_0": 0.3390562602771905,
+              "cold_42": 0.430918107200597
+            },
+            "mean": 0.3729073106809085,
+            "sample_std_ddof1": 0.0504719697390141,
+            "population_std_ddof0": 0.041210190724592664
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.36549728771000994,
+              "cold_0": 0.3684218824950699,
+              "cold_42": 0.4399158923611728
+            },
+            "mean": 0.3912783541887509,
+            "sample_std_ddof1": 0.042146718772278685,
+            "population_std_ddof0": 0.034412651774887955
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.3569260276443361,
+              "cold_0": 0.35312962516008556,
+              "cold_42": 0.43537051552680395
+            },
+            "mean": 0.3818087227770752,
+            "sample_std_ddof1": 0.046424696012782644,
+            "population_std_ddof0": 0.03790560556504606
+          }
+        },
+        "Metric IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.3127554615926709,
+              "cold_0": 0.3073567904963254,
+              "cold_42": 0.3402408637873754
+            },
+            "mean": 0.3201177052921239,
+            "sample_std_ddof1": 0.017634980671109,
+            "population_std_ddof0": 0.014398901422687033
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.3310664787408974,
+              "cold_0": 0.3186633779657036,
+              "cold_42": 0.36225041108762035
+            },
+            "mean": 0.3373267559314071,
+            "sample_std_ddof1": 0.022457752936776182,
+            "population_std_ddof0": 0.01833667848819735
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.3216505772475642,
+              "cold_0": 0.3129079797568753,
+              "cold_42": 0.35090085011437566
+            },
+            "mean": 0.32848646903960504,
+            "sample_std_ddof1": 0.019897527784748195,
+            "population_std_ddof0": 0.016246263405161332
+          }
+        },
+        "Result IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.7774714711373218,
+              "cold_0": 0.777471471137322,
+              "cold_42": 0.777471471137322
+            },
+            "mean": 0.777471471137322,
+            "sample_std_ddof1": 6.409875621278546e-17,
+            "population_std_ddof0": 5.233641528945917e-17
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.8366904413416041,
+              "cold_0": 0.836690441341604,
+              "cold_42": 0.8366904413416041
+            },
+            "mean": 0.8366904413416041,
+            "sample_std_ddof1": 6.409875621278546e-17,
+            "population_std_ddof0": 5.233641528945917e-17
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.8059946691684621,
+              "cold_0": 0.8059946691684621,
+              "cold_42": 0.8059946691684623
+            },
+            "mean": 0.8059946691684622,
+            "sample_std_ddof1": 1.2819751242557092e-16,
+            "population_std_ddof0": 1.0467283057891834e-16
+          }
+        },
+        "TDM Exact Match": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.007751937984496124,
+              "cold_0": 0.011627906976744186,
+              "cold_42": 0.020671834625322995
+            },
+            "mean": 0.013350559862187769,
+            "sample_std_ddof1": 0.006629976019957213,
+            "population_std_ddof0": 0.005413352751927877
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.007751937984496124,
+              "cold_0": 0.011627906976744186,
+              "cold_42": 0.023255813953488372
+            },
+            "mean": 0.014211886304909561,
+            "sample_std_ddof1": 0.008068472866147801,
+            "population_std_ddof0": 0.006587880508517809
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.007751937984496124,
+              "cold_0": 0.011627906976744184,
+              "cold_42": 0.02188782489740082
+            },
+            "mean": 0.013755889952880376,
+            "sample_std_ddof1": 0.0073042493360818165,
+            "population_std_ddof0": 0.005963894609154416
+          }
+        },
+        "TDMR Exact Match": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.007751937984496124,
+              "cold_0": 0.011627906976744186,
+              "cold_42": 0.020671834625322995
+            },
+            "mean": 0.013350559862187769,
+            "sample_std_ddof1": 0.006629976019957213,
+            "population_std_ddof0": 0.005413352751927877
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.007751937984496124,
+              "cold_0": 0.011627906976744186,
+              "cold_42": 0.023255813953488372
+            },
+            "mean": 0.014211886304909561,
+            "sample_std_ddof1": 0.008068472866147801,
+            "population_std_ddof0": 0.006587880508517809
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.007751937984496124,
+              "cold_0": 0.011627906976744184,
+              "cold_42": 0.02188782489740082
+            },
+            "mean": 0.013755889952880376,
+            "sample_std_ddof1": 0.0073042493360818165,
+            "population_std_ddof0": 0.005963894609154416
+          }
+        }
+      },
+      "stage2": {
+        "Task IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.49966777408637886,
+              "cold_0": 0.46662136313299113,
+              "cold_42": 0.4935215946843854
+            },
+            "mean": 0.4866035773012518,
+            "sample_std_ddof1": 0.017575851120501963,
+            "population_std_ddof0": 0.014350622346784594
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.7719638242894057,
+              "cold_0": 0.710594315245478,
+              "cold_42": 0.704780361757106
+            },
+            "mean": 0.7291128337639966,
+            "sample_std_ddof1": 0.0372237297371954,
+            "population_std_ddof0": 0.030393048059797763
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.606662253832904,
+              "cold_0": 0.5633266598540807,
+              "cold_42": 0.5805286825526232
+            },
+            "mean": 0.5835058654132026,
+            "sample_std_ddof1": 0.021820658553612704,
+            "population_std_ddof0": 0.017816493102616113
+          }
+        },
+        "Dataset IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.6316933009990466,
+              "cold_0": 0.5987461827578108,
+              "cold_42": 0.7504917506114497
+            },
+            "mean": 0.6603104114561024,
+            "sample_std_ddof1": 0.07981781504770304,
+            "population_std_ddof0": 0.06517097308357113
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.6949546520510954,
+              "cold_0": 0.667702059682224,
+              "cold_42": 0.7917431348860898
+            },
+            "mean": 0.7181332822064698,
+            "sample_std_ddof1": 0.06518806452367257,
+            "population_std_ddof0": 0.053225831800874646
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.6618156643433315,
+              "cold_0": 0.6313468581771734,
+              "cold_42": 0.7705657509408046
+            },
+            "mean": 0.6879094244871031,
+            "sample_std_ddof1": 0.0731856424745549,
+            "population_std_ddof0": 0.05975582685347305
+          }
+        },
+        "Metric IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.5155424678680491,
+              "cold_0": 0.5058634024434299,
+              "cold_42": 0.579395767431263
+            },
+            "mean": 0.5336005459142473,
+            "sample_std_ddof1": 0.03995400871274264,
+            "population_std_ddof0": 0.03262231150831094
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.6690157387831807,
+              "cold_0": 0.6657387831806437,
+              "cold_42": 0.7215644820295983
+            },
+            "mean": 0.6854396679978075,
+            "sample_std_ddof1": 0.031327882965959404,
+            "population_std_ddof0": 0.025579109329409804
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.5823369811263279,
+              "cold_0": 0.5748928947566304,
+              "cold_42": 0.6427120382654833
+            },
+            "mean": 0.5999806380494805,
+            "sample_std_ddof1": 0.03719318524656135,
+            "population_std_ddof0": 0.030368108587628884
+          }
+        },
+        "Result IIM": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.7774714711373218,
+              "cold_0": 0.777471471137322,
+              "cold_42": 0.777471471137322
+            },
+            "mean": 0.777471471137322,
+            "sample_std_ddof1": 6.409875621278546e-17,
+            "population_std_ddof0": 5.233641528945917e-17
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.8366904413416041,
+              "cold_0": 0.836690441341604,
+              "cold_42": 0.8366904413416041
+            },
+            "mean": 0.8366904413416041,
+            "sample_std_ddof1": 6.409875621278546e-17,
+            "population_std_ddof0": 5.233641528945917e-17
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.8059946691684621,
+              "cold_0": 0.8059946691684621,
+              "cold_42": 0.8059946691684623
+            },
+            "mean": 0.8059946691684622,
+            "sample_std_ddof1": 1.2819751242557092e-16,
+            "population_std_ddof0": 1.0467283057891834e-16
+          }
+        },
+        "TDM Exact Match": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.3526174933457676,
+              "cold_0": 0.3330963066581182,
+              "cold_42": 0.42226263332750474
+            },
+            "mean": 0.36932547777713015,
+            "sample_std_ddof1": 0.04687244404494959,
+            "population_std_ddof0": 0.038271190302427496
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.3697014226083994,
+              "cold_0": 0.34596643666411103,
+              "cold_42": 0.4354974741021252
+            },
+            "mean": 0.3837217777915452,
+            "sample_std_ddof1": 0.04638296493086601,
+            "population_std_ddof0": 0.037871532279342715
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.3609574276601389,
+              "cold_0": 0.33940940925926,
+              "cold_42": 0.4287779499862711
+            },
+            "mean": 0.37638159563522333,
+            "sample_std_ddof1": 0.04663810390883807,
+            "population_std_ddof0": 0.0380798523825183
+          }
+        },
+        "TDMR Exact Match": {
+          "Precision": {
+            "values": {
+              "cold_default": 0.27640564589768996,
+              "cold_0": 0.24860018262711037,
+              "cold_42": 0.35491937207359486
+            },
+            "mean": 0.2933084001994651,
+            "sample_std_ddof1": 0.055138188566355696,
+            "population_std_ddof0": 0.04502014244297766
+          },
+          "Recall": {
+            "values": {
+              "cold_default": 0.29161058579663224,
+              "cold_0": 0.2616641110827158,
+              "cold_42": 0.36894225929109653
+            },
+            "mean": 0.30740565205681486,
+            "sample_std_ddof1": 0.055355788851550965,
+            "population_std_ddof0": 0.0451978123318485
+          },
+          "F1": {
+            "values": {
+              "cold_default": 0.2838046091651066,
+              "cold_0": 0.2549649136888881,
+              "cold_42": 0.3617949876750344
+            },
+            "mean": 0.300188170176343,
+            "sample_std_ddof1": 0.055267368134624004,
+            "population_std_ddof0": 0.04512561711879445
+          }
+        }
+      }
+    },
+    "leaderboards": {
+      "all27": {
+        "LR": {
+          "values": {
+            "cold_default": 0.8888888888888888,
+            "cold_0": 0.8888888888888888,
+            "cold_42": 0.8888888888888888
+          },
+          "mean": 0.8888888888888888,
+          "sample_std_ddof1": 0.0,
+          "population_std_ddof0": 0.0
+        },
+        "Finite nonempty": {
+          "values": {
+            "cold_default": 0.8888888888888888,
+            "cold_0": 0.8888888888888888,
+            "cold_42": 0.8888888888888888
+          },
+          "mean": 0.8888888888888888,
+          "sample_std_ddof1": 0.0,
+          "population_std_ddof0": 0.0
+        },
+        "PC": {
+          "values": {
+            "cold_default": 0.5549823633156966,
+            "cold_0": 0.5494268077601411,
+            "cold_42": 0.614594356261023
+          },
+          "mean": 0.5730011757789536,
+          "sample_std_ddof1": 0.03612769777252928,
+          "population_std_ddof0": 0.02949814170806038
+        },
+        "RC": {
+          "values": {
+            "cold_default": 0.4432539682539683,
+            "cold_0": 0.41671075837742505,
+            "cold_42": 0.5164021164021164
+          },
+          "mean": 0.45878894767783657,
+          "sample_std_ddof1": 0.05162938509683035,
+          "population_std_ddof0": 0.04215521640696287
+        },
+        "RBO (values)": {
+          "values": {
+            "cold_default": 0.5199897119341563,
+            "cold_0": 0.4795987654320988,
+            "cold_42": 0.4730644346300912
+          },
+          "mean": 0.4908843039987821,
+          "sample_std_ddof1": 0.025416883130528128,
+          "population_std_ddof0": 0.020752798173915815
+        },
+        "AO (paper IDs)": {
+          "values": {
+            "cold_default": 0.6235699588477366,
+            "cold_0": 0.6038168724279834,
+            "cold_42": 0.5620862424145252
+          },
+          "mean": 0.5964910245634151,
+          "sample_std_ddof1": 0.031389693878898964,
+          "population_std_ddof0": 0.025629577728488978
+        }
+      },
+      "masked10": {
+        "LR": {
+          "values": {
+            "cold_default": 0.9,
+            "cold_0": 1.0,
+            "cold_42": 0.8
+          },
+          "mean": 0.9,
+          "sample_std_ddof1": 0.09999999999999998,
+          "population_std_ddof0": 0.08164965809277258
+        },
+        "Finite nonempty": {
+          "values": {
+            "cold_default": 0.9,
+            "cold_0": 1.0,
+            "cold_42": 0.8
+          },
+          "mean": 0.9,
+          "sample_std_ddof1": 0.09999999999999998,
+          "population_std_ddof0": 0.08164965809277258
+        },
+        "PC": {
+          "values": {
+            "cold_default": 0.6092857142857142,
+            "cold_0": 0.7092857142857143,
+            "cold_42": 0.6485714285714286
+          },
+          "mean": 0.6557142857142857,
+          "sample_std_ddof1": 0.0503811999273782,
+          "population_std_ddof0": 0.0411360774837405
+        },
+        "RC": {
+          "values": {
+            "cold_default": 0.49428571428571433,
+            "cold_0": 0.5542857142857143,
+            "cold_42": 0.5942857142857143
+          },
+          "mean": 0.5476190476190477,
+          "sample_std_ddof1": 0.05033222956847165,
+          "population_std_ddof0": 0.0410960933531265
+        },
+        "RBO (values)": {
+          "values": {
+            "cold_default": 0.5166666666666667,
+            "cold_0": 0.6458333333333333,
+            "cold_42": 0.6229961957234684
+          },
+          "mean": 0.5951653985744895,
+          "sample_std_ddof1": 0.06893418525597549,
+          "population_std_ddof0": 0.05628452657054245
+        },
+        "AO (paper IDs)": {
+          "values": {
+            "cold_default": 0.5888888888888889,
+            "cold_0": 0.7395833333333334,
+            "cold_42": 0.6753272989636626
+          },
+          "mean": 0.6679331737286283,
+          "sample_std_ddof1": 0.0756188383446775,
+          "population_std_ddof0": 0.061742522962155606
+        }
+      }
+    }
+  },
+  "source_integrity": {
+    "files_checked": 23,
+    "changed": [],
+    "scope": "CRITICAL_INPUTS_AND_METHOD"
+  },
+  "stage_metric_roles": {
+    "partially": {
+      "stage1": "Primary Partially tuple-extraction comparison, evaluated after its own dynamic name normalization.",
+      "stage2": "Additional matching to the 27 Gold leaderboard triples; tuple metrics are post-alignment diagnostics, not the primary Partially tuple comparison or the same naming scope as Fully."
+    },
+    "cold_start": {
+      "stage1": "Dynamic open-vocabulary naming diagnostics; all three name sets started empty.",
+      "stage2": "Post-leaderboard-alignment tuple diagnostics; ColdStart primary results are the stage-2 leaderboard metrics across the three paper orders."
+    }
+  },
+  "request_accounting": {
+    "attempts": "Physical HTTP attempts, including original failures and authorized retries.",
+    "successful_responses": "Accepted physical responses; a parent retry pointer is not another response.",
+    "failed_or_unknown": "Historical physical failures or uncertain attempts; retained after recovery.",
+    "logical_completed": "Completed official request positions; replay is not another position.",
+    "authorized_additional_attempts": "Explicitly authorized additional physical attempts, separate from automatic retries.",
+    "completion_requires_zero_historical_failures": false
+  },
+  "new_api_requests": 0,
+  "historical_request_counts": {
+    "partially": [
+      340,
+      204
+    ],
+    "cold_default": [
+      279,
+      282
+    ],
+    "cold_0": [
+      293,
+      282
+    ],
+    "cold_42": [
+      283,
+      281
+    ]
+  }
+}

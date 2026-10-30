@@ -1,0 +1,32 @@
+{
+  "id": "2a3db313-4f42-40ea-99ed-f26835d20fe5",
+  "object": "chat.completion",
+  "created": 1793196860,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Multi-News",
+        "reasoning_content": "We need answer only. Need match input Multi-News to list. List doesn't contain Multi-News. Need determine semantic match? Candidates include CNN/DailyMail, Gigaword, XSum, NEWSROOM, ELI5, etc. Multi-News is a multi-document summarization dataset, distinct from CNN/DailyMail. No match. Output unchanged: Multi-News. Must ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 573,
+    "completion_tokens": 89,
+    "total_tokens": 662,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 317
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "a1560380-96b8-4615-9da7-c293c4f2f196",
+  "object": "chat.completion",
+  "created": 1793194255,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Extractive question answering",
+        "reasoning_content": "We need answer. Need match item exactly? Input \"Extractive Question Answering\". List has 'Extractive question answering' lower q/a. Matching likely case-insensitive? Instruction: if input entity matches one items, answer matched item in list. Else output entity unchanged. Need determine whether case-insensitive match? It says matches. Usually compare exact? The list has capitalization variation: Extractive question answering. Input Extractive Question Answering. Should match semantic? We need output matched item in list. Probably 'Extractive question answering' preserving list capitalization. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 279,
+    "completion_tokens": 120,
+    "total_tokens": 399,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 151
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

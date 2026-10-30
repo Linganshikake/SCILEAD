@@ -1,0 +1,32 @@
+{
+  "id": "ccae62ec-1188-4b7f-857b-5466ecb5a55d",
+  "object": "chat.completion",
+  "created": 1793194465,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 German",
+        "reasoning_content": "We need answer matched item if exact match in list else output entity unchanged. Input \"CoNLL-2003 German\". List contains CoNLL-2003 but not German. No exact match. Output unchanged. Need no explanation. Ensure same string."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 703,
+    "completion_tokens": 60,
+    "total_tokens": 763,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 191
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

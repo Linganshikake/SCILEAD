@@ -1,0 +1,32 @@
+{
+  "id": "3d3b27e3-0990-4343-8afd-183898942865",
+  "object": "chat.completion",
+  "created": 1793194288,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English→French",
+        "reasoning_content": "We need answer matched item if matches. Input \"WMT'14 English-French\". List has \"WMT'14 English→French\" with arrow. Need determine if matches? It says if input entity matches one of items. Exact? The input differs dash vs arrow. Need output entity without changing if no match. But semantically WMT'14 English-French intended match to WMT'14 English→French. Need infer matching likely normalized? They expect matched item in list. We need output list item exactly: WMT'14 English→French. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 372,
+    "completion_tokens": 125,
+    "total_tokens": 497,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 117
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 244
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

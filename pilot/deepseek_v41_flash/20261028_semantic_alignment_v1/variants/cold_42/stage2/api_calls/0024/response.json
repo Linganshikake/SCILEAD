@@ -1,0 +1,32 @@
+{
+  "id": "5754ad1c-038d-46e8-8d71-f3c222d6206f",
+  "object": "chat.completion",
+  "created": 1793197232,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent Detection and Slot Filling, SNIPS, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: (Joint Slot Filling and Intent Detection, Snips, Intent accuracy). Need match listed candidates. Candidates for SNIPS: (Intent Detection and Slot Filling, SNIPS, F1), (Intent Detection and Slot Filling, SNIPS, Accuracy). Input metric \"Intent accuracy\" likely same as Accuracy? Task \"Joint Slot Filling and Intent Detection\" vs \"Intent Detection and Slot Filling\" same benchmark task. Dataset Snips same. Metric \"Intent accuracy\" vs Accuracy: listed Accuracy likely intent accuracy? Need decide if semantic match. We need return matched listed tuple verbatim. Candidate (Intent Detection and Slot Filling, SNIPS, Accuracy). There's also F1 for SNIPS. Input explicitly Intent accuracy, so matches Accuracy not F1. Return exact listed tuple: (Intent Detection and Slot Filling, SNIPS, Accuracy). Need no explanation. Ensure exact casing SNIPS, Accuracy. Final only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 215,
+    "total_tokens": 987,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 201
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

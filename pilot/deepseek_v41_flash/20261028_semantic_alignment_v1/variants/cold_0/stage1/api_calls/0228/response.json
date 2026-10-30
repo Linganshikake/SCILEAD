@@ -1,0 +1,32 @@
+{
+  "id": "648b2104-03a3-4141-bea8-2e93b56a6f8e",
+  "object": "chat.completion",
+  "created": 1793196987,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "TACRED",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need determine if TACRED matches any list. List includes many datasets. TACRED not present? Need semantic matching. Is TACRED alias to something? Candidates: Open Entity? TACRED is relation extraction dataset, distinct. None. Output TACRED unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 660,
+    "completion_tokens": 70,
+    "total_tokens": 730,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 276
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

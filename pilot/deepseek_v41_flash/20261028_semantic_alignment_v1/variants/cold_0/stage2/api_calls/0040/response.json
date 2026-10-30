@@ -1,0 +1,32 @@
+{
+  "id": "49ffc7d6-8836-46cd-951b-f401c0080252",
+  "object": "chat.completion",
+  "created": 1793197239,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(GLUE Benchmark, GLUE, Score)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (GLUE Benchmark, GLUE, Score). List has no GLUE. So return original verbatim. Must output only one tuple. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 767,
+    "completion_tokens": 57,
+    "total_tokens": 824,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 255
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

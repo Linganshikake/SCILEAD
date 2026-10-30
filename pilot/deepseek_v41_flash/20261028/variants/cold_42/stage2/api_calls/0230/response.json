@@ -1,0 +1,32 @@
+{
+  "id": "422a566c-a3a4-4c11-b33f-2ebbe962c0f3",
+  "object": "chat.completion",
+  "created": 1793194855,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL-2003 English, F1 score)",
+        "reasoning_content": "We need answer matched if input tuple matches one item. Need exact? Input \"(Named Entity Recognition, CoNLL-2003 English, F1 score)\" vs list has \"(Named Entity Recognition (NER), CoNLL-2003 - English, F1)\". It doesn't match exactly. Need output tuple unchanged. Need determine if semantic? \"If input tuple matches one of items in list\" likely exact tuple match. It doesn't due formatting. Output tuple without changing it: (Named Entity Recognition, CoNLL-2003 English, F1 score). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 136,
+    "total_tokens": 692,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 118
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

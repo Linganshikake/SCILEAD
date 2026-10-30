@@ -1,0 +1,32 @@
+{
+  "id": "192438a0-3eb6-4eb8-adce-0589409ea1b8",
+  "object": "chat.completion",
+  "created": 1793197378,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer matched item. Input ROUGE-2, item list has ROGUE-2 (typo misspelling). Need determine match? The list item is 'ROGUE-2'. Input is ROUGE-2 (correct metric). We must match with one item. Likely intended match to ROGUE-2 despite typo? Need output only matched item from list. Since exact string not in list due typo. But semantic match is ROGUE-2 in list. Need decide. The instructions: match input with one of items. If none matches say None. Is ROUGE-2 same as ROGUE-2? The item list has misspelled ROGUE-2, ROGUE-1, ROGUE-L. These clearly represent ROUGE metrics. So match to 'ROGUE-2'. Output exactly item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 190,
+    "total_tokens": 449,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 184
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

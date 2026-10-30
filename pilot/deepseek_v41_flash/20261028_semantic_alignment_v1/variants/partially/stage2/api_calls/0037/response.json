@@ -1,0 +1,32 @@
+{
+  "id": "0a362c13-63a7-4ace-b119-db669d11141e",
+  "object": "chat.completion",
+  "created": 1793197527,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(GLUE Benchmark, MNLI-m, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (GLUE Benchmark, MNLI-m, Accuracy). List has no GLUE/MNLI. Semantic matching? None. Return original tuple verbatim. Need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 61,
+    "total_tokens": 829,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

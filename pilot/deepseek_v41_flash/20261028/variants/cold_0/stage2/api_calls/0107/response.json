@@ -1,0 +1,32 @@
+{
+  "id": "9d5e9e78-d572-4218-b1ef-d3c1618bdc35",
+  "object": "chat.completion",
+  "created": 1793194677,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Annotated English Gigaword, ROUGE-2)",
+        "reasoning_content": "We need answer only. Need compare input tuple to list. Input (Abstractive Summarization, Annotated English Gigaword, ROUGE-2). No exact match? List uses Summarization, Gigaword, ROGUE-2 (misspelled ROGUE). Input has Abstractive Summarization, Annotated English Gigaword, ROUGE-2. Not exact. Therefore output tuple unchanged. Need preserve exact input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 559,
+    "completion_tokens": 114,
+    "total_tokens": 673,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 175
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

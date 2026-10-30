@@ -1,0 +1,32 @@
+{
+  "id": "ec928a5a-22ad-4f8b-97c2-3088f65878d5",
+  "object": "chat.completion",
+  "created": 1793197042,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Movie",
+        "reasoning_content": "We need answer only. Need determine if \"Movie\" matches any candidate semantically. List has Multimodal? Movie? No. Maybe \"MR\" no. E-commerce etc. \"Movie\" could match? Candidates: MRPC (Microsoft Research Paraphrase Corpus), not movie. Maybe \"Movie\" entity new. No candidate. Output Movie unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 74,
+    "total_tokens": 806,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 220
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

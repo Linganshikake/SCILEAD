@@ -1,0 +1,32 @@
+{
+  "id": "449f4fc3-e6ec-44ed-9913-3e8700b4ba22",
+  "object": "chat.completion",
+  "created": 1793194849,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, XSum, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any item exactly. Input: (Abstractive Summarization, XSum, ROUGE-1 F1). List has Summarization XSum ROGUE-1 etc, no exact due \"Abstractive Summarization\", \"ROUGE-1 F1\" vs ROGUE-1. Not matched. Output tuple unchanged. Ensure exact including spaces. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 103,
+    "total_tokens": 659,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "72dae007-7061-45fb-903d-7fde4ccc8808",
+  "object": "chat.completion",
+  "created": 1793194319,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural Language Inference (NLI)",
+        "reasoning_content": "We need answer matched item? Input \"Natural language inference\". List has \"Natural Language Inference (NLI)\" case difference. Need determine matches? likely yes semantically exact without NLI acronym and capitalization. Need output matched item in list. So answer Natural Language Inference (NLI). Ensure no explanation. \nNeed be careful exact string matching? \"If input entity matches one of items\" Natural language inference vs Natural Language Inference (NLI). It matches concept, not exact. We can output matched item. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 311,
+    "completion_tokens": 112,
+    "total_tokens": 423,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 311
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

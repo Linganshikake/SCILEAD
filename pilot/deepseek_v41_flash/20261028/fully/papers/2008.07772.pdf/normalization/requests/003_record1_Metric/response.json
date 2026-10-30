@@ -1,0 +1,32 @@
+{
+  "id": "62656fe8-572f-4518-8a48-b947e50ff858",
+  "object": "chat.completion",
+  "created": 1793193679,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "BLEU",
+        "reasoning_content": "We need answer only matched item or None. sacreBLEU relates BLEU metric? Item list has BLEU, BLEU-4. Which matched? Input \"sacreBLEU\" is a metric implementation for BLEU. Need match with one item. Likely \"BLEU\". Must output only item. Let's ensure no exact \"sacreBLEU\" item. None? The task: match input with item in list. sacreBLEU is variant/tool for BLEU; corresponding listed metric BLEU. Typically sacreBLEU is a BLEU implementation. Answer BLEU. Only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 258,
+    "completion_tokens": 137,
+    "total_tokens": 395,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 134
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1812.10235.pdf",
+  "record": 2,
+  "field": "Task",
+  "original": "Slot filling",
+  "candidate_serialized": "{'Name Disambiguation', 'Generative Question Answering', 'Dialogue Act Classification', 'Named Entity Recognition', 'Language Modeling', 'Joint intent detection and slot filling', 'Abstractive Summarization', 'Extractive Question Answering', 'NER German', 'Intent detection', 'Part-of-Speech Tagging', 'Question Generation', 'Machine Translation', 'GLUE Benchmark', 'Word Sense Induction', 'Chunking'}",
+  "candidate_sha256": "0f4744c50cec7a41d5f0324f1eb1970afc0dfd13a45a50a5d45059b387d8679f",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Name Disambiguation', 'Generative Question Answering', 'Dialogue Act Classification', 'Named Entity Recognition', 'Language Modeling', 'Joint intent detection and slot filling', 'Abstractive Summarization', 'Extractive Question Answering', 'NER German', 'Intent detection', 'Part-of-Speech Tagging', 'Question Generation', 'Machine Translation', 'GLUE Benchmark', 'Word Sense Induction', 'Chunking'}\n\nInput: Slot filling\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "75c42b983f3862a93bd7bb140f92c31b299716191abc0e43b3ea78e0c6ab9b7f"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "0aa9fcca-b16a-4041-b93e-9460c47c796e",
+  "object": "chat.completion",
+  "created": 1793197413,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer matched item exactly? Input ROUGE-1, list has 'ROGUE-1' (misspelled) and 'ROGUE-L' etc. Need match with one item. They likely expect ROGUE-1 as closest due typo? Need only item. Check list contains \"ROGUE-1\" not ROUGE-1. The input is ROUGE-1, standard metric, but list has ROGUE-1 likely typo. Matching input with one item: should identify ROGUE-1 as intended. Answer only matched item in list. Use 'ROGUE-1'."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 139,
+    "total_tokens": 398,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 133
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

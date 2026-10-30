@@ -1,0 +1,32 @@
+{
+  "id": "51dc49cb-e036-4f2d-9f99-351229ab66c7",
+  "object": "chat.completion",
+  "created": 1793197610,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, WikiHow, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, WikiHow, ROGUE-L). Candidate list has summarization datasets Gigaword, CNN/DailyMail, XSum. No WikiHow. Return original verbatim. Need ensure ROGUE typo etc not match different dataset. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 81,
+    "total_tokens": 850,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

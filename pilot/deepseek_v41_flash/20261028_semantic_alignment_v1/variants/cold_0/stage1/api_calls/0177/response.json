@@ -1,0 +1,32 @@
+{
+  "id": "373c17e8-06f2-4d50-904e-1c289deebf9c",
+  "object": "chat.completion",
+  "created": 1793196898,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "QNLI",
+        "reasoning_content": "We need answer according to instructions. Need match input \"GLUE QNLI\" to item list. Need semantic matching. List has GLUE and QNLI separately. Input is combined \"GLUE QNLI\". Does it match one item? Candidates include QNLI, GLUE. But input combines dataset suite and task. Need determine if matches an item exactly? It says if input entity matches one item in list answer matched item. Else output entity unchanged. \"GLUE QNLI\" likely denotes QNLI task from GLUE benchmark. Could match QNLI? The input has extra GLUE qualifier. In list QNLI is an item. It is clear semantic match to QNLI? Need preserve meaningful differences? QNLI is a GLUE task. \"GLUE QNLI\" is a specific wording for QNLI. Could output QNLI. But also GLUE is item. Which is intended? The input entity is \"GLUE QNLI\" meaning the QNLI dataset in GLUE. Since QNLI in list, match that. Need output only selected item exactly as written in item list. \"QNLI\". Ensure no explanation. \nNeed consider instruction: \"For task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar.\" GLUE QNLI = QNLI. Yes output QNLI.\nFinal only QNLI. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 592,
+    "completion_tokens": 330,
+    "total_tokens": 922,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 326
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 208
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

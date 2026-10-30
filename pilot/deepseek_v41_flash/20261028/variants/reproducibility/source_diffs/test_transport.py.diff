@@ -1,0 +1,49 @@
+--- D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\test_transport.py
++++ D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028\variants\test_transport.py
+@@ -1,4 +1,4 @@
+-"""No network: exercise durable single-position requests and A2 wire parity."""
++"""No network: exercise durable single-position requests and DeepSeek wire contract."""
+ import importlib.util,json,tempfile,unittest
+ from pathlib import Path
+ 
+@@ -6,14 +6,14 @@
+ 
+ class Tests(unittest.TestCase):
+     def setUp(self):
+-        self.assertTrue((HERE/'variant_runtime.py').exists(),'Independent GPT56 transport not implemented')
++        self.assertTrue((HERE/'variant_runtime.py').exists(),'Independent DeepSeek transport not implemented')
+         import variant_runtime as v
+         self.v=v
+         self.temp=tempfile.TemporaryDirectory(dir=HERE)
+         self.root=Path(self.temp.name)
+     def tearDown(self):
+         if hasattr(self,'temp'):self.temp.cleanup()
+-    def body(self,finish='stop',model='gpt-5.6-sol'):
++    def body(self,finish='stop',model='deepseek-flash'):
+         return {'model':model,'choices':[{'finish_reason':finish,'message':{'role':'assistant','content':'X'}}],'usage':{'prompt_tokens':7,'completion_tokens':1,'total_tokens':8}}
+     def client(self,body=None,error=False,status=200):
+         import httpx
+@@ -27,7 +27,7 @@
+         client,calls=self.client();messages=[{'role':'system','content':'S'},{'role':'user','content':'U'}]
+         answer=self.v.durable_request(client,self.root/'call',messages,'synthetic-test-key')
+         self.assertEqual(answer,'X');self.assertEqual(len(calls),1)
+-        self.assertEqual(calls[0],{'model':'gpt-5.6-sol','messages':messages,'reasoning_effort':'medium','max_completion_tokens':32768,'stream':False})
++        self.assertEqual(calls[0],{'model':'deepseek-flash','messages':messages,'thinking':{'type':'enabled'},'reasoning_effort':'high','stream':False})
+         self.assertEqual(self.v.durable_request(client,self.root/'call',messages,'synthetic-test-key'),'X')
+         self.assertEqual(len(calls),1)
+     def test_unknown_attempt_never_resends(self):
+@@ -54,6 +54,14 @@
+         client,calls=self.client()
+         for name in ('1','2'):self.v.durable_request(client,self.root/name,[],'synthetic-test-key')
+         self.assertEqual(len(calls),2)
++    def test_response_without_acceptance_marker_stays_blocked_without_resend(self):
++        client,calls=self.client();folder=self.root/'call'
++        self.v.frozen.one_request(client,folder,self.v.frozen.payload([]),'synthetic-test-key',self.v.URL+'/chat/completions')
++        for _ in range(2):
++            with self.assertRaisesRegex(AssertionError,'FAILED_OR_UNKNOWN_NO_AUTOMATIC_RESEND'):
++                self.v.durable_request(client,folder,[],'synthetic-test-key')
++        self.assertEqual(len(calls),1)
++        self.assertFalse((folder/'accepted.json').exists())
+     def test_transient_filesystem_lock_retries_only_write(self):
+         from unittest.mock import patch
+         actual=self.v.os.replace;seen=[]

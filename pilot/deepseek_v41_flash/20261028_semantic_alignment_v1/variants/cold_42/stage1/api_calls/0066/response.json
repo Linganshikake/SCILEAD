@@ -1,0 +1,32 @@
+{
+  "id": "b5303be6-1d05-4f4e-a96a-d89e05383f70",
+  "object": "chat.completion",
+  "created": 1793196688,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Dialogue Act Classification",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine semantic match. Input Dialogue Act Classification. Candidates include Intent Detection, Joint Slot Filling and Intent Detection, Slot Filling. Dialogue Act Classification is related but is it same as Intent Detection? In NLP, dialogue act classification sometimes distinct from intent detection. Could match Intent Detection? Need semantic matching, preserve meaningful differences. Dialogue Act Classification is a task labeling utterances with communicative acts; Intent Detection is similar but not exactly. Candidate list has no Dialogue Act Classification. If ambiguous no match output unchanged. Need decide. \"Dialogue Act Classification\" may be semantically identical to \"Intent Detection\" in dialogue systems? Actually intent detection usually identifies user intent, dialogue act classification classifies speech acts (question, request, inform). Related but distinct. The instruction: do not guess ambiguous abbreviation or missing experimental condition. If one clear semantic match. Is it clear? Probably not clear enough. Output original unchanged. Ensure exact input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 384,
+    "completion_tokens": 198,
+    "total_tokens": 582,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 193
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

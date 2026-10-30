@@ -1,0 +1,32 @@
+{
+  "id": "6e668fac-a541-4673-829a-a20895aa4159",
+  "object": "chat.completion",
+  "created": 1793194846,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, WikiHow, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple exactly matches any list. List has WikiHow? No. So output tuple unchanged: (Summarization, WikiHow, ROUGE-2 F1). Note list uses ROGUE typos, input ROUGE. No match. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 78,
+    "total_tokens": 632,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

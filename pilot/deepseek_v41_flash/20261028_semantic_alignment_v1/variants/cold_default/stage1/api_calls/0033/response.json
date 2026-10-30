@@ -1,0 +1,32 @@
+{
+  "id": "055c5be1-86ec-44fe-9b00-0c435909618e",
+  "object": "chat.completion",
+  "created": 1793196639,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "TACRED",
+        "reasoning_content": "We need answer only. Need determine if TACRED matches any item. List: WSJ, CoNLL-2002 Spanish, Open Entity, ON5E, RE, CoNLL-2003 German, ON4C, CoNLL03 NER, CoNLL00, CoNLL-2002 Dutch, WN16, WE, WN17. TACRED is relation extraction dataset, not explicitly RE? \"RE\" could be relation extraction task. But TACRED itself is a dataset. Does it match RE? Semantic matching: preserve dataset identity. TACRED is not same entity as generic RE. No candidate TACRED. Output TACRED."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 373,
+    "completion_tokens": 147,
+    "total_tokens": 520,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 245
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

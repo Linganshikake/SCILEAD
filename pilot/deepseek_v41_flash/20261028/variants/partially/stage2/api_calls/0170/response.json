@@ -1,0 +1,32 @@
+{
+  "id": "1e9a795c-0a5a-4bd7-946a-2f83959c15c7",
+  "object": "chat.completion",
+  "created": 1793195087,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent detection, Food, Accuracy)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one in list exactly? Item list contains (Intent Detection and Slot Filling, ATIS, Accuracy), etc. Input (Intent detection, Food, Accuracy) doesn't match. Output tuple unchanged. Need exact formatting likely (Intent detection, Food, Accuracy). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 547,
+    "completion_tokens": 75,
+    "total_tokens": 622,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 163
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

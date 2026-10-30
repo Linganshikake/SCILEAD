@@ -1,0 +1,18 @@
+{
+  "model": "deepseek-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ATIS', 'BC5CDR', 'DyDA', 'MapTask', 'WikiHow', 'ReCoRD', 'Google Billion Word (valid)', 'GLUE SST', 'SemEval 2013 Task 13', 'WMT Zh-En newstest2017', 'Penn Treebank converted to Stanford Dependencies version 3.3.0', 'NEWSROOM', 'Snips', 'GLUE QNLI', 'SQuAD 2.0', \"WMT'14 English→French\", 'ELI5', 'TACRED', 'WNUT-17', 'NYT', 'CNN/DailyMail', 'CoNLL++', 'BIGPATENT', 'WMT16 RO-EN', 'Reddit TIFU', 'GLUE MNLI', 'CoNLL-2000', 'AESLC', 'Google Billion Word (test)', 'CBS SciTech News', 'BillSum', 'OntoNotes', 'CoQA', 'GLUE QQP', 'WNUT-16', 'GLUE RTE', 'CCGBank', 'CoNLL 2002 Dutch NER', \"WMT'14 English→German\", 'IWSLT2014 De→En', 'SQuAD 1.1', 'Gigaword', 'Multi-News', 'SWDA', 'Wikitext-103 (WT103)', 'arXiv', 'PubMed', 'E-commerce', 'PTB', 'GLUE CoLA', 'IWSLT 2015 English-Vietnamese translation dataset (tst2013)', 'WSJ', 'Open Entity', 'CoNLL-2003 English', 'MRDA', 'CoNLL 2002 Spanish NER', 'XSum', 'NCBI-disease', 'Wikitext-2 (WT2)', 'ConvAI2', 'SQuAD'}\n\nInput: CoLA\n\nAnswer: "
+    }
+  ],
+  "thinking": {
+    "type": "enabled"
+  },
+  "reasoning_effort": "high",
+  "stream": false
+}

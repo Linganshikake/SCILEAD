@@ -1,0 +1,32 @@
+{
+  "id": "42f55900-b676-4d6b-9dcf-8b456b8bf24d",
+  "object": "chat.completion",
+  "created": 1793197146,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT2014 En→De",
+        "reasoning_content": "We need answer only matched item or unchanged. Need determine semantic match. Input \"WMT En-De (newstest2014)\" vs candidates include \"WMT'14 English→French\" and \"WMT2014 En→De\". Clearly WMT2014 En→De is English to German, newstest2014. Match that candidate. Need output exactly as list: WMT2014 En→De. Check candidate \"WMT'14 English→French\" no. So answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 780,
+    "completion_tokens": 110,
+    "total_tokens": 890,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 268
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

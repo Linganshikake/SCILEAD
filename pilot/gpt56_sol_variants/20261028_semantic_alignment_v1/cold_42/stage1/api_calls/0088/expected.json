@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_42",
+  "paper": "1910.13461.pdf",
+  "record": 13,
+  "field": "Metric",
+  "original": "Matthews correlation",
+  "candidate_serialized": "{'Test Perplexity', 'Sentence-level Semantic Frame Accuracy', 'Development Exact Match', 'ROUGE-2 Recall', 'Test Recall', 'ROUGE-L Recall', 'ROUGE-L F1', 'Exact Match (EM)', 'ROUGE-2 F1', 'ROUGE-1 F1', 'Test Exact Match', 'Test BLEU', 'Accuracy', 'ROUGE-1 Recall', 'Validation Perplexity', 'Correlation', 'F1-score', 'Test Precision', 'Development F1'}",
+  "candidate_sha256": "c6bc6ea45244404598cf964e272e65326ae1c8cea5dc6a36120c00b41beb5e86",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Test Perplexity', 'Sentence-level Semantic Frame Accuracy', 'Development Exact Match', 'ROUGE-2 Recall', 'Test Recall', 'ROUGE-L Recall', 'ROUGE-L F1', 'Exact Match (EM)', 'ROUGE-2 F1', 'ROUGE-1 F1', 'Test Exact Match', 'Test BLEU', 'Accuracy', 'ROUGE-1 Recall', 'Validation Perplexity', 'Correlation', 'F1-score', 'Test Precision', 'Development F1'}\n\nInput: Matthews correlation\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "277e627f9002a5b010768c191d3ccc9fecf8f3d927b30b359aa6b76d6e80551c"
+}

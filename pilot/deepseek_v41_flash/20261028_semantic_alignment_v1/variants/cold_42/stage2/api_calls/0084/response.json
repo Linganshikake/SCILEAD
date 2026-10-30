@@ -1,0 +1,32 @@
+{
+  "id": "bd941699-a60b-421f-bd1f-56bb196bf614",
+  "object": "chat.completion",
+  "created": 1793197333,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Reddit TIFU, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input Summarization, Reddit TIFU, ROUGE-L F1. List has summarization on Gigaword, CNN/DailyMail, XSum with ROGUE-L etc. No Reddit TIFU. Metric \"ROUGE-L F1\" vs listed ROGUE-L (typo). Dataset different. No match. Return original tuple verbatim. Need exact input tuple. Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 118,
+    "total_tokens": 892,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

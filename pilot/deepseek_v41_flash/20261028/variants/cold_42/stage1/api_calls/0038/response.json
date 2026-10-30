@@ -1,0 +1,32 @@
+{
+  "id": "d580c080-d411-45fd-bf8f-1027619a2937",
+  "object": "chat.completion",
+  "created": 1793194185,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint Slot Filling and Intent Detection",
+        "reasoning_content": "We need answer exact match from list. Input \"Joint intent detection and slot filling\" matches item \"Joint Slot Filling and Intent Detection\" semantically but not exact? Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. Match likely case-insensitive/semantic? It says matches one of items. Need infer entity resolution: list has \"Joint Slot Filling and Intent Detection\"; input is \"Joint intent detection and slot filling\" same concepts reordered. Should output matched item exact: Joint Slot Filling and Intent Detection. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 150,
+    "completion_tokens": 126,
+    "total_tokens": 276,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 118
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

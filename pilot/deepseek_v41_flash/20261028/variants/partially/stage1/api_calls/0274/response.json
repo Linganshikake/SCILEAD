@@ -1,0 +1,32 @@
+{
+  "id": "392bb423-be08-404b-9c3e-4641c94069c8",
+  "object": "chat.completion",
+  "created": 1793194661,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent detection",
+        "reasoning_content": "We need answer match item list if input matches one. Input \"Intent Detection\". List has \"Intent detection\" lowercase d. Need decide matching likely case-insensitive? It says matches one of items. Entity is \"Intent Detection\" exact capitalization differs. Usually matching should identify semantically/case-insensitive? Need output matched item in list: \"Intent detection\". Else output entity. We need just answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 399,
+    "completion_tokens": 83,
+    "total_tokens": 482,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 143
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

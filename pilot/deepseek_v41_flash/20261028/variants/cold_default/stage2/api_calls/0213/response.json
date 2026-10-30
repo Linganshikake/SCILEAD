@@ -1,0 +1,32 @@
+{
+  "id": "2d2d3745-7159-4aab-a638-61e4dd3de23b",
+  "object": "chat.completion",
+  "created": 1793194833,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive sentence summarization, Annotated English Gigaword, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item in list. List contains (Summarization, Gigaword, ROGUE-L) etc. Input (Abstractive sentence summarization, Annotated English Gigaword, ROUGE-L). No exact match due names. Must output tuple unchanged. Need be careful exact formatting? \"Answer: ...\" likely just tuple. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 559,
+    "completion_tokens": 104,
+    "total_tokens": 663,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 175
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "480e4286-cd8f-4ae8-903d-77b567693527",
+  "object": "chat.completion",
+  "created": 1793193811,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\": \"Dialogue Act Classification\", \"Dataset\": \"SWDA\", \"Metric\": \"Accuracy\", \"Result\": \"82.3\"}, {\"Task\": \"Dialogue Act Classification\", \"Dataset\": \"MRDA\", \"Metric\": \"Accuracy\", \"Result\": \"92.2\"}, {\"Task\": \"Dialogue Act Classification\", \"Dataset\": \"DyDA\", \"Metric\": \"Accuracy\", \"Result\": \"88.1\"}]",
+        "reasoning_content": "We need answer only JSON array tuples best results by proposed methods, not baselines. Need extract task, dataset, metric, result. Paper appears dialogue act classification, datasets SWDA MRDA DyDA, metric accuracy. Proposed methods DAH-CRF variants; best proposed probably DAH-CRF+LDAutt results: Table2 shows SWDA 82.3, MRDA 92.2? Need parse table. We need identify best results obtained by proposed methods, not baselines. Potential tuples: Task Dialogue Act Classification, Dataset SWDA, Metric Accuracy, Result 82.3; MRDA 92.2; DyDA 88.1? Let's inspect table 2. It is garbled. Need parse.\n\nTable 2: \"DA classification accuracy. † indicates results reported prior publications.\nModel s JAS e n i l e s a B DRLM-Cond Bi-LSTM-CRF CRF-ASN SelfAtt-CRF DAH-CRF + MANUALconv DAH-CRF + LDAconv DAH-CRF + LDAutt Human Agreement s r u O SWDA MRDA DyDA 75.9 81.3 81.1 88.4 90.9† 83.6 91.4† - 91.1† - 86.5 - 86.4 91.2 88.1 92.2 - - 71.2 77.0† 79.2† 80.8† 82.9† 80.9 80.7 82.3 84.0\"\n\nNeed reconstruct columns SWDA, MRDA, DyDA. Maybe rows:\nJAS: 75.9, 81.3, 81.1? \nDRLM-Cond: 88.4, 90.9†, 83.6?\nBi-LSTM-CRF: 91.4†, -, 91.1†? Hmm.\nLet's search memory? This is paper \"Dialogue Act and Topic Classification with Dual-Attention...\"? Results likely:\nSWDA: DAH-CRF+LDAutt 82.3, SelfAtt-CRF 82.9, CRF-ASN 80.9? MRDA: DAH-CRF+LDAutt 92.2, SelfAtt-CRF 91.4, CRF-ASN 91.1. DyDA: DAH-CRF+LDAutt 88.1? Human Agreement 84.0? Wait.\n\nTable 3 ablation: \nModel SAH SAH-CRF DAH + LDAutt DAH-CRF + LDAutt (without Dual-Att) DAH-CRF + LDAutt\nSWDA MRDA DyDA\n82.5 88.5 84.1\n89.6 86.0 91.1\n86.3 91.3 76.2\n78.4 79.5 81.0\n82.3 92.2 88.1\n\nThis table 3 clearer: final DAH-CRF+LDAutt gives SWDA 82.3, MRDA 92.2, DyDA 88.1. Yes. So tuples those three.\n\nNeed answer json only. Include Task \"Dialogue Act Classification\" or \"DA classification\". Dataset names SWDA, MRDA, DyDA. Metric \"Accuracy\". Result. Maybe as strings. Ensure JSON valid. Could include only proposed best. Use exact dataset names. Final start with [ and nothing else."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2674,
+    "completion_tokens": 834,
+    "total_tokens": 3508,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 741
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2674
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

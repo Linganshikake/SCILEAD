@@ -1,0 +1,32 @@
+{
+  "id": "4e83744e-3643-47a5-8ed1-47372cf6c42a",
+  "object": "chat.completion",
+  "created": 1793281505,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "None",
+        "reasoning_content": "We need answer match input to item list. \"Human judgment score\" likely none? Need infer maybe METEOR? Let's parse. Items are metrics. Human judgment score is not in list. Could map to \"None\" if none matches. Need only matched item or None. Human judgment score maybe \"Spearman Correlation\" (correlation with human judgments). But item list includes Spearman Correlation. Input \"Human judgment score\" is generic, not exact metric. The instruction: match input with one of items. If none matches say None. \"Human judgment score\" doesn't match any listed metric exactly. Could be \"AVG\"? No. Answer None. Ensure only. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "completion_tokens": 140,
+    "total_tokens": 397,
+    "prompt_tokens_details": {
+      "cached_tokens": 123
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 138
+    },
+    "prompt_cache_hit_tokens": 123,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

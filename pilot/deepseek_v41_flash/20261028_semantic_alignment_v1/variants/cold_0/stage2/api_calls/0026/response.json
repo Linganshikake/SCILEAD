@@ -1,0 +1,32 @@
+{
+  "id": "1e122f5b-c483-49d9-a1fd-4b19fb8d316e",
+  "object": "chat.completion",
+  "created": 1793197221,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extractive Question Answering, SQuAD, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed semantically. List has no Extractive QA/SQuAD. So output original tuple verbatim. Need only tuple no explanation. Ensure exact: (Extractive Question Answering, SQuAD, F1)"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 70,
+    "total_tokens": 841,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

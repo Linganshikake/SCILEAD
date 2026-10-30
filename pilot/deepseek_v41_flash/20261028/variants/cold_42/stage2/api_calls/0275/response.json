@@ -1,0 +1,32 @@
+{
+  "id": "8718093e-32ea-44c4-b14c-c3e719c184f4",
+  "object": "chat.completion",
+  "created": 1793194910,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, XSum, ROUGE-L)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any item exactly. Input: (Abstractive Summarization, XSum, ROUGE-L). List has (Summarization, XSum, ROGUE-L) not same task name and misspelled ROGUE. No exact match. Output tuple unchanged. Need only answer. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 553,
+    "completion_tokens": 85,
+    "total_tokens": 638,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 169
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

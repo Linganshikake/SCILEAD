@@ -1,0 +1,32 @@
+{
+  "id": "8f4a181b-f72a-4974-b13c-649142a04343",
+  "object": "chat.completion",
+  "created": 1793197383,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, WikiHow, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if WikiHow ROUGE-2 F1 matches any listed. List summarization datasets: Gigaword, CNN/DailyMail, XSum. No WikiHow. Return original tuple verbatim. Need output tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 69,
+    "total_tokens": 841,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

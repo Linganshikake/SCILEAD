@@ -1,0 +1,32 @@
+{
+  "id": "c6ab84de-a058-446d-ad3a-7571627f0546",
+  "object": "chat.completion",
+  "created": 1793196936,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer match item list. Input \"ROUGE-2 F1\". Items include ROGUE-2 (misspelled ROGUE) and F1. Need match one item? The input seems \"ROUGE-2 F1\" possibly refers to metric ROUGE-2 F1. Item list has 'ROGUE-2' misspelled. Could match ROGUE-2? The instruction: match input with one of items. Input \"ROUGE-2 F1\" exact? None? But likely intended 'ROGUE-2' due typo. Need only matched item. Which one? If considering \"ROUGE-2 F1\" as combination of ROGUE-2 and F1, not an exact item. The closest list item maybe 'ROGUE-2'. The item list uses ROGUE (typo) not ROUGE. Since input has ROUGE-2 F1. There is no \"ROUGE-2 F1\". Could be matching \"ROGUE-2\" because they misspelled in list. Need decide. The item list includes 'ROGUE-2' and 'F1'. Input is two tokens; if asked match with one of items, perhaps the item \"ROGUE-2\" is the metric, and F1 is a variant of it. But answer should only matched item. Maybe use 'ROGUE-2'. Let's output that. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 313,
+    "total_tokens": 574,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 307
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

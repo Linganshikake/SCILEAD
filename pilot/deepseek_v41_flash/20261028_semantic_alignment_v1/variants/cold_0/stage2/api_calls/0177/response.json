@@ -1,0 +1,32 @@
+{
+  "id": "ed986c0a-7142-46c9-afbc-cff14f500f3d",
+  "object": "chat.completion",
+  "created": 1793197448,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need semantic match: Input (Abstractive Summarization, Gigaword, ROUGE-L). List has (Summarization, Gigaword, ROGUE-L) and ROGUE-1/2. ROGUE-L typo for ROUGE-L. Abstractive Summarization vs Summarization same underlying benchmark? Dataset Gigaword, metric ROUGE-L. Candidate (Summarization, Gigaword, ROGUE-L) matches semantically. Return verbatim listed tuple with ROGUE-L exact. Need only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 131,
+    "total_tokens": 903,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 117
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

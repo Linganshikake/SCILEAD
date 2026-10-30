@@ -1,0 +1,32 @@
+{
+  "id": "b56376b0-1761-4f84-8d96-0ad02df8a627",
+  "object": "chat.completion",
+  "created": 1793196794,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT En-Fr (newstest2014)",
+        "reasoning_content": "We need answer match if input matches item. Input WMT En-Fr (newstest2014). Candidate WMT En-De (newstest2014). Different language pair En-Fr vs En-De, preserve meaningful differences dataset identity/language. Not match. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 490,
+    "completion_tokens": 71,
+    "total_tokens": 561,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 234
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

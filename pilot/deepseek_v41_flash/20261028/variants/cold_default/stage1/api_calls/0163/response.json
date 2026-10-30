@@ -1,0 +1,32 @@
+{
+  "id": "f0349d3b-c8c8-458b-9e8e-288d47f82ae7",
+  "object": "chat.completion",
+  "created": 1793194331,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "OntoNotes",
+        "reasoning_content": "We need answer. Need match item list. Input \"OntoNotes 5.0\". List has 'OntoNotes'. Does it match one of items? Exact? The instruction: if input entity matches one of items in list, answer matched item. Else output entity unchanged. \"matches\" likely exact or maybe correspond. OntoNotes 5.0 is not exactly OntoNotes in list, but could be alias? Need determine from benchmark? We need output matched item if input matches item. Since list contains 'OntoNotes' and input 'OntoNotes 5.0', is that a match? In entity linking tasks, likely dataset names variants. Need map OntoNotes 5.0 to OntoNotes? They said matches one of items. Could consider not exact, output unchanged. But these tasks expect normalization to canonical item. \"OntoNotes 5.0\" likely refers to OntoNotes; list has OntoNotes. Need answer OntoNotes. Let's assess. The instruction: \"If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it.\" \"matches\" could mean semantically equivalent. OntoNotes 5.0 is a version of OntoNotes, so matched item is OntoNotes. Need just answer no explanation. final OntoNotes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 587,
+    "completion_tokens": 289,
+    "total_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 285
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 331
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

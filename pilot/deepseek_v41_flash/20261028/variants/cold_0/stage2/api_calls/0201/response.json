@@ -1,0 +1,32 @@
+{
+  "id": "9bc4a427-e5f6-4752-b6ea-10e6fdacc412",
+  "object": "chat.completion",
+  "created": 1793194801,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, WE, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item. Input \"(Named Entity Recognition, WE, F1)\" not in list. There is Named Entity Recognition with Ontonotes, CoNLL, WNUT-17, WNUT-16, but not WE. Output tuple unchanged. Need format likely (Named Entity Recognition, WE, F1). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 549,
+    "completion_tokens": 90,
+    "total_tokens": 639,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 165
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

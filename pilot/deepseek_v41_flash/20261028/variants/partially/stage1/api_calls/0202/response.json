@@ -1,0 +1,32 @@
+{
+  "id": "5fc634b6-2c4e-406f-a1c3-5c05c8e72e3f",
+  "object": "chat.completion",
+  "created": 1793194524,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 English",
+        "reasoning_content": "We need answer. Need match item list. Input \"CoNLL 2003 English\". List contains \"CoNLL-2003 English\" with hyphen. Also \"CoNLL-2003\", \"CoNLL-2003 German\", etc. Exact? We need if input entity matches one item. \"CoNLL 2003 English\" vs \"CoNLL-2003 English\" not exact due hyphen and no? It says matches one of items. likely normalize? Need output matched item if matches. There is item 'CoNLL-2003 English'. Input has space \"CoNLL 2003 English\" (no hyphen). Is that considered match? The instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. Exact string? It says DO NOT explanation. Need infer benchmark perhaps alias matching with minor normalization. There is also 'CoNLL 2003 Dutch NER' and 'CoNLL 2002 ...' etc. \"CoNLL 2003 English\" likely intended to match 'CoNLL-2003 English' despite hyphen. Need output the matched list item exactly: CoNLL-2003 English. Let's ensure list item exists: 'CoNLL-2003 English' yes. There's also 'CoNLL-2003' but input has English. So answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 293,
+    "total_tokens": 1025,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 285
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 220
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "57762c70-6f03-4a5b-93c2-ce216fec1e19",
+  "object": "chat.completion",
+  "created": 1793194226,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Joint intent detection and slot filling",
+        "reasoning_content": "We need answer. Need match item list. Input \"Slot Filling and Intent Detection\". List has 'Joint intent detection and slot filling'. Need determine if matches semantically? Instruction: If input entity matches one of items in list, answer matched item. Else output entity unchanged. It likely wants exact? \"Slot Filling and Intent Detection\" matches item 'Joint intent detection and slot filling' as same concept but not exact string. Need output matched item from list. Since no explanation. Answer: Joint intent detection and slot filling. Ensure no extra."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 182,
+    "completion_tokens": 117,
+    "total_tokens": 299,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 182
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

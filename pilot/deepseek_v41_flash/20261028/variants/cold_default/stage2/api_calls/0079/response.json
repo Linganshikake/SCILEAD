@@ -1,0 +1,32 @@
+{
+  "id": "56e3ef18-f25a-488e-8d45-fafbdea325cc",
+  "object": "chat.completion",
+  "created": 1793194659,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROUGE-2)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one list item. List has (Summarization, XSum, ROGUE-2) with ROGUE not ROUGE. Input uses ROUGE-2. Does not match exactly. Output tuple unchanged: (Summarization, XSum, ROUGE-2). Ensure only answer. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 88,
+    "total_tokens": 640,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 168
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

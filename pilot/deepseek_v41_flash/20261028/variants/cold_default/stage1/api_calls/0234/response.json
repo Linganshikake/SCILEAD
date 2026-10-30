@@ -1,0 +1,32 @@
+{
+  "id": "1c589c98-880b-4a27-8167-e0d1ae663c7d",
+  "object": "chat.completion",
+  "created": 1793194451,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROUGE-2 Recall",
+        "reasoning_content": "We need answer only. Need determine if \"ROUGE-2 Recall\" matches any item exactly. List has ROUGE-2, ROUGE-2 F1, ROUGE-1 Recall, not ROUGE-2 Recall. So output entity unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 327,
+    "completion_tokens": 64,
+    "total_tokens": 391,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 199
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-10-28T12:53:05.628037+00:00",
+  "requested_model": "deepseek-V4.1-Flash",
+  "api_model": "deepseek-flash",
+  "documented_serving_model": "DeepSeek-V4.1-Flash-1017",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "scope": {
+    "papers": 43,
+    "gold_tdmrs": 295,
+    "gold_path": "D:\\C++\\SCILEAD\\pilot\\autodl_setup\\20261021\\stage\\data\\gold\\tdm_annotations.json",
+    "gold_sha256": "603dd077ae174e4beefc24a9a73b7436e1e3cb6c9aaee042adc4d4aa5ea75aaf",
+    "leaderboards": 27,
+    "leaderboard_path": "D:\\C++\\SCILEAD\\pilot\\autodl_setup\\20261021\\stage\\data\\gold\\leaderboards.json",
+    "leaderboard_sha256": "b32320009c1471442e6c110df52d77c64538373b298b4f47865a912761d62657",
+    "scope_policy": "Use existing frozen full43 official evaluation scope; retain failed papers and report coverage. No evaluation executed at A0."
+  },
+  "branches": [
+    "fully_llm",
+    "fully_cs",
+    "partially",
+    "cold_default",
+    "cold_0",
+    "cold_42"
+  ],
+  "input_manifest": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\input_manifest.json",
+  "candidate_sets": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\candidate_sets.json",
+  "generation_config": {
+    "model": "deepseek-flash",
+    "thinking": {
+      "type": "enabled"
+    },
+    "reasoning_effort": "high",
+    "stream": false
+  },
+  "reasoning_rationale": "Official default high; medium is documented to map to high. No tuning runs.",
+  "output_budget": "No client cap; official thinking/high server default 64K. Previous Sol requested 32768; this provider configuration difference is recorded.",
+  "historical_source": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_fully\\20261024_A2_formal43",
+  "original_source_root": "D:\\C++\\SCILEAD\\emnlp2024-leaderboard-generation",
+  "frozen_source_version": "b2a76b52acc736b9cbdcb6bae1c195ac12d3cf25",
+  "prediction_reuse": false,
+  "evidence_reuse": true,
+  "auto_retries": 0,
+  "credentials_stored": false,
+  "normalization_cache": "Per-call checkpoint only; no repeated-field memoization",
+  "versions": {
+    "httpx": "0.28.1",
+    "langchain": "0.1.17",
+    "langchain-core": "0.1.48",
+    "torch": "2.2.0+cpu",
+    "transformers": "4.37.2",
+    "sentence-transformers": "3.0.1",
+    "numpy": "1.26.4"
+  },
+  "request_estimate": "43 Extraction + output-dependent Fully/Partially/3xCold field calls; FullyCS=0 API calls",
+  "format_policy": "Exact JSON array; unique four fields; T/D/M strings; approved numeric Result conversion only, raw immutable"
+}

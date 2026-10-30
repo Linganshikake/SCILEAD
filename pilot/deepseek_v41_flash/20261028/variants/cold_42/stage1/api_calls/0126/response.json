@@ -1,0 +1,32 @@
+{
+  "id": "6d21e078-4959-4bf2-83cd-468864862eb3",
+  "object": "chat.completion",
+  "created": 1793194299,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English→French",
+        "reasoning_content": "We need answer matched item if input matches one. Input \"WMT En-Fr newstest2014\". List has \"WMT'14 English→French\". Need determine match. Semantically same dataset WMT14 English-French newstest2014. But exact? We need if input entity matches one item. It likely refers to WMT'14 English→French. Return matched item exactly. Need no explanation. Ensure unicode arrow. WMT'14 English→French."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 383,
+    "completion_tokens": 108,
+    "total_tokens": 491,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 255
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

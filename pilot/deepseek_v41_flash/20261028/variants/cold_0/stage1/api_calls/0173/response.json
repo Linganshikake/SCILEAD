@@ -1,0 +1,32 @@
+{
+  "id": "27af2b9f-1325-49be-8394-85cc251d7478",
+  "object": "chat.completion",
+  "created": 1793194351,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2002 Dutch NER",
+        "reasoning_content": "We need answer only matched if exact item else input unchanged. Input \"CoNLL 2002 Dutch NER\" not in list? List has \"CoNLL 2002 Spanish NER\". No exact. Output entity unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 551,
+    "completion_tokens": 58,
+    "total_tokens": 609,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 295
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

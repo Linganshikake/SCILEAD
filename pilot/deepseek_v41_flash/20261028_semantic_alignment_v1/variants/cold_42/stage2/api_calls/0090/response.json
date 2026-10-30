@@ -1,0 +1,32 @@
+{
+  "id": "cd64d1ae-1815-460f-89ec-745574fe9893",
+  "object": "chat.completion",
+  "created": 1793197342,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, arXiv, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need determine match. Input summarization arXiv ROUGE-L F1. List has no arXiv dataset. Need return original verbatim. But check? None. Output (Summarization, arXiv, ROUGE-L F1). Need be careful ROUGE spelling? Input \"ROUGE-L F1\". List uses ROGUE-L typo, datasets Gigaword, CNN/DailyMail, XSum. No arXiv. No match. Return input verbatim."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 116,
+    "total_tokens": 886,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

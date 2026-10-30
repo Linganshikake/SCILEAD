@@ -1,0 +1,32 @@
+{
+  "id": "e51064d4-1d30-4309-bacb-ec6d5eb3fb35",
+  "object": "chat.completion",
+  "created": 1793196641,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot filling F1-score",
+        "reasoning_content": "We need answer. Need match input \"Slot filling F1-score\" against list. Candidates include F1-score, etc. Is Slot filling F1-score semantically same as F1-score? Requirements preserve meaningful differences in task identity/metric. \"Slot filling F1-score\" is specific task metric, list has generic F1-score. Does more specific wording match existing standard task when same underlying? Here Slot filling F1-score likely a task/metric combination, but candidate F1-score generic metric. Should not merge distinct entities due task identity. Input not exactly in list. Output original input unchanged. Need only selected item or unchanged input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 379,
+    "completion_tokens": 132,
+    "total_tokens": 511,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 126
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 251
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

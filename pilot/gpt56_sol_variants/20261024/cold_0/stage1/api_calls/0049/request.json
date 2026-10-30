@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.6-sol",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'Sense-number error δ(#S)', 'Geometric mean (AVG)', 'ROUGE-L', 'Exact Match', 'Fuzzy normalized mutual information (F-NMI)', 'V-measure', 'F-score'}\n\nInput: METEOR\n\nAnswer: "
+    }
+  ],
+  "reasoning_effort": "medium",
+  "max_completion_tokens": 32768,
+  "stream": false
+}

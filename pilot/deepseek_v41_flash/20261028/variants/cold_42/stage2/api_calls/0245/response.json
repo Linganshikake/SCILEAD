@@ -1,0 +1,32 @@
+{
+  "id": "f481eddc-a4a9-4df2-ad28-d0bd01549931",
+  "object": "chat.completion",
+  "created": 1793194875,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Joint Slot Filling and Intent Detection, ATIS, Intent Detection Accuracy)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any in list exactly. Input: (Joint Slot Filling and Intent Detection, ATIS, Intent Detection Accuracy). List has (Intent Detection and Slot Filling, ATIS, Accuracy) and (Intent Detection and Slot Filling, ATIS, F1). Not exact. Output tuple unchanged. Need format exactly? \"Only output answer\". Use same tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 101,
+    "total_tokens": 656,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

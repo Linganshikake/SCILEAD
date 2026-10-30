@@ -1,0 +1,32 @@
+{
+  "id": "0c05a514-d7f2-432f-8130-2e50e4ce9a73",
+  "object": "chat.completion",
+  "created": 1793197358,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), CoNLL-2003 - English, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input NER CoNLL-2003 Test F1. Candidate (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Does \"Test F1\" match F1? Need consider splits. Requirement do not merge splits. Input specifies Test F1; candidate just F1 no split. Is this clear semantic match? Need infer standard CoNLL-2003 NER benchmark usually test F1. Candidate label CoNLL-2003 - English F1. Task and dataset match. Metric F1 vs Test F1: Test refers split, but candidate lacks split. Missing details must not be guessed when multiple candidates remain plausible. There is only one CoNLL-2003 candidate. It likely matches. Return listed tuple verbatim: (Named Entity Recognition (NER), CoNLL-2003 - English, F1). Need output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 211,
+    "total_tokens": 984,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 191
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

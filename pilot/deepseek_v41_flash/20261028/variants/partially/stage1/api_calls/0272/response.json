@@ -1,0 +1,32 @@
+{
+  "id": "a84cde72-fb1f-4f09-9494-a40a9f950a31",
+  "object": "chat.completion",
+  "created": 1793194659,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot filling",
+        "reasoning_content": "We need answer match item list if exact? Input \"Slot Filling\". List has 'Slot filling' lowercase f. Also 'Slot Filling and Intent Detection' etc. Need determine if matches one of items. Exact case? Likely semantics matching. \"If input entity matches one of items\" entity matches likely exact or normalized. Item 'Slot filling' differs capitalization only. Could output matched item in list: 'Slot filling'. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 94,
+    "total_tokens": 494,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 400
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

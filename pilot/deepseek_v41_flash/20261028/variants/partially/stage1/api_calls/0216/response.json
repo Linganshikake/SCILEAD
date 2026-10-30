@@ -1,0 +1,32 @@
+{
+  "id": "9f2ce871-3408-45a5-869e-cfb5fdb9696d",
+  "object": "chat.completion",
+  "created": 1793194562,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Named Entity Recognition (NER)",
+        "reasoning_content": "We need answer matched item if matches list. Input \"Named Entity Recognition (NER)\" list has \"Named Entity Recognition\" but not with (NER). Rule: if input entity matches one of items. Does it match? Exact? It says matches one of items. \"Named Entity Recognition (NER)\" not exactly equal to \"Named Entity Recognition\". Should output entity unchanged. But maybe semantic match? Instruction: If input entity matches one of the items in list, answer matched item. Else output entity without changing. Match likely exact string. So output \"Named Entity Recognition (NER)\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 342,
+    "completion_tokens": 127,
+    "total_tokens": 469,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 120
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 342
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

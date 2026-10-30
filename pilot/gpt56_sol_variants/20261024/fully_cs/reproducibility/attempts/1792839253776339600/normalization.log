@@ -1,0 +1,11 @@
+You are offline and the cache for model files in Transformers v4.22.0 has been updated while your local cache seems to be the one of a previous version. It is very likely that all your calls to any `from_pretrained()` method will fail. Remove the offline mode and enable internet connection to have your cache be updated automatically, then you can go back to offline mode.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+LOAD_CPU_FP32 {'physical_available_GiB': 0.9251441955566406, 'commit_available_GiB': 9.103996276855469, 'working_set_GiB': 0.27202606201171875, 'peak_working_set_GiB': 0.2720832824707031, 'private_GiB': 0.6859092712402344, 'peak_private_GiB': 0.686126708984375}
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\fully_cs\run_cs.py", line 74, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\fully_cs\run_cs.py", line 17, in main
+    save(RUN/'blocked_resources.json',{'status':'BLOCKED_RESOURCES','actual':before_load,'minimum_physical_GiB':1.0,'minimum_commit_GiB':6.0});raise RuntimeError('Insufficient memory headroom; model not loaded')
+                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Insufficient memory headroom; model not loaded

@@ -1,0 +1,32 @@
+{
+  "id": "590b7046-4b48-4cb0-b3b2-8011458574c1",
+  "object": "chat.completion",
+  "created": 1793196652,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003",
+        "reasoning_content": "We need answer only selected item or unchanged. Input CoNLL-2003. List has CoNLL-2003 - German, CoNLL-2002 etc, CoNLL03 NER, CoNLL++. Need semantic match? Input \"CoNLL-2003\" ambiguous: could refer CoNLL-2003 shared task (English/German?) List candidate \"CoNLL-2003 - German\" is specific German version. Also \"CoNLL03 NER\" likely same task (NER). Need determine if clear semantic match. Input lacks language, and list has CoNLL-2003 - German. Do not guess ambiguous abbreviation/missing experimental condition. \"CoNLL-2003\" might match \"CoNLL03 NER\" because both denote CoNLL-2003 NER task? But candidate is more specific? Let's parse instructions: For task names, more specific wording may match existing standard task when both denote same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because names similar. Do not guess ambiguous abbreviation or missing experimental condition.\n\nInput CoNLL-2003. Candidate CoNLL-2003 - German includes language. CoNLL-2003 has English and German datasets; missing language. Candidate CoNLL03 NER lacks language but implies NER. CoNLL-2003 could be the shared task generally. There is no exact candidate \"CoNLL-2003\". Should we output unchanged due ambiguity? Likely yes. If input \"CoNLL-2003\" matches \"CoNLL-2003 - German\"? Missing language means not clear. \"CoNLL03 NER\" is a standard task name, but CoNLL-2003 also had other tasks? CoNLL-2003 shared task was NER (language-independent NER? actually CoNLL-2003 shared task: language-independent named entity recognition). It covered English and German. \"CoNLL03 NER\" may denote the task generally, not dataset. But candidate \"CoNLL03 NER\" could be semantic match to CoNLL-2003. Need decide. If input entity matches one item. Item list includes CoNLL03 NER. The input \"CoNLL-2003\" is an alias for CoNLL03 NER? It could be. But there is also \"CoNLL-2003 - German\" which is specific. Ambiguous between general NER and German. The instructions: If list empty/no candidate/ambiguous, output original unchanged. I'd output CoNLL-2003 unchanged. Need final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 718,
+    "completion_tokens": 566,
+    "total_tokens": 1284,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 559
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

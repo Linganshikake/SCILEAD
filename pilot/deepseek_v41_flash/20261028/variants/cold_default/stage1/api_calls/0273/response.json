@@ -1,0 +1,32 @@
+{
+  "id": "d77f47f6-b7e7-4854-85f8-938932cf3e92",
+  "object": "chat.completion",
+  "created": 1793194558,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Penn Treebank",
+        "reasoning_content": "We need answer matched item if input matches one item. Input \"Penn Treebank\". List has \"Penn Treebank converted to Stanford Dependencies version 3.3.0\" and \"PTB\". Does \"Penn Treebank\" match exactly one item? It does not exactly equal any item. Instruction: if input entity matches one of items, answer matched. Else output entity unchanged. Since no exact match. Need output \"Penn Treebank\". Don't explain."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 847,
+    "completion_tokens": 98,
+    "total_tokens": 945,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 207
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

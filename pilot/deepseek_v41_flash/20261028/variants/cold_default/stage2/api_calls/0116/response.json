@@ -1,0 +1,32 @@
+{
+  "id": "8bfbb875-0fc3-44e1-a772-c4d4fd1cc5ba",
+  "object": "chat.completion",
+  "created": 1793194705,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Multi-News, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches one item exactly. It doesn't: Summarization, Multi-News, ROUGE-2 F1 not in list. Output tuple unchanged. Need preserve exact spelling \"ROUGE-2 F1\". Answer just tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 75,
+    "total_tokens": 630,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

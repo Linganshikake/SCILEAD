@@ -1,0 +1,32 @@
+{
+  "id": "0a9f055c-b5ef-41b8-ab12-5ece8175c21f",
+  "object": "chat.completion",
+  "created": 1793196732,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "NCBI-disease",
+        "reasoning_content": "We need answer only. Need match input NCBI-disease to item list. Check list no NCBI-disease. Could it match BC5CDR? BC5CDR is biomedical disease/chemical NER dataset, NCBI-disease is a different disease NER dataset. No candidate. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 499,
+    "completion_tokens": 67,
+    "total_tokens": 566,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 243
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

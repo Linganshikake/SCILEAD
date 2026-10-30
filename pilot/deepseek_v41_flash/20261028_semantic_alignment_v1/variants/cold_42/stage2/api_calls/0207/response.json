@@ -1,0 +1,32 @@
+{
+  "id": "9b0bdb82-db1b-4e78-82c0-4156b4c0513b",
+  "object": "chat.completion",
+  "created": 1793198113,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), WNUT-16 - English, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Named Entity Recognition, WNUT-16, F1). List has (Named Entity Recognition (NER), WNUT-16 - English, F1). Need determine match. Task NER same, dataset WNUT-16 vs WNUT-16 - English likely same underlying benchmark? Need be careful: WNUT-16 language English is inherent maybe same. Metric F1 same. Return listed tuple verbatim."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 119,
+    "total_tokens": 890,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

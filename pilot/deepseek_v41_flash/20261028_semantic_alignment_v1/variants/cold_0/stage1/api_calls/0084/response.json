@@ -1,0 +1,32 @@
+{
+  "id": "ed5210eb-4ff2-4d62-b3d0-3ad3dab8fd7b",
+  "object": "chat.completion",
+  "created": 1793196743,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent (Acc)",
+        "reasoning_content": "We need answer only selected item or unchanged input. Input \"Intent (Acc)\". Need match to item? List has Accuracy, Sentence accuracy, Slot (F1). \"Intent (Acc)\" likely metric Intent Accuracy? Does it match Accuracy? Need semantic matching, preserve meaningful differences. \"Intent (Acc)\" means intent accuracy, maybe not same as Accuracy generic? Candidate \"Accuracy\" maybe broad. But task names? It's metric abbreviation. Do not guess ambiguous abbreviation or missing experimental condition. If clear semantic match, output candidate. \"Intent (Acc)\" could be intent accuracy, not exactly \"Accuracy\" because it specifies intent. However list has \"Sentence accuracy\" and \"Slot (F1)\" likely from intent/slot task. \"Intent (Acc)\" perhaps metric \"Intent accuracy\" but no candidate exactly. Could match \"Accuracy\" if Acc abbreviation. But \"Intent\" qualifier meaningful? Need decide.\n\nWe have item list with \"Accuracy\" and \"Sentence accuracy\". Input Intent (Acc) = Intent Accuracy. Neither is exact. The closest candidate is Accuracy? It is an accuracy metric, but \"Intent\" identifies task-specific accuracy; preserving meaningful difference suggests not merge to generic Accuracy. The instructions: \"For task names, a more specific wording may match an existing standard task when both denote the same underlying task.\" This is metrics, not task. \"Do not guess an ambiguous abbreviation or missing experimental condition.\" Acc is unambiguous as accuracy? Intent (Acc) may denote \"Intent accuracy\" maybe standard in intent detection. Candidate \"Accuracy\" is generic but could be same measurement? Hmm.\n\nWe need likely output unchanged if no exact semantic match. But semantic matching allows abbreviations, aliases. Is \"Intent (Acc)\" semantically same as \"Accuracy\"? It lacks \"Intent\" in candidate. Candidate \"Slot (F1)\" suggests convention \"Slot (F1)\" is a metric for slot F1. \"Intent (Acc)\" would be a metric for intent accuracy, but list does not have \"Intent (Acc)\" nor \"Intent accuracy\". It has \"Accuracy\" maybe generic. Does \"Intent (Acc)\" match \"Accuracy\"? Not fully because Intent task context. However if candidate \"Accuracy\" alone might be used for intent accuracy in some table; but no context. The safer per ambiguous missing condition: preserve original. So output \"Intent (Acc)\".\n\nNeed output only selected or unchanged, no quotes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 385,
+    "completion_tokens": 492,
+    "total_tokens": 877,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 487
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

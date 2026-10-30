@@ -1,0 +1,32 @@
+{
+  "id": "f591d21c-f8c7-48fe-a4b6-09a5f076421d",
+  "object": "chat.completion",
+  "created": 1793197348,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, AESLC, ROUGE-1 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, AESLC, ROUGE-1 F1). List has summarization Gigaword/CNN/XSum with ROGUE variants. AESLC dataset not in list. Metric ROUGE-1 F1 no exact? There is ROGUE-1 typo maybe ROUGE-1 but dataset AESLC absent. No match. Return original tuple verbatim: (Summarization, AESLC, ROUGE-1 F1). Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 127,
+    "total_tokens": 899,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 111
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

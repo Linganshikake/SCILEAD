@@ -1,0 +1,32 @@
+{
+  "id": "35223387-80f5-4e61-b080-a9400a11fcd1",
+  "object": "chat.completion",
+  "created": 1793197642,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(NER German, CoNLL-2003, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (NER German, CoNLL-2003, F1). List has (Named Entity Recognition (NER), CoNLL-2003 - English, F1). German vs English mismatch. Dataset CoNLL-2003 but language German vs English. There may be CoNLL-2003 German? Candidate explicitly English. Need not merge language. No candidate matches. Return original tuple verbatim. Ensure exact input. \"NER German\" as task. Output (NER German, CoNLL-2003, F1)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 136,
+    "total_tokens": 907,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

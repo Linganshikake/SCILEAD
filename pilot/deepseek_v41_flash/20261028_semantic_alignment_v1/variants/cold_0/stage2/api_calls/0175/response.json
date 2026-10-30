@@ -1,0 +1,32 @@
+{
+  "id": "f42684dc-bcff-498a-9d30-2b8feb33f200",
+  "object": "chat.completion",
+  "created": 1793197445,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Gigaword, ROGUE-1)",
+        "reasoning_content": "We need answer only one tuple. Need semantically match. Input (Abstractive Summarization, Gigaword, ROUGE-1). List has (Summarization, Gigaword, ROGUE-1) likely typo ROGUE for ROUGE. Need match task abstractive summarization to summarization? Dataset Gigaword, metric ROUGE-1. Candidates: Summarization Gigaword ROGUE-1. Also ROUGE-L/2. Metric ROUGE-1 matches ROGUE-1 (spelling). Task Abstractive Summarization vs Summarization: broad standard label, dataset+metric compatible, likely match. Return exact listed tuple: (Summarization, Gigaword, ROGUE-1). No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 173,
+    "total_tokens": 946,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 158
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

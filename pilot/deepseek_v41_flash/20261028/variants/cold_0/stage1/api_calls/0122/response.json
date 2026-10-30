@@ -1,0 +1,32 @@
+{
+  "id": "fca8a376-ca5a-40a0-8e7f-edc5a6bda413",
+  "object": "chat.completion",
+  "created": 1793194285,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Named Entity Recognition",
+        "reasoning_content": "We need answer only matched item or input unchanged. List has 'Named Entity Recognition' capital R vs input 'Named entity recognition' lowercase e/r. Need determine if matches one item. Exact? It says matches one of items. Usually case-insensitive? Entity input semantic. The list contains 'Named Entity Recognition'. Output matched item. Need output list item exactly. \"Named Entity Recognition\". No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 240,
+    "completion_tokens": 85,
+    "total_tokens": 325,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 240
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

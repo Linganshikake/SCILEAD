@@ -1,0 +1,32 @@
+{
+  "id": "c4fa8763-50a2-494d-9d79-edd4cde4e17a",
+  "object": "chat.completion",
+  "created": 1793194234,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Extractive question answering",
+        "reasoning_content": "We need answer exact matched item if input matches list ignoring case? Input \"Extractive Question Answering\" list has \"Extractive question answering\" lowercase q/a. It matches case-insensitive semantically. Need output matched item in list exactly. Since instruction: if input entity matches one items, answer matched item. \"Extractive Question Answering\" vs \"Extractive question answering\": capitalization difference. Usually matching likely case-insensitive? Need decide. Output matched item exact: 'Extractive question answering'. No explanation. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 173,
+    "completion_tokens": 111,
+    "total_tokens": 284,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 106
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 173
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "b54c26e1-c643-4135-bd77-3117885a3fe1",
+  "object": "chat.completion",
+  "created": 1793194252,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural Language Inference",
+        "reasoning_content": "We need answer. Need match item list. Input \"Textual Entailment\" is synonym of Natural Language Inference. But instruction: if input entity matches one of items in list, answer matched item. Does \"matches\" mean exact? It says if input entity matches one of the items. Else output entity without changing it. Textual Entailment is not exact string in list, but semantically it's NLI. Need decide. Likely task wants map to Natural Language Inference because synonymous. We should output matched item in list. No explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 190,
+    "completion_tokens": 116,
+    "total_tokens": 306,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 190
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "15b2cab2-1c3d-4bad-b826-467c92c76022",
+  "object": "chat.completion",
+  "created": 1793197324,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need match input to list. List has (Summarization, XSum, ROGUE-1) misspelled ROGUE. Input ROUGE-1 correct. Semantic match same task dataset metric, superficial spelling difference. Return listed tuple verbatim exact spelling punctuation. So output (Summarization, XSum, ROGUE-1). Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 95,
+    "total_tokens": 865,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

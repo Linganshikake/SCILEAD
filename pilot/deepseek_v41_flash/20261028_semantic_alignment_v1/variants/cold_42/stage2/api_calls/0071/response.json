@@ -1,0 +1,32 @@
+{
+  "id": "cb389f3c-20ad-4c3e-811b-7410a9350e16",
+  "object": "chat.completion",
+  "created": 1793197314,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, NEWSROOM, ROUGE-2 F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, NEWSROOM, ROUGE-2 F1). List has summarization datasets Gigaword, CNN/DailyMail, XSum with ROGUE-L/1/2. No NEWSROOM. Output original tuple verbatim. Need ensure format tuple. \"ROUGE-2 F1\" vs ROGUE-2 perhaps? But dataset NEWSROOM absent, so no match. Return (Summarization, NEWSROOM, ROUGE-2 F1)"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 132,
+    "total_tokens": 905,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

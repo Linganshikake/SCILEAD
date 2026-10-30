@@ -1,0 +1,32 @@
+{
+  "id": "4b753673-b76b-46b8-963c-fdbe3e0bf0d0",
+  "object": "chat.completion",
+  "created": 1793194884,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, XSum, ROUGE-L F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item exactly? Item list uses \"Summarization, XSum, ROGUE-L\" and variants. Input is (Abstractive Summarization, XSum, ROUGE-L F1). Does it match one? Need exact match likely no because Abstractive Summarization vs Summarization, ROUGE-L F1 vs ROGUE-L. Output tuple unchanged. Need only answer. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 108,
+    "total_tokens": 663,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "1811.09242.pdf",
+  "record": 4,
+  "field": "Metric",
+  "original": "Sense-number error δ(#S)",
+  "candidate_serialized": "{'Development Exact Match', 'Question-answering score', 'Chunk-level F1 score', 'Spearman correlation', 'Average length', 'LAS', 'Test Recall', 'V-measure', 'ROUGE-1', 'Entity-level F1', 'METEOR', 'ROUGE-2', 'Aggregate score', 'UAS', 'Geometric mean (AVG)', 'Mention-level F1 score', 'Div-1', 'ROUGE-L F1', 'ROUGE-2 F1', 'BLEU-4', 'ROUGE-L', 'Test perplexity', 'Test F1', 'Matthews correlation coefficient', 'BLEU', 'Test Exact Match', 'ROUGE-1 F1', 'Test BLEU', 'Accuracy', 'Div-2', 'Human judgment ranking score', 'Validation perplexity', 'Entropy-4', 'NIST-4', 'F1 score', 'Exact Match', 'Mismatched accuracy', 'Correlation', 'Test Precision', 'Development F1'}",
+  "candidate_sha256": "eb662f653f93dcca447f325e63cba032f8014c934a4e3888ec3674dbd3cd8891",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Development Exact Match', 'Question-answering score', 'Chunk-level F1 score', 'Spearman correlation', 'Average length', 'LAS', 'Test Recall', 'V-measure', 'ROUGE-1', 'Entity-level F1', 'METEOR', 'ROUGE-2', 'Aggregate score', 'UAS', 'Geometric mean (AVG)', 'Mention-level F1 score', 'Div-1', 'ROUGE-L F1', 'ROUGE-2 F1', 'BLEU-4', 'ROUGE-L', 'Test perplexity', 'Test F1', 'Matthews correlation coefficient', 'BLEU', 'Test Exact Match', 'ROUGE-1 F1', 'Test BLEU', 'Accuracy', 'Div-2', 'Human judgment ranking score', 'Validation perplexity', 'Entropy-4', 'NIST-4', 'F1 score', 'Exact Match', 'Mismatched accuracy', 'Correlation', 'Test Precision', 'Development F1'}\n\nInput: Sense-number error δ(#S)\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "e0c1805aa5a9c911e6b80d6d64a78c99df45276825542b97222788cab5810886"
+}

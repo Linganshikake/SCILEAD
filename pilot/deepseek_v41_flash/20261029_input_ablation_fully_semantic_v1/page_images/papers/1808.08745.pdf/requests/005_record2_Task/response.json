@@ -1,0 +1,32 @@
+{
+  "id": "ec36c02e-f287-43a2-9957-6f0ba1259fdb",
+  "object": "chat.completion",
+  "created": 1793286189,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Summarization",
+        "reasoning_content": "We need answer only matched item or None. Input \"Extreme summarization\" matches Summarization? Need semantic matching. Extreme summarization is a specific task (XSum) one-sentence summaries. Candidate \"Summarization\" broad. Requirement: task names, more specific wording may match existing standard task when both denote same underlying task. Preserve meaningful differences in dataset identity, language, version, split, metric. Is \"Extreme summarization\" a distinct task? It's a variant of summarization with extreme brevity, often dataset XSum. Candidate only Summarization. Match? Likely yes, \"Extreme summarization\" is a type of summarization. But need not merge distinct entities merely similar. Does \"Extreme summarization\" denote same underlying task as Summarization? It's more specific, but candidate is generic summarization. In task list, if asked task names, a more specific wording may match existing standard task when both denote same underlying task. Extreme summarization is summarization. So answer Summarization. Need exactly item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 440,
+    "completion_tokens": 215,
+    "total_tokens": 655,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 212
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 184
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

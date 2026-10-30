@@ -1,0 +1,13 @@
+{
+  "source": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1\\prompt_additions.json",
+  "source_sha256": "5cf4cc589ec5ca289a4d7dd9ce9a7b95ced4ffc03995923ffe70eaf7e98f7f73",
+  "changed_key": "normalization-system-prompt",
+  "fully_addition": "\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output None. Do not invent a new canonical name. Output only the selected item or None, without quotes, explanation or extra formatting.",
+  "verbatim_inherited_requirements": "\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.",
+  "adaptation": "Unmatched/ambiguous names return None as in Fully; no dynamic candidate insertion; no joint TDM stage or extra context.",
+  "not_migrated": [
+    "Return unchanged input and extend name sets",
+    "Second-stage joint TDM candidate list"
+  ],
+  "official_fully_logic": "exact candidates accepted; other answers null; Result untouched; duplicate field positions called separately"
+}

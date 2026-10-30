@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_42",
+  "paper": "1709.04109.pdf",
+  "record": 2,
+  "field": "Task",
+  "original": "Part-of-Speech Tagging",
+  "candidate_serialized": "{'Language Modeling', 'Abstractive Summarization', 'Joint Slot Filling and Intent Detection', 'Relation classification', 'Machine Translation', 'Question Generation', 'Chunking', 'Dialogue Act Classification', 'Extractive Summarization', 'NER English', 'Slot Filling', 'Extractive question answering', 'Named Entity Recognition', 'Dialogue Response Generation', 'Paraphrase Detection', 'Intent Detection', 'Dependency Parsing', 'PoS tagging', 'Cloze-style question answering', 'Summarization', 'Entity typing', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Abstractive Question Answering', 'Word Sense Induction', 'Natural Language Inference', 'Linguistic Acceptability', 'Neural Machine Translation', 'NER German', 'Sentiment Analysis', 'Fine-Grained NER (FGN)'}",
+  "candidate_sha256": "fba96a7b24bd865e9174e5d6fc35161d0b529f7841cdb0fda0cb79b2f69c0f17",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Language Modeling', 'Abstractive Summarization', 'Joint Slot Filling and Intent Detection', 'Relation classification', 'Machine Translation', 'Question Generation', 'Chunking', 'Dialogue Act Classification', 'Extractive Summarization', 'NER English', 'Slot Filling', 'Extractive question answering', 'Named Entity Recognition', 'Dialogue Response Generation', 'Paraphrase Detection', 'Intent Detection', 'Dependency Parsing', 'PoS tagging', 'Cloze-style question answering', 'Summarization', 'Entity typing', 'Combinatory Categorial Grammar (CCG) Supertagging', 'Abstractive Question Answering', 'Word Sense Induction', 'Natural Language Inference', 'Linguistic Acceptability', 'Neural Machine Translation', 'NER German', 'Sentiment Analysis', 'Fine-Grained NER (FGN)'}\n\nInput: Part-of-Speech Tagging\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "834292246a9fc4a656db89f69030798e01f1de65b655b8a32b95aaf6dcdcf77b"
+}

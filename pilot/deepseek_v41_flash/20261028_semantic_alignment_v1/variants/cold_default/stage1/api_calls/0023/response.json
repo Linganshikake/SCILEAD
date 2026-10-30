@@ -1,0 +1,32 @@
+{
+  "id": "5cb57ea3-02ea-4c03-bc4c-de7ea1dc45f5",
+  "object": "chat.completion",
+  "created": 1793196624,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 German",
+        "reasoning_content": "We need answer only. Need determine if input matches list. Items: WSJ, CoNLL-2002 Spanish, ON5E, RE, ON4C, CoNLL03 NER, CoNLL00, CoNLL-2002 Dutch, WN16, WE, WN17. Input CoNLL-2003 German. Is there semantic match? CoNLL03 NER is likely CoNLL-2003 shared task on NER, languages English/German? But input specifies German. Candidate CoNLL03 NER denotes task perhaps English? Need preserve language differences. CoNLL-2003 NER included English and German? Actually CoNLL-2003 shared task: language-independent NER, data English and German. The candidate \"CoNLL03 NER\" could be overall task including both languages? But input \"CoNLL-2003 German\" more specific language. If task names, more specific wording may match existing standard task when same underlying task. But preserve meaningful differences in dataset identity, language, version, split and metric. Here candidate CoNLL03 NER is generic, input German. Does it match? We should not guess ambiguous. There is no exact \"CoNLL-2003 German\" in list. Candidate \"CoNLL03 NER\" may denote CoNLL-2003 NER, but German is a specific language subset. However the list has CoNLL-2002 Spanish and Dutch as separate languages, suggesting language is important. It lacks German. So output unchanged: CoNLL-2003 German. Need only entity."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 364,
+    "completion_tokens": 343,
+    "total_tokens": 707,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 335
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 236
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

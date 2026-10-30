@@ -1,0 +1,19 @@
+{
+  "phase": "parent_resume_check",
+  "actual": {
+    "physical_available_GiB": 6.666202545166016,
+    "commit_available_GiB": 18.665302276611328,
+    "working_set_GiB": 0.022243499755859375,
+    "peak_working_set_GiB": 0.022792816162109375,
+    "private_GiB": 0.015056610107421875,
+    "peak_private_GiB": 0.015293121337890625
+  },
+  "policy": {
+    "minimum_physical_GiB": 4.5,
+    "minimum_commit_GiB": 7.5,
+    "cs_physical_budget_GiB": 3.5,
+    "cs_commit_budget_GiB": 6.5,
+    "concurrent_parent_api_reserve_GiB": 1.0,
+    "basis": "Conservative operational gate based on prior CPU FP32 peak working set 3.047 GiB and peak private commit 5.459 GiB, safety margins and one parent API process. Not a proven exact OOM boundary."
+  }
+}

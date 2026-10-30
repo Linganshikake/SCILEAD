@@ -1,0 +1,32 @@
+{
+  "id": "ceb24c2a-50de-40eb-bb18-320acb89e620",
+  "object": "chat.completion",
+  "created": 1793197623,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT2014 En→De, TER)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match list. Input: Machine Translation, WMT2014 En→De, TER. Candidates MT WMT’14 EN-DE BLEU; IWSLT etc; WMT EN-FR BLEU. Dataset/task same underlying benchmark? WMT'14 EN-DE yes. Metric TER vs BLEU different. Requirement compare all three fields jointly, don't merge metric definitions. If metric differs, no match. Return original tuple verbatim. Need exact output tuple. Use unicode arrow? Input \"(Machine Translation, WMT2014 En→De, TER)\". Output only same."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 149,
+    "total_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 134
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

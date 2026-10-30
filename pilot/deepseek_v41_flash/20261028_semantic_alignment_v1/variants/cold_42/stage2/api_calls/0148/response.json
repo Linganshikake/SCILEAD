@@ -1,0 +1,32 @@
+{
+  "id": "211f1c82-3d96-402f-81fe-cdbdfe165137",
+  "object": "chat.completion",
+  "created": 1793197436,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, CoNLL 2002 Spanish NER, F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input NER CoNLL 2002 Spanish NER F1. Candidates include NER CoNLL-2003 English, Ontonotes, WNUT. No CoNLL 2002 Spanish. Not match due dataset identity language/version. Return original verbatim. Ensure exact input: (Named Entity Recognition, CoNLL 2002 Spanish NER, F1)"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 775,
+    "completion_tokens": 109,
+    "total_tokens": 884,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 135
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

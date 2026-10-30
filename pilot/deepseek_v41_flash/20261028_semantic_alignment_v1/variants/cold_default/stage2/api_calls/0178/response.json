@@ -1,0 +1,32 @@
+{
+  "id": "0b3a099d-219c-4547-8f1d-5e074c812321",
+  "object": "chat.completion",
+  "created": 1793197464,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Word Sense Induction, SemEval 2010 Task 14, Average)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input: Word Sense Induction, SemEval 2010 Task 14, Average. Candidates include Word Sense Induction, SemEval 2013 Task 13 variants AVG, FNMI, FBC. Dataset year/task differs (2010 Task 14 vs 2013 Task 13). Not same underlying benchmark? Need not match. Also metric Average vs AVG could match, but dataset differs. Return input verbatim. Need exact: (Word Sense Induction, SemEval 2010 Task 14, Average). Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 141,
+    "total_tokens": 915,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "00ac67f8-a01b-4ba4-ab7a-da8769eacea0",
+  "object": "chat.completion",
+  "created": 1793194300,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "General language understanding",
+        "reasoning_content": "We need answer. Need match input to item. \"General language understanding\" not exact item. Item has GLUE Benchmark (General Language Understanding Evaluation). But instruction: if input entity matches one items list, answer matched item; else output entity unchanged. Does \"General language understanding\" match \"GLUE Benchmark\"? It's not exact. Likely no, output unchanged. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 232,
+    "completion_tokens": 82,
+    "total_tokens": 314,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 232
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

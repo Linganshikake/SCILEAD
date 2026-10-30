@@ -1,0 +1,32 @@
+{
+  "id": "3855d062-7434-4fb1-a55f-41d5620e55f4",
+  "object": "chat.completion",
+  "created": 1793197254,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Abstractive Summarization, CNN/DailyMail, ROUGE-L). List has (Summarization, CNN/DailyMail, ROGUE-L) note typo ROGUE-L. Abstractive Summarization vs Summarization same underlying benchmark? CNN/DailyMail, metric ROUGE-L. Candidate (Summarization, CNN/DailyMail, ROGUE-L) matches despite ROGUE typo likely intended ROUGE. Need output entire listed tuple verbatim. Only one. Answer: (Summarization, CNN/DailyMail, ROGUE-L). Ensure exact spelling curly? List: \"(Summarization, CNN/DailyMail, ROGUE-L)\" yes. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 168,
+    "total_tokens": 941,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 153
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

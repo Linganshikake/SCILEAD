@@ -1,0 +1,32 @@
+{
+  "id": "095e3ddc-441d-426a-ab94-d8f36b2bb832",
+  "object": "chat.completion",
+  "created": 1793194610,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extractive question answering, SQuAD 1.1, EM)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches any item. List contains many tuples but not (Extractive question answering, SQuAD 1.1, EM). So output unchanged tuple. Ensure exact formatting."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 62,
+    "total_tokens": 617,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

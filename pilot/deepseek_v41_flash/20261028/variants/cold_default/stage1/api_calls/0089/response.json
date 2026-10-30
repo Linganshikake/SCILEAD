@@ -1,0 +1,32 @@
+{
+  "id": "8a725064-0635-4b5f-8356-c4e6758749b8",
+  "object": "chat.completion",
+  "created": 1793194242,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy (mismatched)",
+        "reasoning_content": "We need answer. Input entity \"Accuracy (mismatched)\" matches? Item list has Accuracy. But exact item? \"If input entity matches one of items in list, answer matched item. Else output entity unchanged.\" Input contains parenthetical mismatched, not exact. Need determine if match maybe entity is Accuracy (mismatched) not in list. Output unchanged. Must not explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 184,
+    "completion_tokens": 85,
+    "total_tokens": 269,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 184
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

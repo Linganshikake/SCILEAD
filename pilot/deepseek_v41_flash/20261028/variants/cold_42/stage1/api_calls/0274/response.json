@@ -1,0 +1,32 @@
+{
+  "id": "a8a46dc0-2af4-4317-b1e8-d4d2835e373e",
+  "object": "chat.completion",
+  "created": 1793194525,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural Language Inference",
+        "reasoning_content": "We need answer. Need match item list. Input \"Natural language inference\". List contains 'Natural Language Inference' capitalization differs. Need determine if matches one item likely case-insensitive? \"If input entity matches one of items\" Usually match exact? They provided input lower language inference vs item title case. Need output matched item in list if matches. Since semantically same, output 'Natural Language Inference'. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 346,
+    "completion_tokens": 86,
+    "total_tokens": 432,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 218
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "48d518be-2fbe-4bcd-9286-42719acf8996",
+  "object": "chat.completion",
+  "created": 1793194306,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CNN-DailyMail",
+        "reasoning_content": "We need answer only. Need match input entity to item list if matches. Input \"CNN-DailyMail\". List has 'CNN/DailyMail' (slash), not exact? Also maybe \"CNN/DailyMail\" matches? They ask if input entity matches one of items. Exact? Input is CNN-DailyMail with hyphen, list has CNN/DailyMail slash. No exact match. Output entity without changing it: CNN-DailyMail. Need no explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 403,
+    "completion_tokens": 100,
+    "total_tokens": 503,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 403
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

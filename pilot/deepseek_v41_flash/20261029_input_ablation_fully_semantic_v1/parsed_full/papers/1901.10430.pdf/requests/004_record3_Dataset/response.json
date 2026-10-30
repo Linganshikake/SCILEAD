@@ -1,0 +1,32 @@
+{
+  "id": "11971932-cb18-4e81-85a0-b3f6e6d9f08f",
+  "object": "chat.completion",
+  "created": 1793286183,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "None",
+        "reasoning_content": "We need answer only matched item. Need compare input IWSLT'14 German-English against list has IWSLT’14 EN-DE. Semantic match yes language pair abbreviated EN-DE = German-English? EN-DE means English-German, order input German-English i.e. DE-EN. Is order significant? Dataset identity likely IWSLT14 German-English corresponds IWSLT14 DE-EN, but list is EN-DE. Hmm match by meaning entity identity. WMT entries directions distinct. For translation datasets, source-target order can matter. Input German-English vs candidate EN-DE is reverse. Could still same underlying task? Need preserve meaningful differences in dataset identity, language, version, split, metric. Direction may be distinct entity. List only IWSLT’14 EN-DE. Input IWSLT'14 German-English. Are these same? IWSLT14 German-English often denotes De-En. Candidate EN-DE denotes En-De. Since list has exact IWSLT14 EN-DE but input German-English, not match if direction matters. However maybe typo? Need decide. The benchmark datasets often \"IWSLT'14 De-En\" distinct from \"IWSLT'14 En-De\". List has EN-DE only. Input \"German-English\" = DE-EN, reverse. Not clear match. Output None. But maybe \"German-English\" can mean German to English, and \"EN-DE\" maybe English and German not order? But list has WMT’14 EN-DE and WMT’14 EN-FR, WMT’16 RO-EN etc indicating direction specified. Thus preserve direction. So None.\n\nNeed final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 751,
+    "completion_tokens": 354,
+    "total_tokens": 1105,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 352
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 239
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

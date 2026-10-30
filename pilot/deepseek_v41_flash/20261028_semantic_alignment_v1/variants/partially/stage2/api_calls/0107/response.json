@@ -1,0 +1,32 @@
+{
+  "id": "fc361d65-e2aa-499a-a14d-3c0f9773d935",
+  "object": "chat.completion",
+  "created": 1793197619,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, arXiv, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need semantic match among list. Input Summarization arXiv ROGUE-1. No arXiv dataset in list. Candidates summarization Gigaword, CNN/DailyMail, XSum with ROGUE variants. arXiv not same dataset. Return original tuple verbatim: (Summarization, arXiv, ROGUE-1). Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 88,
+    "total_tokens": 857,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 257
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

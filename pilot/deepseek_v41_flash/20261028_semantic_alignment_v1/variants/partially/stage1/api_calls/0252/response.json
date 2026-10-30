@@ -1,0 +1,32 @@
+{
+  "id": "651bd859-7ad8-41f5-8cea-82cac30405b5",
+  "object": "chat.completion",
+  "created": 1793197214,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Intent detection",
+        "reasoning_content": "We need answer only selected. Need determine if \"Intent detection\" matches item. List has \"Joint intent detection and slot filling\". Input Intent detection alone. Is it semantic match to joint? More specific includes intent detection plus slot filling; requirement: do not merge distinct entities, missing experimental condition. Intent detection alone is not same as joint task. No other. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 489,
+    "completion_tokens": 78,
+    "total_tokens": 567,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 233
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "bb215dbd-cb76-47d5-807b-3783c0910694",
+  "object": "chat.completion",
+  "created": 1793197452,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Newsroom, ROUGE-2)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any list. Input (Abstractive Summarization, Newsroom, ROUGE-2). List has summarization datasets Gigaword, CNN/DailyMail, XSum. Newsroom not present. Task abstractive summarization broad, metric ROUGE-2, but dataset Newsroom none. No match. Return original tuple verbatim. Need exact spelling: (Abstractive Summarization, Newsroom, ROUGE-2). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 119,
+    "total_tokens": 891,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

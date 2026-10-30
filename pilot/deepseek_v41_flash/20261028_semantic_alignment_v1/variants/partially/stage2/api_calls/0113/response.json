@@ -1,0 +1,32 @@
+{
+  "id": "204bf6a2-4c75-452e-81b3-01a0d4aee844",
+  "object": "chat.completion",
+  "created": 1793197626,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, AESLC, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed semantically. Input (Summarization, AESLC, ROGUE-1). List has summarization datasets Gigaword, CNN/DailyMail, XSum, none AESLC. So no match. Return original verbatim."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 73,
+    "total_tokens": 843,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

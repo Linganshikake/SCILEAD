@@ -1,0 +1,32 @@
+{
+  "id": "1af9b4c3-5b31-4b7b-a92c-8de4e657b31a",
+  "object": "chat.completion",
+  "created": 1793193723,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-1",
+        "reasoning_content": "We need answer match input ROUGE-1 to item. List has 'ROGUE-1' misspelled. Input ROUGE-1. Need determine if match to ROGUE-1? They likely typo? We must match one items. Exact? Input \"ROUGE-1\" vs item \"ROGUE-1\" differ letters. Could be intended same metric but spelling transposed. Need answer only matched item. We should output 'ROGUE-1' if matching semantically? Need be careful. The instructions: match input with one items. If none matches say None. Input ROUGE-1, list includes ROGUE-1, ROGUE-L, ROGUE-2. These are misspellings of ROUGE. Should match ROUGE-1 to ROGUE-1 likely. Output ROGUE-1 exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 191,
+    "total_tokens": 450,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

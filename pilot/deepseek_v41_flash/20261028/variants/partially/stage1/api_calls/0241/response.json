@@ -1,0 +1,32 @@
+{
+  "id": "0e401cc4-f033-4f2a-9bb3-cbad030be1ff",
+  "object": "chat.completion",
+  "created": 1793194598,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Movie",
+        "reasoning_content": "We need answer only matched item if exact matches item. Input \"Movie\". List has 'Multi-domain Movie' not \"Movie\". No exact \"Movie\". Output entity unchanged: Movie. Need no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 753,
+    "completion_tokens": 44,
+    "total_tokens": 797,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 369
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

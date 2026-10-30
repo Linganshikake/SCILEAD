@@ -1,0 +1,32 @@
+{
+  "id": "4a20a6e5-4c2e-4c7e-b97d-433e264a14b8",
+  "object": "chat.completion",
+  "created": 1793197468,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Dialogue Act Classification, DyDA, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Dialogue Act Classification, DyDA, Accuracy). List has Dialogue Act Classification with SWDA Accuracy, and MRDA Accuracy. DyDA? Is DyDA an alias/dataset? Need know. DyDA maybe \"Dialysis ...\" No. In dialogue act classification, datasets: Switchboard Dialog Act (SwDA), ICSI MRDA. DyDA perhaps \"DailyDialog\"? Hmm. Need semantic matching. Input dataset DyDA, metric Accuracy, task Dialogue Act Classification. Candidates: SWDA and MRDA. DyDA not obviously same as SWDA/MRDA. Could be abbreviation? DyDA maybe \"Dynamically ... Dialogue Act\"? Need not guess if ambiguous. There are two candidates. If DyDA matches one? Let's investigate from memory.\n\nDyDA = \"Dynamic Dialogue Act\"? It might be a dataset in paper \"DyDA: Dynamic Dialogue Act...\"? But list has only SWDA, MRDA. Semantic matching requires not merge different dataset identities. DyDA not one of them. Return original tuple. Need ensure \"DyDA\" could be typo for \"SwDA\"? DyDA vs SWDA? No, D and S different. \"DyDA\" maybe \"Dialogue Act\" corpus? Let's think.\n\nIf input task Dialogue Act Classification, dataset DyDA, accuracy. There is no listed DyDA. It doesn't match SWDA or MRDA. So output original verbatim: (Dialogue Act Classification, DyDA, Accuracy)\n\nNeed only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 328,
+    "total_tokens": 1096,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 316
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 256
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

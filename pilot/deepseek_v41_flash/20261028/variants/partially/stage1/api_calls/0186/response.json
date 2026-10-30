@@ -1,0 +1,32 @@
+{
+  "id": "34422bdb-09d4-4661-8f83-b316a3663230",
+  "object": "chat.completion",
+  "created": 1793194502,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Neural Machine Translation",
+        "reasoning_content": "We need answer only. Need determine if input matches item exactly. List has 'Machine Translation', not 'Neural Machine Translation'. Rule: if matches one item output matched; else output entity unchanged. So output Neural Machine Translation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 328,
+    "completion_tokens": 51,
+    "total_tokens": 379,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 328
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

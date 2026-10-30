@@ -1,0 +1,32 @@
+{
+  "id": "c067d1a4-7bdd-4048-af4b-fcfc24034703",
+  "object": "chat.completion",
+  "created": 1793197174,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT2014 En→De",
+        "reasoning_content": "We need answer only selected item or unchanged. Need match input \"WMT'14 English-German\" to list. Candidate \"WMT'14 English→French\" is English-French, no. \"WMT2014 En→De\" means English to German. Input WMT'14 English-German = WMT 2014 En-De. Candidate list has WMT2014 En→De. Semantic match despite apostrophe/word/direction. Output exactly candidate \"WMT2014 En→De\". Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 115,
+    "total_tokens": 899,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 144
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

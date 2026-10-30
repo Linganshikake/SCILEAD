@@ -1,0 +1,32 @@
+{
+  "id": "d85c0d91-41ff-4fd0-a597-b95a1a344181",
+  "object": "chat.completion",
+  "created": 1793196833,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MNLI",
+        "reasoning_content": "We need answer only selected or unchanged. Need semantic matching. Input MNLI. Candidates include MNLI-mm and MNLI-m (two variants). Ambiguous between matched subsets? MNLI is general task, list has MNLI-m and MNLI-mm distinct. The instruction preserve meaningful differences and do not guess ambiguous missing condition. Since input MNLI lacks matched/mismatched, candidates two specific variants. No exact general MNLI candidate. Should output original input unchanged: MNLI."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 539,
+    "completion_tokens": 99,
+    "total_tokens": 638,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 283
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

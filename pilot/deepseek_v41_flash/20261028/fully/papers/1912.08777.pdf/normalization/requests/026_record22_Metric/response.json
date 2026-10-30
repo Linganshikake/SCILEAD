@@ -1,0 +1,32 @@
+{
+  "id": "bdf3e8e8-eefa-4407-bad8-183632790497",
+  "object": "chat.completion",
+  "created": 1793192937,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer only matched item. Need match input \"ROUGE-2 F1\" with list. List has 'ROGUE-2' misspelled ROGUE. Also F1. Input ROUGE-2 F1. Could match to ROGUE-2? Need decide. They likely expect item from list that matches. \"ROUGE-2 F1\" maybe refers to ROUGE-2 metric, F1 variant. List has 'ROGUE-2' (typo) and 'F1'. The matched item should be one item. Input \"ROUGE-2 F1\" closest is 'ROGUE-2'? But if exact matching maybe none due ROUGE vs ROGUE. Need infer dataset: Item list includes 'ROGUE-1','ROGUE-2','ROGUE-L' likely typo for ROUGE. So input \"ROUGE-2 F1\" matches 'ROGUE-2'. Answer only item. Could be \"F1\" if they focus on F1? The input combines ROUGE-2 and F1, but item list has ROGUE-2 and F1 separately. Since \"ROUGE-2 F1\" likely metric named \"ROUGE-2 F1\" and list's item 'ROGUE-2' represents that. Use spelling as list: ROGUE-2. Final only. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 261,
+    "completion_tokens": 308,
+    "total_tokens": 569,
+    "prompt_tokens_details": {
+      "cached_tokens": 127
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 302
+    },
+    "prompt_cache_hit_tokens": 127,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

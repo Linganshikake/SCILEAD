@@ -1,0 +1,32 @@
+{
+  "id": "6d5cd3d6-9b84-443c-b3c0-8af1634b5077",
+  "object": "chat.completion",
+  "created": 1793196749,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Abstractive Summarization",
+        "reasoning_content": "We need match input \"Abstractive sentence summarization\" to list. Candidates: Abstractive Summarization, Summarization, Extractive Summarization. \"Abstractive sentence summarization\" denotes abstractive summarization likely same underlying task? Need preserve meaningful differences? It's a type of abstractive summarization but \"sentence\" specifies granularity. Does it match Abstractive Summarization? Semantic matching: task names more specific wording may match existing standard task when both denote same underlying task. Abstractive sentence summarization is a specific task (sentence-level abstractive summarization). Existing \"Abstractive Summarization\" is broader. Is it clear semantic match? Hmm.\n\nWe need output matched item exactly if matches. The instruction: If one candidate clear semantic match, output candidate. \"Abstractive sentence summarization\" is a kind of abstractive summarization, but \"sentence\" might be meaningful difference (dataset, split, task granularity). They say preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because names similar. Granularity sentence vs document could be meaningful. However no \"document\" in candidate. Abstractive Summarization is general and includes sentence. Usually \"abstractive sentence summarization\" could map to \"Abstractive Summarization\" in task lists? We need decide.\n\nThe matching requirements: \"For task names, a more specific wording may match an existing standard task when both denote the same underlying task.\" Abstractive sentence summarization and Abstractive Summarization: underlying task is abstractive summarization. The \"sentence\" is specific but likely same task category. There is also \"Summarization\" generic. We choose Abstractive Summarization because includes abstractive and matches type. Could it instead be no exact? The input has \"Abstractive\" same as candidate. The task likely generated from a list of NLP tasks; \"Abstractive sentence summarization\" is often a benchmark task (e.g., Gigaword) and \"Abstractive Summarization\" is a broader category. The instructions say preserve dataset identity, version split etc. But no dataset. More specific wording may match. I'd output Abstractive Summarization.\n\nNeed final only selected."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 437,
+    "completion_tokens": 453,
+    "total_tokens": 890,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 448
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 181
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

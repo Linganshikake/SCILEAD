@@ -1,0 +1,32 @@
+{
+  "id": "ced1f6b1-c9ed-414c-a9c6-0e5d8ebb6ea2",
+  "object": "chat.completion",
+  "created": 1793194280,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Sentiment Analysis",
+        "reasoning_content": "We need answer. Need match item list case? Input \"Sentiment analysis\" vs list \"Sentiment Analysis\". Likely matched item respecting capitalization? Instruction: If entity matches one of items, answer matched item in list. Else output entity. \"Sentiment analysis\" differs capitalization only. Need decide exact? Usually normalize? The matched item is 'Sentiment Analysis'. We should output that."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 221,
+    "completion_tokens": 83,
+    "total_tokens": 304,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 221
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

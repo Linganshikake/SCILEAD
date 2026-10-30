@@ -1,0 +1,32 @@
+{
+  "id": "953b4be9-f840-417b-8488-6fd970e0f5dd",
+  "object": "chat.completion",
+  "created": 1793197610,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, CNN/DailyMail, ROUGE-L). List has (Summarization, CNN/DailyMail, ROGUE-L). Note typo ROGUE vs ROUGE. They intend ROUGE-L but list spells ROGUE-L. Need semantic matching superficial spelling differences. Return entire listed tuple verbatim: (Summarization, CNN/DailyMail, ROGUE-L). Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 114,
+    "total_tokens": 885,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

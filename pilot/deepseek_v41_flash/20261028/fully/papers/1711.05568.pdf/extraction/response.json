@@ -1,0 +1,32 @@
+{
+  "id": "e30ee6c9-319d-4112-8376-d2745f1ac7da",
+  "object": "chat.completion",
+  "created": 1793192998,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "[{\"Task\": \"Dialogue act recognition\", \"Dataset\": \"SwDA\", \"Metric\": \"Accuracy\", \"Result\": \"81.3\"}, {\"Task\": \"Dialogue act recognition\", \"Dataset\": \"MRDA\", \"Metric\": \"Accuracy\", \"Result\": \"91.7\"}]",
+        "reasoning_content": "We need answer JSON only. Need extract tuples for best results by proposed method, not baselines. Need task, dataset, metric, result. From document: Task dialogue act recognition/classification. Proposed CRF-ASN. Datasets SwDA and MRDA. Evaluation metric Accuracy. Results: Table5 SwDA ours CRF-ASN 81.3. Table6 MRDA ours CRF-ASN 91.7. Need output array with two tuples. Ensure JSON format exactly. No extra. Use Task \"Dialogue act recognition\" maybe \"Dialogue Act Recognition\". Dataset names as SwDA, MRDA. Metric Accuracy. Result strings maybe \"81.3\" and \"91.7\" or \"81.3%\"? Template result score. Use \"81.3\" likely. Need only proposed best results. final."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2619,
+    "completion_tokens": 236,
+    "total_tokens": 2855,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2619
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

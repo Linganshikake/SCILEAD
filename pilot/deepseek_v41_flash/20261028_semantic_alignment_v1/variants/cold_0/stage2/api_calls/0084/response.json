@@ -1,0 +1,32 @@
+{
+  "id": "4d3d81f3-375e-49bf-b206-f6dfd4561be2",
+  "object": "chat.completion",
+  "created": 1793197307,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Intent detection, Home, Accuracy)",
+        "reasoning_content": "We need answer only tuple. Need compare input (Intent detection, Home, Accuracy) against list. Candidates Intent Detection and Slot Filling with ATIS or SNIPS, metrics Accuracy/F1. Dataset Home not present. No match. Return original tuple verbatim: (Intent detection, Home, Accuracy). Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 765,
+    "completion_tokens": 74,
+    "total_tokens": 839,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 253
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

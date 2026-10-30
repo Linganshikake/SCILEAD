@@ -1,0 +1,32 @@
+{
+  "id": "6f269c50-d2e4-4ddd-b60b-0e359e1bc54c",
+  "object": "chat.completion",
+  "created": 1793196946,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE QNLI",
+        "reasoning_content": "We need answer only selected or unchanged. Input QNLI matches GLUE QNLI? The list has \"GLUE QNLI\". Semantic identity QNLI likely task name; item candidate GLUE QNLI. Need output exact as item list if clear. QNLI is part of GLUE. Is \"QNLI\" ambiguous? In list only GLUE QNLI. Match by meaning, more specific wording may match standard task. Output GLUE QNLI. Ensure exact formatting."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 718,
+    "completion_tokens": 110,
+    "total_tokens": 828,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 462
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

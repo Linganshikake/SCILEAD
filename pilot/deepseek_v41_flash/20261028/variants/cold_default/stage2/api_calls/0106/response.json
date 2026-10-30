@@ -1,0 +1,32 @@
+{
+  "id": "22faaf65-fa41-4b53-b89b-2a62d4911469",
+  "object": "chat.completion",
+  "created": 1793194692,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROUGE-1 F1)",
+        "reasoning_content": "We need answer. Need check if input tuple matches list. Input: (Summarization, XSum, ROUGE-1 F1). List contains (Summarization, XSum, ROGUE-1) note typo ROGUE not ROUGE, and ROGUE-2, ROGUE-L. Does not match ROUGE-1 F1. Also exact matching tuple. Output tuple unchanged. Need only answer. Ensure parentheses."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 110,
+    "total_tokens": 664,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

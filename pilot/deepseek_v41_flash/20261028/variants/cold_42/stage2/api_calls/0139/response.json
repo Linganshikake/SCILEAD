@@ -1,0 +1,32 @@
+{
+  "id": "e85a5f8a-7fdb-4be3-8373-b429442af58c",
+  "object": "chat.completion",
+  "created": 1793194739,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, Gigaword, ROUGE-2)",
+        "reasoning_content": "We need answer only. Need check if input tuple matches any item exactly. Input (Abstractive Summarization, Gigaword, ROUGE-2). List contains (Summarization, Gigaword, ROGUE-2) and others. No exact match due Abstractive Summarization and ROUGE vs ROGUE. Return tuple unchanged. Need output exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 93,
+    "total_tokens": 648,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

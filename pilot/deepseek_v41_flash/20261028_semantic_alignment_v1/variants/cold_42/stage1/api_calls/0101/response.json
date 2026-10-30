@@ -1,0 +1,32 @@
+{
+  "id": "bb824af1-f9ae-46ca-9865-62dbf6955e77",
+  "object": "chat.completion",
+  "created": 1793196732,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Machine Translation",
+        "reasoning_content": "We need answer only selected item or unchanged. Input \"Machine Translation\". Candidates include \"Neural Machine Translation\". Need semantic matching. Does \"Machine Translation\" match \"Neural Machine Translation\"? Task names: more specific wording may match existing standard task when same underlying. But preserve meaningful differences? \"Neural Machine Translation\" is specific method/standard task. Input generic Machine Translation. Is it clear semantic match? Could be ambiguous: generic MT vs neural MT. Instructions: Do not guess ambiguous abbreviation or missing experimental condition. Preserve meaningful differences. \"Neural\" meaningful? The candidate is NMT, input MT broader. So no clear match? Output original \"Machine Translation\". Need answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 143,
+    "total_tokens": 573,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 140
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

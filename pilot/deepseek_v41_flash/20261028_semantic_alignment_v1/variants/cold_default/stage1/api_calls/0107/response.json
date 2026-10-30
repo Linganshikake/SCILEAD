@@ -1,0 +1,32 @@
+{
+  "id": "08136ca6-b2be-4f00-ac05-c32682c0ea40",
+  "object": "chat.completion",
+  "created": 1793196763,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoLA",
+        "reasoning_content": "We need answer only matched item or input unchanged. Need semantic match. Input \"GLUE CoLA\". List contains CoLA and GLUE. Does \"GLUE CoLA\" match CoLA? It denotes same underlying task? GLUE CoLA is CoLA task within GLUE. Candidate \"CoLA\" clear semantic match? The instruction: task names more specific wording may match existing standard task when same underlying. Preserve dataset identity etc. Input includes GLUE prefix. Candidate CoLA is task. Also candidate GLUE. Need select matched item in list. If matches one item. \"GLUE CoLA\" likely should match \"CoLA\" because CoLA is the specific task. But list has \"GLUE MNLI\" and \"GLUE\" and \"MNLI-m\" etc. \"GLUE CoLA\" not exact candidate. There's candidate \"CoLA\". It is clearly the CoLA task from GLUE. Output \"CoLA\" exact. Need no explanation. \nFinal: CoLA. Ensure no quotes. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 530,
+    "completion_tokens": 215,
+    "total_tokens": 745,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 212
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 146
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "1912.08777.pdf",
+  "record": 3,
+  "field": "Metric",
+  "original": "ROUGE-L F1",
+  "candidate_serialized": "{'Perplexity', 'MCC', 'Spearman correlation', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'Score', 'BLEU-4', 'Intent accuracy', 'ROUGE-L', 'F1', 'Dev F1', 'Test F1', 'Average', 'Accuracy (mismatched)', 'Entity-level F1 score', 'BLEU', 'Matched accuracy', 'Accuracy', 'EM', 'Sentence accuracy'}",
+  "candidate_sha256": "ffbc45d2ac92b524af15bb705653a1b43fb37d4d29eeaead2d30a12043bc2638",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'Perplexity', 'MCC', 'Spearman correlation', 'ROUGE-1', 'METEOR', 'ROUGE-2', 'Score', 'BLEU-4', 'Intent accuracy', 'ROUGE-L', 'F1', 'Dev F1', 'Test F1', 'Average', 'Accuracy (mismatched)', 'Entity-level F1 score', 'BLEU', 'Matched accuracy', 'Accuracy', 'EM', 'Sentence accuracy'}\n\nInput: ROUGE-L F1\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "6c2714030dcccbb37c5b7112614862d4fc1e70ecd5f113de658beee74585f4fc"
+}

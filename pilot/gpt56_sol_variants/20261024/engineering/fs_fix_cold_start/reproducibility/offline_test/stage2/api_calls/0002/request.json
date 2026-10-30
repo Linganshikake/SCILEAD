@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.6-sol",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of tuples. Then, an input tuple will be provided. If the input tuple matches one of the items in the list, your answer will be the matched item in the list. Else, output the tuple without changing it. Only output answer, DO NOT make any other explanation."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {(KnownTask, KnownDataset, KnownMetric)}\n\nInput: (Unmatched, KnownDataset, KnownMetric)\n\nAnswer: "
+    }
+  ],
+  "reasoning_effort": "medium",
+  "max_completion_tokens": 32768,
+  "stream": false
+}

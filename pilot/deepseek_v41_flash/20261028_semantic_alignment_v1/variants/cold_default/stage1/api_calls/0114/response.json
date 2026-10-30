@@ -1,0 +1,32 @@
+{
+  "id": "6acbb1fc-a85b-4b90-8b37-f216c6e224c5",
+  "object": "chat.completion",
+  "created": 1793196773,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Generative Question Answering",
+        "reasoning_content": "We need answer only. Need determine if input matches item. \"Abstractive Question Answering\" vs candidates: \"Generative Question Answering\", \"Extractive question answering\", \"Cloze-style question answering\". Abstractive QA likely matches Generative QA semantically? Need be careful. Abstractive question answering is a task where answers are generated abstractively, equivalent-ish to generative QA. Candidate \"Generative Question Answering\" is clear semantic match? \"Abstractive QA\" can be considered generative QA. However requirement preserve meaningful differences. Abstractive QA is a specific type of generative QA, likely same underlying? The list doesn't have \"Abstractive Question Answering\". We need choose matched item if semantic match. It says more specific wording may match existing standard task when both denote same underlying task. Abstractive question answering denotes answer generation, same as Generative QA. Output candidate exactly: Generative Question Answering. Need ensure not \"Extractive question answering\" no. Final only selected."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 201,
+    "total_tokens": 606,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 195
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 149
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "31288215-b638-4514-8c34-6bcc2ced9577",
+  "object": "chat.completion",
+  "created": 1793197585,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NEWSROOM, ROUGE-2)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (Abstractive Summarization, NEWSROOM, ROUGE-2). Need semantic match among candidates: Summarization tasks on Gigaword, CNN/DailyMail, XSum, metrics ROGUE variants. Dataset NEWSROOM not listed. So no match. Return original tuple verbatim. Ensure \"ROUGE-2\" exact input. Output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 108,
+    "total_tokens": 881,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 261
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

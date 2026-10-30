@@ -1,0 +1,32 @@
+{
+  "id": "219bb9d4-23db-4a8a-bd4d-cd7f9f61a690",
+  "object": "chat.completion",
+  "created": 1793194290,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Natural Language Inference",
+        "reasoning_content": "We need answer matched item if matches one list. Input \"Natural language inference\". List contains \"Natural Language Inference\" capitalization differs. Need match likely case-insensitive? Need output matched item exactly as list. The instruction: if input entity matches one items. Natural language inference matches Natural Language Inference ignoring case likely. Answer should be 'Natural Language Inference'. No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 232,
+    "completion_tokens": 77,
+    "total_tokens": 309,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 232
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

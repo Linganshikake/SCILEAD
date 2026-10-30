@@ -1,0 +1,32 @@
+{
+  "id": "690b4cde-ae09-49fa-be15-4cc45ad61021",
+  "object": "chat.completion",
+  "created": 1793196894,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "QQP",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine if input \"GLUE QQP\" matches candidate? List has GLUE and QQP separately, but input composite. Need semantic matching. We need output matched item if input entity matches one. Is \"GLUE QQP\" a task? QQP is a GLUE task. Candidate list includes QQP and GLUE. The input \"GLUE QQP\" likely denotes QQP within GLUE; could match QQP? Need preserve meaningful differences. The list item QQP is the task; GLUE is benchmark. Input is \"GLUE QQP\" maybe a specific wording including benchmark. Does it match QQP? The instruction: if input entity matches one of items, answer matched item. More specific wording may match existing standard task when both denote same underlying task. \"GLUE QQP\" denotes QQP task in GLUE, so candidate QQP is clear semantic match? But there is also GLUE candidate. However input includes both. Need decide. They want likely QQP? Let's examine list: QQP is a GLUE dataset. Input \"GLUE QQP\" is a task name from GLUE benchmark? In some papers, tasks listed as \"GLUE QQP\". Could be represented by QQP. The candidate QQP exactly item. \"GLUE\" is broader benchmark. Since input has \"QQP\" as task and GLUE as suite; semantic match to QQP more precise. The instruction says compare input against supplied candidates; if one clear semantic match output that candidate exactly. I think output QQP. But need be cautious: input entity might be \"GLUE QQP\" as composite not exactly QQP. However \"GLUE QQP\" is unambiguous and standard task QQP. Candidate list includes QQP, so match. Output QQP. No explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 591,
+    "completion_tokens": 382,
+    "total_tokens": 973,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 379
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 207
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

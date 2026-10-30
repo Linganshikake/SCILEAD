@@ -1,0 +1,32 @@
+{
+  "id": "2b055b9a-e898-4b81-a17e-fb82c37f1cfc",
+  "object": "chat.completion",
+  "created": 1793197068,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Accuracy",
+        "reasoning_content": "We need answer only selected or unchanged. Need determine if \"Overall Accuracy\" matches candidate. Candidates include Accuracy, Accuracy (mismatched), Sentence Accuracy, Intent accuracy. \"Overall Accuracy\" likely semantic match to \"Accuracy\" as metric? Need be careful: overall accuracy is standard accuracy. Could match Accuracy. The instruction says match by meaning entity identity, task names etc. Input \"Overall Accuracy\" likely denotes accuracy overall. Candidate \"Accuracy\" is clear semantic match? \"Overall Accuracy\" may be same as Accuracy in evaluation metrics, whereas \"Accuracy (mismatched)\" is a distinct variant. Need output candidate exactly \"Accuracy\". Let's ensure no \"Overall Accuracy\" candidate. Output Accuracy."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 495,
+    "completion_tokens": 142,
+    "total_tokens": 637,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 140
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 239
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

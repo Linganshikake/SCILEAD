@@ -1,0 +1,32 @@
+{
+  "id": "a5694ef2-5300-4b02-8c5f-985ad485c7f2",
+  "object": "chat.completion",
+  "created": 1793194203,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Slot filling F1-score",
+        "reasoning_content": "We need answer. Need match input entity to item list exactly? Input \"Slot filling F1-score\". Items include 'F1 score', 'F1', etc. It doesn't exactly match any item. Instruction: if input entity matches one of items, answer matched item. Else output entity without changing it. \"Slot filling F1-score\" not exact match to 'F1 score'. Should output unchanged. Need no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 188,
+    "completion_tokens": 94,
+    "total_tokens": 282,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 188
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

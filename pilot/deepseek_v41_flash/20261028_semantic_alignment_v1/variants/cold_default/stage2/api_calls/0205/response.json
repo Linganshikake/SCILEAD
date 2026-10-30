@@ -1,0 +1,32 @@
+{
+  "id": "134d8fdf-2ed0-4873-99c8-a002df275386",
+  "object": "chat.completion",
+  "created": 1793197505,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-2)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input (Summarization, CNN/DailyMail, ROUGE-2). List has (Summarization, CNN/DailyMail, ROGUE-2) typo ROGUE vs ROUGE. Semantically same metric, dataset, task. Return listed tuple verbatim exact: (Summarization, CNN/DailyMail, ROGUE-2). Only output. \nNeed consider there is ROGUE-2 exactly. Yes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 117,
+    "total_tokens": 889,
+    "prompt_tokens_details": {
+      "cached_tokens": 638
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_cache_hit_tokens": 638,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

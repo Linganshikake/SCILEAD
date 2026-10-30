@@ -1,0 +1,1382 @@
+{
+  "schema_version": 1,
+  "status": "COMPLETE",
+  "run_directory": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\evaluation\\runs\\20261029T134420_130644Z_b45374",
+  "new_api_requests": 0,
+  "completion_scope": "Requested arms and selected input artifact coverage only; no claim of whole experiment completion.",
+  "all_three_arms_complete": false,
+  "scope": {
+    "selected_ids": [
+      "D19-1367.pdf",
+      "1901.10430.pdf",
+      "1808.08745.pdf",
+      "2020.emnlp-main.523.pdf",
+      "1911.09483.pdf"
+    ],
+    "selected_papers": 5,
+    "selected_gold_tdmrs": 28,
+    "full_gold_path": "D:\\C++\\SCILEAD\\pilot\\autodl_setup\\20261021\\stage\\data\\gold\\tdm_annotations.json",
+    "full_gold_sha256": "603dd077ae174e4beefc24a9a73b7436e1e3cb6c9aaee042adc4d4aa5ea75aaf",
+    "original_27_boards_path": "D:\\C++\\SCILEAD\\pilot\\autodl_setup\\20261021\\stage\\data\\gold\\leaderboards.json",
+    "original_27_boards_sha256": "b32320009c1471442e6c110df52d77c64538373b298b4f47865a912761d62657",
+    "discovery_sha256": "2662417b7445b0f8516dea4746171ded276cd1c763a0c152a2fe820fbc95761c",
+    "derived_boards_sha256": "998324eec04d98499c1525e1ae98db599d3bb6c96dd3ddd5d047a083443a339f",
+    "original_boards": 27,
+    "boards_retained": 10,
+    "boards_dropped_empty": 17,
+    "singleton_boards": 6,
+    "boards_ge2": 4,
+    "membership_rule": "Original board members intersect fixed selected IDs; empty discarded; singleton retained."
+  },
+  "arms": {
+    "baseline_rag": {
+      "arm": "baseline_rag",
+      "status": "COMPLETE",
+      "new_api_requests": 0,
+      "stages": {
+        "raw_pre_normalization": {
+          "status": "COMPLETE",
+          "new_api_requests": 0,
+          "evaluated_ids": [
+            "D19-1367.pdf",
+            "1901.10430.pdf",
+            "1808.08745.pdf",
+            "2020.emnlp-main.523.pdf",
+            "1911.09483.pdf"
+          ],
+          "tuple_macro_denominator": 5,
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 0.5,
+              "Recall": 0.5,
+              "F1": 0.5
+            },
+            "Dataset IIM": {
+              "Precision": 0.36,
+              "Recall": 0.36,
+              "F1": 0.36
+            },
+            "Metric IIM": {
+              "Precision": 0.38,
+              "Recall": 0.32999999999999996,
+              "F1": 0.3532394366197183
+            },
+            "Result IIM": {
+              "Precision": 0.7644444444444444,
+              "Recall": 0.8272727272727274,
+              "F1": 0.7946186064221349
+            },
+            "TDM Exact Match": {
+              "Precision": 0.0,
+              "Recall": 0.0,
+              "F1": 0.0
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.0,
+              "Recall": 0.0,
+              "F1": 0.0
+            },
+            "Strict Result numeric equality": {
+              "Precision": 0.7644444444444444,
+              "Recall": 0.8272727272727274,
+              "F1": 0.7946186064221349
+            }
+          },
+          "per_paper": {
+            "D19-1367.pdf": {
+              "Task IIM": {
+                "Precision": 0.5,
+                "Recall": 0.5,
+                "F1": 0.5
+              },
+              "Dataset IIM": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Metric IIM": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Result IIM": {
+                "Precision": 0.3333333333333333,
+                "Recall": 0.5,
+                "F1": 0.4
+              },
+              "TDM Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Strict Result numeric equality": {
+                "Precision": 0.3333333333333333,
+                "Recall": 0.5,
+                "F1": 0.4
+              }
+            },
+            "1901.10430.pdf": {
+              "Task IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Dataset IIM": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Metric IIM": {
+                "Precision": 0.4,
+                "Recall": 0.4,
+                "F1": 0.4000000000000001
+              },
+              "Result IIM": {
+                "Precision": 0.8888888888888888,
+                "Recall": 1.0,
+                "F1": 0.9411764705882353
+              },
+              "TDM Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Strict Result numeric equality": {
+                "Precision": 0.8888888888888888,
+                "Recall": 1.0,
+                "F1": 0.9411764705882353
+              }
+            },
+            "1808.08745.pdf": {
+              "Task IIM": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Dataset IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Metric IIM": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Result IIM": {
+                "Precision": 0.6,
+                "Recall": 1.0,
+                "F1": 0.7499999999999999
+              },
+              "TDM Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Strict Result numeric equality": {
+                "Precision": 0.6,
+                "Recall": 1.0,
+                "F1": 0.7499999999999999
+              }
+            },
+            "2020.emnlp-main.523.pdf": {
+              "Task IIM": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Dataset IIM": {
+                "Precision": 0.8,
+                "Recall": 0.8,
+                "F1": 0.8000000000000002
+              },
+              "Metric IIM": {
+                "Precision": 0.5,
+                "Recall": 0.25,
+                "F1": 0.3333333333333333
+              },
+              "Result IIM": {
+                "Precision": 1.0,
+                "Recall": 0.6363636363636364,
+                "F1": 0.7777777777777778
+              },
+              "TDM Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Strict Result numeric equality": {
+                "Precision": 1.0,
+                "Recall": 0.6363636363636364,
+                "F1": 0.7777777777777778
+              }
+            },
+            "1911.09483.pdf": {
+              "Task IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Dataset IIM": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Metric IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Result IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "TDM Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.0,
+                "Recall": 0.0,
+                "F1": 0.0
+              },
+              "Strict Result numeric equality": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              }
+            }
+          },
+          "leaderboard": {
+            "aggregate": {
+              "LR_exact_tdm_hit": 0.0,
+              "LR_nonempty_finite_result": 0.0,
+              "PC": 0.0,
+              "RC": 0.0,
+              "RBO": 0.0,
+              "AO": 0.0
+            },
+            "per_board": [
+              {
+                "tdm_key": "('Summarization', 'CNN/DailyMail', 'ROGUE-1')",
+                "gold_members": {
+                  "1901.10430.pdf": 39.84
+                },
+                "predicted_members": {},
+                "gold_member_count": 1,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 39.84
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Summarization', 'CNN/DailyMail', 'ROGUE-2')",
+                "gold_members": {
+                  "1901.10430.pdf": 16.25
+                },
+                "predicted_members": {},
+                "gold_member_count": 1,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 16.25
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Summarization', 'CNN/DailyMail', 'ROGUE-L')",
+                "gold_members": {
+                  "1901.10430.pdf": 36.73
+                },
+                "predicted_members": {},
+                "gold_member_count": 1,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 36.73
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Summarization', 'XSum', 'ROGUE-1')",
+                "gold_members": {
+                  "1808.08745.pdf": 31.89
+                },
+                "predicted_members": {},
+                "gold_member_count": 1,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 31.89
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Summarization', 'XSum', 'ROGUE-2')",
+                "gold_members": {
+                  "1808.08745.pdf": 11.54
+                },
+                "predicted_members": {},
+                "gold_member_count": 1,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 11.54
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Summarization', 'XSum', 'ROGUE-L')",
+                "gold_members": {
+                  "1808.08745.pdf": 25.75
+                },
+                "predicted_members": {},
+                "gold_member_count": 1,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 25.75
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Named Entity Recognition (NER)', 'CoNLL-2003 - English', 'F1')",
+                "gold_members": {
+                  "2020.emnlp-main.523.pdf": 94.3,
+                  "D19-1367.pdf": 93.47
+                },
+                "predicted_members": {},
+                "gold_member_count": 2,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "2020.emnlp-main.523.pdf",
+                    "result": 94.3
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "D19-1367.pdf",
+                    "result": 93.47
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Machine Translation', 'WMT’14 EN-FR', 'BLEU')",
+                "gold_members": {
+                  "1911.09483.pdf": 43.5,
+                  "1901.10430.pdf": 43.2
+                },
+                "predicted_members": {},
+                "gold_member_count": 2,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 43.5
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 43.2
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Machine Translation', 'WMT’14 EN-DE', 'BLEU')",
+                "gold_members": {
+                  "1911.09483.pdf": 29.9,
+                  "1901.10430.pdf": 29.7
+                },
+                "predicted_members": {},
+                "gold_member_count": 2,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 29.9
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 29.7
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Machine Translation', 'IWSLT’14 EN-DE', 'BLEU')",
+                "gold_members": {
+                  "1911.09483.pdf": 36.3,
+                  "1901.10430.pdf": 35.2
+                },
+                "predicted_members": {},
+                "gold_member_count": 2,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 36.3
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 35.2
+                  }
+                ],
+                "predicted_ranking": []
+              }
+            ],
+            "board_macro_denominator": 10,
+            "singleton_boards": 6,
+            "boards_ge2": 4,
+            "prediction_nonempty_boards": 0,
+            "conventions": "PC/RC/RBO unchanged official; RBO ranks distinct numeric values; AO uses paper IDs, official metric direction, ID tie-break; empty prediction=0; all retained boards in denominator."
+          },
+          "matching_semantics": {
+            "Task_Dataset_Metric": "Exact label equality; no semantic matching.",
+            "TDM_Exact_Match": "Original official unique exact (Task, Dataset, Metric) tuples.",
+            "TDMR_Exact_Match_and_Result_IIM": "Original official legacy bidirectional Result substring rule; not strict numeric equality and not semantic matching.",
+            "Strict_Result_numeric_equality": "Auxiliary finite Decimal Result-only equality; unique numerics; distinct invalid strings remain denominator entries; no percent stripping, scaling, tolerance, or tuple conditioning."
+          },
+          "mean_per_paper_f1_SEPARATE": {
+            "Task IIM": 0.5,
+            "Dataset IIM": 0.36000000000000004,
+            "Metric IIM": 0.3466666666666667,
+            "Result IIM": 0.7737908496732027,
+            "TDM Exact Match": 0.0,
+            "TDMR Exact Match": 0.0,
+            "Strict Result numeric equality": 0.7737908496732027
+          },
+          "f1_definition": "Harmonic mean of official macro per-paper Precision/Recall; mean paper F1 is separate."
+        },
+        "fullyllm": {
+          "status": "COMPLETE",
+          "new_api_requests": 0,
+          "evaluated_ids": [
+            "D19-1367.pdf",
+            "1901.10430.pdf",
+            "1808.08745.pdf",
+            "2020.emnlp-main.523.pdf",
+            "1911.09483.pdf"
+          ],
+          "tuple_macro_denominator": 5,
+          "aggregate": {
+            "Task IIM": {
+              "Precision": 1.0,
+              "Recall": 1.0,
+              "F1": 1.0
+            },
+            "Dataset IIM": {
+              "Precision": 0.9666666666666668,
+              "Recall": 0.9666666666666668,
+              "F1": 0.9666666666666668
+            },
+            "Metric IIM": {
+              "Precision": 0.9,
+              "Recall": 0.8333333333333333,
+              "F1": 0.8653846153846153
+            },
+            "Result IIM": {
+              "Precision": 0.7644444444444444,
+              "Recall": 0.8272727272727274,
+              "F1": 0.7946186064221349
+            },
+            "TDM Exact Match": {
+              "Precision": 0.875,
+              "Recall": 0.8356060606060606,
+              "F1": 0.8548494242692648
+            },
+            "TDMR Exact Match": {
+              "Precision": 0.7022222222222222,
+              "Recall": 0.7356060606060606,
+              "F1": 0.7185265844719988
+            },
+            "Strict Result numeric equality": {
+              "Precision": 0.7644444444444444,
+              "Recall": 0.8272727272727274,
+              "F1": 0.7946186064221349
+            }
+          },
+          "per_paper": {
+            "D19-1367.pdf": {
+              "Task IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Dataset IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Metric IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Result IIM": {
+                "Precision": 0.3333333333333333,
+                "Recall": 0.5,
+                "F1": 0.4
+              },
+              "TDM Exact Match": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.3333333333333333,
+                "Recall": 0.5,
+                "F1": 0.4
+              },
+              "Strict Result numeric equality": {
+                "Precision": 0.3333333333333333,
+                "Recall": 0.5,
+                "F1": 0.4
+              }
+            },
+            "1901.10430.pdf": {
+              "Task IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Dataset IIM": {
+                "Precision": 0.8333333333333334,
+                "Recall": 0.8333333333333334,
+                "F1": 0.8333333333333334
+              },
+              "Metric IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Result IIM": {
+                "Precision": 0.8888888888888888,
+                "Recall": 1.0,
+                "F1": 0.9411764705882353
+              },
+              "TDM Exact Match": {
+                "Precision": 0.875,
+                "Recall": 0.875,
+                "F1": 0.875
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.7777777777777778,
+                "Recall": 0.875,
+                "F1": 0.823529411764706
+              },
+              "Strict Result numeric equality": {
+                "Precision": 0.8888888888888888,
+                "Recall": 1.0,
+                "F1": 0.9411764705882353
+              }
+            },
+            "1808.08745.pdf": {
+              "Task IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Dataset IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Metric IIM": {
+                "Precision": 0.5,
+                "Recall": 0.6666666666666666,
+                "F1": 0.5714285714285715
+              },
+              "Result IIM": {
+                "Precision": 0.6,
+                "Recall": 1.0,
+                "F1": 0.7499999999999999
+              },
+              "TDM Exact Match": {
+                "Precision": 0.5,
+                "Recall": 0.6666666666666666,
+                "F1": 0.5714285714285715
+              },
+              "TDMR Exact Match": {
+                "Precision": 0.4,
+                "Recall": 0.6666666666666666,
+                "F1": 0.5
+              },
+              "Strict Result numeric equality": {
+                "Precision": 0.6,
+                "Recall": 1.0,
+                "F1": 0.7499999999999999
+              }
+            },
+            "2020.emnlp-main.523.pdf": {
+              "Task IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Dataset IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Metric IIM": {
+                "Precision": 1.0,
+                "Recall": 0.5,
+                "F1": 0.6666666666666666
+              },
+              "Result IIM": {
+                "Precision": 1.0,
+                "Recall": 0.6363636363636364,
+                "F1": 0.7777777777777778
+              },
+              "TDM Exact Match": {
+                "Precision": 1.0,
+                "Recall": 0.6363636363636364,
+                "F1": 0.7777777777777778
+              },
+              "TDMR Exact Match": {
+                "Precision": 1.0,
+                "Recall": 0.6363636363636364,
+                "F1": 0.7777777777777778
+              },
+              "Strict Result numeric equality": {
+                "Precision": 1.0,
+                "Recall": 0.6363636363636364,
+                "F1": 0.7777777777777778
+              }
+            },
+            "1911.09483.pdf": {
+              "Task IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Dataset IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Metric IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Result IIM": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "TDM Exact Match": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "TDMR Exact Match": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              },
+              "Strict Result numeric equality": {
+                "Precision": 1.0,
+                "Recall": 1.0,
+                "F1": 1.0
+              }
+            }
+          },
+          "leaderboard": {
+            "aggregate": {
+              "LR_exact_tdm_hit": 0.9,
+              "LR_nonempty_finite_result": 0.9,
+              "PC": 0.8,
+              "RC": 0.8,
+              "RBO": 0.9,
+              "AO": 0.9
+            },
+            "per_board": [
+              {
+                "tdm_key": "('Summarization', 'CNN/DailyMail', 'ROGUE-1')",
+                "gold_members": {
+                  "1901.10430.pdf": 39.84
+                },
+                "predicted_members": {
+                  "1901.10430.pdf": 39.84
+                },
+                "gold_member_count": 1,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 1.0,
+                "RC": 1.0,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1901.10430.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1901.10430.pdf"
+                    ],
+                    "intersection": [
+                      "1901.10430.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 39.84
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 39.84
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Summarization', 'CNN/DailyMail', 'ROGUE-2')",
+                "gold_members": {
+                  "1901.10430.pdf": 16.25
+                },
+                "predicted_members": {
+                  "1901.10430.pdf": 16.25
+                },
+                "gold_member_count": 1,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 1.0,
+                "RC": 1.0,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1901.10430.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1901.10430.pdf"
+                    ],
+                    "intersection": [
+                      "1901.10430.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 16.25
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 16.25
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Summarization', 'CNN/DailyMail', 'ROGUE-L')",
+                "gold_members": {
+                  "1901.10430.pdf": 36.73
+                },
+                "predicted_members": {
+                  "1901.10430.pdf": 36.73
+                },
+                "gold_member_count": 1,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 1.0,
+                "RC": 1.0,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1901.10430.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1901.10430.pdf"
+                    ],
+                    "intersection": [
+                      "1901.10430.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 36.73
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 36.73
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Summarization', 'XSum', 'ROGUE-1')",
+                "gold_members": {
+                  "1808.08745.pdf": 31.89
+                },
+                "predicted_members": {
+                  "1808.08745.pdf": 31.89
+                },
+                "gold_member_count": 1,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 1.0,
+                "RC": 1.0,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1808.08745.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1808.08745.pdf"
+                    ],
+                    "intersection": [
+                      "1808.08745.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 31.89
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 31.89
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Summarization', 'XSum', 'ROGUE-2')",
+                "gold_members": {
+                  "1808.08745.pdf": 11.54
+                },
+                "predicted_members": {
+                  "1808.08745.pdf": 11.54
+                },
+                "gold_member_count": 1,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 1.0,
+                "RC": 1.0,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1808.08745.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1808.08745.pdf"
+                    ],
+                    "intersection": [
+                      "1808.08745.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 11.54
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 11.54
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Summarization', 'XSum', 'ROGUE-L')",
+                "gold_members": {
+                  "1808.08745.pdf": 25.75
+                },
+                "predicted_members": {},
+                "gold_member_count": 1,
+                "exact_tdm_hit": false,
+                "nonempty_finite_result": false,
+                "PC": 0.0,
+                "RC": 0.0,
+                "RBO": 0,
+                "AO": 0.0,
+                "AO_depths": [],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1808.08745.pdf",
+                    "result": 25.75
+                  }
+                ],
+                "predicted_ranking": []
+              },
+              {
+                "tdm_key": "('Named Entity Recognition (NER)', 'CoNLL-2003 - English', 'F1')",
+                "gold_members": {
+                  "2020.emnlp-main.523.pdf": 94.3,
+                  "D19-1367.pdf": 93.47
+                },
+                "predicted_members": {
+                  "2020.emnlp-main.523.pdf": 94.3
+                },
+                "gold_member_count": 2,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 0.5,
+                "RC": 0.5,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "2020.emnlp-main.523.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "2020.emnlp-main.523.pdf"
+                    ],
+                    "intersection": [
+                      "2020.emnlp-main.523.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "2020.emnlp-main.523.pdf",
+                    "result": 94.3
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "D19-1367.pdf",
+                    "result": 93.47
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "2020.emnlp-main.523.pdf",
+                    "result": 94.3
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Machine Translation', 'WMT’14 EN-FR', 'BLEU')",
+                "gold_members": {
+                  "1911.09483.pdf": 43.5,
+                  "1901.10430.pdf": 43.2
+                },
+                "predicted_members": {
+                  "1901.10430.pdf": 43.2,
+                  "1911.09483.pdf": 43.5
+                },
+                "gold_member_count": 2,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 1.0,
+                "RC": 1.0,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1911.09483.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1911.09483.pdf"
+                    ],
+                    "intersection": [
+                      "1911.09483.pdf"
+                    ],
+                    "agreement": 1.0
+                  },
+                  {
+                    "depth": 2,
+                    "gold_prefix": [
+                      "1911.09483.pdf",
+                      "1901.10430.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1911.09483.pdf",
+                      "1901.10430.pdf"
+                    ],
+                    "intersection": [
+                      "1901.10430.pdf",
+                      "1911.09483.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 43.5
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 43.2
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 43.5
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 43.2
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Machine Translation', 'WMT’14 EN-DE', 'BLEU')",
+                "gold_members": {
+                  "1911.09483.pdf": 29.9,
+                  "1901.10430.pdf": 29.7
+                },
+                "predicted_members": {
+                  "1901.10430.pdf": 29.7,
+                  "1911.09483.pdf": 29.9
+                },
+                "gold_member_count": 2,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 1.0,
+                "RC": 1.0,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1911.09483.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1911.09483.pdf"
+                    ],
+                    "intersection": [
+                      "1911.09483.pdf"
+                    ],
+                    "agreement": 1.0
+                  },
+                  {
+                    "depth": 2,
+                    "gold_prefix": [
+                      "1911.09483.pdf",
+                      "1901.10430.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1911.09483.pdf",
+                      "1901.10430.pdf"
+                    ],
+                    "intersection": [
+                      "1901.10430.pdf",
+                      "1911.09483.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 29.9
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 29.7
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 29.9
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 29.7
+                  }
+                ]
+              },
+              {
+                "tdm_key": "('Machine Translation', 'IWSLT’14 EN-DE', 'BLEU')",
+                "gold_members": {
+                  "1911.09483.pdf": 36.3,
+                  "1901.10430.pdf": 35.2
+                },
+                "predicted_members": {
+                  "1911.09483.pdf": 36.3
+                },
+                "gold_member_count": 2,
+                "exact_tdm_hit": true,
+                "nonempty_finite_result": true,
+                "PC": 0.5,
+                "RC": 0.5,
+                "RBO": 1.0,
+                "AO": 1.0,
+                "AO_depths": [
+                  {
+                    "depth": 1,
+                    "gold_prefix": [
+                      "1911.09483.pdf"
+                    ],
+                    "predicted_prefix": [
+                      "1911.09483.pdf"
+                    ],
+                    "intersection": [
+                      "1911.09483.pdf"
+                    ],
+                    "agreement": 1.0
+                  }
+                ],
+                "gold_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 36.3
+                  },
+                  {
+                    "rank": 2,
+                    "paper_id": "1901.10430.pdf",
+                    "result": 35.2
+                  }
+                ],
+                "predicted_ranking": [
+                  {
+                    "rank": 1,
+                    "paper_id": "1911.09483.pdf",
+                    "result": 36.3
+                  }
+                ]
+              }
+            ],
+            "board_macro_denominator": 10,
+            "singleton_boards": 6,
+            "boards_ge2": 4,
+            "prediction_nonempty_boards": 9,
+            "conventions": "PC/RC/RBO unchanged official; RBO ranks distinct numeric values; AO uses paper IDs, official metric direction, ID tie-break; empty prediction=0; all retained boards in denominator."
+          },
+          "matching_semantics": {
+            "Task_Dataset_Metric": "Exact label equality; no semantic matching.",
+            "TDM_Exact_Match": "Original official unique exact (Task, Dataset, Metric) tuples.",
+            "TDMR_Exact_Match_and_Result_IIM": "Original official legacy bidirectional Result substring rule; not strict numeric equality and not semantic matching.",
+            "Strict_Result_numeric_equality": "Auxiliary finite Decimal Result-only equality; unique numerics; distinct invalid strings remain denominator entries; no percent stripping, scaling, tolerance, or tuple conditioning."
+          },
+          "mean_per_paper_f1_SEPARATE": {
+            "Task IIM": 1.0,
+            "Dataset IIM": 0.9666666666666668,
+            "Metric IIM": 0.8476190476190476,
+            "Result IIM": 0.7737908496732027,
+            "TDM Exact Match": 0.84484126984127,
+            "TDMR Exact Match": 0.7002614379084967,
+            "Strict Result numeric equality": 0.7737908496732027
+          },
+          "f1_definition": "Harmonic mean of official macro per-paper Precision/Recall; mean paper F1 is separate."
+        }
+      },
+      "input_paths": {
+        "raw": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\baseline_rag\\merged\\output.json",
+        "normalized": "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\baseline_rag\\merged\\normalized_output.json"
+      },
+      "coverage": {
+        "status": "COMPLETE",
+        "selected_ids": [
+          "D19-1367.pdf",
+          "1901.10430.pdf",
+          "1808.08745.pdf",
+          "2020.emnlp-main.523.pdf",
+          "1911.09483.pdf"
+        ],
+        "selected_papers": 5,
+        "raw_papers": 5,
+        "evaluated_papers": 5,
+        "evaluated_ids": [
+          "D19-1367.pdf",
+          "1901.10430.pdf",
+          "1808.08745.pdf",
+          "2020.emnlp-main.523.pdf",
+          "1911.09483.pdf"
+        ],
+        "tuple_macro_denominator": 5,
+        "missing_raw_ids": [],
+        "missing_normalized_ids": [],
+        "excluded_unselected_raw_ids": [],
+        "excluded_unselected_normalized_ids": [],
+        "tuple_scope": "Observed selected papers only; missing papers are not zero-filled.",
+        "completion_scope": "Selected input artifacts only; not API or whole-experiment completion.",
+        "missing_files": []
+      },
+      "input_sha256": {
+        "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\baseline_rag\\merged\\output.json": "20128c6da88be46e52e5cd8dd3b97b7cf561a29ec40dd900e0fea9da03e0a5a5",
+        "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\baseline_rag\\merged\\normalized_output.json": "a37d780cf22509f269bfa742a5e3c0f0277c65579aec2b50ad0e7a290d146e52"
+      },
+      "input_integrity_unchanged": true
+    }
+  },
+  "comparisons": {
+    "delta_direction": "right minus left; raw fractions, not percentage points",
+    "pairs": {}
+  },
+  "protected_sha256": {
+    "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\discovery.json": "2662417b7445b0f8516dea4746171ded276cd1c763a0c152a2fe820fbc95761c",
+    "D:\\C++\\SCILEAD\\pilot\\autodl_setup\\20261021\\stage\\data\\gold\\tdm_annotations.json": "603dd077ae174e4beefc24a9a73b7436e1e3cb6c9aaee042adc4d4aa5ea75aaf",
+    "D:\\C++\\SCILEAD\\pilot\\autodl_setup\\20261021\\stage\\data\\gold\\leaderboards.json": "b32320009c1471442e6c110df52d77c64538373b298b4f47865a912761d62657",
+    "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\evaluation\\scope\\leaderboards_selected.json": "998324eec04d98499c1525e1ae98db599d3bb6c96dd3ddd5d047a083443a339f",
+    "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261029_input_ablation\\evaluation\\scope\\manifest.json": "0f486b53b968a8722cce42b57a6ffe67f5514596ddf986df14aab19cf4e847b5",
+    "D:\\C++\\SCILEAD\\emnlp2024-leaderboard-generation\\tdm_eval.py": "d84cb867a9ba1bb1311210c80705c55697b0b370ae12ec566bc8f8ff8f7ba606",
+    "D:\\C++\\SCILEAD\\emnlp2024-leaderboard-generation\\leaderboard_eval.py": "b004f6b8db274a233b12a74bcef9378690a8f01dc0dbf2873d65948ee69d7e94",
+    "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\analysis\\evaluate_offline.py": "03324879cb84d62985c7eff8f397b1f38fb6865249f18df31c034c5e15af79f0",
+    "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028\\analysis\\evaluations\\partially_stage2\\leaderboard\\evaluate_paper_metrics.py": "80673a98ea2764070e8a4f3383122089ad16d4df6cad3068865b1f711fe14576"
+  },
+  "protected_files_unchanged": true,
+  "network_attempts": []
+}

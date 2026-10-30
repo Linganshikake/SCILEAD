@@ -1,0 +1,32 @@
+{
+  "id": "99d5c2c7-361a-4f12-bfbf-9deb88efc356",
+  "object": "chat.completion",
+  "created": 1793194910,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English-German, TER)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches item list. Input: (Machine Translation, WMT'14 English-German, TER). List has (Machine Translation, WMT’14 EN-DE, BLEU) using curly apostrophe and EN-DE. Not match due language and metric. Output tuple unchanged. Need exact as input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 552,
+    "completion_tokens": 86,
+    "total_tokens": 638,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 168
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

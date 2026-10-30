@@ -1,0 +1,32 @@
+{
+  "id": "fafe278a-bc46-42f2-91b5-5cf394ec26a0",
+  "object": "chat.completion",
+  "created": 1793197441,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "NER German",
+        "reasoning_content": "We need answer only selected item or unchanged input. Need match NER German against list. List has NER English, Named Entity Recognition. Input NER German: language differs, no German NER candidate. Need preserve language identity, not match NER English or generic NER? Requirement preserve meaningful differences language. \"NER German\" not in list. Could generic Named Entity Recognition match? It lacks language, but input specifies German. If match generic Named Entity Recognition maybe loses language. Need decide if unambiguous? NER German means named entity recognition in German. Candidate \"Named Entity Recognition\" general task, language not specified. But preserving language differences, likely not match because candidate doesn't denote German. Output unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 508,
+    "completion_tokens": 146,
+    "total_tokens": 654,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 252
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

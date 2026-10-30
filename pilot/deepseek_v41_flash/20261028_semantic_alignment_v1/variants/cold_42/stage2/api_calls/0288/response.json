@@ -1,0 +1,32 @@
+{
+  "id": "1094e708-b4d5-4bd8-ba01-d8c43568559a",
+  "object": "chat.completion",
+  "created": 1793198235,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input: (Extreme Summarization, XSum, ROUGE-1 F1). List has Summarization, XSum, ROGUE-2 etc. Extreme Summarization is XSum benchmark task? XSum = extreme summarization dataset. Metric ROUGE-1 F1. List candidates with XSum and ROGUE-1 (typo ROGUE). We need match if task, dataset, metric same underlying. Candidate: (Summarization, XSum, ROGUE-1). But input metric \"ROUGE-1 F1\" vs list \"ROGUE-1\" (spelling typo and missing F1). ROGUE is typo for ROUGE likely. ROUGE-1 metric often F1. Task Extreme Summarization vs Summarization: XSum is extreme summarization benchmark; task label Summarization broader but compatible? Need semantic match. Candidate (Summarization, XSum, ROGUE-1) likely matches. But note list has (Summarization, XSum, ROGUE-1) and also ROGUE-L, ROGUE-2. Input specifically ROUGE-1 F1. Match to ROGUE-1. Need output entire listed tuple verbatim exact spelling: (Summarization, XSum, ROGUE-1). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 302,
+    "total_tokens": 1076,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 288
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

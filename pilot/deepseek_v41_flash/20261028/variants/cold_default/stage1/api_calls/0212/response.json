@@ -1,0 +1,32 @@
+{
+  "id": "d64a75c5-7153-41e7-8cab-d811cee7f7a2",
+  "object": "chat.completion",
+  "created": 1793194402,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English→French",
+        "reasoning_content": "We need answer only matched item if matches one in list else unchanged. Input \"WMT En-Fr newstest2014\". Need see item list includes \"WMT'14 English→French\". Does that match? Need exact item matching? \"If input entity matches one of items\". Could be semantic equivalence? Likely they expect normalized match. We need determine if \"WMT En-Fr newstest2014\" corresponds to WMT'14 English→French. The input doesn't exactly match string. Instructions: \"matches one of the items\" perhaps alias normalization. Need output matched item in list. Given dataset maybe entity linking to canonical dataset name. \"WMT En-Fr newstest2014\" means WMT14 English-French newstest2014. The list item is \"WMT'14 English→French\". It's likely a match. Also there is \"WMT2014 En→De\" but not Fr. So output exact list item: WMT'14 English→French. Need no explanation. Ensure apostrophe and arrow as given. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 728,
+    "completion_tokens": 230,
+    "total_tokens": 958,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 222
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 216
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

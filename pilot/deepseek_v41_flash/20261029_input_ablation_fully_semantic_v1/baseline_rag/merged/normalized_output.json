@@ -1,0 +1,636 @@
+{
+  "D19-1367.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Language Modeling",
+        "Dataset": "Penn Treebank (PTB)",
+        "Metric": "Perplexity",
+        "Result": "56.0"
+      },
+      {
+        "Task": "Language Modeling",
+        "Dataset": "Penn Treebank (PTB)",
+        "Metric": "Perplexity",
+        "Result": "58.0"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": "CoNLL-2003 - English",
+        "Metric": "F1",
+        "Result": "N/A"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "ence lies in that we select top-n edges with respect to αi,j k . Here n is a hyper-parameter that control- s the density of the network. E.g., n = 1 means a sparse net, and n = ∞ means a very dense net involving all those edges. 3 Experiments We test our method on language modeling and named entity recognition tasks. Our experiments consist of two parts: recurrent neural architecture search and architecture evaluation. In architecture search, we search for good RNN cell architectures. Then, we train and evaluate the learned architec- ture. 3.1 Architecture Search For language modeling, we run neural search on the PTB corpus. We use the standard pre- processed version of the dataset (Pham et al., 2018). To make it comparable with previous work, we copy the setup used in (Pham et al., 2018; Liu et al., 2019). The recurrent cell consist of 8 nodes. The candidate operation set of every edge contain 5 activation functions, including zeroize, tanh, re- lu, sigmoid, and identity. To learn architectures, we run the search system for 40 training epochs with a batch size of 256. We optimize models pa- rameters {Wi} using SGD with a learning rate of 20 and a weight decay rate of 5e-7, and optimized softmax relaxation parameters {wi,j k } by Adam with a learning rate of 3e-3 and a weight decay rate of 1e-3. For RNN models, we use a single- layer recurrent network with embedding and hid- den sizes = 300. It takes us 4 hours to learn the architecture on a single GPU of NVIDIA 1080Ti. For named entity recognition, we choose the CONLL-2003 English dataset. We follow the same setup as in language modeling but with a d- ifferent learning rate (0.1) and a different hidden layer size (256). It takes us 4 hours to learn the architecture on the same GPU. 3.2 Architecture Evaluation Firstly, the discovered architecture is evaluated on the language modeling task. Before that, we train it on the same data used in architecture search. The size of hidden layers is set to 850. We use av-",
+        "metadata": {
+          "filename": "D19-1367.pdf",
+          "page_number": 3,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "architecture search. This may indicate better ar- chitectures found by I-DARTS because the search model is optimized with respect to validation per- plexity. the learned architecture in a named entity recognition system on the English data from CoNLL-2003 shared task (Sang and Meulder, 2003). Following previous work (Akbik et al., 2018; Peters et al., 2017), we report the av- eraged F1 score over 5 runs on the test set. For modeling, we choose the single-layer RNN-CRF",
+        "metadata": {
+          "filename": "D19-1367.pdf",
+          "page_number": 3,
+          "start_index": 3601,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "interesting phenomenon comes up that the best architecture on language modeling is different from that on name entity recognition. This might result from the fact that different tasks have different inductive bias. Al- so, this suggests the possibility of architecture se- lection from the top-k search results on the target task. 4 Related Work Neural architecture search has been proposed to automatically search for better architectures, showing competitive results on several tasks, e.g., image recognition and language modeling. A s- Table 2: F1 scores on the CoNLL-2003 English NER test set. trand of NAS research focuses on reinforcemen- t learning (Zoph and Le, 2016) and evolutionary algorithm-based (Xie and Yuille, 2017) method- s. They are powerful but inefﬁcient. Recent ap- proaches speed up the search process by weight sharing (Pham et al., 2018) and differentiable ar- chitecture search (Liu et al., 2019). But there is no discussion on the softmax-local problem in previ- ous work. Moreover, previous methods are often tested on language modeling. It is rare to see stud- ies on these methods for other NLP tasks. Figure 3: Cells discovered by I-DARTS for language modeling (top) and NER (bottom).",
+        "metadata": {
+          "filename": "D19-1367.pdf",
+          "page_number": 4,
+          "start_index": 1798,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "the discovered architecture is evaluated on the language modeling task. Before that, we train it on the same data used in architecture search. The size of hidden layers is set to 850. We use av- eraged SGD to train the model for 3,000 epochs, with a learning rate of 20 and a weight decay rate of 8e-7. For a fair comparison, we do not ﬁne-tune the model at the end of the training. Table 1: Perplexities on PTB (lower is better). V-RHN (Zilly et al., 2016) indicates Variational RHN. LSTM + SC (Yang et al., 2018) indicates LSTM with skip con- nection. LSTM + SE (Merity et al., 2018) indicates LSTM with mixture of softmax. Random RNNs indi- cates that the network generated by random initialized. Table 1 shows the perplexities of different RN- N models on PTB. We also report the results of previous systems. The model discovered by I- DARTS achieves a validation perplexity of 58.0 and a test perplexity of 56.0 when n = 1. It is on par with the state-of-the-art models that are de- signed either manually or automatically. Howev- er, we ﬁnd that the model failed to optimize when n = 2. It might result from the complex interac- tion between operations. We leave this issue for future study. initialization- sensitive (Pham et al., 2018; Liu et al., 2019), we search the architectures for 4 times with different random seeds. We evaluate the architecture every 10 search epochs by retraining it on PTB for 500 epochs. We compare DARTS with our I-DARTS method with the same random seed. See Figure 2(b) for averaged validation perplexities over 4 d- ifferent runs at different search epochs. We see that I-DARTS is easier to converge than DARTS (4 hours). It is 1.4X faster than that of DARTS. An- other interesting ﬁnding is that I-DARTS achieves a lower validation perplexity than DARTS during architecture search. This may indicate better ar- chitectures found by I-DARTS because the search model is optimized with respect to validation per- plexity. the learned architecture in a named",
+        "metadata": {
+          "filename": "D19-1367.pdf",
+          "page_number": 3,
+          "start_index": 1800,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Perplexities on PTB (lower is better). V-RHN (Zilly et al., 2016) indicates Variational RHN. LSTM + SC (Yang et al., 2018) indicates LSTM with skip con- nection. LSTM + SE (Merity et al., 2018) indicates LSTM with mixture of softmax. Random RNNs indi- cates that the network generated by random initialized.\nArchitecture V-RHN LSTM LSTM + SC LSTM + SE ENAS DARTS Random RNNs I-DARTS (n = 1) I-DARTS (n = 2) Perplexity test val 65.4 67.9 58.8 60.7 58.3 60.9 56.0 58.1 58.6 60.8 56.1 58.3 61.2 63.7 56.0 58.0 - - Search Cost (GPU days) - - - - 0.50 0.25 - 0.17 -",
+        "metadata": {
+          "filename": "D19-1367.pdf",
+          "page_number": 3,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Figure 2: Perplexity vs. search epoch number.\nModel best published BiLSTM-CRF (Lample et al., 2016) BiLSTM-CRF+ELMo (Peters et al., 2018) BERT Base (Devlin et al., 2018) BERT Large (Devlin et al., 2018) BiLSTM-CRF+PCE (Akbik et al., 2019) Random RNNs w/o pre-trained LM DARTS w/o pre-trained LM I-DARTS (n = 2) w/o pre-trained LM I-DARTS (n = 1) w/o pre-trained LM Random RNNs DARTS I-DARTS (n = 2) I-DARTS (n = 1)",
+        "metadata": {
+          "filename": "D19-1367.pdf",
+          "page_number": 4,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "1901.10430.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Machine Translation",
+        "Dataset": "WMT’14 EN-DE",
+        "Metric": "BLEU",
+        "Result": "29.7"
+      },
+      {
+        "Task": "Machine Translation",
+        "Dataset": "WMT’14 EN-FR",
+        "Metric": "BLEU",
+        "Result": "43.2"
+      },
+      {
+        "Task": "Machine Translation",
+        "Dataset": null,
+        "Metric": "BLEU",
+        "Result": "35.2"
+      },
+      {
+        "Task": "Machine Translation",
+        "Dataset": "WMT’17 EN-ZH",
+        "Metric": "BLEU",
+        "Result": "24.4"
+      },
+      {
+        "Task": "Language Modeling",
+        "Dataset": "Google Billion Word",
+        "Metric": "Perplexity",
+        "Result": "26.60"
+      },
+      {
+        "Task": "Language Modeling",
+        "Dataset": "Google Billion Word",
+        "Metric": "Perplexity",
+        "Result": "26.67"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "CNN/DailyMail",
+        "Metric": "ROGUE-1",
+        "Result": "39.84"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "CNN/DailyMail",
+        "Metric": "ROGUE-2",
+        "Result": "16.25"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "CNN/DailyMail",
+        "Metric": "ROGUE-L",
+        "Result": "36.73"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "Machine Translation. We report results on four benchmarks: For WMT English to German (En- De) we replicate the setup of Vaswani et al. (2017), based on WMT’16 training data with 4.5M sen- tence pairs, we validate on newstest2013 and test on newstest2014.3 The vocabulary is a 32K joint source and target byte pair encoding (BPE; Sennrich et al. 2016). For WMT English to French (En- Fr), we borrow the setup of Gehring et al. (2017) with 36M training sentence pairs from WMT’14, validate on newstest2012+2013 and test on newstest2014. The 40K vocabulary is based on a joint source and target BPE factorization. For WMT English to Chinese (Zh-En), we pre-process the WMT’17 training data following Hassan et al. (2018) resulting in 20M sentence pairs. We develop on devtest2017 and test on newstest2017. For IWSLT’14 German-English (De-En) we replicate the setup of Edunov et al. (2018) for 160K training sentence pairs and 10K joint BPE vocabulary. For this benchmark only, data is lowercased. For WMT En-De, WMT En-Fr, we measure case-sensitive tokenized BLEU.4 For WMT En-De only we apply compound splitting similar to Vaswani et al. (2017). For WMT Zh-En we measure detokenized BLEU to be comparable to Hassan et al. (2018).5 We train three random initializations of a each conﬁguration and report test accuracy of the seed which resulted in the highest validation BLEU. Ablations are conducted on the validation set and we report the mean BLEU and standard deviation on this set. WMT En-De, WMT En-Fr are based on beam search with a beam width of 5, IWSLT uses beam 4, and WMT Zh-En beam 8 following Hassan et al. (2018). For all datasets, we tune a length penalty as well as the number of checkpoints to average on the validation set. Language Modeling. We evaluate on the large-scale Billion word dataset (Chelba et al., 2013) which contains 768M tokens and has a vocabulary of nearly 800K types. Sentences in this dataset are shufﬂed and we batch sentences independently of each other. Models",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "dataset (Chelba et al., 2013) which contains 768M tokens and has a vocabulary of nearly 800K types. Sentences in this dataset are shufﬂed and we batch sentences independently of each other. Models are evaluated in terms of perplexity on the valid and test portions. Summarization. We test the model’s ability to process long documents on the CNN-DailyMail summarization task (Hermann et al., 2015; Nallapati et al., 2016) comprising over 280K news arti- cles paired with multi-sentence summaries. Articles are truncated to 400 tokens (See et al., 2017) and we use a BPE vocabulary of 30K types (Fan et al., 2017). We evaluate in terms of F1-Rouge, that is Rouge-1, Rouge-2 and Rouge-L (Lin, 2004).6 When generating summaries, we follow stan- dard practice in tuning the maximum output length, disallowing repeating the same trigram, and we apply a stepwise length penalty (Paulus et al., 2017; Fan et al., 2017; Wu et al., 2016). Translation. We use a dropout rate of 0.3 for WMT En-De and IWSLT De-En, 0.1 for WMT En- Fr, and 0.25 for WMT Zh-En. WMT models are optimized with Adam and a cosine learning rate schedule (Kingma & Ba, 2015; Loshchilov & Hutter, 2016) where the learning rate is ﬁrst linearly warmed up for 10K steps from 10−7 to 10−3 and then annealed following a cosine rate with a single cycle. For IWSLT’14 De-En, we use a schedule based on the inverse square root of the current step (Vaswani et al., 2017). We train the WMT models on 8 NVIDIA V100 GPUs for a total of 30K steps on WMT En-De, 40K steps for WMT Zh-En and 80K steps for WMT En-Fr. For IWSLT De-En we train for 50K steps on a single GPU. We use ﬂoating point 16 precision and accumulate the gradients for 16 batches before applying an update (Ott et al., 2018), except for IWSLT where we do not accumulate gradients. Batches contain up to 459K source tokens and the same number of target tokens for both WMT En-De and WMT Zh-En, 655K for En-Fr, and 4K for IWSLT De-En. We use label smoothing with 0.1 weight for the",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 5,
+          "start_index": 1803,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "REFERENCES",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 9,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Batches contain up to 459K source tokens and the same number of target tokens for both WMT En-De and WMT Zh-En, 655K for En-Fr, and 4K for IWSLT De-En. We use label smoothing with 0.1 weight for the uniform prior distribution over the vocabulary (Szegedy et al., 2015; Pereyra et al., 2017). Language Modeling. We follow the same setup as for translation but remove the encoder module. For the Billion word benchmark we use an adaptive softmax output layer to reduce the computational burden of the large vocabulary (Grave et al., 2016; Press & Wolf, 2017) and tie it with variable sized 4https://github.com/moses-smt/mosesdecoder/blob/master/scripts/generic/multi-bleu.perl 5SacreBLEU hash: BLEU+case.mixed+lang.zh-en+numrefs.1+smooth.exp+test.wmt17+tok.13a+version.1.2.11 6We use the following parameters for ROUGE-1.5.5.pl: -m -a -n 2",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 5,
+          "start_index": 3602,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Machine translation accuracy in terms of BLEU for WMT En-De and WMT En-Fr on newstest2014.\nModel Param (En-De) WMT En-De WMT En-Fr Gehring et al. (2017) Vaswani et al. (2017) Ahmed et al. (2017) Chen et al. (2018) Shaw et al. (2018) Ott et al. (2018) 216M 213M 213M 379M - 210M 25.2 28.4 28.9 28.5 29.2 29.3 40.5 41.0 41.4 41.0 41.5 43.2 LightConv DynamicConv 202M 213M 28.9 29.7 43.1 43.2",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Machine translation accuracy in terms of BLEU on IWSLT and WMT Zh-En.\nModel Param (Zh-En) IWSLT WMT Zh-En Deng et al. (2018) Hassan et al. (2018) - - 33.1 - - 24.2 Self-attention baseline LightConv DynamicConv 292M 285M 296M 34.4 34.8 35.2 23.8 24.3 24.4",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Ablation on WMT English-German newstest2013. (+) indicates that a result includes all preceding features. Speed results based on beam size 4, batch size 256 on an NVIDIA P100 GPU.\nModel Param BLEU Sent/sec Vaswani et al. (2017) Self-attention baseline (k=inf, H=16) Self-attention baseline (k=3,7,15,31x3, H=16) 213M 26.4 210M 26.9 ± 0.1 210M 26.9 ± 0.3 - 52.1 ± 0.1 54.9 ± 0.2 CNN (k=3) CNN Depthwise (k=3, H=1024) + Increasing kernel (k=3,7,15,31x4, H=1024) + DropConnect (H=1024) + Weight sharing (H=16) + Softmax-normalized weights [LightConv] (H=16) + Dynamic weights [DynamicConv] (H=16) Note: DynamicConv(H=16) w/o softmax-normalization 208M 25.9 ± 0.2 195M 26.1 ± 0.2 195M 26.4 ± 0.2 195M 26.5 ± 0.2 195M 26.5 ± 0.1 195M 26.6 ± 0.2 200M 26.9 ± 0.2 diverges 200M 68.1 ± 0.3 67.1 ± 1.0 63.3 ± 0.1 63.3 ± 0.1 63.7 ± 0.4 63.6 ± 0.1 62.6 ± 0.4 AAN decoder + self-attn encoder AAN decoder + AAN encoder 260M 26.8 ± 0.1 310M 22.5 ± 0.1 59.5 ± 0.1 59.2 ± 2.1",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: Language modeling results on the Google Billion Word test set. †does not include embedding and softmax layers\nModel Param Valid Test 2-layer LSTM-8192-1024 (J´ozefowicz et al., 2016) Gated Convolutional Model (Dauphin et al., 2017) Mixture of Experts (Shazeer et al., 2017) – 428M 4371M † – – – 30.6 31.9 28.0 Self-attention baseline DynamicConv 331M 339M 26.67 26.60 26.73 26.67",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Results on CNN-DailyMail summarization. We compare to likelihood trained approaches except for Celikyilmaz et al. (2018).\nModel Param Rouge-1 Rouge-2 Rouge-l LSTM (Paulus et al., 2017) CNN (Fan et al., 2017) - - 38.30 39.06 14.81 15.38 35.49 35.77 Self-attention baseline LightConv DynamicConv 90M 86M 87M 39.26 39.52 39.84 15.98 15.97 16.25 36.35 36.51 36.73 RL (Celikyilmaz et al., 2018) - 41.69 19.47 37.92",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Alternatives to softmax-normalization in DynamicConv on WMT English-German new- stest2013 (€ = 10~°).\nMethod BLEU W (No normalization) diverges softmax(W) 26.9 + 0.2 o(W) 26.6 + 0.3 anh(W) 25.6 + 0.2 wick diverges Ww + [Wwyete 26.8 + 0.2 power(W, 2) diverges abs(W) diverges wie: diverges abs(W) + iWlate 26.7 + 0.2",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 13,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 7: Inference speed of non-autoregressive models and small decoder versions of DynamicConv on WMT English-German newstest2014. For some models, the decoding speed (sent/sec) is derived by taking the inverse of the sentence generation latency in the literature.\nModel (batch size = 1, beam size = 1) Param BLEU Sent/sec NAT (+ FT) (Gu et al., 2018) NAT (+ FT + NPD=10) (Gu et al., 2018) NAT (+ FT + NPD=100) (Gu et al., 2018) LT, Improved Semhash (Kaiser et al., 2018) - - - - 17.7 18.7 19.2 19.8 25.6 12.7 3.9 9.5 IR idec = 1 (Lee et al., 2018) IR idec = 2 (Lee et al., 2018) IR idec = 5 (Lee et al., 2018) IR idec = 10 (Lee et al., 2018) IR Adaptive (Lee et al., 2018) - - - - - 13.9 17.0 20.3 21.6 21.5 - - - - - NART w/ hints (Li et al., 2019) NART w/ hints (B = 4, 9 candidates) (Li et al., 2019) - - 21.1 25.2 38.5 22.7 ENAT Embedding Mapping (Guo et al., 2019) ENAT Embedding Mapping (rescoring 9 candidates) (Guo et al., 2019) - - 20.7 24.3 41.7 20.4 Autoregressive (Gu et al., 2018) Autoregressive (Lee et al., 2018) Transformer (Li et al., 2019) Transformer (Guo et al., 2019) - - - - 22.7 23.8 27.3 27.4 2.5 - 1.3 1.6 DynamicConv (1-decoder layer (k=31)) DynamicConv (3-decoder layers (k=3,7,15)) DynamicConv (6-decoder layers (k=3,7,15,31,31,31)) 124M 153M 200M 26.1 27.7 28.5 15.2 7.2 3.9 Tok/sec - - - - 511.4 393.6 139.7 90.4 107.2 - - - - - 54.0 - - 423.0 202.3 110.9",
+        "metadata": {
+          "filename": "1901.10430.pdf",
+          "page_number": 14,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "1808.08745.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "ROGUE-1",
+        "Result": "31.89"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "ROGUE-2",
+        "Result": "11.54"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "ROGUE-L",
+        "Result": "25.75"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": "Accuracy",
+        "Result": "46.05"
+      },
+      {
+        "Task": "Summarization",
+        "Dataset": "XSum",
+        "Metric": null,
+        "Result": "0.037"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "with- out access to the document or the gold summary. The more questions can be answered, the better the corresponding system is at summarizing the docu- ment as a whole. Five participants answered ques- tions for each summary. We followed the scoring mechanism introduced in Clarke and Lapata (2010). A correct answer was marked with a score of one, partially correct answers with a score of 0.5, and zero otherwise. The ﬁnal score for a system is the average of all its question scores. Answers again were elicited using Amazon’s Mechanical Turk crowdsourcing platform. We uploaded the data in batches (one system at a time) to ensure that the same partic- ipant does not evaluate summaries from different systems on the same set of questions. Table 7 shows the results of the QA evaluation. Based on summaries generated by T-CONVS2S, participants can answer 46.05% of the questions correctly. Summaries generated by CONVS2S, PTGEN and EXT-ORACLE provide answers to 30.90%, 21.40%, and 15.70% of the questions, re- spectively. Pairwise differences between systems are all statistically signiﬁcant (p < 0.01) with the exception of PTGEN and EXT-ORACLE. EXT- ORACLE performs poorly on both QA and rating evaluations. The examples in Table 6 indicate that EXT-ORACLE is often misled by selecting a sen- tence with the highest ROUGE (against the gold summary), but ROUGE itself does not ensure that the summary retains the most important informa- tion from the document. The QA evaluation fur- ther emphasizes that in order for the summary to be felicitous, information needs to be embedded in the appropriate context. For example, CONVS2S and PTGEN will fail to answer the question “Who (see Table 6 second block) de- has resigned?” spite containing the correct answer “Dick Advo- caat” due to the wrong context. T-CONVS2S is able to extract important entities from the docu- ment with the right theme. 6 Conclusions In this paper we introduced the task of “extreme summarization” together with a",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 9,
+          "start_index": 1802,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "reduced the learning rate by an order of magnitude after each epoch until it fell below 10−4. We also applied a dropout of 0.2 to the embeddings, the decoder outputs and the input of the convolutional blocks. Gradients were normalized by the number of non-padding tokens per mini-batch. We also used weight normalization for all layers except for lookup tables. including ours and those based on RNNs (See et al., 2017) had a vocabu- lary of 50,000 words and were trained on a sin- gle Nvidia M40 GPU with a batch size of 32 sen- tences. Summaries at test time were obtained us- ing beam search (with beam size 10). 5 Results Automatic Evaluation We report results us- ing automatic metrics in Table 4. We eval- uated summarization quality using F1 ROUGE (Lin and Hovy, 2003). Unigram and bigram over- lap (ROUGE-1 and ROUGE-2) are a proxy for as- sessing informativeness and the longest common subsequence (ROUGE-L) represents ﬂuency.4 On the XSum dataset, SEQ2SEQ outper- forms the LEAD and RANDOM baselines by a large margin. PTGEN, a SEQ2SEQ model with a “copying” mechanism outperforms EXT- ORACLE, system on ROUGE-2 and ROUGE-L. This is in sharp con- trast to the performance of these models on CNN/DailyMail (See et al., 2017) and Newsroom datasets (Grusky et al., 2018), where they fail to outperform the LEAD. The result provides further evidence that XSum is a good testbed for abstrac- tive summarization. PTGEN-COVG, the best per- forming abstractive system on the CNN/DailyMail datasets, does not do well. We believe that the coverage mechanism is more useful when gener- ating multi-line summaries and is basically redun- dant for extreme summarization. of all SEQ2SEQ, RNN-based abstractive systems. We hypoth- esize that its superior performance stems from the ability to better represent document content (i.e., by capturing long-range dependencies). Table 4 shows several variants of T-CONVS2S including an encoder network enriched with in- formation about how topical a word is on",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 7,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "system summaries are shown in Table 6. We ran- domly selected 50 documents from the XSum test set and compared all possible combinations of two out of ﬁve systems for each document. We col- lected judgments from three different participants for each comparison. The order of summaries was randomized per document and the order of docu- ments per participant. The score of a system was computed as the percentage of times it was chosen as best mi- nus the percentage of times it was selected as worst. The scores range from -1 (worst) to 1 (best) and are shown in Table 7. Perhaps unsur- prisingly human-authored summaries were con- sidered best, whereas, T-CONVS2S was ranked 2nd followed by EXT-ORACLE and CONVS2S. PTGEN was ranked worst with the lowest score of −0.218. We carried out pairwise compar- isons between all models to assess whether sys- tem differences are statistically signiﬁcant. GOLD is signiﬁcantly different from all other systems and T-CONVS2S is signiﬁcantly different from CONVS2S and PTGEN (using a one-way ANOVA with posthoc Tukey HSD tests; p < 0.01). All other differences are not statistically signiﬁcant. For our second experiment we used a question- answering (QA) paradigm (Clarke and Lapata, 2010; Narayan et al., 2018b) to assess the degree to which the models retain key information from the document. We used the same 50 documents as in our ﬁrst elicitation study. We wrote two fact-based questions per document, just by reading the summary, under the assumption that it high- lights the most important content of the news ar- ticle. Questions were formulated so as not to re- veal answers to subsequent questions. We cre- ated 100 questions in total (see Table 6 for exam- ples). Participants read the output summaries and answered the questions as best they could with- out access to the document or the gold summary. The more questions can be answered, the better the corresponding system is at summarizing the docu- ment as a whole. Five participants answered",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 9,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "summaries generated from two out of ﬁve systems and were asked to decide which summary was better and which one was worse in order of informativeness (does the summary capture important information in the document?) and ﬂuency (is the summary written in well-formed English?). Examples of In our ﬁrst experiment, participants were asked",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 8,
+          "start_index": 1802,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 2 provides empirical analysis supporting our claim that XSum is less biased toward ex- tractive methods compared to other summariza- tion datasets. We report the percentage of novel n-grams in the target gold summaries that do not appear in their source documents. There are 36% novel unigrams in the XSum reference summaries compared to 17% in CNN, 17% in DailyMail, and 23% in NY Times. This indicates that XSum summaries are more abstractive. The proportion of novel constructions grows for larger n-grams\navg. summary length sentences words 3.59 45.70 3.86 54.65 2.44 45.54 1.00 23.26 avg. document length sentences words 33.98 760.50 29.33 653.33 35.55 800.04 19.77 431.07 vocabulary size # docs (train/val/test) Datasets document 343,516 563,663 1,399,358 399,147 summary 89,051 179,966 294,011 81,092 CNN DailyMail NY Times XSum 90,266/1,220/1,093 196,961/12,148/10,397 589,284/32,736/32,739 204,045/11,332/11,334",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 3,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 1: Comparison of summarization datasets with respect to overall corpus size, size of training, validation, and test set, average document (source) and summary (target) length (in terms of words and sentences), and vocabulary size on both on source and target. For CNN and DailyMail, we used the original splits of Hermann et al. (2015) and followed Narayan et al. (2018b) to preprocess them. For NY Times (Sandhaus, 2008), we used the splits and pre-processing steps of Paulus et al. (2018). For the vocabulary, we lowercase tokens.\n% of novel n-grams in gold summary EXT-ORACLE R2 28.55 30.55 31.59 8.81 LEAD R2 11.13 18.36 15.86 1.61 Datasets R1 50.38 55.12 52.08 29.79 RL 25.95 37.25 23.75 11.95 unigrams 16.75 17.03 22.64 35.76 bigrams 54.33 53.78 55.59 83.45 trigrams 72.42 72.14 71.93 95.50 4-grams 80.37 80.28 80.16 98.49 R1 29.15 40.68 31.85 16.30 CNN DailyMail NY Times XSum RL 46.58 51.24 46.72 22.65",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 3,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: ROUGE results on XSum test set. We re- port ROUGE-1 (R1), ROUGE-2 (R2), and ROUGE-L (RL) F1 scores. Extractive systems are in the upper block, RNN-based abstractive systems are in the mid- dle block, and convolutional abstractive systems are in the bottom block.\nR1 15.16 16.30 29.79 28.42 29.70 28.10 31.27 31.71 31.71 31.61 31.89 R2 1.78 1.60 8.81 8.77 9.21 8.02 11.07 11.38 11.34 11.30 11.54 RL 11.27 11.95 22.66 22.48 23.24 21.72 25.23 25.56 25.61 25.51 25.75 Models Random LEAD EXT-ORACLE SEQ2SEQ PTGEN PTGEN-COVG CONVS2S T-CONVS2S (enct′ ) T-CONVS2S (enct′ , dectD ) T-CONVS2S (enc(t′,tD)) T-CONVS2S (enc(t′,tD), dectD )",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Proportion of novel n-grams in summaries generated by various models on the XSum test set.\n% of novel n-grams in generated summaries 4-grams unigrams 0.00 0.00 0.00 0.00 96.04 27.40 98.10 31.26 98.03 30.73 98.49 35.76 Models bigrams 0.00 0.00 73.33 79.50 79.18 83.45 trigrams 0.00 0.00 90.43 94.28 94.10 95.50 LEAD EXT-ORACLE PTGEN CONVS2S T-CONVS2S GOLD",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Example output summaries on the XSum test set with [ROUGE-1, ROUGE-2 and ROUGE-L] scores, goldstandard reference, and corresponding questions. Words highlighted in blue are either the right answer or constitute appropriate context for inferring it; words in red lead to the wrong answer.\nEXT-ORACLE Caroline Pidgeon is the Lib Dem candidate, Sian Berry will contest the election for [34.1, 20.5, 34.1] PTGEN CONVS2S T-CONVS2S GOLD Questions the Greens and UKIP has chosen its culture spokesman Peter Whittle. UKIP leader Nigel Goldsmith has been elected as the new mayor of London to elect a new conservative MP. London mayoral candidate Zac Goldsmith has been elected as the new mayor of London. Former London mayoral candidate Zac Goldsmith has been chosen to stand in the London mayoral election. Zac Goldsmith will contest the 2016 London mayoral election for the conservatives, it has been announced. (1) Who will contest for the conservatives? (Zac Goldsmith) (2) For what election will he/she contest? (The London mayoral election) [45.7, 6.1, 28.6] [53.3, 21.4, 26.7] [50.0, 26.7, 37.5] EXT-ORACLE North-east rivals Newcastle are the only team below them in the Premier League [35.3, 18.8, 35.3] table. Sunderland have appointed former Sunderland boss Dick Advocaat as manager at the end of the season to sign a new deal. Sunderland have sacked manager Dick Advocaat after less than three months in charge. Dick Advocaat has resigned as Sunderland manager until the end of the season. Dick Advocaat has resigned as Sunderland boss, with the team yet to win in the Premier League this season. (1) Who has resigned? (Dick Advocaat) (2) From what post has he/she resigned? (Sunderland boss) The Greater Ardoyne residents collective (GARC) is protesting against an agree- ment aimed at resolving a long-running dispute in the area. A residents’ group has been granted permission for GARC to hold a parade on the outskirts of Crumlin, County Antrim. A protest has been held in the Republic of Ireland calling for an end to parading parading in North Belfast. A protest has been held in North Belfast over a protest against the Orange Order in North Belfast. Church leaders have appealed to a nationalist residents’ group to call off a protest against an Orange Order parade in North Belfast. (1) Where is the protest supposed to happen? (North Belfast) (2) What are they protesting against? (An Orange Order parade) PTGEN [45.0, 10.5, 30.0] [25.0, 6.7, 18.8] CONVS2S [56.3, 33.3, 56.3] T-CONVS2S GOLD Questions EXT-ORACLE [26.7, 9.3, 22.2] PTGEN [28.6, 5.0, 28.6] CONVS2S [42.9, 20.0, 33.3] T-CONVS2S [45.0, 26.3, 45.0] GOLD Questions",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 7: System ranking according to human judg- ments and QA-based evaluation.\nModels EXT-ORACLE PTGEN CONVS2S T-CONVS2S GOLD Score -0.121 -0.218 -0.130 0.037 0.431 QA 15.70 21.40 30.90 46.05 97.23",
+        "metadata": {
+          "filename": "1808.08745.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "2020.emnlp-main.523.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Entity Typing",
+        "Dataset": "Open Entity",
+        "Metric": "F1",
+        "Result": "78.2"
+      },
+      {
+        "Task": "Relation Classification",
+        "Dataset": "TACRED",
+        "Metric": "F1",
+        "Result": "72.7"
+      },
+      {
+        "Task": "Named Entity Recognition (NER)",
+        "Dataset": null,
+        "Metric": "F1",
+        "Result": "94.3"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "ReCoRD",
+        "Metric": "Exact Match (EM)",
+        "Result": "90.6"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "ReCoRD",
+        "Metric": "F1",
+        "Result": "91.2"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "Exact Match (EM)",
+        "Result": "90.2"
+      },
+      {
+        "Task": "Question Answering",
+        "Dataset": "SQuAD 1.1",
+        "Metric": "F1",
+        "Result": "95.4"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "Table 12: Common hyper-parameters used in our ex- periments. • number of training epochs: 2, 3, 5 We do not tune the hyper-parameters of the SQuAD dataset, and use the ones described in Liu et al. (2020). The hyper-parameters and other details, including the training time, number of GPUs used, and the best score on the development set, are shown in Table 11. For the other hyper-parameters, we simply follow Liu et al. (2020) (see Table 12). We optimize the model using AdamW with learn- ing rate warmup and linear decay of the learning rate. We also use early stopping based on perfor- mance on the development set. The details of the datasets used in our experiments are provided be- low. dataset is obtained from the LDC website.3 We compute the reported results using our code based on that of Zhang et al. (2019). B.3 CoNLL-2003 The CoNLL-2003 dataset comprises training, de- velopment, and test sets, containing 14,987, 3,466, and 3,684 sentences, respectively. Each sentence contains annotations of four entity types, namely person, location, organization, and miscellaneous. The dataset is downloaded from the relevant web- site.4 The reported results are computed using the conlleval script obtained from the website. B.4 ReCoRD The ReCoRD dataset consists of 100,730 train- ing, 10,000 development, and 10,000 test ques- tions created based on 80,121 unique news articles. The dataset is obtained from the relevant website.5 We compute the performance on the development set using the ofﬁcial evaluation script downloaded from the website. Performance on the test set is ob- tained by submitting our model to the leaderboard. B.5 SQuAD 1.1 B.1 Open Entity The Open Entity dataset used in Zhang et al. (2019) consists of training, development, and test sets, where each set contains 1,998 examples with labels of nine general entity types. The dataset is down- loaded from the website for Zhang et al. (2019).2 We compute the reported results using our code based on that of Zhang et al.",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "points. Furthermore, it achieves a new state of the art on this competitive dataset by outperforming the previous state of the art reported in Baevski et al. (2019) by 0.8 F1 points. 4.4 Cloze-style Question Answering We evaluate our model on the ReCoRD dataset (Zhang et al., 2018a), a cloze-style QA dataset con- sisting of over 120K examples. An interesting char- acteristic of this dataset is that most of its questions cannot be solved without external knowledge. The following is an example question and its answer in the dataset: Question: According to claims in the suit, “Parts of ’Stairway to Heaven,’ instantly recog- nizable to the music fans across the world, sound almost identical to signiﬁcant portions of ‘X.”’ Answer: Taurus Given a question and a passage, the task is to ﬁnd the entity mentioned in the passage that ﬁts the missing entity (denoted by X in the question above). In this dataset, annotations of entity spans (start and end positions) in a passage are provided, and the answer is contained in the provided entity spans one or multiple times. Following past work, we evaluate the models using exact match (EM) and token-level F1 on the development and test sets. Model We solve this task by assigning a relevance score to each entity in the pas- sage and selecting the entity with the high- est score as the answer. Following Liu et al. (2020), given a question q1, q2, ..., qj, and a passage p1, p2, ..., pl, the input word sequence [CLS]q1, q2, ..., qj[SEP] is constructed as: [SEP]p1, p2, ..., pl[SEP]. Further, we input [MASK] entities corresponding to the missing en- tity and all entities in the passage. We compute the relevance score of each entity in the passage using a linear classiﬁer with the concatenated representa- tion of the missing entity and the corresponding en- tity. We train the model using binary cross-entropy loss averaged over all entities in the passage, and select the entity with the highest score (logit) as the answer. Baselines",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 7,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "examples with labels of nine general entity types. The dataset is down- loaded from the website for Zhang et al. (2019).2 We compute the reported results using our code based on that of Zhang et al. (2019). The SQuAD 1.1 dataset contains 87,599 training, 10,570 development, and 9,533 test questions cre- ated based on 536 Wikipedia articles. The dataset is downloaded from the relevant website.6 We com- pute performance on the development set using the ofﬁcial evaluation script downloaded from the web- site. Performance on the test set is obtained by submitting our model to the leaderboard. B.2 TACRED The TACRED dataset contains 68,124 training ex- amples, 22,631 development examples, and 15,509 test examples with labels of their relation types. The total number of relation types is 42. The 2https://github.com/thunlp/ERNIE 3https://catalog.ldc.upenn.edu/ LDC2018T24 4https://www.clips.uantwerpen.be/ conll2003/ner 5https://sheng-z.github.io/ ReCoRD-explorer 6https://rajpurkar.github.io/ SQuAD-explorer",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "start_index": 1800,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "hidden dimensions, 24 hidden layers, L = 64 atten- tion head dimensions, and 16 self-attention heads. The number of dimensions of the entity token em- bedding is set to H = 256. The total number of parameters is approximately 483 M, consisting of 355 M in RoBERTa and 128 M in our entity em- beddings. The input text is tokenized into words using RoBERTa’s tokenizer with the vocabulary consisting of Vw = 50K words. For computational efﬁciency, our entity vocabulary does not include all entities but only the Ve = 500K entities most frequently appearing in our entity annotations. The entity vocabulary also includes two special entities, i.e., [MASK] and [UNK]. is trained via iterations over Wikipedia pages in a random order for 200K steps. To reduce training time, we initialize the parame- ters that LUKE have in common with RoBERTa (parameters in the transformer and the embeddings for words) using RoBERTa. Following past work (Devlin et al., 2019; Liu et al., 2020), we mask 15% of all words and entities at random. If an entity does not exist in the vocabulary, we replace it with the [UNK] entity. We perform pretraining using the original self-attention mechanism rather than our entity-aware self-attention mechanism because we want an ablation study of our mechanism but can not afford to run pretraining twice. Query matri- ces of our self-attention mechanism (Qw2e, Qe2w, and Qe2e) are learned using downstream datasets. Further details of our pretraining are described in Appendix A. 4 Experiments We conduct extensive experiments using ﬁve entity- related tasks: entity typing, relation classiﬁcation, NER, cloze-style QA, and extractive QA. We use similar model architectures for all tasks based on a simple linear classiﬁer on top of the representa- tions of words, entities, or both. Unless otherwise speciﬁed, we create the input word sequence by inserting tokens of [CLS] and [SEP] into the original word sequence as the ﬁrst and the last to- kens, respectively. The input",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: Results of entity typing on the Open Entity dataset.\nPrec. Rec. F1 Name 77.4 60.6 68.0 UFET (Zhang et al., 2019) 76.4 71.0 73.6 BERT (Zhang et al., 2019) 78.4 72.9 75.6 ERNIE (Zhang et al., 2019) KEPLER (Wang et al., 2019b) 77.2 74.2 75.7 KnowBERT (Peters et al., 2019) 78.6 73.7 76.1 79.3 75.8 77.5 K-Adapter (Wang et al., 2020) 77.6 75.0 76.2 RoBERTa (Wang et al., 2020) 79.9 76.6 78.2 LUKE",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 5,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: Results of relation classiﬁcation on the TA- CRED dataset.\nName BERT (Zhang et al., 2019) C-GCN (Zhang et al., 2018b) ERNIE (Zhang et al., 2019) SpanBERT (Joshi et al., 2020) MTB (Baldini Soares et al., 2019) KnowBERT (Peters et al., 2019) KEPLER (Wang et al., 2019b) K-Adapter (Wang et al., 2020) RoBERTa (Wang et al., 2020) LUKE Prec. Rec. F1 67.2 64.8 66.0 69.9 63.3 66.4 70.0 66.1 68.0 70.8 70.9 70.8 - 71.5 71.6 71.4 71.5 70.4 73.0 71.7 68.9 75.4 72.0 70.2 72.4 71.3 70.4 75.1 72.7 -",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Results of named entity recognition on the CoNLL-2003 dataset.\nName F1 LSTM-CRF (Lample et al., 2016) 91.0 92.2 ELMo (Peters et al., 2018) 92.8 BERT (Devlin et al., 2019) 93.1 Akbik et al. (2018) 93.5 Baevski et al. (2019) 92.4 RoBERTa 94.3 LUKE",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: Results of cloze-style question answering on the ReCoRD dataset. All models except RoBERTa (en- semble) are based on a single model.\nName DocQA+ELMo (Zhang et al., 2018a) BERT (Wang et al., 2019a) XLNet+Veriﬁer (Li et al., 2019) RoBERTa (Liu et al., 2020) RoBERTa (ensemble) (Liu et al., 2020) LUKE Test Dev F1 EM 44.1 45.4 45.4 46.7 71.3 72.0 80.6 82.1 81.5 82.7 89.0 89.5 Dev F1 Test EM - - - - 90.0 90.6 90.8 91.4 90.6 91.2 - -",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Results of extractive question answering on the SQuAD 1.1 dataset.\nName BERT (Devlin et al., 2019) SpanBERT (Joshi et al., 2020) XLNet (Yang et al., 2019) ALBERT (Lan et al., 2020) RoBERTa (Liu et al., 2020) LUKE Test Dev F1 EM 84.2 91.1 85.1 91.8 88.8 94.6 89.0 94.5 89.9 95.1 89.3 94.8 88.9 94.6 89.8 95.0 90.2 95.4 Dev F1 Test EM - - - - - -",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 6: Ablation study of our entity representations.\nName LUKE w/o entity inputs LUKE CoNLL-2003 (Test F1) 92.9 94.3 SQuAD (Dev EM) 89.2 89.8 SQuAD (Dev F1) 94.8 95.0",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Open Entity (Test F1) 77.9 78.2 TACRED (Test F1) 72.2 72.7 CoNLL-2003 (Test F1) 94.1 94.3 ReCoRD (Dev EM) 90.1 90.8 ReCoRD (Dev F1) 90.7 91.4 SQuAD (Dev EM) 89.2 89.8",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 7: Ablation study of our entity-aware self-attention mechanism.\nName RoBERTa w/ extra training RoBERTa LUKE CoNLL-2003 (Test F1) 92.5 92.4 94.3 SQuAD (Dev EM) 89.1 88.9 89.8 SQuAD (Dev F1) 94.7 94.6 95.0",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 9,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 9: Hyper-parameters used to pretrain LUKE.\nName Value Maximum word length 512 Batch size 2048 Peak learning rate le-5 Peak learning rate (first 100K steps) | 5e-4 Learning rate decay linear ‘Warmup steps 2500 Mask probability for words 15% Mask probability for entities 15% Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam (3; 0.9 Adam {32 0.999 Adam € le-6",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 11,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 10: Hyper-parameters used for the extra pretrain- ing of RoBERTa on our Wikipedia corpus.\nName Value Maximum word length 512 Batch size 2048 Peak learning rate le-5 Learning rate decay linear Warmup steps 2500 Mask probability for words | 15% Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam (3; 0.9 Adam 32 0.999 Adam € le-6",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 11,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 11: Hyper-parameters and other details of our experiments.\nName Learning rate Batch size Training epochs Training time Number of GPUs Dev score Open Entity TACRED CoNLL-2003 1e-5 32 5 190min 1 72.0 F1 1e-5 4 3 10min 1 78.5 F1 1e-5 8 5 203min 1 97.1 F1 ReCoRD 1e-5 32 2 92min 8 90.8 EM/91.4 F1 SQuAD 15e-6 48 2 42min 8 89.8 EM/95.0 F1",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 12: Common hyper-parameters used in our ex- periments.\nName Value Maximum word length | 512 Learning rate decay linear Warmup ratio 0.06 Dropout 0.1 Weight decay 0.01 Gradient clipping none Adam 3; 0.9 Adam 82 0.98 Adam € le-6",
+        "metadata": {
+          "filename": "2020.emnlp-main.523.pdf",
+          "page_number": 12,
+          "type": "Table"
+        }
+      }
+    ]
+  },
+  "1911.09483.pdf": {
+    "normalized_output": [
+      {
+        "Task": "Machine Translation",
+        "Dataset": "WMT’14 EN-DE",
+        "Metric": "BLEU",
+        "Result": "29.9"
+      },
+      {
+        "Task": "Machine Translation",
+        "Dataset": "WMT’14 EN-FR",
+        "Metric": "BLEU",
+        "Result": "43.5"
+      },
+      {
+        "Task": "Machine Translation",
+        "Dataset": null,
+        "Metric": "BLEU",
+        "Result": "36.3"
+      },
+      {
+        "Task": "Machine Translation",
+        "Dataset": "IWSLT’15 EN-VI",
+        "Metric": "BLEU",
+        "Result": "31.3"
+      }
+    ],
+    "source_documents": [
+      {
+        "content": "training hyper-parameters are tuned on the validation set. MUSE-large For training MUSE-large, following Ott et al. (2018), parameters are updated every 32 steps. We train the model for 80K updates with a batch size of 5120 for En-Fr, and train the model for 30K updates with a batch size of 3584 for En-De. The dropout rate is set to 0.1 for En-Fr and 0.3 for En-De. We borrow the setup of optimizer from Wu et al. (2019a) and use the cosine learning rate schedule with 10000 warmup steps. The max learning rate is set to 0.001 on En-De translation and 0.0007 on En-Fr translation. For checkpoint averaging, following Wu et al. (2019a), we tune the average checkpoints for En-De translation tasks. For En-Fr translation, we do not average checkpoint but use the ﬁnal single checkpoint. MUSE-base We train and test MUSE-base on two small datasets, IWSLT 2014 De-En translation and IWSLT2015 En-Vi translation. Following Vaswani et al. (2017), we use Adam optimizer with a learning rate of 0.001. We use the warmup mechanism and invert the learning rate decay with warmup updates of 4K. For the De-En dataset, we train the model for 20K steps with a batch size of 4K. The parameters are updated every 4 steps. The dropout rate is set to 0.4. For the En-Vi dataset, we train the model for 10K steps with a batch size of 4K. The parameters are also updated every 4 steps. The dropout rate is set to 0.3. We save checkpoints every epoch and average the last 10 checkpoints for inference. During inference, we adopt beam search with a beam size of 5 for De-En, En-Fr and En-Vi trans- lation tasks. The length penalty is set to 0.8 for En-Fr according to the validation results, 1 for the two small datasets following the default setting of Ott et al. (2019). We do not tune beam width and length penalty but use the setting reported in Vaswani et al. (2017). The BLEU1 metric is adopted to evaluate the model performance during evaluation.",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 5,
+          "start_index": 1799,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "extractor. where W1, b1, W2, and b2 are projection parameters. 3 EXPERIMENT We evaluate MUSE on four machine translation tasks. This section describes the datasets, experi- mental settings, detailed results, and analysis. WMT14 En-Fr and En-De datasets The WMT 2014 English-French translation dataset, consisting of 36M sentence pairs, is adopted as a big dataset to test our model. We use the standard split of de- velopment set and test set. We use newstest2014 as the test set and use newstest2012 +newstest2013 as the development set. Following Gehring et al. (2017), we also adopt a joint source and target BPE factorization with the vocabulary size of 40K. For medium dataset, we borrow the setup of Vaswani et al. (2017) and adopt the WMT 2014 English-German translation dataset which consists of 4.5M sentence pairs, the BPE vocabulary size is set to 32K. The test and validation datasets we used are the same as Vaswani et al. (2017). IWSLT De-En and En-Vi datasets Besides, we perform experiments on two small IWSLT datasets to test the small version of MUSE with other comparable models. The IWSLT 2014 German-English",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 4,
+          "start_index": 1797,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "translation dataset consists of 160k sentence pairs. We also adopt a joint source and target BPE factorization with the vocabulary size of 32K. The IWSLT 2015 English-Vietnamese translation dataset consists of 133K training sentence pairs. For the En-Vi task, we build a dictionary including all source and target tokens. The vocabulary size for English is 17.2K, and the vocabulary size for the Vietnamese is 6.8K. For fair comparisons, we only compare models reported with the comparable model size and the same training data. We do not compare Wu et al. (2019b) because it is an ensemble method. We build MUSE-base and MUSE-large with the parameter size comparable to Transformer-base and Transformer-large. We adopt multi-head attention (Vaswani et al., 2017) as implementation of self- attention in MUSE module. The number of attention head is set to 4 for MUSE-base and 16 for MUSE-large. We also add the network architecture built by MUSE-simple in the similar way into the comparison. MUSE consists of 12 residual blocks for encoder and 12 residual blocks for decoder, the dimen- sion is set to 384 for MUSE-base and 768 for MUSE-large. The hidden dimension of non linear transformation is set to 768 for MUSE-base and 3072 for MUSE-large. The MUSE-large is trained on 4 Titan RTX GPUs while the MUSE-base is trained on a single NVIDIA RTX 2080Ti GPU. The batch size is calculated at the token level, which is called dynamic batching (Vaswani et al., 2017). We adopt dynamic convolution as the variant of depth-wise separa- ble convolution. We tune the kernel size on the validation set. For convolution with a single kernel, we use the kernel size of 7 for all layers. In case of dynamic selected kernels, the kernel size is 3 for small kernels and 15 for large kernels for all layers. The training hyper-parameters are tuned on the validation set. MUSE-large For training MUSE-large, following Ott et al. (2018), parameters are updated every 32 steps. We train the model for 80K updates",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 5,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "language processing tasks. Recent studies explore convolutional neural networks (CNN) (Gehring et al., 2017) or self-attention (Vaswani et al., 2017) to support high-parallel sequence modeling and does not require auto-regressive structure during encoding, thus bringing large efﬁciency improve- ments. They are strong at capturing local or global dependencies. There are several studies on combining self-attention and convolution. However, they do not surpass both convectional and self-attention mechanisms. Sukhbaatar et al. (2019b) propose to augment convolution with self attention by directly concentrating them in computer vision tasks. However, as demonstrated in Table 3 there method does not work for sequence to sequence learning task. Since state-of-the-art models on question answering tasks still consist on self-attention and do no adopt ideas in QAnet (Yu et al., 2018). Both self-attention (Ott et al., 2018) and convolution (Wu et al., 2019a) outperforms Evolved transformer by near 2 BLEU scores on En-Fr translation. It seems that learning global and local context through stacking self-attention and convolution layers does not beat either self-attention or convolution models. In contrast, the proposed parallel multi- scale attention outperforms previous convolution or self-attention based models on main translation tasks, showing its effectiveness for sequence to sequence learning. 5 CONCLUSION AND FUTURE WORK Although the self-attention mechanism has been prevalent in sequence modeling, we ﬁnd that at- tention suffers from dispersed weights especially for long sequences, resulting from the insufﬁcient local information. To address this problem, we present Parallel Multi-scale Attention (MUSE) and MUSE-simple. MUSE-simple introduces the idea of parallel multi-scale attention into sequence to sequence learn- ing. And MUSE fuses self-attention, convolution, and point-wise transformation together to explic- itly learn global, local and token level sequence",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 9,
+          "start_index": 0,
+          "type": "Text"
+        }
+      },
+      {
+        "content": "Table 1: MUSE-large outperforms all previous models under the standard training and evaluation setting on WMT14 En-De and WMT14 En-Fr datasets.\nModel En-De En-Fr ConvSeq2seq (Gehring et al., 2017) SliceNet (Kaiser et al., 2017) Transformer (Vaswani et al., 2017) Weighted Transformer (Ahmed et al., 2017) Layer-wise Coordination (He et al., 2018) Transformer (relative position) (Shaw et al., 2018) Transformer (Ott et al., 2018) Evolved Transformer (So et al., 2019) DynamicConv (Wu et al., 2019a) Local Joint Self-attention (Fonollosa et al., 2019) 25.2 26.1 28.4 28.9 29.1 29.2 29.3 29.8 29.7 29.7 40.5 - 41.0 41.4 - 41.5 43.2 41.3 43.2 43.3 MUSE-simple MUSE 29.8 29.9 43.2 43.5",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 2: MUSE-base outperforms previous state-of-the-art models on IWSLT De-En translation datasets and outperforms previous models without BPE processing on IWSLT En-Vi.\nModel En-Vi De-En NBMT (Huang et al., 2017) SACT (Lin et al., 2018) NP2MT (Feng et al., 2018) Fixup (Zhang et al., 2019) DynamicConv (Wu et al., 2019a) Macaron (Lu et al., 2019) Local Joint Self-attention (Fonollosa et al., 2019) 28.1 29.1 30.6 - - - - 30.1 - 31.7 34.5 35.2 35.4 35.7 MUSE-simple MUSE 30.7 31.3 35.8 36.3",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 6,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 3: Comparisons between MUSE and its variants on the IWSLT 2015 De-En translation task.\nModel BLEU MUSE MUSE-simple (without DepthConv) 36.3 35.8 substitute DepthConv with Convolution (k=3) substitute DepthConv with Convolution (k=5) substitute DepthConv with Convolution (k=7) 35.2 35.0 34.5 DepthConv without shared projection DepthConv single kernel (k=3) DepthConv single kernel (k=7) DepthConv single kernel (k=15) DepthConv single kernel (k=31) DepthConv single kernel (grow kernels among layers:3,7,15,31) DepthConv dynamically selected kernel (k=3,15) 34.9 36.2 36.2 36.0 35.8 35.9 36.3",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 7,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 4: The comparison between the inference speed of MUSE and Transformer.\nModel Inference Speed (tokens/s) Transformer MUSE 132 173 Acceleration 31%",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 8,
+          "type": "Table"
+        }
+      },
+      {
+        "content": "Table 5: Case study on the De-En dataset. The red bolded words denote the wrong translation and blue bolded words denote the correct translation. In case 1, transformer fails to capture the relationship between some words and their neighbors, such as “right” and “clap”. In case 2, the cause adverbial clause is correctly translated by MUSE while transformer misses the word “why” and fails to translate it.\nCase 1 Source wenn sie denken, dass die auf der linken seite jazz ist und die, auf der rechten seite swing ist, dann klatschen sie bitte. Target if you think the one on the left is jazz and the one on the right is swing, clap your hands. Transformer if you think it’s jazz on the left, and those on the right side of the swing are clapping, please. MUSE if you think the one on the left is jazz, and the one on the right is swing, please clap. Case 2 Source und deswegen haben wir uns entschlossen in berlin eine halle zu bauen, in der wir sozusagen die elektrischen verhltnisse der insel im mastab eins zu drei ganz genau abbilden knnen. Target and that’s why we decided to build a hall in berlin, where we could precisely reconstruct, so to speak, the electrical ratio of the island on a one to three scale. Transformer and so in berlin, we decided to build a hall where we could sort of map the electrical proportions of the island at scale one to three very precisely. MUSE and that’s why we decided to build a hall in berlin, where we can sort of map the electric relationship of the island at the scale one to three very precisely.",
+        "metadata": {
+          "filename": "1911.09483.pdf",
+          "page_number": 12,
+          "type": "Table"
+        }
+      }
+    ]
+  }
+}

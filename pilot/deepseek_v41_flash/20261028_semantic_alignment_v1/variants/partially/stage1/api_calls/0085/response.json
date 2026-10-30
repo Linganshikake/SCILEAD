@@ -1,0 +1,32 @@
+{
+  "id": "9348756f-475b-4e66-a6ac-8cc893c95e57",
+  "object": "chat.completion",
+  "created": 1793196755,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE MNLI",
+        "reasoning_content": "We need answer only selected item or unchanged. Need decide match. Input \"GLUE MNLI\". Candidates include GLUE, MNLI-m, MNLI-mm. \"GLUE MNLI\" could refer GLUE benchmark task MNLI? Need match one candidate? The instruction if input entity matches one item, output matched item. Candidate \"GLUE\" is benchmark, \"MNLI-m\", \"MNLI-mm\" are splits. \"GLUE MNLI\" likely semantic match to MNLI? But no plain MNLI candidate. Could match GLUE? It's \"GLUE MNLI\" more specific than GLUE but denotes task in GLUE. We must not guess ambiguous split m/mm. Since candidates have MNLI-m and MNLI-mm, input MNLI ambiguous between matched and mismatched. Also \"GLUE\" alone? \"GLUE MNLI\" contains GLUE + MNLI, likely not exactly GLUE. If no unambiguous match, output unchanged. Need be careful: task names, more specific wording may match existing standard task when same underlying. \"GLUE MNLI\" is benchmark + task. Does candidate GLUE denote benchmark not task, MNLI is part of GLUE. Existing candidates include MNLI-m and MNLI-mm only, no MNLI. We cannot infer m/mm. Output original \"GLUE MNLI\"."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 759,
+    "completion_tokens": 278,
+    "total_tokens": 1037,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 273
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 503
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "12dbf75b-cfd5-4755-ab8a-3c008272cf8d",
+  "object": "chat.completion",
+  "created": 1793197116,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE RTE",
+        "reasoning_content": "We need answer only. Need determine match RTE to GLUE RTE likely semantic match? Item list contains 'GLUE RTE' and maybe 'MNLI-m' etc. Input RTE. Task names: RTE is a GLUE task. Candidate GLUE RTE denotes same. Need output selected item exactly as written in item list: GLUE RTE. Check no standalone RTE. Yes. Final only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 92,
+    "total_tokens": 882,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

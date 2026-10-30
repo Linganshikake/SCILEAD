@@ -1,0 +1,32 @@
+{
+  "id": "3daacd0a-1118-4182-8397-c6cc1e8338ab",
+  "object": "chat.completion",
+  "created": 1793197387,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, Reddit TIFU, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match in list. Input: Summarization, Reddit TIFU, ROUGE-L F1. List has summarization datasets Gigaword, CNN/DailyMail, XSum, metrics ROGUE-L etc. No Reddit TIFU. Should output original tuple verbatim. Need ensure metric: ROUGE-L F1 no matching dataset. Return (Summarization, Reddit TIFU, ROUGE-L F1). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 122,
+    "total_tokens": 896,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

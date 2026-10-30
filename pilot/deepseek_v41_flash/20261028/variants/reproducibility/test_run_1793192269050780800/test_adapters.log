@@ -1,0 +1,32 @@
+test_frozen_orders_use_string_seeds (__main__.Adapters.test_frozen_orders_use_string_seeds) ... ok
+test_misaligned_normalized_input_is_not_ready (__main__.Adapters.test_misaligned_normalized_input_is_not_ready) ... ok
+test_missing_and_partial_inputs_do_not_prepare (__main__.Adapters.test_missing_and_partial_inputs_do_not_prepare) ... ok
+test_numeric_results_are_rejected_without_repair (__main__.Adapters.test_numeric_results_are_rejected_without_repair) ... ok
+test_original_observer_paths_and_no_model_import (__main__.Adapters.test_original_observer_paths_and_no_model_import) ... ERROR
+test_preparation_waits_for_main_completion_marker (__main__.Adapters.test_preparation_waits_for_main_completion_marker) ... ERROR
+test_variable_counts_preserve_duplicate_rows_result_and_documents (__main__.Adapters.test_variable_counts_preserve_duplicate_rows_result_and_documents) ... ok
+
+======================================================================
+ERROR: test_original_observer_paths_and_no_model_import (__main__.Adapters.test_original_observer_paths_and_no_model_import)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028\variants\test_adapters.py", line 27, in test_original_observer_paths_and_no_model_import
+    self.assertEqual(Path(inspect.getfile(cls)).resolve(), self.v.PILOT / name / 'engine.py')
+                          ^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\scilead\Lib\inspect.py", line 905, in getfile
+    raise TypeError('{!r} is a built-in class'.format(object))
+TypeError: <class 'frozen_observer_False.Observer'> is a built-in class
+
+======================================================================
+ERROR: test_preparation_waits_for_main_completion_marker (__main__.Adapters.test_preparation_waits_for_main_completion_marker)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028\variants\test_adapters.py", line 85, in test_preparation_waits_for_main_completion_marker
+    result = p.prepare(self.root / 'raw.json', self.root / 'normalized.json',
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: prepare() got an unexpected keyword argument 'verification'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.228s
+
+FAILED (errors=2)

@@ -1,0 +1,32 @@
+{
+  "id": "31ccc9a5-6efe-4a8e-b121-8975383954bc",
+  "object": "chat.completion",
+  "created": 1793194164,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2000",
+        "reasoning_content": "We need answer. Input CoNLL00. Need match item list. Items include CoNLL-2000, CoNLL++ etc. Does \"CoNLL00\" match one item? Exact match? The instruction: if input entity matches one of items list, answer matched item. Else output entity unchanged. Is CoNLL00 matching CoNLL-2000? It says matches one of the items. Likely semantic alias? Need determine. \"CoNLL00\" could refer to CoNLL-2000. But strict? List has \"CoNLL-2000\". Input is \"CoNLL00\" no hyphen/2000 vs 00. Is that considered match? The task likely entity linking to dataset names, so CoNLL00 likely equals CoNLL-2000. Need output matched item exactly from list: CoNLL-2000. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 523,
+    "completion_tokens": 194,
+    "total_tokens": 717,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 187
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 139
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

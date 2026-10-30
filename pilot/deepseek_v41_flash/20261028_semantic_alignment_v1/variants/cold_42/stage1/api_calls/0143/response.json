@@ -1,0 +1,32 @@
+{
+  "id": "c81a0fec-a9fd-4798-a631-4539da20caac",
+  "object": "chat.completion",
+  "created": 1793196804,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT'14 English→French",
+        "reasoning_content": "We need answer only selected or unchanged. Need match input \"WMT En-Fr newstest2014\" to list. Candidate \"WMT'14 English→French\" semantically likely same? Need determine. WMT En-Fr newstest2014 denotes WMT 2014 English-French translation task/test set. List has \"WMT'14 English→French\". Match semantic? It might be same underlying dataset/task, but \"newstest2014\" is the test set specifically. Candidate includes WMT'14 English→French, likely standard task. Preserve meaningful differences dataset identity, metric. Is newstest2014 distinct from just WMT'14 English→French? In WMT, WMT'14 English→French likely corresponds to newstest2014. Need output candidate exactly if clear match. I think yes. Need only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 556,
+    "completion_tokens": 188,
+    "total_tokens": 744,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 180
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

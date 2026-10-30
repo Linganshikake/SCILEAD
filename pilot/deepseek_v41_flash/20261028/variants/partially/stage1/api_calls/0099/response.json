@@ -1,0 +1,32 @@
+{
+  "id": "5bb6ed8f-c83d-4500-b1b3-70072fe6fc31",
+  "object": "chat.completion",
+  "created": 1793194278,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer match input ROUGE-2 to item list. List has 'ROGUE-2' typo likely intended ROUGE-2. Need match exact? The instruction match input with one items. Since item list contains 'ROGUE-2' misspelled. Input ROUGE-2. We need determine if considered match? It says if none matches say None. There is no exact ROUGE-2, only ROGUE-2. But likely typo in list; expected output matched item in list, so output 'ROGUE-2'. Need only matched item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 133,
+    "total_tokens": 392,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

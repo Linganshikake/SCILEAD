@@ -1,0 +1,32 @@
+{
+  "id": "b875b950-d900-4c9c-94e3-ef7ab9e0e93d",
+  "object": "chat.completion",
+  "created": 1793197309,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extractive question answering, SQuAD 1.1, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input: (Extractive question answering, SQuAD 1.1, F1). List has no QA/SQuAD. No semantic match. Return original tuple verbatim. Ensure output only tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 74,
+    "total_tokens": 848,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

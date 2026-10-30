@@ -1,0 +1,32 @@
+{
+  "id": "e503cf02-f9d2-4a96-beb3-abb84063370b",
+  "object": "chat.completion",
+  "created": 1793286231,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Question Answering",
+        "reasoning_content": "We need answer only matched item. Input \"Extractive question answering\". Candidate list has \"Question Answering\". Is extractive QA a specific subtask/type of QA. Need preserve meaningful differences? Requirement says task names specific wording may match existing standard task when both denote same underlying task. Extractive QA is a type of QA. Is that distinct dataset identity? Likely match Question Answering, unless candidate lacks extractive. \"Question Answering\" broader includes extractive. Need decide. The instruction: \"For task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\" Extractive QA vs QA: Extractive is a meaningful difference? But candidate \"Question Answering\" is standard task; extractive QA is a subtask. They denote same underlying task? Hm \"Extractive question answering\" likely maps to \"Question Answering\" in common benchmark task names. We output exact candidate."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 441,
+    "completion_tokens": 234,
+    "total_tokens": 675,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 185
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

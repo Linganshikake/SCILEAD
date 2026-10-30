@@ -1,0 +1,32 @@
+{
+  "id": "fef9dab2-bbaf-40f2-91de-561f09e70001",
+  "object": "chat.completion",
+  "created": 1793194405,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "MNLI-mm",
+        "reasoning_content": "We need answer matched item if input matches list exactly? Input MNLI-mm. List has MNLI-m (one m at end) and GLUE MNLI, not MNLI-mm. Need output entity unchanged: MNLI-mm. Ensure no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 600,
+    "completion_tokens": 55,
+    "total_tokens": 655,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 216
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

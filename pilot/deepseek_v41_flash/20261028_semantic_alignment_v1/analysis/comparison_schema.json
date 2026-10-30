@@ -1,0 +1,1196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Semantic alignment v1 offline comparison",
+  "description": "Schema is a local artifact; no schema URL is retrieved by these utilities. Score units are fractions; delta is variant minus baseline.",
+  "type": "object",
+  "required": [
+    "status",
+    "created_utc",
+    "new_api_requests",
+    "scope",
+    "method",
+    "local_rows",
+    "paired_differences",
+    "cold_three_order_summaries",
+    "stage2_paper_changes",
+    "missing",
+    "immutable_prior_references",
+    "source_integrity"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "COMPLETE",
+        "INCOMPLETE",
+        "ERROR"
+      ]
+    },
+    "created_utc": {
+      "type": "string"
+    },
+    "new_api_requests": {
+      "const": 0
+    },
+    "scope": {
+      "type": "object"
+    },
+    "method": {
+      "type": "object"
+    },
+    "local_rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "model",
+          "case",
+          "role",
+          "status",
+          "coverage",
+          "tuple",
+          "leaderboard",
+          "per_paper",
+          "source",
+          "normalized",
+          "input_sha256"
+        ],
+        "properties": {
+          "model": {
+            "enum": [
+              "baseline",
+              "prompt_improvement_variant"
+            ]
+          },
+          "case": {
+            "enum": [
+              "partially_stage1",
+              "partially_stage2",
+              "cold_default_stage1",
+              "cold_default_stage2",
+              "cold_0_stage1",
+              "cold_0_stage2",
+              "cold_42_stage1",
+              "cold_42_stage2"
+            ]
+          },
+          "role": {
+            "enum": [
+              "primary",
+              "diagnostic"
+            ]
+          },
+          "status": {
+            "const": "COMPLETE"
+          },
+          "coverage": {
+            "type": "object"
+          },
+          "tuple": {
+            "type": "object",
+            "required": [
+              "Task IIM",
+              "Dataset IIM",
+              "Metric IIM",
+              "Result IIM",
+              "TDM Exact Match",
+              "TDMR Exact Match"
+            ],
+            "properties": {
+              "Task IIM": {
+                "type": "object",
+                "required": [
+                  "Precision",
+                  "Recall",
+                  "F1"
+                ],
+                "properties": {
+                  "Precision": {
+                    "type": "number"
+                  },
+                  "Recall": {
+                    "type": "number"
+                  },
+                  "F1": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "Dataset IIM": {
+                "type": "object",
+                "required": [
+                  "Precision",
+                  "Recall",
+                  "F1"
+                ],
+                "properties": {
+                  "Precision": {
+                    "type": "number"
+                  },
+                  "Recall": {
+                    "type": "number"
+                  },
+                  "F1": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "Metric IIM": {
+                "type": "object",
+                "required": [
+                  "Precision",
+                  "Recall",
+                  "F1"
+                ],
+                "properties": {
+                  "Precision": {
+                    "type": "number"
+                  },
+                  "Recall": {
+                    "type": "number"
+                  },
+                  "F1": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "Result IIM": {
+                "type": "object",
+                "required": [
+                  "Precision",
+                  "Recall",
+                  "F1"
+                ],
+                "properties": {
+                  "Precision": {
+                    "type": "number"
+                  },
+                  "Recall": {
+                    "type": "number"
+                  },
+                  "F1": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "TDM Exact Match": {
+                "type": "object",
+                "required": [
+                  "Precision",
+                  "Recall",
+                  "F1"
+                ],
+                "properties": {
+                  "Precision": {
+                    "type": "number"
+                  },
+                  "Recall": {
+                    "type": "number"
+                  },
+                  "F1": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "TDMR Exact Match": {
+                "type": "object",
+                "required": [
+                  "Precision",
+                  "Recall",
+                  "F1"
+                ],
+                "properties": {
+                  "Precision": {
+                    "type": "number"
+                  },
+                  "Recall": {
+                    "type": "number"
+                  },
+                  "F1": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
+          "leaderboard": {
+            "type": "object",
+            "required": [
+              "gold_leaderboards",
+              "LR_exact_tdm_hit",
+              "LR_nonempty_finite_result",
+              "PC_official",
+              "RC_official",
+              "RBO_official_value_rankings",
+              "AO_paper_id_macro_all_gold_boards"
+            ],
+            "properties": {
+              "gold_leaderboards": {
+                "const": 27
+              },
+              "LR_exact_tdm_hit": {
+                "type": "number"
+              },
+              "LR_nonempty_finite_result": {
+                "type": "number"
+              },
+              "PC_official": {
+                "type": "number"
+              },
+              "RC_official": {
+                "type": "number"
+              },
+              "RBO_official_value_rankings": {
+                "type": "number"
+              },
+              "AO_paper_id_macro_all_gold_boards": {
+                "type": "number"
+              }
+            }
+          },
+          "per_paper": {
+            "type": "object",
+            "minProperties": 43,
+            "maxProperties": 43,
+            "additionalProperties": {
+              "type": "object",
+              "required": [
+                "Task IIM",
+                "Dataset IIM",
+                "Metric IIM",
+                "Result IIM",
+                "TDM Exact Match",
+                "TDMR Exact Match"
+              ],
+              "properties": {
+                "Task IIM": {
+                  "type": "object",
+                  "required": [
+                    "Precision",
+                    "Recall",
+                    "F1"
+                  ],
+                  "properties": {
+                    "Precision": {
+                      "type": "number"
+                    },
+                    "Recall": {
+                      "type": "number"
+                    },
+                    "F1": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "Dataset IIM": {
+                  "type": "object",
+                  "required": [
+                    "Precision",
+                    "Recall",
+                    "F1"
+                  ],
+                  "properties": {
+                    "Precision": {
+                      "type": "number"
+                    },
+                    "Recall": {
+                      "type": "number"
+                    },
+                    "F1": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "Metric IIM": {
+                  "type": "object",
+                  "required": [
+                    "Precision",
+                    "Recall",
+                    "F1"
+                  ],
+                  "properties": {
+                    "Precision": {
+                      "type": "number"
+                    },
+                    "Recall": {
+                      "type": "number"
+                    },
+                    "F1": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "Result IIM": {
+                  "type": "object",
+                  "required": [
+                    "Precision",
+                    "Recall",
+                    "F1"
+                  ],
+                  "properties": {
+                    "Precision": {
+                      "type": "number"
+                    },
+                    "Recall": {
+                      "type": "number"
+                    },
+                    "F1": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "TDM Exact Match": {
+                  "type": "object",
+                  "required": [
+                    "Precision",
+                    "Recall",
+                    "F1"
+                  ],
+                  "properties": {
+                    "Precision": {
+                      "type": "number"
+                    },
+                    "Recall": {
+                      "type": "number"
+                    },
+                    "F1": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "TDMR Exact Match": {
+                  "type": "object",
+                  "required": [
+                    "Precision",
+                    "Recall",
+                    "F1"
+                  ],
+                  "properties": {
+                    "Precision": {
+                      "type": "number"
+                    },
+                    "Recall": {
+                      "type": "number"
+                    },
+                    "F1": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "source": {
+            "type": "string"
+          },
+          "normalized": {
+            "type": "string"
+          },
+          "input_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "paired_differences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "case",
+          "role",
+          "unit",
+          "metrics"
+        ],
+        "properties": {
+          "case": {
+            "enum": [
+              "partially_stage1",
+              "partially_stage2",
+              "cold_default_stage1",
+              "cold_default_stage2",
+              "cold_0_stage1",
+              "cold_0_stage2",
+              "cold_42_stage1",
+              "cold_42_stage2"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "metrics": {
+            "type": "object",
+            "required": [
+              "Task IIM/Precision",
+              "Task IIM/Recall",
+              "Task IIM/F1",
+              "Dataset IIM/Precision",
+              "Dataset IIM/Recall",
+              "Dataset IIM/F1",
+              "Metric IIM/Precision",
+              "Metric IIM/Recall",
+              "Metric IIM/F1",
+              "Result IIM/Precision",
+              "Result IIM/Recall",
+              "Result IIM/F1",
+              "TDM Exact Match/Precision",
+              "TDM Exact Match/Recall",
+              "TDM Exact Match/F1",
+              "TDMR Exact Match/Precision",
+              "TDMR Exact Match/Recall",
+              "TDMR Exact Match/F1",
+              "LR_exact_tdm_hit",
+              "LR_nonempty_finite_result",
+              "PC_official",
+              "RC_official",
+              "RBO_official_value_rankings",
+              "AO_paper_id_macro_all_gold_boards"
+            ],
+            "properties": {
+              "Task IIM/Precision": {
+                "type": "number"
+              },
+              "Task IIM/Recall": {
+                "type": "number"
+              },
+              "Task IIM/F1": {
+                "type": "number"
+              },
+              "Dataset IIM/Precision": {
+                "type": "number"
+              },
+              "Dataset IIM/Recall": {
+                "type": "number"
+              },
+              "Dataset IIM/F1": {
+                "type": "number"
+              },
+              "Metric IIM/Precision": {
+                "type": "number"
+              },
+              "Metric IIM/Recall": {
+                "type": "number"
+              },
+              "Metric IIM/F1": {
+                "type": "number"
+              },
+              "Result IIM/Precision": {
+                "type": "number"
+              },
+              "Result IIM/Recall": {
+                "type": "number"
+              },
+              "Result IIM/F1": {
+                "type": "number"
+              },
+              "TDM Exact Match/Precision": {
+                "type": "number"
+              },
+              "TDM Exact Match/Recall": {
+                "type": "number"
+              },
+              "TDM Exact Match/F1": {
+                "type": "number"
+              },
+              "TDMR Exact Match/Precision": {
+                "type": "number"
+              },
+              "TDMR Exact Match/Recall": {
+                "type": "number"
+              },
+              "TDMR Exact Match/F1": {
+                "type": "number"
+              },
+              "LR_exact_tdm_hit": {
+                "type": "number"
+              },
+              "LR_nonempty_finite_result": {
+                "type": "number"
+              },
+              "PC_official": {
+                "type": "number"
+              },
+              "RC_official": {
+                "type": "number"
+              },
+              "RBO_official_value_rankings": {
+                "type": "number"
+              },
+              "AO_paper_id_macro_all_gold_boards": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "cold_three_order_summaries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "model",
+          "stage",
+          "status",
+          "orders_present",
+          "metrics",
+          "definition"
+        ],
+        "properties": {
+          "model": {
+            "enum": [
+              "baseline",
+              "prompt_improvement_variant",
+              "paired_delta"
+            ]
+          },
+          "stage": {
+            "enum": [
+              "stage1",
+              "stage2"
+            ]
+          },
+          "status": {
+            "enum": [
+              "COMPLETE",
+              "INCOMPLETE"
+            ]
+          },
+          "orders_present": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "cold_default",
+                "cold_0",
+                "cold_42"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "metrics": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "Task IIM/Precision",
+                  "Task IIM/Recall",
+                  "Task IIM/F1",
+                  "Dataset IIM/Precision",
+                  "Dataset IIM/Recall",
+                  "Dataset IIM/F1",
+                  "Metric IIM/Precision",
+                  "Metric IIM/Recall",
+                  "Metric IIM/F1",
+                  "Result IIM/Precision",
+                  "Result IIM/Recall",
+                  "Result IIM/F1",
+                  "TDM Exact Match/Precision",
+                  "TDM Exact Match/Recall",
+                  "TDM Exact Match/F1",
+                  "TDMR Exact Match/Precision",
+                  "TDMR Exact Match/Recall",
+                  "TDMR Exact Match/F1",
+                  "LR_exact_tdm_hit",
+                  "LR_nonempty_finite_result",
+                  "PC_official",
+                  "RC_official",
+                  "RBO_official_value_rankings",
+                  "AO_paper_id_macro_all_gold_boards"
+                ],
+                "properties": {
+                  "Task IIM/Precision": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Task IIM/Recall": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Task IIM/F1": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Dataset IIM/Precision": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Dataset IIM/Recall": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Dataset IIM/F1": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Metric IIM/Precision": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Metric IIM/Recall": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Metric IIM/F1": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Result IIM/Precision": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Result IIM/Recall": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "Result IIM/F1": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "TDM Exact Match/Precision": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "TDM Exact Match/Recall": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "TDM Exact Match/F1": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "TDMR Exact Match/Precision": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "TDMR Exact Match/Recall": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "TDMR Exact Match/F1": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "LR_exact_tdm_hit": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "LR_nonempty_finite_result": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "PC_official": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "RC_official": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "RBO_official_value_rankings": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "AO_paper_id_macro_all_gold_boards": {
+                    "type": "object",
+                    "required": [
+                      "mean",
+                      "sample_sd",
+                      "n"
+                    ],
+                    "properties": {
+                      "mean": {
+                        "type": "number"
+                      },
+                      "sample_sd": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "n": {
+                        "const": 3
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "definition": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "stage2_paper_changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "case",
+          "metric",
+          "paired_papers",
+          "improved",
+          "regressed",
+          "unchanged",
+          "top_improvements",
+          "top_regressions",
+          "equality_tolerance"
+        ]
+      }
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "model",
+          "case",
+          "status",
+          "reason"
+        ]
+      }
+    },
+    "immutable_prior_references": {
+      "type": "object",
+      "required": [
+        "source",
+        "source_sha256",
+        "local_rows",
+        "original_paper",
+        "provenance",
+        "status"
+      ]
+    },
+    "source_integrity": {
+      "type": "object",
+      "required": [
+        "files_checked",
+        "changed"
+      ],
+      "properties": {
+        "files_checked": {
+          "type": "integer"
+        },
+        "changed": {
+          "type": "array",
+          "maxItems": 0
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

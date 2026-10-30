@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "entrypoint": "evaluation/report.json (latest report); evaluation/latest.json points to immutable timestamped run",
+  "top_level": [
+    "status",
+    "all_three_arms_complete",
+    "scope",
+    "arms",
+    "comparisons",
+    "new_api_requests",
+    "protected_sha256",
+    "protected_files_unchanged"
+  ],
+  "scope": "five selected IDs, Gold28, original43/295 full Gold hash, original27 boards hash, frozen derived10 boards hash, singleton6, ge2=4",
+  "arm_names": [
+    "baseline_rag",
+    "parsed_full",
+    "page_images"
+  ],
+  "arm_fields": [
+    "status",
+    "coverage",
+    "input_paths",
+    "input_sha256",
+    "input_integrity_unchanged",
+    "stages",
+    "new_api_requests"
+  ],
+  "stage_names": [
+    "raw_pre_normalization",
+    "fullyllm"
+  ],
+  "stage_fields": [
+    "status",
+    "evaluated_ids",
+    "tuple_macro_denominator",
+    "aggregate",
+    "per_paper",
+    "mean_per_paper_f1_SEPARATE",
+    "matching_semantics",
+    "leaderboard",
+    "new_api_requests"
+  ],
+  "tuple_metric_names": [
+    "Task IIM",
+    "Dataset IIM",
+    "Metric IIM",
+    "Result IIM",
+    "TDM Exact Match",
+    "TDMR Exact Match",
+    "Strict Result numeric equality"
+  ],
+  "tuple_score_fields": [
+    "Precision",
+    "Recall",
+    "F1"
+  ],
+  "leaderboard_metric_names": [
+    "LR_exact_tdm_hit",
+    "LR_nonempty_finite_result",
+    "PC",
+    "RC",
+    "RBO",
+    "AO"
+  ],
+  "leaderboard_fields": [
+    "aggregate",
+    "per_board",
+    "board_macro_denominator",
+    "singleton_boards",
+    "boards_ge2",
+    "prediction_nonempty_boards",
+    "conventions"
+  ],
+  "comparisons": "comparisons.pairs.{right}_minus_{left}: comparable_complete_scope, delta; delta is null if either arm lacks full selected coverage; otherwise stages/raw_pre_normalization|fullyllm each has tuple/leaderboard/per_paper differences",
+  "status_contract": "COMPLETE means requested arm artifact scope only. all_three_arms_complete is separately false until all 3 evaluated complete. INCOMPLETE yields exit2, FAILED exit1, COMPLETE exit0. Missing papers are not zero-filled in tuple macro averages.",
+  "semantics": "Exact labels, no semantic matching; unchanged official legacy Result substring matching retained and strict numeric auxiliary reported separately. F1 is harmonic macro P/R, mean paper F1 separately labeled.",
+  "api": "Evaluation new_api_requests=0; no inference usage collected here. Network blocked and secrets inaccessible.",
+  "frozen_scope": "evaluation/scope/leaderboards_selected.json and manifest.json created once; mismatched rerun refuses overwrite."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "d62e08b8-7a42-44c6-a046-19be835d7891",
+  "object": "chat.completion",
+  "created": 1793194194,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Extractive question answering",
+        "reasoning_content": "We need answer exact matched item, case? List has 'Extractive question answering' lowercase q/a. Input 'Extractive Question Answering' capitalization differs. Need match item if matches one. Usually case-insensitive? We should output matched item exactly from list. So \"Extractive question answering\". No explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 153,
+    "completion_tokens": 68,
+    "total_tokens": 221,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 153
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

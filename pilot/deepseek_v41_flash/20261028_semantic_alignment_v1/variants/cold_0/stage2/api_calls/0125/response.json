@@ -1,0 +1,32 @@
+{
+  "id": "627ad6e1-1d3f-4104-b952-9f0e46242048",
+  "object": "chat.completion",
+  "created": 1793197370,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Summarization, XSum, ROUGE-L). List has (Summarization, XSum, ROGUE-L) misspelled ROGUE likely ROUGE. Same benchmark? Yes XSum summarization metric ROUGE-L. Need return listed tuple verbatim exact spelling: (Summarization, XSum, ROGUE-L). Only output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 769,
+    "completion_tokens": 100,
+    "total_tokens": 869,
+    "prompt_tokens_details": {
+      "cached_tokens": 635
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_cache_hit_tokens": 635,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "48b5f8eb-e39e-4411-93c0-2885bbcc8b20",
+  "object": "chat.completion",
+  "created": 1793194898,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Part-of-Speech (POS) Tagging, Penn Treebank WSJ, F1)",
+        "reasoning_content": "We need answer. Need determine if input tuple matches item in list. Input: (Part-of-Speech (POS) Tagging, Penn Treebank WSJ, F1). List has (Part-of-Speech (POS) Tagging, Penn Treebank (PTB), Accuracy). Not match. So output tuple unchanged. Need only answer. Ensure exact tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 559,
+    "completion_tokens": 95,
+    "total_tokens": 654,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 175
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

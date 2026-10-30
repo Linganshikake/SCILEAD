@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-28T16:36:34.900300+00:00",
+  "checked_shanghai": "2026-10-29T00:36:34.900300+08:00",
+  "local_timezone": "Asia/Shanghai",
+  "enforcement": "Python audit hook blocks socket/process/model imports/credential-file reads and all writes outside reporting",
+  "blocked_events_during_audit": [],
+  "observed_write_paths": [
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\alignment_event_summary.json",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\alignment_event_summary.json.tmp",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\alignment_examples.json",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\alignment_examples.json.tmp",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\api_usage_summary.json",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\api_usage_summary.json.tmp",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\index.json",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\index.json.tmp",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\index.md",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\index.md.tmp",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\output_index.json",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\output_index.json.tmp",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\report.md",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\report.md.tmp",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\request_audit.csv",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\verification.json",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\verification.json.tmp"
+  ],
+  "write_boundary": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting",
+  "protected_files_checked_before_and_after": 83,
+  "protected_changes_during_audit": [],
+  "source_roots_read_only": [
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1",
+    "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261024",
+    "D:\\C++\\SCILEAD\\pilot\\deepseek_v41_flash\\20261028_semantic_alignment_v1"
+  ],
+  "proof_write_itself": "D:\\C++\\SCILEAD\\pilot\\gpt56_sol_variants\\20261028_semantic_alignment_v1\\reporting\\offline_safety_proof.json",
+  "runtime_or_evaluator_imported": false,
+  "network_or_model_calls": 0,
+  "reporting_source_hashes": {
+    "audit_and_report.py": "8c0ec67064b50a71cda1a7e87a3a8d06ef6d636812924cdbc66de272eca7d525",
+    "offline_guard.py": "a2bdea985af0d64bf4406533ec2e4bfbccbc1cb6738a21c342e0fbb2ae967ca4",
+    "report_render.py": "ca7e0fbb16bfd3ce4dfef5369fae0710c70f5105d475403eb2376cb856375c1d",
+    "test_audit_and_report.py": "e663a377ab6ab7ab9a6bb51ceff6d68843f1a94ab1c5cf5665ffcb4accbafcbf",
+    "verify_offline.py": "5381d6a1cd38bf6cae46f755f0874c862e949823d2b02f99586624160c734662"
+  }
+}

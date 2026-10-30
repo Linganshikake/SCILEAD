@@ -1,0 +1,32 @@
+{
+  "id": "466385c7-3484-44dd-bb2e-f285df5ea1ec",
+  "object": "chat.completion",
+  "created": 1793192370,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-2",
+        "reasoning_content": "We need answer only matched item. Input ROUGE-2. Item list has 'ROGUE-2' (typo ROGUE) not exact ROUGE-2. Need match with one item. They likely intend ROGUE-2 despite typo. \"If none matches say None.\" Need determine matching. Input: ROUGE-2, list: 'ROGUE-2'. Is that a match? It's misspelled. The instruction says match input with one of items. Usually these tasks have typo? We need output matched item exactly as in list. Since ROUGE-2 semantically matches ROGUE-2 (typo in list). I should output 'ROGUE-2'. Ensure only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 162,
+    "total_tokens": 421,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 156
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

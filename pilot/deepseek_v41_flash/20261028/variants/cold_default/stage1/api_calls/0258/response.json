@@ -1,0 +1,32 @@
+{
+  "id": "53825063-6ff4-43e7-af69-925201f1314b",
+  "object": "chat.completion",
+  "created": 1793194531,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "IWSLT De-En",
+        "reasoning_content": "We need answer matched item if input matches one in list else unchanged. Input \"IWSLT De-En\". Need look for exact item. List has 'IWSLT 2014 De-En', 'IWSLT2014 De→En', maybe no exact \"IWSLT De-En\". Must output entity unchanged if no match. Check exact string \"IWSLT De-En\" not present. Output without explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 815,
+    "completion_tokens": 96,
+    "total_tokens": 911,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 89
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 175
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

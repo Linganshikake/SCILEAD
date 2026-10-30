@@ -1,0 +1,32 @@
+{
+  "id": "4c55a86a-eb88-43a8-a2ec-f25741ddef8b",
+  "object": "chat.completion",
+  "created": 1793197090,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Semantic textual similarity",
+        "reasoning_content": "We need answer match item if semantic match else unchanged. Input \"Semantic textual similarity\". List has GLUE Benchmark, Paraphrase Detection, Natural Language Inference, Sentiment etc. Semantic textual similarity is a task closely related to paraphrase detection? But not exact. Need decide semantic match by entity identity. Item list includes no \"Semantic Textual Similarity\". Could \"Paraphrase Detection\" be same underlying task? STS is related but distinct (graded similarity vs binary paraphrase detection). Need preserve meaningful differences metric definition. So not match. Output unchanged. Ensure exact input."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 487,
+    "completion_tokens": 124,
+    "total_tokens": 611,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 119
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 231
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

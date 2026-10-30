@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_default",
+  "paper": "1910.13461.pdf",
+  "record": 6,
+  "field": "Metric",
+  "original": "Accuracy (mismatched)",
+  "candidate_serialized": "{'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'METEOR', 'Intent accuracy', 'ROUGE-L', 'F1', 'EM', 'MCC', 'Spearman correlation', 'Sentence accuracy', 'Score', 'Entity-level F1 score'}",
+  "candidate_sha256": "0bf4b2c80cd17ef8c1e71945610226d37f1b1c9f335614e839b62406752c17dc",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'METEOR', 'Intent accuracy', 'ROUGE-L', 'F1', 'EM', 'MCC', 'Spearman correlation', 'Sentence accuracy', 'Score', 'Entity-level F1 score'}\n\nInput: Accuracy (mismatched)\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "f2010a635a22b026920cb0455da39fcc1ef487d29f551dbd64c8058fcf83e071"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "21c9ceaf-59e2-492a-8ef8-a1200cca53c3",
+  "object": "chat.completion",
+  "created": 1793196955,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003",
+        "reasoning_content": "We need answer only matched item or unchanged. Input CoNLL-2003. List has \"CoNLL-2003 English\". Is that semantic match? Need decide. CoNLL-2003 usually English NER task; list candidate more specific \"CoNLL-2003 English\" denotes same underlying dataset? Requirements: Preserve meaningful differences in dataset identity, language, version, split metric. Here CoNLL-2003 could refer to shared task with language variants (English, German, Dutch, Spanish). List only CoNLL-2003 English plus CoNLL 2002 Dutch/Spanish. Input \"CoNLL-2003\" without language. Is ambiguous? However standard CoNLL-2003 commonly English NER; but there are other language tasks? CoNLL-2003 shared task was English and German? Actually CoNLL-2003 shared task: language-independent NER, English and German. The list contains \"CoNLL-2003 English\" specifically. Input lacks language; if matching to English would assume experimental condition. Requirement: Do not guess ambiguous abbreviation or missing experimental condition. So output unchanged \"CoNLL-2003\". Need answer only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 732,
+    "completion_tokens": 255,
+    "total_tokens": 987,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 248
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 476
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

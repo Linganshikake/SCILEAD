@@ -1,0 +1,32 @@
+{
+  "id": "996a5bbd-c0ad-4915-aa28-107c4d2f3678",
+  "object": "chat.completion",
+  "created": 1793197542,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-1)",
+        "reasoning_content": "We need answer only tuple. Need determine semantic match. Input (Extractive Summarization, CNN/DailyMail, ROUGE-1 F1). Candidates summarization CNN/DailyMail ROGUE-L/2/1. Metric ROUGE-1 F1 vs ROGUE-1? Note list has typo ROGUE (instead of ROUGE). For CNN/DailyMail there is (Summarization, CNN/DailyMail, ROGUE-1). Input Extractive Summarization matches broader Summarization? Benchmark same CNN/DailyMail and metric ROUGE-1 F1. Need return listed tuple verbatim if clear semantic match. It is likely (Summarization, CNN/DailyMail, ROGUE-1). Need verify \"ROUGE-1 F1\" vs \"ROGUE-1\" typo. The benchmark metric likely ROUGE-1, F1 variant. They have ROGUE-L, ROGUE-2, ROGUE-1 for CNN/DailyMail. Input metric ROUGE-1 F1 matches ROGUE-1. So answer exact listed tuple: (Summarization, CNN/DailyMail, ROGUE-1)\n\nOnly output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 776,
+    "completion_tokens": 270,
+    "total_tokens": 1046,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 254
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 136
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

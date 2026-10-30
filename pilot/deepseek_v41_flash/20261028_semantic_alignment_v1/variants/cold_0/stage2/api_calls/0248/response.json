@@ -1,0 +1,32 @@
+{
+  "id": "309d8fba-1028-4649-a626-4f60080e2a8d",
+  "object": "chat.completion",
+  "created": 1793197569,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, AESLC, ROUGE-L F1)",
+        "reasoning_content": "We need answer only tuple. Need semantic matching. Input (Summarization, AESLC, ROUGE-L F1). List has summarization with Gigaword, CNN/DailyMail, XSum, metrics ROGUE-L etc. AESLC is a dataset for email subject lines? Not listed. Need no candidate match. Return original tuple verbatim: (Summarization, AESLC, ROUGE-L F1). Check metric ROUGE-L F1 vs ROGUE-L? Dataset AESLC not in list. So no match. Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 130,
+    "total_tokens": 901,
+    "prompt_tokens_details": {
+      "cached_tokens": 637
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_cache_hit_tokens": 637,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

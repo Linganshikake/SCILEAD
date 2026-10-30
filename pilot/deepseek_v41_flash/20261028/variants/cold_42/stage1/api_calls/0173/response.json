@@ -1,0 +1,32 @@
+{
+  "id": "431554c3-98b7-4333-a035-bd047d57bb3e",
+  "object": "chat.completion",
+  "created": 1793194369,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "PoS tagging",
+        "reasoning_content": "We need answer. Need match item if input matches one. Input \"POS tagging\" vs list has 'PoS tagging'. \"matches\" maybe case insensitive? Need decide. The instruction: if input entity matches one of items in list, answer matched item. Else output entity unchanged. POS tagging vs PoS tagging. Are they same? Casing differs. Usually match exact? Need likely identify as PoS tagging. \"POS tagging\" commonly same. Since list contains \"PoS tagging\". Should output matched item exactly: PoS tagging. Need no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 309,
+    "completion_tokens": 118,
+    "total_tokens": 427,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 114
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 309
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

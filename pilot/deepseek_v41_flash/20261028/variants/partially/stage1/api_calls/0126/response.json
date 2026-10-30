@@ -1,0 +1,32 @@
+{
+  "id": "fcdde109-6996-4948-b626-bc77208d3ae7",
+  "object": "chat.completion",
+  "created": 1793194318,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Question pair matching",
+        "reasoning_content": "We need answer match if exact item. \"Question pair matching\" not in list. There is Paraphrase Detection, Text Similarity, Semantic textual similarity, but instruction exact matches one item. Else output entity unchanged. So output Question pair matching. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 306,
+    "completion_tokens": 59,
+    "total_tokens": 365,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 178
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

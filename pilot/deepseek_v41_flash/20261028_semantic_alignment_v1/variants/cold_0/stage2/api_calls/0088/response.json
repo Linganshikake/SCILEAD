@@ -1,0 +1,32 @@
+{
+  "id": "8b85f2fb-ee80-4a59-b32a-0045d3038250",
+  "object": "chat.completion",
+  "created": 1793197312,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Paraphrase detection, MRPC, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (Paraphrase detection, MRPC, F1). List has no MRPC or paraphrase. No match. Return original verbatim. Need output tuple exactly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 63,
+    "total_tokens": 833,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 258
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

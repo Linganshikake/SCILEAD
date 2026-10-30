@@ -1,0 +1,32 @@
+{
+  "id": "55a20ddd-b54c-4dc3-9777-ee417671c86b",
+  "object": "chat.completion",
+  "created": 1793197219,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Movie",
+        "reasoning_content": "We need answer if input entity matches item list. Need semantic matching. List includes Multi-domain Movie, Multi-domain Food, Multi-domain Home. Input \"Movie\". Does it match \"Multi-domain Movie\"? Need decide. It's not exact, but semantic? Input entity \"Movie\" ambiguous: could refer to domain movie, or dataset? Candidate \"Multi-domain Movie\" denotes multi-domain dataset with Movie domain. Is \"Movie\" unambiguous match? Probably not; \"Movie\" alone not same as Multi-domain Movie. Need output unchanged Movie. But consider item list has no \"Movie\" alone. It may be a domain category in multi-domain task. The instruction: If input entity matches one candidate exactly by meaning identity, output candidate. Do not guess ambiguous abbreviation or missing experimental condition. \"Movie\" is missing \"Multi-domain\", so not same dataset. Output Movie."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 812,
+    "completion_tokens": 175,
+    "total_tokens": 987,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "bc73f3b8-106b-4a5b-8364-79463f345cc5",
+  "object": "chat.completion",
+  "created": 1793194698,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROUGE-L F1)",
+        "reasoning_content": "We need answer. Need match exact? Input tuple (Summarization, CNN/DailyMail, ROUGE-L F1). List contains (Summarization, CNN/DailyMail, ROGUE-L) misspelled ROGUE. Also ROGUE-1, ROGUE-2. Input ROUGE-L F1 not match. Output tuple unchanged. Need only answer. Ensure exact input tuple."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 555,
+    "completion_tokens": 102,
+    "total_tokens": 657,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 171
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

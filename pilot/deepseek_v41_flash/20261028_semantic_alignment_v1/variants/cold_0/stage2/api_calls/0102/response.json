@@ -1,0 +1,32 @@
+{
+  "id": "b224e62e-10a5-429b-9d7c-b688d0b15423",
+  "object": "chat.completion",
+  "created": 1793197337,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, BC5CDR, Entity-level F1 score)",
+        "reasoning_content": "We need answer only tuple. Need match input (NER, BC5CDR, Entity-level F1) against list. Candidates NER: Ontonotes v5 English F1, CoNLL-2003 English F1, WNUT-17 English F1, WNUT-16 English F1. Dataset BC5CDR not present. No match. Return original tuple verbatim: (Named Entity Recognition, BC5CDR, Entity-level F1 score). Ensure exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 773,
+    "completion_tokens": 119,
+    "total_tokens": 892,
+    "prompt_tokens_details": {
+      "cached_tokens": 639
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_cache_hit_tokens": 639,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

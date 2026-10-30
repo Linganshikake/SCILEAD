@@ -1,0 +1,32 @@
+{
+  "id": "619da2c0-850d-45b2-a4d8-049fb53fe7a6",
+  "object": "chat.completion",
+  "created": 1793197107,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE MNLI",
+        "reasoning_content": "We need answer only selected or unchanged. Need determine if MNLI matches candidate. Candidates include GLUE MNLI, MNLI-m, MNLI-mm. Input \"MNLI\" ambiguous between m/mm? Also GLUE MNLI maybe task name. Need semantic matching requirement: If match remains ambiguous output original unchanged. \"MNLI\" is general dataset, but list has GLUE MNLI maybe same underlying task? However also MNLI-m and MNLI-mm are versions. Input MNLI could match GLUE MNLI as standard task. Need decide. In GLUE, MNLI is task. Candidate \"GLUE MNLI\" denotes same underlying task. But presence of MNLI-m and MNLI-mm could be matched? MNLI-m is matched dev? Wait MNLI-m and MNLI-mm are GLUE MNLI matched/mismatched evaluation subsets. Input MNLI is broader. The list includes GLUE MNLI likely standard task. A more specific wording may match existing standard task. \"GLUE MNLI\" is more specific but same task? They say For task names, a more specific wording may match existing standard task when both denote same underlying task. Input MNLI -> GLUE MNLI clear? Let's examine: GLUE MNLI is MNLI task under GLUE. Input MNLI may refer to dataset, but could also be ambiguous with MNLI-m and MNLI-mm. Candidate MNLI-m and MNLI-mm distinct split/metric. \"Do not guess ambiguous abbreviation or missing experimental condition.\" Since input MNLI no suffix, likely match GLUE MNLI rather than m/mm. But is it ambiguous? In list there are three MNLI-related. The exact base dataset is represented by GLUE MNLI? Hmm.\n\nWe need output selected item exactly. If clear semantic match: GLUE MNLI. But wait candidates include \"MNLI-m\", \"MNLI-mm\". Input \"MNLI\" might be an abbreviation/short for \"GLUE MNLI\". It's not \"MNLI-m\". The standard task in GLUE is MNLI. Since list has \"GLUE MNLI\", that's most likely match. Need output GLUE MNLI.\n\nCheck \"Task names, a more specific wording may match existing standard task\". Input \"MNLI\" vs candidate \"GLUE MNLI\". Both denote same underlying task (GLUE MNLI is task). I think answer GLUE MNLI.\n\nNeed only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 790,
+    "completion_tokens": 500,
+    "total_tokens": 1290,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 495
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

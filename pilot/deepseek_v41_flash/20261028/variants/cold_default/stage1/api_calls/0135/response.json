@@ -1,0 +1,32 @@
+{
+  "id": "0765fea4-440c-46ba-b587-8a99c90f83aa",
+  "object": "chat.completion",
+  "created": 1793194299,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Test F1",
+        "reasoning_content": "We need answer. Need determine if input entity matches item in list exactly? \"Test F1\" not in list. There is 'F1', 'Dev F1', 'F1 score', etc. Match one of items? It says if input entity matches one of items, answer matched item. Else output entity without changing. Test F1 not exact match. Output Test F1. No explanation. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "completion_tokens": 87,
+    "total_tokens": 300,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 213
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,118 @@
+--- D:\C++\SCILEAD\pilot\gpt56_sol_variants\20261024\variant_runtime.py
++++ D:\C++\SCILEAD\pilot\deepseek_v41_flash\20261028\variants\variant_runtime.py
+@@ -1,14 +1,27 @@
+-"""Original SCILEAD mains, audited observers, GPT56 A1 transport only."""
++"""Original SCILEAD mains and observers; parent DeepSeek transport only."""
+ import argparse,contextlib,copy,csv,ctypes,hashlib,importlib.metadata,importlib.util,json,logging,os,random,shutil,sys,time,types
+ from pathlib import Path
+ sys.dont_write_bytecode=True
+-TOP=Path(__file__).resolve().parent
++ADAPTER_ROOT=Path(__file__).resolve().parent
++TOP=ADAPTER_ROOT
+ ROOT=Path(r'D:\C++\SCILEAD');REPO=ROOT/'emnlp2024-leaderboard-generation'
+-PILOT=ROOT/'pilot';BASE=PILOT/'gpt56_sol_fully/20261024_A2_result_type_recovery'
+-MODEL='gpt-5.6-sol';URL='https://9527.codes/v1';KEY='';RUN_ID=''
+-A1=PILOT/'gpt56_sol_fully/20261024_A1_single_paper'
+-spec=importlib.util.spec_from_file_location('gpt56_frozen_transport',A1/'run_trial.py')
+-frozen=importlib.util.module_from_spec(spec);spec.loader.exec_module(frozen)
++PILOT=ROOT/'pilot';BASE=TOP.parent/'fully'
++MODEL='deepseek-flash';URL='https://api.deepseek.com';KEY='';RUN_ID=''
++TRANSPORT_PATH=TOP.parent/'transport.py'
++
++class RootTransport:
++    """Deferred import permits preparation checks before main publishes transport.py."""
++    module=None
++    def __getattr__(self,name):
++        if self.module is None:
++            if not TRANSPORT_PATH.is_file():
++                raise RuntimeError('Parent transport.py has not been supplied: '+str(TRANSPORT_PATH))
++            spec=importlib.util.spec_from_file_location('deepseek_variant_root_transport',TRANSPORT_PATH)
++            module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
++            assert module.MODEL==MODEL,'ROOT_TRANSPORT_MODEL_MISMATCH'
++            self.module=module
++        return getattr(self.module,name)
++frozen=RootTransport()
+ 
+ def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
+ FILESYSTEM_RETRIES=[]
+@@ -21,8 +34,6 @@
+             if attempt==19:raise
+             FILESYSTEM_RETRIES.append({'path':str(p),'retry':attempt+1,'kind':'FILESYSTEM_ONLY','epoch':time.time()})
+             time.sleep(min(0.05*(attempt+1),0.25))
+-# Only the in-memory persistence callback changes; frozen source/HTTP behavior does not.
+-frozen.save=save
+ def sha(p):
+     with Path(p).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+ def digest(x):return hashlib.sha256(json.dumps(x,ensure_ascii=False).encode()).hexdigest()
+@@ -39,6 +50,8 @@
+     return {'available_memory_bytes':m.available,'available_commit_bytes':m.available_page,'free_disk_bytes':shutil.disk_usage(TOP).free}
+ def setup():
+     assert os.environ.get('PYTHONHASHSEED')=='0','PYTHONHASHSEED must be 0 before interpreter starts'
++    from runtime_policy import configure_paths
++    configure_paths(TOP)
+     os.environ.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',LANGCHAIN_TRACING='false',LANGCHAIN_TRACING_V2='false',LANGSMITH_TRACING='false')
+     sys.path.insert(0,str(REPO));logging.disable(logging.CRITICAL)
+ def verify(full=False):
+@@ -90,11 +103,8 @@
+         self.out.mkdir(parents=True,exist_ok=True)
+         if mock is None:
+             global KEY
+-            from dotenv import dotenv_values
+-            env=dotenv_values(frozen.ENV,interpolate=False,encoding='utf-8-sig')
+-            KEY=next((env[k] for k in ('OPENAI_API_KEY','API_KEY','SK') if env.get(k)),None)
+-            base=next((env[k] for k in ('BASE_URL','OPENAI_BASE_URL','API_BASE','OPENAI_API_BASE','API_BASE_URL') if env.get(k)),None)
+-            assert KEY and base and base.rstrip('/') in ('https://9527.codes','https://9527.codes/v1'),'CREDENTIAL_CONFIG_INVALID'
++            KEY,base=frozen.load_credentials()
++            assert KEY and base.rstrip('/')==URL,'CREDENTIAL_CONFIG_INVALID'
+             self.key=KEY
+             self.client=httpx.Client(transport=httpx.HTTPTransport(retries=0),trust_env=False,follow_redirects=False,timeout=httpx.Timeout(connect=20,read=600,write=30,pool=20))
+         else:
+@@ -144,10 +154,10 @@
+     save(Path(out)/'observer_summary.json',{'events':observer.event_index,'requests':transport.cursor,'mock_new_requests':transport.mock_new})
+     return observer,transport
+ 
+-def run_branch(branch):
++def run_branch(branch,mock=None):
+     global RUN_ID
+     RUN_ID=branch;setup();verify()
+-    assert read(TOP/'reproducibility/offline_tests.json')['status']=='PASS'
++    assert mock is not None or read(ADAPTER_ROOT/'reproducibility/offline_tests.json')['status']=='PASS'
+     conf=read(TOP/branch/'config.json');run=TOP/branch;raw=read(conf['input_path'])
+     assert sha(conf['input_path'])==conf['input_sha256']
+     import msvcrt
+@@ -171,7 +181,7 @@
+                 args=types.SimpleNamespace(seed=0,tdm_config_file=str(run/'official_config.json'),gold_leaderboard_file=conf['leaderboards_path'],masked_normalized_file=str(run/'stage1/normalized_output.json'),prompt_file=str(REPO/'prompts.json'),leaderboard_normalization_path=work.as_posix()+'/',max_new_tokens=None)
+                 original=work/'leaderboard_normalized_output.json';final=out/'leaderboard_normalized_output.json'
+             immutable(out/'invocation.json',vars(args));start=time.monotonic()
+-            try:observer,transport=run_original(module,stage,args,out)
++            try:observer,transport=run_original(module,stage,args,out,mock=mock)
+             except Exception as e:
+                 error=str(e).replace(KEY,'[REDACTED]') if KEY else str(e)
+                 save(out/'summary.json',{'status':'PAUSED_FAILED_OR_UNCERTAIN','error_type':type(e).__name__,'error':error[:300],'seconds_this_attempt':time.monotonic()-start})
+@@ -184,12 +194,13 @@
+             immutable(final,result)
+             if stage=='stage1':
+                 expected=read(TOP/('references/cold_initial_labels.json' if conf['cold_start'] else 'masking/initial_labels.json'))
++                if not observer.events:immutable(out/'initial_labels.json',expected)
+                 assert read(out/'initial_labels.json')==expected
+-                immutable(out/'final_labels.json',observer.events[-1]['labels_after'])
++                immutable(out/'final_labels.json',observer.events[-1]['labels_after'] if observer.events else expected)
+             summary={'status':'COMPLETE','papers':len(result),'records':sum(len(x['normalized_output']) for x in result.values()),'null_fields':{k:sum(r[k] is None for x in result.values() for r in x['normalized_output']) for k in ('Task','Dataset','Metric')},'events':observer.event_index,'api_calls':transport.cursor,'seconds_this_attempt':time.monotonic()-start,'output_path':str(final),'output_sha256':sha(final)}
+             if stage=='stage1':summary['label_additions']=sum(e['added_name'] is not None for e in observer.events)
+             else:summary['changed_tdms']=sum(e['changed'] for e in observer.events)
+-            save(out/'summary.json',summary);checkpoint=read(out/'checkpoint.json');checkpoint['status']='COMPLETE';save(out/'checkpoint.json',checkpoint)
++            save(out/'summary.json',summary);checkpoint=read(out/'checkpoint.json') if (out/'checkpoint.json').exists() else {'event':0,'last_call':0};checkpoint['status']='COMPLETE';save(out/'checkpoint.json',checkpoint)
+             print(json.dumps({'run':branch,'stage':stage,'summary':summary}),flush=True)
+         save(run/'verification.json',{'status':'NORMALIZATION_COMPLETE','source_integrity':verify(),'generation_model':MODEL,'new_extraction_calls':0})
+         return 0
+@@ -197,5 +208,8 @@
+         if FILESYSTEM_RETRIES:save(run/'filesystem_retry_log.json',FILESYSTEM_RETRIES)
+         lock.close()
+ if __name__=='__main__':
+-    parser=argparse.ArgumentParser();parser.add_argument('--branch',required=True,choices=['partially','cold_default','cold_0','cold_42'])
+-    sys.exit(run_branch(parser.parse_args().branch))
++    parser=argparse.ArgumentParser();parser.add_argument('--output-dir',type=Path,default=TOP);parser.add_argument('--branch',required=True,choices=['partially','cold_default','cold_0','cold_42'])
++    cli=parser.parse_args()
++    from runtime_policy import owned
++    TOP=owned(cli.output_dir)
++    sys.exit(run_branch(cli.branch))

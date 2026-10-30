@@ -1,0 +1,32 @@
+{
+  "id": "047e137a-a859-42fe-818b-b7980b86179a",
+  "object": "chat.completion",
+  "created": 1793197313,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ROGUE-L",
+        "reasoning_content": "We need answer only matched item. Need match input \"ROUGE-L Recall\" with list item 'ROGUE-L'? Note list has misspelled ROGUE-L and ROGUE-1 etc. Input ROUGE-L Recall likely corresponds to ROGUE-L? Need only item. Could be Recall? We need match with one item. The item list includes 'ROGUE-L' (misspelled) and Recall. Input is \"ROUGE-L Recall\" specifically metric variant. The closest item is \"ROGUE-L\"? But if matching exact item, none? Need infer. They ask match input with one item. ROUGE-L Recall is a specific metric; list has ROGUE-L (typo for ROUGE-L) and Recall separately. Which one? The item \"ROGUE-L\" likely intended to represent ROUGE-L metric, not recall. But input includes Recall, maybe they want ROGUE-L? However only matched item must be from list. Since \"ROUGE-L Recall\" isn't exactly any item, but \"ROGUE-L\" is the metric family. There is also Recall. It asks match input with one item. Could be 'ROGUE-L' because ROUGE-L Recall is a variant under ROGUE-L. Let's provide 'ROGUE-L'. Ensure only item."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "completion_tokens": 289,
+    "total_tokens": 548,
+    "prompt_tokens_details": {
+      "cached_tokens": 125
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 284
+    },
+    "prompt_cache_hit_tokens": 125,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "f1c66437-8f37-4c53-b08c-cf36461e0519",
+  "object": "chat.completion",
+  "created": 1793196716,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "GLUE RTE",
+        "reasoning_content": "We need answer only selected or unchanged. Need determine if GLUE RTE matches any item. List contains GLUE SST, GLUE QNLI, GLUE MNLI, GLUE QQP, but no RTE. It is a GLUE task but not listed. Need output original unchanged \"GLUE RTE\". Ensure no explanation. "
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 430,
+    "completion_tokens": 76,
+    "total_tokens": 506,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 174
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

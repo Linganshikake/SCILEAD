@@ -1,0 +1,32 @@
+{
+  "id": "94e32a61-41f6-4d10-9e9c-5d9c4e64674f",
+  "object": "chat.completion",
+  "created": 1793197587,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, NEWSROOM, ROUGE-L)",
+        "reasoning_content": "We need answer only tuple. Need determine match. Input (Abstractive Summarization, NEWSROOM, ROUGE-L). List has Summarization with Gigaword/CNN/DailyMail/XSum, metrics ROGUE-L etc. No NEWSROOM. So no match. Return original verbatim. Need exact."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 772,
+    "completion_tokens": 82,
+    "total_tokens": 854,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 260
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

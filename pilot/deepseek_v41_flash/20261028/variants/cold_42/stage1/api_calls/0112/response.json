@@ -1,0 +1,32 @@
+{
+  "id": "38c99fe5-38b7-4728-8a3e-c6d250386a75",
+  "object": "chat.completion",
+  "created": 1793194276,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Wikitext-103 (WT103)",
+        "reasoning_content": "We need answer only matched item if input matches one in list. Input \"Wikitext-103 (WT103)\" not in list. List has Wikitext-2 (WT2), no WT103. So output entity unchanged. Need only entity."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 353,
+    "completion_tokens": 62,
+    "total_tokens": 415,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 225
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

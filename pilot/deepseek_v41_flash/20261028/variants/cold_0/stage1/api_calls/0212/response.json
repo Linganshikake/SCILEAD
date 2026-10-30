@@ -1,0 +1,32 @@
+{
+  "id": "a1d581b9-fe7a-4955-a8bb-1f266d10d677",
+  "object": "chat.completion",
+  "created": 1793194408,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Penn Treebank (PTB)",
+        "reasoning_content": "We need answer exact matching behavior. Input \"Penn Treebank (PTB)\" not exactly in list? List has 'Penn Treebank', 'Penn Treebank converted...' 'PTB'. So no match, output entity unchanged. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 622,
+    "completion_tokens": 59,
+    "total_tokens": 681,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 494
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

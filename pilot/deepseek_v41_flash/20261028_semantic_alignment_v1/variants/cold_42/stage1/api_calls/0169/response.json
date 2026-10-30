@@ -1,0 +1,32 @@
+{
+  "id": "068faee5-5193-4e65-91ce-1cad679ccb0f",
+  "object": "chat.completion",
+  "created": 1793196840,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL-2003 English",
+        "reasoning_content": "We need answer only selected item or unchanged. Need match input \"CoNLL 2003 NER\" to list candidate. There is \"CoNLL-2003 English\". Is that semantic match? Need careful: CoNLL 2003 NER likely refers to CoNLL-2003 shared task on language-independent NER, English dataset. Candidate \"CoNLL-2003 English\" denotes same underlying dataset? It includes English NER. Need output exact candidate if clear. Input \"CoNLL 2003 NER\" matches \"CoNLL-2003 English\" perhaps. There's also CoNLL++ and CoNLL-2000. Candidate \"CoNLL-2003 English\" is clearly identity: English NER dataset from CoNLL-2003. Output exact: CoNLL-2003 English. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 624,
+    "completion_tokens": 188,
+    "total_tokens": 812,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 180
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 240
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "ac98f869-f150-4223-99f4-407ef9df729e",
+  "object": "chat.completion",
+  "created": 1793194785,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Dialogue Act Classification, SwDA, Accuracy)",
+        "reasoning_content": "We need answer only. Need match tuple. List has (Dialogue Act Classification, Switchboard Dialog Act Corpus (SWDA), Accuracy). Input (Dialogue Act Classification, SwDA, Accuracy). Does not match exactly because SWDA abbreviation vs full. Instruction: if input tuple matches one item list, answer matched item. Else output tuple without changing. Need decide match refers exact equality, likely yes. Input not exact. Output unchanged tuple. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 105,
+    "total_tokens": 655,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

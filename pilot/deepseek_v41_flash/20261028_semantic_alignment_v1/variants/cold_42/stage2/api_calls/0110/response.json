@@ -1,0 +1,32 @@
+{
+  "id": "5e04d388-d10f-4194-a99d-7374f03eff22",
+  "object": "chat.completion",
+  "created": 1793197371,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Machine Translation, WMT'14 English→French, TER)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: Machine Translation, WMT’14 English→French, TER. List has (Machine Translation, WMT’14 EN-FR, BLEU). Dataset same likely WMT14 EN-FR. But metric TER vs BLEU differ, not match. Since metric different, no candidate. Return input verbatim. Need exact input tuple: (Machine Translation, WMT'14 English→French, TER). Ensure apostrophe as given. Output only."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 120,
+    "total_tokens": 891,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 259
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

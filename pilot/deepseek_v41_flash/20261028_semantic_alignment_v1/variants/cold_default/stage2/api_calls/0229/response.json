@@ -1,0 +1,32 @@
+{
+  "id": "b956ef68-c836-4db6-85b4-3e37191b85e5",
+  "object": "chat.completion",
+  "created": 1793197554,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, XSum, ROGUE-2)",
+        "reasoning_content": "We need answer only tuple. Need semantic match. Input: Abstractive Summarization, XSum, ROUGE-2 F1. List has Summarization, XSum, ROGUE-2. Likely typo ROGUE vs ROUGE, same metric ROUGE-2. Task Abstractive Summarization matches Summarization? Dataset XSum. Candidate (Summarization, XSum, ROGUE-2). Need output exact listed tuple. Check if metric \"ROUGE-2 F1\" matches \"ROGUE-2\" (ROGUE typo for ROUGE). Yes. Output (Summarization, XSum, ROGUE-2). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 159,
+    "total_tokens": 933,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 145
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

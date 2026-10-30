@@ -1,0 +1,32 @@
+{
+  "id": "2834b09e-254a-456c-9721-fabc88a8fb5a",
+  "object": "chat.completion",
+  "created": 1793197052,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "F1-score",
+        "reasoning_content": "We need answer only matched item or unchanged. Need semantic match \"F1 score\" to list candidates. Candidates include 'F1', 'F1-score', 'Entity-level F1 score', 'Slot filling F1-score', etc. Input F1 score. Need decide clear semantic match? \"F1 score\" is synonym for F1-score. But list has 'F1-score' exact semantic with hyphen, and 'F1'. We need match one candidate. The input \"F1 score\" likely matches 'F1-score' as same metric, capitalization hyphen spacing. Output candidate exactly as written: F1-score. Need no explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 496,
+    "completion_tokens": 135,
+    "total_tokens": 631,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 131
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 240
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

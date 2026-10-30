@@ -1,0 +1,34 @@
+{
+  "adapters": [
+    {
+      "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\leaderboard_evaluation\\run_official_leaderboard_eval.py",
+      "destination": "leaderboard_evaluation/run_official_leaderboard_eval.py",
+      "changes": "none; common imports the adapted cs_common"
+    },
+    {
+      "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\leaderboard_evaluation\\evaluate_paper_metrics.py",
+      "destination": "leaderboard_evaluation/evaluate_paper_metrics.py",
+      "changes": "none; common imports the adapted cs_common"
+    },
+    {
+      "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\leaderboard_evaluation\\common.py",
+      "destination": "leaderboard_evaluation/common.py",
+      "changes": "none; common imports the adapted cs_common"
+    },
+    {
+      "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\cs_common.py",
+      "destination": "cs_common.py",
+      "changes": "Owned paths, offline/write/credential guards, local cache and resource check; model token=False; no normalization algorithm changes"
+    },
+    {
+      "source": "D:\\C++\\SCILEAD\\pilot\\full43_cs\\run_cs.py",
+      "destination": "run_cs.py",
+      "changes": "Memory preflight and token=False only"
+    }
+  ],
+  "official_main_modified": false,
+  "threshold": null,
+  "threshold_note": "Official source always takes cosine top-1 for nonexact labels; no threshold introduced",
+  "candidate_order": "Official set insertion and list conversion, PYTHONHASHSEED=0, checked against frozen full43_cs candidate_labels.json",
+  "preprocessing": "Unchanged encoder.encode inputs/defaults; each original encode call retained; no embedding reuse or batching changes"
+}

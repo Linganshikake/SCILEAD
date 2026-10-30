@@ -1,0 +1,32 @@
+{
+  "id": "a93f6303-1ea2-463b-bb1b-c28f21cc8733",
+  "object": "chat.completion",
+  "created": 1793198233,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition (NER), Ontonotes v5 - English, F1)",
+        "reasoning_content": "We need match input (Named Entity Recognition, OntoNotes, F1-score) to list. Candidate: (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Semantic match: task NER same, dataset OntoNotes vs Ontonotes v5 - English likely same underlying? Metric F1-score vs F1. Need determine if unambiguous. There's also (Named Entity Recognition (NER), CoNLL-2003 - English, F1), WNUT etc. Input OntoNotes matches Ontonotes v5 - English, not CoNLL. So return listed tuple verbatim: (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Ensure exact spelling: List has \"Ontonotes v5 - English\" lowercase n? It says (Named Entity Recognition (NER), Ontonotes v5 - English, F1). Need output that."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 208,
+    "total_tokens": 978,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 189
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

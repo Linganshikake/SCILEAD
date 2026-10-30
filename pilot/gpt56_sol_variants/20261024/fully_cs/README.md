@@ -1,0 +1,1 @@
+Run with D:\miniconda3\envs\scilead\python.exe -B -X utf8 run_pipeline.py. Preparation is already frozen and should not be repeated. The runner uses fixed local cached weights, offline guards and per-paper checkpoints. See report.md, metrics.json and verification.json.

@@ -1,0 +1,32 @@
+{
+  "id": "d59a4365-0919-4231-8980-c36aca5d7d18",
+  "object": "chat.completion",
+  "created": 1793196679,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WNLI",
+        "reasoning_content": "We need answer only selected item or unchanged. Need determine if WNLI matches any candidate. List has NLI tasks: QQP, MRPC, MNLI-mm, QNLI, RTE, MNLI-m, SST-2, CoLA, STS-B. WNLI is Winograd NLI, not present. No semantic match. Output WNLI unchanged."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 81,
+    "total_tokens": 543,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 206
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

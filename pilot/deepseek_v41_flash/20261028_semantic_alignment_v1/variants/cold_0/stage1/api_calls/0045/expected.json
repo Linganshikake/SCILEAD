@@ -1,0 +1,20 @@
+{
+  "run_id": "cold_0",
+  "paper": "1905.03197.pdf",
+  "record": 17,
+  "field": "Metric",
+  "original": "Spearman correlation",
+  "candidate_serialized": "{'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'METEOR', 'ROUGE-L', 'F1', 'EM', 'MCC', 'AVG', 'V-M', 'F-NMI', 'F-S', 'F-BC'}",
+  "candidate_sha256": "6c2b703cb2705675190e44db67a60e30c17c7c158ee0aa5b5bc6f176ce8c411b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You will be given a list of items. Then, an input entity will be provided. If the input entity matches one of the items in the list, your answer will be the matched item in the list. Else, output the entity without changing it. DO NOT make any other explanation.\n\nSemantic matching requirements:\nMatch by meaning and entity identity, not by literal string equality. Recognize unambiguous abbreviations, acronyms, aliases, paraphrases, capitalization, punctuation and superficial spelling differences. Different wording alone is not a reason to reject a match. Compare the input against the supplied candidates before deciding that it is a new entity.\nFor task names, a more specific wording may match an existing standard task when both denote the same underlying task. Preserve meaningful differences in dataset identity, language, version, split and metric definition; do not merge distinct entities merely because their names are similar. Do not guess an ambiguous abbreviation or missing experimental condition.\nIf one candidate is a clear semantic match, output that candidate exactly as written in the item list. If the list is empty, no candidate matches, or the match remains ambiguous, output the original input entity exactly unchanged. Do not invent a new canonical name. Output only the selected item or unchanged input, without quotes, explanation or extra formatting."
+    },
+    {
+      "role": "user",
+      "content": "\n\nItem list: {'ROUGE-1', 'BLEU-4', 'Accuracy', 'ROUGE-2', 'METEOR', 'ROUGE-L', 'F1', 'EM', 'MCC', 'AVG', 'V-M', 'F-NMI', 'F-S', 'F-BC'}\n\nInput: Spearman correlation\n\nAnswer: "
+    }
+  ],
+  "prompt_sha256": "3e85183cac34d02e33345ca6d9515b5b7fd3f927f1e3eb67e555288e62574eb1"
+}

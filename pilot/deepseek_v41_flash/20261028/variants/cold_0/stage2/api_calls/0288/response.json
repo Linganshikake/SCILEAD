@@ -1,0 +1,32 @@
+{
+  "id": "15d2f5a9-0e16-4a8c-8d5b-95dfff50f510",
+  "object": "chat.completion",
+  "created": 1793194937,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Abstractive Summarization, XSum, ROUGE-2)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches exactly one item. List has (Summarization, XSum, ROGUE-2) but input is (Abstractive Summarization, XSum, ROUGE-2). Not exact match due task and metric spelling. So output tuple unchanged. Need only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 82,
+    "total_tokens": 636,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 170
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

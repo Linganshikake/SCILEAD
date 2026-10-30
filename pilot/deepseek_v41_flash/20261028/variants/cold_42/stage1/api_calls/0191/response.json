@@ -1,0 +1,32 @@
+{
+  "id": "477a367f-2cc1-4c17-a958-7bf533468c36",
+  "object": "chat.completion",
+  "created": 1793194396,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Matthews correlation",
+        "reasoning_content": "We need answer match item list. Input MCC not exact match. There is \"Matthews correlation\" which is MCC, but instruction: if input entity matches one items, output matched item; else output entity without changing. Need determine matching semantic? It says matches one of items in list. MCC is abbreviation for Matthews correlation, but item is \"Matthews correlation\", not exact. Usually these tasks expect entity linking to item if equivalent? Need infer. We are to not explain. If no exact string match, output MCC. But if they intend MCC = Matthews correlation, then output \"Matthews correlation\". Need decide. The list includes \"Matthews correlation\", likely to map MCC. User says \"If input entity matches one of the items in the list\" could be semantic match. Input \"MCC\" matches \"Matthews correlation\" (same metric). In such entity normalization tasks, expected output item from list if entity refers to same. I'd output Matthews correlation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 303,
+    "completion_tokens": 199,
+    "total_tokens": 502,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 195
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 303
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

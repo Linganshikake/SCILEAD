@@ -1,0 +1,32 @@
+{
+  "id": "f4878360-4014-4698-b9e9-55bee403e86e",
+  "object": "chat.completion",
+  "created": 1793197431,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Summarization, CNN/DailyMail, ROGUE-2)",
+        "reasoning_content": "We need answer only tuple. Need match input to list. Input: Abstractive Summarization, CNN/DailyMail, ROUGE-2. List has (Summarization, CNN/DailyMail, ROGUE-2). Semantic: Abstractive Summarization matches Summarization benchmark? Dataset CNN/DailyMail same. Metric ROUGE-2 vs ROGUE-2 typo. Matched likely (Summarization, CNN/DailyMail, ROGUE-2). Need output verbatim listed tuple. Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 774,
+    "completion_tokens": 124,
+    "total_tokens": 898,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 108
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

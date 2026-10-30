@@ -1,0 +1,32 @@
+{
+  "id": "24dc18b3-23e4-4b89-8e34-63be95d6962f",
+  "object": "chat.completion",
+  "created": 1793194490,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "WMT En-De newstest2014",
+        "reasoning_content": "We need answer only matched or original. Need see list contains 'WMT En-De (newstest2014)' but input 'WMT En-De newstest2014' no parentheses. Exact match? It says matches one of items. likely string exact? Input without parentheses not exact. Need output entity unchanged. Do not explanation."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 768,
+    "completion_tokens": 79,
+    "total_tokens": 847,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 640
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

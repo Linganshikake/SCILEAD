@@ -1,0 +1,32 @@
+{
+  "id": "7d1e4469-37c7-44b8-b9da-c62e2293316d",
+  "object": "chat.completion",
+  "created": 1793194330,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "CoNLL 2003 NER",
+        "reasoning_content": "We need answer. Need match input to items. Input \"CoNLL 2003 NER\". List has 'CoNLL-03', 'CoNLL-2003', 'CoNLL-2003 English'. No exact \"CoNLL 2003 NER\". Instruction if matches one item output matched. Else output entity unchanged. Need determine if semantic match? It says matches one of items. Exact? \"CoNLL 2003 NER\" not in list. Could be known task CoNLL-2003 (CoNLL-2003 English). But strict. DO NOT explanation. Output input unchanged if no exact. Answer: CoNLL 2003 NER. Need no quotes."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 464,
+    "completion_tokens": 158,
+    "total_tokens": 622,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 149
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 208
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

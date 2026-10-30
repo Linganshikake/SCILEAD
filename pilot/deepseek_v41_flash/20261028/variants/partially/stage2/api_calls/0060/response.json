@@ -1,0 +1,32 @@
+{
+  "id": "620c5699-33b4-402b-baaa-5f5308343929",
+  "object": "chat.completion",
+  "created": 1793194952,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Named Entity Recognition, E-commerce, F1)",
+        "reasoning_content": "We need answer only. Need determine if input tuple matches list. Input: (Named Entity Recognition, E-commerce, F1). List has (Named Entity Recognition (NER), ...) with NER in parentheses, not exact. Also entries have English etc. No E-commerce. So output tuple unchanged. Need preserve exact formatting: (Named Entity Recognition, E-commerce, F1). Only answer."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 550,
+    "completion_tokens": 92,
+    "total_tokens": 642,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 166
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}

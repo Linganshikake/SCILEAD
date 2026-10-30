@@ -1,0 +1,32 @@
+{
+  "id": "a7f35528-8279-4a36-b8ec-bc234530ce3f",
+  "object": "chat.completion",
+  "created": 1793197520,
+  "model": "deepseek-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "(Extractive Question Answering, CoQA, F1)",
+        "reasoning_content": "We need answer only tuple. Need determine if input matches any listed. Input (Extractive Question Answering, CoQA, F1). List has no QA, no CoQA. So return original tuple verbatim. Need output only. \nWait check maybe semantic? None. Return (Extractive Question Answering, CoQA, F1). Ensure no quotes. \n"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 770,
+    "completion_tokens": 89,
+    "total_tokens": 859,
+    "prompt_tokens_details": {
+      "cached_tokens": 636
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_cache_hit_tokens": 636,
+    "prompt_cache_miss_tokens": 134
+  },
+  "system_fingerprint": "bc19ba97cbe016479903222bb1578db6"
+}
